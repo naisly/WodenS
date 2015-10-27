@@ -16,4 +16,5 @@ class DefaultModel
         $this->text = 'Hello world!';
 
     }
+
 }

@@ -19,4 +19,6 @@ $controller = new DefaultController($model);
 
 $view = new DefaultView($model);
 
-echo $view->output();
+echo $view->InitialView();
+
+echo $view->ContentView();
