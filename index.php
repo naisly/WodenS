@@ -20,5 +20,3 @@ $controller = new DefaultController($model);
 $view = new DefaultView($model);
 
 echo $view->InitialView();
-
-echo $view->ContentView();
