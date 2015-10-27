@@ -8,5 +8,12 @@
  */
 class DefaultController
 {
+    private $model;
 
+
+    public function __construct(DefaultModel $model) {
+
+        $this->model = $model;
+
+    }
 }

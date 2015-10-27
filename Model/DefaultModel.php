@@ -8,5 +8,12 @@
  */
 class DefaultModel
 {
+    public $text;
 
+
+    public function __construct() {
+
+        $this->text = 'Hello world!';
+
+    }
 }
