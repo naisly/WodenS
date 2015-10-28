@@ -96,7 +96,7 @@
                                 <a style="text-decoration: none" href="#">All</a>
                                 <a style="text-decoration: none">';
             foreach ($this->model->category as $value => $key) {
-                echo "<a href='{$this->model->category[$value]}.php'>" . $this->model->category[$value] . "</a>";
+                echo "<a href='{$this->model->getCategory($value)}.php'>" . $this->model->category[$value] . "</a>";
                 while ( $i < count($this->model->id)) {
                     echo '</ul>
                         </div>
@@ -104,15 +104,15 @@
                             <div class="col-xs-12">
                                     <div class="col-xs-1"></div>
                                     <div class="col-xs-2">
-                                        <img src="' . $this->model->photo[$i] . '">
+                                        <img src="' . $this->model->getPhoto($i) . '">
                                     </div>
                                     <div class="col-xs-5">
                                         <p class="spacer"></p>
-                                        <h id="header-items" style="font-size: 20px;">' . $this->model->description[$i] . '</h>
-                                        <span><br />by ' . $this->model->category[$i] . '</span>
+                                        <h id="header-items" style="font-size: 20px;">' . $this->model->getDescription($i) . '</h>
+                                        <span><br />by ' . $this->model->getCategory($i) . '</span>
 
-                                        <p id="price">' . $this->model->price[$i] . '$' . ' ' . '<span id="prev-price"><strike>' . $this->model->previous_price[$i] . '$' . '</strike> (' . $this->model->shipping[$i] . ' ' . 'days shipping)</span></p>
-                                        <p id="prev-price"> In stock on ' . $this->model->time_of_adding[$i] . '</p>
+                                        <p id="price">' . $this->model->getPrice($i) . '$' . ' ' . '<span id="prev-price"><strike>' . $this->model->getPriviousPrice(($i)) . '$' . '</strike> (' . $this->model->getShipping($i) . ' ' . 'days shipping)</span></p>
+                                        <p id="prev-price"> In stock on ' . $this->model->getTimeOfAdding($i) . '</p>
 
                                         <p>Average price for this product: $155.42 </p>
                                     </div>
@@ -122,7 +122,7 @@
                                         <p>Free shipping on orders greater than $35 </p>
 
                                         <p><b>Product features: </b></p>
-                                        <p>' . $this->model->features[$i] . '</p>
+                                        <p>' . $this->model->getFeatures($i) . '</p>
                                         <button>
                                             Add to cart
                                         </button>

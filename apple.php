@@ -25,4 +25,4 @@ echo $view->DoctypeView();
 
 echo $view->headerView();
 
-echo $view->getItems();
+$view->getItems();

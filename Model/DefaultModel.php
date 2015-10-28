@@ -37,7 +37,7 @@ class DefaultModel
 
     public function getProductName($i) {
 
-        echo $this->product_name[$i];
+        return $this->product_name[$i];
 
     }
 
@@ -48,7 +48,7 @@ class DefaultModel
 
     public function getPhoto($i) {
 
-        echo $this->photo[$i];
+        return $this->photo[$i];
     }
 
     public function setDescription( $description ) {
@@ -58,7 +58,7 @@ class DefaultModel
 
     public function getDescription($i) {
 
-        echo $this->description[$i];
+        return $this->description[$i];
     }
 
     public function setCategory( $category ) {
@@ -66,9 +66,9 @@ class DefaultModel
         $this->category = $category;
     }
 
-    public function getCategory ($i) {
+    public function getCategory($i) {
 
-        echo $this->category[$i];
+        return $this->category[$i];
     }
 
     public function setPrice( $price ) {
@@ -78,7 +78,7 @@ class DefaultModel
 
     public function getPrice($i) {
 
-        echo $this->price[$i];
+        return $this->price[$i];
     }
 
     public function setPreviousPrice( $previous_price ){
@@ -88,7 +88,7 @@ class DefaultModel
 
     public function getPriviousPrice($i) {
 
-        echo $this->previous_price[$i];
+        return $this->previous_price[$i];
     }
 
     public function setTimeOfAdding( $time_of_adding) {
@@ -98,7 +98,7 @@ class DefaultModel
 
     public function getTimeOfAdding($i) {
 
-        echo $this->time_of_adding[$i];
+        return $this->time_of_adding[$i];
     }
 
     public function setFeatures( $features ) {
@@ -108,7 +108,7 @@ class DefaultModel
 
     public function getFeatures($i) {
 
-        echo $this->features[$i];
+        return $this->features[$i];
     }
 
     public function setId ( $id ) {
@@ -118,7 +118,7 @@ class DefaultModel
 
     public function getId($i) {
 
-        echo $this->id($i);
+        return $this->id[$i];
     }
 
     public function setQuantity( $quantity ){
@@ -128,7 +128,7 @@ class DefaultModel
 
     public function getQuantity($i) {
 
-        echo $this->quantity[$i];
+        return $this->quantity[$i];
     }
 
     public function setShipping( $shipping ) {
@@ -138,7 +138,7 @@ class DefaultModel
 
     public function getShipping($i) {
 
-        echo $this->shipping[$i];
+        return $this->shipping[$i];
     }
 
 }
