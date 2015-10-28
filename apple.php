@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: Home
- * Date: 27.10.2015
- * Time: 21:59
+ * Date: 28.10.2015
+ * Time: 18:57
  */
 
 include_once('Controllers\DefaultController.php');
@@ -22,4 +22,7 @@ $view = new DefaultView($model);
 $controller->actionGetCategories();
 
 echo $view->DoctypeView();
-echo $view->InitialView();
+
+echo $view->headerView();
+
+echo $view->getItems();
