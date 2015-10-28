@@ -74,18 +74,6 @@
             </nav>';
         }
 
-        public function InitialView()
-        {
-            echo "<div class='col-md-4'></div>" .
-                "<div class='col-md-4'>";
-            foreach ($this->model->category as $value => $key) {
-                echo "<a href='{$this->model->category[$value]}.php'>" . $this->model->category[$value] . "</a>";
-            }
-            echo "</div>" .
-                "<div class='col-md-4'></div>";
-
-        }
-
         public function getItems()
         {
             $i = 0;
@@ -93,16 +81,15 @@
                 <div class="col-xs-3"></div>
                         <div class="col-xs-6 items-align">
                             <ul class="text-align">
-                                <a style="text-decoration: none" href="#">All</a>
-                                <a style="text-decoration: none">';
+                                <a class="categories-list" style="text-decoration: none" href="#">All</a>';
             foreach ($this->model->category as $value => $key) {
-                echo "<a href='{$this->model->getCategory($value)}.php'>" . $this->model->category[$value] . "</a>";
+                echo "<a style='text-decoration: none;' class='categories-list' href='{$this->model->category[$value]}.php'>" . $this->model->category[$value] . "</a>";
+            }
                 while ( $i < count($this->model->id)) {
                     echo '</ul>
                         </div>
                         <div class="col-sm-3"></div>
                             <div class="col-xs-12">
-                                    <div class="col-xs-1"></div>
                                     <div class="col-xs-2">
                                         <img src="' . $this->model->getPhoto($i) . '">
                                     </div>
@@ -128,20 +115,17 @@
                                             Add to cart
                                         </button>
                                     </div>
-                                    <div class="container">
                                         <div class="row">
-                                            <div class="col-sm-1"></div>
-                                            <div class="col-sm-12">
+                                            <div class="col-sm-7">
                                                 <ul class="nav nav-list">
                                                     <li class="divider"></li>
                                                 </ul>
                                             </div>
-                                            <div class="col-sm-1"></div>
                                         </div>
                                     </div>
                             </div>';
                 $i++;
-                }
+
             }
         }
     }

@@ -21,3 +21,6 @@ INSERT INTO phones VALUES (1, 'Iphone 6', 'images/photo1.jpg', 'Newest Iphone by
 
 INSERT INTO phones VALUES (2, 'Samsung Galaxy', 'images/photo1.jpg', 'Latest Samsung in the serial of Samsung Inc.', 'Samsung','1222',
                              '1422', '2nd Novermber', 'With headphones and USD', 1, '5-9');
+
+INSERT INTO phones VALUES (3, 'HTC Lumia', 'images/photo1.jpg', 'Last technologies in growing world', 'HTC', '699',
+                           '999', '3rd February', 'Without package', 3, '1-4');
