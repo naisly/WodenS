@@ -19,6 +19,7 @@ class DefaultModel
     public $id;
     public $quantity;
     public $shipping;
+    public $distinct_categories;
 
     public $average;
     /*
@@ -153,4 +154,13 @@ class DefaultModel
         return $this->average;
     }
 
+    public function setDistinctCategories( $distinct_categories ) {
+
+        $this->distinct_categories = $distinct_categories;
+    }
+
+    public function getDistinctCategories() {
+
+        return $this->distinct_categories;
+    }
 }

@@ -96,4 +96,26 @@ class DefaultController
             $this->model->setShipping($shipping_array);
         }
     }
+
+    public function actionGetDistinctCategories() {
+
+        include_once('/../Storage.php');
+        
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+        $sql_query = "SELECT DISTINCT category FROM phones";
+        $result = $mysqli->query($sql_query);
+
+        $list_categories = array();
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                $list_categories = array_merge($list_categories, array_map('trim', explode(",", $row['category'])));
+            }
+
+            $this->model->setDistinctCategories($list_categories);
+        }
+
+    }
 }

@@ -81,9 +81,9 @@
                 <div class="col-xs-3"></div>
                         <div class="col-xs-6 items-align">
                             <ul class="text-align">
-                                <a class="categories-list" style="text-decoration: none" href="#">All</a>';
-            foreach ($this->model->category as $value => $key) {
-                echo "<a style='text-decoration: none;' class='categories-list' href='{$this->model->category[$value]}.php'>" . $this->model->category[$value] . "</a>";
+                                <a class="categories-list" style="text-decoration: none" href="Phones.php">All</a>';
+            foreach ($this->model->distinct_categories as $value => $key) {
+                echo "<a style='text-decoration: none;' class='categories-list' href='{$this->model->distinct_categories[$value]}.php'>" . $this->model->distinct_categories[$value] . "</a>";
             }
                 while ( $i < count($this->model->id)) {
                     echo '</ul>

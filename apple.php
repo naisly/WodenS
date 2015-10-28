@@ -19,6 +19,8 @@ $controller = new DefaultController($model);
 
 $view = new DefaultView($model);
 
+$controller->actionGetDistinctCategories();
+
 $controller->actionGetCategories();
 
 $controller->actionGetAvaragePrice();
