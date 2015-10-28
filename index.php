@@ -19,4 +19,6 @@ $controller = new DefaultController($model);
 
 $view = new DefaultView($model);
 
+$controller->actionGetCategories();
+
 echo $view->InitialView();

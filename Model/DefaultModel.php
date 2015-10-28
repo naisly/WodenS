@@ -8,6 +8,8 @@
  */
 class DefaultModel
 {
+    public $category;
+    /*
     public $text;
 
 
@@ -16,5 +18,17 @@ class DefaultModel
         $this->text = 'Hello world!';
 
     }
+    */
 
+    public function setCategory( $category ) {
+
+        $this->category = $category;
+
+    }
+
+    public function getCategory () {
+
+        echo $this->category;
+
+    }
 }

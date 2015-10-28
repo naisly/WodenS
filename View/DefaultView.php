@@ -21,7 +21,7 @@ class DefaultView
     public function InitialView()
     {
 
-        return '<h1>' . $this->model->text . '</h1>';
+        return '<h1>' . print_r($this->model->category) . '</h1>';
 
     }
 }
