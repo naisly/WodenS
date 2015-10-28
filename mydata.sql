@@ -17,7 +17,7 @@ CREATE TABLE phones (
 );
 
 INSERT INTO phones VALUES (1, 'Iphone 6', 'images/photo1.jpg', 'Newest Iphone by Apple with IOS 9 functionality',
-                           'Apple', '1.499', '1.800', '1st December', 'With earpods and USB', 5, '7-11');
+                           'Apple', '1499', '1800', '1st December', 'With earpods and USB', 5, '7-11');
 
-INSERT INTO phones VALUES (2, 'Samsung Galaxy', 'images/photo1.jpg', 'Latest Samsung in the serial of Samsung Inc.', 'Samsung','1.222',
-                             '1.422', '2nd Novermber', 'With headphones and USD', 1, '5-9');
+INSERT INTO phones VALUES (2, 'Samsung Galaxy', 'images/photo1.jpg', 'Latest Samsung in the serial of Samsung Inc.', 'Samsung','1222',
+                             '1422', '2nd Novermber', 'With headphones and USD', 1, '5-9');

@@ -19,6 +19,8 @@ class DefaultModel
     public $id;
     public $quantity;
     public $shipping;
+
+    public $average;
     /*
     public $text;
 
@@ -139,6 +141,16 @@ class DefaultModel
     public function getShipping($i) {
 
         return $this->shipping[$i];
+    }
+
+    public function setAverage( $average ) {
+
+        $this->average = $average;
+    }
+
+    public function getAverage() {
+
+        return $this->average;
     }
 
 }

@@ -114,7 +114,7 @@
                                         <p id="price">' . $this->model->getPrice($i) . '$' . ' ' . '<span id="prev-price"><strike>' . $this->model->getPriviousPrice(($i)) . '$' . '</strike> (' . $this->model->getShipping($i) . ' ' . 'days shipping)</span></p>
                                         <p id="prev-price"> In stock on ' . $this->model->getTimeOfAdding($i) . '</p>
 
-                                        <p>Average price for this product: $155.42 </p>
+                                        <p>Average price for this product:' . ' '  . $this->model->getAverage() . '$' . '</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <p class="spacer"></p>

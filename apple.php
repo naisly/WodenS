@@ -21,6 +21,8 @@ $view = new DefaultView($model);
 
 $controller->actionGetCategories();
 
+$controller->actionGetAvaragePrice();
+
 echo $view->DoctypeView();
 
 echo $view->headerView();
