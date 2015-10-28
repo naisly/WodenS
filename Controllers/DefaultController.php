@@ -23,7 +23,7 @@ class DefaultController
 
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
-        $sql_query = "SELECT product_name, photo, description, category, price, previous_price, time_of_adding, features, id, quantity FROM phones";
+        $sql_query = "SELECT product_name, photo, description, category, price, previous_price, time_of_adding, features, id, quantity, shipping FROM phones";
         $result = $mysqli->query($sql_query);
 
         $product_name_array = array();

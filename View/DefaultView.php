@@ -104,15 +104,15 @@
                             <div class="col-xs-12">
                                     <div class="col-xs-1"></div>
                                     <div class="col-xs-2">
-                                        <img src="{$this->model->photo[$i]}">
+                                        <img src="' . $this->model->photo[$i] . '">
                                     </div>
                                     <div class="col-xs-5">
                                         <p class="spacer"></p>
-                                        <h id="header-items" style="font-size: 20px;">$this->model->description</h>
-                                        <span><br />by' . $this->model->category[$i] . '</span>
+                                        <h id="header-items" style="font-size: 20px;">' . $this->model->description[$i] . '</h>
+                                        <span><br />by ' . $this->model->category[$i] . '</span>
 
-                                        <p id="price">$this->model->price[$i] <span id="prev-price"><strike>$this->model->previous_price[$i]</strike> ($this->model->shipping[$i] days shipping)</span></p>
-                                        <p id="prev-price"> In stock on $this->model->time_of_adding[$i]</p>
+                                        <p id="price">' . $this->model->price[$i] . '<span id="prev-price"><strike>' . ' ' . $this->model->previous_price[$i] . '</strike> (' . $this->model->shipping[$i] . 'days shipping)</span></p>
+                                        <p id="prev-price"> In stock on ' . $this->model->time_of_adding[$i] . '</p>
 
                                         <p>Average price for this product: $155.42 </p>
                                     </div>
@@ -122,7 +122,7 @@
                                         <p>Free shipping on orders greater than $35 </p>
 
                                         <p><b>Product features: </b></p>
-                                        <p>$this->model->features[$i]</p>
+                                        <p>' . $this->model->features[$i] . '</p>
                                         <button>
                                             Add to cart
                                         </button>

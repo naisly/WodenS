@@ -18,6 +18,7 @@ class DefaultModel
     public $features;
     public $id;
     public $quantity;
+    public $shipping;
     /*
     public $text;
 
@@ -128,6 +129,16 @@ class DefaultModel
     public function getQuantity() {
 
         echo $this->quantity;
+    }
+
+    public function setShipping( $shipping ) {
+
+        $this->shipping = $shipping;
+    }
+
+    public function getShipping() {
+
+        echo $this->shipping;
     }
 
 }

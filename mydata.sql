@@ -12,11 +12,12 @@ CREATE TABLE phones (
   previous_price VARCHAR(10),
   time_of_adding VARCHAR(20) NOT NULL,
   features VARCHAR(100) NOT NULL,
-  quantity INT(5) NOT NULL
+  quantity INT(5) NOT NULL,
+  shipping VARCHAR(10) NOT NULL
 );
 
 INSERT INTO phones VALUES (1, 'Iphone 6', '/images/iphones.jpg', 'Newest Iphone by Apple with IOS 9 functionality',
-                           'Apple', '1, 499', '1, 800', '1st December', 'With earpods and USB', 5);
+                           'Apple', '1, 499', '1, 800', '1st December', 'With earpods and USB', 5, '7-11');
 
 INSERT INTO phones VALUES (2, 'Samsung Galaxy', '/images/iphones.jpg', 'Latest Samsung in the serial of Samsung Inc.', 'Samsung','1, 222',
-                           '1, 422', '2nd Novermber', 'With headphones and USD', 1);
+                           '1, 422', '2nd Novermber', 'With headphones and USD', 1, '5-9');
