@@ -108,13 +108,14 @@
                                     </div>
                                     <div class="col-xs-5">
                                         <p class="spacer"></p>
-                                        <h id="header-items" style="font-size: 20px;">' . $this->model->getDescription($i) . '</h>
+                                        <h id="header-items" style="font-size: 20px;">' . $this->model->getProductName($i) . '</h>
                                         <span><br />by ' . $this->model->getCategory($i) . '</span>
 
                                         <p id="price">' . $this->model->getPrice($i) . '$' . ' ' . '<span id="prev-price"><strike>' . $this->model->getPriviousPrice(($i)) . '$' . '</strike> (' . $this->model->getShipping($i) . ' ' . 'days shipping)</span></p>
                                         <p id="prev-price"> In stock on ' . $this->model->getTimeOfAdding($i) . '</p>
 
                                         <p>Average price for this product:' . ' '  . $this->model->getAverage() . '$' . '</p>
+                                        <p>' . '<em>Short description: </em>' . ' '  . $this->model->getDescription($i) . '</p>
                                     </div>
                                     <div class="col-xs-2">
                                         <p class="spacer"></p>
