@@ -111,7 +111,7 @@
                                         <h id="header-items" style="font-size: 20px;">' . $this->model->description[$i] . '</h>
                                         <span><br />by ' . $this->model->category[$i] . '</span>
 
-                                        <p id="price">' . $this->model->price[$i] . '<span id="prev-price"><strike>' . ' ' . $this->model->previous_price[$i] . '</strike> (' . $this->model->shipping[$i] . 'days shipping)</span></p>
+                                        <p id="price">' . $this->model->price[$i] . '$' . ' ' . '<span id="prev-price"><strike>' . $this->model->previous_price[$i] . '$' . '</strike> (' . $this->model->shipping[$i] . ' ' . 'days shipping)</span></p>
                                         <p id="prev-price"> In stock on ' . $this->model->time_of_adding[$i] . '</p>
 
                                         <p>Average price for this product: $155.42 </p>

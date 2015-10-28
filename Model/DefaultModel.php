@@ -35,9 +35,9 @@ class DefaultModel
 
     }
 
-    public function getProductName() {
+    public function getProductName($i) {
 
-        echo $this->product_name;
+        echo $this->product_name[$i];
 
     }
 
@@ -46,9 +46,9 @@ class DefaultModel
         $this->photo = $photo;
     }
 
-    public function getPhoto() {
+    public function getPhoto($i) {
 
-        echo $this->photo;
+        echo $this->photo[$i];
     }
 
     public function setDescription( $description ) {
@@ -56,9 +56,9 @@ class DefaultModel
         $this->description = $description;
     }
 
-    public function getDescription() {
+    public function getDescription($i) {
 
-        echo $this->description;
+        echo $this->description[$i];
     }
 
     public function setCategory( $category ) {
@@ -66,9 +66,9 @@ class DefaultModel
         $this->category = $category;
     }
 
-    public function getCategory () {
+    public function getCategory ($i) {
 
-        echo $this->category;
+        echo $this->category[$i];
     }
 
     public function setPrice( $price ) {
@@ -76,9 +76,9 @@ class DefaultModel
         $this->price = $price;
     }
 
-    public function getPrice() {
+    public function getPrice($i) {
 
-        echo $this->price;
+        echo $this->price[$i];
     }
 
     public function setPreviousPrice( $previous_price ){
@@ -86,9 +86,9 @@ class DefaultModel
         $this->previous_price = $previous_price;
     }
 
-    public function getPriviousPrice() {
+    public function getPriviousPrice($i) {
 
-        echo $this->previous_price;
+        echo $this->previous_price[$i];
     }
 
     public function setTimeOfAdding( $time_of_adding) {
@@ -96,9 +96,9 @@ class DefaultModel
         $this->time_of_adding = $time_of_adding;
     }
 
-    public function getTimeOfAdding() {
+    public function getTimeOfAdding($i) {
 
-        echo $this->time_of_adding;
+        echo $this->time_of_adding[$i];
     }
 
     public function setFeatures( $features ) {
@@ -106,9 +106,9 @@ class DefaultModel
         $this->features = $features;
     }
 
-    public function getFeatures() {
+    public function getFeatures($i) {
 
-        echo $this->features;
+        echo $this->features[$i];
     }
 
     public function setId ( $id ) {
@@ -116,9 +116,9 @@ class DefaultModel
         $this->id = $id;
     }
 
-    public function getId ( $id ) {
+    public function getId($i) {
 
-        echo $this->id();
+        echo $this->id($i);
     }
 
     public function setQuantity( $quantity ){
@@ -126,9 +126,9 @@ class DefaultModel
         $this->quantity = $quantity;
     }
 
-    public function getQuantity() {
+    public function getQuantity($i) {
 
-        echo $this->quantity;
+        echo $this->quantity[$i];
     }
 
     public function setShipping( $shipping ) {
@@ -136,9 +136,9 @@ class DefaultModel
         $this->shipping = $shipping;
     }
 
-    public function getShipping() {
+    public function getShipping($i) {
 
-        echo $this->shipping;
+        echo $this->shipping[$i];
     }
 
 }
