@@ -2,22 +2,22 @@
 /**
  * Created by PhpStorm.
  * User: Home
- * Date: 29.10.2015
- * Time: 8:51
+ * Date: 28.10.2015
+ * Time: 18:57
  */
 
-include_once('Controllers\AppleController.php');
-include_once('Model\AppleModel.php');
-include_once('View\AppleView.php');
+include_once('Controllers\DefaultController.php');
+include_once('Model\DefaultModel.php');
+include_once('View\DefaultView.php');
 //initiate the triad
 
-$model = new AppleModel();
+$model = new DefaultModel();
 
 //It is important that the controller and the view share the model
 
-$controller = new AppleController($model);
+$controller = new DefaultController($model);
 
-$view = new AppleView($model);
+$view = new DefaultView($model);
 
 $controller->actionGetDistinctCategories();
 

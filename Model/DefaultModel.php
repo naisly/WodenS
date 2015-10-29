@@ -22,16 +22,9 @@ class DefaultModel
     public $distinct_categories;
 
     public $average;
-    /*
-    public $text;
 
 
-    public function __construct() {
 
-        $this->text = 'Hello world!';
-
-    }
-    */
     public function setProductName ( $product_name ) {
 
         $this->product_name = $product_name;

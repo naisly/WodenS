@@ -100,7 +100,7 @@ class DefaultController
     public function actionGetDistinctCategories() {
 
         include_once('/../Storage.php');
-        
+
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
         $sql_query = "SELECT DISTINCT category FROM phones";
