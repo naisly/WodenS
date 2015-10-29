@@ -27,3 +27,9 @@ INSERT INTO phones VALUES (3, 'HTC Lumia', 'images/photo1.jpg', 'Last technologi
 
 INSERT INTO phones VALUES (4, 'Iphone 5S', 'images/photo1.jpg', 'One of the latest phones by Apple Inc.', 'Apple',
                            '1097', '1322', '4th January', 'With earpodes and USB', 5, '15-21');
+
+INSERT INTO phones VALUES (5, 'Iphone 4', 'images/photo1.jpg', 'The oldest released Iphone by Apple Inc.', 'Apple',
+                           'free', '599', '4th April', 'With old headphones, markers and USB', 3, '11-12');
+
+SELECT product_name, photo, description, category, price, previous_price, time_of_adding, features,
+  id, quantity, shipping FROM phones WHERE product_name = 'Iphone 5S' AND price > 100 AND price < 1500;

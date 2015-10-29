@@ -77,6 +77,7 @@
         public function getItems()
         {
             $i = 0;
+            $n = 0;
             echo '<div class="panel-default items-row pointer">
                 <div class="col-xs-3"></div>
                         <div class="col-xs-6 items-align">
@@ -88,12 +89,13 @@
                 while ( $i < count($this->model->id)) {
                     echo '</ul>
                         </div>
-                        <div class="col-sm-3"></div>
-                            <div class="col-xs-12">
-                                    <div class="col-xs-2">
+                        <div class="row">
+                            <div class="col-xs-8">
+                                <div class="row">
+                                    <div class="col-xs-3">
                                         <img src="' . $this->model->getPhoto($i) . '">
                                     </div>
-                                    <div class="col-xs-5">
+                                    <div class="col-xs-6">
                                         <p class="spacer"></p>
                                         <h id="header-items" style="font-size: 20px;">' . $this->model->getProductName($i) . '</h>
                                         <span><br />by ' . $this->model->getCategory($i) . '</span>
@@ -104,7 +106,7 @@
                                         <p>Average price for this product:' . ' '  . $this->model->getAverage() . '$' . '</p>
                                         <p>' . '<em>Short description: </em>' . ' '  . $this->model->getDescription($i) . '</p>
                                     </div>
-                                    <div class="col-xs-2">
+                                    <div class="col-xs-3">
                                         <p class="spacer"></p>
 
                                         <p>Free shipping on orders greater than $35 </p>
@@ -115,6 +117,58 @@
                                             Add to cart
                                         </button>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                            <div class="col-sm-7">
+                                                <ul class="nav nav-list">
+                                                    <li class="divider"></li>
+                                                </ul>
+                                            </div>
+                                        </div>';
+                    $i++;
+                    /*while ($n < 1) {
+                        echo '<div class="col-xs-4">
+                                   <form action="apple.php" method="post">
+                                        <div class="input-group checkbox-font">
+                                             <input type="checkbox" name="iphones[]" id="color" value="Iphone4"> Iphone 4 <br/>
+                                             <input type="checkbox" name="iphones[]" id="color" value="Iphone4S"> Iphone 4S <br/>
+                                             <input type="checkbox" name="iphones[]" id="color" value="Iphone5"> Iphone 5 <br/>
+                                             <input type="checkbox" name="iphones[]" id="color" value="Iphone5C"> Iphone 5C <br/>
+                                             <input type="checkbox" name="iphones[]" id="color" value="Iphone5S"> Iphone 5S <br/>
+                                             <input type="checkbox" name="iphones[]" id="color" value="Iphone6"> Iphone 6 <br/>
+                                             <input type="checkbox" name="iphones[]" id="color" value="Iphone6S"> Iphone 6S
+                                        </div>
+                                        <div class="input-group">
+                                             <label for="min-price">Select min price</label>
+                                             <input type="text" class="form-control" name="min" placeholder="Min price">
+                                        </div>
+                                        <div class="input-group">
+                                             <label for="max-price">Select max price</label>
+                                             <input type="text" class="form-control" name="max" placeholder="Max price">
+                                        </div>
+                                        <div class="input-group">
+                                             <button class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </form>
+                                    <form action="apple.php" method="post">
+                                        <input type="hidden" name="highest-price">
+                                        <button class="btn btn-default">Sort by the highest price</button>
+                                    </form>
+                                    <form action="apple.php" method="post">
+                                        <input type="hidden" name="lowest-price">
+                                        <button class="btn btn-default">Sort by the lowest price</button>
+                                    </form>
+                                    <form action="apple.php" method="post">
+                                        <input type="hidden" name="last-added">
+                                        <button class="btn btn-default">Last added</button>
+                                    </form>
+                                    <form action="apple.php" method="post">
+                                        <input type="hidden" name="fastest-shipping">
+                                        <button class="btn btn-default">Sort by fastest shipping</button>
+                                    </form>
+                            </div>
+                                </div>
                                         <div class="row">
                                             <div class="col-sm-7">
                                                 <ul class="nav nav-list">
@@ -123,8 +177,10 @@
                                             </div>
                                         </div>
                                     </div>
-                            </div>';
-                $i++;
+                            </div>
+                        </div>';
+                        $n++;
+                    }*/
 
             }
         }

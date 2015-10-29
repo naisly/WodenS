@@ -25,6 +25,8 @@ $controller->actionGetCategories();
 
 $controller->actionGetAvaragePrice();
 
+$controller->setAveragePrice();
+
 echo $view->DoctypeView();
 
 echo $view->headerView();
