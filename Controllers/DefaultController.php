@@ -44,14 +44,19 @@ class DefaultController
     }
     */
 
-    public function actionGetCategories() {
+    public function actionGetCategories( $category ) {
 
         include_once('/../Storage.php');
 
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
-        $sql_query = "SELECT product_name, photo, description, category, price, previous_price, time_of_adding, features,
+        if( $category === 'All') {
+            $sql_query = "SELECT product_name, photo, description, category, price, previous_price, time_of_adding, features,
                       id, quantity, shipping, average_price FROM phones";
+        } else if( $category === 'Apple'){
+            $sql_query = "SELECT product_name, photo, description, category, price, previous_price, time_of_adding, features,
+                          id, quantity, shipping, average_price FROM phones WHERE category='Apple'";
+        }
         $result = $mysqli->query($sql_query);
 
         $product_name_array = array();
