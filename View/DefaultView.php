@@ -86,47 +86,46 @@
             foreach ($this->model->distinct_categories as $value => $key) {
                 echo "<a style='text-decoration: none;' class='categories-list' href='{$this->model->distinct_categories[$value]}.php'>" . $this->model->distinct_categories[$value] . "</a>";
             }
-                while ( $i < count($this->model->id)) {
-                    echo '</ul>
+            while ( $i < count($this->model->id)) {
+                echo '</ul>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-8">
-                                <div class="row">
-                                    <div class="col-xs-3">
+                        <div class="col-sm-3"></div>
+                            <div class="col-xs-12">
+                                    <div class="col-xs-1"></div>
+                                    <div class="col-xs-2">
                                         <img src="' . $this->model->getPhoto($i) . '">
                                     </div>
-                                    <div class="col-xs-6">
+                                    <div class="col-xs-5">
                                         <p class="spacer"></p>
                                         <h id="header-items" style="font-size: 20px;">' . $this->model->getProductName($i) . '</h>
                                         <span><br />by ' . $this->model->getCategory($i) . '</span>
-
-                                        <p id="price">' . $this->model->getPrice($i) . '$' . ' ' . '<span id="prev-price"><strike>' . $this->model->getPriviousPrice(($i)) . '$' . '</strike> (' . $this->model->getShipping($i) . ' ' . 'days shipping)</span></p>
+                                        <p id="price">' . $this->model->getPrice($i) . '$' . ' ' . '<span id="prev-price"><strike>' . $this->model->getPriviousPrice($i) . '$' . '</strike> (' . $this->model->getShipping($i) . ' ' . 'days shipping)</span></p>
                                         <p id="prev-price"> In stock on ' . $this->model->getTimeOfAdding($i) . '</p>
-
-                                        <p>Average price for this product:' . ' '  . $this->model->getAverage($i) . '$' . '</p>
-                                        <p>' . '<em>Short description: </em>' . ' '  . $this->model->getDescription($i) . '</p>
+                                        <p>Average price for this product: ' . $this->model->getAverage($i) . '$' . '</p>
+                                        <p><em>Short description: </em>' . $this->model->getDescription($i) . '</p>
                                     </div>
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-2">
                                         <p class="spacer"></p>
-
                                         <p>Free shipping on orders greater than $35 </p>
-
                                         <p><b>Product features: </b></p>
                                         <p>' . $this->model->getFeatures($i) . '</p>
                                         <button>
                                             Add to cart
                                         </button>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                            <div class="col-sm-7">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-1"></div>
+                                            <div class="col-sm-12">
                                                 <ul class="nav nav-list">
                                                     <li class="divider"></li>
                                                 </ul>
                                             </div>
-                                        </div>';
-                    $i++;
+                                            <div class="col-sm-1"></div>
+                                        </div>
+                                    </div>
+                            </div>';
+                $i++;
                     /*while ($n < 1) {
                         echo '<div class="col-xs-4">
                                    <form action="apple.php" method="post">
