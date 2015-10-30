@@ -22,21 +22,6 @@ class DefaultModel
     public $distinct_categories;
 
     public $average;
-    public $average_price;
-
-    public function setAveragePrice ( $average_price ) {
-
-        $this->average_price = $average_price;
-
-    }
-
-    public function getAveragePrice($i) {
-
-        return $this->average_price[$i];
-
-    }
-
-
 
     public function setProductName ( $product_name ) {
 
@@ -155,9 +140,9 @@ class DefaultModel
         $this->average = $average;
     }
 
-    public function getAverage() {
+    public function getAverage($i) {
 
-        return $this->average;
+        return $this->average[$i];
     }
 
     public function setDistinctCategories( $distinct_categories ) {

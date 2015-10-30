@@ -103,9 +103,7 @@ class AppleController extends DefaultController
             $this->model->setId($id_array);
             $this->model->setQuantity($quantity_array);
             $this->model->setShipping($shipping_array);
-            $this->model->setAveragePrice($average_price_array);
-
-            print_r($average_price_array);
+            $this->model->setAverage($average_price_array);
         }
     }
 
@@ -141,9 +139,6 @@ class AppleController extends DefaultController
             }
 
         }
-        print_r($list_price);
-        print_r($list_products);
-        echo count($list_products);
 
         while ($i < count($list_products)){
 
