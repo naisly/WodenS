@@ -38,5 +38,11 @@ INSERT INTO phones VALUES (6, 'Iphone 5S', 'images/photo1.jpg', 'The oldest rele
 INSERT INTO phones VALUES (7, 'Iphone 6S', 'images/photo1.jpg', 'The newest released Iphone by Apple Inc.', 'Apple',
                            1455 , 1999, '4th May', 'With old headphones, markers and USB', 3, '11-12', 1);
 
+INSERT INTO phones VALUES (8, 'Iphone 4', 'images/photo1.jpg', 'The oldest released Iphone by Apple Inc.', 'Apple',
+                           144 , 599, '4th July', 'With old headphones, markers and USB', 3, '11-12', 1);
+
+INSERT INTO phones VALUES (9, 'Samsung Galaxy', 'images/photo1.jpg', 'Latest Samsung in the serial of Samsung Inc.',
+                           'Samsung', 1444,1999, '2nd Novermber', 'With headphones and USD', 1, '5-9', 1);
+
 SELECT product_name, photo, description, category, price, previous_price, time_of_adding, features,
   id, quantity, shipping, average_price FROM phones WHERE product_name = 'Iphone 5S' AND price > 100 AND price < 1500;

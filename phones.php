@@ -19,11 +19,11 @@ $controller = new DefaultController($model);
 
 $view = new DefaultView($model);
 
+$controller->actionSetAveragePrice( 'All' );
+
 $controller->actionGetDistinctCategories();
 
 $controller->actionGetCategories();
-
-$controller->setAveragePrice();
 
 echo $view->DoctypeView();
 

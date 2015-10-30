@@ -19,7 +19,7 @@ $controller = new AppleController($model);
 
 $view = new AppleView($model);
 
-$controller->actionSetAveragePrice();
+$controller->actionSetAveragePrice( 'Apple' );
 
 $controller->actionGetDistinctCategories();
 
