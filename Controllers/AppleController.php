@@ -56,7 +56,7 @@ class AppleController extends DefaultController
                           id, quantity, shipping FROM phones WHERE category='Apple'";
         }*/
         $sql_query = "SELECT product_name, photo, description, category, price, previous_price, time_of_adding, features,
-                          id, quantity, shipping FROM phones WHERE category='Apple'";
+                          id, quantity, shipping, average_price FROM phones WHERE category='Apple'";
         $result = $mysqli->query($sql_query);
 
         $product_name_array = array();
@@ -70,6 +70,7 @@ class AppleController extends DefaultController
         $id_array = array();
         $quantity_array = array();
         $shipping_array = array();
+        $average_price_array = array();
 
 
         if ($result->num_rows > 0) {
@@ -87,6 +88,7 @@ class AppleController extends DefaultController
                 $features_array = array_merge($features_array, array_map('trim', explode(",", $row['features'])));
                 $quantity_array = array_merge($quantity_array, array_map('trim', explode(",", $row['quantity'])));
                 $shipping_array = array_merge($shipping_array, array_map('trim', explode(",", $row['shipping'])));
+                $average_price_array = array_merge($average_price_array, array_map('trim', explode(",", $row['average_price'])));
 
             }
 
@@ -101,10 +103,15 @@ class AppleController extends DefaultController
             $this->model->setId($id_array);
             $this->model->setQuantity($quantity_array);
             $this->model->setShipping($shipping_array);
+            $this->model->setAveragePrice($average_price_array);
+
+            print_r($average_price_array);
         }
     }
 
-    public function SetAveragePrice() {
+    public function actionSetAveragePrice() {
+
+        $i = 0;
 
         include_once('/../Storage.php');
 
@@ -125,21 +132,39 @@ class AppleController extends DefaultController
                 $list_price = array_merge($list_price, array_map('trim', explode(",", $row['price'])));
             }
 
-            $this->model->setPrice($list_price);
         }
 
         if ($result_products->num_rows > 0) {
             // output data of each row
             while ($row = $result_products->fetch_assoc()) {
-                $list_products = array_merge($list_price, array_map('trim', explode(",", $row['products'])));
+                $list_products = array_merge($list_products, array_map('trim', explode(",", $row['product_name'])));
             }
 
-            $this->model->setProductName($list_products);
         }
+        print_r($list_price);
+        print_r($list_products);
+        echo count($list_products);
 
-        $i = 0;
-        foreach($list_products as $value => $key){
-            echo $list_produts[value];
+        while ($i < count($list_products)){
+
+            $sql_avr = "SELECT price, average_price FROM phones WHERE product_name='$list_products[$i]'";
+            $result_avr = $mysqli->query($sql_avr);
+
+            $list_avr = array();
+
+            if ($result_avr->num_rows > 0){
+                while ($row = $result_avr->fetch_assoc()) {
+                    $list_avr = array_merge($list_avr, array_map('trim', explode(",", $row['price'])));
+                }
+                $sum = array_sum($list_avr);
+                $quantity = count($list_avr);
+                $res = $sum / $quantity;
+
+                $sql_res = $mysqli->prepare("UPDATE phones SET average_price='$res' WHERE product_name='$list_products[$i]'");
+                $sql_res->execute();
+
+            }
+            $i++;
         }
     }
 }

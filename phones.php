@@ -23,7 +23,7 @@ $controller->actionGetDistinctCategories();
 
 $controller->actionGetCategories();
 
-$controller->actionGetAvaragePrice();
+$controller->setAveragePrice();
 
 echo $view->DoctypeView();
 

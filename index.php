@@ -22,4 +22,3 @@ $view = new DefaultView($model);
 $controller->actionGetCategories();
 
 echo $view->DoctypeView();
-echo $view->InitialView();

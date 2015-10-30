@@ -17,7 +17,7 @@ class DefaultController
 
     }
 
-    public function actionGetAvaragePrice() {
+    /*public function actionGetAvaragePrice() {
 
         include_once('/../Storage.php');
 
@@ -42,6 +42,7 @@ class DefaultController
             $this->model->setAverage($res);
         }
     }
+    */
 
     public function actionGetCategories() {
 

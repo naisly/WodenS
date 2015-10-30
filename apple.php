@@ -19,13 +19,11 @@ $controller = new AppleController($model);
 
 $view = new AppleView($model);
 
+$controller->actionSetAveragePrice();
+
 $controller->actionGetDistinctCategories();
 
 $controller->actionGetCategories();
-
-$controller->actionGetAvaragePrice();
-
-$controller->setAveragePrice();
 
 echo $view->DoctypeView();
 
