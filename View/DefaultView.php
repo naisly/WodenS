@@ -86,6 +86,49 @@
             foreach ($this->model->distinct_categories as $value => $key) {
                 echo "<a style='text-decoration: none;' class='categories-list' href='{$this->model->distinct_categories[$value]}.php'>" . $this->model->distinct_categories[$value] . "</a>";
             }
+            echo '            </ul>
+                            </div>
+                        </div>
+                  </div>';
+            echo   '<div class="row">
+                    <div class="col-sm-3"></div>
+                        <div class="col-xs-12">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="row">
+                                <form action="apple.php" method="post">
+                                    <div class="col-md-2">
+                                        <h class="search-item">Items: <br/></h>    <input type="checkbox" name="array[]" id="array" value="Iphone 4"/> <em>Iphone 4</em><br />
+                                                                                   <input type="checkbox" name="array[]" id="array" value="Iphone 4S" /> <em>Iphone 4S</em><br/>
+                                                                                   <input type="checkbox" name="array[]" id="array" value="Iphone 5" /> <em>Iphone 5</em><br/>
+                                                                                   <input type="checkbox" name="array[]" id="array" value="Iphone 5S" /> <em>Iphone 5S</em><br/>
+                                                                                   <input type="checkbox" name="array[]" id="array" value="Iphone 6" /> <em>Iphone 6</em><br/>
+                                                                                   <input type="checkbox" name="array[]" id="array" value="Iphone 6S" /> <em>Iphone 6S</em><br/>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h class="search-item">Min:</h> <input type="text" name="min"><br />
+                                        <h class="search-item">Max:</h> <input type="text" name="max"><br />
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h class="search-item">Sort by price:</h><br />
+                                               <input type="radio" name="sort_by_price" value="price " /> By highest <br />
+                                               <input type="radio" name="sort_by_price" value="price DESC" /> By lowest <br />
+
+                                        <h class="search-item">Sort by time of adding:</h><br />
+                                               <input type="radio" name="sort_by_time" value="time" /> By latest <br />
+                                               <input type="radio" name="sort_by_time" value="time DESC" /> By oldest <br />
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h class="search-item">Shipping: <br /></h>
+                                              <input type="radio" name="sort_by_shipping" value="shipping" /> By fastest <br />
+                                              <input type="radio" name="sort_by_shipping" value="shipping DESC" /> By slowest <br />
+                                              <input class="btn btn-primary" id="submit" type="submit" value="Pick up goods">
+                                    </div>
+                                </form>
+                        </div>
+                </div>
+                </div>';
             while ( $i < count($this->model->id)) {
                 echo '</ul>
                         </div>
