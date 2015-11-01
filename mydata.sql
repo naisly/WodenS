@@ -6,44 +6,109 @@ CREATE TABLE phones (
   id INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   product_name VARCHAR(15) NOT NULL,
   photo VARCHAR(30) NOT NULL,
-  description VARCHAR(150) NOT NULL,
+  description VARCHAR(300) NOT NULL,
   category VARCHAR(15) NOT NULL,
   price INT(10) NOT NULL,
   previous_price INT(10),
   time_of_adding VARCHAR(20) NOT NULL,
-  features VARCHAR(100) NOT NULL,
+  features VARCHAR(300) NOT NULL,
   quantity INT(5) NOT NULL,
-  shipping VARCHAR(10) NOT NULL,
+  shipping INT(3) NOT NULL,
   average_price INT(10) NOT NULL,
   time TIMESTAMP
 );
 
-INSERT INTO phones VALUES (1, 'Iphone 6', 'images/photo1.jpg', 'Newest Iphone by Apple with IOS 9 functionality',
-                           'Apple', 1499, 1800, '1st December', 'With earpods and USB', 5, '7-11', 1, '2000-03-25 08:06:04');
+INSERT INTO phones VALUES (1, 'Iphone 6S', 'images/iphone6S.jpg', 'Internal memory: 16 GB Wireless communications: Wi?Fi
+                          802.11a/b/g/n/ac with technology of MIMO with Bluetooth 4.2 and NFC as well as Camera: 12 MPX. 1.22 (3840 on 2160 dots)', 'Apple',
+                           1455 , 1999, '31th October', 'With old headphones and markers and USB', 3, 12, 1, '2015-10-31 21:21:00');
 
-INSERT INTO phones VALUES (2, 'Samsung Galaxy', 'images/photo1.jpg', 'Latest Samsung in the serial of Samsung Inc.',
-                           'Samsung',1222,1422, '2nd Novermber', 'With headphones and USD', 1, '5-9', 1, '2003-08-24 10:06:01');
+INSERT INTO phones VALUES (2, 'Iphone 6', 'images/iphone6.png', 'Screen: 4.7 IPS LCD (1334x750 dots) with LED-backlight / 16 mil. colors /
+                           touch capacitive / scratch-resistant glass Ion-X Glass with oleophobic coating. Internal memory: 32 GB',
+                           'Apple', 1200, 1599, '1st November', 'With earpods and USB', 5, 11, 1, '2015-11-01 19:34:40');
 
-INSERT INTO phones VALUES (3, 'HTC Lumia', 'images/photo1.jpg', 'Last technologies in growing world', 'HTC', 699,
-                           999, '3rd February', 'Without package', 3, '1-4', 1, '2001-04-06 03:02:01');
+INSERT INTO phones VALUES (3, 'Iphone 5S', 'images/iphone5S.jpg', 'Screen: 4.0" IPS TFT (640 x 1136 dots) with LED-backlight / 16 mil. colors /
+                          touch capacitive / scratch-resistant glass Gorilla Glass with oleophobic coating. Internal memory: 8 GB',
+                           'Apple', 1221, 1985, '1st November', 'With earpodes and USB', 5, 22, 1, '2015-11-01 21:01:15');
 
-INSERT INTO phones VALUES (4, 'Iphone 5S', 'images/photo1.jpg', 'One of the latest phones by Apple Inc.', 'Apple',
-                           1097, 1322, '4th January', 'With earpodes and USB', 5, '15-21', 1, '2000-06-09 23:12:01');
+INSERT INTO phones VALUES (4, 'Iphone 6', 'images/iphone6.png', 'Screen: 4.7" IPS LCD (1334x750 dots) with LED-backlight / 16 mil. colors /
+                           touch capacitive / scratch-resistant glass Ion-X Glass with oleophobic coating. Internal memory: 64 GB', 'Apple',
+                           1211 , 1677, '2nd November', 'With new earpods and USB with markers', 3, 11, 1, '2015-11-02 11:11:11');
 
-INSERT INTO phones VALUES (5, 'Iphone 4', 'images/photo1.jpg', 'The oldest released Iphone by Apple Inc.', 'Apple',
-                           0 , 599, '4th April', 'With old headphones, markers and USB', 3, '11-12', 1, '2012-08-05 01:01:01');
+INSERT INTO phones VALUES (5, 'Iphone 6S', 'images/iphone6S.jpg', 'Internal memory: 64 GB Wireless communications: Wi?Fi
+                          802.11a/b/g/n/ac with technology of MIMO with Bluetooth 4.2 and NFC as well as Camera: 12 MPX. 1.22 (3840 on 2160 dots)', 'Apple',
+                           1399 , 1999, '2nd November', 'With old headphones and USB', 3, 12, 1, '2015-11-02 21:10:00');
 
-INSERT INTO phones VALUES (6, 'Iphone 5S', 'images/photo1.jpg', 'The oldest released Iphone by Apple Inc.', 'Apple',
-                           111 , 222, '4th April', 'With old headphones, markers and USB', 3, '11-12', 1, '2012-11-15 17:15:01');
+INSERT INTO phones VALUES (6, 'Iphone 4', 'images/iphone4.jpg', 'Screen: 3.5" TFT (Retina) 960x640 points support of Multi-Touch
+                          Internal memory: 8 GB. Wireless communications: Wi-Fi (802.11b/g) Bluetooth 2.1 + EDR FaceTime', 'Apple',
+                           100 , 221, '3rd November', 'With old headphones and markers', 3, 3, 1, '2015-11-03 12:04:15');
 
-INSERT INTO phones VALUES (7, 'Iphone 6S', 'images/photo1.jpg', 'The newest released Iphone by Apple Inc.', 'Apple',
-                           1455 , 1999, '4th May', 'With old headphones, markers and USB', 3, '11-12', 1, '2008-07-15 23:24:01');
+INSERT INTO phones VALUES (7, 'Iphone 6', 'images/iphone6.png', 'Screen: 4.7" IPS LCD (1334x750 dots) with LED-backlight / 16 mil. colors /
+                           touch capacitive / scratch-resistant glass Ion-X Glass with oleophobic coating. Internal memory: 64 GB',
+                           'Apple', 1111, 1555, '3rd November', 'With earpods and USB', 5, 15, 1, '2015-11-02 21:23:40');
 
-INSERT INTO phones VALUES (8, 'Iphone 4', 'images/photo1.jpg', 'The oldest released Iphone by Apple Inc.', 'Apple',
-                           144 , 599, '4th July', 'With old headphones, markers and USB', 3, '11-12', 1, '2008-01-01 00:00:01');
+INSERT INTO phones VALUES (8, 'Iphone 5S', 'images/iphone5S.jpg', 'Screen: 4.0" IPS TFT (640 x 1136 dots) with LED-backlight / 16 mil. colors /
+                          touch capacitive / scratch-resistant glass Gorilla Glass with oleophobic coating. Internal memory: 16 GB',
+                           'Apple', 1097, 1322, '5th November', 'With earpodes and USB', 5, 21, 1, '2015-11-05 19:00:01');
 
-INSERT INTO phones VALUES (9, 'Samsung Galaxy', 'images/photo1.jpg', 'Latest Samsung in the serial of Samsung Inc.',
-                           'Samsung', 1444,1999, '2nd Novermber', 'With headphones and USD', 1, '5-9', 1, '2010-02-18 23:00:01');
+INSERT INTO phones VALUES (9, 'Iphone 6S', 'images/iphone6S.jpg', 'Internal memory: 64 GB Wireless communications: Wi?Fi
+                          802.11a/b/g/n/ac with technology of MIMO with Bluetooth 4.2 and NFC as well as Camera: 12 MPX. 1.22 (3840 on 2160 dots)', 'Apple',
+                           1600 , 2015, '12st November', 'With old headphones as well as markers and USB', 3, 13, 1, '2015-11-12 11:11:11');
+
+INSERT INTO phones VALUES (10, 'Iphone 6', 'images/iphone6.png', 'Screen: 4.7" IPS LCD (1334x750 dots) with LED-backlight / 16 mil. colors /
+                           touch capacitive / scratch-resistant glass Ion-X Glass with oleophobic coating. Internal memory: 32 GB',
+                           'Apple', 1000, 1200, '13th November', 'With earpods and USB', 5, 16, 1, '2015-11-13 21:54:30');
+
+INSERT INTO phones VALUES (11, 'Iphone 5', 'images/iphone5.jpg', 'Screen: 4.0" IPS TFT (640 x 1136 dots) with LED-backlight / 16 mil. colors /
+                          touch capacitive / scratch-resistant glass Gorilla Glass with oleophobic coating. Internal memory: 32 GB',
+                           'Apple', 699 , 1022, '15th November', 'With old headphones as well as markers and USB', 3, 11, 1, '2015-11-15 15:04:31');
+
+INSERT INTO phones VALUES (12, 'Iphone 5S', 'images/iphone5S.jpg', 'Screen: 4.0" IPS TFT (640 x 1136 dots) with LED-backlight / 16 mil. colors /
+                          touch capacitive / scratch-resistant glass Gorilla Glass with oleophobic coating. Internal memory: 8 GB',
+                           'Apple', 785, 1255, '15th November', 'With earpodes and USB', 5, 7, 1, '2015-11-15 19:06:06');
+
+INSERT INTO phones VALUES (13, 'Iphone 4', 'images/iphone4.jpg', 'Screen: 3.5" TFT (Retina) 960x640 points support of Multi-Touch
+                          Internal memory: 8 GB. Wireless communications: Wi-Fi (802.11b/g) Bluetooth 2.1 + EDR FaceTime', 'Apple',
+                           99 , 101, '16th November', 'With old headphones and markers', 3, 7, 1, '2015-11-16 12:15:15');
+
+INSERT INTO phones VALUES (14, 'Iphone 6S', 'images/iphone6S.jpg', 'Internal memory: 16 GB Wireless communications: Wi?Fi
+                          802.11a/b/g/n/ac with technology of MIMO Bluetooth 4.2 NFC Camera: 12 MPX. 1.22 (3840 on 2160 dots)', 'Apple',
+                          999 , 1999, '16th November', 'With old headphones as well as markers and USB', 3, 12, 1, '2015-11-16 14:21:00');
+
+INSERT INTO phones VALUES (15, 'Iphone 4S', 'images/iphone4S.jpg', 'Screen: 3.5" TFT (Retina) 960x640 points support of Multi-Touch
+                          Internal memory: 8 GB. Wireless communications: Wi-Fi (802.11b/g) Bluetooth 2.1 + EDR FaceTime', 'Apple',
+                           100 , 399, '21th November', 'With old headphones and USB', 3, 2, 1, '2015-11-21 13:10:12');
+
+INSERT INTO phones VALUES (16, 'Iphone 6', 'images/iphone6.png', 'Screen: 4.7" IPS LCD (1334x750 dots) with LED-backlight / 16 mil. colors /
+                           touch capacitive / scratch-resistant glass Ion-X Glass with oleophobic coating. Internal memory: 32 GB',
+                           'Apple', 999, 1200, '25th November', 'With earpods and USB', 5, 11, 1, '2015-11-25 19:32:40');
+
+INSERT INTO phones VALUES (17, 'Iphone 5S', 'images/iphone5S.jpg', 'Screen: 4.0" IPS TFT (640 x 1136 dots) with LED-backlight / 16 mil. colors /
+                          touch capacitive / scratch-resistant glass Gorilla Glass with oleophobic coating. Internal memory: 8 GB',
+                           'Apple', 999, 1311, '27th November', 'With earpodes and USB', 5, 19, 1, '2015-11-27 13:01:01');
+
+INSERT INTO phones VALUES (18, 'Iphone 4', 'images/iphone4.jpg', 'Screen: 3.5" TFT (Retina) 960x640 points support of Multi-Touch
+                          Internal memory: 8 GB. Wireless communications: Wi-Fi (802.11b/g) Bluetooth 2.1 + EDR FaceTime', 'Apple',
+                           1 , 211, '27th November', 'With old headphones and markers', 3, 12, 1, '2015-11-27 17:04:30');
+
+INSERT INTO phones VALUES (19, 'Iphone 6', 'images/iphone6.png', 'Screen: 4.7" IPS LCD (1334x750 dots) with LED-backlight / 16 mil. colors /
+                           touch capacitive / scratch-resistant glass Ion-X Glass with oleophobic coating. Internal memory: 32 GB',
+                           'Apple', 1023, 1545, '28th November', 'With earpods and USB', 5, 8, 1, '2015-11-28 20:50:40');
+
+INSERT INTO phones VALUES (20, 'Iphone 4', 'images/iphone4.jpg', 'Screen: 3.5" TFT (Retina) 960x640 points support of Multi-Touch
+                          Internal memory: 8 GB. Wireless communications: Wi-Fi (802.11b/g) Bluetooth 2.1 + EDR FaceTime', 'Apple',
+                           1 , 211, '28th November', 'With old headphones and markers', 3, 8, 1, '2015-11-28 23:12:30');
+
+INSERT INTO phones VALUES (21, 'Iphone 6S', 'images/iphone6S.jpg', 'Internal memory: 16 GB Wireless communications: Wi?Fi
+                          802.11a/b/g/n/ac with technology of MIMO Bluetooth 4.2 NFC Camera: 12 MPX. 1.22 (3840 on 2160 dots)', 'Apple',
+                           1200 , 1777, '29th November', 'With old headphones as well as markers and USB', 3, 21, 1, '2015-11-29 12:21:00');
+
+INSERT INTO phones VALUES (22, 'Iphone 5S', 'images/iphone5S.jpg', 'Screen: 4.0" IPS TFT (640 x 1136 dots) with LED-backlight / 16 mil. colors /
+                          touch capacitive / scratch-resistant glass Gorilla Glass with oleophobic coating. Internal memory: 32 GB',
+                           'Apple', 899, 1310, '30th November', 'With earpodes and USB', 5, 12, 1, '2015-11-30 14:01:05');
+
+INSERT INTO phones VALUES (23, 'Iphone 6', 'images/iphone6.png', 'Screen: 4.7" IPS LCD (1334x750 dots) with LED-backlight / 16 mil. colors /
+                           touch capacitive / scratch-resistant glass Ion-X Glass with oleophobic coating. Internal memory: 32 GB',
+                           'Apple', 1234, 1567, '1st December', 'With earpods and USB', 5, 15, 1, '2015-12-01 12:54:07');
 
 SELECT product_name, photo, description, category, price, previous_price, time_of_adding, features,
   id, quantity, shipping, average_price FROM phones WHERE product_name = 'Iphone 5S' AND price > 100 AND price < 1500;

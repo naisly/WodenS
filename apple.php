@@ -30,3 +30,5 @@ echo $view->DoctypeView();
 echo $view->headerView();
 
 $view->getItems();
+
+$view->actionGetFooter();

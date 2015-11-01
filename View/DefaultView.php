@@ -97,9 +97,9 @@
                         <div class="col-xs-12">
                         <div class="col-md-2"></div>
                         <div class="col-md-8">
-                            <div class="row wow slideInRight">
+                            <div class="row">
                                 <form action="apple.php" method="post">
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 wow fadeInLeft">
                                         <h class="search-item">Items: <br/></h>    <input type="checkbox" name="array[]" id="array" value="Iphone 4"/> <em>Iphone 4</em><br />
                                                                                    <input type="checkbox" name="array[]" id="array" value="Iphone 4S" /> <em>Iphone 4S</em><br/>
                                                                                    <input type="checkbox" name="array[]" id="array" value="Iphone 5" /> <em>Iphone 5</em><br/>
@@ -107,12 +107,12 @@
                                                                                    <input type="checkbox" name="array[]" id="array" value="Iphone 6" /> <em>Iphone 6</em><br/>
                                                                                    <input type="checkbox" name="array[]" id="array" value="Iphone 6S" /> <em>Iphone 6S</em><br/>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 wow bounceInLeft">
                                         <h class="search-item">Min:</h> <input type="text" name="min"><br />
                                         <h class="search-item">Max:</h> <input type="text" name="max"><br />
 
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 wow bounceInRight">
                                         <h class="search-item">Sort by price:</h><br />
                                                <input type="radio" name="sort_by_price" value="price " /> By highest <br />
                                                <input type="radio" name="sort_by_price" value="price DESC" /> By lowest <br />
@@ -121,7 +121,7 @@
                                                <input type="radio" name="sort_by_time" value="time" /> By latest <br />
                                                <input type="radio" name="sort_by_time" value="time DESC" /> By oldest <br />
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-3 wow fadeInRight">
                                         <h class="search-item">Shipping: <br /></h>
                                               <input type="radio" name="sort_by_shipping" value="shipping" /> By fastest <br />
                                               <input type="radio" name="sort_by_shipping" value="shipping DESC" /> By slowest <br />
@@ -187,61 +187,121 @@
                                 new WOW().init();
                             </script>';
                 $i++;
-                    /*while ($n < 1) {
-                        echo '<div class="col-xs-4">
-                                   <form action="apple.php" method="post">
-                                        <div class="input-group checkbox-font">
-                                             <input type="checkbox" name="iphones[]" id="color" value="Iphone4"> Iphone 4 <br/>
-                                             <input type="checkbox" name="iphones[]" id="color" value="Iphone4S"> Iphone 4S <br/>
-                                             <input type="checkbox" name="iphones[]" id="color" value="Iphone5"> Iphone 5 <br/>
-                                             <input type="checkbox" name="iphones[]" id="color" value="Iphone5C"> Iphone 5C <br/>
-                                             <input type="checkbox" name="iphones[]" id="color" value="Iphone5S"> Iphone 5S <br/>
-                                             <input type="checkbox" name="iphones[]" id="color" value="Iphone6"> Iphone 6 <br/>
-                                             <input type="checkbox" name="iphones[]" id="color" value="Iphone6S"> Iphone 6S
-                                        </div>
-                                        <div class="input-group">
-                                             <label for="min-price">Select min price</label>
-                                             <input type="text" class="form-control" name="min" placeholder="Min price">
-                                        </div>
-                                        <div class="input-group">
-                                             <label for="max-price">Select max price</label>
-                                             <input type="text" class="form-control" name="max" placeholder="Max price">
-                                        </div>
-                                        <div class="input-group">
-                                             <button class="btn btn-primary">Submit</button>
-                                        </div>
-                                    </form>
-                                    <form action="apple.php" method="post">
-                                        <input type="hidden" name="highest-price">
-                                        <button class="btn btn-default">Sort by the highest price</button>
-                                    </form>
-                                    <form action="apple.php" method="post">
-                                        <input type="hidden" name="lowest-price">
-                                        <button class="btn btn-default">Sort by the lowest price</button>
-                                    </form>
-                                    <form action="apple.php" method="post">
-                                        <input type="hidden" name="last-added">
-                                        <button class="btn btn-default">Last added</button>
-                                    </form>
-                                    <form action="apple.php" method="post">
-                                        <input type="hidden" name="fastest-shipping">
-                                        <button class="btn btn-default">Sort by fastest shipping</button>
-                                    </form>
-                            </div>
-                                </div>
-                                        <div class="row">
-                                            <div class="col-sm-7">
-                                                <ul class="nav nav-list">
-                                                    <li class="divider"></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>';
-                        $n++;
-                    }*/
-
             }
+        }
+        public function actionGetFooter() {
+            echo   '<footer>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 wow fadeInLeft">
+                                <ul>
+                                    <li class="footer-menu"><b>Shop</b></li>
+                                    <li><a class="items" href="/">Home</a></li>
+                                    <li><a class="items" href="phones.php">Phones</a></li>
+                                    <li><a class="items" href="notebooks.php">Notebooks</a></li>
+                                    <li><a class="items" href="devices.php">Devices</a></li>
+                                    <li><a class="items" href="tv.php">TV</a></li>
+                                    <li><a class="items" href="support.php">Support</a></li>
+                                    <li><a class="items" href="cart.php">Cart</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-2 wow fadeInLeft">
+                                <ul>
+                                    <li class="footer-menu"><b>Store</b></li>
+                                    <li><a class="items" href="/store">Find our store</a></li>
+                                    <li><a class="items" href="/financing">Financing</a></li>
+                                    <li><a class="items" href="/order">Order Status</a></li>
+                                    <li><a class="items" href="/shop">Shopping help</a></li>
+                                    <li><a class="items" href="/info">Info</a></li>
+                                    <li><a class="items" href="/offices">Offices</a></li>
+                                    <li><a class="items" href="/cell">Cell</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-2 wow fadeInUp">
+                                <ul>
+                                    <li class="footer-menu"><b>Account</b></li>
+                                    <li><a class="items" href="/shop-id">Find your Id</a></li>
+                                    <li><a class="items" href="/store">Store account</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="footer-menu"><b>Most valuable</b></li>
+                                    <li><a class="items" href="/responsibility">Responsibility</a></li>
+                                    <li><a class="items" href="/privacy">Privacy</a></li>
+                                    <li><a class="items" href="/setting">Setting</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-2 wow fadeInRight">
+                                <ul>
+                                    <li class="footer-menu"><b>About Us</b></li>
+                                    <li><a class="items" href="/our-company">Our company</a></li>
+                                    <li><a class="items" href="/people">In-touch People</a></li>
+                                    <li><a class="items" href="/managers">Our managers</a></li>
+                                    <li><a class="items" href="/offices">Offices</a></li>
+                                    <li><a class="items" href="/comments">Comments</a></li>
+                                    <li><a class="items" href="/business">Business</a></li>
+                                    <li><a class="items" href="/director">Director</a></li>
+                                    <li><a class="items" href="/job">Job</a></li>
+                                    <li><a class="items" href="/contact-us">Contact Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-2 wow fadeInRight">
+                                <ul>
+                                    <li class="footer-menu"><b>For education</b></li>
+                                    <li><a class="items" href="/notebooks">Notebooks</a></li>
+                                    <li><a class="items" href="/devices">Phones</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="footer-menu"><b>Business</b></li>
+                                    <li><a class="items" href="/shop-id">Using notebooks in business</a></li>
+                                    <li><a class="items" href="/store">Using phones in day-to-day life</a></li>
+                                    <li><a class="items" href="/shop-id">Using watches in business</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-10">
+                                <p class="more-info pull-left">For more info about return items and shopping & delivery call +(380) 95 094 82 68.</p>
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-10">
+                                <ul class="nav nav-list">
+                                    <li class="divider"></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-4">
+                                <p class="more-info pull-left">Copyright &copy; Woden S Inc. All rights reserved.
+                            </div>
+                            <div class="col-sm-4">
+                                <ul class="hor_nav">
+                                    <li><a class="items" href="/privacy">Privacy</a></li>
+                                    <li><a class="items" href="/refunds">Refunds</a></li>
+                                    <li><a class="items" href="/sales">Sales</a></li>
+                                    <li><a class="items" href="site-map">Site map</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                    </div>
+                </footer>';
         }
     }

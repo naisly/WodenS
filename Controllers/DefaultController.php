@@ -193,7 +193,7 @@ class DefaultController
             $this->model->setShipping($shipping_array);
             $this->model->setAverage($average_price_array);
         }
-        
+
     }
 
     public function actionGetDistinctCategories() {
