@@ -1,41 +1,34 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: Home
  * Date: 27.10.2015
  * Time: 21:57
  */
-    class DefaultView
+class DefaultView
+{
+    private $model;
+    public function __construct(DefaultModel $model)
     {
-        private $model;
-
-
-        public function __construct(DefaultModel $model)
-        {
-
-            $this->model = $model;
-
-        }
-
-        public function DoctypeView()
-        {
-            return "<!DOCTYPE html>" .
-            "<html>" .
-            "<head>" .
-            "<link rel='stylesheet' href='css/bootstrap.css' />" .
-            "<link rel='stylesheet' href='css/styles.css' />" .
-            "<link rel='stylesheet' href='css/default.css' />" .
-            "<link rel='stylesheet' href='css/animate.css' />" .
-            "<script src='js/jquery-min.js'></script>" .
-            "<title>Woden S</title>" .
-            "</head>" .
-            "<body>";
-        }
-
-        public function headerView()
-        {
-            return '<nav class="navbar navbar-inverse navbar-static-top">
+        $this->model = $model;
+    }
+    public function DoctypeView()
+    {
+        return "<!DOCTYPE html>" .
+        "<html>" .
+        "<head>" .
+        "<link rel='stylesheet' href='css/bootstrap.css' />" .
+        "<link rel='stylesheet' href='css/styles.css' />" .
+        "<link rel='stylesheet' href='css/default.css' />" .
+        "<link rel='stylesheet' href='css/animate.css' />" .
+        "<script src='js/jquery-min.js'></script>" .
+        "<title>Woden S</title>" .
+        "</head>" .
+        "<body>";
+    }
+    public function headerView()
+    {
+        return '<nav class="navbar navbar-inverse navbar-static-top">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
@@ -49,7 +42,6 @@
                             <img alt="Brand" src="images/default.png">
                         </a>
                     </div>
-
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
@@ -74,25 +66,24 @@
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>';
-        }
-
-        public function getItems()
-        {
-            $i = 0;
-            $n = 0;
-            echo '<div class="panel-default items-row pointer">
+    }
+    public function getItems()
+    {
+        $i = 0;
+        $n = 0;
+        echo '<div class="panel-default items-row pointer">
                 <div class="col-xs-3"></div>
                         <div class="col-xs-6 items-align">
                             <ul class="text-align">
                                 <a class="categories-list" style="text-decoration: none" href="Phones.php">All</a>';
-            foreach ($this->model->distinct_categories as $value => $key) {
-                echo "<a style='text-decoration: none;' class='categories-list' href='{$this->model->distinct_categories[$value]}.php'>" . $this->model->distinct_categories[$value] . "</a>";
-            }
-            echo '            </ul>
+        foreach ($this->model->distinct_categories as $value => $key) {
+            echo "<a style='text-decoration: none;' class='categories-list' href='{$this->model->distinct_categories[$value]}.php'>" . $this->model->distinct_categories[$value] . "</a>";
+        }
+        echo '            </ul>
                             </div>
                         </div>
                   </div>';
-            echo   '<div class="row">
+        echo   '<div class="row">
                     <div class="col-sm-3"></div>
                         <div class="col-xs-12">
                         <div class="col-md-2"></div>
@@ -110,13 +101,11 @@
                                     <div class="col-md-3">
                                         <h class="search-item">Min:</h> <input type="text" name="min" value="'; if(isset($_POST['min'])) echo $_POST['min'] ; echo '"><br />
                                         <h class="search-item">Max:</h> <input type="text" name="max" value="'; if(isset($_POST['max'])) echo $_POST['max'] ; echo '"><br />
-
                                     </div>
                                     <div class="col-md-4">
                                         <h class="search-item">Sort by price:</h><br />
                                                <input type="radio" name="sort_by_price" value="price " /> By highest <br />
                                                <input type="radio" name="sort_by_price" value="price DESC" /> By lowest <br />
-
                                         <h class="search-item">Sort by time of adding:</h><br />
                                                <input type="radio" name="sort_by_time" value="time" /> By latest <br />
                                                <input type="radio" name="sort_by_time" value="time DESC" /> By oldest <br />
@@ -143,8 +132,8 @@
                           </div>
                      </div>
                 </div>';
-            while ( $i < count($this->model->id)) {
-                echo '</ul>
+        while ( $i < count($this->model->id)) {
+            echo '</ul>
                         </div>
                         <div class="col-sm-3"></div>
                             <div class="col-xs-12 wow fadeInUp">
@@ -186,11 +175,11 @@
                             <script>
                                 new WOW().init();
                             </script>';
-                $i++;
-            }
+            $i++;
         }
-        public function actionGetFooter() {
-            echo   '<footer>
+    }
+    public function actionGetFooter() {
+        echo   '<footer>
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-1"></div>
@@ -261,8 +250,6 @@
                             <div class="col-sm-1"></div>
                         </div>
                     </div>
-
-
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-1"></div>
@@ -272,7 +259,6 @@
                             <div class="col-sm-1"></div>
                         </div>
                     </div>
-
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-1"></div>
@@ -284,7 +270,6 @@
                             <div class="col-sm-1"></div>
                         </div>
                     </div>
-
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-1"></div>
@@ -304,5 +289,5 @@
                     </div>
                 </footer>
             </body>';
-        }
     }
+}
