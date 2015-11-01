@@ -107,12 +107,12 @@
                                                                                    <input type="checkbox" name="array[]" id="array" value="Iphone 6" /> <em>Iphone 6</em><br/>
                                                                                    <input type="checkbox" name="array[]" id="array" value="Iphone 6S" /> <em>Iphone 6S</em><br/>
                                     </div>
-                                    <div class="col-md-3 wow bounceInLeft">
+                                    <div class="col-md-3 wow fadeInLeft">
                                         <h class="search-item">Min:</h> <input type="text" name="min"><br />
                                         <h class="search-item">Max:</h> <input type="text" name="max"><br />
 
                                     </div>
-                                    <div class="col-md-4 wow bounceInRight">
+                                    <div class="col-md-4 wow fadeInRight">
                                         <h class="search-item">Sort by price:</h><br />
                                                <input type="radio" name="sort_by_price" value="price " /> By highest <br />
                                                <input type="radio" name="sort_by_price" value="price DESC" /> By lowest <br />
@@ -159,14 +159,14 @@
                                         <p id="price">' . $this->model->getPrice($i) . '$' . ' ' . '<span id="prev-price"><strike>' . $this->model->getPriviousPrice($i) . '$' . '</strike> (' . $this->model->getShipping($i) . ' ' . 'days shipping)</span></p>
                                         <p id="prev-price"> In stock on ' . $this->model->getTimeOfAdding($i) . '</p>
                                         <p>Average price for this product: ' . $this->model->getAverage($i) . '$' . '</p>
-                                        <p><em>Short description: </em>' . $this->model->getDescription($i) . '</p>
+                                        <p style="text-align: left"><em>Short description: </em>' . $this->model->getDescription($i) . '</p>
                                     </div>
                                     <div class="col-xs-2 wow fadeInUp">
                                         <p class="spacer"></p>
-                                        <p>Free shipping on orders greater than $35 </p>
-                                        <p><b>Product features: </b></p>
-                                        <p>' . $this->model->getFeatures($i) . '</p>
-                                        <button>
+                                        <p class="align-left">Free shipping on orders greater than $35 </p>
+                                        <p class="align-left"><b>Product features: </b></p>
+                                        <p class="align-left">' . $this->model->getFeatures($i) . '</p>
+                                        <button class="btn btn-default">
                                             Add to cart
                                         </button>
                                     </div>
@@ -302,6 +302,7 @@
                             <div class="col-sm-1"></div>
                         </div>
                     </div>
-                </footer>';
+                </footer>
+            </body>';
         }
     }
