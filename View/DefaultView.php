@@ -82,7 +82,7 @@
             $n = 0;
             echo '<div class="panel-default items-row pointer">
                 <div class="col-xs-3"></div>
-                        <div class="col-xs-6 items-align wow fadeInLeft">
+                        <div class="col-xs-6 items-align">
                             <ul class="text-align">
                                 <a class="categories-list" style="text-decoration: none" href="Phones.php">All</a>';
             foreach ($this->model->distinct_categories as $value => $key) {
@@ -99,20 +99,20 @@
                         <div class="col-md-8">
                             <div class="row">
                                 <form action="apple.php" method="post">
-                                    <div class="col-md-2 wow fadeInLeft">
-                                        <h class="search-item">Items: <br/></h>    <input type="checkbox" name="array[]" id="array" value="Iphone 4"/> <em>Iphone 4</em><br />
-                                                                                   <input type="checkbox" name="array[]" id="array" value="Iphone 4S" /> <em>Iphone 4S</em><br/>
-                                                                                   <input type="checkbox" name="array[]" id="array" value="Iphone 5" /> <em>Iphone 5</em><br/>
-                                                                                   <input type="checkbox" name="array[]" id="array" value="Iphone 5S" /> <em>Iphone 5S</em><br/>
-                                                                                   <input type="checkbox" name="array[]" id="array" value="Iphone 6" /> <em>Iphone 6</em><br/>
-                                                                                   <input type="checkbox" name="array[]" id="array" value="Iphone 6S" /> <em>Iphone 6S</em><br/>
+                                    <div class="col-md-2">
+                                        <h class="search-item">Items: <br/></h>    <input type="checkbox" name="array1" id="array1" value="Iphone 4"'; if(isset($_POST['array1'])) echo "checked='checked'"; echo '/> <em>Iphone 4</em><br />
+                                                                                   <input type="checkbox" name="array2" id="array2" value="Iphone 4S"'; if(isset($_POST['array2'])) echo "checked='checked'"; echo '/> <em>Iphone 4S</em><br/>
+                                                                                   <input type="checkbox" name="array3" id="array3" value="Iphone 5"'; if(isset($_POST['array3'])) echo "checked='checked'"; echo '/> <em>Iphone 5</em><br/>
+                                                                                   <input type="checkbox" name="array4" id="array4" value="Iphone 5S"'; if(isset($_POST['array4'])) echo "checked='checked'"; echo '/> <em>Iphone 5S</em><br/>
+                                                                                   <input type="checkbox" name="array5" id="array5" value="Iphone 6"'; if(isset($_POST['array5'])) echo "checked='checked'"; echo '/> <em>Iphone 6</em><br/>
+                                                                                   <input type="checkbox" name="array6" id="array6" value="Iphone 6S"'; if(isset($_POST['array6'])) echo "checked='checked'"; echo '/> <em>Iphone 6S</em><br/>
                                     </div>
-                                    <div class="col-md-3 wow fadeInLeft">
-                                        <h class="search-item">Min:</h> <input type="text" name="min"><br />
-                                        <h class="search-item">Max:</h> <input type="text" name="max"><br />
+                                    <div class="col-md-3">
+                                        <h class="search-item">Min:</h> <input type="text" name="min" value="'; if(isset($_POST['min'])) echo $_POST['min'] ; echo '"><br />
+                                        <h class="search-item">Max:</h> <input type="text" name="max" value="'; if(isset($_POST['max'])) echo $_POST['max'] ; echo '"><br />
 
                                     </div>
-                                    <div class="col-md-4 wow fadeInRight">
+                                    <div class="col-md-4">
                                         <h class="search-item">Sort by price:</h><br />
                                                <input type="radio" name="sort_by_price" value="price " /> By highest <br />
                                                <input type="radio" name="sort_by_price" value="price DESC" /> By lowest <br />
@@ -121,7 +121,7 @@
                                                <input type="radio" name="sort_by_time" value="time" /> By latest <br />
                                                <input type="radio" name="sort_by_time" value="time DESC" /> By oldest <br />
                                     </div>
-                                    <div class="col-md-3 wow fadeInRight">
+                                    <div class="col-md-3">
                                         <h class="search-item">Shipping: <br /></h>
                                               <input type="radio" name="sort_by_shipping" value="shipping" /> By fastest <br />
                                               <input type="radio" name="sort_by_shipping" value="shipping DESC" /> By slowest <br />

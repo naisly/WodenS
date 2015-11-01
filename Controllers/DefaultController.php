@@ -58,8 +58,27 @@ class DefaultController
         } else {
             $sql_query = "SELECT * FROM phones WHERE category='$category'";
         }
-        if (isset($_POST['array'])) {
-            $array = $_POST["array"];
+        if (isset($_POST['array1']) || isset($_POST['array2']) || isset($_POST['array3']) || isset($_POST['array4']) ||
+            isset($_POST['array5']) || isset($_POST['array6'])) {
+            $array = array();
+            if(isset($_POST['array1'])){
+                array_push($array, $_POST['array1']);
+            }
+            if(isset($_POST['array2'])){
+                array_push($array, $_POST['array2']);
+            }
+            if(isset($_POST['array3'])){
+                array_push($array, $_POST['array3']);
+            }
+            if(isset($_POST['array4'])){
+                array_push($array, $_POST['array4']);
+            }
+            if(isset($_POST['array5'])){
+                array_push($array, $_POST['array5']);
+            }
+            if(isset($_POST['array6'])){
+                array_push($array, $_POST['array6']);
+            }
         }
         if (isset($_POST['min'])) {
             $min = $_POST["min"];
@@ -103,15 +122,13 @@ class DefaultController
             }
         }
         if (isset($min) && isset($max)) {
-            if ($min === '') {
-            } else {
-                $sql_query .= " price > " . $min . " AND";
-            }
-        }
-        if (isset($min)) {
-            if ($min === '') {
-            } else {
-                $sql_query .= " price > " . $min . " ";
+            if ($min !== '') {
+                $sql_query .= " price > " . $min;
+                if(isset($max)) {
+                    if ($max !== '') {
+                        $sql_query .=" AND";
+                    }
+                }
             }
         }
         if (isset($max)) {
@@ -193,7 +210,7 @@ class DefaultController
             $this->model->setShipping($shipping_array);
             $this->model->setAverage($average_price_array);
         }
-
+        echo $sql_query;
     }
 
     public function actionGetDistinctCategories() {
