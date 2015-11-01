@@ -26,6 +26,8 @@
             "<link rel='stylesheet' href='css/bootstrap.css' />" .
             "<link rel='stylesheet' href='css/styles.css' />" .
             "<link rel='stylesheet' href='css/default.css' />" .
+            "<link rel='stylesheet' href='css/animate.css' />" .
+            "<script src='js/jquery-min.js'></script>" .
             "<title>Woden S</title>" .
             "</head>" .
             "<body>";
@@ -80,7 +82,7 @@
             $n = 0;
             echo '<div class="panel-default items-row pointer">
                 <div class="col-xs-3"></div>
-                        <div class="col-xs-6 items-align">
+                        <div class="col-xs-6 items-align wow fadeInLeft">
                             <ul class="text-align">
                                 <a class="categories-list" style="text-decoration: none" href="Phones.php">All</a>';
             foreach ($this->model->distinct_categories as $value => $key) {
@@ -95,7 +97,7 @@
                         <div class="col-xs-12">
                         <div class="col-md-2"></div>
                         <div class="col-md-8">
-                            <div class="row">
+                            <div class="row wow slideInRight">
                                 <form action="apple.php" method="post">
                                     <div class="col-md-2">
                                         <h class="search-item">Items: <br/></h>    <input type="checkbox" name="array[]" id="array" value="Iphone 4"/> <em>Iphone 4</em><br />
@@ -132,7 +134,7 @@
                 <div class="container">
                      <div class="row">
                           <div class="col-sm-1"></div>
-                               <div class="col-sm-12">
+                               <div class="col-sm-12 wow slideInLeft">
                                     <ul class="nav nav-list">
                                         <li class="divider"></li>
                                     </ul>
@@ -145,12 +147,12 @@
                 echo '</ul>
                         </div>
                         <div class="col-sm-3"></div>
-                            <div class="col-xs-12">
+                            <div class="col-xs-12 wow fadeInUp">
                                     <div class="col-xs-1"></div>
-                                    <div class="col-xs-2">
+                                    <div class="col-xs-2 wow fadeInUp">
                                         <img src="' . $this->model->getPhoto($i) . '">
                                     </div>
-                                    <div class="col-xs-5">
+                                    <div class="col-xs-5 wow fadeInUp">
                                         <p class="spacer"></p>
                                         <h id="header-items" style="font-size: 20px;">' . $this->model->getProductName($i) . '</h>
                                         <span><br />by ' . $this->model->getCategory($i) . '</span>
@@ -159,7 +161,7 @@
                                         <p>Average price for this product: ' . $this->model->getAverage($i) . '$' . '</p>
                                         <p><em>Short description: </em>' . $this->model->getDescription($i) . '</p>
                                     </div>
-                                    <div class="col-xs-2">
+                                    <div class="col-xs-2 wow fadeInUp">
                                         <p class="spacer"></p>
                                         <p>Free shipping on orders greater than $35 </p>
                                         <p><b>Product features: </b></p>
@@ -168,7 +170,7 @@
                                             Add to cart
                                         </button>
                                     </div>
-                                    <div class="container">
+                                    <div class="container wow fadeInUp">
                                         <div class="row">
                                             <div class="col-sm-1"></div>
                                             <div class="col-sm-12">
@@ -179,7 +181,11 @@
                                             <div class="col-sm-1"></div>
                                         </div>
                                     </div>
-                            </div>';
+                            </div>
+                            <script src="js/wow.js"></script>
+                            <script>
+                                new WOW().init();
+                            </script>';
                 $i++;
                     /*while ($n < 1) {
                         echo '<div class="col-xs-4">
