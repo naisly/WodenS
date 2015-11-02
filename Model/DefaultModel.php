@@ -22,6 +22,8 @@ class DefaultModel
     public $distinct_categories;
 
     public $average;
+    public $distinct_product_names;
+    /*public $array; */
 
     public function setProductName ( $product_name ) {
 
@@ -153,5 +155,40 @@ class DefaultModel
     public function getDistinctCategories() {
 
         return $this->distinct_categories;
+    }
+
+    public function setDistinctProductNames ( $distinct_product_names ){
+
+        $this->distinct_product_names = $distinct_product_names;
+    }
+
+    public function getDistinctProductNames($i) {
+
+        return $this->distinct_product_names[$i];
+    }
+
+    /*public function countDistinctProductNames() {
+
+        return count($this->distinct_product_names);
+    }
+
+    public function setProductNamesForShow( $array ){
+
+        $this->array = $array;
+    }
+
+    public function getProductNamesForShow() {
+
+        return $this->array;
+    }*/
+
+    public function setProductsForShow( $array ){
+
+        $this->array = $array;
+    }
+
+    public function getProductsForShow() {
+
+        echo $this->array;
     }
 }

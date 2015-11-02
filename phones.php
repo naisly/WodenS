@@ -23,6 +23,8 @@ $controller->actionSetAveragePrice( 'All' );
 
 $controller->actionGetDistinctCategories();
 
+$controller->actionGetItemNames( 'All' );
+
 $controller->actionGetCategories( 'All' );
 
 echo $view->DoctypeView();
@@ -32,3 +34,5 @@ echo $view->headerView();
 $view->getItems();
 
 $view->actionGetFooter();
+
+$model->show();

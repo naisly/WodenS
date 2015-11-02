@@ -91,12 +91,22 @@ class DefaultView
                             <div class="row">
                                 <form action="apple.php" method="post">
                                     <div class="col-md-2">
-                                        <h class="search-item">Items: <br/></h>    <input type="checkbox" name="array1" id="array1" value="Iphone 4"'; if(isset($_POST['array1'])) echo "checked='checked'"; echo '/> <em>Iphone 4</em><br />
-                                                                                   <input type="checkbox" name="array2" id="array2" value="Iphone 4S"'; if(isset($_POST['array2'])) echo "checked='checked'"; echo '/> <em>Iphone 4S</em><br/>
-                                                                                   <input type="checkbox" name="array3" id="array3" value="Iphone 5"'; if(isset($_POST['array3'])) echo "checked='checked'"; echo '/> <em>Iphone 5</em><br/>
-                                                                                   <input type="checkbox" name="array4" id="array4" value="Iphone 5S"'; if(isset($_POST['array4'])) echo "checked='checked'"; echo '/> <em>Iphone 5S</em><br/>
-                                                                                   <input type="checkbox" name="array5" id="array5" value="Iphone 6"'; if(isset($_POST['array5'])) echo "checked='checked'"; echo '/> <em>Iphone 6</em><br/>
-                                                                                   <input type="checkbox" name="array6" id="array6" value="Iphone 6S"'; if(isset($_POST['array6'])) echo "checked='checked'"; echo '/> <em>Iphone 6S</em><br/>
+                                        <h class="search-item">Items: <br/></h>';
+                                            $k = 0;
+                                            while ($k < count($this->model->distinct_product_names)){
+                                                echo '<input type="checkbox" name="array' . $k . '" id="array' . $k . '" value="' . $this->model->getDistinctProductNames($k) . '"';
+                                                if(isset($_POST['array' . $k])) echo "checked='checked'"; echo "/>";
+                                                echo '<em> ' .$this->model->getDistinctProductNames($k) . '</em><br />';
+                                                $k++;
+                                            }
+        /*
+        <input type="checkbox" name="array1" id="array1" value="Iphone 4"'; if(isset($_POST['array1'])) echo "checked='checked'"; echo '/> <em>Iphone 4</em><br />
+        <input type="checkbox" name="array2" id="array2" value="Iphone 4S"'; if(isset($_POST['array2'])) echo "checked='checked'"; echo '/> <em>Iphone 4S</em><br/>
+        <input type="checkbox" name="array3" id="array3" value="Iphone 5"'; if(isset($_POST['array3'])) echo "checked='checked'"; echo '/> <em>Iphone 5</em><br/>
+        <input type="checkbox" name="array4" id="array4" value="Iphone 5S"'; if(isset($_POST['array4'])) echo "checked='checked'"; echo '/> <em>Iphone 5S</em><br/>
+        <input type="checkbox" name="array5" id="array5" value="Iphone 6"'; if(isset($_POST['array5'])) echo "checked='checked'"; echo '/> <em>Iphone 6</em><br/>
+        <input type="checkbox" name="array6" id="array6" value="Iphone 6S"'; if(isset($_POST['array6'])) echo "checked='checked'"; echo '/> <em>Iphone 6S</em><br/>*/
+                                echo '
                                     </div>
                                     <div class="col-md-3">
                                         <h class="search-item">Min:</h> <input type="text" name="min" value="'; if(isset($_POST['min'])) echo $_POST['min'] ; echo '"><br />
