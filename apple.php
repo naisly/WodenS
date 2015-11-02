@@ -23,14 +23,16 @@ $controller->actionSetAveragePrice( 'Apple' );
 
 $controller->actionGetDistinctCategories();
 
-$controller->actionGetCategories( 'Apple' );
-
 $controller->actionGetItemNames( 'Apple' );
+
+$controller->actionGetCategories( 'Apple' );
 
 echo $view->DoctypeView();
 
 echo $view->headerView();
 
+$view->getItemsNames();
+$view->getFilterMenu();
 $view->getItems();
 
 $view->actionGetFooter();

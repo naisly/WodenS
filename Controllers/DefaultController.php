@@ -79,10 +79,12 @@ class DefaultController
                 $i++;
             }
             /*$str_count = strlen($sql_query); */
-            $sql_query = substr($sql_query, 0, -3);
-            if(isset($min) || isset($max)){
-                if ($min !== '' || $max !== '') {
-                    $sql_query .= " AND";
+            if(count($array) !== 0) {
+                $sql_query = substr($sql_query, 0, -3);
+                if (isset($min) || isset($max)) {
+                    if ($min !== '' || $max !== '') {
+                        $sql_query .= " AND";
+                    }
                 }
             }
         }
@@ -166,8 +168,6 @@ class DefaultController
             $this->model->setShipping($shipping_array);
             $this->model->setAverage($average_price_array);
         }
-
-        echo $sql_query;
     }
     public function actionGetDistinctCategories() {
         include_once('/../Storage.php');

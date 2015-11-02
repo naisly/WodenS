@@ -67,126 +67,107 @@ class DefaultView
                 </div><!-- /.container-fluid -->
             </nav>';
     }
-    public function getItems()
+    public function getItemsNames()
     {
-        $i = 0;
-        $n = 0;
-        echo '<div class="panel-default items-row pointer">
-                <div class="col-xs-3"></div>
-                        <div class="col-xs-6 items-align">
+        echo '<div class="items-row pointer">
+                  <div class="col-md-3"></div>
+                       <div class="col-md-6 items-align">
                             <ul class="text-align">
                                 <a class="categories-list" style="text-decoration: none" href="Phones.php">All</a>';
         foreach ($this->model->distinct_categories as $value => $key) {
             echo "<a style='text-decoration: none;' class='categories-list' href='{$this->model->distinct_categories[$value]}.php'>" . $this->model->distinct_categories[$value] . "</a>";
         }
-        echo '            </ul>
-                            </div>
+        echo '               </ul>
                         </div>
-                  </div>';
-        echo   '<div class="row">
-                    <div class="col-sm-3"></div>
-                        <div class="col-xs-12">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8">
-                            <div class="row">
-                                <form action="apple.php" method="post">
-                                    <div class="col-md-2">
-                                        <h class="search-item">Items: <br/></h>';
-                                            $k = 0;
-                                            while ($k < count($this->model->distinct_product_names)){
-                                                echo '<input type="checkbox" name="array' . $k . '" id="array' . $k . '" value="' . $this->model->getDistinctProductNames($k) . '"';
-                                                if(isset($_POST['array' . $k])) echo "checked='checked'"; echo "/>";
-                                                echo '<em> ' .$this->model->getDistinctProductNames($k) . '</em><br />';
-                                                $k++;
-                                            }
-        /*
-        <input type="checkbox" name="array1" id="array1" value="Iphone 4"'; if(isset($_POST['array1'])) echo "checked='checked'"; echo '/> <em>Iphone 4</em><br />
-        <input type="checkbox" name="array2" id="array2" value="Iphone 4S"'; if(isset($_POST['array2'])) echo "checked='checked'"; echo '/> <em>Iphone 4S</em><br/>
-        <input type="checkbox" name="array3" id="array3" value="Iphone 5"'; if(isset($_POST['array3'])) echo "checked='checked'"; echo '/> <em>Iphone 5</em><br/>
-        <input type="checkbox" name="array4" id="array4" value="Iphone 5S"'; if(isset($_POST['array4'])) echo "checked='checked'"; echo '/> <em>Iphone 5S</em><br/>
-        <input type="checkbox" name="array5" id="array5" value="Iphone 6"'; if(isset($_POST['array5'])) echo "checked='checked'"; echo '/> <em>Iphone 6</em><br/>
-        <input type="checkbox" name="array6" id="array6" value="Iphone 6S"'; if(isset($_POST['array6'])) echo "checked='checked'"; echo '/> <em>Iphone 6S</em><br/>*/
-                                echo '
-                                    </div>
-                                    <div class="col-md-3">
-                                        <h class="search-item">Min:</h> <input type="text" name="min" value="'; if(isset($_POST['min'])) echo $_POST['min'] ; echo '"><br />
-                                        <h class="search-item">Max:</h> <input type="text" name="max" value="'; if(isset($_POST['max'])) echo $_POST['max'] ; echo '"><br />
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h class="search-item">Sort by price:</h><br />
-                                               <input type="radio" name="sort_by_price" value="price " /> By highest <br />
-                                               <input type="radio" name="sort_by_price" value="price DESC" /> By lowest <br />
-                                        <h class="search-item">Sort by time of adding:</h><br />
-                                               <input type="radio" name="sort_by_time" value="time" /> By latest <br />
-                                               <input type="radio" name="sort_by_time" value="time DESC" /> By oldest <br />
-                                    </div>
-                                    <div class="col-md-3">
-                                        <h class="search-item">Shipping: <br /></h>
-                                              <input type="radio" name="sort_by_shipping" value="shipping" /> By fastest <br />
-                                              <input type="radio" name="sort_by_shipping" value="shipping DESC" /> By slowest <br />
-                                              <input class="btn btn-primary" id="submit" type="submit" value="Pick up goods">
-                                    </div>
-                                </form>
-                        </div>
+                   </div>
+                   <div class="col-md-3"></div>
+              </div>';
+    }
+    public function getFilterMenu()
+    {
+        $i = 0;
+        $n = 0;
+        /*echo '<div class="row">
+                  <div class="col-md-3">
+                      <form action="apple.php" method="post">
+                           <h class="search-item">Items: <br/></h>';
+        $k = 0;
+        while ($k < count($this->model->distinct_product_names)) {
+            echo '<input type="checkbox" name="array' . $k . '" id="array' . $k . '" value="' . $this->model->getDistinctProductNames($k) . '"';
+            if (isset($_POST['array' . $k])) echo "checked='checked'";
+            echo "/>";
+            echo '<em> ' . $this->model->getDistinctProductNames($k) . '</em><br />';
+            $k++;
+        }*/
+        echo '<div class="container">
+                  <div class="row">
+                       <div class="col-md-3" style="border-right: 2px solid #e4e4e4">
+                            <form action="apple.php" method="post">
+                                <h class="search-item">Items: <br/></h>';
+        $k = 0;
+        while ($k < count($this->model->distinct_product_names)) {
+            echo '<input type="checkbox" name="array' . $k . '" id="array' . $k . '" value="' . $this->model->getDistinctProductNames($k) . '"';
+            if (isset($_POST['array' . $k])) echo "checked='checked'";
+            echo "/>";
+            echo '<em> ' . $this->model->getDistinctProductNames($k) . '</em><br />';
+            $k++;
+        }
+
+        echo '
+                                <h class="search-item">Min:</h> <input type="text" name="min" value="';
+                                if (isset($_POST['min'])) echo $_POST['min'];
+                                    echo '"><br />
+                                <h class="search-item">Max:</h> <input type="text" name="max" value="';
+                                if (isset($_POST['max'])) echo $_POST['max'];
+                                    echo '"><br />
+                                <h class="search-item">Sort by price:</h><br />
+                                    <input type="radio" name="sort_by_price" value="price " /> By highest <br />
+                                    <input type="radio" name="sort_by_price" value="price DESC" /> By lowest <br />
+                                <h class="search-item">Sort by time of adding:</h><br />
+                                    <input type="radio" name="sort_by_time" value="time" /> By latest <br />
+                                    <input type="radio" name="sort_by_time" value="time DESC" /> By oldest <br />
+                                <h class="search-item">Shipping: <br /></h>
+                                    <input type="radio" name="sort_by_shipping" value="shipping" /> By fastest <br />
+                                    <input type="radio" name="sort_by_shipping" value="shipping DESC" /> By slowest <br />
+                                    <input class="btn btn-primary" id="submit" type="submit" value="Pick up goods">
+                           </form>
+                        </div>';/* col-md-3 END */
+    }
+    public function getItems() {
+        $i = 0;
+        echo '<div class="col-md-9">';
+        while ( $i < count($this->model->id)) {
+            echo '<div class="row">
+                    <div class="col-md-3 wow fadeInUp">
+                        <img src="' . $this->model->getPhoto($i) . '" />
+                    </div>
+                    <div class="col-md-5 wow fadeInUp">
+                        <p class="spacer"></p>
+                        <h id="header-items" style="font-size: 20px;">' . $this->model->getProductName($i) . '</h>
+                        <span><br />by ' . $this->model->getCategory($i) . '</span>
+                        <p id="price">' . $this->model->getPrice($i) . '$' . ' ' . '<span id="prev-price"><strike>' . $this->model->getPriviousPrice($i) . '$' . '</strike> (' . $this->model->getShipping($i) . ' ' . 'days shipping)</span></p>
+                        <p id="prev-price"> In stock on ' . $this->model->getTimeOfAdding($i) . '</p>
+                        <p>Average price for this product: ' . $this->model->getAverage($i) . '$' . '</p>
+                        <p style="text-align: left"><em>Short description: </em>' . $this->model->getDescription($i) . '</p>
+                    </div>
+                    <div class="col-md-4 wow fadeInUp">
+                        <p class="spacer"></p>
+                        <p class="align-left">Free shipping on orders greater than $35 </p>
+                        <p class="align-left"><b>Product features: </b></p>
+                        <p class="align-left">' . $this->model->getFeatures($i) . '</p>
+                        <button class="btn btn-default">
+                            Add to cart
+                        </button>
                     </div>
                 </div>
-                <div class="container">
-                     <div class="row">
-                          <div class="col-sm-1"></div>
-                               <div class="col-sm-12 wow slideInLeft">
-                                    <ul class="nav nav-list">
-                                        <li class="divider"></li>
-                                    </ul>
-                               </div>
-                               <div class="col-sm-1"></div>
-                          </div>
-                     </div>
-                </div>';
-        while ( $i < count($this->model->id)) {
-            echo '</ul>
-                        </div>
-                        <div class="col-sm-3"></div>
-                            <div class="col-xs-12 wow fadeInUp">
-                                    <div class="col-xs-1"></div>
-                                    <div class="col-xs-2 wow fadeInUp">
-                                        <img src="' . $this->model->getPhoto($i) . '">
-                                    </div>
-                                    <div class="col-xs-5 wow fadeInUp">
-                                        <p class="spacer"></p>
-                                        <h id="header-items" style="font-size: 20px;">' . $this->model->getProductName($i) . '</h>
-                                        <span><br />by ' . $this->model->getCategory($i) . '</span>
-                                        <p id="price">' . $this->model->getPrice($i) . '$' . ' ' . '<span id="prev-price"><strike>' . $this->model->getPriviousPrice($i) . '$' . '</strike> (' . $this->model->getShipping($i) . ' ' . 'days shipping)</span></p>
-                                        <p id="prev-price"> In stock on ' . $this->model->getTimeOfAdding($i) . '</p>
-                                        <p>Average price for this product: ' . $this->model->getAverage($i) . '$' . '</p>
-                                        <p style="text-align: left"><em>Short description: </em>' . $this->model->getDescription($i) . '</p>
-                                    </div>
-                                    <div class="col-xs-2 wow fadeInUp">
-                                        <p class="spacer"></p>
-                                        <p class="align-left">Free shipping on orders greater than $35 </p>
-                                        <p class="align-left"><b>Product features: </b></p>
-                                        <p class="align-left">' . $this->model->getFeatures($i) . '</p>
-                                        <button class="btn btn-default">
-                                            Add to cart
-                                        </button>
-                                    </div>
-                                    <div class="container wow fadeInUp">
-                                        <div class="row">
-                                            <div class="col-sm-1"></div>
-                                            <div class="col-sm-12">
-                                                <ul class="nav nav-list">
-                                                    <li class="divider"></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-sm-1"></div>
-                                        </div>
-                                    </div>
-                            </div>
-                            <script src="js/wow.js"></script>
-                            <script>
-                                new WOW().init();
-                            </script>';
+                <div class="divider-items wow fadeInUp"></div>';
             $i++;
         }
+        echo '      </div>
+                    <script src="js/wow.js"></script>
+                   <script>
+                         new WOW().init();
+                   </script>';
     }
     public function actionGetFooter() {
         echo   '<footer>

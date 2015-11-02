@@ -31,8 +31,8 @@ echo $view->DoctypeView();
 
 echo $view->headerView();
 
+$view->getItemsNames();
+$view->getFilterMenu();
 $view->getItems();
 
 $view->actionGetFooter();
-
-$model->show();
