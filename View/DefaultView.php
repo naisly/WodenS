@@ -101,9 +101,13 @@ class DefaultView
         }*/
         echo '<div class="container">
                   <div class="row">
-                       <div class="col-md-3" style="border-right: 2px solid #e4e4e4">
+                       <div class="col-md-3" style="border: 1px solid #e4e4e4; border-top: none;">
                             <form action="apple.php" method="post">
-                                <h class="search-item">Items: <br/></h>';
+                            <div class="row">
+                                <div class="col-md-12 bg-item top-margin" style="margin-top: 0px;">
+                                    <h class="search-item">Items: <br/></h>
+                                 </div>
+                            </div>';
         $k = 0;
         while ($k < count($this->model->distinct_product_names)) {
             echo '<input type="checkbox" name="array' . $k . '" id="array' . $k . '" value="' . $this->model->getDistinctProductNames($k) . '"';
@@ -114,22 +118,39 @@ class DefaultView
         }
 
         echo '
-                                <h class="search-item">Min:</h> <input type="text" name="min" value="';
+                       <div class="row">
+                            <div class="col-md-12 bg-item top-margin">
+                                <h class="search-item">Price: </h>
+                             </div>
+                       </div>
+                                <h class="search-item">Min: </h> <input style="margin-left: 4px;" type="text" name="min" value="';
                                 if (isset($_POST['min'])) echo $_POST['min'];
                                     echo '"><br />
                                 <h class="search-item">Max:</h> <input type="text" name="max" value="';
                                 if (isset($_POST['max'])) echo $_POST['max'];
                                     echo '"><br />
-                                <h class="search-item">Sort by price:</h><br />
+                       <div class="row">
+                            <div class="col-md-12 bg-item top-margin">
+                                <h class="search-item">Sort by price: </h>
+                             </div>
+                       </div>
                                     <input type="radio" name="sort_by_price" value="price " /> By highest <br />
                                     <input type="radio" name="sort_by_price" value="price DESC" /> By lowest <br />
-                                <h class="search-item">Sort by time of adding:</h><br />
+                       <div class="row">
+                            <div class="col-md-12 bg-item top-margin">
+                                <h class="search-item">Sort by time of adding: </h>
+                             </div>
+                       </div>
                                     <input type="radio" name="sort_by_time" value="time" /> By latest <br />
                                     <input type="radio" name="sort_by_time" value="time DESC" /> By oldest <br />
-                                <h class="search-item">Shipping: <br /></h>
+                       <div class="row">
+                            <div class="col-md-12 bg-item top-margin">
+                                <h class="search-item">Shipping: </h>
+                             </div>
+                       </div>
                                     <input type="radio" name="sort_by_shipping" value="shipping" /> By fastest <br />
                                     <input type="radio" name="sort_by_shipping" value="shipping DESC" /> By slowest <br />
-                                    <input class="btn btn-primary" id="submit" type="submit" value="Pick up goods">
+                                    <input class="btn btn-primary" id="submit" type="submit" style="margin-bottom: 20px;" value="Get items!">
                            </form>
                         </div>';/* col-md-3 END */
     }
