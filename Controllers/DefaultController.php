@@ -192,9 +192,9 @@ class DefaultController
         if ( $category === 'All') {
             $sql_query = "SELECT price FROM phones";
             $sql_products = "SELECT DISTINCT product_name FROM phones";
-        } else if ( $category === 'Apple'){
-            $sql_query = "SELECT price FROM phones WHERE category='Apple'";
-            $sql_products = "SELECT DISTINCT product_name FROM phones WHERE category='Apple'";
+        } else {
+            $sql_query = "SELECT price FROM phones WHERE category='$category'";
+            $sql_products = "SELECT DISTINCT product_name FROM phones WHERE category='$category'";
         }
         $result = $mysqli->query($sql_query);
         $result_products = $mysqli->query($sql_products);

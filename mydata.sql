@@ -4,7 +4,7 @@ USE shop;
 
 CREATE TABLE phones (
   id INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  product_name VARCHAR(15) NOT NULL,
+  product_name VARCHAR(100) NOT NULL,
   photo VARCHAR(30) NOT NULL,
   description VARCHAR(300) NOT NULL,
   category VARCHAR(15) NOT NULL,
@@ -109,6 +109,94 @@ INSERT INTO phones VALUES (22, 'Iphone 5S', 'images/iphone5S.jpg', 'Screen: 4.0"
 INSERT INTO phones VALUES (23, 'Iphone 6', 'images/iphone6.png', 'Screen: 4.7" IPS LCD (1334x750 dots) with LED-backlight / 16 mil. colors /
                            touch capacitive / scratch-resistant glass Ion-X Glass with oleophobic coating. Internal memory: 32 GB',
                            'Apple', 1234, 1567, '1st December', 'With earpods and USB', 5, 15, 1, '2015-12-01 12:54:07');
+/* SASMUNG */
+INSERT INTO phones VALUES (24, 'Samsung Galaxy S6', 'images/samsungs6.jpg', 'Front-end and Back-end cameras have F1.9 diafragm. Fast charging
+                          only 10mins for 4hours of work. 5.1" Quad HD (2560 on 1440). Good security as well as mobile payment methods',
+                          'Samsung', 901, 1244, '1st December', 'With headphones', 7, 15, 1, '2015-12-01 17:41:04');
+
+INSERT INTO phones VALUES (25, 'Samsung Galaxy S5', 'images/samsungS5.png', 'Energy safe mode as well pleasurable as measuring of heart
+                           rhythm. Processor: 1.9 + 1.3 GGz and 8 cores. 5.1" as equal to 129.4 mm makes with 1920 on 1080 HD makes you
+                           feed the best', 'Samsung', 788, 1111, '2nd December', 'With USB and headphones', 8, 21, 1, '2015-12-02 22:21:14');
+
+INSERT INTO phones VALUES (26, 'Samsung Galaxy S4', 'images/samsungS4.jpg', 'CPU: 8 cores processor with 1.6 GGz (4cores) and 1.2 GGz
+                           another 4 cores. Screen: FHD sAMOLED with 1920 on 1080 pixels. Pleasurable move control system', 'Samsung',
+                           666, 1000, '3nd December', 'With USB', 1, 12, 1, '2015-12-03 01:12:12');
+
+INSERT INTO phones VALUES (27, 'Samsung Galaxy S3', 'images/samsungS3.jpg', 'Internal memory: 16 GB. Screen : sAMOLED 720 on 1280 pixels
+                           (HD). New smart stay that knows what you want. New function SBeam for fast-forward messages and emails',
+                           'Samsung', 700, 999, '4th December', 'With USB and headphones', 5, 12, 1, '2015-12-04 22:22:22');
+
+INSERT INTO phones VALUES (28, 'Samsung Note', 'images/samsungNote.jpg', 'Internal memory: 16 GB. CPU: 4 cores with 2.7 GGz. Screen:
+                           Super AMOLED 2560 on [1444+160] (Quad HD+). CMOS 16.0 MP. Newest and rapid functionality design',
+                           'Samsung', 1011, 1111, '5th December', 'With headphones', 4, 11, 1, '2015-12-05 06:12:56');
+
+/* END MAIN */
+
+INSERT INTO phones VALUES (29, 'Samsung Galaxy S6', 'images/samsungS6.jpg', 'Front-end and Back-end cameras have F1.9 diafragm. Fast charging
+                          only 10mins for 4hours of work. 5.1" Quad HD (2560 on 1440). Good security as well as mobile payment methods',
+                           'Samsung', 888, 1044, '5st December', 'With headphones', 3, 18, 1, '2015-12-05 17:41:04');
+
+INSERT INTO phones VALUES (30, 'Samsung Galaxy S5', 'images/samsungS5.png', 'Energy safe mode as well pleasurable as measuring of heart
+                           rhythm. Processor: 1.9 + 1.3 GGz and 8 cores. 5.1" as equal to 129.4 mm makes with 1920 on 1080 HD makes you
+                           feed the best', 'Samsung', 700, 1022, '2nd December', 'With USB and headphones', 8, 21, 1, '2015-12-02 20:21:14');
+
+INSERT INTO phones VALUES (31, 'Samsung Galaxy S3', 'images/samsungS3.jpg', 'Internal memory: 16 GB. Screen : sAMOLED 720 on 1280 pixels
+                           (HD). New smart stay that knows what you want. New function SBeam for fast-forward messages and emails',
+                           'Samsung', 699, 1022, '4th December', 'With USB and headphones', 5, 12, 1, '2015-12-04 19:22:22');
+
+INSERT INTO phones VALUES (32, 'Samsung Galaxy S6', 'images/samsungS6.jpg', 'Front-end and Back-end cameras have F1.9 diafragm. Fast charging
+                          only 10mins for 4hours of work. 5.1" Quad HD (2560 on 1440). Good security as well as mobile payment methods',
+                           'Samsung', 1777, 1599, '1st December', 'With headphones', 5, 18, 1, '2015-12-01 12:41:04');
+
+INSERT INTO phones VALUES (33, 'Samsung Galaxy S4', 'images/samsungS4.jpg', 'CPU: 8 cores processor with 1.6 GGz (4cores) and 1.2 GGz
+                           another 4 cores. Screen: FHD sAMOLED with 1920 on 1080 pixels. Pleasurable move control system', 'Samsung',
+                           599, 1210, '3nd December', 'With USB', 1, 14, 1, '2015-12-03 11:12:12');
+
+INSERT INTO phones VALUES (34, 'Samsung Note', 'images/samsungNote.jpg', 'Internal memory: 16 GB. CPU: 4 cores with 2.7 GGz. Screen:
+                           Super AMOLED 2560 on [1444+160] (Quad HD+). CMOS 16.0 MP. Newest and rapid functionality design',
+                           'Samsung', 1111, 1211, '5th December', 'With headphones', 7, 9, 1, '2015-12-05 06:18:56');
+
+INSERT INTO phones VALUES (35, 'Samsung Galaxy S5', 'images/samsungS5.png', 'Energy safe mode as well pleasurable as measuring of heart
+                           rhythm. Processor: 1.9 + 1.3 GGz and 8 cores. 5.1" as equal to 129.4 mm makes with 1920 on 1080 HD makes you
+                           feed the best', 'Samsung', 700, 1001, '7nd December', 'With USB and headphones', 7, 11, 1, '2015-12-07 20:21:14');
+
+INSERT INTO phones VALUES (36, 'Samsung Galaxy S3', 'images/samsungS3.jpg', 'Internal memory: 16 GB. Screen : sAMOLED 720 on 1280 pixels
+                           (HD). New smart stay that knows what you want. New function SBeam for fast-forward messages and emails',
+                           'Samsung', 888, 1022, '10th December', 'With USB and headphones', 3, 10, 1, '2015-12-10 18:22:22');
+
+INSERT INTO phones VALUES (37, 'Samsung Galaxy S6', 'images/samsungS6.jpg', 'Front-end and Back-end cameras have F1.9 diafragm. Fast charging
+                          only 10mins for 4hours of work. 5.1" Quad HD (2560 on 1440). Good security as well as mobile payment methods',
+                           'Samsung', 788, 1044, '11st December', 'With headphones', 6, 12, 1, '2015-12-11 16:41:04');
+
+INSERT INTO phones VALUES (38, 'Samsung Galaxy S4', 'images/samsungS4.jpg', 'CPU: 8 cores processor with 1.6 GGz (4cores) and 1.2 GGz
+                           another 4 cores. Screen: FHD sAMOLED with 1920 on 1080 pixels. Pleasurable move control system', 'Samsung',
+                           599, 1211, '6nd December', 'With USB', 2, 14, 1, '2015-12-06 01:12:12');
+
+INSERT INTO phones VALUES (39, 'Samsung Note', 'images/samsungNote.jpg', 'Internal memory: 16 GB. CPU: 4 cores with 2.7 GGz. Screen:
+                           Super AMOLED 2560 on [1444+160] (Quad HD+). CMOS 16.0 MP. Newest and rapid functionality design',
+                           'Samsung', 1289, 1399, '7th December', 'With headphones', 5, 16, 1, '2015-12-07 09:12:56');
+
+INSERT INTO phones VALUES (40, 'Samsung Galaxy S5', 'images/samsungS5.png', 'Energy safe mode as well pleasurable as measuring of heart
+                           rhythm. Processor: 1.9 + 1.3 GGz and 8 cores. 5.1" as equal to 129.4 mm makes with 1920 on 1080 HD makes you
+                           feed the best', 'Samsung', 901, 1211, '15nd December', 'With USB and headphones', 5, 1, 1, '2015-12-15 22:21:14');
+
+INSERT INTO phones VALUES (41, 'Samsung Galaxy S4', 'images/samsungS4.jpg', 'CPU: 8 cores processor with 1.6 GGz (4cores) and 1.2 GGz
+                           another 4 cores. Screen: FHD sAMOLED with 1920 on 1080 pixels. Pleasurable move control system', 'Samsung',
+                           877, 1200, '3nd December', 'With USB', 4, 15, 1, '2015-12-03 10:12:12');
+
+INSERT INTO phones VALUES (42, 'Samsung Galaxy S3', 'images/samsungS3.jpg', 'Internal memory: 16 GB. Screen : sAMOLED 720 on 1280 pixels
+                           (HD). New smart stay that knows what you want. New function SBeam for fast-forward messages and emails',
+                           'Samsung', 877, 1099, '10th December', 'With USB and headphones', 3, 10, 1, '2015-12-10 20:22:22');
+
+INSERT INTO phones VALUES (43, 'Samsung Galaxy S6', 'images/samsungS6.jpg', 'Front-end and Back-end cameras have F1.9 diafragm. Fast charging
+                          only 10mins for 4hours of work. 5.1" Quad HD (2560 on 1440). Good security as well as mobile payment methods',
+                           'Samsung', 1022, 1444, '1st December', 'With headphones', 5, 25, 1, '2015-12-01 12:41:04');
+
+INSERT INTO phones VALUES (44, 'Samsung Galaxy S5', 'images/samsungS5.png', 'Energy safe mode as well pleasurable as measuring of heart
+                           rhythm. Processor: 1.9 + 1.3 GGz and 8 cores. 5.1" as equal to 129.4 mm makes with 1920 on 1080 HD makes you
+                           feed the best', 'Samsung', 1011, 1521, '12nd December', 'With USB and headphones', 5, 12, 1, '2015-12-12 22:22:14');
+
+
 
 SELECT product_name, photo, description, category, price, previous_price, time_of_adding, features,
   id, quantity, shipping, average_price FROM phones WHERE product_name = 'Iphone 5S' AND price > 100 AND price < 1500;

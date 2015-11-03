@@ -83,7 +83,7 @@ class DefaultView
                    <div class="col-md-3"></div>
               </div>';
     }
-    public function getFilterMenu()
+    public function getFilterMenu( $item )
     {
         $i = 0;
         $n = 0;
@@ -102,7 +102,7 @@ class DefaultView
         echo '<div class="container">
                   <div class="row">
                        <div class="col-md-3" style="border: 1px solid #e4e4e4; border-top: none;">
-                            <form action="apple.php" method="post">
+                            <form action="' . $item . '.php" method="post">
                             <div class="row">
                                 <div class="col-md-12 bg-item top-margin" style="margin-top: 0px;">
                                     <h class="search-item">Items: <br/></h>

@@ -32,7 +32,7 @@ echo $view->DoctypeView();
 echo $view->headerView();
 
 $view->getItemsNames();
-$view->getFilterMenu();
+$view->getFilterMenu( 'phones' );
 $view->getItems();
 
 $view->actionGetFooter();
