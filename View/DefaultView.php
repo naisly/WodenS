@@ -184,7 +184,8 @@ class DefaultView
                 <div class="divider-items wow fadeInUp"></div>';
             $i++;
         }
-        echo '      </div>
+        echo ' </div>
+                </div>
                     <script src="js/wow.js"></script>
                    <script>
                          new WOW().init();
@@ -192,6 +193,16 @@ class DefaultView
     }
     public function actionGetFooter() {
         echo   '<footer>
+                    <div class="container">
+                         <div class="row">
+                             <div class="col-sm-1"></div>
+                                 <div class="col-sm-12">
+                                 <ul class="nav nav-list">
+                                     <li class="divider"></li>
+                                 </ul>
+                             </div>
+                         </div>
+                    </div>
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-1"></div>
