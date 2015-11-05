@@ -1,0 +1,66 @@
+<?php
+
+/**
+ * Created by PhpStorm.
+ * User: Home
+ * Date: 05.11.2015
+ * Time: 22:32
+ */
+class LoginModel
+{
+    public $name;
+    public $email;
+    public $email_again;
+    public $password;
+    public $password_again;
+
+    public function setName ( $name ){
+
+        $this->name = $name;
+    }
+
+    public function getName() {
+
+        return $this->name;
+    }
+
+    public function setEmail( $email ) {
+
+        $this->email = $email;
+    }
+
+    public function getEmail() {
+
+        return $this->email;
+    }
+
+    public function setEmailAgain( $email_again ){
+
+        $this->email_again = $email_again;
+    }
+
+    public function getEmailAgain() {
+
+        return $this->email_again;
+    }
+
+    public function setPassword ( $password ){
+
+        $this->password = $password;
+    }
+
+    public function getPassword() {
+
+        return $this->password;
+    }
+
+    public function setPasswordAgain( $password_again ){
+
+        $this->password_again = $password_again;
+    }
+
+    public function getPasswordAgain() {
+
+        return $this->password_again;
+    }
+}
