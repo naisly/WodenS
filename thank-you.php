@@ -19,21 +19,7 @@ $controller = new LoginController($model);
 
 $view = new LoginView($model);
 
-if(isset($_POST['name'])){
-    $model->setName($_POST['name']);
-}
-if(isset($_POST['email'])){
-    $model->setEmail($_POST['email']);
-}
-if(isset($_POST['email-again'])){
-    $model->setEmailAgain($_POST['email-again']);
-}
-if(isset($_POST['password'])){
-    $model->setPassword($_POST['password']);
-}
-if(isset($_POST['password-again'])){
-    $model->setPasswordAgain($_POST['password-again']);
-}
+$controller->actionGetData();
 
 echo $view->DoctypeView();
 
@@ -47,10 +33,10 @@ if($model->getEmail() !== $model->getEmailAgain()){
     $view->errorMinCountMessage();
     $view->RegisterView();
 } else {
-    $view->DoctypeView();
-    $view->headerView();
+    echo $view->headerView();
     $view->successMessage();
-    echo $model->getPassword();
-    echo $model->getName();
-    echo $model->getEmail();
+
+    $view->getFooter();
+
+    $controller->actionInsertData();
 }

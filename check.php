@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: Home
- * Date: 05.11.2015
- * Time: 22:32
+ * Date: 06.11.2015
+ * Time: 14:51
  */
 
 include_once('Controllers\LoginController.php');
@@ -19,19 +19,4 @@ $controller = new LoginController($model);
 
 $view = new LoginView($model);
 
-session_start();
-if(isset($_SESSION['login_user'])){
-
-    header("Location: profile.php");
-}
-
-echo $view->DoctypeView();
-echo $view->headerView();
-
-if(isset($_SESSION['error'])){
-    if($_SESSION['error'] == 1) {
-        $view->errorLoginMessage();
-    }
-}
-
-$view->getLoginForm();
+$controller->actionLogin();

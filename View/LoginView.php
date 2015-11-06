@@ -21,6 +21,7 @@ class LoginView
                 "<head>" .
                 "<link rel='stylesheet' href='css/bootstrap.css' />" .
                 "<link rel='stylesheet' href='css/login.css' />" .
+                "<link rel='stylesheet' href='css/styles.css' />" .
                 "<script src='js/jquery-min.js'></script>" .
                 "<title>Woden S</title>" .
                 "</head>" .
@@ -168,12 +169,101 @@ class LoginView
               </div>';
     }
 
+    public function errorLoginMessage() {
+
+        echo '<div class="alert alert-danger" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                Incorrert email or password! Please check again
+              </div>';
+    }
+
     public function successMessage() {
 
-        echo '<div class="alert alert-success" role="alert">
+        echo '<div class="alert alert-success" role="alert" style="margin-top: -20px;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Success:</span>
                 Well done! Thank you for the register. <a href="login.php">Login >></a>
                 </div>';
+    }
+
+    public function getFooter() {
+
+        echo '<div class="bottom-spacer">
+               <div class="row">
+                   <div class="col-md-12 text-center">
+                        <ul class="hor_nav">
+                            <li><a class="items" href="/privacy">Privacy</a></li>
+                            <li><a class="items" href="/refunds">Refunds</a></li>
+                            <li><a class="items" href="/sales">Sales</a></li>
+                            <li><a class="items" href="site-map">Site map</a></li>
+                        </ul>
+                            <p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
+                   </div>
+               </div>
+              </div>';
+    }
+
+    public function getLoginForm() {
+        echo '<div class="text-center">
+                 <img id="main" src="images/default.png" />
+               </div>
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-4"></div>
+                     <div class="col-md-4 margin-auto">
+                              <fieldset class="field_set">
+                                  <h1>Sign In</h1>
+                                  <form action="check.php" method="post">
+                                     <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" name="email" id="email" required/>
+                                     </div>
+                                     <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" name="password" id="password" placeholder="at least 6 characters" required/>
+                                     </div>
+                                     <div class="form-group text-center">
+                                        <button class="form-control btn btn-default" id="submit">Sign In</button>
+                                     </div>
+                                  </form>
+                                  <p>By signing in you are agreeing to our <a href="#">Conditions of Use and Sale</a>
+                                     and our <a href="#">Privacy Notice</a>.
+                                  </p>
+                                  <div class="row">
+                                      <div class="col-md-2"></div>
+                                      <div class="col-md-8">
+                                          <div class="line"></div>
+                                      </div>
+                                      <div class="col-md-2"></div>
+                                  </div>
+
+                                  <p class="already-registered">New to WodenS ?</p>
+                                  <form action="register.php" method="post">
+                                     <button class="form-control btn btn-primary" id="redirect">Create an account</button>
+                                  </form>
+                              </fieldset>
+                     </div>
+                     <div class="col-md-4"></div>
+                  </div>
+               </div>
+               <div class="container">
+                   <div class="col-md-12">
+                       <div class="line"></div>
+                   </div>
+               </div>
+               <div class="min-spacer"></div>
+               <div class="row">
+                   <div class="col-md-12 text-center">
+                        <ul class="hor_nav">
+                            <li><a class="items" href="/privacy">Privacy</a></li>
+                            <li><a class="items" href="/refunds">Refunds</a></li>
+                            <li><a class="items" href="/sales">Sales</a></li>
+                            <li><a class="items" href="site-map">Site map</a></li>
+                        </ul>
+                            <p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
+                   </div>
+               </div>';
+
     }
 }
