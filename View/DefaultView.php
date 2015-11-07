@@ -184,9 +184,15 @@ class DefaultView
                         <p class="align-left">Free shipping on orders greater than $35 </p>
                         <p class="align-left"><b>Product features: </b></p>
                         <p class="align-left">' . $this->model->getFeatures($i) . '</p>
-                        <button class="btn btn-default">
-                            Add to cart
-                        </button>
+                        <form action="add-item.php" method="post">
+                            <button class="btn btn-default">
+                                Add to cart
+                            </button>
+                            <input type="hidden" name="id" value="' . $this->model->getId($i) . '"/>
+                            <input type="hidden" name="product_name" value="' . $this->model->getProductName($i) . '"/>
+                            <input type="hidden" name="category" value="' . $this->model->getCategory($i) . '"/>
+                            <input type="hidden" name="price" value="' . $this->model->getPrice($i) . '"/>
+                        </form>
                     </div>
                 </div>
                 <div class="divider-items wow fadeInUp"></div>';

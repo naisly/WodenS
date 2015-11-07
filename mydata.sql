@@ -200,3 +200,11 @@ INSERT INTO phones VALUES (44, 'Samsung Galaxy S5', 'images/samsungS5.png', 'Ene
 
 SELECT product_name, photo, description, category, price, previous_price, time_of_adding, features,
   id, quantity, shipping, average_price FROM phones WHERE product_name = 'Iphone 5S' AND price > 100 AND price < 1500;
+
+CREATE TABLE orderedItems (
+  id INT(11) NOT NULL PRIMARY KEY,
+  product_name VARCHAR(150) NOT NULL,
+  category VARCHAR(100) NOT NULL,
+  price INT(15) NOT NULL,
+  user VARCHAR(150) NOT NULL
+)

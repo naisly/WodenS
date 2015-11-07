@@ -90,6 +90,7 @@ class LoginController
 
         if ($result->num_rows == 1) {
             $_SESSION['login_user'] = $email;
+            $_SESSION['add_item'] = '0';
             header("Location: profile.php");
         } else {
             header("Location: login.php");
@@ -97,5 +98,83 @@ class LoginController
         }
 
         session_write_close();
+    }
+
+    public function actionAddItems() {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        session_start();
+
+        if(isset($_POST['id'])){
+            $id = $_POST['id'];
+        }
+        if(isset($_POST['product_name'])){
+            $product_name = $_POST['product_name'];
+        }
+        if(isset($_POST['category'])){
+            $category = $_POST['category'];
+        }
+        if(isset($_POST['price'])){
+            $price = $_POST['price'];
+        }
+
+        $user = $_SESSION['login_user'];
+
+        $sql_query = "INSERT INTO orderedItems VALUES ('$id', '$product_name', '$category', '$price', '$user')";
+        $stmt = $mysqli->prepare($sql_query);
+
+        $stmt->execute();
+    }
+
+    public function actionGetQuantityOfItems() {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        session_start();
+
+        $user = $_SESSION['login_user'];
+
+        $sql_query = "SELECT id FROM orderedItems WHERE user='$user'";
+
+        $result = $mysqli->query($sql_query);
+
+        $quantity = $result->num_rows;
+
+        $this->model->setQuantity($quantity);
+    }
+
+    public function actionGetSumOfItems() {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        $user = $_SESSION['login_user'];
+
+        $sql_query = "SELECT price FROM orderedItems WHERE user='$user'";
+
+        $result = $mysqli->query($sql_query);
+
+        $price_array = array();
+
+        if ($result->num_rows > 0){
+            while ($row = $result->fetch_assoc()){
+                $price_array = array_merge($price_array, array_map('trim', explode(",", $row['price'])));
+            }
+        }
+
+        $count = count($price_array);
+        $sum = 0;
+
+        for($i = 0; $i < $count; $i++){
+            $sum += $price_array[$i];
+        }
+
+        $this->model->setPrice( $sum );
     }
 }

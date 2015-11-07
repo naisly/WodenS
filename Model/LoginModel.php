@@ -14,6 +14,9 @@ class LoginModel
     public $password;
     public $password_again;
 
+    public $quantity;
+    public $price;
+
     public function setName ( $name ){
 
         $this->name = $name;
@@ -62,5 +65,25 @@ class LoginModel
     public function getPasswordAgain() {
 
         return $this->password_again;
+    }
+
+    public function setQuantity ( $quantity ) {
+
+        $this->quantity = $quantity;
+    }
+
+    public function getQuantity() {
+
+        return $this->quantity;
+    }
+
+    public function setPrice ( $price ) {
+
+        $this->price = $price;
+    }
+
+    public function getPrice() {
+
+        return $this->price;
     }
 }
