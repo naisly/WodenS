@@ -29,7 +29,7 @@ $controller->actionGetCategories( 'Apple' );
 
 echo $view->DoctypeView();
 
-echo $view->headerView();
+$view->headerView();
 
 $view->getItemsNames();
 $view->getFilterMenu( 'Apple' );

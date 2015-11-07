@@ -28,7 +28,7 @@ class DefaultView
     }
     public function headerView()
     {
-        return '<nav class="navbar navbar-inverse navbar-static-top">
+        echo   '<nav class="navbar navbar-inverse navbar-static-top">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
@@ -38,7 +38,7 @@ class DefaultView
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/index.html">
+                        <a class="navbar-brand" href="index.php">
                             <img alt="Brand" src="images/default.png">
                         </a>
                     </div>
@@ -54,12 +54,20 @@ class DefaultView
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="register.php">Register</a></li>
-                                    <li><a href="login.php">Login</a></li>
-                                    <li><a href="#">Something else here</a></li>
+                                    <li><a href="login.php">';
+                                session_start();
+                                if(isset($_SESSION['login_user'])){
+                                    echo '<li><a href="logout.php">';
+                                    echo 'Logout(' . $_SESSION['login_user'] . ')</a></li>';
+                                } else {
+                                    echo '<li><a href="login.php">';
+                                    echo 'Login</a></li>';
+                                }
+                                    echo '
                                     <li role="separator" class="divider"></li>
-                                    <li class="dropdown-header">Nav header</li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li><a href="#">One more separated link</a></li>
+                                    <li class="dropdown-header">Products</li>
+                                    <li><a href="#">Cart: 0$</a></li>
+                                    <li><a href="#">Login to see your cart</a></li>
                                 </ul>
                             </li>
                         </ul>

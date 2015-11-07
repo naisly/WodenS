@@ -20,6 +20,7 @@ $controller = new LoginController($model);
 $view = new LoginView($model);
 
 $controller->actionGetData();
+$controller->actionCheckProvidedEmail();
 
 echo $view->DoctypeView();
 
@@ -31,6 +32,9 @@ if($model->getEmail() !== $model->getEmailAgain()){
     $view->RegisterView();
 } else if($model->getPassword() === $model->getPasswordAgain() && (strlen($model->getPassword()) < 7)){
     $view->errorMinCountMessage();
+    $view->RegisterView();
+} else if($_SESSION['email_error'] == 1){
+    $view->errorRegisteredEmailMessage();
     $view->RegisterView();
 } else {
     echo $view->headerView();

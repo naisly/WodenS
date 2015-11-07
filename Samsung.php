@@ -29,7 +29,7 @@ $controller->actionGetCategories( 'Samsung' );
 
 echo $view->DoctypeView();
 
-echo $view->headerView();
+$view->headerView();
 
 $view->getItemsNames();
 $view->getFilterMenu( 'Samsung' );

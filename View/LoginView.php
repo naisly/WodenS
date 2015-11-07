@@ -40,7 +40,7 @@ class LoginView
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/index.html">
+                        <a class="navbar-brand" href="index.php">
                             <img alt="Brand" src="images/default.png">
                         </a>
                     </div>
@@ -57,11 +57,10 @@ class LoginView
                                 <ul class="dropdown-menu">
                                     <li><a href="register.php">Register</a></li>
                                     <li><a href="login.php">Login</a></li>
-                                    <li><a href="#">Something else here</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li class="dropdown-header">Nav header</li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li><a href="#">One more separated link</a></li>
+                                    <li class="dropdown-header">Products</li>
+                                    <li><a href="#">Cart: 0$</a></li>
+                                    <li><a href="#">Login to see your cart</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -139,7 +138,9 @@ class LoginView
                         </ul>
                             <p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
                    </div>
-               </div>';
+               </div>
+               <script src="js/jquery-min.js"></script>
+               <script src="js/bootstrap.min.js"></script>';
     }
 
     public function errorEmailMessage() {
@@ -171,10 +172,19 @@ class LoginView
 
     public function errorLoginMessage() {
 
-        echo '<div class="alert alert-danger" role="alert">
+        echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 Incorrert email or password! Please check again
+              </div>';
+    }
+
+    public function errorRegisteredEmailMessage() {
+
+        echo '<div class="alert alert-danger" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>
+                This email is already in use! Try another one
               </div>';
     }
 
@@ -263,7 +273,9 @@ class LoginView
                         </ul>
                             <p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
                    </div>
-               </div>';
+               </div>
+               <script src="js/jquery-min.js"></script>
+               <script src="js/bootstrap.min.js"></script>';
 
     }
 }

@@ -49,6 +49,27 @@ class LoginController
         $stmt->execute();
     }
 
+    public function actionCheckProvidedEmail() {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        $email = $_POST['email'];
+
+        $sql_stmt = "SELECT email FROM users WHERE email='$email'";
+
+        $result = $mysqli->query($sql_stmt);
+
+        session_start();
+
+        if ($result->num_rows == 1){
+            $_SESSION['email_error'] = '1';
+        } else {
+            $_SESSION['email_error'] = '0';
+        }
+    }
+
     public function actionLogin() {
 
         include_once('/../Storage.php');

@@ -19,4 +19,5 @@ $controller = new LoginController($model);
 
 $view = new LoginView($model);
 
+$controller->actionCheckProvidedEmail();
 $controller->actionLogin();
