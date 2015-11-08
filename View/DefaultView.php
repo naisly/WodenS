@@ -53,13 +53,16 @@ class DefaultView
                             <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart <span class="caret"></span></a>
                         <ul class="dropdown-menu">';
+                                session_start();
                                 if(isset($_SESSION['login_user'])){
                                     echo '<li><a href="logout.php">';
                                     echo 'Logout(' . $_SESSION['login_user'] . ')</a></li>';
+                                    session_write_close();
                                 } else {
                                     echo '<li><a href="register.php">Register</a></li>';
                                     echo '<li><a href="login.php">';
                                     echo 'Login</a></li>';
+                                    session_write_close();
                                 }
                                 echo '
                                                             <li role="separator" class="divider"></li>

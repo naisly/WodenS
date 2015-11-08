@@ -67,8 +67,8 @@ class LoginView
                                     <li role="separator" class="divider"></li>
                                     <li class="dropdown-header">Products</li>';
                                 if(isset($_SESSION['login_user'])) {
-                                    echo '<li><a href="cart.php">Cart: ' . $this->model->getAPrice() . '$';
-                                    echo '<li><a href="#">' . $this->model->getAItems() . ' items</a>';
+                                    echo '<li><a href="cart.php">Cart: ' . $this->model->getPrice() . '$';
+                                    echo '<li><a href="#">' . $this->model->getQuantity() . ' items</a>';
                                 } else {
                                     echo ' <li><a href="#">Login to see your cart</a></li>';
                                 }
@@ -78,7 +78,9 @@ class LoginView
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
-            </nav>';
+            </nav>
+            <script src="js/jquery-min.js"></script>
+            <script src="js/bootstrap.min.js"></script>';
     }
 
     public function RegisterView() {

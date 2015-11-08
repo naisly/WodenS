@@ -101,6 +101,16 @@ class LoginModel
         return $this->photo;
     }
 
+    public function setAPrice ( $APrice ){
+
+        $this->APrice = $APrice;
+    }
+
+    public function getAPrice() {
+
+        return $this->APrice;
+    }
+
     public function setAItems( $AItems ) {
 
         $this->AItems = $AItems;

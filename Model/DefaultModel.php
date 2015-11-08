@@ -25,6 +25,8 @@ class DefaultModel
     public $distinct_product_names;
     public $APrice;
     public $AItems;
+
+    public $array;
     /*public $array; */
 
     public function setProductName ( $product_name ) {
