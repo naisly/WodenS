@@ -207,4 +207,4 @@ CREATE TABLE orderedItems (
   category VARCHAR(100) NOT NULL,
   price INT(15) NOT NULL,
   user VARCHAR(150) NOT NULL
-)
+);

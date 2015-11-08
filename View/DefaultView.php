@@ -191,7 +191,9 @@ class DefaultView
                             <input type="hidden" name="id" value="' . $this->model->getId($i) . '"/>
                             <input type="hidden" name="product_name" value="' . $this->model->getProductName($i) . '"/>
                             <input type="hidden" name="category" value="' . $this->model->getCategory($i) . '"/>
+                            <input type="hidden" name="photo" value="' . $this->model->getPhoto($i) . '"/>
                             <input type="hidden" name="price" value="' . $this->model->getPrice($i) . '"/>
+
                         </form>
                     </div>
                 </div>

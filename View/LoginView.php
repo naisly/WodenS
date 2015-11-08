@@ -202,8 +202,9 @@ class LoginView
         echo '<div class="alert alert-success" role="alert" style="margin-top: -20px;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
+                <img src="' . $_SESSION['photo'] . '" width="50" height="50" />
                 Your selected item was Added to cart! Cart subtotal (' . $this->model->getQuantity() . ' items) $' . $this->model->getPrice() .'
-                    <div class="pull-right" style="margin-top: -5px;">
+                    <div class="pull-right" style="margin-top: 8px;">
                         <button class="cart btn btn-default">Cart</button><button class="btn btn-primary">Proceed to checkout (2 items) </button>
                     </div>
                 </div>';

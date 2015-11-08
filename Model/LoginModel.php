@@ -16,6 +16,7 @@ class LoginModel
 
     public $quantity;
     public $price;
+    public $photo;
 
     public function setName ( $name ){
 
@@ -85,5 +86,15 @@ class LoginModel
     public function getPrice() {
 
         return $this->price;
+    }
+
+    public function setPhoto ( $photo ) {
+
+        $this->photo = $photo;
+    }
+
+    public function getPhoto() {
+
+        return $this->photo;
     }
 }

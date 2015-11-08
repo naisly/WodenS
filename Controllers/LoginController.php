@@ -117,6 +117,9 @@ class LoginController
         if(isset($_POST['category'])){
             $category = $_POST['category'];
         }
+        if(isset($_POST['photo'])){
+            $photo = $_POST['photo'];
+        }
         if(isset($_POST['price'])){
             $price = $_POST['price'];
         }
@@ -127,6 +130,11 @@ class LoginController
         $stmt = $mysqli->prepare($sql_query);
 
         $stmt->execute();
+
+        session_start();
+        $_SESSION['photo'] = $photo;
+
+        session_write_close();
     }
 
     public function actionGetQuantityOfItems() {

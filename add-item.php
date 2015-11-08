@@ -25,6 +25,7 @@ if(!$_SESSION['login_user']){
     $_SESSION['add_item'] = '1';
 } else {
     $_SESSION['add_item'] = '0';
+
     $controller->actionAddItems();
     header('Location: thanks-order.php');
 }
