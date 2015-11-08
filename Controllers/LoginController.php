@@ -124,12 +124,7 @@ class LoginController
 
         $user = $_SESSION['login_user'];
 
-        $sql_query = "INSERT INTO orderedItems VALUES ('$id', '$product_name', '$category', '$price', '$user', 1)";
-        $stmt = $mysqli->prepare($sql_query);
-
-        $stmt->execute();
-
-        $sql_stmt = "SELECT quantity FROM orderedItems WHERE id=$id AND product_name='$product_name' AND category='$category'
+        $sql_stmt = "SELECT id,quantity FROM orderedItems WHERE id=$id AND product_name='$product_name' AND category='$category'
                       AND price=$price AND user='$user'";
 
         echo $sql_stmt;
@@ -138,8 +133,19 @@ class LoginController
         if ($result->num_rows > 0){
             while ($row = $result->fetch_assoc()){
                 $quantity = $row['quantity'];
+                $idQ = $row['id'];
             }
         }
+        echo $idQ . "<br />";
+        echo $quantity . "<br />";
+
+        if(!isset($idQ)) {
+            $sql_query = "INSERT INTO orderedItems VALUES ('$id', '$product_name', '$category', '$price', '$user', 1)";
+            $stmt = $mysqli->prepare($sql_query);
+            echo $sql_query . '<br />';
+            $stmt->execute();
+        }
+
         if(isset($quantity)) {
             if ($quantity !== 1) {
                 $quantity++;
@@ -150,7 +156,6 @@ class LoginController
             }
         }
 
-        session_start();
         $_SESSION['photo'] = $photo;
 
         session_write_close();
