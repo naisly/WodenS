@@ -64,13 +64,28 @@ class ProfileController
 
         $user = $_SESSION['login_user'];
 
-        $sql_query = "SELECT id FROM orderedItems WHERE user='$user'";
-
+        $sql_query = "SELECT quantity FROM orderedItems WHERE user='$user'";
         $result = $mysqli->query($sql_query);
+
+        $quantity_array = array();
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                $quantity_array = array_merge($quantity_array, array_map('trim', explode(",", $row['quantity'])));
+            }
+        }
 
         session_write_close();
 
-        $quantity = $result->num_rows;
+        $i = 0;
+        $q = count($quantity_array);
+        $quantity = 0;
+
+        while ($i < $q){
+            $quantity += $quantity_array[$i];
+            $i++;
+        }
 
         $this->model->setQuantity($quantity);
     }

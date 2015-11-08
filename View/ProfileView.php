@@ -124,6 +124,8 @@ class ProfileView
             <div class="text-center">
                 <a class="btn btn-primary" href="#/products">Continue shopping</a>
                 <a class="btn btn-primary" href="#/placeorder">Place order now</a>
-            </div>';
+            </div>
+            <script src="js/jquery-min.js"></script>
+            <script src="js/bootstrap.min.js"></script>';
     }
 }
