@@ -34,6 +34,7 @@ class ProfileController
         $product_name_array = array();
         $category_array = array();
         $price_array = array();
+        $quantity_array = array();
 
         if ($result->num_rows > 0) {
             // output data of each row
@@ -42,6 +43,7 @@ class ProfileController
                 $product_name_array = array_merge($product_name_array, array_map('trim', explode(",", $row['product_name'])));
                 $category_array = array_merge($category_array, array_map('trim', explode(",", $row['category'])));
                 $price_array = array_merge($price_array, array_map('trim', explode(",", $row['price'])));
+                $quantity_array = array_merge($quantity_array, array_map('trim', explode(",", $row['quantity'])));
             }
         }
 
@@ -49,6 +51,7 @@ class ProfileController
         $this->model->setProductNameArray( $product_name_array );
         $this->model->setCategoryArray( $category_array );
         $this->model->setPriceArray( $price_array );
+        $this->model->setQuantityOfItem( $quantity_array );
     }
 
     public function actionGetQuantityOfItems() {
@@ -80,23 +83,26 @@ class ProfileController
 
         $user = $_SESSION['login_user'];
 
-        $sql_query = "SELECT price FROM orderedItems WHERE user='$user'";
+        $sql_query = "SELECT price, quantity FROM orderedItems WHERE user='$user'";
 
         $result = $mysqli->query($sql_query);
 
         $price_array = array();
+        $quantity_array = array();
 
         if ($result->num_rows > 0){
             while ($row = $result->fetch_assoc()){
                 $price_array = array_merge($price_array, array_map('trim', explode(",", $row['price'])));
+                $quantity_array = array_merge($quantity_array, array_map('trim', explode(",", $row['quantity'])));
             }
         }
 
-        $count = count($price_array);
         $sum = 0;
-
-        for($i = 0; $i < $count; $i++){
-            $sum += $price_array[$i];
+        $i = 0;
+        $q = count($price_array);
+        while ($i < $q){
+            $sum += $price_array[$i] * $quantity_array[$i];
+            $i++;
         }
 
         $this->model->setPrice( $sum );

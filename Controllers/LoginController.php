@@ -106,8 +106,6 @@ class LoginController
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
-        session_start();
-
         if(isset($_POST['id'])){
             $id = $_POST['id'];
         }
@@ -126,10 +124,31 @@ class LoginController
 
         $user = $_SESSION['login_user'];
 
-        $sql_query = "INSERT INTO orderedItems VALUES ('$id', '$product_name', '$category', '$price', '$user')";
+        $sql_query = "INSERT INTO orderedItems VALUES ('$id', '$product_name', '$category', '$price', '$user', 1)";
         $stmt = $mysqli->prepare($sql_query);
 
         $stmt->execute();
+
+        $sql_stmt = "SELECT quantity FROM orderedItems WHERE id=$id AND product_name='$product_name' AND category='$category'
+                      AND price=$price AND user='$user'";
+
+        echo $sql_stmt;
+
+        $result = $mysqli->query($sql_stmt);
+        if ($result->num_rows > 0){
+            while ($row = $result->fetch_assoc()){
+                $quantity = $row['quantity'];
+            }
+        }
+        if(isset($quantity)) {
+            if ($quantity !== 1) {
+                $quantity++;
+
+                $sql_res = $mysqli->prepare("UPDATE orderedItems SET quantity=$quantity WHERE user='$user' AND price=$price
+                            AND product_name='$product_name' AND category='$category'");
+                $sql_res->execute();
+            }
+        }
 
         session_start();
         $_SESSION['photo'] = $photo;

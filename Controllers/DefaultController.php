@@ -297,7 +297,6 @@ class DefaultController
         session_start();
         if(isset($_SESSION['login_user'])) {
             $user = $_SESSION['login_user'];
-
             session_write_close();
 
             $sql_query = "SELECT id FROM orderedItems WHERE user='$user'";

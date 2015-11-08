@@ -90,6 +90,7 @@ class ProfileView
                     <tr>
                         <th>Id</th>
                         <th>Product name</th>
+                        <th>Quantity</th>
                         <th class="text-right">Category</th>
                         <th class="text-right">Price</th>
                     </tr>
@@ -101,8 +102,9 @@ class ProfileView
                     <tr>
                         <td class="text-center">#' . $this->model->getIdArray($i) . '</td>
                         <td class="text-left">' . $this->model->getProductNameArray($i) . '</td>
+                        <td>' . $this->model->getQuantityOfItem($i) .'</td>
                         <td class="text-right">' . $this->model->getCategoryArray($i) . '</td>
-                        <td class="text-right">' . $this->model->getPriceArray($i) . ' $</td>
+                        <td class="text-right">' . $this->model->getPriceArray($i) * $this->model->getQuantityOfItem($i) . ' $</td>
                         <td>
                             <button class="btn btn-sm btn-warning">Remove</button>
                         </td>
@@ -112,7 +114,7 @@ class ProfileView
         echo'   </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="3" class="text-right">Total:</td>
+                        <td colspan="4" class="text-right">Total:</td>
                         <td class="text-right">' .
                             $this->model->getPrice() . ' $'
                      .   '</td>

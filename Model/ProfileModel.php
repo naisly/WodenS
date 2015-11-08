@@ -15,6 +15,7 @@ class ProfileModel
 
     public $quantity;
     public $price;
+    public $qItem;
 
     public function setIdArray( $id_array ){
 
@@ -74,5 +75,15 @@ class ProfileModel
     public function getPrice() {
 
         return $this->price;
+    }
+
+    public function setQuantityOfItem ( $qItem ){
+
+        $this->qItem = $qItem;
+    }
+
+    public function getQuantityOfItem( $i ) {
+
+        return $this->qItem[$i];
     }
 }
