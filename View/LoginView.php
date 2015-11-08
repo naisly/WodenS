@@ -219,7 +219,12 @@ class LoginView
                 <img src="' . $_SESSION['photo'] . '" width="50" height="50" />
                 Your selected item was Added to cart! Cart subtotal (' . $this->model->getQuantity() . ' items) $' . $this->model->getPrice() .'
                     <div class="pull-right" style="margin-top: 8px;">
-                        <button class="cart btn btn-default">Cart</button><button class="btn btn-primary">Proceed to checkout (2 items) </button>
+                        <button class="cart btn btn-default" onclick="location.href=';
+                            echo "'cart.php'";
+                            echo '">Cart</button>';
+        echo            '<button class="cart btn btn-primary" onclick="location.href=';
+                            echo "'checkout.php'";
+                            echo '">Procceed to checkout (' . $this->model->getQuantity() . ' items)</button>
                     </div>
                 </div>';
     }

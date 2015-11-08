@@ -123,4 +123,24 @@ class ProfileController
         $this->model->setPrice( $sum );
     }
 
+    public function actionRemoveData() {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        session_start();
+        $user = $_SESSION['login_user'];
+
+        if(isset($_POST['id'])){
+            $id = $_POST['id'];
+        }
+
+        session_write_close();
+
+        $sql_query = $mysqli->prepare("DELETE FROM orderedItems WHERE user='$user' AND id=$id");
+
+        $sql_query->execute();
+    }
+
 }

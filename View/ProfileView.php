@@ -106,7 +106,10 @@ class ProfileView
                         <td class="text-right">' . $this->model->getCategoryArray($i) . '</td>
                         <td class="text-right">' . $this->model->getPriceArray($i) * $this->model->getQuantityOfItem($i) . ' $</td>
                         <td>
-                            <button class="btn btn-sm btn-warning">Remove</button>
+                            <form action="remove.php" method="post">
+                                <input type="hidden" name="id" value="' . $this->model->getIdArray($i) .'"/>
+                                <button class="btn btn-sm btn-warning">Remove</button>
+                            </form>
                         </td>
                     </tr>';
                             $i++;
