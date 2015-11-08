@@ -23,6 +23,8 @@ class DefaultModel
 
     public $average;
     public $distinct_product_names;
+    public $APrice;
+    public $AItems;
     /*public $array; */
 
     public function setProductName ( $product_name ) {
@@ -190,5 +192,25 @@ class DefaultModel
     public function getProductsForShow() {
 
         echo $this->array;
+    }
+
+    public function setAPrice ( $APrice ){
+
+        $this->APrice = $APrice;
+    }
+
+    public function getAPrice() {
+
+        return $this->APrice;
+    }
+
+    public function setAItems( $AItems ) {
+
+        $this->AItems = $AItems;
+    }
+
+    public function getAItems() {
+
+        return $this->AItems;
     }
 }

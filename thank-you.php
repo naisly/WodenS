@@ -37,7 +37,7 @@ if($model->getEmail() !== $model->getEmailAgain()){
     $view->errorRegisteredEmailMessage();
     $view->RegisterView();
 } else {
-    echo $view->headerView();
+    $view->headerView();
     $view->successMessage();
 
     $view->getFooter();

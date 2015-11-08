@@ -26,7 +26,7 @@ if(isset($_SESSION['login_user'])){
 }
 
 echo $view->DoctypeView();
-echo $view->headerView();
+$view->headerView();
 
 if(isset($_SESSION['error'])){
     if($_SESSION['error'] == 1) {

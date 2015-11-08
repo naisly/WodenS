@@ -1,4 +1,21 @@
 <?php
+
+include_once('Controllers\DefaultController.php');
+include_once('Model\DefaultModel.php');
+include_once('View\DefaultView.php');
+//initiate the triad
+
+$model = new DefaultModel();
+
+//It is important that the controller and the view share the model
+
+$controller = new DefaultController($model);
+
+$view = new DefaultView($model);
+
+$controller->actionGetSumOfItems();
+$controller->actionGetQuantityOfItems();
+
 echo '<!DOCTYPE html>
     <html>
     <head>
@@ -42,30 +59,33 @@ echo '<!DOCTYPE html>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="phones.html">Phones <span class="sr-only">(current)</span></a></li>
+                    <li><a href="phones.php">Phones <span class="sr-only">(current)</span></a></li>
                     <li><a href="notebooks.html">Notebooks</a></li>
                     <li><a href="devices.html">Devices</a></li>
                     <li><a href="tv.html">TV</a></li>
                     <li><a href="support.html">Support</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                                    <li><a href="register.php">Register</a></li>
-                                    <li><a href="login.php">';
-                                session_start();
+                        <ul class="dropdown-menu">';
                                 if(isset($_SESSION['login_user'])){
                                     echo '<li><a href="logout.php">';
                                     echo 'Logout(' . $_SESSION['login_user'] . ')</a></li>';
                                 } else {
+                                    echo '<li><a href="register.php">Register</a></li>';
                                     echo '<li><a href="login.php">';
                                     echo 'Login</a></li>';
                                 }
                                 echo '
                                     <li role="separator" class="divider"></li>
-                                    <li class="dropdown-header">Products</li>
-                                    <li><a href="#">Cart: 0$</a></li>
-                                    <li><a href="#">Login to see your cart</a></li>
-                                </ul>
+                                    <li class="dropdown-header">Products</li>';
+                            if(isset($_SESSION['login_user'])) {
+                                echo '<li><a href="cart.php">Cart: ' . $model->getAPrice() . '$';
+                                echo '<li><a href="#">' . $model->getAItems() . ' items</a>';
+                            } else {
+                                echo ' <li><a href="#">Login to see your cart</a></li>';
+                            }
+                            echo    '
+                        </ul>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -74,7 +94,7 @@ echo '<!DOCTYPE html>
     <div id="slider">
         <ul class="bxslider">
             <li><a href="notebooks.php"><img src="images/laptop1.jpg"></a></li>
-            <li><a href="phones.php"><img src="images/i6.jpeg"></a></li>
+            <li><a href="phones-all.php"><img src="images/i6.jpeg"></a></li>
             <li><a href="devices.php"><img src="images/skimn-ipad.png"></a></li>
             <li><a href="tv.php"><img src="images/imac.png"></a></li>
         </ul>
@@ -89,11 +109,11 @@ echo '<!DOCTYPE html>
                 <p>Now available with Windows 10, 7, XP, DOS, Linux. </p>
             </div>
             <div class="col-sm-3">
-                <a href="phones.php"><img src="images/htc.png" style="display: block; margin-left: auto; margin-right: auto"></a>
+                <a href="phones-all.php"><img src="images/htc.png" style="display: block; margin-left: auto; margin-right: auto"></a>
                 <p>Great Android OS</p>
             </div>
             <div class="col-sm-3">
-                <a href="phones.php"><img src="images/smartphone.png" style="display: block; margin-left: auto; margin-right: auto"></a>
+                <a href="phones-all.php"><img src="images/smartphone.png" style="display: block; margin-left: auto; margin-right: auto"></a>
                 <p>Nobody knows whats tommorrows technology are going to be</p>
             </div>
             <div class="col-sm-3">
@@ -123,7 +143,7 @@ echo '<!DOCTYPE html>
                     <ul>
                         <li class="footer-menu"><b>Shop</b></li>
                         <li><a class="items" href="/">Home</a></li>
-                        <li><a class="items" href="phones.php">Phones</a></li>
+                        <li><a class="items" href="phones-all.php">Phones</a></li>
                         <li><a class="items" href="notebooks.php">Notebooks</a></li>
                         <li><a class="items" href="devices.php">Devices</a></li>
                         <li><a class="items" href="tv.php">TV</a></li>

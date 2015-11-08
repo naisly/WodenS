@@ -18,6 +18,9 @@ class LoginModel
     public $price;
     public $photo;
 
+    public $APrice;
+    public $AItems;
+
     public function setName ( $name ){
 
         $this->name = $name;
@@ -96,5 +99,15 @@ class LoginModel
     public function getPhoto() {
 
         return $this->photo;
+    }
+
+    public function setAItems( $AItems ) {
+
+        $this->AItems = $AItems;
+    }
+
+    public function getAItems() {
+
+        return $this->AItems;
     }
 }

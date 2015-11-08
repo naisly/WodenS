@@ -250,4 +250,64 @@ class DefaultController
 
         $this->model->setDistinctProductNames($product_names_array);
     }
+
+    public function actionGetSumOfItems() {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        session_start();
+        if(isset($_SESSION['login_user'])) {
+            $user = $_SESSION['login_user'];
+
+            session_write_close();
+
+            $sql_query = "SELECT price FROM orderedItems WHERE user='$user'";
+
+            $result = $mysqli->query($sql_query);
+
+            $price_array = array();
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $price_array = array_merge($price_array, array_map('trim', explode(",", $row['price'])));
+                }
+            }
+
+            $count = count($price_array);
+            $sum = 0;
+
+            for ($i = 0; $i < $count; $i++) {
+                $sum += $price_array[$i];
+            }
+
+            $this->model->setAPrice($sum);
+        } else {
+            session_write_close();
+        }
+    }
+
+    public function actionGetQuantityOfItems() {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        session_start();
+        if(isset($_SESSION['login_user'])) {
+            $user = $_SESSION['login_user'];
+
+            session_write_close();
+
+            $sql_query = "SELECT id FROM orderedItems WHERE user='$user'";
+
+            $result = $mysqli->query($sql_query);
+
+            $quantity = $result->num_rows;
+
+            $this->model->setAItems($quantity);
+        }
+
+    }
 }

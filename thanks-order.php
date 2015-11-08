@@ -23,7 +23,7 @@ $controller->actionGetQuantityOfItems();
 $controller->actionGetSumOfItems();
 
 echo $view->DoctypeView();
-echo $view->headerView();
+$view->headerView();
 $view->addedItemMessage();
 
 $view->getFooter();
