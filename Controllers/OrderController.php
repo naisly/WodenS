@@ -127,18 +127,36 @@ class OrderController
         $q = $result->num_rows;
 
         while( $i < $q ) {
-            $sql_stmt = "INSERT INTO completeOrders VALUES('$id_array[$i]', '$product_name_array[$i]',
+            $query = "SELECT quantity FROM completeOrders WHERE id='$id_array[$i]'";
+            $result_query = $mysqli->query($query);
+
+            $res = 0;
+            if ($result_query->num_rows > 0) {
+                while ($row = $result_query->fetch_assoc()) {
+                    $res = $row['quantity'] + $quantity_array[$i];
+                }
+
+                $id_quan = $id_array[$i];
+
+                $sql_update = $mysqli->prepare("UPDATE completeOrders SET quantity='$res' WHERE id='$id_quan'");
+                $sql_update->execute();
+
+                $i++;
+            } else {
+
+
+                $sql_stmt = "INSERT INTO completeOrders VALUES('$id_array[$i]', '$product_name_array[$i]',
                             '$category_array[$i]', $price_array[$i], '$user', '$quantity_array[$i]', '$order_id')";
 
-            $sql = $mysqli->prepare($sql_stmt);
+                $sql = $mysqli->prepare($sql_stmt);
 
-            $sql->execute();
-            $i++;
+                $sql->execute();
+                $i++;
+            }
+
+            $sql_delete = $mysqli->prepare("DELETE FROM orderedItems WHERE user='$user'");
+
+            $sql_delete->execute();
         }
-
-        $sql_delete = $mysqli->prepare("DELETE FROM orderedItems WHERE user='$user'");
-
-        $sql_delete->execute();
-
     }
 }
