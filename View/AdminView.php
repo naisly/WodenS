@@ -98,4 +98,82 @@ class AdminView
                 Incorrert admin username or password! Please check again
               </div>';
     }
+
+    public function adminBlocks() {
+
+        echo '<div class="panel panel-default row">
+                <div class="col-xs-3 panel-body">
+                <a class="btn btn-block btn-default" href="admin-products.php">
+                    Products
+                </a>
+                <a class="btn btn-block btn-default" href="admin-orders.php">
+                    Orders
+                </a>
+                    </div>
+                    <div class="col-xs-8 panel-body" >
+                        <div ng-controller="ordersCtrl">
+                            <table class="table table-striped table-bordered">
+                            <tr><th>Name</th><th>City</th><th>Value</th><th></th></tr>
+                            <tr ng-repeat="order in orders">
+                            <td>{{order.name}}</td>
+                            <td>{{order.city}}</td>
+                            <td>{{calcTotal(order) | currency}}</td>
+                            <td>
+                            <button ng-click="selectOrder(order)" class="btn btn-xs btn-primary">
+                            Details
+                            </button>
+                            </td>
+                            </tr>
+                            </table>
+                            <div ng-show="selectedOrder">
+                            <h3>Order Details</h3>
+                            <table class="table table-striped table-bordered">
+                            <tr><th>Name</th><th>Count</th><th>Price</th></tr>
+                            <tr ng-repeat="item in selectedOrder.products">
+                            <td>{{item.name}}</td>
+                            <td>{{item.count}}</td>
+                            <td>{{item.price| currency}} </td>
+                            </tr>
+                            </table>
+                            </div>
+                            </div>
+                    </div>
+                    </div>';
+    }
+
+    public function ProductsPage() {
+
+        echo '      <div class="col-xs-8 panel-body" >
+                        <div ng-controller="ordersCtrl">
+                            <table class="table table-striped table-bordered" style="width: 100%;">
+                                <tr><th>Id</th><th>Product Name</th><th>Photo</th><th>Description</th><th>Category</th><th>Price</th>
+                                <th>Previous Price</th><th>Time of Adding</th><th>Features</th><th>Quantity</th><th>Shipping</th>
+                                <th>Average Price</th><th>#</th></tr>';
+                    $i = 0;
+                    while($i < count($this->model->getItems())){
+                       echo    '<tr>
+                                    <td> #' . $this->model->getId($i) . '</td>
+                                    <td>' . $this->model->getProductName($i) . '</td>
+                                    <td>' . $this->model->getPhoto($i) . '</td>
+                                    <td>' . $this->model->getDescription($i) . '</td>
+                                    <td>' . $this->model->getCategory($i) . '</td>
+                                    <td>' . $this->model->getPrice($i) . ' $</td>
+                                    <td>' . $this->model->getPriviousPrice($i) . ' $</td>
+                                    <td>' . $this->model->getTimeOfAdding($i) . '</td>
+                                    <td>' . $this->model->getFeatures($i) . '</td>
+                                    <td>' . $this->model->getQuantity($i) . ' items</td>
+                                    <td>' . $this->model->getShipping($i) . '</td>
+                                    <td>' . $this->model->getAverage($i) . ' $</td>
+                                    <td>
+                                        <button ng-click="selectOrder(order)" class="btn btn-xs btn-primary">
+                                            Details
+                                        </button>
+                                    </td>
+                                </tr>';
+                            $i++;
+                    }
+                 echo      '</table>
+                        </div>
+                   </div>';
+    }
 }

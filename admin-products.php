@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: Home
- * Date: 09.11.2015
- * Time: 23:29
+ * Date: 10.11.2015
+ * Time: 0:08
  */
 
 include_once('Model/AdminModel.php');
@@ -18,11 +18,7 @@ $controller = new AdminController($model);
 
 $view = new AdminView($model);
 
-session_start();
-
-if(!isset($_SESSION['admin'])){
-    header('Location: admin-login.php');
-}
-
 echo $view->DoctypeView();
-$view->adminBlocks();
+
+$controller->getAdminProductsData();
+$view->ProductsPage();
