@@ -299,31 +299,34 @@ class DefaultController
 
         session_start();
 
-        $user = $_SESSION['login_user'];
+        if(isset($_SESSION['login_user'])) {
+            $user = $_SESSION['login_user'];
 
-        $sql_query = "SELECT quantity FROM orderedItems WHERE user='$user'";
-        $result = $mysqli->query($sql_query);
+            $sql_query = "SELECT quantity FROM orderedItems WHERE user='$user'";
+            $result = $mysqli->query($sql_query);
 
-        $quantity_array = array();
+            $quantity_array = array();
 
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while ($row = $result->fetch_assoc()) {
-                $quantity_array = array_merge($quantity_array, array_map('trim', explode(",", $row['quantity'])));
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while ($row = $result->fetch_assoc()) {
+                    $quantity_array = array_merge($quantity_array, array_map('trim', explode(",", $row['quantity'])));
+                }
             }
+
+            session_write_close();
+
+            $i = 0;
+            $q = count($quantity_array);
+            $quantity = 0;
+
+            while ($i < $q){
+                $quantity += $quantity_array[$i];
+                $i++;
+            }
+
+            $this->model->setAItems($quantity);
         }
 
-        session_write_close();
-
-        $i = 0;
-        $q = count($quantity_array);
-        $quantity = 0;
-
-        while ($i < $q){
-            $quantity += $quantity_array[$i];
-            $i++;
-        }
-
-        $this->model->setAItems($quantity);
     }
 }

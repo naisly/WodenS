@@ -209,3 +209,13 @@ CREATE TABLE orderedItems (
   user VARCHAR(150) NOT NULL,
   quantity INT(15)
 );
+
+CREATE TABLE completeOrders (
+  id INT(11) NOT NULL,
+  product_name VARCHAR(150) NOT NULL,
+  category VARCHAR(100) NOT NULL,
+  price INT(15) NOT NULL,
+  user VARCHAR(150) NOT NULL,
+  quantity INT(15),
+  order_id INT(15)
+);
