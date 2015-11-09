@@ -82,7 +82,7 @@ class LoginController
         $email = stripslashes($email);
         $password = stripcslashes($password);
 
-        $sql_query = "SELECT * FROM users where email='$email' AND password='$password'";
+        $sql_query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
 
         $result = $mysqli->query($sql_query);
 
@@ -90,8 +90,9 @@ class LoginController
 
         if ($result->num_rows == 1) {
             $_SESSION['login_user'] = $email;
+            $_SESSION['admin'] = $email;
             $_SESSION['add_item'] = '0';
-            header("Location: profile.php");
+            header("Location: cart.php");
         } else {
             header("Location: login.php");
             $_SESSION['error'] = '1';
