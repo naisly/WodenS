@@ -127,36 +127,56 @@ class OrderController
         $q = $result->num_rows;
 
         while( $i < $q ) {
-            $query = "SELECT quantity FROM completeOrders WHERE id='$id_array[$i]'";
-            $result_query = $mysqli->query($query);
 
-            $res = 0;
-            if ($result_query->num_rows > 0) {
-                while ($row = $result_query->fetch_assoc()) {
-                    $res = $row['quantity'] + $quantity_array[$i];
-                }
-
-                $id_quan = $id_array[$i];
-
-                $sql_update = $mysqli->prepare("UPDATE completeOrders SET quantity='$res' WHERE id='$id_quan'");
-                $sql_update->execute();
-
-                $i++;
-            } else {
-
-
-                $sql_stmt = "INSERT INTO completeOrders VALUES('$id_array[$i]', '$product_name_array[$i]',
+            $sql_stmt = "INSERT INTO completeOrders VALUES('$id_array[$i]', '$product_name_array[$i]',
                             '$category_array[$i]', $price_array[$i], '$user', '$quantity_array[$i]', '$order_id')";
 
-                $sql = $mysqli->prepare($sql_stmt);
+            $sql = $mysqli->prepare($sql_stmt);
 
-                $sql->execute();
-                $i++;
-            }
-
-            $sql_delete = $mysqli->prepare("DELETE FROM orderedItems WHERE user='$user'");
-
-            $sql_delete->execute();
+            $sql->execute();
+            $i++;
         }
+
+        $sql_delete = $mysqli->prepare("DELETE FROM orderedItems WHERE user='$user'");
+
+        $sql_delete->execute();
+
+    }
+
+    public function actionInsertIntoOrders() {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        if(isset($_POST['name'])){
+            $name = $_POST['name'];
+        }
+        if(isset($_POST['street'])){
+            $street = $_POST['street'];
+        }
+        if(isset($_POST['city'])){
+            $city = $_POST['city'];
+        }
+        if(isset($_POST['state'])){
+            $state = $_POST['state'];
+        }
+        if(isset($_POST['zip'])){
+            $zip = $_POST['zip'];
+        }
+        if(isset($_POST['country'])){
+            $country = $_POST['country'];
+        }
+        if(isset($_POST['giftwrap'])){
+            $giftwrap = $_POST['giftwrap'];
+        }
+
+        $order_id = $this->model->getOrderId();
+
+        $sql_query = "INSERT INTO orders VALUES ('$order_id', '$name', '$street', '$city', '$state', '$zip', '$country', '$giftwrap')";
+
+        $sql = $mysqli->prepare($sql_query);
+
+        $sql->execute();
     }
 }

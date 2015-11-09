@@ -219,3 +219,14 @@ CREATE TABLE completeOrders (
   quantity INT(15),
   order_id INT(15)
 );
+
+CREATE TABLE orders (
+  order_id INT(20) NOT NULL,
+  name VARCHAR(150) NOT NULL,
+  street VARCHAR(250) NOT NULL,
+  city VARCHAR(25) NOT NULL,
+  state VARCHAR(25) NOT NULL,
+  zip VARCHAR(20) NOT NULL,
+  country VARCHAR(100) NOT NULL,
+  wrap INT(2) NOT NULL
+)

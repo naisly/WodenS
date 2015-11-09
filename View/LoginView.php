@@ -223,7 +223,7 @@ class LoginView
                             echo "'cart.php'";
                             echo '">Cart</button>';
         echo            '<button class="cart btn btn-primary" onclick="location.href=';
-                            echo "'checkout.php'";
+                            echo "'placeorder.php'";
                             echo '">Procceed to checkout (' . $this->model->getQuantity() . ' items)</button>
                     </div>
                 </div>';

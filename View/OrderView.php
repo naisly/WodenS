@@ -88,7 +88,7 @@ class OrderView
         echo '
             <h2>Check out now</h2>
             <p class="text-left">Please enter your details, and well ship your goods right away!</p>
-            <form name="shippingForm">
+            <form name="shippingForm" action="complete-order.php" method="post">
                 <div class="well">
                     <h3>Ship to</h3>
                     <div class="form-group">
@@ -119,12 +119,12 @@ class OrderView
                     <h3>Options</h3>
                     <div class="checkbox">
                         <label>
-                            <input name="giftwrap" type="checkbox" />
+                            <input name="giftwrap" type="checkbox" value="1"/>
                                 Gift wrap these items
                         </label>
                     </div>
                     <div class="text-center">
-                        <a class="btn btn-primary" href="complete-order.php">Complete order</a>
+                        <button class="btn btn-primary">Complete order</button>
                     </div>
                 </div>
             </form>

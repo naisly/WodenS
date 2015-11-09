@@ -22,6 +22,7 @@ $controller->actionGetSumOfItems();
 $controller->actionGetQuantityOfItems();
 $controller->actionGeneralizeId();
 $controller->actionInsertData();
+$controller->actionInsertIntoOrders();
 
 echo $view->DoctypeView();
 $view->headerView();
