@@ -144,35 +144,115 @@ class AdminView
     public function ProductsPage() {
 
         echo '      <div class="col-xs-8 panel-body" >
-                        <div ng-controller="ordersCtrl">
+                        <div>
                             <table class="table table-striped table-bordered" style="width: 100%;">
                                 <tr><th>Id</th><th>Product Name</th><th>Photo</th><th>Description</th><th>Category</th><th>Price</th>
                                 <th>Previous Price</th><th>Time of Adding</th><th>Features</th><th>Quantity</th><th>Shipping</th>
-                                <th>Average Price</th><th>#</th></tr>';
+                                <th>Average Price</th><th>#</th><th>&</th></tr>';
                     $i = 0;
+                    session_start();
+                    //$_SESSION['edit'] = 3;
                     while($i < count($this->model->getItems())){
-                       echo    '<tr>
-                                    <td> #' . $this->model->getId($i) . '</td>
-                                    <td>' . $this->model->getProductName($i) . '</td>
-                                    <td>' . $this->model->getPhoto($i) . '</td>
-                                    <td>' . $this->model->getDescription($i) . '</td>
-                                    <td>' . $this->model->getCategory($i) . '</td>
-                                    <td>' . $this->model->getPrice($i) . ' $</td>
-                                    <td>' . $this->model->getPriviousPrice($i) . ' $</td>
-                                    <td>' . $this->model->getTimeOfAdding($i) . '</td>
-                                    <td>' . $this->model->getFeatures($i) . '</td>
-                                    <td>' . $this->model->getQuantity($i) . ' items</td>
-                                    <td>' . $this->model->getShipping($i) . '</td>
-                                    <td>' . $this->model->getAverage($i) . ' $</td>
-                                    <td>
-                                        <button ng-click="selectOrder(order)" class="btn btn-xs btn-primary">
-                                            Details
-                                        </button>
-                                    </td>
-                                </tr>';
-                            $i++;
+                       echo '<tr>';
+                        if($_SESSION['edit'] == $i){
+                            echo '<td><input type="text" name="id" value="' . $this->model->getId($i) . '" /></td>';
+                        } else {
+                            echo '<td>' . $this->model->getId($i) . '</td>';
+                        }
+                        if($_SESSION['edit'] == $i){
+                            echo '<td><input type="text" name="product_name" value="' . $this->model->getProductName($i) . '" /></td>';
+                        } else {
+                            echo '<td>' . $this->model->getProductName($i) . '</td>';
+                        }
+                        if($_SESSION['edit'] == $i){
+                            echo '<td><input type="text" name="photo" value="' . $this->model->getPhoto($i) . '" /></td>';
+                        } else {
+                            echo '<td>' . $this->model->getPhoto($i) . '</td>';
+                        }
+                        if($_SESSION['edit'] == $i){
+                            echo '<td><textarea type="text" name="description" rows="10">' . $this->model->getDescription($i) . '</textarea></td>';
+                        } else {
+                            echo '<td>' . $this->model->getDescription($i) . '</td>';
+                        }
+                        if($_SESSION['edit'] == $i){
+                            echo '<td><input type="text" name="category" value="' . $this->model->getCategory($i) . '" /></td>';
+                        } else {
+                            echo '<td>' . $this->model->getCategory($i) . '</td>';
+                        }
+                        if($_SESSION['edit'] == $i){
+                            echo '<td><input type="text" name="price" value="' . $this->model->getPrice($i) . '" /></td>';
+                        } else {
+                            echo '<td>' . $this->model->getPrice($i) . '</td>';
+                        }
+                        if($_SESSION['edit'] == $i){
+                            echo '<td><input type="text" name="previous_price" value="' . $this->model->getPriviousPrice($i) . '" /></td>';
+                        } else {
+                            echo '<td>' . $this->model->getPriviousPrice($i) . '</td>';
+                        }
+                        if($_SESSION['edit'] == $i){
+                            echo '<td><input type="text" name="time_of_adding" value="' . $this->model->getTimeOfAdding($i) . '" /></td>';
+                        } else {
+                            echo '<td>' . $this->model->getTimeOfAdding($i) . '</td>';
+                        }
+                        if($_SESSION['edit'] == $i){
+                            echo '<td><textarea type="text" name="features" rows="10">' . $this->model->getFeatures($i) . '</textarea></td>';
+                        } else {
+                            echo '<td>' . $this->model->getFeatures($i) . '</td>';
+                        }
+                        if($_SESSION['edit'] == $i){
+                            echo '<td><input type="text" name="quantity" value="' . $this->model->getQuantity($i) . '" /></td>';
+                        } else {
+                            echo '<td>' . $this->model->getQuantity($i) . '</td>';
+                        }
+                        if($_SESSION['edit'] == $i){
+                            echo '<td><input type="text" name="shipping" value="' . $this->model->getShipping($i) . '" /></td>';
+                        } else {
+                            echo '<td>' . $this->model->getShipping($i) . '</td>';
+                        }
+                        if($_SESSION['edit'] == $i){
+                            echo '<td><input type="text" name="average_price" value="' . $this->model->getAverage($i) . '" disabled /></td>';
+                        } else {
+                            echo '<td>' . $this->model->getAverage($i) . '</td>';
+                        }
+                        if($_SESSION['edit'] == $i) {
+                            echo '<td>
+                                    <form action="admin-edit.php" method="post">
+                                        <input type="hidden" name="edit_id" value="' . $this->model->getId($i) . '" />
+                                        <input type="hidden" name="edit_product_name" value="' . $this->model->getProductName($i) . '" />
+                                        <input type="hidden" name="edit_photo" value="' . $this->model->getPhoto($i) . '" />
+                                        <input type="hidden" name="edit_description" value="' . $this->model->getDescription($i) . '" />
+                                        <input type="hidden" name="edit_category" value="' . $this->model->getCategory($i) . '" />
+                                        <input type="hidden" name="edit_price" value="' . $this->model->getPrice($i) . '" />
+                                        <input type="hidden" name="edit_previous_price" value="' . $this->model->getPriviousPrice($i) . '" />
+                                        <input type="hidden" name="edit_time_of_adding" value="' . $this->model->getTimeOfAdding($i) . '" />
+                                        <input type="hidden" name="edit_features" value="' . $this->model->getFeatures($i) . '" />
+                                        <input type="hidden" name="edit_quantity" value="' . $this->model->getQuantity($i) . '" />
+                                        <input type="hidden" name="edit_shipping" value="' . $this->model->getShipping($i) . '" />
+                                        <button class="btn btn-primary">Change data</button>
+                                    </form>
+                                    <form action="admin-back.php" method="post">
+                                        <button class="btn btn-default" style="margin-top: 20px;">Go Back now</button>
+                                    </form>
+                                </td>';
+                        } else {
+                            echo '<td>
+                                      <form action="admin-session.php" method="post">
+                                           <button class="btn btn-primary">Edit</button>
+                                           <input type="hidden" name="edit_id' . $i . '" value="' . $this->model->getId($i) . '" />
+                                      </form>
+                                  </td>';
+                        }
+                              echo '<td>
+                                        <form action="admin-delete.php" method="post">
+                                            <input type="hidden" name="edit_id' . $i . '" value="' . $this->model->getId($i) . '" />
+                                            <button class="btn btn-success">Delete</button>
+                                        </form>
+                                    </td>';
+
+                        $i++;
                     }
-                 echo      '</table>
+
+                echo      '</table>
                         </div>
                    </div>';
     }

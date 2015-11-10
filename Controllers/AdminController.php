@@ -105,4 +105,15 @@ class AdminController
 
         }
     }
+
+    public function UnsetSession() {
+
+        session_start();
+        unset($_SESSION['product_num']);
+
+        session_write_close();
+
+        header('Location: admin-products.php');
+    }
+
 }
