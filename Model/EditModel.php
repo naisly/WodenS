@@ -6,7 +6,7 @@
  * Date: 10.11.2015
  * Time: 20:07
  */
-class EditModel extends AdminModel
+class EditModel
 {
 
 }
