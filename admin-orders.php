@@ -15,3 +15,9 @@ $model = new CheckoutModel();
 $controller = new CheckoutController($model);
 
 $view = new CheckoutView($model);
+
+echo $view->DoctypeView();
+
+$controller->actionGetData();
+
+$view->getTable();

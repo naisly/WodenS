@@ -18,14 +18,21 @@ class CheckoutModel
     public $email;
     public $name;
 
+    public $sum;
+
     public function setId( $id ){
 
         $this->id = $id;
     }
 
-    public function getId() {
+    public function getId( $i ) {
 
-        return $this->id;
+        return $this->id[$i];
+    }
+
+    public function countId() {
+
+        return count($this->order_id);
     }
 
     public function setProductName( $product_name ){
@@ -33,9 +40,9 @@ class CheckoutModel
         $this->product_name = $product_name;
     }
 
-    public function getProductName() {
+    public function getProductName( $i ) {
 
-        return $this->product_name;
+        return $this->product_name[$i];
     }
 
     public function setCategory( $category ){
@@ -43,9 +50,9 @@ class CheckoutModel
         $this->category = $category;
     }
 
-    public function getCategory() {
+    public function getCategory( $i ) {
 
-        return $this->category;
+        return $this->category[$i];
     }
 
     public function setUser( $user ){
@@ -53,9 +60,9 @@ class CheckoutModel
         $this->user = $user;
     }
 
-    public function getUser() {
+    public function getUser( $i ) {
 
-        return $this->user;
+        return $this->user[$i];
     }
 
     public function setPrice( $price ){
@@ -63,9 +70,9 @@ class CheckoutModel
         $this->price = $price;
     }
 
-    public function getPrice() {
+    public function getPrice( $i ) {
 
-        return $this->price;
+        return $this->price[$i];
     }
 
     public function setQuantity( $quantity ){
@@ -73,9 +80,9 @@ class CheckoutModel
         $this->quantity = $quantity;
     }
 
-    public function getQuantity() {
+    public function getQuantity( $i ) {
 
-        return $this->quantity;
+        return $this->quantity[$i];
     }
 
     public function setOrderId( $order_id ){
@@ -83,9 +90,9 @@ class CheckoutModel
         $this->order_id = $order_id;
     }
 
-    public function getOrderId() {
+    public function getOrderId( $i ) {
 
-        return $this->order_id;
+        return $this->order_id[$i];
     }
 
     public function setEmail( $email ){
@@ -93,9 +100,9 @@ class CheckoutModel
         $this->email = $email;
     }
 
-    public function getEmail() {
+    public function getEmail( $i ) {
 
-        return $this->email;
+        return $this->email[$i];
     }
 
     public function setName( $name ) {
@@ -103,8 +110,18 @@ class CheckoutModel
         $this->name = $name;
     }
 
-    public function getName() {
+    public function getName( $i ) {
 
-        return $this->name;
+        return $this->name[$i];
+    }
+
+    public function setFullPrice ( $sum ){
+
+        $this->sum = $sum;
+    }
+
+    public function getFullPrice() {
+
+        return $this->sum;
     }
 }

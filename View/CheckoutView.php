@@ -14,6 +14,20 @@ class CheckoutView
         $this->model = $model;
     }
 
+    public function DoctypeView()
+    {
+        return "<!DOCTYPE html>" .
+        "<html>" .
+        "<head>" .
+        "<link rel='stylesheet' href='css/bootstrap.css' />" .
+        "<link rel='stylesheet' href='css/styles.css' />" .
+        "<link rel='stylesheet' href='css/default.css' />" .
+        "<script src='js/jquery-min.js'></script>" .
+        "<title>Woden S</title>" .
+        "</head>" .
+        "<body>";
+    }
+
     public function getTable() {
 
         echo '
@@ -29,17 +43,18 @@ class CheckoutView
                 </thead>
                 <tbody>';
         $i = 0;
-        while ($i < count($this->model->id_array)){
+        while ($i < $this->model->countId()){
+            $_SESSION['user'] = $this->model->getOrderId($i);
             echo '
                     <tr>
-                        <td class="text-center">#' . $this->model->getIdArray($i) . '</td>
-                        <td class="text-left">' . $this->model->getProductNameArray($i) . '</td>
-                        <td>' . $this->model->getQuantityOfItem($i) .'</td>
-                        <td class="text-right">' . $this->model->getCategoryArray($i) . '</td>
-                        <td class="text-right">' . $this->model->getPriceArray($i) * $this->model->getQuantityOfItem($i) . ' $</td>
+                        <td class="text-center">#' . $this->model->getOrderId($i) . '</td>
+                        <td class="text-left">' . $this->model->getName($i) . '</td>
+                        <td>' . $this->model->getUser($i) .'</td>
+                        <td class="text-right">' . $this->model->getPrice($i) . ' $' . '</td>
+                        <td class="text-right">' . 'something' . ' $</td>
                         <td>
                             <form action="remove.php" method="post">
-                                <input type="hidden" name="id" value="' . $this->model->getIdArray($i) .'"/>
+                                <input type="hidden" name="id" value="' . 1 .'"/>
                                 <button class="btn btn-sm btn-warning">Remove</button>
                             </form>
                         </td>
@@ -49,9 +64,9 @@ class CheckoutView
         echo'   </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="4" class="text-right">Total:</td>
+                        <td colspan="3" class="text-right">Total:</td>
                         <td class="text-right">' .
-            $this->model->getPrice() . ' $'
+            $this->model->getFullPrice() . ' $'
             .   '</td>
                     </tr>
                 </tfoot>
