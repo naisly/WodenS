@@ -28,8 +28,13 @@ class CheckoutView
         "<body>";
     }
 
-    public function getTable() {
+    public function getTable( $view ) {
 
+        if($view == 'latest') {
+            echo '<h1 class="text-center">Latest orders</h1>';
+        } else {
+            echo '<h1 class="text-center">Done orders</h1>';
+        }
         echo '
             <table class="table">
                 <thead>
@@ -47,16 +52,17 @@ class CheckoutView
             $_SESSION['user'] = $this->model->getOrderId($i);
             echo '
                     <tr>
-                        <td class="text-center">#' . $this->model->getOrderId($i) . '</td>
+                        <td class="text-center">#' .$this->model->getOrderId($i) . '</td>
                         <td class="text-left">' . $this->model->getName($i) . '</td>
-                        <td>' . $this->model->getUser($i) .'</td>
-                        <td class="text-right">' . $this->model->getPrice($i) . ' $' . '</td>
-                        <td class="text-right">' . 'something' . ' $</td>
+                        <td>' . $this->model->getUser($i) . '</td>
+                        <td class="text-right">' . $this->model->getPrice($i) . ' $</td>
+                        <td class="text-right">
+                        <form action="done-admin.php" method="post">
+                            <input type="checkbox" name="order" value="' . $this->model->getOrderId($i) . '" />
+                        </td>
                         <td>
-                            <form action="remove.php" method="post">
-                                <input type="hidden" name="id" value="' . 1 .'"/>
-                                <button class="btn btn-sm btn-warning">Remove</button>
-                            </form>
+                            <button class="btn btn-sm btn-warning">Done</button>
+                        </form>
                         </td>
                     </tr>';
             $i++;

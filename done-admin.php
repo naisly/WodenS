@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: Home
  * Date: 11.11.2015
- * Time: 20:08
+ * Time: 22:56
  */
 
 include_once('Controllers/CheckoutController.php');
@@ -16,12 +16,4 @@ $controller = new CheckoutController($model);
 
 $view = new CheckoutView($model);
 
-echo $view->DoctypeView();
-
-$controller->actionGetData( 'completeorders' );
-
-$view->getTable( 'latest' );
-
-$controller->actionGetData( 'doneorders' );
-
-$view->getTable( 'done' );
+$controller->actionDone();
