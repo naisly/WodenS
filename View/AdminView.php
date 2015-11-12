@@ -112,34 +112,37 @@ class AdminView
                 </a>
                     </div>
                     <div class="col-xs-8 panel-body" >
-                        <div ng-controller="ordersCtrl">
+                        <div>
                             <table class="table table-striped table-bordered">
-                            <tr><th>Admin</th><th>Password</th><th>Forget</th><th></th></tr>
-                            <tr ng-repeat="order in orders">
-                            <td>admin</td>
-                            <td>Elisdes07@lim51</td>
-                            <td>serdiuk.oleksandr@gmail.com</td>
-                            <td>
-                            <form action="admin-logout.php" method="post">
-                                <button ng-click="selectOrder(order)" class="btn btn-xs btn-primary">
-                                Logout
-                                </button>
-                            </form>
-                            </td>
-                            </tr>
+                                <tr><th>Admin</th><th>Password</th><th>Forget</th><th></th></tr>
+                                <tr>
+                                    <td>admin</td>
+                                    <td>Elisdes07@lim51</td>
+                                    <td>serdiuk.oleksandr@gmail.com</td>
+                                    <td>
+                                        <form action="admin-logout.php" method="post">
+                                            <button class="btn btn-xs btn-primary">
+                                            Logout
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
                             </table>
-                            <div ng-show="selectedOrder">
-                            <h3>Order Details</h3>
-                            <table class="table table-striped table-bordered">
-                            <tr><th>Name</th><th>Count</th><th>Price</th></tr>
-                            <tr ng-repeat="item in selectedOrder.products">
-                            <td>{{item.name}}</td>
-                            <td>{{item.count}}</td>
-                            <td>{{item.price| currency}} </td>
-                            </tr>
-                            </table>
+                            <div>
+                                <h3>Change admin data:</h3>
+                                <table class="table table-striped table-bordered">
+                                    <tr><th>For any</th><th>questions</th><th>ask</th><th>#</th></tr>
+                                    <tr>
+                                        <form action="change-admin.php" method="post">
+                                            <td><p>Oleksandr Serdiuk</p></td>
+                                            <td><p>Knyajiy zaton 5, apt. 109</p></td>
+                                            <td><p>+38(095) 094 82 68</p></td>
+                                            <td><button class="btn btn-primary" disabled>Apply</button></td>
+                                        </form>
+                                    </tr>
+                                </table>
                             </div>
-                            </div>
+                        </div>
                     </div>
                     </div>';
     }
@@ -204,7 +207,7 @@ class AdminView
                             <input type="hidden" name="edit_features" value="' . $this->model->getFeatures($i) . '" />
                             <input type="hidden" name="edit_quantity" value="' . $this->model->getQuantity($i) . '" />
                             <input type="hidden" name="edit_shipping" value="' . $this->model->getShipping($i) . '" />
-                            <button class="btn btn-primary">Save</button>
+                            <button class="btn btn-primary">Edit</button>
                         </form>
                   </td>';
         //}

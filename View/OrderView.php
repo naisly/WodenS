@@ -80,7 +80,9 @@ class OrderView
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
-            </nav>';
+            </nav>
+            <script src="js/jquery-min.js"></script>
+            <script src="js/bootstrap.min.js"></script>';
     }
 
     public function getPlaceOrder() {

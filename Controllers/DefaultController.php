@@ -11,25 +11,7 @@ class DefaultController
     public function __construct(DefaultModel $model) {
         $this->model = $model;
     }
-    /*public function actionGetAvaragePrice() {
-        include_once('/../Storage.php');
-        $db = Storage::getInstance();
-        $mysqli = $db->getConnection();
-        $sql_query = "SELECT price FROM phones";
-        $result = $mysqli->query($sql_query);
-        $_array = array();
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while ($row = $result->fetch_assoc()) {
-                $_array = array_merge($_array, array_map('trim', explode(",", $row['price'])));
-            }
-            $sum = array_sum($_array);
-            $q = count($_array);
-            $res = $sum / $q;
-            $this->model->setAverage($res);
-        }
-    }
-    */
+    
     public function actionGetCategories( $category ) {
         include_once('/../Storage.php');
         $db = Storage::getInstance();
