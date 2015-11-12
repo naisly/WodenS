@@ -18,4 +18,8 @@ $controller = new EditController($model);
 
 $view = new EditView($model);
 
+if(!isset($_SESSION['admin'])){
+    header('Location: admin-login.php');
+}
+
 $controller->actionUnsetData();

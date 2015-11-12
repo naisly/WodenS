@@ -18,6 +18,10 @@ $view = new CheckoutView($model);
 
 echo $view->DoctypeView();
 
+if(!isset($_SESSION['admin'])){
+    header('Location: admin-login.php');
+}
+
 $controller->actionGetData( 'completeorders' );
 
 $view->getTable( 'latest' );

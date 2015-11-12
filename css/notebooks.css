@@ -1,0 +1,76 @@
+.bg-overlay {
+    background: url(../images/macbook-pro.jpg) no-repeat center center;
+    width: 100%;
+    height: 542px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.macbook-header {
+    margin-top: 50px;
+    font-size: 55px;
+    font-family: RobotoRegular;
+}
+.macbook-p {
+    font-size: 25px;
+}
+.divider-block {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 2px;
+    background-color: #e4e4e4;
+}
+.sub-h {
+    font-family: RobotoRegular;
+    font-size: 16px;
+}
+.sub-white {
+    color: #e4e4e4;
+    margin-bottom: 20px;
+}
+.bg-image {
+    background: url(../images/macbook-air.jpg) no-repeat center center;
+    width: 100%;
+    height: 492px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    margin-top: 100px;
+}
+.bg-picture {
+    background: url(../images/macbook.jpg) no-repeat center center;
+    width: 100%;
+    height: 402px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    margin-top: 100px;
+}
+.bg-footer {
+    background: url(../images/laptops.jpg) no-repeat center center;
+    width: 100%;
+    height: 1000px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    margin-top: 100px;
+}
+.order {
+    font-size: 30px;
+}
+a:hover {
+    color: #e4e4e4;
+}
+.order-now {
+    font-size: 35px;
+    color: #7e7676;
+    font-family: RobotoRegular;
+}
