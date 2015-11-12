@@ -57,7 +57,7 @@ echo '<!DOCTYPE html>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/index.php">
+                <a class="navbar-brand" href="index.php">
                     <img alt="Brand" src="images/default.png">
                 </a>
             </div>
