@@ -35,6 +35,12 @@ class AdminModel
 
     }
 
+    public function getOneProductName() {
+
+        return $this->product_name;
+
+    }
+
     public function setPhoto( $photo ) {
 
         $this->photo = $photo;
@@ -43,6 +49,12 @@ class AdminModel
     public function getPhoto($i) {
 
         return $this->photo[$i];
+    }
+
+    public function getOnePhoto() {
+
+        return $this->photo;
+
     }
 
     public function setDescription( $description ) {
@@ -55,6 +67,12 @@ class AdminModel
         return $this->description[$i];
     }
 
+    public function getOneDescription() {
+
+        return $this->description;
+
+    }
+
     public function setCategory( $category ) {
 
         $this->category = $category;
@@ -63,6 +81,12 @@ class AdminModel
     public function getCategory($i) {
 
         return $this->category[$i];
+    }
+
+    public function getOneCategory() {
+
+        return $this->category;
+
     }
 
     public function setPrice( $price ) {
@@ -75,6 +99,12 @@ class AdminModel
         return $this->price[$i];
     }
 
+    public function getOnePrice() {
+
+        return $this->price;
+
+    }
+
     public function setPreviousPrice( $previous_price ){
 
         $this->previous_price = $previous_price;
@@ -83,6 +113,12 @@ class AdminModel
     public function getPriviousPrice($i) {
 
         return $this->previous_price[$i];
+    }
+
+    public function getOnePreviousPrice() {
+
+        return $this->previous_price;
+
     }
 
     public function setTimeOfAdding( $time_of_adding) {
@@ -95,6 +131,12 @@ class AdminModel
         return $this->time_of_adding[$i];
     }
 
+    public function getOneTimeOfAdding() {
+
+        return $this->time_of_adding;
+
+    }
+
     public function setFeatures( $features ) {
 
         $this->features = $features;
@@ -103,6 +145,12 @@ class AdminModel
     public function getFeatures($i) {
 
         return $this->features[$i];
+    }
+
+    public function getOneFeature() {
+
+        return $this->features;
+
     }
 
     public function setId ( $id ) {
@@ -115,6 +163,12 @@ class AdminModel
         return $this->id[$i];
     }
 
+    public function getOneId() {
+
+        return $this->id;
+
+    }
+
     public function setQuantity( $quantity ){
 
         $this->quantity = $quantity;
@@ -123,6 +177,12 @@ class AdminModel
     public function getQuantity($i) {
 
         return $this->quantity[$i];
+    }
+
+    public function getOneQuantity() {
+
+        return $this->quantity;
+
     }
 
     public function setShipping( $shipping ) {
@@ -135,6 +195,12 @@ class AdminModel
         return $this->shipping[$i];
     }
 
+    public function getOneShipping() {
+
+        return $this->shipping;
+
+    }
+
     public function setAverage( $average ) {
 
         $this->average = $average;
@@ -143,6 +209,12 @@ class AdminModel
     public function getAverage($i) {
 
         return $this->average[$i];
+    }
+
+    public function getOneAverage() {
+
+        return $this->average;
+
     }
 
     public function setItems( $items ) {

@@ -106,12 +106,110 @@ class AdminController
         }
     }
 
+    public function saveData() {
+
+        if (isset($_POST['edit_id'])) {
+            $id = $_POST['edit_id'];
+        }
+        if (isset($_POST['edit_product_name'])) {
+            $product_name = $_POST['edit_product_name'];
+        }
+        if (isset($_POST['edit_photo'])) {
+            $photo = $_POST['edit_photo'];
+        }
+        if (isset($_POST['edit_description'])) {
+            $description = $_POST['edit_description'];
+        }
+        if (isset($_POST['edit_category'])) {
+            $category = $_POST['edit_category'];
+        }
+        if (isset($_POST['edit_price'])) {
+            $price = $_POST['edit_price'];
+        }
+        if (isset($_POST['edit_previous_price'])) {
+            $previous_price = $_POST['edit_previous_price'];
+        }
+        if (isset($_POST['edit_time_of_adding'])) {
+            $time_of_adding = $_POST['edit_time_of_adding'];
+        }
+        if (isset($_POST['edit_features'])) {
+            $features = $_POST['edit_features'];
+        }
+        if (isset($_POST['edit_quantity'])) {
+            $quantity = $_POST['edit_quantity'];
+        }
+        if (isset($_POST['edit_shipping'])) {
+            $shipping = $_POST['edit_shipping'];
+        }
+
+        $this->model->setId($id);
+        $this->model->setProductName($product_name);
+        $this->model->setPhoto($photo);
+        $this->model->setDescription($description);
+        $this->model->setCategory($category);
+        $this->model->setPrice($price);
+        $this->model->setPreviousPrice($previous_price);
+        $this->model->setTimeOfAdding($time_of_adding);
+        $this->model->setFeatures($features);
+        $this->model->setQuantity($quantity);
+        $this->model->setShipping($shipping);
+    }
+
     public function UnsetSession() {
 
         session_start();
         unset($_SESSION['product_num']);
 
         session_write_close();
+
+        header('Location: admin-products.php');
+    }
+
+    public function nextPage() {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        if (isset($_POST['id'])) {
+            $id = $_POST['id'];
+        }
+        if (isset($_POST['product_name'])) {
+            $product_name = $_POST['product_name'];
+        }
+        if (isset($_POST['photo'])) {
+            $photo = $_POST['photo'];
+        }
+        if (isset($_POST['description'])) {
+            $description = $_POST['description'];
+        }
+        if (isset($_POST['category'])) {
+            $category = $_POST['category'];
+        }
+        if (isset($_POST['price'])) {
+            $price = $_POST['price'];
+        }
+        if (isset($_POST['previous_price'])) {
+            $previous_price = $_POST['previous_price'];
+        }
+        if (isset($_POST['time_of_adding'])) {
+            $time_of_adding = $_POST['time_of_adding'];
+        }
+        if (isset($_POST['features'])) {
+            $features = $_POST['features'];
+        }
+        if (isset($_POST['quantity'])) {
+            $quantity = $_POST['quantity'];
+        }
+        if (isset($_POST['shipping'])) {
+            $shipping = $_POST['shipping'];
+        }
+
+        $sql_edit = $mysqli->prepare("UPDATE phones SET product_name='$product_name', photo='$photo', description='$description',
+                    category='$category', price='$price', previous_price='$previous_price', time_of_adding='$time_of_adding',
+                    features='$features', quantity='$quantity', shipping='$shipping' WHERE id='$id'");
+
+        $sql_edit->execute();
 
         header('Location: admin-products.php');
     }
