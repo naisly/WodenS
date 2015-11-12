@@ -56,8 +56,9 @@ class CheckoutView
                         <td class="text-left">' . $this->model->getName($i) . '</td>
                         <td>' . $this->model->getUser($i) . '</td>
                         <td class="text-right">' . $this->model->getPrice($i) . ' $</td>
-                        <td class="text-right">
-                        <form action="done-admin.php" method="post">
+                        <td class="text-right">';
+            if($view == 'latest') {
+                echo '<form action="done-admin.php" method="post">
                             <input type="checkbox" name="order" value="' . $this->model->getOrderId($i) . '" />
                         </td>
                         <td>
@@ -65,6 +66,16 @@ class CheckoutView
                         </form>
                         </td>
                     </tr>';
+            } else {
+                echo '<form action="pull-back-admin.php" method="post">
+                           <input type="checkbox" name="order" value="' . $this->model->getOrderId($i) . '" />
+                      </td>
+                      <td>
+                           <button class="btn btn-sm btn-success">Pull Back</button>
+                      </form>
+                      </td>
+                </tr>';
+            }
             $i++;
         }
         echo'   </tbody>
@@ -77,15 +88,6 @@ class CheckoutView
                     </tr>
                 </tfoot>
             </table>
-            <div class="text-center">
-                <a class="btn btn-primary" onclick="goBack();">Continue shopping</a>
-                <a class="btn btn-primary" href="placeorder.php">Place order now</a>
-            </div>
-            <script>
-            function goBack() {
-                window.history.go(-2);
-            }
-            </script>
             <script src="js/jquery-min.js"></script>
             <script src="js/bootstrap.min.js"></script>';
     }

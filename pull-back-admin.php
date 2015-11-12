@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: Home
- * Date: 11.11.2015
- * Time: 22:56
+ * Date: 12.11.2015
+ * Time: 10:21
  */
 
 include_once('Controllers/CheckoutController.php');
@@ -16,4 +16,4 @@ $controller = new CheckoutController($model);
 
 $view = new CheckoutView($model);
 
-$controller->actionDone( 'completeOrders', 'doneOrders');
+$controller->actionDone( 'doneOrders', 'completeOrders');

@@ -76,7 +76,7 @@ class CheckoutController
 
     }
 
-    public function actionDone() {
+    public function actionDone( $complete_table, $done_table ) {
 
         /*
          * Connection to the Database
@@ -88,7 +88,7 @@ class CheckoutController
         if(isset($_POST['order'])){
             $order = $_POST['order'];
 
-            $sql_stmt = "SELECT * FROM completeorders WHERE order_id='$order'";
+            $sql_stmt = "SELECT * FROM $complete_table WHERE order_id='$order'";
             $result = $mysqli->query($sql_stmt);
 
             $id_array = array();
@@ -115,7 +115,7 @@ class CheckoutController
             $q = count($id_array);
 
             while($i < $q){
-                $sql_insert = $mysqli->prepare("INSERT INTO doneOrders VALUES ('$id_array[$i]', '$product_name_array[$i]', '$category_array[$i]',
+                $sql_insert = $mysqli->prepare("INSERT INTO $done_table VALUES ('$id_array[$i]', '$product_name_array[$i]', '$category_array[$i]',
                               '$price_array[$i]', '$user_array[$i]', '$quantity_array[$i]', '$order_id_array[$i]')");
 
                 $sql_insert->execute();
@@ -125,7 +125,7 @@ class CheckoutController
             /*
              * Deletion process from completeorders with order
              */
-            $sql_query = $mysqli->prepare("DELETE FROM completeorders WHERE order_id='$order'");
+            $sql_query = $mysqli->prepare("DELETE FROM $complete_table WHERE order_id='$order'");
 
             $sql_query->execute();
         }
