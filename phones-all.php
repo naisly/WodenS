@@ -105,7 +105,7 @@ echo    '
 	<div class="background text-center" style="margin-top: 100px;">
 			<h1 class="header">Phones</h1>
 			<p class="the-only">The only thing that can change your life absolutely</p>
-			<a class="links" href="/learn-more" style="text-decoration: none">Learn more ></a> <a style="font-size: 20px; text-decoration: none" href="phones.php" style="text-decoration: none;">Get it now ></a>
+			<a class="links" href="/learn-more" style="text-decoration: none">Learn more ></a> <a class="links" style="font-size: 20px; text-decoration: none" href="phones.php" style="text-decoration: none;">Get it now ></a>
 			<p class="adding">In business from 2010, opened mainly in Kiev</p>
 			<!--<h2><a href="phones.php" id="phones">Search phones for your choice ></a></h2>-->
 
