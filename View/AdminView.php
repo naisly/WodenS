@@ -101,7 +101,8 @@ class AdminView
 
     public function adminBlocks() {
 
-        echo '<div class="panel panel-default row">
+        echo '<h1>The Main Admin Page</h1>
+              <div class="panel panel-default row">
                 <div class="col-xs-3 panel-body">
                 <a class="btn btn-block btn-default" href="admin-products.php">
                     Products
@@ -113,15 +114,17 @@ class AdminView
                     <div class="col-xs-8 panel-body" >
                         <div ng-controller="ordersCtrl">
                             <table class="table table-striped table-bordered">
-                            <tr><th>Name</th><th>City</th><th>Value</th><th></th></tr>
+                            <tr><th>Admin</th><th>Password</th><th>Forget</th><th></th></tr>
                             <tr ng-repeat="order in orders">
-                            <td>{{order.name}}</td>
-                            <td>{{order.city}}</td>
-                            <td>{{calcTotal(order) | currency}}</td>
+                            <td>admin</td>
+                            <td>Elisdes07@lim51</td>
+                            <td>serdiuk.oleksandr@gmail.com</td>
                             <td>
-                            <button ng-click="selectOrder(order)" class="btn btn-xs btn-primary">
-                            Details
-                            </button>
+                            <form action="admin-logout.php" method="post">
+                                <button ng-click="selectOrder(order)" class="btn btn-xs btn-primary">
+                                Logout
+                                </button>
+                            </form>
                             </td>
                             </tr>
                             </table>
@@ -146,7 +149,7 @@ class AdminView
 
         echo '      <div class="col-xs-8 panel-body" >
                         <div>
-                            <table class="table table-striped table-bordered" style="width: 100%;">
+                            <table class="table table-striped table-bordered">
                                 <tr><th>Id</th><th>Product Name</th><th>Photo</th><th>Description</th><th>Category</th><th>Price</th>
                                 <th>Previous Price</th><th>Time of Adding</th><th>Features</th><th>Quantity</th><th>Shipping</th>
                                 <th>Average Price</th><th>#</th><th>&</th></tr>';

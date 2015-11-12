@@ -214,4 +214,13 @@ class AdminController
         header('Location: admin-products.php');
     }
 
+    public function actionUnsetAdmin() {
+
+        session_start();
+
+        if(isset($_SESSION['admin'])){
+            unset($_SESSION['admin']);
+        }
+    }
+
 }
