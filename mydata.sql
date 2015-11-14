@@ -202,7 +202,7 @@ SELECT product_name, photo, description, category, price, previous_price, time_o
   id, quantity, shipping, average_price FROM phones WHERE product_name = 'Iphone 5S' AND price > 100 AND price < 1500;
 
 CREATE TABLE orderedItems (
-  id INT(11) NOT NULL PRIMARY KEY,
+  id INT(11) NOT NULL,
   product_name VARCHAR(150) NOT NULL,
   category VARCHAR(100) NOT NULL,
   price INT(15) NOT NULL,
@@ -239,4 +239,12 @@ CREATE TABLE orders (
   zip VARCHAR(20) NOT NULL,
   country VARCHAR(100) NOT NULL,
   wrap INT(2) NOT NULL
+)
+
+CREATE TABLE support (
+  id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50) NOT NULL,
+  email VARCHAR(60) NOT NULL,
+  subject VARCHAR(60) NOT NULL,
+  message VARCHAR(500) NOT NULL
 )

@@ -44,12 +44,14 @@ class DefaultView
         } else if ($page == 'notebooks'){
             echo '<link href="css/notebooks.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'phones'){
-            echo '<link href="css/phones.css" rel="stylesheet" type="text/css">';
+            echo '<link href="css/phones.css" rel="stylesheet" type="text/css">' .
+                 '<link rel="stylesheet" href="css/default.css">' .
+                 '<link rel="stylesheet" href="css/animate.css">';
         } else if ($page == 'support'){
             echo '<link href="css/support.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'TV'){
             echo '<link href="css/tv.css" rel="stylesheet" type="text/css">';
-        } else if ($page == 'login' || $page == 'admin' ){
+        } else if ($page == 'login' || $page == 'admin' || $page == 'support-thanks'){
             echo '<link href="css/login.css" rel="stylesheet" type="text/css">';
         } else {
             echo '<link rel="stylesheet" href="css/default.css" />' .
@@ -120,9 +122,9 @@ class DefaultView
                   <div class="col-md-3"></div>
                        <div class="col-md-6 items-align">
                             <ul class="text-align">
-                                <a class="categories-list" style="text-decoration: none" href="Phones.php">All</a>';
+                                <a style="font-size: 18px; margin-right: 15px; color: #e4e4e4; text-decoration: none;" class="categories-list" style="text-decoration: none" href="Phones.php">All</a>';
         foreach ($this->model->distinct_categories as $value => $key) {
-            echo "<a style='text-decoration: none;' class='categories-list' href='{$this->model->distinct_categories[$value]}.php'>" . $this->model->distinct_categories[$value] . "</a>";
+            echo "<a style='font-size: 18px; margin-right: 15px; color: #e4e4e4; text-decoration: none;' class='categories-list' href='{$this->model->distinct_categories[$value]}.php'>" . $this->model->distinct_categories[$value] . "</a>";
         }
         echo '               </ul>
                         </div>

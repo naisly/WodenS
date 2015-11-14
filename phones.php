@@ -30,7 +30,7 @@ $controller->actionGetItemNames( 'All' );
 
 $controller->actionGetCategories( 'All' );
 
-echo $view->DoctypeView();
+$view->DoctypeView( 'phones' );
 
 $view->headerView();
 

@@ -54,7 +54,7 @@ class ProfileView extends DefaultView
                     <tr>
                         <td colspan="4" class="text-right">Total:</td>
                         <td class="text-right">' .
-                            $this->model->getPrice() . ' $'
+                            $this->model->getAPrice() . ' $'
                      .   '</td>
                     </tr>
                 </tfoot>
