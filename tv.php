@@ -22,33 +22,9 @@ $view = new DefaultView($model);
 $controller->actionGetSumOfItems();
 $controller->actionGetQuantityOfItems();
 
-echo '<!DOCTYPE html>
-    <html>
-    <head>
-        <title>Woden S</title>
-        <!-- HTML 5 markup and encoding utf-8 -->
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-        <!-- For Internet Explorer -->
-        <meta http-equiv="X-UA-Compatible" content="IE=EDge">
-        <!-- file of styles -->
-        <link href="css/styles.css" rel="stylesheet" type="text/css">
-        <link href="css/tv.css" rel="stylesheet" type="text/css">
-        <!-- bxSlider CSS file -->
-        <link href="css/jquery.bxslider.css" rel="stylesheet">
-        <!-- Bootstrap framework -->
-        <!-- Latest compiled and minified CSS -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="css/bootstrap-theme.css">
-        <!-- jQuery library (served from Google) -->
-        <script src="js/jquery-min.js"></script>
-        <!-- bxSlider Javascript file -->
-        <script src="js/bootstrap.min.js"></script>
-    </head>
-    <body>';
+$view->DoctypeView( 'TV' );
 
-    $view->headerView();
+$view->headerView();
 
 echo   '<div class="text-center">
         <h1 class="future-main">The future of television is here now!</h1>
@@ -87,7 +63,7 @@ echo   '<div class="text-center">
 
     <div class="footer-overlay"></div>';
 
-    $view->actionGetFooter();
+    $view->actionGetFooter( 'TV' );
 
     echo '</body>
       </html>';

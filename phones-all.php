@@ -16,30 +16,9 @@ $view = new DefaultView($model);
 $controller->actionGetSumOfItems();
 $controller->actionGetQuantityOfItems();
 
-echo '<!DOCTYPE html>
-	<html>
-	<head>
-		<title>Phones</title>
-		<!-- HTML 5 markup and encoding utf-8 -->
-		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-		<!-- For Internet Explorer -->
-		<meta http-equiv="X-UA-Compatible" content="IE=EDge">
-		<!-- file of styles -->
-		<link href="css/phones.css" rel="stylesheet" type="text/css">
-		<link href="css/styles.css" rel="stylesheet" type="text/css">
-		<!-- bxSlider CSS file -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="css/bootstrap-theme.css">
-		<!-- jQuery library (served from Google) -->
-		<script src="js/jquery-min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+$view->DoctypeView( 'phones' );
 
-	</head>
-	<body>';
-
-	$view->headerView();
+$view->headerView();
 
 echo   '<div class="panel-default items-row">
 		<div class="col-xs-2"></div>
@@ -122,7 +101,7 @@ echo   '<div class="panel-default items-row">
 	<div class="iphone">
 		<div class="col-sm-2"></div>
 		<div class="col-sm-3">
-			<h1 id="iphone" class="fc">Although the mobile phone doesn’t guarantee safety, you can use it to make calls whenever there is an emergency. Travelling with your phone is very important. In case you have an accident, you can always contact someone who will help you.</h1>
+			<h1 id="iphone" class="fc">Although the mobile phone doesnt guarantee safety, you can use it to make calls whenever there is an emergency. Travelling with your phone is very important. In case you have an accident, you can always contact someone who will help you.</h1>
 		</div>
 		<div class="col-sm-5"><img src="images/galaxy.jpg" style="width: 100%"></div>
 		<div class="col-sm-2"></div>
@@ -163,7 +142,7 @@ echo   '<div class="panel-default items-row">
 		</div>
 	</div>';
 
-	$view->actionGetFooter();
+	$view->actionGetFooter( 'phones' );
 
 echo	'</body>
 	</html>';

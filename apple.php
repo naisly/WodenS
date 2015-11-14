@@ -30,7 +30,7 @@ $controller->actionGetItemNames( 'Apple' );
 
 $controller->actionGetCategories( 'Apple' );
 
-echo $view->DoctypeView();
+$view->DoctypeView( 'Apple' );
 
 $view->headerView();
 
@@ -38,4 +38,4 @@ $view->getItemsNames();
 $view->getFilterMenu( 'Apple' );
 $view->getItems();
 
-$view->actionGetFooter();
+$view->actionGetFooter( 'Apple' );

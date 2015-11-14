@@ -38,4 +38,4 @@ $view->getItemsNames();
 $view->getFilterMenu( 'phones' );
 $view->getItems();
 
-$view->actionGetFooter();
+$view->actionGetFooter( 'phones' );

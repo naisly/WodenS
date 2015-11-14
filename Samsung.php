@@ -30,7 +30,7 @@ $controller->actionGetItemNames( 'Samsung' );
 
 $controller->actionGetCategories( 'Samsung' );
 
-echo $view->DoctypeView();
+$view->DoctypeView( 'Samsung' );
 
 $view->headerView();
 
@@ -38,4 +38,4 @@ $view->getItemsNames();
 $view->getFilterMenu( 'Samsung' );
 $view->getItems();
 
-$view->actionGetFooter();
+$view->actionGetFooter( 'Samsung' );

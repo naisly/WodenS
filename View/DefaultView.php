@@ -12,19 +12,50 @@ class DefaultView
     {
         $this->model = $model;
     }
-    public function DoctypeView()
+    public function DoctypeView( $page )
     {
-        return "<!DOCTYPE html>" .
-        "<html>" .
-        "<head>" .
-        "<link rel='stylesheet' href='css/bootstrap.css' />" .
-        "<link rel='stylesheet' href='css/styles.css' />" .
-        "<link rel='stylesheet' href='css/default.css' />" .
-        "<link rel='stylesheet' href='css/animate.css' />" .
-        "<script src='js/jquery-min.js'></script>" .
-        "<title>Woden S</title>" .
-        "</head>" .
-        "<body>";
+        echo '<!DOCTYPE html>
+                <html>
+                <head>
+                    <title>Woden S</title>
+                    <!-- HTML 5 markup and encoding utf-8 -->
+                    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+                    <!-- For Internet Explorer -->
+                    <meta http-equiv="X-UA-Compatible" content="IE=EDge">
+                    <!-- Bootstrap framework -->
+                    <!-- Latest compiled and minified CSS -->
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <link rel="stylesheet" href="css/bootstrap.css">
+                    <link href="css/styles.css" rel="stylesheet" type="text/css">
+                    <!-- Optional theme -->
+                    <link rel="stylesheet" href="css/bootstrap-theme.css">
+                    <script src="js/jquery-min.js"></script>
+                    <!-- bxSlider Javascript file -->
+                    <script src="js/bootstrap.min.js"></script>
+                    <!-- Files of Styles -->';
+
+
+        if($page == 'devices'){
+            echo '<link href="css/devices.css" rel="stylesheet" type="text/css">';
+        } else if ($page == 'index'){
+            echo '<link href="css/jquery.bxslider.css" rel="stylesheet">
+                  <!-- bxSlider Javascript file -->
+                  <script src="js/jquery.bxslider.min.js"></script>';
+        } else if ($page == 'notebooks'){
+            echo '<link href="css/notebooks.css" rel="stylesheet" type="text/css">';
+        } else if ($page == 'phones'){
+            echo '<link href="css/phones.css" rel="stylesheet" type="text/css">';
+        } else if ($page == 'support'){
+            echo '<link href="css/support.css" rel="stylesheet" type="text/css">';
+        } else if ($page =='TV'){
+            echo '<link href="css/tv.css" rel="stylesheet" type="text/css">';
+        } else {
+            echo '<link rel="stylesheet" href="css/default.css" />' .
+                 '<link rel="stylesheet" href="css/animate.css" />';
+        }
+
+        echo '</head>
+            </body>';
     }
     public function headerView()
     {
@@ -213,7 +244,7 @@ class DefaultView
                          new WOW().init();
                    </script>';
     }
-    public function actionGetFooter() {
+    public function actionGetFooter( $page ) {
         echo   '<footer>
                     <div class="container">
                          <div class="row">
@@ -332,8 +363,10 @@ class DefaultView
                             <div class="col-sm-1"></div>
                         </div>
                     </div>
-                </footer>
-                <script src="js/jquery-min.js"></script>
-                <script src="js/bootstrap.min.js"></script>';
+                </footer>';
+            if($page !== 'Index'){
+                echo '<script src="js/jquery-min.js"></script>
+                      <script src="js/bootstrap.min.js"></script>';
+            }
     }
 }
