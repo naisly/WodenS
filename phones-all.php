@@ -57,10 +57,10 @@ echo '<!DOCTYPE html>
 			<div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li><a href="phones-all.php">Phones <span class="sr-only">(current)</span></a></li>
-					<li><a href="notebooks.html">Notebooks</a></li>
-					<li><a href="devices.html">Devices</a></li>
-					<li><a href="tv.html">TV</a></li>
-					<li><a href="support.html">Support</a></li>
+					<li><a href="notebooks.php">Notebooks</a></li>
+					<li><a href="devices.php">Devices</a></li>
+					<li><a href="tv.php">TV</a></li>
+					<li><a href="support.php">Support</a></li>
 					<li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart <span class="caret"></span></a>
                         <ul class="dropdown-menu">';
@@ -233,13 +233,13 @@ echo    '
 				<div class="col-sm-2">
 					<ul>
 						<li class="footer-menu"><b>Shop</b></li>
-						<li><a class="items" href="/">Home</a></li>
-						<li><a class="items" href="/phones">Phones</a></li>
-						<li><a class="items" href="/notebooks">Notebooks</a></li>
-						<li><a class="items" href="/devices">Devices</a></li>
-						<li><a class="items" href="/tv">TV</a></li>
-						<li><a class="items" href="/support">Support</a></li>
-						<li><a class="items" href="/cart">Cart</a></li>
+						<li><a class="items" href="index.php">Home</a></li>
+						<li><a class="items" href="phones-all.php">Phones</a></li>
+						<li><a class="items" href="notebooks.php">Notebooks</a></li>
+						<li><a class="items" href="devices.php">Devices</a></li>
+						<li><a class="items" href="tv.php">TV</a></li>
+						<li><a class="items" href="support.php">Support</a></li>
+						<li><a class="items" href="cart.php">Cart</a></li>
 					</ul>
 				</div>
 				<div class="col-sm-2">
