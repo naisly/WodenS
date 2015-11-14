@@ -23,6 +23,6 @@ $controller->actionGetOrderedItems();
 $controller->actionGetQuantityOfItems();
 $controller->actionGetSumOfItems();
 
-echo $view->DoctypeView();
+$view->DoctypeView( 'profile' );
 $view->headerView();
 $view->getTable();

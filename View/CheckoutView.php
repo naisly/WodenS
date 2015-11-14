@@ -6,26 +6,16 @@
  * Date: 11.11.2015
  * Time: 20:05
  */
-class CheckoutView
+
+include_once('DefaultView.php');
+
+class CheckoutView extends DefaultView
 {
     private $model;
     public function __construct(CheckoutModel $model)
     {
+        parent::__construct($model);
         $this->model = $model;
-    }
-
-    public function DoctypeView()
-    {
-        return "<!DOCTYPE html>" .
-        "<html>" .
-        "<head>" .
-        "<link rel='stylesheet' href='css/bootstrap.css' />" .
-        "<link rel='stylesheet' href='css/styles.css' />" .
-        "<link rel='stylesheet' href='css/default.css' />" .
-        "<script src='js/jquery-min.js'></script>" .
-        "<title>Woden S</title>" .
-        "</head>" .
-        "<body>";
     }
 
     public function getTable( $view ) {

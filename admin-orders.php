@@ -16,11 +16,11 @@ $controller = new CheckoutController($model);
 
 $view = new CheckoutView($model);
 
-echo $view->DoctypeView();
-
-if(!isset($_SESSION['admin'])){
+/*if(!isset($_SESSION['admin'])){
     header('Location: admin-login.php');
-}
+}*/
+
+$view->DoctypeView( 'admin-orders' );
 
 $controller->actionGetData( 'completeorders' );
 

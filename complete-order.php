@@ -24,7 +24,7 @@ $controller->actionGeneralizeId();
 $controller->actionInsertData();
 $controller->actionInsertIntoOrders();
 
-echo $view->DoctypeView();
+$view->DoctypeView( 'order' );
 $view->headerView();
 
 $view->thanksMessage();

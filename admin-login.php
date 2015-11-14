@@ -20,7 +20,7 @@ $view = new AdminView($model);
 
 session_start();
 
-echo $view->DoctypeView();
+$view->DoctypeView( 'admin' );
 
 if(isset($_SESSION['admin'])){
     if($_SESSION['admin'] == 'admin'){

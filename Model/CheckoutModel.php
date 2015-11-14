@@ -6,7 +6,10 @@
  * Date: 11.11.2015
  * Time: 20:05
  */
-class CheckoutModel
+
+include_once('DefaultModel.php');
+
+class CheckoutModel extends DefaultModel
 {
     public $id;
     public $product_name;

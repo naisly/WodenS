@@ -22,7 +22,7 @@ $view = new LoginView($model);
 $controller->actionGetQuantityOfItems();
 $controller->actionGetSumOfItems();
 
-echo $view->DoctypeView();
+$view->DoctypeView( 'login' );
 $view->headerView();
 $view->addedItemMessage();
 

@@ -6,26 +6,16 @@
  * Date: 09.11.2015
  * Time: 19:28
  */
-class AdminView
+
+include_once('DefaultView.php');
+
+class AdminView extends DefaultView
 {
     private $model;
     public function __construct(AdminModel $model)
     {
+        parent::__construct($model);
         $this->model = $model;
-    }
-
-    public function DoctypeView() {
-
-        return "<!DOCTYPE html>" .
-        "<html>" .
-        "<head>" .
-        "<link rel='stylesheet' href='css/bootstrap.css' />" .
-        "<link rel='stylesheet' href='css/login.css' />" .
-        "<link rel='stylesheet' href='css/styles.css' />" .
-        "<script src='js/jquery-min.js'></script>" .
-        "<title>Woden S</title>" .
-        "</head>" .
-        "<body>";
     }
 
     public function getLoginForm() {

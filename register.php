@@ -19,7 +19,7 @@ $controller = new LoginController($model);
 
 $view = new LoginView($model);
 
-echo $view->DoctypeView();
+$view->DoctypeView( 'login' );
 
 if(isset($_SESSION['email_error'])){
     if($_SESSION['email_error'] == 1){

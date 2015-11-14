@@ -6,7 +6,10 @@
  * Date: 09.11.2015
  * Time: 19:28
  */
-class AdminModel
+
+include_once('DefaultModel.php');
+
+class AdminModel extends DefaultModel
 {
     public $product_name;
     public $photo;

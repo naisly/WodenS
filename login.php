@@ -25,7 +25,7 @@ if(isset($_SESSION['login_user'])){
     header("Location: profile.php");
 }
 
-echo $view->DoctypeView();
+$view->DoctypeView( 'login' );
 $view->headerView();
 
 if(isset($_SESSION['error'])){

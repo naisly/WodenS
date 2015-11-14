@@ -6,7 +6,10 @@
  * Date: 08.11.2015
  * Time: 17:00
  */
-class ProfileModel
+
+include_once('DefaultModel.php');
+
+class ProfileModel extends DefaultModel
 {
     public $id_array;
     public $product_name_array;

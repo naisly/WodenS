@@ -21,6 +21,6 @@ $view = new OrderView($model);
 $controller->actionGetSumOfItems();
 $controller->actionGetQuantityOfItems();
 
-echo $view->DoctypeView();
+$view->DoctypeView( 'order' );
 $view->headerView();
 $view->getPlaceOrder();

@@ -24,5 +24,5 @@ if(!isset($_SESSION['admin'])){
     header('Location: admin-login.php');
 }
 
-echo $view->DoctypeView();
+$view->DoctypeView( 'admin' );
 $view->adminBlocks();

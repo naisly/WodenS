@@ -18,11 +18,11 @@ $controller = new AdminController($model);
 
 $view = new AdminView($model);
 
-if(!isset($_SESSION['admin'])){
+/*if(!isset($_SESSION['admin'])){
     header('Location: admin-login.php');
-}
+}*/
 
-echo $view->DoctypeView();
+$view->DoctypeView( 'admin' );
 
 $controller->getAdminProductsData();
 $view->ProductsPage();

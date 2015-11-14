@@ -18,7 +18,7 @@ $controller = new AdminController($model);
 
 $view = new AdminView($model);
 
-echo $view->DoctypeView();
+$view->DoctypeView( 'admin' );
 
 if(!isset($_SESSION['admin'])){
     header('Location: admin-login.php');

@@ -6,7 +6,10 @@
  * Date: 09.11.2015
  * Time: 16:06
  */
-class OrderModel
+
+include_once('DefaultModel.php');
+
+class OrderModel extends DefaultModel
 {
     public $id;
     public $quantity;

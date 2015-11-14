@@ -29,9 +29,6 @@ class DefaultView
                     <link href="css/styles.css" rel="stylesheet" type="text/css">
                     <!-- Optional theme -->
                     <link rel="stylesheet" href="css/bootstrap-theme.css">
-                    <script src="js/jquery-min.js"></script>
-                    <!-- bxSlider Javascript file -->
-                    <script src="js/bootstrap.min.js"></script>
                     <!-- Files of Styles -->';
 
 
@@ -39,7 +36,10 @@ class DefaultView
             echo '<link href="css/devices.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'index'){
             echo '<link href="css/jquery.bxslider.css" rel="stylesheet">
-                  <!-- bxSlider Javascript file -->
+                   <script src="js/jquery-min.js"></script>
+                   <!-- bxSlider Javascript file -->
+                   <script src="js/bootstrap.min.js"></script>
+                   <!-- bxSlider Javascript file -->
                   <script src="js/jquery.bxslider.min.js"></script>';
         } else if ($page == 'notebooks'){
             echo '<link href="css/notebooks.css" rel="stylesheet" type="text/css">';
@@ -47,8 +47,10 @@ class DefaultView
             echo '<link href="css/phones.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'support'){
             echo '<link href="css/support.css" rel="stylesheet" type="text/css">';
-        } else if ($page =='TV'){
+        } else if ($page == 'TV'){
             echo '<link href="css/tv.css" rel="stylesheet" type="text/css">';
+        } else if ($page == 'login' || $page == 'admin' ){
+            echo '<link href="css/login.css" rel="stylesheet" type="text/css">';
         } else {
             echo '<link rel="stylesheet" href="css/default.css" />' .
                  '<link rel="stylesheet" href="css/animate.css" />';

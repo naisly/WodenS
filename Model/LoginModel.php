@@ -6,7 +6,9 @@
  * Date: 05.11.2015
  * Time: 22:32
  */
-class LoginModel
+include_once('DefaultModel.php');
+
+class LoginModel extends DefaultModel
 {
     public $name;
     public $email;

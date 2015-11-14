@@ -22,7 +22,7 @@ $view = new LoginView($model);
 $controller->actionGetData();
 $controller->actionCheckProvidedEmail();
 
-echo $view->DoctypeView();
+$view->DoctypeView( 'login' );
 
 if($model->getEmail() !== $model->getEmailAgain()){
     $view->errorEmailMessage();
