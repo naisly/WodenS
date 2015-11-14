@@ -73,6 +73,8 @@ class OrderView extends DefaultView
                   <h2>Thanks!</h2>
                   Thanks for placing your order. Well ship your goods as soon as possible.
                   If you need to contact us, use reference #' . $this->model->getOrderId() . '.
-              </div>';
+              </div>
+              <script src="js/jquery-min.js"></script>
+              <script src="js/bootstrap.min.js"></script>';
     }
 }

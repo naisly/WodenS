@@ -152,14 +152,14 @@ class LoginView extends DefaultView
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 <img src="' . $_SESSION['photo'] . '" width="50" height="50" />
-                Your selected item was Added to cart! Cart subtotal (' . $this->model->getQuantity() . ' items) $' . $this->model->getPrice() .'
+                Your selected item was Added to cart! Cart subtotal (' . $this->model->getAItems() . ' items) $' . $this->model->getAPrice() .'
                     <div class="pull-right" style="margin-top: 8px;">
                         <button class="cart btn btn-default" onclick="location.href=';
                             echo "'cart.php'";
                             echo '">Cart</button>';
         echo            '<button class="cart btn btn-primary" onclick="location.href=';
                             echo "'placeorder.php'";
-                            echo '">Procceed to checkout (' . $this->model->getQuantity() . ' items)</button>
+                            echo '">Procceed to checkout (' . $this->model->getAItems() . ' items)</button>
                     </div>
                 </div>';
     }
@@ -187,7 +187,9 @@ class LoginView extends DefaultView
                             <p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
                    </div>
                </div>
-              </div>';
+              </div>
+              <script src="js/jquery-min.js"></script>
+              <script src="js/bootstrap.min.js"></script>';
     }
 
     public function getLoginForm() {

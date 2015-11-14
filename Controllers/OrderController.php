@@ -7,85 +7,14 @@
  * Time: 16:06
  */
 
-class OrderController
+include_once('DefaultController.php');
+
+class OrderController extends DefaultController
 {
     public $model;
     public function __construct(OrderModel $model) {
-
+        parent::__construct($model);
         $this->model = $model;
-    }
-
-    public function actionGetQuantityOfItems() {
-
-        include_once('/../Storage.php');
-        $db = Storage::getInstance();
-        $mysqli = $db->getConnection();
-
-        session_start();
-
-        $user = $_SESSION['login_user'];
-
-        $sql_query = "SELECT quantity FROM orderedItems WHERE user='$user'";
-        $result = $mysqli->query($sql_query);
-
-        $quantity_array = array();
-
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while ($row = $result->fetch_assoc()) {
-                $quantity_array = array_merge($quantity_array, array_map('trim', explode(",", $row['quantity'])));
-            }
-        }
-
-        session_write_close();
-
-        $i = 0;
-        $q = count($quantity_array);
-        $quantity = 0;
-
-        while ($i < $q){
-            $quantity += $quantity_array[$i];
-            $i++;
-        }
-
-        $this->model->setQuantity($quantity);
-    }
-
-    public function actionGetSumOfItems() {
-
-        include_once('/../Storage.php');
-        $db = Storage::getInstance();
-        $mysqli = $db->getConnection();
-
-        session_start();
-
-        $user = $_SESSION['login_user'];
-
-        $sql_query = "SELECT price, quantity FROM orderedItems WHERE user='$user'";
-
-        $result = $mysqli->query($sql_query);
-
-        session_write_close();
-
-        $price_array = array();
-        $quantity_array = array();
-
-        if ($result->num_rows > 0){
-            while ($row = $result->fetch_assoc()){
-                $price_array = array_merge($price_array, array_map('trim', explode(",", $row['price'])));
-                $quantity_array = array_merge($quantity_array, array_map('trim', explode(",", $row['quantity'])));
-            }
-        }
-
-        $sum = 0;
-        $i = 0;
-        $q = count($price_array);
-        while ($i < $q){
-            $sum += $price_array[$i] * $quantity_array[$i];
-            $i++;
-        }
-
-        $this->model->setPrice( $sum );
     }
 
     public function actionGeneralizeId() {
