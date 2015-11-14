@@ -67,7 +67,7 @@ p, h1,a  {
 	color: #999999;
 }
 .divider {
-  height: 1px;
+  height: 2px;
   width:100%;
   display:block; /* for use on default inline elements like span */
   margin: 9px 0;

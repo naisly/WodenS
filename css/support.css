@@ -1,3 +1,12 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#map {
+    height: 50%;
+    margin-top: -20px;
+}
 .txt {
     margin-top: 30px;
 }
@@ -43,4 +52,7 @@
 }
 .contact-p {
     color: #666;
+}
+textarea {
+    resize: none;
 }

@@ -225,7 +225,7 @@ class DefaultView
                              </div>
                          </div>
                     </div>
-                    <div class="container">
+                    <div class="container" style="margin-top: 20px;">
                         <div class="row">
                             <div class="col-sm-1"></div>
                             <div class="col-sm-2 wow fadeInLeft">
@@ -334,7 +334,6 @@ class DefaultView
                     </div>
                 </footer>
                 <script src="js/jquery-min.js"></script>
-                <script src="js/bootstrap.min.js"></script>
-            </body>';
+                <script src="js/bootstrap.min.js"></script>';
     }
 }
