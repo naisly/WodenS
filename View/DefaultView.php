@@ -59,7 +59,7 @@ class DefaultView
         }
 
         echo '</head>
-            </body>';
+            <body>';
     }
     public function headerView()
     {

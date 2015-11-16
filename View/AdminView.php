@@ -97,8 +97,11 @@ class AdminView extends DefaultView
                 <a class="btn btn-block btn-default" href="admin-products.php">
                     Products
                 </a>
-                <a class="btn btn-block btn-default" href="admin-orders.php">
+                <a class="btn btn-block btn-primary" href="admin-orders.php">
                     Orders
+                </a>
+                <a class="btn btn-block btn-success" href="admin-support.php">
+                    Support
                 </a>
                     </div>
                     <div class="col-xs-8 panel-body" >

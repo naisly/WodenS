@@ -44,4 +44,40 @@ class SupportView extends DefaultView
               <script src="js/jquery-min.js"></script>
               <script src="js/bootstrap.min.js"></script>';
     }
+
+    public function getSupport() {
+
+        echo '      <div class="col-xs-12 panel-body" >
+                        <div>
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Subject</th>
+                                        <th>Message</th>
+                                    </tr>
+                                </thead>
+                                <tbody>';
+        $i = 0;
+
+        while ($i < $this->model->countItems()) {
+            echo '<tr>
+                      <td>' . $this->model->getId($i) . '</td>
+                      <td>' . $this->model->getName($i) . '</td>
+                      <td>' . $this->model->getEmail($i) . '</td>
+                      <td>' . $this->model->getSubject($i) . '</td>
+                      <td>' . $this->model->getMessage($i) . '</td>
+                  </tr>';
+
+            $i++;
+        }
+
+
+        echo      '    </tbody>
+                    </table>
+              </div>
+        </div>';
+    }
 }

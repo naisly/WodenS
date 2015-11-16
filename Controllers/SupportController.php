@@ -44,4 +44,37 @@ class SupportController extends DefaultController
 
 
     }
+
+    public function actionGetSupportMessages() {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        $sql_query = "SELECT * FROM support";
+        $result = $mysqli->query($sql_query);
+
+        $id_array = array();
+        $name_array = array();
+        $email_array = array();
+        $subject_array = array();
+        $message_array = array();
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                $id_array = array_merge($id_array, array_map('trim', explode(",", $row['id'])));
+                $name_array = array_merge($name_array, array_map('trim', explode(",", $row['name'])));
+                $email_array = array_merge($email_array, array_map('trim', explode(",", $row['email'])));
+                $subject_array = array_merge($subject_array, array_map('trim', explode(",", $row['subject'])));
+                $message_array = array_merge($message_array, array_map('trim', explode(",", $row['message'])));
+            }
+        }
+
+        $this->model->setId( $id_array );
+        $this->model->setName( $name_array );
+        $this->model->setEmail( $email_array );
+        $this->model->setSubject( $subject_array );
+        $this->model->setMessage( $message_array );
+    }
 }
