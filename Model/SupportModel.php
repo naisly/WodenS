@@ -7,21 +7,21 @@
  * Time: 0:28
  */
 
-include_once('DefaultModel.php');
+include_once('Model.php');
 
-class SupportModel extends DefaultModel {
+class SupportModel extends Model {
 
     public $name;
     public $email;
     public $subject;
     public $message;
 
-    /*private function setSupportId ( $id ){
+    /*public function setId( $id ){
 
         $this->id = $id;
     }
 
-    private function getSupportId( $i ) {
+    public function getId( $i ) {
 
         echo $this->id[$i];
     }*/

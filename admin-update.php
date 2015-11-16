@@ -18,6 +18,6 @@ $controller = new AdminController($model);
 
 $view = new AdminView($model);
 
-$controller->nextPage();
+$controller->actionEditAdminData();
 
 

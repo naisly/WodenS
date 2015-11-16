@@ -7,15 +7,20 @@
  * Time: 20:05
  */
 
-include_once('DefaultView.php');
+include_once('View.php');
 
-class CheckoutView extends DefaultView
+class CheckoutView extends View
 {
     private $model;
     public function __construct(CheckoutModel $model)
     {
         parent::__construct($model);
         $this->model = $model;
+    }
+
+    public function DoctypeView( $page ) {
+
+        View::DoctypeFile( $page );
     }
 
     public function getTable( $view ) {

@@ -5,15 +5,43 @@
  * User: Home
  * Date: 09.11.2015
  * Time: 19:28
+ *
+ * * ===================
+ * Includes Login, getting ALL the data to the Products page
+ * Changing data, User Logout, Admin Logout sessions
+ * * ===================
  */
 class AdminController
 {
+    /*
+     * MVC model
+     *
+     */
     public $model;
+
+    /*
+     * MVC constructor method
+     * for Admin
+     */
     public function __construct(AdminModel $model) {
+
         $this->model = $model;
     }
 
+    /*
+     * Incapsulation
+     */
     public function actionLogin() {
+
+        $this->actionValidateLogin();
+    }
+
+    /*
+     * Checking data FROM users DATABASE
+     * If no - redirect back
+     * otherwise registration page
+     */
+    private function actionValidateLogin() {
 
         include_once('/../Storage.php');
         $db = Storage::getInstance();
@@ -45,7 +73,19 @@ class AdminController
         session_write_close();
     }
 
-    public function getAdminProductsData()
+    /*
+     * Incapsulation
+     */
+    public function actionGetProducts(){
+
+        $this->actionGetAdminProducts();
+    }
+
+    /*
+     * Getting ALL the data
+     * To The product admin page
+     */
+    private function actionGetAdminProducts()
     {
 
         include_once('/../Storage.php');
@@ -106,7 +146,19 @@ class AdminController
         }
     }
 
-    public function saveData() {
+    /*
+     * Incapsulation
+     */
+    public function actionSaveData() {
+
+        $this->actionSaveAdminData();
+    }
+
+    /*
+     * Method for saving data
+     * while redirecting to edit page
+     */
+    private function actionSaveAdminData() {
 
         if (isset($_POST['edit_id'])) {
             $id = $_POST['edit_id'];
@@ -155,17 +207,19 @@ class AdminController
         $this->model->setShipping($shipping);
     }
 
-    public function UnsetSession() {
+    /*
+     * Incapsulation
+     */
+    public function actionEditData() {
 
-        session_start();
-        unset($_SESSION['product_num']);
-
-        session_write_close();
-
-        header('Location: admin-products.php');
+        $this->actionEditAdminData();
     }
 
-    public function nextPage() {
+    /*
+     * Editing FULL amount of data
+     * of the Admin product PAGE
+     */
+    private function actionEditAdminData() {
 
         include_once('/../Storage.php');
         $db = Storage::getInstance();
@@ -214,7 +268,19 @@ class AdminController
         header('Location: admin-products.php');
     }
 
-    public function actionUnsetAdmin() {
+    /*
+     * Incapsulation
+     */
+    public function actionLogout() {
+
+        $this->actionLogoutAdmin();
+    }
+
+    /*
+     * Logout Session for
+     * the Admin page
+     */
+    private function actionLogoutAdmin() {
 
         session_start();
 

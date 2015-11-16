@@ -7,14 +7,28 @@
  * Time: 16:06
  */
 
-include_once('DefaultController.php');
+include_once('Controller.php');
 
-class OrderController extends DefaultController
+class OrderController extends Controller
 {
     public $model;
     public function __construct(OrderModel $model) {
         parent::__construct($model);
         $this->model = $model;
+    }
+
+    public function actionGetSumOfItems() {
+
+        Controller::actionGetSumOfItems();
+    }
+
+    /*
+     * Incapsulated method
+     */
+
+    public function actionGetQuantityOfitems() {
+
+        Controller::actionGetQuantityOfItems();
     }
 
     public function actionGeneralizeId() {

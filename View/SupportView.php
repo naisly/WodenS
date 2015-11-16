@@ -7,14 +7,19 @@
  * Time: 0:28
  */
 
-include_once('DefaultView.php');
+include_once('View.php');
 
-class SupportView extends DefaultView
+class SupportView extends View
 {
     private $model;
     public function __construct(SupportModel $model){
         parent::__construct($model);
         $this->model = $model;
+    }
+
+    public function DoctypeView( $page ) {
+
+        View::DoctypeFile( $page );
     }
 
     public function thanksMessage() {

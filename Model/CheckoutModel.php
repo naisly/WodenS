@@ -7,9 +7,9 @@
  * Time: 20:05
  */
 
-include_once('DefaultModel.php');
+include_once('Model.php');
 
-class CheckoutModel extends DefaultModel
+class CheckoutModel extends Model
 {
     public $id;
     public $product_name;

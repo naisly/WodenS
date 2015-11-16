@@ -7,15 +7,32 @@
  * Time: 22:32
  */
 
-include_once('DefaultController.php');
+include_once('Controller.php');
 
-class LoginController extends DefaultController
+class LoginController extends Controller
 {
     public $model;
     public function __construct(LoginModel $model) {
         parent::__construct($model);
         $this->model = $model;
 
+    }
+
+    /*
+     * Incapsulated method
+     */
+
+    public function actionGetSumOfItems() {
+
+        Controller::actionGetSumOfItems();
+    }
+
+    /*
+     * Incapsulated method
+     */
+
+    public function actionGetQuantityOfitems() {
+        Controller::actionGetQuantityOfItems();
     }
 
     public function actionGetData() {

@@ -7,15 +7,25 @@
  * Time: 22:32
  */
 
-include_once('DefaultView.php');
+include_once('View.php');
 
-class LoginView extends DefaultView
+class LoginView extends View
 {
     private $model;
     public function __construct(LoginModel $model)
     {
         parent::__construct($model);
         $this->model = $model;
+    }
+
+    public function DoctypeView( $page ){
+
+        View::DoctypeFile( $page );
+    }
+
+    public function headerView() {
+
+        View::headerPart();
     }
 
     public function RegisterView() {

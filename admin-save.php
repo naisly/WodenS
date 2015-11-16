@@ -20,10 +20,6 @@ $view = new AdminView($model);
 
 $view->DoctypeView( 'admin' );
 
-if(!isset($_SESSION['admin'])){
-    header('Location: admin-login.php');
-}
-
-$controller->saveData();
+$controller->actionSaveData();
 
 $view->getForm();

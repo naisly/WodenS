@@ -3,13 +3,10 @@
 /**
  * Created by PhpStorm.
  * User: Home
- * Date: 09.11.2015
- * Time: 19:28
+ * Date: 27.10.2015
+ * Time: 21:58
  */
-
-include_once('Model.php');
-
-class AdminModel extends Model
+class Model
 {
     public $product_name;
     public $photo;
@@ -22,9 +19,15 @@ class AdminModel extends Model
     public $id;
     public $quantity;
     public $shipping;
-    public $average;
+    public $distinct_categories;
 
-    public $items;
+    public $average;
+    public $distinct_product_names;
+    public $APrice;
+    public $AItems;
+
+    public $array;
+    /*public $array; */
 
     public function setProductName ( $product_name ) {
 
@@ -38,12 +41,6 @@ class AdminModel extends Model
 
     }
 
-    public function getOneProductName() {
-
-        return $this->product_name;
-
-    }
-
     public function setPhoto( $photo ) {
 
         $this->photo = $photo;
@@ -52,12 +49,6 @@ class AdminModel extends Model
     public function getPhoto($i) {
 
         return $this->photo[$i];
-    }
-
-    public function getOnePhoto() {
-
-        return $this->photo;
-
     }
 
     public function setDescription( $description ) {
@@ -70,12 +61,6 @@ class AdminModel extends Model
         return $this->description[$i];
     }
 
-    public function getOneDescription() {
-
-        return $this->description;
-
-    }
-
     public function setCategory( $category ) {
 
         $this->category = $category;
@@ -84,12 +69,6 @@ class AdminModel extends Model
     public function getCategory($i) {
 
         return $this->category[$i];
-    }
-
-    public function getOneCategory() {
-
-        return $this->category;
-
     }
 
     public function setPrice( $price ) {
@@ -102,12 +81,6 @@ class AdminModel extends Model
         return $this->price[$i];
     }
 
-    public function getOnePrice() {
-
-        return $this->price;
-
-    }
-
     public function setPreviousPrice( $previous_price ){
 
         $this->previous_price = $previous_price;
@@ -116,12 +89,6 @@ class AdminModel extends Model
     public function getPriviousPrice($i) {
 
         return $this->previous_price[$i];
-    }
-
-    public function getOnePreviousPrice() {
-
-        return $this->previous_price;
-
     }
 
     public function setTimeOfAdding( $time_of_adding) {
@@ -134,12 +101,6 @@ class AdminModel extends Model
         return $this->time_of_adding[$i];
     }
 
-    public function getOneTimeOfAdding() {
-
-        return $this->time_of_adding;
-
-    }
-
     public function setFeatures( $features ) {
 
         $this->features = $features;
@@ -148,12 +109,6 @@ class AdminModel extends Model
     public function getFeatures($i) {
 
         return $this->features[$i];
-    }
-
-    public function getOneFeature() {
-
-        return $this->features;
-
     }
 
     public function setId ( $id ) {
@@ -166,12 +121,6 @@ class AdminModel extends Model
         return $this->id[$i];
     }
 
-    public function getOneId() {
-
-        return $this->id;
-
-    }
-
     public function setQuantity( $quantity ){
 
         $this->quantity = $quantity;
@@ -180,12 +129,6 @@ class AdminModel extends Model
     public function getQuantity($i) {
 
         return $this->quantity[$i];
-    }
-
-    public function getOneQuantity() {
-
-        return $this->quantity;
-
     }
 
     public function setShipping( $shipping ) {
@@ -198,12 +141,6 @@ class AdminModel extends Model
         return $this->shipping[$i];
     }
 
-    public function getOneShipping() {
-
-        return $this->shipping;
-
-    }
-
     public function setAverage( $average ) {
 
         $this->average = $average;
@@ -214,19 +151,68 @@ class AdminModel extends Model
         return $this->average[$i];
     }
 
-    public function getOneAverage() {
+    public function setDistinctCategories( $distinct_categories ) {
 
-        return $this->average;
-
+        $this->distinct_categories = $distinct_categories;
     }
 
-    public function setItems( $items ) {
+    public function getDistinctCategories() {
 
-        $this->items = $items;
+        return $this->distinct_categories;
     }
 
-    public function getItems() {
+    public function setDistinctProductNames ( $distinct_product_names ){
 
-        return $this->items;
+        $this->distinct_product_names = $distinct_product_names;
+    }
+
+    public function getDistinctProductNames($i) {
+
+        return $this->distinct_product_names[$i];
+    }
+
+    /*public function countDistinctProductNames() {
+
+        return count($this->distinct_product_names);
+    }
+
+    public function setProductNamesForShow( $array ){
+
+        $this->array = $array;
+    }
+
+    public function getProductNamesForShow() {
+
+        return $this->array;
+    }*/
+
+    public function setProductsForShow( $array ){
+
+        $this->array = $array;
+    }
+
+    public function getProductsForShow() {
+
+        echo $this->array;
+    }
+
+    public function setAPrice ( $APrice ){
+
+        $this->APrice = $APrice;
+    }
+
+    public function getAPrice() {
+
+        return $this->APrice;
+    }
+
+    public function setAItems( $AItems ) {
+
+        $this->AItems = $AItems;
+    }
+
+    public function getAItems() {
+
+        return $this->AItems;
     }
 }

@@ -24,5 +24,5 @@ $view = new AdminView($model);
 
 $view->DoctypeView( 'admin' );
 
-$controller->getAdminProductsData();
+$controller->actionGetProducts();
 $view->ProductsPage();

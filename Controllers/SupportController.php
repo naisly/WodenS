@@ -7,13 +7,10 @@
  * Time: 0:28
  */
 
-include_once('DefaultController.php');
-
-class SupportController extends DefaultController
+class SupportController
 {
     public $model;
     public function __construct(SupportModel $model){
-        parent::__construct($model);
         $this->model = $model;
     }
 

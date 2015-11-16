@@ -7,15 +7,33 @@
  * Time: 17:00
  */
 
-include_once('DefaultController.php');
+include_once('Controller.php');
 
-class ProfileController extends DefaultController
+class ProfileController extends Controller
 {
     public $model;
     public function __construct(ProfileModel $model) {
         parent::__construct($model);
         $this->model = $model;
 
+    }
+
+    /*
+     * Incapsulated method
+     */
+
+    public function actionGetSumOfItems() {
+
+        Controller::actionGetSumOfItems();
+    }
+
+    /*
+     * Incapsulated method
+     */
+
+    public function actionGetQuantityOfItems() {
+
+        Controller::actionGetQuantityOfItems();
     }
 
     public function actionGetOrderedItems(){

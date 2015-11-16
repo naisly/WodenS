@@ -7,15 +7,25 @@
  * Time: 17:00
  */
 
-include_once('DefaultView.php');
+include_once('View.php');
 
-class ProfileView extends DefaultView
+class ProfileView extends View
 {
     private $model;
     public function __construct(ProfileModel $model)
     {
         parent::__construct($model);
         $this->model = $model;
+    }
+
+    public function DoctypeView( $page ){
+
+        View::DoctypeFile( $page );
+    }
+
+    public function headerView() {
+
+        View::headerPart();
     }
 
     public function getTable() {
