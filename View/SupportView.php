@@ -57,6 +57,7 @@ class SupportView extends DefaultView
                                         <th>Email</th>
                                         <th>Subject</th>
                                         <th>Message</th>
+                                        <th>#</th>
                                     </tr>
                                 </thead>
                                 <tbody>';
@@ -69,6 +70,13 @@ class SupportView extends DefaultView
                       <td>' . $this->model->getEmail($i) . '</td>
                       <td>' . $this->model->getSubject($i) . '</td>
                       <td>' . $this->model->getMessage($i) . '</td>
+                      <td>
+                          <form action="admin-solved.php" method="post">
+                              <input type="hidden" name="id" id="id" value="' . $this->model->getId($i) . '" />
+
+                              <button class="btn btn-warning">Solved</button>
+                          </form>
+                      </td>
                   </tr>';
 
             $i++;

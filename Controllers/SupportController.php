@@ -77,4 +77,23 @@ class SupportController extends DefaultController
         $this->model->setSubject( $subject_array );
         $this->model->setMessage( $message_array );
     }
+
+    public function actionGetSolved() {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        if(isset($_POST['id'])) {
+            $id = $_POST['id'];
+
+            $sql_stmt = $mysqli->prepare("DELETE FROM support WHERE id='$id'");
+
+            $sql_stmt->execute();
+
+            header('Location: admin-support.php');
+        } else {
+            header('HTTP/1.1 403 Forbidden');
+        }
+    }
 }
