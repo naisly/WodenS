@@ -18,6 +18,32 @@ CREATE TABLE phones (
   time TIMESTAMP
 );
 
+CREATE TABLE notebooks (
+  id INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  product_name VARCHAR(100) NOT NULL,
+  photo VARCHAR(30) NOT NULL,
+  description VARCHAR(300) NOT NULL,
+  category VARCHAR(15) NOT NULL,
+  price INT(10) NOT NULL,
+  previous_price INT(10),
+  time_of_adding VARCHAR(20) NOT NULL,
+  features VARCHAR(300) NOT NULL,
+  quantity INT(5) NOT NULL,
+  shipping INT(3) NOT NULL,
+  average_price INT(10) NOT NULL,
+  time TIMESTAMP
+);
+
+--------------------------------------------TEST----------------------------------
+INSERT INTO notebooks VALUES (1, 'Iphone 6S', 'images/iphone6S.jpg', 'Internal memory: 16 GB Wireless communications: Wi?Fi
+                          802.11a/b/g/n/ac with technology of MIMO with Bluetooth 4.2 and NFC as well as Camera: 12 MPX. 1.22 (3840 on 2160 dots)', 'Apple',
+                           1455 , 1999, '31th October', 'With old headphones and markers and USB', 3, 12, 1, '2015-10-31 21:21:00');
+
+INSERT INTO notebooks VALUES (2, 'Iphone 6', 'images/iphone6.png', 'Screen: 4.7 IPS LCD (1334x750 dots) with LED-backlight / 16 mil. colors /
+                           touch capacitive / scratch-resistant glass Ion-X Glass with oleophobic coating. Internal memory: 32 GB',
+                           'Apple', 1200, 1599, '1st November', 'With earpods and USB', 5, 11, 1, '2015-11-01 19:34:40');
+-------------------------------------------/TEST----------------------------------
+
 INSERT INTO phones VALUES (1, 'Iphone 6S', 'images/iphone6S.jpg', 'Internal memory: 16 GB Wireless communications: Wi?Fi
                           802.11a/b/g/n/ac with technology of MIMO with Bluetooth 4.2 and NFC as well as Camera: 12 MPX. 1.22 (3840 on 2160 dots)', 'Apple',
                            1455 , 1999, '31th October', 'With old headphones and markers and USB', 3, 12, 1, '2015-10-31 21:21:00');

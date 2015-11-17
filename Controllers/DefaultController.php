@@ -61,6 +61,8 @@ class DefaultController
         $sql_query = "SELECT * FROM phones";
         if ($category === 'All') {
             $sql_query = "SELECT * FROM phones";
+        } else if ($category === 'Notebooks'){
+            $sql_query = "SELECT * FROM notebooks";
         } else {
             $sql_query = "SELECT * FROM phones WHERE category='$category'";
         }
@@ -89,10 +91,12 @@ class DefaultController
         }
         if (isset($min) || isset($max)) {
             if (isset($array) || $min !== '' || $max !== '') {
-                if ($category === 'All') {
-                    $sql_query .= ' WHERE';
-                } else {
-                    $sql_query .= ' AND';
+                if(count($array) !== 0) {
+                    if ($category === 'All' || $category === 'Notebooks') {
+                        $sql_query .= ' WHERE';
+                    } else {
+                        $sql_query .= ' AND';
+                    }
                 }
             }
         }
@@ -150,6 +154,7 @@ class DefaultController
                 $sql_query .= $order_array[0];
             }
         }
+
         $result = $mysqli->query($sql_query);
         $product_name_array = array();
         $photo_array = array();
@@ -198,11 +203,11 @@ class DefaultController
      * Getting Distinct categories
      * for the product page
      */
-    public function actionGetDistinctCategories() {
+    public function actionGetDistinctCategories( $category ) {
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
-        $sql_query = "SELECT DISTINCT category FROM phones";
+        $sql_query = "SELECT DISTINCT category FROM $category";
         $result = $mysqli->query($sql_query);
         $list_categories = array();
         if ($result->num_rows > 0) {
@@ -234,6 +239,9 @@ class DefaultController
         if ( $category === 'All') {
             $sql_query = "SELECT price FROM phones";
             $sql_products = "SELECT DISTINCT product_name FROM phones";
+        } else if ( $category === 'Notebooks') {
+            $sql_query = "SELECT price FROM notebooks";
+            $sql_products = "SELECT DISTINCT product_name FROM notebooks";
         } else {
             $sql_query = "SELECT price FROM phones WHERE category='$category'";
             $sql_products = "SELECT DISTINCT product_name FROM phones WHERE category='$category'";
@@ -285,6 +293,8 @@ class DefaultController
         $mysqli = $db->getConnection();
         if ( $category === 'All') {
             $sql_query = "SELECT DISTINCT product_name FROM phones";
+        } else if ( $category === 'Notebooks'){
+            $sql_query = "SELECT DISTINCT product_name FROM notebooks";
         } else {
             $sql_query = "SELECT DISTINCT product_name FROM phones WHERE category='$category'";
         }

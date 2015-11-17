@@ -154,7 +154,7 @@ class DefaultModel
         return $this->average[$i];
     }
 
-    /*public function setDistinctCategories( $distinct_categories ) {
+    public function setDistinctCategories( $distinct_categories ) {
 
         $this->distinct_categories = $distinct_categories;
     }
@@ -162,7 +162,7 @@ class DefaultModel
     public function getDistinctCategories() {
 
         return $this->distinct_categories;
-    }*/
+    }
 
     public function setDistinctProductNames ( $distinct_product_names ){
 
