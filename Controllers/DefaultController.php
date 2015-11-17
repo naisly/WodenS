@@ -198,7 +198,7 @@ class DefaultController
      * Getting Distinct categories
      * for the product page
      */
-    /*public function actionGetDistinctCategories() {
+    public function actionGetDistinctCategories() {
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
@@ -212,7 +212,7 @@ class DefaultController
             }
             $this->model->setDistinctCategories($list_categories);
         }
-    }*/
+    }
 
     /*
      * Method for setting Average Price

@@ -5,12 +5,22 @@
  * User: Home
  * Date: 11.11.2015
  * Time: 20:05
+ *
+ * ==================
+ * Table with done/undone products
+ * ==================
  */
 
 include_once('DefaultView.php');
 
 class CheckoutView extends DefaultView
 {
+    /*
+     * MVC constructor
+     * with CheckoutView
+     *
+     * @private $model
+     */
     private $model;
     public function __construct(CheckoutModel $model)
     {
@@ -18,6 +28,10 @@ class CheckoutView extends DefaultView
         $this->model = $model;
     }
 
+    /*
+     * Getting table of done
+     * products with undone
+     */
     public function getTable( $view ) {
 
         if($view == 'latest') {

@@ -5,6 +5,9 @@
  * User: Home
  * Date: 05.11.2015
  * Time: 22:32
+ * ==================
+ * Getters and Setters
+ * ==================
  */
 include_once('DefaultModel.php');
 

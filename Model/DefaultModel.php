@@ -5,6 +5,9 @@
  * User: Home
  * Date: 27.10.2015
  * Time: 21:58
+ * ==================
+ * Getters and Setters
+ * ==================
  */
 class DefaultModel
 {
@@ -22,7 +25,7 @@ class DefaultModel
     public $distinct_categories;
 
     public $average;
-    //public $distinct_product_names;
+    public $distinct_product_names;
     public $APrice;
     public $AItems;
 
@@ -171,7 +174,7 @@ class DefaultModel
         return $this->distinct_product_names[$i];
     }
 
-    /*public function countDistinctProductNames() {
+    public function countDistinctProductNames() {
 
         return count($this->distinct_product_names);
     }
@@ -184,7 +187,7 @@ class DefaultModel
     public function getProductNamesForShow() {
 
         return $this->array;
-    }*/
+    }
 
     public function setProductsForShow( $array ){
 

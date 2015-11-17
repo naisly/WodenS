@@ -5,12 +5,23 @@
  * User: Home
  * Date: 05.11.2015
  * Time: 22:32
+ *
+ * ==================
+ * Register view, errors messages, login view,
+ * added item to the cart message
+ * =================
  */
 
 include_once('DefaultView.php');
 
 class LoginView extends DefaultView
 {
+    /*
+     * MVC constructor
+     * with LoginModel
+     *
+     * @private $model
+     */
     private $model;
     public function __construct(LoginModel $model)
     {
@@ -18,6 +29,9 @@ class LoginView extends DefaultView
         $this->model = $model;
     }
 
+    /*
+     * Register page
+     */
     public function RegisterView() {
 
         echo  '<div class="text-center">
@@ -92,6 +106,9 @@ class LoginView extends DefaultView
                <script src="js/bootstrap.min.js"></script>';
     }
 
+    /*
+     * Alert wrong email
+     */
     public function errorEmailMessage() {
 
         echo '<div class="alert alert-danger" role="alert">
@@ -101,6 +118,9 @@ class LoginView extends DefaultView
               </div>';
     }
 
+    /*
+     * Alert wrong password
+     */
     public function errorPasswordMessage() {
 
         echo '<div class="alert alert-danger" role="alert">
@@ -110,6 +130,9 @@ class LoginView extends DefaultView
               </div>';
     }
 
+    /*
+     * Alert Min Count error
+     */
     public function errorMinCountMessage() {
 
         echo '<div class="alert alert-danger" role="alert">
@@ -119,6 +142,9 @@ class LoginView extends DefaultView
               </div>';
     }
 
+    /*
+     * Alrt wrong email or password
+     */
     public function errorLoginMessage() {
 
         echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px;">
@@ -128,6 +154,9 @@ class LoginView extends DefaultView
               </div>';
     }
 
+    /*
+     * Alert already registered
+     */
     public function errorRegisteredEmailMessage() {
 
         echo '<div class="alert alert-danger" role="alert">
@@ -137,6 +166,9 @@ class LoginView extends DefaultView
               </div>';
     }
 
+    /*
+     * Alert success
+     */
     public function successMessage() {
 
         echo '<div class="alert alert-success" role="alert" style="margin-top: -20px;">
@@ -146,6 +178,10 @@ class LoginView extends DefaultView
                 </div>';
     }
 
+    /*
+     * Alert item has been added
+     * to the cart
+     */
     public function addedItemMessage() {
 
         echo '<div class="alert alert-success" role="alert" style="margin-top: -20px;">
@@ -164,6 +200,9 @@ class LoginView extends DefaultView
                 </div>';
     }
 
+    /*
+     * Error login
+     */
     public function errorAddItemMessage() {
 
         echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px;">
@@ -173,6 +212,9 @@ class LoginView extends DefaultView
                 </div>';
     }
 
+    /*
+     * Footer at the bottom
+     */
     public function getFooter() {
 
         echo '<div class="bottom-spacer">

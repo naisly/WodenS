@@ -4,14 +4,30 @@
  * User: Home
  * Date: 27.10.2015
  * Time: 21:57
+ *
+ * ==================
+ * Doctype view, header view, getting items,
+ * filter, footer
+ * ==================
  */
 class DefaultView
 {
+    /*
+     * MVC constructor
+     * with AdminModel
+     *
+     * @private $model
+     */
     private $model;
     public function __construct(DefaultModel $model)
     {
         $this->model = $model;
     }
+
+    /*
+     * Doctype View includes Doctype, html, head,
+     * body TAGS, specified for each page
+     */
     public function DoctypeView( $page )
     {
         echo '<!DOCTYPE html>
@@ -61,6 +77,11 @@ class DefaultView
         echo '</head>
             <body>';
     }
+
+    /*
+     * Main navbar Menu for all
+     * pages
+     */
     public function headerView()
     {
         echo   '<nav class="navbar navbar-inverse navbar-static-top">
@@ -116,6 +137,10 @@ class DefaultView
                 </div><!-- /.container-fluid -->
             </nav>';
     }
+
+    /*
+     * Getting distinct items names
+     */
     public function getItemsNames()
     {
         echo '<div class="items-row pointer">
@@ -132,6 +157,11 @@ class DefaultView
                    <div class="col-md-3"></div>
               </div>';
     }
+
+    /*
+     * Filter menu
+     * of product pages
+     */
     public function getFilterMenu( $item )
     {
         $i = 0;
@@ -203,6 +233,11 @@ class DefaultView
                            </form>
                         </div>';/* col-md-3 END */
     }
+
+    /*
+     * Getting items to
+     * the product page
+     */
     public function getItems() {
         $i = 0;
         echo '<div class="col-md-9">';
@@ -248,6 +283,10 @@ class DefaultView
                          new WOW().init();
                    </script>';
     }
+
+    /*
+     * Footer, bottom part
+     */
     public function actionGetFooter( $page ) {
         echo   '<footer>
                     <div class="container">

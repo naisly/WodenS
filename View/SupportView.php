@@ -5,12 +5,23 @@
  * User: Home
  * Date: 15.11.2015
  * Time: 0:28
+ *
+ * ==================
+ * Thanks message, Support view
+ * for the Admin page
+ * ==================
  */
 
 include_once('DefaultView.php');
 
 class SupportView extends DefaultView
 {
+    /*
+     * MVC constructor
+     * with SupportModel
+     *
+     * @private $model
+     */
     private $model;
     public function __construct(SupportModel $model){
         parent::__construct($model);
@@ -45,6 +56,10 @@ class SupportView extends DefaultView
               <script src="js/bootstrap.min.js"></script>';
     }
 
+    /*
+     * Support messages table for the
+     * Admin page
+     */
     public function getSupport() {
 
         echo '      <div class="col-xs-12 panel-body" >

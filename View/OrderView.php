@@ -5,12 +5,22 @@
  * User: Home
  * Date: 09.11.2015
  * Time: 16:07
+ *
+ * ==================
+ * Billing info, thanks message
+ * ==================
  */
 
 include_once('DefaultView.php');
 
 class OrderView extends DefaultView
 {
+    /*
+     * MVC constructor
+     * with OrderModel
+     *
+     * @private $model
+     */
     private $model;
     public function __construct(OrderModel $model)
     {
@@ -18,6 +28,9 @@ class OrderView extends DefaultView
         $this->model = $model;
     }
 
+    /*
+     * Billing info
+     */
     public function getPlaceOrder() {
 
         echo '

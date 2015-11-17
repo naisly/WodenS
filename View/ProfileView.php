@@ -5,12 +5,22 @@
  * User: Home
  * Date: 08.11.2015
  * Time: 17:00
+ *
+ * ===================
+ * Cart page
+ * ===================
  */
 
 include_once('DefaultView.php');
 
 class ProfileView extends DefaultView
 {
+    /*
+     * MVC constructor
+     * with ProfileModel
+     *
+     * @private $model
+     */
     private $model;
     public function __construct(ProfileModel $model)
     {
@@ -18,6 +28,10 @@ class ProfileView extends DefaultView
         $this->model = $model;
     }
 
+    /*
+     * Getting user's UI for the
+     * Cart page
+     */
     public function getTable() {
         echo '
             <table class="table">

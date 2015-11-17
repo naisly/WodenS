@@ -5,12 +5,23 @@
  * User: Home
  * Date: 09.11.2015
  * Time: 19:28
+ *
+ * ==================
+ * Login form, error messages, admin main page,
+ * update data page
+ * =================
  */
 
 include_once('DefaultView.php');
 
 class AdminView extends DefaultView
 {
+    /*
+     * MVC constructor
+     * with AdminModel
+     *
+     * @private $model
+     */
     private $model;
     public function __construct(AdminModel $model)
     {
@@ -18,6 +29,10 @@ class AdminView extends DefaultView
         $this->model = $model;
     }
 
+    /*
+     * Login form for entrance
+     * in Admin account
+     */
     public function getLoginForm() {
         echo '<div class="text-center">
                  <img id="main" src="images/default.png" />
@@ -80,6 +95,10 @@ class AdminView extends DefaultView
 
     }
 
+    /*
+     * Error alert block
+     * while incorrect username or password
+     */
     public function errorLoginMessage() {
 
         echo '<div class="alert alert-danger" role="alert">
@@ -89,6 +108,9 @@ class AdminView extends DefaultView
               </div>';
     }
 
+    /*
+     * The main admin page
+     */
     public function adminBlocks() {
 
         echo '<h1>The Main Admin Page</h1>
@@ -140,6 +162,10 @@ class AdminView extends DefaultView
                     </div>';
     }
 
+    /*
+     * Getting all the data
+     * from Products Table
+     */
     public function ProductsPage()
     {
 
@@ -199,6 +225,10 @@ class AdminView extends DefaultView
                    </div>';
     }
 
+    /*
+     * Update page
+     * for the Products data
+     */
     public function getForm() {
 
         echo '<div class="container">
