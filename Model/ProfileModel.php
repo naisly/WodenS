@@ -7,9 +7,9 @@
  * Time: 17:00
  */
 
-include_once('Model.php');
+include_once('DefaultModel.php');
 
-class ProfileModel extends Model
+class ProfileModel extends DefaultModel
 {
     public $id_array;
     public $product_name_array;

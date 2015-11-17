@@ -5,14 +5,37 @@
  * User: Home
  * Date: 11.11.2015
  * Time: 20:05
+ *
+ * ====================
+ * Getting data for the order table,
+ * Action done or roll-back with the
+ * orders
+ * ===================
  */
 class CheckoutController
 {
+    /*
+     * MVC constructor
+     * with CheckoutModel
+     *
+     * @global $model
+     */
     public $model;
     public function __construct(CheckoutModel $model) {
         $this->model = $model;
     }
 
+    /*
+     * Getting data table
+     * for Admin page
+     *
+     * @var $name_array
+     * @var $email_array
+     * @var $order_id_array
+     *
+     * @var $all_totals
+     * @var $sum
+     */
     public function actionGetData( $table )
     {
         /*
@@ -76,6 +99,24 @@ class CheckoutController
 
     }
 
+    /*
+     * Admin page
+     * Button for dropping data
+     * for the orders page
+     *
+     * @var $order
+     * @var $id_array
+     * @var $product_name_array
+     * @var $category_array
+     * @var $price_array
+     * @var user_array
+     * @var $quantity_array
+     * @var $order_id_array
+     *
+     * @var $q
+     *
+     * ! REDIRECTION
+     */
     public function actionDone( $complete_table, $done_table ) {
 
         /*

@@ -7,9 +7,9 @@
  * Time: 16:06
  */
 
-include_once('Model.php');
+include_once('DefaultModel.php');
 
-class OrderModel extends Model
+class OrderModel extends DefaultModel
 {
     public $id;
     public $quantity;

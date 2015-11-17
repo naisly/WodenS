@@ -5,12 +5,23 @@
  * User: Home
  * Date: 08.11.2015
  * Time: 17:00
+ *
+ * ==================
+ * Getting data from orders for each User,
+ * deleting from the order -> done, otherwise rollback
+ * =================
  */
 
-include_once('Controller.php');
+include_once('DefaultController.php');
 
-class ProfileController extends Controller
+class ProfileController extends DefaultController
 {
+    /*
+     * MVC constructor
+     * with ProfileModel
+     *
+     * @global $model
+     */
     public $model;
     public function __construct(ProfileModel $model) {
         parent::__construct($model);
@@ -19,23 +30,15 @@ class ProfileController extends Controller
     }
 
     /*
-     * Incapsulated method
+     * Getting data from orders for
+     * each user
+     *
+     * @var $id_array
+     * @var $product_name_array
+     * @var $category_array
+     * @var $price_array
+     * @var $quantity_array
      */
-
-    public function actionGetSumOfItems() {
-
-        Controller::actionGetSumOfItems();
-    }
-
-    /*
-     * Incapsulated method
-     */
-
-    public function actionGetQuantityOfItems() {
-
-        Controller::actionGetQuantityOfItems();
-    }
-
     public function actionGetOrderedItems(){
 
         include_once('/../Storage.php');
@@ -76,6 +79,13 @@ class ProfileController extends Controller
         $this->model->setQuantityOfItem( $quantity_array );
     }
 
+    /*
+     * Deleting the row from the OrderedItems
+     * while clicking on the button
+     * in the Admin Page
+     *
+     * @var $id
+     */
     public function actionRemoveData() {
 
         include_once('/../Storage.php');

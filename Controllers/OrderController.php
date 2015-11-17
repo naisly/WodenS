@@ -5,37 +5,50 @@
  * User: Home
  * Date: 09.11.2015
  * Time: 16:06
+ *
+ * ==================
+ * Generalize random Id for order, making order to the Database,
+ * Inserting billing info into the Database
+ * ==================
  */
 
-include_once('Controller.php');
+include_once('DefaultController.php');
 
-class OrderController extends Controller
+class OrderController extends DefaultController
 {
+    /*
+     * MVC constructor
+     * with OrderModel
+     *
+     * @global $model
+     */
     public $model;
     public function __construct(OrderModel $model) {
         parent::__construct($model);
         $this->model = $model;
     }
 
-    public function actionGetSumOfItems() {
-
-        Controller::actionGetSumOfItems();
-    }
-
     /*
-     * Incapsulated method
+     * Set new Id
+     * with Randomize method
      */
-
-    public function actionGetQuantityOfitems() {
-
-        Controller::actionGetQuantityOfItems();
-    }
-
     public function actionGeneralizeId() {
 
         $this->model->setOrderId();
     }
 
+    /*
+     * Inserting product's data to the
+     * Order table
+     * And deleting from products table
+     *
+     * @var $id_array
+     * @var $product_name_array
+     * @var $category_array
+     * @var $price_array
+     * @var $quantity_array
+     *
+     */
     public function actionInsertData() {
 
         include_once('/../Storage.php');
@@ -86,6 +99,19 @@ class OrderController extends Controller
 
     }
 
+    /*
+     * Inserting Billing info from user's
+     * details
+     *
+     * @var $name
+     * @var $street
+     * @var $city
+     * @var $state
+     * @var $zip
+     * @var $country
+     * @var $giftwrap
+     * @var $order_id
+     */
     public function actionInsertIntoOrders() {
 
         include_once('/../Storage.php');

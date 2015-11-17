@@ -20,18 +20,7 @@ $view->DoctypeView( 'phones' );
 
 $view->headerView();
 
-echo   '<div class="panel-default items-row">
-		<div class="col-xs-2"></div>
-		<div class="col-xs-8 items-align nav-size text-center">
-			<ul>
-			    <a style="text-decoration: none; color: #666666;" href="phones.php">All</a>
-				<a style="text-decoration: none; color: #666666;" href="apple.php">Apple</a>
-				<a style="text-decoration: none; color: #666666;" href="samsung.php">Samsung</a>
-			</ul>
-		</div>
-		<div class="col-xs-2"></div>
-	</div>
-
+echo   '
 	<div class="background text-center" style="margin-top: 100px;">
 			<h1 class="header">Phones</h1>
 			<p class="the-only">The only thing that can change your life absolutely</p>

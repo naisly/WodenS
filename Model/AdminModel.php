@@ -7,9 +7,9 @@
  * Time: 19:28
  */
 
-include_once('Model.php');
+include_once('DefaultModel.php');
 
-class AdminModel extends Model
+class AdminModel extends DefaultModel
 {
     public $product_name;
     public $photo;

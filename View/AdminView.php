@@ -7,20 +7,15 @@
  * Time: 19:28
  */
 
-include_once('View.php');
+include_once('DefaultView.php');
 
-class AdminView extends View
+class AdminView extends DefaultView
 {
     private $model;
     public function __construct(AdminModel $model)
     {
         parent::__construct($model);
         $this->model = $model;
-    }
-
-    public function DoctypeView( $page ){
-
-        View::DoctypeFile( $page );
     }
 
     public function getLoginForm() {
@@ -171,27 +166,6 @@ class AdminView extends View
             echo '<td>' . $this->model->getShipping($i) . '</td>';
             echo '<td>' . $this->model->getAverage($i) . '</td>';
 
-            /*if($_SESSION['edit'] == $i) {
-                echo '<td>
-                        <form action="admin-edit.php" method="post">
-                            <input type="hidden" name="edit_id" value="' . $this->model->getId($i) . '" />
-                            <input type="hidden" name="edit_product_name" value="' . $this->model->getProductName($i) . '" />
-                            <input type="hidden" name="edit_photo" value="' . $this->model->getPhoto($i) . '" />
-                            <input type="hidden" name="edit_description" value="' . $this->model->getDescription($i) . '" />
-                            <input type="hidden" name="edit_category" value="' . $this->model->getCategory($i) . '" />
-                            <input type="hidden" name="edit_price" value="' . $this->model->getPrice($i) . '" />
-                            <input type="hidden" name="edit_previous_price" value="' . $this->model->getPriviousPrice($i) . '" />
-                            <input type="hidden" name="edit_time_of_adding" value="' . $this->model->getTimeOfAdding($i) . '" />
-                            <input type="hidden" name="edit_features" value="' . $this->model->getFeatures($i) . '" />
-                            <input type="hidden" name="edit_quantity" value="' . $this->model->getQuantity($i) . '" />
-                            <input type="hidden" name="edit_shipping" value="' . $this->model->getShipping($i) . '" />
-                            <button class="btn btn-primary">Change data</button>
-                        </form>
-                        <form action="admin-back.php" method="post">
-                            <button class="btn btn-default" style="margin-top: 20px;">Go Back now</button>
-                        </form>
-                    </td>';
-            } else {*/
             echo '<td>
                       <form action="admin-save.php" method="post">
                             <input type="hidden" name="edit_id" value="' . $this->model->getId($i) . '" />
@@ -208,10 +182,10 @@ class AdminView extends View
                             <button class="btn btn-primary">Edit</button>
                         </form>
                   </td>';
-        //}
+
               echo '<td>
                         <form action="admin-delete.php" method="post">
-                            <input type="hidden" name="edit_id' . $i . '" value="' . $this->model->getId($i) . '" />
+                            <input type="hidden" name="edit_id" value="' . $this->model->getId($i) . '" />
                             <button class="btn btn-success">Delete</button>
                         </form>
                     </td>';

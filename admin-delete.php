@@ -2,20 +2,18 @@
 /**
  * Created by PhpStorm.
  * User: Home
- * Date: 10.11.2015
- * Time: 23:37
+ * Date: 17.11.2015
+ * Time: 19:13
  */
 
-include_once('Model/EditModel.php');
-include_once('Controllers/EditController.php');
-include_once('View/EditView.php');
+include_once('Controllers/AdminController.php');
+include_once('Model/AdminModel.php');
+include_once('View/AdminView.php');
 
-$model = new EditModel();
+$model = new AdminModel();
 
-//It is important that the controller and the view share the model
+$controller = new AdminController( $model );
 
-$controller = new EditController($model);
-
-$view = new EditView($model);
+$view = new AdminView( $model );
 
 $controller->actionDeleteData();

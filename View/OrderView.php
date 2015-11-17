@@ -7,25 +7,15 @@
  * Time: 16:07
  */
 
-include_once('View.php');
+include_once('DefaultView.php');
 
-class OrderView extends View
+class OrderView extends DefaultView
 {
     private $model;
     public function __construct(OrderModel $model)
     {
         parent::__construct($model);
         $this->model = $model;
-    }
-
-    public function DoctypeView( $page ){
-
-        View::DoctypeFile( $page );
-    }
-
-    public function headerView() {
-
-        View::headerPart();
     }
 
     public function getPlaceOrder() {

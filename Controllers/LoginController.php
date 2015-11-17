@@ -5,12 +5,24 @@
  * User: Home
  * Date: 05.11.2015
  * Time: 22:32
+ *
+ * ==================
+ * Getting data from register, inserting into the Database,
+ * checking Email, login validation, method for adding items
+ * into the cart
+ * =================
  */
 
-include_once('Controller.php');
+include_once('DefaultController.php');
 
-class LoginController extends Controller
+class LoginController extends DefaultController
 {
+    /*
+     * MVC constructor
+     * with LoginModel
+     *
+     * @global $model
+     */
     public $model;
     public function __construct(LoginModel $model) {
         parent::__construct($model);
@@ -19,22 +31,9 @@ class LoginController extends Controller
     }
 
     /*
-     * Incapsulated method
+     * Getting data from the
+     * Register page
      */
-
-    public function actionGetSumOfItems() {
-
-        Controller::actionGetSumOfItems();
-    }
-
-    /*
-     * Incapsulated method
-     */
-
-    public function actionGetQuantityOfitems() {
-        Controller::actionGetQuantityOfItems();
-    }
-
     public function actionGetData() {
         if(isset($_POST['name'])){
             $this->model->setName($_POST['name']);
@@ -54,6 +53,14 @@ class LoginController extends Controller
 
     }
 
+    /*
+     * Inserting into the Database
+     * data of the Register Page
+     *
+     * @var $name
+     * @var $email
+     * @var $password
+     */
     public function actionInsertData() {
 
         include_once('/../Storage.php');
@@ -70,6 +77,13 @@ class LoginController extends Controller
         $stmt->execute();
     }
 
+    /*
+     * Checking provided Email
+     * from the Register Page
+     *
+     * @var $email
+     * @var $_SESSION['email_error']
+     */
     public function actionCheckProvidedEmail() {
 
         include_once('/../Storage.php');
@@ -91,6 +105,18 @@ class LoginController extends Controller
         }
     }
 
+    /*
+     * Checking data from the Login Page
+     * If exists redirecting to the account page
+     * otherwise display error
+     *
+     * @var $email
+     * @var $password
+     * @var $_SESSION['login_user']
+     * @var $_SESSION['admin']
+     * @var $_SESSION['add_item']
+     * @var $_SESSION['error']
+     */
     public function actionLogin() {
 
         include_once('/../Storage.php');
@@ -126,6 +152,21 @@ class LoginController extends Controller
         session_write_close();
     }
 
+    /*
+     * Method for adding data to the Cart
+     * If exists product in the User's Cart
+     * add Quantity plus one
+     * otherwise Add item
+     *
+     * @var $id
+     * @var $product_name
+     * @var $category
+     * @var $photo
+     * @var $price
+     *
+     * @var $idQ
+     * @var $quantity
+     */
     public function actionAddItems() {
 
         include_once('/../Storage.php');
@@ -162,8 +203,6 @@ class LoginController extends Controller
                 $idQ = $row['id'];
             }
         }
-        echo $idQ . "<br />";
-        echo $quantity . "<br />";
 
         if(!isset($idQ)) {
             $sql_query = "INSERT INTO orderedItems VALUES ('$id', '$product_name', '$category', '$price', '$user', 1)";

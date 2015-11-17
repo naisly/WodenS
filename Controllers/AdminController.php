@@ -6,42 +6,33 @@
  * Date: 09.11.2015
  * Time: 19:28
  *
- * * ===================
- * Includes Login, getting ALL the data to the Products page
- * Changing data, User Logout, Admin Logout sessions
- * * ===================
+ * ==================
+ * Validation of login form, getting products for the admin page
+ * Saving data to the next page for edition, updating product data,
+ * Admin logout session, deleting a product row
+ * =================
  */
 class AdminController
 {
     /*
-     * MVC model
+     * MVC constructor
+     * with AdminModel
      *
+     * @global $model
      */
     public $model;
-
-    /*
-     * MVC constructor method
-     * for Admin
-     */
     public function __construct(AdminModel $model) {
-
         $this->model = $model;
     }
 
     /*
-     * Incapsulation
+     * Method for validation Admin
+     * data from entrance
+     *
+     * @var $username
+     * @var $password
      */
     public function actionLogin() {
-
-        $this->actionValidateLogin();
-    }
-
-    /*
-     * Checking data FROM users DATABASE
-     * If no - redirect back
-     * otherwise registration page
-     */
-    private function actionValidateLogin() {
 
         include_once('/../Storage.php');
         $db = Storage::getInstance();
@@ -74,18 +65,26 @@ class AdminController
     }
 
     /*
-     * Incapsulation
+     * Getting data products
+     * for the Admin page
+     *
+     * Arrays of products data :
+     *
+     * @var $product_name_array
+     * @var $photo_array
+     * @var $description_array
+     * @var $category_array
+     * @var $price_array
+     * @var $previous_price_array
+     * @var $time_of_adding_array
+     * @var $features_array
+     * @var $quantity_array
+     * @var $shipping_array
+     * @var $average_price_array
+     *
+     * $var $items_array ( Quantity )
      */
-    public function actionGetProducts(){
-
-        $this->actionGetAdminProducts();
-    }
-
-    /*
-     * Getting ALL the data
-     * To The product admin page
-     */
-    private function actionGetAdminProducts()
+    public function actionGetAdminProducts()
     {
 
         include_once('/../Storage.php');
@@ -147,18 +146,25 @@ class AdminController
     }
 
     /*
-     * Incapsulation
+     * Saving data from Products table
+     * Inserting to the next page
+     * for edit one
+     *
+     * Products table data
+     *
+     * @var $edit_id
+     * @var $edit_product_name
+     * @var $edit_photo
+     * @var $edit_description
+     * @var $edit_category
+     * @var $edit_price
+     * @var $edit_previous_price
+     * @var $edit_time_of_adding
+     * @var $edit_features
+     * @var $edit_quantity
+     * @var $edit_shipping
      */
     public function actionSaveData() {
-
-        $this->actionSaveAdminData();
-    }
-
-    /*
-     * Method for saving data
-     * while redirecting to edit page
-     */
-    private function actionSaveAdminData() {
 
         if (isset($_POST['edit_id'])) {
             $id = $_POST['edit_id'];
@@ -208,18 +214,23 @@ class AdminController
     }
 
     /*
-     * Incapsulation
+     * Updating data
+     * from the admin page
+     * for the products
+     *
+     * @var $id
+     * @var $product_name
+     * @var $photo
+     * @var $description
+     * @var $category
+     * @var $price
+     * @var $previous_price
+     * @var $time_of_adding
+     * @var $features
+     * @var $quantity
+     * @var $shipping
      */
-    public function actionEditData() {
-
-        $this->actionEditAdminData();
-    }
-
-    /*
-     * Editing FULL amount of data
-     * of the Admin product PAGE
-     */
-    private function actionEditAdminData() {
+    public function actionUpdateData() {
 
         include_once('/../Storage.php');
         $db = Storage::getInstance();
@@ -269,18 +280,12 @@ class AdminController
     }
 
     /*
-     * Incapsulation
+     * Unsetting session for
+     * the Admin Login Page
+     *
+     * @var $_SESSION['admin']
      */
     public function actionLogout() {
-
-        $this->actionLogoutAdmin();
-    }
-
-    /*
-     * Logout Session for
-     * the Admin page
-     */
-    private function actionLogoutAdmin() {
 
         session_start();
 
@@ -289,4 +294,26 @@ class AdminController
         }
     }
 
+    /*
+     * Method for deleting data from
+     * Products page
+     *
+     * @var $id
+     *
+     * ! REDIRECTION
+     */
+    public function actionDeleteData() {
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        if(isset($_POST['edit_id'])){
+            $id = $_POST['edit_id'];
+        }
+
+        $sql_stmt = $mysqli->prepare("DELETE FROM phones WHERE id='$id'");
+        $sql_stmt->execute();
+
+        header('Location: admin-products.php');
+    }
 }

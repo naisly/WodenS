@@ -5,15 +5,39 @@
  * User: Home
  * Date: 15.11.2015
  * Time: 0:28
+ *
+ * ==================
+ * Getting data from support page,
+ * Getting Support messages in Admin page,
+ * Action get solved for each one
+ * =================
  */
 
-class SupportController
+include_once('DefaultController.php');
+
+class SupportController extends DefaultController
 {
+    /*
+     * MVC constructor
+     * with SupportModel
+     *
+     * @global $model
+     */
     public $model;
     public function __construct(SupportModel $model){
+        parent::__construct($model);
         $this->model = $model;
     }
 
+    /*
+     * Inserting data to the Support table
+     * from the support Page
+     *
+     * @var $name
+     * @var $email
+     * @var $subject
+     * @var $message
+     */
     public function actionGetData() {
 
         include_once('/../Storage.php');
@@ -42,6 +66,16 @@ class SupportController
 
     }
 
+    /*
+     * Getting support messages to the
+     * Admin Page
+     *
+     * @var $id_array
+     * @var $name_array
+     * @var $email_array
+     * @var $subject_array
+     * @var $message_array
+     */
     public function actionGetSupportMessages() {
 
         include_once('/../Storage.php');
@@ -75,6 +109,13 @@ class SupportController
         $this->model->setMessage( $message_array );
     }
 
+    /*
+     * Solving message while clicking
+     * on the button on
+     * Admin page (Deleting from table)
+     *
+     * @var $id
+     */
     public function actionGetSolved() {
 
         include_once('/../Storage.php');
