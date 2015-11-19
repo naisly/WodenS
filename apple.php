@@ -22,13 +22,13 @@ $view = new DefaultView($model);
 $controller->actionGetQuantityOfItems();
 $controller->actionGetSumOfItems();
 
-$controller->actionSetAveragePrice( 'Apple' );
+$controller->actionSetAveragePrice( 'phones' );
 
-$controller->actionGetDistinctCategories();
+$controller->actionGetDistinctCategories( 'phones' );
 
 $controller->actionGetItemNames( 'Apple' );
 
-$controller->actionGetCategories( 'Apple' );
+$controller->actionGetCategories( 'phones' );
 
 $view->DoctypeView( 'Apple' );
 
@@ -36,6 +36,6 @@ $view->headerView();
 
 $view->getItemsNames();
 $view->getFilterMenu( 'Apple' );
-$view->getItems();
+$view->getItems( 'phones' );
 
 $view->actionGetFooter( 'Apple' );

@@ -59,7 +59,7 @@ class DefaultController
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
         $sql_query = "SELECT * FROM phones";
-        if ($category === 'All') {
+        if ($category === 'phones') {
             $sql_query = "SELECT * FROM phones";
         } else if ($category === 'Notebooks'){
             $sql_query = "SELECT * FROM notebooks";
@@ -89,7 +89,8 @@ class DefaultController
         if (isset($_POST['sort_by_shipping'])) {
             $sort_by_shipping = $_POST["sort_by_shipping"];
         }
-        if (isset($min) || isset($max)) {
+        /*if (isset($min) || isset($max)) {
+            $sql_query .= ' WHERE';
             if (isset($array) || $min !== '' || $max !== '') {
                 if(count($array) !== 0) {
                     if ($category === 'All' || $category === 'Notebooks') {
@@ -99,7 +100,21 @@ class DefaultController
                     }
                 }
             }
+        }*/
+        if((isset($min) || isset($max)) && (count($array) === 0)) {
+            if($min == '' && $max == ''){
+
+            } else {
+                $sql_query .= ' WHERE';
+            }
         }
+
+        if(isset($array)){
+            if(count($array) !== 0) {
+                $sql_query .= ' WHERE';
+            }
+        }
+
         if (isset($array)) {
             $i = 0;
             while ($i < count($array)) {
@@ -155,6 +170,7 @@ class DefaultController
             }
         }
 
+        //echo $sql_query;
         $result = $mysqli->query($sql_query);
         $product_name_array = array();
         $photo_array = array();
@@ -236,12 +252,15 @@ class DefaultController
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
-        if ( $category === 'All') {
+        if ( $category === 'phones') {
             $sql_query = "SELECT price FROM phones";
             $sql_products = "SELECT DISTINCT product_name FROM phones";
         } else if ( $category === 'Notebooks') {
             $sql_query = "SELECT price FROM notebooks";
             $sql_products = "SELECT DISTINCT product_name FROM notebooks";
+
+            //echo $sql_query;
+            //echo $sql_products;
         } else {
             $sql_query = "SELECT price FROM phones WHERE category='$category'";
             $sql_products = "SELECT DISTINCT product_name FROM phones WHERE category='$category'";
@@ -262,8 +281,13 @@ class DefaultController
                 $list_products = array_merge($list_products, array_map('trim', explode(",", $row['product_name'])));
             }
         }
+        //print_r($list_price);
+        //print_r($list_products);
+
+        //echo count($list_products);
+
         while ($i < count($list_products)){
-            $sql_avr = "SELECT price, average_price FROM phones WHERE product_name='$list_products[$i]'";
+            $sql_avr = "SELECT price, average_price FROM $category WHERE product_name='$list_products[$i]'";
             $result_avr = $mysqli->query($sql_avr);
             $list_avr = array();
             if ($result_avr->num_rows > 0){
@@ -273,7 +297,7 @@ class DefaultController
                 $sum = array_sum($list_avr);
                 $quantity = count($list_avr);
                 $res = $sum / $quantity;
-                $sql_res = $mysqli->prepare("UPDATE phones SET average_price='$res' WHERE product_name='$list_products[$i]'");
+                $sql_res = $mysqli->prepare("UPDATE $category SET average_price='$res' WHERE product_name='$list_products[$i]'");
                 $sql_res->execute();
             }
             $i++;
@@ -291,7 +315,7 @@ class DefaultController
     public function actionGetItemNames( $category ) {
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
-        if ( $category === 'All') {
+        if ( $category === 'phones') {
             $sql_query = "SELECT DISTINCT product_name FROM phones";
         } else if ( $category === 'Notebooks'){
             $sql_query = "SELECT DISTINCT product_name FROM notebooks";

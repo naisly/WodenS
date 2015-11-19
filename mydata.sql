@@ -274,3 +274,80 @@ CREATE TABLE support (
   subject VARCHAR(60) NOT NULL,
   message VARCHAR(500) NOT NULL
 )
+
+-------------------------------------------NOTEBOOKS------------------------------------------------
+
+CREATE TABLE notebooks (
+  id INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  product_name VARCHAR(100) NOT NULL,
+  photo VARCHAR(30) NOT NULL,
+  description VARCHAR(300) NOT NULL,
+  category VARCHAR(15) NOT NULL,
+  price INT(10) NOT NULL,
+  previous_price INT(10),
+  time_of_adding VARCHAR(20) NOT NULL,
+  features VARCHAR(300) NOT NULL,
+  quantity INT(5) NOT NULL,
+  shipping INT(3) NOT NULL,
+  average_price INT(10) NOT NULL,
+  time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+INSERT INTO notebooks(id, product_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+                      ('', 'Macbook Pro', 'images/macbookpro.png', '2.7 GHz dual-core Intel Core i5 processor
+                      Turbo Boost up to 3.1GHz with 3MB shared L3 cache 13.3-inch IPS Retina Display 2560-by-1600
+                      resolution', 'Apple', 1299, 1765, '19th November', 'With selling gift card for up to $625.00',
+                      14, 12);
+
+INSERT INTO notebooks(id, product_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+                      ('', 'Macbook Pro', 'images/macbookpro.png', '2.7 GHz dual-core Intel Core i5 processor
+                      Turbo Boost up to 3.1GHz with 3MB shared L3 cache 13.3-inch IPS Retina Display 2560-by-1600
+                      resolution', 'Apple', 1354, 1899, '19th November', 'With selling gift card for up to $625.00',
+                      14, 12);
+
+INSERT INTO notebooks(id, product_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+                     ('', 'Macbook Air', 'images/macbookair.png', '1.6 GHz dual-core Intel Core i5 (Turbo Boost
+                     up to 2.7 GHz) with 3 MB shared L3 cache. 13.3-Inch (diagonal) LED-backlit Glossy Widescreen
+                     Display 1440 x 900 resolution', 'Apple', 994, 1022, '20th November', 'With selling gift cart
+                     for up to $100.00', 13, 11);
+INSERT INTO notebooks(id, product_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+                     ('', 'Macbook Air', 'images/macbookair.png', '1.6 GHz dual-core Intel Core i5 (Turbo Boost
+                     up to 2.7 GHz) with 3 MB shared L3 cache. 13.3-Inch (diagonal) LED-backlit Glossy Widescreen
+                     Display 1440 x 900 resolution', 'Apple', 854, 999, '20th November', 'With selling gift cart
+                     for up to $100.00', 15, 8);
+
+INSERT INTO notebooks(id, product_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+                      ('', 'Macbook Pro', 'images/macbookpro.png', '2.7 GHz dual-core Intel Core i5 processor
+                      Turbo Boost up to 3.1GHz with 3MB shared L3 cache 13.3-inch IPS Retina Display 2560-by-1600
+                      resolution', 'Apple', 1258, 1301, '20th November', 'With selling gift card for up to $625.00',
+                      11, 10);
+
+INSERT INTO notebooks(id, product_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+                     ('', 'Macbook Air', 'images/macbookair.png', '1.6 GHz dual-core Intel Core i5 (Turbo Boost
+                     up to 2.7 GHz) with 3 MB shared L3 cache. 13.3-Inch (diagonal) LED-backlit Glossy Widescreen
+                     Display 1440 x 900 resolution', 'Apple', 811, 1094, '21th November', 'With selling gift cart
+                     for up to $100.00', 13, 10);
+INSERT INTO notebooks(id, product_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+                     ('', 'Macbook Air', 'images/macbookair.png', '1.6 GHz dual-core Intel Core i5 (Turbo Boost
+                     up to 2.7 GHz) with 3 MB shared L3 cache. 13.3-Inch (diagonal) LED-backlit Glossy Widescreen
+                     Display 1440 x 900 resolution', 'Apple', 678, 1022, '22th November', 'With selling gift cart
+                     for up to $100.00', 1, 12);
+
+INSERT INTO notebooks(id, product_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+                      ('', 'Macbook Pro', 'images/macbookpro.png', '2.7 GHz dual-core Intel Core i5 processor
+                      Turbo Boost up to 3.1GHz with 3MB shared L3 cache 13.3-inch IPS Retina Display 2560-by-1600
+                      resolution', 'Apple', 1459, 1601, '23th November', 'With selling gift card for up to $625.00',
+                      12, 16);
+
+INSERT INTO notebooks(id, product_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+                     ('', 'Macbook Air', 'images/macbookair.png', '1.6 GHz dual-core Intel Core i5 (Turbo Boost
+                     up to 2.7 GHz) with 3 MB shared L3 cache. 13.3-Inch (diagonal) LED-backlit Glossy Widescreen
+                     Display 1440 x 900 resolution', 'Apple', 800, 1000, '24th November', 'With selling gift cart
+                     for up to $100.00', 14, 15);
+
+INSERT INTO notebooks(id, product_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+                      ('', 'Macbook Pro', 'images/macbookpro.png', '2.7 GHz dual-core Intel Core i5 processor
+                      Turbo Boost up to 3.1GHz with 3MB shared L3 cache 13.3-inch IPS Retina Display 2560-by-1600
+                      resolution', 'Apple', 1234, 1456, '20th November', 'With selling gift card for up to $625.00',
+                      4, 6);

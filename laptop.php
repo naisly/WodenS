@@ -36,6 +36,6 @@ $view->headerView();
 
 $view->getItemsNames();
 $view->getFilterMenu( 'laptop' );
-$view->getItems();
+$view->getItems( 'notebooks' );
 
 $view->actionGetFooter( 'phones' );

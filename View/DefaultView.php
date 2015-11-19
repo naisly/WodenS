@@ -238,12 +238,16 @@ class DefaultView
      * Getting items to
      * the product page
      */
-    public function getItems() {
+    public function getItems( $page ) {
         $i = 0;
         echo '<div class="col-md-9">';
         while ( $i < count($this->model->id)) {
             echo '<div class="row">
-                    <div class="col-md-3 wow fadeInUp">
+                    <div class="col-md-3 wow fadeInUp"';
+            if($page === 'notebooks'){
+                echo 'style="margin-top: 30px"';
+            }
+            echo    '>
                         <img src="' . $this->model->getPhoto($i) . '" />
                     </div>
                     <div class="col-md-5 wow fadeInUp">
