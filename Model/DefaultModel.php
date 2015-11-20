@@ -30,6 +30,7 @@ class DefaultModel
     public $AItems;
 
     public $array;
+    public $quantity_of_items;
     /*public $array; */
 
     public function setProductName ( $product_name ) {
@@ -217,5 +218,15 @@ class DefaultModel
     public function getAItems() {
 
         return $this->AItems;
+    }
+
+    public function setQuantityOfItems( $quantity_of_items ){
+
+        $this->quantity_of_items = $quantity_of_items;
+    }
+
+    public function getQuantityOfItems( $i ) {
+
+        return $this->quantity_of_items[$i];
     }
 }

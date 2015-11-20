@@ -192,7 +192,12 @@ class DefaultView
             echo '<input type="checkbox" name="array' . $k . '" id="array' . $k . '" value="' . $this->model->getDistinctProductNames($k) . '"';
             if (isset($_POST['array' . $k])) echo "checked='checked'";
             echo "/>";
-            echo '<em> ' . $this->model->getDistinctProductNames($k) . '</em><br />';
+            echo '<em> ' . $this->model->getDistinctProductNames($k);
+            if($this->model->getQuantityOfItems($k) == 0){
+                echo '</em><br />';
+            } else {
+                echo '(' . $this->model->getQuantityOfItems($k) . ')</em><br />';
+            }
             $k++;
         }
 

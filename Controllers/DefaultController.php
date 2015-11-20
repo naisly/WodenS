@@ -116,24 +116,27 @@ class DefaultController
         }
 
         if (isset($array)) {
-            $i = 0;
-            while ($i < count($array)) {
-                $sql_query .= " product_name='" . $array[$i] . "' OR ";
-                $i++;
+            if(count($array) !== 0) {
+                $i = 0;
+                $sql_query .= '(';
+                while ($i < count($array)) {
+                    $sql_query .= " product_name='" . $array[$i] . "' OR ";
+                    $i++;
+                }
             }
             /*$str_count = strlen($sql_query); */
             if(count($array) !== 0) {
                 $sql_query = substr($sql_query, 0, -3);
                 if (isset($min) || isset($max)) {
                     if ($min !== '' || $max !== '') {
-                        $sql_query .= " AND";
+                        $sql_query .= ") AND";
                     }
                 }
             }
         }
         if (isset($min) && isset($max)) {
             if ($min !== '') {
-                $sql_query .= " price > " . $min;
+                $sql_query .= " (price > " . $min;
                 if(isset($max)) {
                     if ($max !== '') {
                         $sql_query .=" AND";
@@ -144,7 +147,10 @@ class DefaultController
         if (isset($max)) {
             if ($max === '') {
             } else {
-                $sql_query .= " price < " . $max . " ";
+                $sql_query .= " price < " . $max;
+            }
+            if(isset($min) && $min !== ''){
+                $sql_query .= ' )';
             }
         }
         $order_array = array();
@@ -170,7 +176,7 @@ class DefaultController
             }
         }
 
-        //echo $sql_query;
+        echo $sql_query;
         $result = $mysqli->query($sql_query);
         $product_name_array = array();
         $photo_array = array();
@@ -200,6 +206,65 @@ class DefaultController
                 $shipping_array = array_merge($shipping_array, array_map('trim', explode(",", $row['shipping'])));
                 $average_price_array = array_merge($average_price_array, array_map('trim', explode(",", $row['average_price'])));
             }
+
+            $all_product_names = array();
+
+            $sql_num = "SELECT DISTINCT product_name FROM $category";
+            $result_num = $mysqli->query( $sql_num );
+            $num = $result_num->num_rows;
+            if ($result_num->num_rows > 0) {
+                // output data of each row
+                while ($row = $result_num->fetch_assoc()) {
+                    $all_product_names = array_merge($all_product_names, array_map('trim', explode(",", $row['product_name'])));
+                }
+            }
+
+            //print_r($all_product_names);
+            #echo "<br />";
+
+
+            $amount_array = array( $num );
+            $g = 0;
+            while($g < $num){
+                $amount_array[$all_product_names[$g]] = 0;
+
+                $g++;
+            }
+            array_shift($amount_array);
+
+            //print_r($amount_array);
+
+            $k = 0;
+            while($k < count($product_name_array)) {
+                if(isset($min) && (!isset($max) || $max == '') && $min !== '') {
+                    $amount_sql = "SELECT COUNT(*) as amount FROM $category WHERE product_name='$product_name_array[$k]' AND price > $min";
+                } else if((!isset($min) || $min == '') && isset($max) && $max !== ''){
+                    $amount_sql = "SELECT COUNT(*) as amount FROM $category WHERE product_name='$product_name_array[$k]' AND price < $max";
+                } else if (isset($max) && isset($min) && $max !== '' && $min !== ''){
+                    $amount_sql = "SELECT COUNT(*) as amount FROM $category WHERE product_name='$product_name_array[$k]' AND price > $min AND price < $max";
+                } else {
+                    $amount_sql = "SELECT COUNT(*) as amount FROM $category WHERE product_name='$product_name_array[$k]'";
+                }
+                //echo $amount_sql;
+                $result_sql = $mysqli->query($amount_sql);
+
+                if ($result_sql->num_rows > 0) {
+                    while ($row = $result_sql->fetch_assoc()) {
+                        $amount = $row['amount'];
+                        $amount_array[$product_name_array[$k]] = $amount;
+                    }
+                }
+                $k++;
+            }
+            //print_r($amount_array);
+
+            $result_products = array();
+            foreach($amount_array as $num => $ass){
+                array_push($result_products, $ass);
+            }
+
+            //print_r($result_products);
+
             $this->model->setProductName($product_name_array);
             $this->model->setPhoto($photo_array);
             $this->model->setDescription($description_array);
@@ -212,6 +277,7 @@ class DefaultController
             $this->model->setQuantity($quantity_array);
             $this->model->setShipping($shipping_array);
             $this->model->setAverage($average_price_array);
+            $this->model->setQuantityOfItems($result_products);
         }
     }
 
