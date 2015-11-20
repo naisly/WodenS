@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: Home
- * Date: 28.10.2015
- * Time: 18:57
+ * Date: 20.11.2015
+ * Time: 18:25
  */
 
 include_once('Controllers\DefaultController.php');
@@ -22,20 +22,20 @@ $view = new DefaultView($model);
 $controller->actionGetQuantityOfItems();
 $controller->actionGetSumOfItems();
 
-$controller->actionSetAveragePrice( 'phones' );
+$controller->actionSetAveragePrice( 'Notebooks' );
 
-$controller->actionGetDistinctCategories( 'Phones' );
+$controller->actionGetDistinctCategories( 'Notebooks' );
 
-$controller->actionGetItemNames( 'phones', 'phones' );
+$controller->actionGetItemNames( 'Notebooks', 'Apple' );
 
-$controller->actionGetCategories( 'phones' );
+$controller->actionGetCategories( 'Notebooks' );
 
 $view->DoctypeView( 'phones' );
 
 $view->headerView();
 
-$view->getItemsNames( 'phones' );
-$view->getFilterMenu( 'phones' );
-$view->getItems( 'phones' );
+$view->getItemsNames( 'notebooks' );
+$view->getFilterMenu( 'apple-notebooks' );
+$view->getItems( 'notebooks' );
 
 $view->actionGetFooter( 'phones' );

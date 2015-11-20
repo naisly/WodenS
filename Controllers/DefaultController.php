@@ -386,7 +386,7 @@ class DefaultController
      *
      * @var $product_names_array
      */
-    public function actionGetItemNames( $category ) {
+    public function actionGetItemNames( $category , $db) {
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
         if ( $category === 'phones') {
@@ -394,7 +394,7 @@ class DefaultController
         } else if ( $category === 'Notebooks'){
             $sql_query = "SELECT DISTINCT product_name FROM notebooks";
         } else {
-            $sql_query = "SELECT DISTINCT product_name FROM phones WHERE category='$category'";
+            $sql_query = "SELECT DISTINCT product_name FROM $db WHERE category='$category'";
         }
         $result = $mysqli->query($sql_query);
 

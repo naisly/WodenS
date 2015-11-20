@@ -26,7 +26,7 @@ $controller->actionSetAveragePrice( 'phones' );
 
 $controller->actionGetDistinctCategories( 'phones' );
 
-$controller->actionGetItemNames( 'Apple' );
+$controller->actionGetItemNames( 'Apple','Phones' );
 
 $controller->actionGetCategories( 'phones' );
 
@@ -34,7 +34,7 @@ $view->DoctypeView( 'Apple' );
 
 $view->headerView();
 
-$view->getItemsNames();
+$view->getItemsNames( 'phones' );
 $view->getFilterMenu( 'Apple' );
 $view->getItems( 'phones' );
 

@@ -26,7 +26,7 @@ $controller->actionSetAveragePrice( 'Notebooks' );
 
 $controller->actionGetDistinctCategories( 'Notebooks' );
 
-$controller->actionGetItemNames( 'Notebooks' );
+$controller->actionGetItemNames( 'Notebooks', 'Notebooks' );
 
 $controller->actionGetCategories( 'Notebooks' );
 
