@@ -133,6 +133,12 @@ class DefaultController
                     }
                 }
             }
+            if(count($array) === 1 && !isset($max) && !isset($min)){
+                $sql_query .= ')';
+            }
+            if($max == '' && $min == '' && count($array) !== 0){
+                $sql_query .= ')';
+            }
         }
         if (isset($min) && isset($max)) {
             if ($min !== '') {
@@ -176,7 +182,7 @@ class DefaultController
             }
         }
 
-        echo $sql_query;
+        //echo $sql_query;
         $result = $mysqli->query($sql_query);
         $product_name_array = array();
         $photo_array = array();

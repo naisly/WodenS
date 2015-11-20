@@ -229,4 +229,9 @@ class DefaultModel
 
         return $this->quantity_of_items[$i];
     }
+
+    public function setCountOfItems() {
+
+        return count($this->quantity_of_items);
+    }
 }
