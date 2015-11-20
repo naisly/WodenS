@@ -102,7 +102,7 @@ class DefaultView
                     <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li><a href="phones-all.php">Phones <span class="sr-only">(current)</span></a></li>
-                            <li><a href="notebooks.php">Notebooks</a></li>
+                            <li><a href="laptops.php">Laptops</a></li>
                             <li><a href="devices.php">Devices</a></li>
                             <li><a href="tv.php">TV</a></li>
                             <li><a href="support.php">Support</a></li>
@@ -141,15 +141,15 @@ class DefaultView
     /*
      * Getting distinct items names
      */
-    public function getItemsNames()
+    public function getItemsNames( $category )
     {
-        echo '<div class="items-row pointer">
-                  <div class="col-md-3"></div>
-                       <div class="col-md-6 items-align">
-                            <ul class="text-align">
-                                <a style="font-size: 18px; margin-right: 15px; color: #e4e4e4; text-decoration: none;" class="categories-list" style="text-decoration: none" href="Phones.php">All</a>';
+        echo "<div class='items-row pointer'>
+                  <div class='col-md-3'></div>
+                       <div class='col-md-6 items-align'>
+                            <ul class='text-align'>
+                                <a style='font-size: 18px; margin-right: 15px; color: #e4e4e4; text-decoration: none;' class='categories-list' href='$category.php'>All</a>";
         foreach ($this->model->distinct_categories as $value => $key) {
-            echo "<a style='font-size: 18px; margin-right: 15px; color: #e4e4e4; text-decoration: none;' class='categories-list' href='{$this->model->distinct_categories[$value]}.php'>" . $this->model->distinct_categories[$value] . "</a>";
+            echo "<a style='font-size: 18px; margin-right: 15px; color: #e4e4e4; text-decoration: none;' class='categories-list' href='{$this->model->distinct_categories[$value]}-{$category}.php'>" . $this->model->distinct_categories[$value] . "</a>";
         }
         echo '               </ul>
                         </div>
@@ -316,7 +316,7 @@ class DefaultView
                                     <li class="footer-menu"><b>Shop</b></li>
                                     <li><a class="items" href="/">Home</a></li>
                                     <li><a class="items" href="phones-all.php">Phones</a></li>
-                                    <li><a class="items" href="notebooks.php">Notebooks</a></li>
+                                    <li><a class="items" href="laptops.php">Laptops</a></li>
                                     <li><a class="items" href="devices.php">Devices</a></li>
                                     <li><a class="items" href="tv.php">TV</a></li>
                                     <li><a class="items" href="support.php">Support</a></li>
