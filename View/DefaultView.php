@@ -168,7 +168,7 @@ class DefaultView
         $n = 0;
         /*echo '<div class="row">
                   <div class="col-md-3">
-                      <form action="apple.php" method="post">
+                      <form action="apple-phones.php" method="post">
                            <h class="search-item">Items: <br/></h>';
         $k = 0;
         while ($k < count($this->model->distinct_product_names)) {
@@ -249,7 +249,7 @@ class DefaultView
         while ( $i < count($this->model->id)) {
             echo '<div class="row">
                     <div class="col-md-3 wow fadeInUp"';
-            if($page === 'notebooks'){
+            if($page === 'notebooks' || $page === 'television'){
                 echo 'style="margin-top: 30px"';
             }
             echo    '>
@@ -257,7 +257,7 @@ class DefaultView
                     </div>
                     <div class="col-md-5 wow fadeInUp">
                         <p class="spacer"></p>
-                        <h id="header-items" style="font-size: 20px;">' . $this->model->getProductName($i) . '</h>
+                        <h id="header-items" style="font-size: 20px;">' . $this->model->getOriginalName($i) . '</h>
                         <span><br />by ' . $this->model->getCategory($i) . '</span>
                         <p id="price">' . $this->model->getPrice($i) . '$' . ' ' . '<span id="prev-price"><strike>' . $this->model->getPriviousPrice($i) . '$' . '</strike> (' . $this->model->getShipping($i) . ' ' . 'days shipping)</span></p>
                         <p id="prev-price"> In stock on ' . $this->model->getTimeOfAdding($i) . '</p>

@@ -54,18 +54,24 @@ class DefaultController
      * @var $shipping_array
      * @var $average_price_array
      */
-    public function actionGetCategories( $category ) {
+    public function actionGetCategories( $category, $table ) {
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
+
+        $_SESSION['status'] = 0;
         $sql_query = "SELECT * FROM phones";
         if ($category === 'phones') {
             $sql_query = "SELECT * FROM phones";
         } else if ($category === 'Notebooks'){
             $sql_query = "SELECT * FROM notebooks";
+        } else if ($category === 'Television'){
+            $sql_query = "SELECT * FROM television";
         } else {
-            $sql_query = "SELECT * FROM phones WHERE category='$category'";
+            $sql_query = "SELECT * FROM $table WHERE category='$category'";
+            $_SESSION['status'] = 1;
         }
+        //echo $_SESSION['status'];
         $timer = 0;
         $array = array();
         while($timer < 10) {
@@ -105,13 +111,21 @@ class DefaultController
             if($min == '' && $max == ''){
 
             } else {
-                $sql_query .= ' WHERE';
+                if($_SESSION['status'] == 1){
+                    $sql_query .= ' AND';
+                } else {
+                    $sql_query .= ' WHERE';
+                }
             }
         }
 
         if(isset($array)){
             if(count($array) !== 0) {
-                $sql_query .= ' WHERE';
+                if($_SESSION['status'] == 1){
+                    $sql_query .= ' AND';
+                } else {
+                    $sql_query .= ' WHERE';
+                }
             }
         }
 
@@ -187,6 +201,7 @@ class DefaultController
         //echo $sql_query;
         $result = $mysqli->query($sql_query);
         $product_name_array = array();
+        $original_name_array = array();
         $photo_array = array();
         $description_array = array();
         $category_array = array();
@@ -203,6 +218,7 @@ class DefaultController
             while ($row = $result->fetch_assoc()) {
                 $id_array = array_merge($id_array, array_map('trim', explode(",", $row['id'])));
                 $product_name_array = array_merge($product_name_array, array_map('trim', explode(",", $row['product_name'])));
+                $original_name_array = array_merge($original_name_array, array_map('trim', explode(",", $row['original_name'])));
                 $photo_array = array_merge($photo_array, array_map('trim', explode(",", $row['photo'])));
                 $description_array = array_merge($description_array, array_map('trim', explode(",", $row['description'])));
                 $category_array = array_merge($category_array, array_map('trim', explode(",", $row['category'])));
@@ -216,8 +232,8 @@ class DefaultController
             }
 
             $all_product_names = array();
-
-            $sql_num = "SELECT DISTINCT product_name FROM $category";
+            //echo $sql_query;
+            $sql_num = "SELECT DISTINCT product_name FROM $table";
             $result_num = $mysqli->query( $sql_num );
             $num = $result_num->num_rows;
             if ($result_num->num_rows > 0) {
@@ -245,13 +261,13 @@ class DefaultController
             $k = 0;
             while($k < count($product_name_array)) {
                 if(isset($min) && (!isset($max) || $max == '') && $min !== '') {
-                    $amount_sql = "SELECT COUNT(*) as amount FROM $category WHERE product_name='$product_name_array[$k]' AND price > $min";
+                    $amount_sql = "SELECT COUNT(*) as amount FROM $table WHERE product_name='$product_name_array[$k]' AND price > $min";
                 } else if((!isset($min) || $min == '') && isset($max) && $max !== ''){
-                    $amount_sql = "SELECT COUNT(*) as amount FROM $category WHERE product_name='$product_name_array[$k]' AND price < $max";
+                    $amount_sql = "SELECT COUNT(*) as amount FROM $table WHERE product_name='$product_name_array[$k]' AND price < $max";
                 } else if (isset($max) && isset($min) && $max !== '' && $min !== ''){
-                    $amount_sql = "SELECT COUNT(*) as amount FROM $category WHERE product_name='$product_name_array[$k]' AND price > $min AND price < $max";
+                    $amount_sql = "SELECT COUNT(*) as amount FROM $table WHERE product_name='$product_name_array[$k]' AND price > $min AND price < $max";
                 } else {
-                    $amount_sql = "SELECT COUNT(*) as amount FROM $category WHERE product_name='$product_name_array[$k]'";
+                    $amount_sql = "SELECT COUNT(*) as amount FROM $table WHERE product_name='$product_name_array[$k]'";
                 }
                 //echo $amount_sql;
                 $result_sql = $mysqli->query($amount_sql);
@@ -274,6 +290,7 @@ class DefaultController
             //print_r($result_products);
 
             $this->model->setProductName($product_name_array);
+            $this->model->setOriginalName($original_name_array);
             $this->model->setPhoto($photo_array);
             $this->model->setDescription($description_array);
             $this->model->setCategory($category_array);
@@ -332,7 +349,9 @@ class DefaultController
         } else if ( $category === 'Notebooks') {
             $sql_query = "SELECT price FROM notebooks";
             $sql_products = "SELECT DISTINCT product_name FROM notebooks";
-
+        } else if ( $category === 'Television') {
+            $sql_query = "SELECT price FROM television";
+            $sql_products = "SELECT DISTINCT product_name FROM television";
             //echo $sql_query;
             //echo $sql_products;
         } else {
@@ -386,15 +405,17 @@ class DefaultController
      *
      * @var $product_names_array
      */
-    public function actionGetItemNames( $category , $db) {
+    public function actionGetItemNames( $category , $data) {
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
         if ( $category === 'phones') {
             $sql_query = "SELECT DISTINCT product_name FROM phones";
         } else if ( $category === 'Notebooks'){
             $sql_query = "SELECT DISTINCT product_name FROM notebooks";
+        } else if ( $category === 'Television'){
+            $sql_query = "SELECT DISTINCT product_name FROM television";
         } else {
-            $sql_query = "SELECT DISTINCT product_name FROM $db WHERE category='$category'";
+            $sql_query = "SELECT DISTINCT product_name FROM $data WHERE category='$category'";
         }
         $result = $mysqli->query($sql_query);
 
@@ -424,7 +445,7 @@ class DefaultController
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
-        session_start();
+        //session_start();
         if(isset($_SESSION['login_user'])) {
             $user = $_SESSION['login_user'];
 

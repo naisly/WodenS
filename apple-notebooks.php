@@ -26,9 +26,9 @@ $controller->actionSetAveragePrice( 'Notebooks' );
 
 $controller->actionGetDistinctCategories( 'Notebooks' );
 
-$controller->actionGetItemNames( 'Notebooks', 'Apple' );
+$controller->actionGetItemNames( 'Apple', 'Notebooks' );
 
-$controller->actionGetCategories( 'Notebooks' );
+$controller->actionGetCategories( 'Apple' ,'Notebooks' );
 
 $view->DoctypeView( 'phones' );
 
@@ -36,6 +36,6 @@ $view->headerView();
 
 $view->getItemsNames( 'notebooks' );
 $view->getFilterMenu( 'apple-notebooks' );
-$view->getItems( 'notebooks' );
+$view->getItems( 'apple-notebooks' );
 
 $view->actionGetFooter( 'phones' );

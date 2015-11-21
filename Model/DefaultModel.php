@@ -12,6 +12,7 @@
 class DefaultModel
 {
     public $product_name;
+    public $original_name;
     public $photo;
     public $description;
     public $category;
@@ -48,6 +49,16 @@ class DefaultModel
     public function setPhoto( $photo ) {
 
         $this->photo = $photo;
+    }
+
+    public function setOriginalName( $original_name ) {
+
+        $this->original_name = $original_name;
+    }
+
+    public function getOriginalName( $i ) {
+
+        return $this->original_name[$i];
     }
 
     public function getPhoto($i) {
