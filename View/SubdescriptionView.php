@@ -148,7 +148,7 @@ class SubdescriptionView extends DefaultView
 
         echo '</ul>
               <div class="divider"></div>
-              <h class="header-details">' . $this->model->getProductDetails(0) . '</h>
+              <h class="tech-details">' . $this->model->getProductDetails(0) . '</h>
               <ul style="margin-top: 35px; margin-left: 30px;">';
 
         $u = 1;
