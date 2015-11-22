@@ -75,7 +75,7 @@ class DefaultView
         }
 
         echo '</head>
-            <body>';
+            <body onload="preload_page()">';
     }
 
     /*
@@ -245,7 +245,17 @@ class DefaultView
      */
     public function getItems( $page ) {
         $i = 0;
-        echo '<div class="col-md-9">';
+        echo '<div id="floatingCirclesG">
+                <div class="f_circleG" id="frotateG_01"></div>
+                <div class="f_circleG" id="frotateG_02"></div>
+                <div class="f_circleG" id="frotateG_03"></div>
+                <div class="f_circleG" id="frotateG_04"></div>
+                <div class="f_circleG" id="frotateG_05"></div>
+                <div class="f_circleG" id="frotateG_06"></div>
+                <div class="f_circleG" id="frotateG_07"></div>
+                <div class="f_circleG" id="frotateG_08"></div>
+            </div>';
+        echo '<div class="col-md-9" id="total">';
         while ( $i < count($this->model->id)) {
             echo '<div class="row">
                     <div class="col-md-3 wow fadeInUp"';
@@ -297,7 +307,8 @@ class DefaultView
      * Footer, bottom part
      */
     public function actionGetFooter( $page ) {
-        echo   '<footer>
+        echo   '</div>
+                <footer>
                     <div class="container">
                          <div class="row">
                              <div class="col-sm-1"></div>
@@ -420,5 +431,17 @@ class DefaultView
                 echo '<script src="js/jquery-min.js"></script>
                       <script src="js/bootstrap.min.js"></script>';
             }
+        echo '<script type="text/javascript">
+                var check_preload;
+                function preload_page() {
+                  if(check_preload) {
+                    document.getElementById("total").style.visibility = "visible";
+                    document.getElementById("floatingCirclesG").style.visibility = "hidden";
+                  }
+                }
+              </script>
+              <script type="text/javascript">
+                check_preload=1;
+              </script>';
     }
 }
