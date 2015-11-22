@@ -561,3 +561,31 @@ INSERT INTO gadgets(id, product_name, original_name, photo, description, categor
             ('', 'Samsung Galaxy Tab 2', 'Samsung Galaxy Tab 2', 'images/galaxyshop1.jpg', '10.1-inch Multitouch 720p HD Screen (1280 x 800)
             1GHz Dual-Core Processor', 'Samsung', '434', '566', '27th December', '155$ shipping and coupon for 35$ as free',
             3, 6);
+
+CREATE TABLE subdescription(
+  id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  product_name VARCHAR(200) NOT NULL,
+  description VARCHAR(1000),
+  assoc_products VARCHAR(1000),
+  technical_details VARCHAR(1000),
+  technical_details1 VARCHAR(1000),
+  technical_details2 VARCHAR(1000),
+  technical_details3 VARCHAR(1000),
+  technical_details4 VARCHAR(1000),
+  technical_details5 VARCHAR(1000),
+  technical_details6 VARCHAR(1000),
+  product_details VARCHAR(1000)
+)
+
+INSERT INTO subdescription VALUES('', 'Iphone 6S White 32GB Neverlock', '4.7-inch (diagonal) LED-backlit widescreen Multi-Touch display with IPS technology/, New 8-megapixel iSight camera with 1.5 pixels /,
+            A8 chip with 64-bit architecture. M8 motion coprocessor /, 1080p HD video recording (30 fps or 60 fps) /, Unlocked cell phones are compatible with GSM carriers like AT&T and T-Mobile as well as
+            with GSM SIM cards (e.g. H20 and select prepaid carriers). Unlocked cell phones will not work with CDMA Carriers like Sprint; Verizon; Boost or Virgin.', 'Iphone 6 Black/White 8GB Neverlock/,
+            Iphone 5S White 16GB Unlocked/, Iphone 6S White 32GB Neverlock /, Iphone 4 Black 64 GB Neverlock /, Iphone 5 White 16GB Unlocked', 'Size (LWH): 5.44 inches; 2.64 inches; 0.27 inches /,
+            Weight: 4.48 ounces /, Minimum Rated Talk Time: 14 hours /, Minimum Rated Standby Time: 250 hours', 'Display /, Retina HD display /, 1334-by-750-pixel resolution at 326 ppi /, 1400:1 contrast ratio (typical)/,
+            500 cd/m2 max brightness (typical) /, Full sRGB standard /, Dual-domain pixels for wider viewing angles /, Fingerprint-resistant oleophobic coating on front /, Support for display of multiple languages and characters simultaneously /,
+            Display Zoom', 'iSight Camera /, Autofocus with Focus Pixels /, f/2.2 aperture /, True Tone flash /, Hybrid IR filter /, Backside illumination sensor /,Sapphire crystal lens cover /,
+            Auto image stabilization /, Auto HDR for photos /, Improved face detection /, Exposure control /, Panorama (upto 43 megapixels) /,Burst mode /,Tap to focus /, Photo geotagging /, Timer mode',
+            'Video Recording /, 1080p HD video recording (30 fps or 60 fps) /, True Tone flash /, Slo-mo video (120 fps or 240 fps) /,Time-lapse video /,Cinematic video stabilization /,Continuous autofocus video /,Take still photos while recording video /,
+            Improved face detection /,3x zoom /, Video geotagging', 'Cellular and Wireless /, UMTS/HSPA+/DC-HSDPA (850; 900; 1700/2100; 1900; 2100 MHz) /, 802.11a/b/g/n/ac WiFi /, Bluetooth 4.0 wireless technology NFC',
+            'SIM card /, Nano-SIM /, iPhone 6 is not compatible with existing micro SIM cards', 'In the Box /, iPhone with iOS 8 /, Apple EarPods with Remote and Mic /, Lightning to USB Cable /, USB Power Adapter /, Documentation',
+            'Product Dimensions: 5.4 x 2.6 x 0.3 inches ; 4.5 ounces /, Shipping Weight: 13.6 ounces /, ASIN: B00NQGP3L6');
