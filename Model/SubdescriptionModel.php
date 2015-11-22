@@ -195,9 +195,14 @@ class SubdescriptionModel extends DefaultModel
         $this->technical_details1 = $technical_details1;
     }
 
-    public function getTechnicalDetails1() {
+    public function getTechnicalDetails1( $i ) {
 
-        return $this->technical_details1;
+        return $this->technical_details1[$i];
+    }
+
+    public function countTechnicalDetails1() {
+
+        return count($this->technical_details1);
     }
 
     public function setTechnicalDetails2( $technical_details2 ){
@@ -205,9 +210,14 @@ class SubdescriptionModel extends DefaultModel
         $this->technical_details2 = $technical_details2;
     }
 
-    public function getTechnicalDetails2() {
+    public function getTechnicalDetails2( $i ) {
 
-        return $this->technical_details2;
+        return $this->technical_details2[$i];
+    }
+
+    public function countTechnicalDetails2() {
+
+        return count($this->technical_details2);
     }
 
     public function setTechnicalDetails3( $technical_details3 ){
@@ -215,9 +225,14 @@ class SubdescriptionModel extends DefaultModel
         $this->technical_details3 = $technical_details3;
     }
 
-    public function getTechnicalDetails3() {
+    public function getTechnicalDetails3( $i ) {
 
-        return $this->technical_details3;
+        return $this->technical_details3[$i];
+    }
+
+    public function countTechnicalDetails3() {
+
+        return count($this->technical_details3);
     }
 
     public function setTechnicalDetails4( $technical_details4 ){
@@ -225,9 +240,14 @@ class SubdescriptionModel extends DefaultModel
         $this->technical_details4 = $technical_details4;
     }
 
-    public function getTechnicalDetails4() {
+    public function getTechnicalDetails4( $i ) {
 
-        return $this->technical_details4;
+        return $this->technical_details4[$i];
+    }
+
+    public function countTechnicalDetails4() {
+
+        return count($this->technical_details4);
     }
 
     public function setTechnicalDetails5( $technical_details5 ){
@@ -235,9 +255,14 @@ class SubdescriptionModel extends DefaultModel
         $this->technical_details5 = $technical_details5;
     }
 
-    public function getTechnicalDetails5() {
+    public function getTechnicalDetails5( $i ) {
 
-        return $this->technical_details5;
+        return $this->technical_details5[$i];
+    }
+
+    public function countTechnicalDetails5() {
+
+        return count($this->technical_details5);
     }
 
     public function setTechnicalDetails6( $technical_details6 ){
@@ -245,9 +270,14 @@ class SubdescriptionModel extends DefaultModel
         $this->technical_details6 = $technical_details6;
     }
 
-    public function getTechnicalDetails6() {
+    public function getTechnicalDetails6( $i ) {
 
-        return $this->technical_details6;
+        return $this->technical_details6[$i];
+    }
+
+    public function countTechnicalDetails6() {
+
+        return count($this->technical_details6);
     }
 
     public function setProductDetails( $product_details ){
@@ -255,9 +285,14 @@ class SubdescriptionModel extends DefaultModel
         $this->product_details = $product_details;
     }
 
-    public function getProductDetails() {
+    public function getProductDetails( $i ) {
 
-        return $this->product_details;
+        return $this->product_details[$i];
+    }
+
+    public function countProductDetails() {
+
+        return count($this->product_details);
     }
 
     public function setProductPhoto( $product_photo ){

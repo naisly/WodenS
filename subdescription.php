@@ -29,3 +29,5 @@ $view->DoctypeView( 'subdescription' );
 
 $view->headerView();
 $view->MainView( 'Apple', 'Phones' );
+
+$view->actionGetFooter( 'subdescription' );
