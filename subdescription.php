@@ -25,6 +25,7 @@ $controller->actionGetSumOfItems();
 
 
 
-$view->DoctypeView( 'gadgets' );
+$view->DoctypeView( 'subdescription' );
 
 $view->headerView();
+$view->MainView( 'Apple', 'Phones' );

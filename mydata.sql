@@ -565,6 +565,7 @@ INSERT INTO gadgets(id, product_name, original_name, photo, description, categor
 CREATE TABLE subdescription(
   id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   product_name VARCHAR(200) NOT NULL,
+  assoc_photo VARCHAR(100) NOT NULL,
   description VARCHAR(1000),
   assoc_products VARCHAR(1000),
   technical_details VARCHAR(1000),
@@ -575,9 +576,9 @@ CREATE TABLE subdescription(
   technical_details5 VARCHAR(1000),
   technical_details6 VARCHAR(1000),
   product_details VARCHAR(1000)
-)
+);
 
-INSERT INTO subdescription VALUES('', 'Iphone 6S White 32GB Neverlock', '4.7-inch (diagonal) LED-backlit widescreen Multi-Touch display with IPS technology/, New 8-megapixel iSight camera with 1.5 pixels /,
+INSERT INTO subdescription VALUES('', 'Iphone 6S White 32GB Neverlock', 'images/iphone6Sdesc.jpg' ,'4.7-inch (diagonal) LED-backlit widescreen Multi-Touch display with IPS technology/, New 8-megapixel iSight camera with 1.5 pixels /,
             A8 chip with 64-bit architecture. M8 motion coprocessor /, 1080p HD video recording (30 fps or 60 fps) /, Unlocked cell phones are compatible with GSM carriers like AT&T and T-Mobile as well as
             with GSM SIM cards (e.g. H20 and select prepaid carriers). Unlocked cell phones will not work with CDMA Carriers like Sprint; Verizon; Boost or Virgin.', 'Iphone 6 Black/White 8GB Neverlock/,
             Iphone 5S White 16GB Unlocked/, Iphone 6S White 32GB Neverlock /, Iphone 4 Black 64 GB Neverlock /, Iphone 5 White 16GB Unlocked', 'Size (LWH): 5.44 inches; 2.64 inches; 0.27 inches /,

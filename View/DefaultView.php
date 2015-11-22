@@ -32,8 +32,8 @@ class DefaultView
     {
         echo '<!DOCTYPE html>
                 <html>
-                <head>
-                    <title>Woden S</title>
+                <head>';
+                    echo '<title>Woden S</title>
                     <!-- HTML 5 markup and encoding utf-8 -->
                     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
                     <!-- For Internet Explorer -->
@@ -69,6 +69,8 @@ class DefaultView
             echo '<link href="css/tv.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'login' || $page == 'admin' || $page == 'support-thanks'){
             echo '<link href="css/login.css" rel="stylesheet" type="text/css">';
+        } else if ($page == 'subdescription'){
+            echo '<link href="css/subdescription.css" rel="stylesheet" type="text/css">';
         } else {
             echo '<link rel="stylesheet" href="css/default.css" />' .
                  '<link rel="stylesheet" href="css/animate.css" />';
