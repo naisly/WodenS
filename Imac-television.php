@@ -28,7 +28,7 @@ $controller->actionGetDistinctCategories( 'Television' );
 
 $controller->actionGetItemNames( 'IMac', 'Television' );
 
-$controller->actionGetCategories( 'IMac', 'Television' );
+$controller->actionGetCategories( 'IMac', 'Television', 'Imac' );
 
 $view->DoctypeView( 'phones' );
 

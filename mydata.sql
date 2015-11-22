@@ -493,3 +493,71 @@ INSERT INTO television(id, product_name, original_name, photo, description, cate
             ('', 'AirPort', 'AirPort normal', 'images/appletv.jpg', 'AirPort Extreme works simultaneously on both the 2.4GHz and 5GHz bands allows all devices on the network to use band automatically.
             Set up a separate Wi-Fi network with a separate password for your visitors.', 'AppleTV', 67, 91, '14th December',
             '25$ shipping and coupon for 55$ as free', 6, 19);
+
+CREATE TABLE gadgets (
+  id INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  product_name VARCHAR(100) NOT NULL,
+  original_name VARCHAR(200) NOT NULL,
+  photo VARCHAR(30) NOT NULL,
+  description VARCHAR(300) NOT NULL,
+  category VARCHAR(15) NOT NULL,
+  price INT(10) NOT NULL,
+  previous_price INT(10),
+  time_of_adding VARCHAR(20) NOT NULL,
+  features VARCHAR(300) NOT NULL,
+  quantity INT(5) NOT NULL,
+  shipping INT(3) NOT NULL,
+  average_price INT(10) NOT NULL,
+  time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO gadgets(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+            ('', 'Ipad mini', 'Apple iPad mini MD531LL/A (16GB Wi-Fi Only White / Silver)', 'images/ipadshop1.jpg', '7.9-inch LED-backlit Multi-Touch Display; 1024-by-768 Resolution
+            Apple iOS 6; Dual-Core A5 Chip 1GHZ', 'Apple', 299, 431, '15th December', '25$ shipping and coupon for 55$ as free', 8, 19);
+INSERT INTO gadgets(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+            ('', 'Ipad mini', 'Apple iPad with Retina Display MD510LL/A (16GB Wi-Fi Black) 4th Generation', 'images/ipadshop.jpg', '5 MP iSight Camera; 1080p HD Video Recording
+            Wi-Fi (802.11a/b/g/n); 16 GB Capacity', 'Apple', 463, 501, '16th December', '45$ shipping and coupon for 75$ as free', 5, 11);
+INSERT INTO gadgets(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+            ('', 'Ipad mini', 'Apple iPad 2 MH0W2LL/A 10-Inch Retina Display 16GB (Gold)', 'images/ipadshop3.jpg', 'Wi-Fi (802.11a/b/g/n); 16 GB Capacity
+            Up to 10 Hours of Battery Life; 0.68 lbs', 'Apple', 564, 600, '17th December', '45$ shipping and coupon for 55$ as free', 4, 15);
+INSERT INTO gadgets(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+            ('', 'Ipad mini', 'Apple iPad 4 with Retina Display 16GB Wi-Fi Only Tablet, Black (Certified Refurbished)', 'images/ipadshop.jpg', 'Apple iOS 6; Dual-Core A5 Chip 1GHZ
+            Apple iOS 6; Dual-Core A5 Chip 1GHZ', 'Apple', 380, 560, '18th December', '55$ shipping and coupon for 55$ as free', 1, 10);
+INSERT INTO gadgets(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+            ('', 'Ipad mini', 'Apple iPad (32GB Wi-Fi Space Gray) - 12.9" Display', 'images/ipadshop4.jpg', '7.9-inch LED-backlit Multi-Touch Display; 1024-by-768 Resolution
+            Apple iOS 6; Dual-Core A5 Chip 1GHZ', 'Apple', 341, 345, '19th December', '65$ shipping and coupon for 55$ as free', 4, 11);
+
+INSERT INTO gadgets(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+            ('', 'Ipad pro', 'Apple iPad Air MD788LL/A (16GB Wi-Fi Silver)', 'images/ipadshop2.jpg', '9.7 inches Display 10-hour battery life 1.00 pounds
+            Apple iOS 7; 9.7 Retina display; 2048 x 1536 resolution', 'Apple', '234', '345', '19th December', '35$ shipping and coupon for 55$ as free',
+            6, 12);
+INSERT INTO gadgets(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+            ('', 'Ipad pro', 'Apple iPad Air FD788LL/A (16GB Wi-Fi White)(Certified Refurbished)', 'images/ipadshop.jpg', 'Apple iOS 7; 9.7 Retina display; 2048 x 1536 resolution
+            10-hour battery life', 'Apple', '565', '634', '20th December', '35$ shipping and coupon for 55$ as free',
+            6, 12);
+INSERT INTO gadgets(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+            ('', 'Ipad pro', 'Apple iPad Air MD786LL/A 9.7-Inch 32 GB Touchscreen Tablet (Black/Space Gray)', 'images/ipadshop3.jpg', '1.00 pounds 16 GB Flash Memory 1 GB RAM Memory
+            Apple iOS 7; 9.7 Retina display; 2048 x 1536 resolution', 'Apple', '345', '45', '21th December', '35$ shipping and coupon for 55$ as free',
+            6, 12);
+
+INSERT INTO gadgets(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+            ('', 'Samsung Galaxy Tab 4', 'Samsung Galaxy Tab 4 10.1 SM-T530 Android 4.4 16GB WiFi Tablet (WHITE)', 'images/galaxytab.jpg', 'Easily multitask with two apps using Multi
+            Window WXGA Display (1280x800 Resolution) 50GB of free Dropbox storage', 'Samsung', '453', '544', '22th December', '35$ shipping and coupon for 15$ as free',
+            8, 12);
+INSERT INTO gadgets(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+            ('', 'Samsung Galaxy Tab 4', 'Samsung Galaxy Tab 4 10.1 SM', 'images/galaxytab2.jpg', 'Dual Core Tegra 2 processor 1GB RAM
+            Memory Capacity: 16GB', 'Samsung', '342', '444', '23th December', '45$ shipping and coupon for 25$ as free',
+            5, 10);
+INSERT INTO gadgets(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+            ('', 'Samsung Galaxy Tab 4', 'Samsung Galaxy Tab (10.1-Inch 16GB Wi-Fi)', 'images/galaxytab1.jpg', 'Android Honeycomb 3.1
+            Display: 10.1" WXGA (1280x800)', 'Samsung', '423', '456', '24th December', '55$ shipping and coupon for 35$ as free',
+            5, 10);
+
+INSERT INTO gadgets(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+            ('', 'Samsung Galaxy Tab 2', 'Samsung Galaxy Tab 2 (10.1-Inch Wi-Fi) 2012 Model', 'images/galaxytabshop.jpg', 'Android 4.2 Jelly Bean
+            Wireless N Wi-Fi (802.11b/g/n); Bluetooth 3.0,GPS Enabled with Latitude, Google Maps', 'Samsung', '323', '406', '26th December', '55$ shipping and coupon for 35$ as free',
+            3, 8);
+INSERT INTO gadgets(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
+            ('', 'Samsung Galaxy Tab 2', 'Samsung Galaxy Tab 2', 'images/galaxyshop1.jpg', '10.1-inch Multitouch 720p HD Screen (1280 x 800)
+            1GHz Dual-Core Processor', 'Samsung', '434', '566', '27th December', '155$ shipping and coupon for 35$ as free',
+            3, 6);

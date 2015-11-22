@@ -28,7 +28,7 @@ $controller->actionGetDistinctCategories( 'Notebooks' );
 
 $controller->actionGetItemNames( 'Notebooks', 'Notebooks' );
 
-$controller->actionGetCategories( 'Notebooks', 'Notebooks' );
+$controller->actionGetCategories( 'Notebooks', 'Notebooks', 'All' );
 
 $view->DoctypeView( 'phones' );
 

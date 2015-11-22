@@ -54,7 +54,7 @@ class DefaultController
      * @var $shipping_array
      * @var $average_price_array
      */
-    public function actionGetCategories( $category, $table ) {
+    public function actionGetCategories( $category, $table, $sort ) {
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
@@ -67,6 +67,8 @@ class DefaultController
             $sql_query = "SELECT * FROM notebooks";
         } else if ($category === 'Television'){
             $sql_query = "SELECT * FROM television";
+        } else if ($category === 'gadgets'){
+            $sql_query = "SELECT * FROM gadgets";
         } else {
             $sql_query = "SELECT * FROM $table WHERE category='$category'";
             $_SESSION['status'] = 1;
@@ -233,7 +235,11 @@ class DefaultController
 
             $all_product_names = array();
             //echo $sql_query;
-            $sql_num = "SELECT DISTINCT product_name FROM $table";
+            if($sort === 'All') {
+                $sql_num = "SELECT DISTINCT product_name FROM $table";
+            } else {
+                $sql_num = "SELECT DISTINCT product_name FROM $table WHERE category='$sort'";
+            }
             $result_num = $mysqli->query( $sql_num );
             $num = $result_num->num_rows;
             if ($result_num->num_rows > 0) {
@@ -242,22 +248,16 @@ class DefaultController
                     $all_product_names = array_merge($all_product_names, array_map('trim', explode(",", $row['product_name'])));
                 }
             }
-
             //print_r($all_product_names);
             #echo "<br />";
-
-
             $amount_array = array( $num );
             $g = 0;
             while($g < $num){
                 $amount_array[$all_product_names[$g]] = 0;
-
                 $g++;
             }
             array_shift($amount_array);
-
             //print_r($amount_array);
-
             $k = 0;
             while($k < count($product_name_array)) {
                 if(isset($min) && (!isset($max) || $max == '') && $min !== '') {
@@ -271,7 +271,6 @@ class DefaultController
                 }
                 //echo $amount_sql;
                 $result_sql = $mysqli->query($amount_sql);
-
                 if ($result_sql->num_rows > 0) {
                     while ($row = $result_sql->fetch_assoc()) {
                         $amount = $row['amount'];
@@ -281,12 +280,10 @@ class DefaultController
                 $k++;
             }
             //print_r($amount_array);
-
             $result_products = array();
             foreach($amount_array as $num => $ass){
                 array_push($result_products, $ass);
             }
-
             //print_r($result_products);
 
             $this->model->setProductName($product_name_array);
@@ -354,7 +351,11 @@ class DefaultController
             $sql_products = "SELECT DISTINCT product_name FROM television";
             //echo $sql_query;
             //echo $sql_products;
-        } else {
+        } else if ( $category === 'Gadgets'){
+            $sql_query = "SELECT price FROM gadgets";
+            $sql_products = "SELECT DISTINCT product_name FROM gadgets";
+        }
+        else {
             $sql_query = "SELECT price FROM phones WHERE category='$category'";
             $sql_products = "SELECT DISTINCT product_name FROM phones WHERE category='$category'";
         }
@@ -414,6 +415,8 @@ class DefaultController
             $sql_query = "SELECT DISTINCT product_name FROM notebooks";
         } else if ( $category === 'Television'){
             $sql_query = "SELECT DISTINCT product_name FROM television";
+        } else if ( $category === 'gadgets'){
+            $sql_query = "SELECT DISTINCT product_name FROM gadgets";
         } else {
             $sql_query = "SELECT DISTINCT product_name FROM $data WHERE category='$category'";
         }

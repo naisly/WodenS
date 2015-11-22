@@ -28,7 +28,7 @@ $controller->actionGetDistinctCategories( 'Television' );
 
 $controller->actionGetItemNames( 'AppleTV', 'Television' );
 
-$controller->actionGetCategories( 'AppleTV','Television' );
+$controller->actionGetCategories( 'AppleTV','Television', 'AppleTV' );
 
 $view->DoctypeView( 'phones' );
 

@@ -28,7 +28,7 @@ $controller->actionGetDistinctCategories( 'phones' );
 
 $controller->actionGetItemNames( 'Apple','Phones' );
 
-$controller->actionGetCategories( 'Apple','phones' );
+$controller->actionGetCategories( 'Apple','phones', 'Apple' );
 
 $view->DoctypeView( 'Apple' );
 

@@ -2,14 +2,13 @@
 /**
  * Created by PhpStorm.
  * User: Home
- * Date: 28.10.2015
- * Time: 18:57
+ * Date: 22.11.2015
+ * Time: 1:04
  */
 
 include_once('Controllers\DefaultController.php');
 include_once('Model\DefaultModel.php');
 include_once('View\DefaultView.php');
-//initiate the triad
 
 $model = new DefaultModel();
 
@@ -22,20 +21,20 @@ $view = new DefaultView($model);
 $controller->actionGetQuantityOfItems();
 $controller->actionGetSumOfItems();
 
-$controller->actionSetAveragePrice( 'phones' );
+$controller->actionSetAveragePrice( 'gadgets' );
 
-$controller->actionGetDistinctCategories( 'Phones' );
+$controller->actionGetDistinctCategories( 'gadgets' );
 
-$controller->actionGetItemNames( 'phones', 'phones' );
+$controller->actionGetItemNames( 'Apple', 'gadgets' );
 
-$controller->actionGetCategories( 'phones','phones', 'All' );
+$controller->actionGetCategories( 'Apple' ,'gadgets', 'Apple' );
 
-$view->DoctypeView( 'phones' );
+$view->DoctypeView( 'gadgets' );
 
 $view->headerView();
 
-$view->getItemsNames( 'phones' );
-$view->getFilterMenu( 'phones' );
-$view->getItems( 'phones' );
+$view->getItemsNames( 'gadgets' );
+$view->getFilterMenu( 'apple-gadgets' );
+$view->getItems( 'apple-gadgets' );
 
-$view->actionGetFooter( 'phones' );
+$view->actionGetFooter( 'gadgets' );
