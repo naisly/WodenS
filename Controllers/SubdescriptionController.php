@@ -192,4 +192,83 @@ class SubdescriptionController extends DefaultController
         $this->model->setSortCategory( $category_array );
         $this->model->setSortPhoto( $photo_array );
     }
+
+    public function actionSelectRandomProduct() {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        $sql_query = "SELECT phones.original_name as phone, notebooks.original_name as notebook, gadgets.original_name as gadget, television.original_name as television FROM phones
+                      INNER JOIN gadgets INNER JOIN notebooks INNER JOIN television ORDER BY RAND() LIMIT 1";
+
+        $result_query = $mysqli->query( $sql_query );
+
+        $product_array = array();
+
+        if ($result_query->num_rows > 0) {
+            // output data of each row
+            while ($row = $result_query->fetch_assoc()) {
+                array_push($product_array, $row['phone']);
+                array_push($product_array, $row['notebook']);
+                array_push($product_array, $row['gadget']);
+                array_push($product_array, $row['television']);
+            }
+        }
+
+        //print_r($product_array);
+
+        $sequence_number = rand(1,4);
+        $table = '';
+
+        if( $sequence_number == 1){
+            $table = 'phones';
+        } else if ( $sequence_number == 2){
+            $table = 'notebooks';
+        } else if ( $sequence_number == 3){
+            $table = 'gadgets';
+        } else if ( $sequence_number == 4){
+            $table = 'television';
+        }
+
+        $search_num = $sequence_number - 1;
+
+        $query = "SELECT id, original_name, price, previous_price, quantity, photo FROM $table WHERE original_name='$product_array[$search_num]'";
+
+        //echo $query;
+        $result = $mysqli->query( $query );
+
+        $sequence_id = array();
+        $sequence_original_name = array();
+        $sequence_price = array();
+        $sequence_previous_price = array();
+        $sequence_quantity = array();
+        $sequence_photo = array();
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                $sequence_id = array_merge($sequence_id, array_map('trim', explode(",", $row['id'])));
+                $sequence_original_name = array_merge($sequence_original_name, array_map('trim', explode(",", $row['original_name'])));
+                $sequence_price = array_merge($sequence_price, array_map('trim', explode(",", $row['price'])));
+                $sequence_previous_price = array_merge($sequence_previous_price, array_map('trim', explode(",", $row['previous_price'])));
+                $sequence_quantity = array_merge($sequence_quantity, array_map('trim', explode(",", $row['quantity'])));
+                $sequence_photo = array_merge($sequence_photo, array_map('trim', explode(",", $row['photo'])));
+            }
+        }
+
+        if( strlen($sequence_original_name[0]) > 30 ){
+            $sequence_original_name[0] = substr($sequence_original_name[0], 0, 30);
+            $sequence_original_name[0] .= '...';
+        }
+
+        $this->model->setSequenceId( $sequence_id[0] );
+        $this->model->setSequenceOriginalName( $sequence_original_name[0] );
+        $this->model->setSequencePrice( $sequence_price[0] );
+        $this->model->setSequencePreviousPrice( $sequence_previous_price[0] );
+        $this->model->setSequenceQuantity( $sequence_quantity[0] );
+        $this->model->setSequencePhoto( $sequence_photo[0] );
+
+
+    }
 }

@@ -154,7 +154,7 @@ class SubdescriptionView extends DefaultView
                           <a href="https://www.facebook.com/alexandr.serduk.7"><img src="images/facebook.png" width="30" height="30" /></a>
                           <a href="https://twitter.com/naislygg"><img src="images/twitter.png" width="30" height="30" /></a>
                       </div>
-                      <div class="aside">
+                      <div class="aside" style="margin-top: 5px;">
                           <div class="shopping-cart">
                               <img src="images/shopping-cart.png" />
                               <h class="buy-new">Buy new :</h>
@@ -244,7 +244,26 @@ class SubdescriptionView extends DefaultView
 
 
         echo      '</div>
+                   <div class="aside" style="margin-top: 50px;">
+                        <div class="text-center" style="margin-top: 20px; border-bottom: 1px solid #e4e4e4; padding-bottom: 20px;">
+                             <h class="maybe">Maybe you are also <br />interested in ...</h>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="'. $this->model->getSequencePhoto() . '" width="85" height="86" class="random-photo" />
 
+                            </div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-7">
+                                <form action="subdescription.php" method="post">
+                                    <button class="random-name">' . $this->model->getSequenceOriginalName() . '</button><br />
+                                    <input type="hidden" name="id" value="' . $this->model->getSequenceId() . '" />
+                                </form>
+                                <h class="random-quantity">' . $this->model->getSequenceQuantity() . ' items</h><br />
+                                <h class="random-price">$' . $this->model->getSequencePrice() . ' <span class="random-prev-price"><strike>$' . $this->model->getSequencePreviousPrice() . '</strike></span></h>
+                            </div>
+                        </div>
+                   </div>
 
                   </div>
               </div>';
@@ -260,18 +279,5 @@ class SubdescriptionView extends DefaultView
             $u++;
         }
         echo '</ul>';
-
-        /*
-         * <form action="add-item.php" method="post">
-                                                <button class="btn btn-warning button-small" style="margin-left: 64%; margin-top: -40px;">
-                                                    Add to cart
-                                                </button>
-                                            <input type="hidden" name="id" value="' . $this->model->getId() . '"/>
-                                            <input type="hidden" name="product_name" value="' . $this->model->getProductName() . '"/>
-                                            <input type="hidden" name="category" value="' . $this->model->getCategory() . '"/>
-                                            <input type="hidden" name="photo" value="' . $this->model->getPhoto() . '"/>
-                                            <input type="hidden" name="price" value="' . $this->model->getPrice() . '"/>
-                          </form>
-         */
     }
 }

@@ -84,6 +84,7 @@ ul {
 }
 .social {
     margin-top: 30px;
+    margin-left: 40px;
 }
 .contact {
     margin-left: 30px;
@@ -92,7 +93,7 @@ ul {
 .aside {
     width: 80%;
     border: 1px solid #e4e4e4;
-    margin-top: 5px;
+    margin:0 auto;
 }
 .shopping-cart {
     margin-top: 13px;
@@ -159,4 +160,33 @@ ul {
 .sold-by {
     color: #999;
     font-size: 15px;
+}
+.maybe {
+    font-weight: bold;
+}
+.random-photo {
+    margin-top: 15px;
+    margin-left: 3px;
+    padding-bottom: 15px;
+}
+.random-name {
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 12px;
+    background-color: white;
+    border: none;
+    color: #1b6d85;
+}
+.random-quantity {
+    text-decoration: underline;
+    margin-left: 10px;
+}
+.random-price {
+    color: #ac5050;
+    font-size: 17px;
+    margin-left: 10px;
+}
+.random-prev-price {
+    color: black;
+    font-size: 12px;
 }
