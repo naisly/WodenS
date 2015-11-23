@@ -156,4 +156,40 @@ class SubdescriptionController extends DefaultController
         //print_r( $technical_details );
 
     }
+
+    public function actionSetDistinctProductsPrice( $table, $product_name){
+
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        $sql_query = "SELECT id, product_name, category, photo, price FROM $table WHERE (product_name='$product_name' AND price != {$this->model->getPrice()}) ORDER BY price ASC LIMIT 3";
+
+        $result_query = $mysqli->query( $sql_query );
+
+        //echo $sql_query;
+        $id_array = array();
+        $price_array = array();
+        $product_name_array = array();
+        $category_array = array();
+        $photo_array = array();
+
+        if ($result_query->num_rows > 0) {
+            // output data of each row
+            while ($row = $result_query->fetch_assoc()) {
+                $id_array = array_merge($id_array, array_map('trim', explode(",", $row['id'])));
+                $price_array = array_merge($price_array, array_map('trim', explode(",", $row['price'])));
+                $product_name_array = array_merge($product_name_array, array_map('trim', explode(",", $row['product_name'])));
+                $category_array = array_merge($category_array, array_map('trim', explode(",", $row['category'])));
+                $photo_array = array_merge($photo_array, array_map('trim', explode(",", $row['photo'])));
+            }
+        }
+
+        $this->model->setSortId( $id_array );
+        $this->model->setSortPrice( $price_array );
+        $this->model->setSortProductNames( $product_name_array );
+        $this->model->setSortCategory( $category_array );
+        $this->model->setSortPhoto( $photo_array );
+    }
 }

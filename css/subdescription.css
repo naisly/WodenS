@@ -82,3 +82,81 @@ ul {
 .spacer-35 {
     margin-top: 35px;
 }
+.social {
+    margin-top: 30px;
+}
+.contact {
+    margin-left: 30px;
+    text-decoration: none !important;
+}
+.aside {
+    width: 80%;
+    border: 1px solid #e4e4e4;
+    margin-top: 5px;
+}
+.shopping-cart {
+    margin-top: 13px;
+    margin-left: 20px;
+}
+.buy-new {
+    margin-left: 10px;
+    font-weight: bold;
+}
+.price-new {
+    float:right;
+    margin-right: 20px;
+    color: #ac5050;
+}
+.nova-poshta {
+    font-family: RobotoRegular;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 5px;
+}
+.qty {
+    margin-top: 30px;
+    margin-left: 27%;
+}
+#qty {
+    font-size: 17px;
+    font-family: RobotoRegular;
+}
+.paddings {
+    margin-top: 23px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+.button-link {
+    background-color: white;
+    border: none;
+    color: #1b6d85;
+    font-size: 13px;
+}
+.other-sellers {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e4e4e4;
+}
+.button-small {
+    line-height: 3px;
+    font-size: 12px;
+    width: 80px;
+    height: 24px;
+    color: black;
+}
+.sellers-items {
+    margin-top: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 85px;
+    border-bottom: 1px solid #e4e4e4;
+}
+.shipping-small {
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+}
+.sold-by {
+    color: #999;
+    font-size: 15px;
+}

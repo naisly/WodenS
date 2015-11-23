@@ -27,5 +27,9 @@ if(!$_SESSION['login_user']){
     $_SESSION['add_item'] = '0';
 
     $controller->actionAddItems();
-    header('Location: thanks-order.php');
+    if(isset($_POST['one-click-order'])){
+        header('Location: placeorder.php');
+    } else {
+        header('Location: thanks-order.php');
+    }
 }

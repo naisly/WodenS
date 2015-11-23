@@ -19,6 +19,7 @@ $controller = new SubdescriptionController($model);
 $view = new SubdescriptionView($model);
 
 $controller->actionGetSubdescription( $_POST['original_name'], $_POST['table'], $_POST['id_num'] );
+$controller->actionSetDistinctProductsPrice( $_POST['table'], $_POST['product_name']);
 
 $controller->actionGetQuantityOfItems();
 $controller->actionGetSumOfItems();
