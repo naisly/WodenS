@@ -190,3 +190,58 @@ ul {
     color: black;
     font-size: 12px;
 }
+.maybe-main {
+    margin-top: 20px;
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 20px;
+}
+.name-margin {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    color: #1b6d85;
+}
+.original-name {
+    font-size: 15px;
+    font-family: RobotoRegular;
+}
+.comparison {
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+.cprice {
+    color: #ac5050;
+}
+#header {
+    vertical-align: middle;
+}
+.shipping-comparison {
+    font-family: RobotoLight;
+}
+#striked {
+    color: #666;
+    font-size: 12px;
+}
+#emph {
+    font-size: 12px;
+}
+.paddings-table {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+.color-black {
+    color: black;
+    font-family: RobotoLight;
+}
+.no-border {
+    border-left: 1px solid white !important;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+.color-black:hover {
+    color: black;
+}
+.compare {
+    margin-left: 15px;
+    font-size: 23px;
+    color: #ac5050;
+}

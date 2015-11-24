@@ -286,6 +286,7 @@ class DefaultController
             }
             //print_r($result_products);
 
+            //print_r($id_array);
             $this->model->setProductName($product_name_array);
             $this->model->setOriginalName($original_name_array);
             $this->model->setPhoto($photo_array);

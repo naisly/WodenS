@@ -28,21 +28,21 @@ class SubdescriptionView extends DefaultView
                           <img src="' . $this->model->getProductPhoto() . '" width="230" height="550" />
                       </div>
                       <div class="col-md-7">
-                           <h class="main-header">' . $this->model->getOriginalName() . '</h><br />
-                           <h class="p-header">by <a style="text-decoration: none" href="' . $category . "-" . $table . ".php" . '">' . $this->model->getCategory() . '</a></h>
+                           <h class="main-header">' . $this->model->getOriginalName(0) . '</h><br />
+                           <h class="p-header">by <a style="text-decoration: none" href="' . $category . "-" . $table . ".php" . '">' . $this->model->getCategory(0) . '</a></h>
 
                            <div class="divider-main"></div>
 
-                           <h class="prev-price">List Price: <strike>$' . $this->model->getPriviousPrice() . '</strike></h><br />
-                           <h class="price">Price: <span id="price">$' . $this->model->getPrice() . '</span> <span id="bold">& FREE SHIPPING</span></h><br />
+                           <h class="prev-price">List Price: <strike>$' . $this->model->getPriviousPrice(0) . '</strike></h><br />
+                           <h class="price">Price: <span id="price">$' . $this->model->getPrice(0) . '</span> <span id="bold">& FREE SHIPPING</span></h><br />
                            <h class="you-save">You Save: <span id="you-save">$' . $this->model->getDifferentialBtwPrice() . ' (' . $this->model->getDifferentialPercent() . '%)</span></h>';
-            if($this->model->getQuantity() !== 0) {
+            if($this->model->getQuantity(0) !== 0) {
                 echo      '<p class="stock">In Stock</p>';
             } else {
                 echo      '<h class="no-stock">Out of Stock</h>';
             }
 
-            echo         '<h class="sold-by" style="float: left">Sold by <a href="apple.com" style="text-decoration: none">Apple</a> company. Gift-wrap available</h><br />
+            echo         '<h class="sold-by" style="float: left">Sold by <a href="http://apple.com" style="text-decoration: none">Apple</a> company. Gift-wrap available</h><br />
 
                           <div id="spacer"></div>
 
@@ -58,7 +58,7 @@ class SubdescriptionView extends DefaultView
 
             echo         '</ul>
                           <div class="spacer">
-                              <h class="quantity" style="padding-bottom: 30px;"><a style="text-decoration: none" href="' . $category . "-" . $table . ".php" . '">' . $this->model->getQuantity() . ' new</a> from $' . $this->model->getMinimum() . '</h>
+                              <h class="quantity" style="padding-bottom: 30px;"><a style="text-decoration: none" href="' . $category . "-" . $table . ".php" . '">' . $this->model->getQuantity(0) . ' new</a> from $' . $this->model->getMinimum() . '</h>
                           </div>
                       </div>
 
@@ -245,7 +245,7 @@ class SubdescriptionView extends DefaultView
 
         echo      '</div>
                    <div class="aside" style="margin-top: 50px;">
-                        <div class="text-center" style="margin-top: 20px; border-bottom: 1px solid #e4e4e4; padding-bottom: 20px;">
+                        <div class="text-center maybe-main">
                              <h class="maybe">Maybe you are also <br />interested in ...</h>
                         </div>
                         <div class="row">
@@ -278,6 +278,205 @@ class SubdescriptionView extends DefaultView
 
             $u++;
         }
-        echo '</ul>';
+        echo '</ul>
+              <div class="divider"></div>';
+
+        $this->actionGetComparisonTable();
+    }
+
+    private function actionGetComparisonTable() {
+
+        echo '<h1 class="compare">Compare to similar items</h1>
+              <div class="paddings-table">
+              <table class="table table-bordered">
+                 <thead>
+                    <tr>
+                        <th style="border-top: 1px solid white; border-left: 1px solid white;"></th>';
+        $i = 0;
+        while($i < $this->model->countComparisonId()) {
+            echo '<th style="width: 20%;">
+                      <div class="text-center">
+                          <img src="' . $this->model->getComparisonPhoto( $i ) . '" width="60" height="80" />
+                          <h class="name-margin">' . $this->model->getComparisonProductName($i) . '</h>
+                      </div>
+
+                  </th >';
+
+            $i++;
+        }
+
+        echo        '</tr>
+                 </thead>
+                 <tbody>
+                      <tr>
+                          <th id="header">Full name</th>';
+
+        $u = 0;
+        while ( $u < $this->model->countComparisonId()) {
+            echo '<th>
+                      <div class="comparison">
+                          <h class="original-name">' . $this->model->getComparisonOriginalName($u) . '</h>
+                      </div>
+                  </th>';
+
+            $u++;
+        }
+
+    echo              '</tr>
+                       <tr>
+                            <th id="header">Price</th>';
+
+    $k = 0;
+    while ( $k < $this->model->countComparisonId()) {
+
+        echo '<th>
+                  <div class="comparison">
+                       <h class="cprice">$' .  sprintf("%0.2f", $this->model->getComparisonPrice($k)) . '<span id="striked">' . ' ' . '<strike>$' . $this->model->getComparisonPriviousPrice($k) . '</strike></span></h>
+                  </div>
+              </th>';
+
+        $k++;
+    }
+
+    echo               '</tr>
+                        <tr>
+                            <th id="header">Shipping</th>';
+
+    $k = 0;
+    while ( $k < $this->model->countComparisonId()) {
+
+        echo '<th>
+                  <div class="comparison">
+                      <h class="shipping-comparison">FREE SHIPPING ( <span id="emph"><em>' . $this->model->getComparisonShipping($k) . ' days</em></span> )</h>
+                  </div>
+              </th>';
+
+        $k++;
+    }
+
+    echo               '</tr>
+                        <tr>
+                            <th id="header">Sold by</th>';
+
+    $k = 0;
+    while ( $k < $this->model->countComparisonId()) {
+
+        echo '<th>
+                  <div class="comparison">
+                      <h class="shipping-comparison"><a href="http://vk.com/naisly" style="text-decoration: none">Woden S</a></h>
+                  </div>
+              </th>';
+
+        $k++;
+    }
+
+    echo               '</tr>
+                        <tr>
+                            <th id="header">Short description</th>';
+
+    $k = 0;
+    while ( $k < $this->model->countComparisonId()) {
+
+        echo '<th>
+                  <div class="comparison">
+                      <h class="shipping-comparison">' . $this->model->getComparisonDescription($k) . '</h>
+                  </div>
+              </th>';
+
+        $k++;
+    }
+
+    echo               '</tr>
+                        <tr>
+                            <th id="header">Manufacturer</th>';
+
+    $k = 0;
+    while ( $k < $this->model->countComparisonId()) {
+
+        echo '<th>
+                  <div class="comparison">
+                      <h class="shipping-comparison">by <a style="text-decoration: none" href="http://' . $this->model->getComparisonCategory($k) . '.com">' . $this->model->getComparisonCategory($k) . '</a></h>
+                  </div>
+              </th>';
+
+        $k++;
+    }
+
+    echo               '</tr>
+                        <tr>
+                            <th id="header">Average price for this item:</th>';
+
+    $k = 0;
+    while ( $k < $this->model->countComparisonId()) {
+
+        echo '<th>
+                  <div class="comparison">
+                      <h class="cprice">$' . $this->model->getComparisonAverage($k) . '</h>
+                  </div>
+              </th>';
+
+        $k++;
+    }
+
+    echo               '</tr>
+                        <tr>
+                            <th id="header">Product features</th>';
+
+    $k = 0;
+    while ( $k < $this->model->countComparisonId()) {
+
+        echo '<th>
+                  <div class="comparison">
+                      <h class="shipping-comparison">' . $this->model->getComparisonFeatures($k) . '</h>
+                  </div>
+              </th>';
+
+        $k++;
+    }
+
+    echo               '</tr>
+                        <tr>
+                            <th id="header">Product Site Launch Date</th>';
+
+    $k = 0;
+    while ( $k < $this->model->countComparisonId()) {
+
+        echo '<th>
+                  <div class="comparison">
+                      <h class="shipping-comparison">' . $this->model->getComparisonTimeOfAdding($k) . '</h>
+                  </div>
+              </th>';
+
+        $k++;
+    }
+
+    echo               '</tr>
+                        <tr>
+                            <th style="border-bottom: 1px solid white; border-left: 1px solid white; border-right: 1px solid white;"></th>';
+
+    $k = 0;
+    while ( $k < $this->model->countComparisonId()) {
+
+        echo '<th style="border-bottom: 1px solid white; border-left: 1px solid white; border-right: 1px solid white;">
+                  <div class="comparison">
+                      <form action="add-item.php" method="post">
+                          <button class="btn btn-warning color-black">Add to cart</button>
+                          <input type="hidden" name="id" value="' . $this->model->getComparisonId( $k ) . '"/>
+                          <input type="hidden" name="product_name" value="' . $this->model->getComparisonProductName( $k ) . '"/>
+                          <input type="hidden" name="category" value="' . $this->model->getComparisonCategory( $k ) . '"/>
+                          <input type="hidden" name="photo" value="' . $this->model->getComparisonPhoto( $k ) . '"/>
+                          <input type="hidden" name="price" value="' . $this->model->getComparisonPrice( $k ) . '"/>
+                      </form>
+                  </div>
+              </th>';
+
+        $k++;
+    }
+
+
+    echo               '</tr>
+                 </tbody>
+              </table>
+              </div>';
     }
 }

@@ -17,7 +17,7 @@ class SubdescriptionController extends DefaultController
         $this->model = $model;
     }
 
-    public function actionGetSubdescription( $product_name, $table, $id ) {
+    public function actionGetSubdescription( $product_name, $table, $id, $order_id ) {
 
         include_once('/../Storage.php');
         $db = Storage::getInstance();
@@ -68,7 +68,6 @@ class SubdescriptionController extends DefaultController
                 /*
                  * Table
                  */
-                //$id = $row['id'];
                 $original_name = $row['original_name'];
                 $photo = $row['photo'];
                 $description = $row['description'];
@@ -111,10 +110,12 @@ class SubdescriptionController extends DefaultController
         }
         //print_r($min_array);
         $min = min($min_array);
-
-        $this->model->setId( $id );
+        //print_r($product_name);
+        //print_r ($order_id);
+        $this->model->setId( $order_id );
         $this->model->setOriginalName( $original_name );
         $this->model->setPhoto( $photo );
+        $this->model->setProductName( $product_name );
         //$this->model->setDescription( $description );
         $this->model->setCategory( $category );
         $this->model->setPrice( $price );
@@ -186,6 +187,7 @@ class SubdescriptionController extends DefaultController
             }
         }
 
+        //print_r($product_name_array);
         $this->model->setSortId( $id_array );
         $this->model->setSortPrice( $price_array );
         $this->model->setSortProductNames( $product_name_array );
@@ -259,7 +261,7 @@ class SubdescriptionController extends DefaultController
 
         if( strlen($sequence_original_name[0]) > 30 ){
             $sequence_original_name[0] = substr($sequence_original_name[0], 0, 30);
-            $sequence_original_name[0] .= '...';
+            $sequence_original_name[0] .= ' ...';
         }
 
         $this->model->setSequenceId( $sequence_id[0] );
@@ -269,6 +271,94 @@ class SubdescriptionController extends DefaultController
         $this->model->setSequenceQuantity( $sequence_quantity[0] );
         $this->model->setSequencePhoto( $sequence_photo[0] );
 
+
+    }
+
+    public function actionMakeComparison( $table ) {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        $sql_query = "SELECT DISTINCT product_name FROM $table ORDER BY RAND() LIMIT 4";
+        $result = $mysqli->query( $sql_query );
+
+        $products_array = array();
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                $products_array = array_merge($products_array, array_map('trim', explode(",", $row['product_name'])));
+            }
+        }
+
+        $product_name_array = array();
+        $original_name_array = array();
+        $photo_array = array();
+        $description_array = array();
+        $category_array = array();
+        $price_array = array();
+        $previous_price_array = array();
+        $time_of_adding_array = array();
+        $features_array = array();
+        $id_array = array();
+        $quantity_array = array();
+        $shipping_array = array();
+        $average_price_array = array();
+
+        $i = 0;
+        while ($i < count($products_array)) {
+            $sql_stmt = "SELECT * FROM $table WHERE product_name='$products_array[$i]' LIMIT 1";
+            $result_query = $mysqli->query($sql_stmt);
+
+            if ($result_query->num_rows > 0) {
+                // output data of each row
+                while ($row = $result_query->fetch_assoc()) {
+                    array_push($id_array, $row['id']);
+                    array_push($product_name_array, $row['product_name']);
+                    array_push($original_name_array, $row['original_name']);
+                    array_push($photo_array, $row['photo']);
+                    array_push($description_array, $row['description']);
+                    array_push($category_array, $row['category']);
+                    array_push($price_array, $row['price']);
+                    array_push($previous_price_array, $row['previous_price']);
+                    array_push($time_of_adding_array, $row['time_of_adding']);
+                    array_push($features_array, $row['features']);
+                    array_push($quantity_array, $row['quantity']);
+                    array_push($shipping_array, $row['shipping']);
+                    array_push($average_price_array, $row['average_price']);
+                }
+            }
+
+            $i++;
+        }
+
+        $this->model->setComparisonId( $id_array );
+        $this->model->setComparisonProductName( $product_name_array );
+        $this->model->setComparisonOriginalName( $original_name_array );
+        $this->model->setComparisonPhoto( $photo_array );
+        $this->model->setComparisonDescription( $description_array );
+        $this->model->setComparisonCategory( $category_array );
+        $this->model->setComparisonPrice( $price_array );
+        $this->model->setComparisonPreviousPrice( $previous_price_array );
+        //$this->model->setComparisonTimeOfAdding( $time_of_adding_array );
+        $this->model->setComparisonFeatures( $features_array );
+        $this->model->setComparisonQuantity( $quantity_array );
+        $this->model->setComparisonShipping( $shipping_array );
+        $this->model->setComparisonAverage( $average_price_array );
+
+        $sql = "SELECT UNIX_TIMESTAMP(time) as timing FROM $table";
+        $res_sql = $mysqli->query( $sql );
+
+        $timestamp_array = array();
+
+        if ($res_sql->num_rows > 0) {
+            // output data of each row
+            while ($row = $res_sql->fetch_assoc()) {
+                $timestamp_array = array_merge($timestamp_array, array_map('trim', explode(",", $row['timing'])));
+            }
+        }
+        $this->model->setComparisonTimeOfAdding( $timestamp_array );
 
     }
 }

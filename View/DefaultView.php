@@ -279,6 +279,7 @@ class DefaultView
                             <input type="hidden" name="original_name" value="' . $this->model->getOriginalName($i) . '"/>
                             <input type="hidden" name="table" value="phones" />
                             <input type="hidden" name="id_num" value="' . $this->model->getPrice($i) . '"/>
+                            <input type="hidden" name="id" value="' . $this->model->getId($i) . '"/>
                             <input type="hidden" name="product_name" value="' . $this->model->getProductName($i) . '"/>
                         </form>
                     </div>
