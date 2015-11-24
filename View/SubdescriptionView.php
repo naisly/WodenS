@@ -21,7 +21,8 @@ class SubdescriptionView extends DefaultView
     public function MainView( $category, $table ) {
 
         $this->model->setDifferentialBtwPrice();
-        echo '<div class="image-margin">
+        echo '
+                <div class="image-margin">
                   <div class="col-md-9">
                       <div class="col-md-1"></div>
                       <div class="col-md-4">
@@ -63,8 +64,38 @@ class SubdescriptionView extends DefaultView
                       </div>
 
                         <div class="divider"></div>
-              <h class="tech-details">' . $this->model->getTechnicalDetails(0) . '</h>
-              <ul style="margin-top: 35px; margin-left: 30px;">';
+                        <div class="slider1" style="margin-left: 35px;">';
+            $m = 0;
+            while($m < $this->model->countAssocProducts()){
+                echo '<div class="slide">
+                          <img src="' . $this->model->getAssocPhoto($m) . '" width="120" height="120" />
+                          <div style="height: 90px;">
+                              <h><a href="#" style="text-decoration: none;">' . $this->model->getAssocProducts($m) . '</a></h><br />
+                              <h id="you-save"">$' . $this->model->getAssocPrice($m) . '<span class="striked"><strike> $' . $this->model->getAssocPreviousPrice($m) . '</strike></span></h><br />
+                              <h><span class="shipping-assoc"><em>' . $this->model->getAssocShipping($m) . ' days</em></span> of shipping</h><br />
+                          </div>
+                      </div>
+                     ';
+
+                $m++;
+            }
+
+
+            echo       '</div>
+                        <script>
+                            $(document).ready(function(){
+                                $(".slider1" ).bxSlider({
+                                    slideWidth: 200,
+                                    minSlides: 1,
+                                    maxSlides: 4,
+                                    slideMargin: 30,
+                                    pager: false
+                                });
+                            });
+                    </script>
+                    <div class="divider"></div>
+                      <h class="tech-details">' . $this->model->getTechnicalDetails(0) . '</h>
+                      <ul style="margin-top: 35px; margin-left: 30px;">';
 
                 $k = 1;
                 while ($k < $this->model->countTechnicalDetails()){

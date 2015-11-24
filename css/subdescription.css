@@ -245,3 +245,18 @@ ul {
     font-size: 23px;
     color: #ac5050;
 }
+.bx-wrapper .bx-viewport {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+/*.bx-wrapper, .bx-viewport {
+    height: 230px !important;
+}*/
+.striked {
+    color: black;
+    font-size: 12px;
+}
+.shipping-assoc {
+    text-decoration: underline;
+}

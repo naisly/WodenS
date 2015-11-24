@@ -70,7 +70,13 @@ class DefaultView
         } else if ($page == 'login' || $page == 'admin' || $page == 'support-thanks'){
             echo '<link href="css/login.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'subdescription'){
-            echo '<link href="css/subdescription.css" rel="stylesheet" type="text/css">';
+            echo '<link href="css/jquery.bxslider.css" rel="stylesheet">
+                   <script src="js/jquery-min.js"></script>
+                   <!-- bxSlider Javascript file -->
+                   <script src="js/bootstrap.min.js"></script>
+                   <!-- bxSlider Javascript file -->
+                  <script src="js/jquery.bxslider.min.js"></script>
+                  <link href="css/subdescription.css" rel="stylesheet" type="text/css">';
         } else {
             echo '<link rel="stylesheet" href="css/default.css" />' .
                  '<link rel="stylesheet" href="css/animate.css" />';
@@ -281,6 +287,7 @@ class DefaultView
                             <input type="hidden" name="id_num" value="' . $this->model->getPrice($i) . '"/>
                             <input type="hidden" name="id" value="' . $this->model->getId($i) . '"/>
                             <input type="hidden" name="product_name" value="' . $this->model->getProductName($i) . '"/>
+                            <input type="hidden" name="original_name" value="' . $this->model->getOriginalName($i) . '"/>
                         </form>
                     </div>
                     <div class="col-md-4 wow fadeInUp">

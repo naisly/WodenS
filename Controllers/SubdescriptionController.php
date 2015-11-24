@@ -361,4 +361,56 @@ class SubdescriptionController extends DefaultController
         $this->model->setComparisonTimeOfAdding( $timestamp_array );
 
     }
+
+    public function actionGetAssocProducts( $table, $product_name ) {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        $sql_query = "SELECT assoc_products FROM subdescription WHERE product_name='$product_name'";
+        $result = $mysqli->query( $sql_query );
+
+        //echo $sql_query;
+
+        $products_array = array();
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                $products_array = array_merge($products_array, array_map('trim', explode(",", $row['assoc_products'])));
+            }
+        }
+
+        $photo_array = array();
+        $price_array = array();
+        $previous_price_array = array();
+        $shipping_array = array();
+
+        $i = 0;
+        while( $i < count($products_array)){
+
+            $sql_row = "SELECT photo, price, previous_price, shipping FROM $table WHERE original_name='$products_array[$i]' LIMIT 1";
+            $sql_res = $mysqli->query( $sql_row );
+
+            if ($sql_res->num_rows > 0) {
+                // output data of each row
+                while ($row = $sql_res->fetch_assoc()) {
+                    array_push($photo_array, $row['photo']);
+                    array_push($price_array, $row['price']);
+                    array_push($previous_price_array, $row['previous_price']);
+                    array_push($shipping_array, $row['shipping']);
+                }
+            }
+
+            $i++;
+        }
+
+        $this->model->setAssocProducts( $products_array );
+        $this->model->setAssocPhoto( $photo_array );
+        $this->model->setAssocPrice( $price_array );
+        $this->model->setAssocPreviousPrice( $previous_price_array );
+        $this->model->setAssocShipping( $shipping_array );
+
+    }
 }

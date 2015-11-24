@@ -22,6 +22,7 @@ $controller->actionGetSubdescription( $_POST['original_name'], $_POST['table'], 
 $controller->actionSetDistinctProductsPrice( $_POST['table'], $_POST['product_name']);
 $controller->actionSelectRandomProduct();
 $controller->actionMakeComparison( $_POST['table'] );
+$controller->actionGetAssocProducts( $_POST['table'], $_POST['original_name'] );
 
 $controller->actionGetQuantityOfItems();
 $controller->actionGetSumOfItems();
@@ -31,4 +32,4 @@ $view->DoctypeView( 'subdescription' );
 $view->headerView();
 $view->MainView( 'Apple', 'Phones' );
 
-$view->actionGetFooter( 'subdescription' );
+$view->actionGetFooter( 'Index' );
