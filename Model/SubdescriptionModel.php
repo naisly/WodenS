@@ -71,6 +71,15 @@ class SubdescriptionModel extends DefaultModel
     private $assoc_shipping;
     private $differential_assoc_price;
 
+    private $ask_person;
+    private $question;
+    private $answer;
+    private $answer_person;
+    private $answer_time;
+
+    private $date;
+
+
     public function setProductName ( $product_name ) {
 
         $this->product_name = $product_name;
@@ -678,4 +687,60 @@ class SubdescriptionModel extends DefaultModel
         return $this->differential_assoc_price;
     }
 
+    public function setAskPerson( $ask_person ) {
+
+        $this->ask_person = $ask_person;
+    }
+
+    public function getAskPerson( $i ) {
+
+        return $this->ask_person[$i];
+    }
+
+    public function countAskPerson() {
+
+        return count($this->ask_person);
+    }
+
+    public function setQuestion( $question ) {
+
+        $this->question = $question;
+    }
+
+    public function getQuestion( $i ) {
+
+        return $this->question[$i];
+    }
+
+    public function setAnswer( $answer ) {
+
+        $this->answer = $answer;
+    }
+
+    public function getAnswer( $i ) {
+
+        return $this->answer[$i];
+    }
+
+    public function setAnswerPerson( $answer_person ) {
+
+        $this->answer_person = $answer_person;
+    }
+
+    public function getAnswerPerson( $i ) {
+
+        return $this->answer_person[$i];
+    }
+
+    public function setAnswerTime( $answer_time ) {
+
+        $this->answer_time = $answer_time;
+    }
+
+    public function getAnswerTime( $i ) {
+
+        $this->date = new DateTime();
+        $this->date->setTimestamp( $this->answer_time[$i]);
+        return $this->date->format("F d, Y");
+    }
 }

@@ -23,6 +23,7 @@ $controller->actionSetDistinctProductsPrice( $_GET['table'], $_GET['product_name
 $controller->actionSelectRandomProduct();
 $controller->actionMakeComparison( $_GET['table'] );
 $controller->actionGetAssocProducts( $_GET['table'], $_GET['original_name'] );
+$controller->actionGetQuestionsAndAnswers( $_GET['original_name'] );
 
 $controller->actionGetQuantityOfItems();
 $controller->actionGetSumOfItems();

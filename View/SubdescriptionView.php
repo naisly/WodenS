@@ -313,6 +313,8 @@ class SubdescriptionView extends DefaultView
               <div class="divider"></div>';
 
         $this->actionGetComparisonTable();
+
+        $this->getAnswers();
     }
 
     private function actionGetComparisonTable() {
@@ -509,5 +511,39 @@ class SubdescriptionView extends DefaultView
                  </tbody>
               </table>
               </div>';
+    }
+
+    private function getAnswers() {
+
+        echo '<div class="divider"></div>
+              <form action="search-answers.php" method="post">
+                  <div class="row">
+                      <div class="col-lg-8 search-margin">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Have a question? Search for answers" name="q">
+                        </div>
+                      </div><!-- /.col-lg-6 -->
+                  </div><!-- /.row -->
+               </form>';
+
+        $i = 0;
+        while ($i < $this->model->countAskPerson()) {
+
+            echo '<div class="row" style="margin-top: 60px;">
+                      <div class="col-md-5">
+                          <h class="question">Question: <span id="question">' . $this->model->getQuestion($i) . '</span></h><br />
+                          <div style="margin-top: 15px;">
+                               <h class="answer">Answer: <span id="answer">' . $this->model->getAnswer($i) . '</span></h><br />
+                               <h class="by-answer">By ' . $this->model->getAnswerPerson($i) . ' on ' . $this->model->getAnswerTime($i) . '</h>
+                          </div>
+                      </div>
+                 </div>';
+
+            $i++;
+        }
+
     }
 }

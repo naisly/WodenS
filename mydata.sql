@@ -590,3 +590,18 @@ INSERT INTO subdescription VALUES('', 'Iphone 6S White 32GB Neverlock', 'images/
             Improved face detection,3x zoom, Video geotagging', 'Cellular and Wireless, UMTS/HSPA+/DC-HSDPA (850; 900; 1700/2100; 1900; 2100 MHz), 802.11a/b/g/n/ac WiFi, Bluetooth 4.0 wireless technology NFC',
             'SIM card, Nano-SIM, iPhone 6 is not compatible with existing micro SIM cards', 'In the Box, iPhone with iOS 8, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation',
             'Product Details, Product Dimensions: 5.4 x 2.6 x 0.3 inches ; 4.5 ounces, Shipping Weight: 13.6 ounces, ASIN: B00NQGP3L6');
+
+CREATE TABLE questions(
+  id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  product VARCHAR(500) NOT NULL,
+  ask_person VARCHAR(80) NOT NULL,
+  question VARCHAR(500) NOT NULL,
+  answer VARCHAR(500),
+  answer_person VARCHAR(80),
+  created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 6S White 32GB Neverlock', 'Serdiuk Oleksandr', 'Does this will work in Ukraine?', 'I am pretty sure that YES', 'Dmitry Medvedev');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 6S White 32GB Neverlock', 'Ivan Sakhan', 'Can i use this Phone in Trinidad & Tobago', 'Yes, 100%', 'PRIME ELECTRONICS');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 6S White 32GB Neverlock', 'Jenya Kalujin', 'Will this phone work in Israel? With an Israeli carrier', 'Yes it should work in Israel', 'Professional Seller');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 6S White 32GB Neverlock', 'Anton Vovnenko', 'Can I use this phone in Russia?', 'Yes', 'Oleksandr Serdiuk(Woden S)');

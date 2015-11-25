@@ -413,4 +413,43 @@ class SubdescriptionController extends DefaultController
         $this->model->setAssocShipping( $shipping_array );
 
     }
+
+    public function actionGetQuestionsAndAnswers( $original_name ) {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        $sql_query = "SELECT product, ask_person, question, answer, answer_person, unix_timestamp(created) as created FROM questions WHERE product='$original_name' LIMIT 4";
+        $result = $mysqli->query( $sql_query );
+
+        $ask_person_array = array();
+        $question_array = array();
+        $answer_array = array();
+        $answer_person_array = array();
+        $created_array = array();
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                $ask_person_array = array_merge($ask_person_array, array_map('trim', explode(",", $row['ask_person'])));
+                $question_array = array_merge($question_array, array_map('trim', explode(",", $row['question'])));
+                $answer_array = array_merge($answer_array, array_map('trim', explode(",", $row['answer'])));
+                $answer_person_array = array_merge($answer_person_array, array_map('trim', explode(",", $row['answer_person'])));
+                $created_array = array_merge($created_array, array_map('trim', explode(",", $row['created'])));
+            }
+        }
+
+        $this->model->setAskPerson( $ask_person_array );
+        $this->model->setQuestion( $question_array );
+        $this->model->setAnswer( $answer_array );
+        $this->model->setAnswerPerson( $answer_person_array );
+        $this->model->setAnswerTime( $created_array );
+
+        print_r($ask_person_array);
+        print_r($question_array);
+        print_r($answer_array);
+        print_r($answer_person_array);
+        print_r($created_array);
+    }
 }

@@ -260,3 +260,29 @@ ul {
 .shipping-assoc {
     text-decoration: underline;
 }
+.search-margin {
+    margin-left: 15px;
+}
+.question {
+    font-weight: bold;
+    margin-left: 15px;
+    padding-bottom: 30px;
+}
+#question {
+    margin-left: 40px;
+    color: #1b6d85;
+}
+.answer {
+    margin-top: 30px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+#answer {
+    margin-left: 50px;
+    font-weight: normal;
+}
+.by-answer {
+    font-size: 12px;
+    margin-left: 124px;
+    color: #666;
+}
