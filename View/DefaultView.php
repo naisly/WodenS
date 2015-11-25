@@ -33,8 +33,12 @@ class DefaultView
         echo '<!DOCTYPE html>
                 <html>
                 <head>';
-                    echo '<title>Woden S</title>
-                    <!-- HTML 5 markup and encoding utf-8 -->
+        if ( $page == 'subdescription'){
+            echo '<title>Woden S: ' . $this->model->getOriginalName(0) . '</title>';
+        } else {
+            echo '<title>Woden S</title>';
+        }
+        echo       '<!-- HTML 5 markup and encoding utf-8 -->
                     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
                     <!-- For Internet Explorer -->
                     <meta http-equiv="X-UA-Compatible" content="IE=EDge">
@@ -275,7 +279,7 @@ class DefaultView
                     </div>
                     <div class="col-md-5 wow fadeInUp">
                         <p class="spacer"></p>
-                        <form action="subdescription.php" method="post">
+                        <form action="subdescription.php" method="get">
                             <h id="header-items" style="font-size: 20px;"><button type="submit" class="subdescription" style="text-decoration: none;">' . $this->model->getOriginalName($i) . '</button></h>
                             <span><br />by ' . $this->model->getCategory($i) . '</span>
                             <p id="price">' . $this->model->getPrice($i) . '$' . ' ' . '<span id="prev-price"><strike>' . $this->model->getPriviousPrice($i) . '$' . '</strike> (' . $this->model->getShipping($i) . ' ' . 'days shipping)</span></p>

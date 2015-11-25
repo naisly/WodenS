@@ -18,11 +18,11 @@ $controller = new SubdescriptionController($model);
 
 $view = new SubdescriptionView($model);
 
-$controller->actionGetSubdescription( $_POST['original_name'], $_POST['table'], $_POST['id_num'], $_POST['id'] );
-$controller->actionSetDistinctProductsPrice( $_POST['table'], $_POST['product_name']);
+$controller->actionGetSubdescription( $_GET['original_name'], $_GET['table'], $_GET['id_num'], $_GET['id'] );
+$controller->actionSetDistinctProductsPrice( $_GET['table'], $_GET['product_name']);
 $controller->actionSelectRandomProduct();
-$controller->actionMakeComparison( $_POST['table'] );
-$controller->actionGetAssocProducts( $_POST['table'], $_POST['original_name'] );
+$controller->actionMakeComparison( $_GET['table'] );
+$controller->actionGetAssocProducts( $_GET['table'], $_GET['original_name'] );
 
 $controller->actionGetQuantityOfItems();
 $controller->actionGetSumOfItems();
