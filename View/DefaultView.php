@@ -81,6 +81,9 @@ class DefaultView
                    <!-- bxSlider Javascript file -->
                   <script src="js/jquery.bxslider.min.js"></script>
                   <link href="css/subdescription.css" rel="stylesheet" type="text/css">';
+        } else if ($page == 'search'){
+            echo '<link href="css/login.css" rel="stylesheet" type="text/css">
+                  <link href="css/subdescription.css" rel="stylesheet" type="text/css">';
         } else {
             echo '<link rel="stylesheet" href="css/default.css" />' .
                  '<link rel="stylesheet" href="css/animate.css" />';

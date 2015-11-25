@@ -6,7 +6,10 @@
  * Date: 25.11.2015
  * Time: 20:40
  */
-class SearchAnswersModel
+
+include_once('SubdescriptionModel.php');
+
+class SearchAnswersModel extends SubdescriptionModel
 {
 
 }

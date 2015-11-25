@@ -315,6 +315,7 @@ class SubdescriptionView extends DefaultView
         $this->actionGetComparisonTable();
 
         $this->getAnswers();
+        $this->getQuestions();
     }
 
     private function actionGetComparisonTable() {
@@ -510,30 +511,34 @@ class SubdescriptionView extends DefaultView
     echo               '</tr>
                  </tbody>
               </table>
-              </div>';
+              </div>
+              <div class="divider"></div>';
     }
 
-    private function getAnswers() {
+    public function getAnswers()
+    {
 
-        echo '<div class="divider"></div>
-              <form action="search-answers.php" method="post">
+        echo '<form action="search-answers.php" method="get">
                   <div class="row">
                       <div class="col-lg-8 search-margin">
                         <div class="input-group">
                             <div class="input-group-btn">
                                 <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                             </div>
-                            <input type="text" class="form-control" placeholder="Have a question? Search for answers" name="q">
+                            <input type="text" class="form-control" placeholder="Have a question? Search for answers" id="q" name="q">
                         </div>
                       </div><!-- /.col-lg-6 -->
                   </div><!-- /.row -->
                </form>';
+    }
+
+    public function getQuestions() {
 
         $i = 0;
         while ($i < $this->model->countAskPerson()) {
 
             echo '<div class="row" style="margin-top: 60px;">
-                      <div class="col-md-5">
+                      <div class="col-md-5" id="test">
                           <h class="question">Question: <span id="question">' . $this->model->getQuestion($i) . '</span></h><br />
                           <div style="margin-top: 15px;">
                                <h class="answer">Answer: <span id="answer">' . $this->model->getAnswer($i) . '</span></h><br />
@@ -544,6 +549,13 @@ class SubdescriptionView extends DefaultView
 
             $i++;
         }
+
+        echo "<script>
+                  $('#test').each(function(){
+                        var t = $(this).text();
+                        $(this).html(t.replace('&lt','<').replace('&gt', '>'));
+                    });
+              </script>";
 
     }
 }
