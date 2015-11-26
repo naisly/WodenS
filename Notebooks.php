@@ -25,8 +25,4 @@ $view->DoctypeView( 'phones' );
 
 $view->headerView();
 
-$view->getItemsNames( 'notebooks' );
-$view->getFilterMenu( 'notebooks' );
-$view->getItems( 'notebooks' );
-
-$view->actionGetFooter( 'phones' );
+$view->GetUI( 'notebooks', 'notebooks' );

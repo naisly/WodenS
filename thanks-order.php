@@ -23,6 +23,5 @@ $controller->actionGetHeaderCart();
 
 $view->DoctypeView( 'login' );
 $view->headerView();
-$view->addedItemMessage();
 
-$view->getFooter();
+$view->addedItemMessage();

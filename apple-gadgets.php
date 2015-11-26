@@ -24,8 +24,4 @@ $view->DoctypeView( 'gadgets' );
 
 $view->headerView();
 
-$view->getItemsNames( 'gadgets' );
-$view->getFilterMenu( 'apple-gadgets' );
-$view->getItems( 'apple-gadgets' );
-
-$view->actionGetFooter( 'gadgets' );
+$view->GetUI( 'gadgets', 'apple-gadgets' );

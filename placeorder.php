@@ -22,4 +22,5 @@ $controller->actionGetHeaderCart();
 
 $view->DoctypeView( 'order' );
 $view->headerView();
+
 $view->getPlaceOrder();

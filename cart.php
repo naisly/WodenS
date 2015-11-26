@@ -23,4 +23,5 @@ $controller->actionGetOrderedItems();
 
 $view->DoctypeView( 'profile' );
 $view->headerView();
+
 $view->getTable();

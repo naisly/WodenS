@@ -22,4 +22,3 @@ $view->DoctypeView( 'support-thanks' );
 $view->headerView();
 
 $view->thanksMessage();
-$view->getFooter();

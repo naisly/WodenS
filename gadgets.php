@@ -25,8 +25,4 @@ $view->DoctypeView( 'gadgets' );
 
 $view->headerView();
 
-$view->getItemsNames( 'gadgets' );
-$view->getFilterMenu( 'gadgets' );
-$view->getItems( 'gadgets' );
-
-$view->actionGetFooter( 'gadgets' );
+$view->GetUI( 'gadgets', 'gadgets' );

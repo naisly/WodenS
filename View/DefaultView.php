@@ -28,7 +28,7 @@ class DefaultView
      * Doctype View includes Doctype, html, head,
      * body TAGS, specified for each page
      */
-    public function DoctypeView( $page )
+    final public function DoctypeView( $page )
     {
         echo '<!DOCTYPE html>
                 <html>
@@ -97,7 +97,7 @@ class DefaultView
      * Main navbar Menu for all
      * pages
      */
-    public function headerView()
+    final public function headerView()
     {
         echo   '<nav class="navbar navbar-inverse navbar-static-top">
                 <div class="container-fluid">
@@ -152,11 +152,18 @@ class DefaultView
                 </div><!-- /.container-fluid -->
             </nav>';
     }
+    public function getUI( $category, $category_table ){
+
+        $this->getItemsNames( $category );
+        $this->getFilterMenu( $category_table );
+        $this->getItems( $category_table );
+        $this->actionGetFooter( $category );
+    }
 
     /*
      * Getting distinct items names
      */
-    public function getItemsNames( $category )
+    private function getItemsNames( $category )
     {
         echo "<div class='items-row pointer'>
                   <div class='col-md-3'></div>
@@ -177,7 +184,7 @@ class DefaultView
      * Filter menu
      * of product pages
      */
-    public function getFilterMenu( $item )
+    private function getFilterMenu( $item )
     {
         $i = 0;
         $n = 0;
@@ -258,7 +265,7 @@ class DefaultView
      * Getting items to
      * the product page
      */
-    public function getItems( $page ) {
+    private function getItems( $page ) {
         $i = 0;
         echo '<div id="floatingCirclesG">
                 <div class="f_circleG" id="frotateG_01"></div>
@@ -329,7 +336,7 @@ class DefaultView
     /*
      * Footer, bottom part
      */
-    public function actionGetFooter( $page ) {
+    private function actionGetFooter( $page ) {
         echo   '</div>
                 <footer>
                     <div class="container">

@@ -25,8 +25,4 @@ $view->DoctypeView( 'phones' );
 
 $view->headerView();
 
-$view->getItemsNames( 'television' );
-$view->getFilterMenu( 'television' );
-$view->getItems( 'television' );
-
-$view->actionGetFooter( 'phones' );
+$view->GetUI( 'television', 'television' );

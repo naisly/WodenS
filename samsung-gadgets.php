@@ -25,8 +25,4 @@ $view->DoctypeView( 'gadgets' );
 
 $view->headerView();
 
-$view->getItemsNames( 'gadgets' );
-$view->getFilterMenu( 'samsung-gadgets' );
-$view->getItems( 'samsung-gadgets' );
-
-$view->actionGetFooter( 'gadgets' );
+$view->GetUI( 'gadgets', 'samsung-gadgets' );

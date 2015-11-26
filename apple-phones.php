@@ -25,8 +25,4 @@ $view->DoctypeView( 'Apple' );
 
 $view->headerView();
 
-$view->getItemsNames( 'phones' );
-$view->getFilterMenu( 'apple-phones' );
-$view->getItems( 'phones' );
-
-$view->actionGetFooter( 'Apple' );
+$view->GetUI( 'phones', 'apple-phones' );

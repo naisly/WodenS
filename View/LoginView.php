@@ -204,6 +204,8 @@ class LoginView extends DefaultView
                             echo '">Procceed to checkout (' . $this->model->getAItems() . ' items)</button>
                     </div>
                 </div>';
+
+        $this->getFooter();
     }
 
     /*
@@ -221,7 +223,7 @@ class LoginView extends DefaultView
     /*
      * Footer at the bottom
      */
-    public function getFooter() {
+    private function getFooter() {
 
         echo '<div class="bottom-spacer">
                <div class="row">

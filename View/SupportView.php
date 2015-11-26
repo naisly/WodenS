@@ -35,9 +35,11 @@ class SupportView extends DefaultView
                   For sending an request. We will help you with your issue as much as it is possible! <br />
                   Our employees will do utmost to make you pleased
               </div>';
+
+        $this->getFooter();
     }
 
-    public function getFooter() {
+    private function getFooter() {
 
         echo '<div class="bottom-spacer">
                <div class="row">

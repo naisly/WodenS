@@ -25,8 +25,4 @@ $view->DoctypeView( 'Samsung' );
 
 $view->headerView();
 
-$view->getItemsNames( 'phones' );
-$view->getFilterMenu( 'samsung-phones' );
-$view->getItems( 'phones' );
-
-$view->actionGetFooter( 'Samsung' );
+$view->GetUI( 'phones', 'samsung-phones' );
