@@ -167,7 +167,7 @@ class LoginController extends DefaultController
      * @var $idQ
      * @var $quantity
      */
-    public function actionAddItems() {
+    private function actionAddItems() {
 
         include_once('/../Storage.php');
         $db = Storage::getInstance();
@@ -224,5 +224,23 @@ class LoginController extends DefaultController
         $_SESSION['photo'] = $photo;
 
         session_write_close();
+    }
+
+    public function actionAddItem() {
+
+        session_start();
+        if(!$_SESSION['login_user']){
+            header('Location: login.php');
+            $_SESSION['add_item'] = '1';
+        } else {
+            $_SESSION['add_item'] = '0';
+
+            $this->actionAddItems();
+            if(isset($_POST['one-click-order'])){
+                header('Location: placeorder.php');
+            } else {
+                header('Location: thanks-order.php');
+            }
+        }
     }
 }

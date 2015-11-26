@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: Home
- * Date: 09.11.2015
- * Time: 22:49
+ * Date: 26.11.2015
+ * Time: 23:16
  */
 
 include_once('Model/AdminModel.php');
@@ -18,6 +18,4 @@ $controller = new AdminController($model);
 
 $view = new AdminView($model);
 
-$view->DoctypeView( 'admin' );
-
-$view->getLoginForm();
+$controller->actionLogin();

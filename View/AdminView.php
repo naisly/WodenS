@@ -34,6 +34,21 @@ class AdminView extends DefaultView
      * in Admin account
      */
     public function getLoginForm() {
+
+        session_start();
+
+        if(isset($_SESSION['admin'])) {
+            if ($_SESSION['admin'] == 'admin') {
+                header('Location: admin.php');
+            }
+        }
+
+        if(isset($_SESSION['error'])){
+            if($_SESSION['error'] == 1) {
+                $this->errorLoginMessage();
+            }
+        }
+
         echo '<div class="text-center">
                  <img id="main" src="images/default.png" />
                </div>
@@ -43,7 +58,7 @@ class AdminView extends DefaultView
                      <div class="col-md-4 margin-auto">
                               <fieldset class="field_set">
                                   <h1>Admin Page</h1>
-                                  <form action="admin-login.php" method="post">
+                                  <form action="admin_action_login.php" method="post">
                                      <div class="form-group">
                                         <label for="text">Admin</label>
                                         <input type="text" class="form-control" name="username" id="username" required/>
@@ -99,7 +114,7 @@ class AdminView extends DefaultView
      * Error alert block
      * while incorrect username or password
      */
-    public function errorLoginMessage() {
+    private function errorLoginMessage() {
 
         echo '<div class="alert alert-danger" role="alert">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>

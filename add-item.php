@@ -19,17 +19,4 @@ $controller = new LoginController($model);
 
 $view = new LoginView($model);
 
-session_start();
-if(!$_SESSION['login_user']){
-    header('Location: login.php');
-    $_SESSION['add_item'] = '1';
-} else {
-    $_SESSION['add_item'] = '0';
-
-    $controller->actionAddItems();
-    if(isset($_POST['one-click-order'])){
-        header('Location: placeorder.php');
-    } else {
-        header('Location: thanks-order.php');
-    }
-}
+$controller->actionAddItem();
