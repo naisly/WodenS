@@ -18,8 +18,7 @@ $controller = new OrderController($model);
 
 $view = new OrderView($model);
 
-$controller->actionGetSumOfItems();
-$controller->actionGetQuantityOfItems();
+$controller->actionGetHeaderCart();
 
 $view->DoctypeView( 'order' );
 $view->headerView();

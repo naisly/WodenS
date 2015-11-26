@@ -19,8 +19,7 @@ $controller = new LoginController($model);
 
 $view = new LoginView($model);
 
-$controller->actionGetQuantityOfItems();
-$controller->actionGetSumOfItems();
+$controller->actionGetHeaderCart();
 
 $view->DoctypeView( 'login' );
 $view->headerView();

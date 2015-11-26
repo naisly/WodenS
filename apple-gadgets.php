@@ -18,16 +18,7 @@ $controller = new DefaultController($model);
 
 $view = new DefaultView($model);
 
-$controller->actionGetQuantityOfItems();
-$controller->actionGetSumOfItems();
-
-$controller->actionSetAveragePrice( 'gadgets' );
-
-$controller->actionGetDistinctCategories( 'gadgets' );
-
-$controller->actionGetItemNames( 'Apple', 'gadgets' );
-
-$controller->actionGetCategories( 'Apple' ,'gadgets', 'Apple' );
+$controller->actionGetData( 'Apple', 'Gadgets', 'Apple' );
 
 $view->DoctypeView( 'gadgets' );
 

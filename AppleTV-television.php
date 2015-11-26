@@ -19,16 +19,7 @@ $controller = new DefaultController($model);
 
 $view = new DefaultView($model);
 
-$controller->actionGetQuantityOfItems();
-$controller->actionGetSumOfItems();
-
-$controller->actionSetAveragePrice( 'Television' );
-
-$controller->actionGetDistinctCategories( 'Television' );
-
-$controller->actionGetItemNames( 'AppleTV', 'Television' );
-
-$controller->actionGetCategories( 'AppleTV','Television', 'AppleTV' );
+$controller->actionGetData( 'AppleTV', 'Television', 'AppleTV' );
 
 $view->DoctypeView( 'phones' );
 

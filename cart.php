@@ -20,8 +20,7 @@ $controller = new ProfileController($model);
 $view = new ProfileView($model);
 
 $controller->actionGetOrderedItems();
-$controller->actionGetQuantityOfItems();
-$controller->actionGetSumOfItems();
+$controller->actionGetHeaderCart();
 
 $view->DoctypeView( 'profile' );
 $view->headerView();

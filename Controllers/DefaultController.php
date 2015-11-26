@@ -24,6 +24,16 @@ class DefaultController
         $this->model = $model;
     }
 
+    public function actionGetData( $category, $table, $sort ) {
+
+        $this->actionGetHeaderCart();
+        $this->actionSetAveragePrice( $table );
+        $this->actionGetDistinctCategories( $table );
+        $this->actionGetItemNames( $category, $table );
+        $this->actionGetCategories( $category, $table, $sort );
+
+    }
+
     /*
      * Search method for Selling
      * page for adding items in your Cart
@@ -54,20 +64,20 @@ class DefaultController
      * @var $shipping_array
      * @var $average_price_array
      */
-    public function actionGetCategories( $category, $table, $sort ) {
+    private function actionGetCategories( $category, $table, $sort ) {
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
         $_SESSION['status'] = 0;
         $sql_query = "SELECT * FROM phones";
-        if ($category === 'phones') {
+        if ($category == 'Phones') {
             $sql_query = "SELECT * FROM phones";
-        } else if ($category === 'Notebooks'){
+        } else if ($category == 'Notebooks'){
             $sql_query = "SELECT * FROM notebooks";
-        } else if ($category === 'Television'){
+        } else if ($category == 'Television'){
             $sql_query = "SELECT * FROM television";
-        } else if ($category === 'gadgets'){
+        } else if ($category == 'Gadgets'){
             $sql_query = "SELECT * FROM gadgets";
         } else {
             $sql_query = "SELECT * FROM $table WHERE category='$category'";
@@ -308,7 +318,7 @@ class DefaultController
      * Getting Distinct categories
      * for the product page
      */
-    public function actionGetDistinctCategories( $category ) {
+    private function actionGetDistinctCategories( $category ) {
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
@@ -336,23 +346,23 @@ class DefaultController
      *
      * @var $res
      */
-    public function actionSetAveragePrice( $category ) {
+    private function actionSetAveragePrice( $category ) {
         $i = 0;
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
-        if ( $category === 'phones') {
+        if ( $category == 'Phones') {
             $sql_query = "SELECT price FROM phones";
             $sql_products = "SELECT DISTINCT product_name FROM phones";
-        } else if ( $category === 'Notebooks') {
+        } else if ( $category == 'Notebooks') {
             $sql_query = "SELECT price FROM notebooks";
             $sql_products = "SELECT DISTINCT product_name FROM notebooks";
-        } else if ( $category === 'Television') {
+        } else if ( $category == 'Television') {
             $sql_query = "SELECT price FROM television";
             $sql_products = "SELECT DISTINCT product_name FROM television";
             //echo $sql_query;
             //echo $sql_products;
-        } else if ( $category === 'Gadgets'){
+        } else if ( $category == 'Gadgets'){
             $sql_query = "SELECT price FROM gadgets";
             $sql_products = "SELECT DISTINCT product_name FROM gadgets";
         }
@@ -407,16 +417,16 @@ class DefaultController
      *
      * @var $product_names_array
      */
-    public function actionGetItemNames( $category , $data) {
+    private function actionGetItemNames( $category , $data) {
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
-        if ( $category === 'phones') {
+        if ( $category == 'Phones') {
             $sql_query = "SELECT DISTINCT product_name FROM phones";
-        } else if ( $category === 'Notebooks'){
+        } else if ( $category == 'Notebooks'){
             $sql_query = "SELECT DISTINCT product_name FROM notebooks";
-        } else if ( $category === 'Television'){
+        } else if ( $category == 'Television'){
             $sql_query = "SELECT DISTINCT product_name FROM television";
-        } else if ( $category === 'gadgets'){
+        } else if ( $category == 'Gadgets'){
             $sql_query = "SELECT DISTINCT product_name FROM gadgets";
         } else {
             $sql_query = "SELECT DISTINCT product_name FROM $data WHERE category='$category'";
@@ -435,6 +445,16 @@ class DefaultController
     }
 
     /*
+     * Incapsulation for
+     * header area
+     * Cart menu
+     */
+    public function actionGetHeaderCart() {
+        $this->actionGetSumOfItems();
+        $this->actionGetQuantityOfItems();
+    }
+
+    /*
      * Method for summing all amount
      * of Items in User's cart Interface
      *
@@ -443,7 +463,7 @@ class DefaultController
      *
      * @var $sum
      */
-    public function actionGetSumOfItems() {
+    private function actionGetSumOfItems() {
 
         include_once('/../Storage.php');
         $db = Storage::getInstance();
@@ -490,7 +510,7 @@ class DefaultController
      * @var $quantity_array
      * @var $quantity
      */
-    public function actionGetQuantityOfItems() {
+    private function actionGetQuantityOfItems() {
 
         include_once('/../Storage.php');
         $db = Storage::getInstance();

@@ -19,8 +19,7 @@ $controller = new DefaultController($model);
 
 $view = new DefaultView($model);
 
-$controller->actionGetSumOfItems();
-$controller->actionGetQuantityOfItems();
+$controller->actionGetHeaderCart();
 
 $view->DoctypeView( 'TV' );
 

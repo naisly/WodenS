@@ -16,8 +16,7 @@ $controller = new SupportController( $model );
 
 $view = new SupportView( $model );
 
-$controller->actionGetQuantityOfItems();
-$controller->actionGetSumOfItems();
+$controller->actionGetHeaderCart();
 
 $view->DoctypeView( 'support-thanks' );
 $view->headerView();
