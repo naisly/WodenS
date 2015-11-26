@@ -601,7 +601,7 @@ CREATE TABLE questions(
   created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 6S White 32GB Neverlock', 'Serdiuk Oleksandr', 'Does this will work in Ukraine?', 'I am pretty sure that YES', 'Dmitry Medvedev');
-INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 6S White 32GB Neverlock', 'Ivan Sakhan', 'Can i use this Phone in Trinidad & Tobago', 'Yes, 100%', 'PRIME ELECTRONICS');
-INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 6S White 32GB Neverlock', 'Jenya Kalujin', 'Will this phone work in Israel? With an Israeli carrier', 'Yes it should work in Israel', 'Professional Seller');
-INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 6S White 32GB Neverlock', 'Anton Vovnenko', 'Can I use this phone in Russia?', 'Yes', 'Oleksandr Serdiuk(Woden S)');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 6S White 32GB Neverlock', 'Serdiuk Oleksandr', 'Does this will work in Ukraine ?', 'I am pretty sure that YES', 'Dmitry Medvedev');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 6S White 32GB Neverlock', 'Ivan Sakhan', 'Can i use this Phone in Trinidad & Tobago', 'Yes , 100%', 'PRIME ELECTRONICS');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 6S White 32GB Neverlock', 'Jenya Kalujin', 'Will this phone work in Israel ? With an Israeli carrier', 'Yes it should work in Israel', 'Professional Seller');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 6S White 32GB Neverlock', 'Anton Vovnenko', 'Can I use this phone in Russia ?', 'Yes', 'Oleksandr Serdiuk(Woden S)');

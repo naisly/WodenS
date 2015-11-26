@@ -1,14 +1,11 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: Home
  * Date: 22.11.2015
  * Time: 16:06
  */
-
 include_once('DefaultController.php');
-
 class SubdescriptionController extends DefaultController
 {
     public $model;
@@ -16,13 +13,10 @@ class SubdescriptionController extends DefaultController
         parent::__construct($model);
         $this->model = $model;
     }
-
     public function actionGetSubdescription( $product_name, $table, $id, $order_id ) {
-
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
-
         $sql_query = "SELECT original_name, photo, category,
                       price, previous_price, time_of_adding, features, quantity,
                       shipping, average_price, subdescription.product_name, subdescription.assoc_products,
@@ -32,7 +26,6 @@ class SubdescriptionController extends DefaultController
                       FROM subdescription INNER JOIN $table WHERE $table.original_name='$product_name' AND
                       subdescription.product_name='$product_name' AND $table.price = $id";
         $result = $mysqli->query( $sql_query );
-
         //echo $sql_query;
         $id = array();
         $original_name = array();
@@ -61,7 +54,6 @@ class SubdescriptionController extends DefaultController
         $technical_details6 = array();
         $product_details = array();
         $assoc_photo = array();
-
         if ($result->num_rows > 0) {
             // output data of each row
             while ($row = $result->fetch_assoc()) {
@@ -96,12 +88,9 @@ class SubdescriptionController extends DefaultController
                 $assoc_photo = array_merge($assoc_photo, array_map('trim', explode(",", $row['assoc_photo'])));
             }
         }
-
         $sql_min = "SELECT price FROM $table WHERE original_name='$original_name'";
         $result_min = $mysqli->query( $sql_min );
-
         $min_array = array();
-
         if ($result_min->num_rows > 0) {
             // output data of each row
             while ($row = $result_min->fetch_assoc()) {
@@ -125,7 +114,6 @@ class SubdescriptionController extends DefaultController
         $this->model->setQuantity( $quantity );
         $this->model->setShipping( $shipping );
         $this->model->setAverage( $average_price );
-
         $this->model->setProductName( $product_name );
         $this->model->setDescription( $desc_products );
         $this->model->setAssocProducts( $assoc_products );
@@ -139,8 +127,6 @@ class SubdescriptionController extends DefaultController
         $this->model->setProductDetails( $product_details );
         $this->model->setProductPhoto( $assoc_photo );
         $this->model->setMinimum( $min );
-
-
         /*$id = $row['id'];
         $product_name = $row['product_name'];
         $assoc_products = explode(',', $row['assoc_products']);
@@ -152,30 +138,21 @@ class SubdescriptionController extends DefaultController
         $technical_details5 = explode(',', $row['technical_details5']);
         $technical_details6 = explode(',', $row['technical_details6']);
         $product_details = explode(',', $row['product_details']);
-
         echo $assoc_products;*/
         //print_r( $technical_details );
-
     }
-
     public function actionSetDistinctProductsPrice( $table, $product_name){
-
-
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
-
         $sql_query = "SELECT id, product_name, category, photo, price FROM $table WHERE (product_name='$product_name' AND price != {$this->model->getPrice()}) ORDER BY price ASC LIMIT 3";
-
         $result_query = $mysqli->query( $sql_query );
-
         //echo $sql_query;
         $id_array = array();
         $price_array = array();
         $product_name_array = array();
         $category_array = array();
         $photo_array = array();
-
         if ($result_query->num_rows > 0) {
             // output data of each row
             while ($row = $result_query->fetch_assoc()) {
@@ -186,7 +163,6 @@ class SubdescriptionController extends DefaultController
                 $photo_array = array_merge($photo_array, array_map('trim', explode(",", $row['photo'])));
             }
         }
-
         //print_r($product_name_array);
         $this->model->setSortId( $id_array );
         $this->model->setSortPrice( $price_array );
@@ -194,20 +170,14 @@ class SubdescriptionController extends DefaultController
         $this->model->setSortCategory( $category_array );
         $this->model->setSortPhoto( $photo_array );
     }
-
     public function actionSelectRandomProduct() {
-
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
-
         $sql_query = "SELECT phones.original_name as phone, notebooks.original_name as notebook, gadgets.original_name as gadget, television.original_name as television FROM phones
                       INNER JOIN gadgets INNER JOIN notebooks INNER JOIN television ORDER BY RAND() LIMIT 1";
-
         $result_query = $mysqli->query( $sql_query );
-
         $product_array = array();
-
         if ($result_query->num_rows > 0) {
             // output data of each row
             while ($row = $result_query->fetch_assoc()) {
@@ -217,12 +187,9 @@ class SubdescriptionController extends DefaultController
                 array_push($product_array, $row['television']);
             }
         }
-
         //print_r($product_array);
-
         $sequence_number = rand(1,4);
         $table = '';
-
         if( $sequence_number == 1){
             $table = 'phones';
         } else if ( $sequence_number == 2){
@@ -232,21 +199,16 @@ class SubdescriptionController extends DefaultController
         } else if ( $sequence_number == 4){
             $table = 'television';
         }
-
         $search_num = $sequence_number - 1;
-
         $query = "SELECT id, original_name, price, previous_price, quantity, photo FROM $table WHERE original_name='$product_array[$search_num]'";
-
         //echo $query;
         $result = $mysqli->query( $query );
-
         $sequence_id = array();
         $sequence_original_name = array();
         $sequence_price = array();
         $sequence_previous_price = array();
         $sequence_quantity = array();
         $sequence_photo = array();
-
         if ($result->num_rows > 0) {
             // output data of each row
             while ($row = $result->fetch_assoc()) {
@@ -258,40 +220,30 @@ class SubdescriptionController extends DefaultController
                 $sequence_photo = array_merge($sequence_photo, array_map('trim', explode(",", $row['photo'])));
             }
         }
-
         if( strlen($sequence_original_name[0]) > 30 ){
             $sequence_original_name[0] = substr($sequence_original_name[0], 0, 30);
             $sequence_original_name[0] .= ' ...';
         }
-
         $this->model->setSequenceId( $sequence_id[0] );
         $this->model->setSequenceOriginalName( $sequence_original_name[0] );
         $this->model->setSequencePrice( $sequence_price[0] );
         $this->model->setSequencePreviousPrice( $sequence_previous_price[0] );
         $this->model->setSequenceQuantity( $sequence_quantity[0] );
         $this->model->setSequencePhoto( $sequence_photo[0] );
-
-
     }
-
     public function actionMakeComparison( $table ) {
-
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
-
         $sql_query = "SELECT DISTINCT product_name FROM $table ORDER BY RAND() LIMIT 4";
         $result = $mysqli->query( $sql_query );
-
         $products_array = array();
-
         if ($result->num_rows > 0) {
             // output data of each row
             while ($row = $result->fetch_assoc()) {
                 $products_array = array_merge($products_array, array_map('trim', explode(",", $row['product_name'])));
             }
         }
-
         $product_name_array = array();
         $original_name_array = array();
         $photo_array = array();
@@ -305,12 +257,10 @@ class SubdescriptionController extends DefaultController
         $quantity_array = array();
         $shipping_array = array();
         $average_price_array = array();
-
         $i = 0;
         while ($i < count($products_array)) {
             $sql_stmt = "SELECT * FROM $table WHERE product_name='$products_array[$i]' LIMIT 1";
             $result_query = $mysqli->query($sql_stmt);
-
             if ($result_query->num_rows > 0) {
                 // output data of each row
                 while ($row = $result_query->fetch_assoc()) {
@@ -329,10 +279,8 @@ class SubdescriptionController extends DefaultController
                     array_push($average_price_array, $row['average_price']);
                 }
             }
-
             $i++;
         }
-
         $this->model->setComparisonId( $id_array );
         $this->model->setComparisonProductName( $product_name_array );
         $this->model->setComparisonOriginalName( $original_name_array );
@@ -346,12 +294,9 @@ class SubdescriptionController extends DefaultController
         $this->model->setComparisonQuantity( $quantity_array );
         $this->model->setComparisonShipping( $shipping_array );
         $this->model->setComparisonAverage( $average_price_array );
-
         $sql = "SELECT UNIX_TIMESTAMP(time) as timing FROM $table";
         $res_sql = $mysqli->query( $sql );
-
         $timestamp_array = array();
-
         if ($res_sql->num_rows > 0) {
             // output data of each row
             while ($row = $res_sql->fetch_assoc()) {
@@ -359,40 +304,29 @@ class SubdescriptionController extends DefaultController
             }
         }
         $this->model->setComparisonTimeOfAdding( $timestamp_array );
-
     }
-
     public function actionGetAssocProducts( $table, $product_name ) {
-
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
-
         $sql_query = "SELECT assoc_products FROM subdescription WHERE product_name='$product_name'";
         $result = $mysqli->query( $sql_query );
-
         //echo $sql_query;
-
         $products_array = array();
-
         if ($result->num_rows > 0) {
             // output data of each row
             while ($row = $result->fetch_assoc()) {
                 $products_array = array_merge($products_array, array_map('trim', explode(",", $row['assoc_products'])));
             }
         }
-
         $photo_array = array();
         $price_array = array();
         $previous_price_array = array();
         $shipping_array = array();
-
         $i = 0;
         while( $i < count($products_array)){
-
             $sql_row = "SELECT photo, price, previous_price, shipping FROM $table WHERE original_name='$products_array[$i]' LIMIT 1";
             $sql_res = $mysqli->query( $sql_row );
-
             if ($sql_res->num_rows > 0) {
                 // output data of each row
                 while ($row = $sql_res->fetch_assoc()) {
@@ -402,96 +336,52 @@ class SubdescriptionController extends DefaultController
                     array_push($shipping_array, $row['shipping']);
                 }
             }
-
             $i++;
         }
-
         $this->model->setAssocProducts( $products_array );
         $this->model->setAssocPhoto( $photo_array );
         $this->model->setAssocPrice( $price_array );
         $this->model->setAssocPreviousPrice( $previous_price_array );
         $this->model->setAssocShipping( $shipping_array );
-
     }
-
     public function actionGetQuestionsAndAnswers( $original_name, $search ) {
-
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
-        /*if ($search == '1'){
-            $sql_query = "SELECT product, ask_person, question, answer, answer_person, unix_timestamp(created) as created FROM questions WHERE product LIKE '%$original_name%' OR question LIKE '%$original_name%' OR answer LIKE '%$original_name%'";
-        } else {
-            $sql_query = "SELECT product, ask_person, question, answer, answer_person, unix_timestamp(created) as created FROM questions WHERE product='$original_name' LIMIT 4";
-        }
-        $result = $mysqli->query( $sql_query );
-
-        //echo $sql_query;
-        $ask_person_array = array();
-        $question_array = array();
-        $answer_array = array();
-        $answer_person_array = array();
-        $created_array = array();
-
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while ($row = $result->fetch_assoc()) {
-                $ask_person_array = array_merge($ask_person_array, array_map('trim', explode(",", $row['ask_person'])));
-                $question_array = array_merge($question_array, array_map('trim', explode(",", $row['question'])));
-                $answer_array = array_merge($answer_array, array_map('trim', explode(",", $row['answer'])));
-                $answer_person_array = array_merge($answer_person_array, array_map('trim', explode(",", $row['answer_person'])));
-                $created_array = array_merge($created_array, array_map('trim', explode(",", $row['created'])));
-            }
-        }
-
-        $this->model->setAskPerson( $ask_person_array );
-        $this->model->setQuestion( $question_array );
-        $this->model->setAnswer( $answer_array );
-        $this->model->setAnswerPerson( $answer_person_array );
-        $this->model->setAnswerTime( $created_array );*/
-
-
-
         $items = explode(" ", $original_name);
-
         $u = 0;
         while($u < count($items)){
             if(strlen($items[$u]) < 2){
                 unset($items[$u]);
             }
-
             $u++;
         }
         sort($items);
         //print_r($items);
-
         $result_items = array();
         $i = 0;
-
         while ($i < count($items)){
             $sql_id = "SELECT id FROM questions WHERE product LIKE '%$items[$i]%' OR question LIKE '%$items[$i]%' OR answer LIKE '%$items[$i]%'";
             $res_id = $mysqli->query( $sql_id );
-
+            //echo $sql_id;
             if ($res_id->num_rows > 0) {
                 // output data of each row
                 while ($row = $res_id->fetch_assoc()) {
                     $result_items = array_merge($result_items, array_map('trim', explode(",", $row['id'])));
                 }
             }
-
             $i++;
         }
+        $unique_result_items = array_unique($result_items);
+        //print_r($unique_result_items);
 
-        $result_items = array_unique($result_items);
-        //print_r($result_items);
-
-
+        sort($unique_result_items);
+        //print_r($unique_result_items);
         /*
          * FROM ID
          * GETTING DATA
          */
-
         $products_array = array();
         $ask_person_array = array();
         $question_array = array();
@@ -499,11 +389,13 @@ class SubdescriptionController extends DefaultController
         $answer_person_array = array();
         $created_array = array();
         $i = 0;
-        while($i < count($result_items)){
-            $sql_query = "SELECT product, ask_person, question, answer, answer_person, unix_timestamp(created) as created FROM questions WHERE id=$result_items[$i]";
+
+        $count_of_result_items = count($unique_result_items);
+        //echo $count_of_result_items;
+        while($i < $count_of_result_items){
+            $sql_query = "SELECT product, ask_person, question, answer, answer_person, unix_timestamp(created) as created FROM questions WHERE id=$unique_result_items[$i]";
             $result_query = $mysqli->query( $sql_query );
-
-
+            //echo $sql_query;
             if ($result_query->num_rows > 0) {
                 // output data of each row
                 while ($row = $result_query->fetch_assoc()) {
@@ -515,124 +407,120 @@ class SubdescriptionController extends DefaultController
                     array_push($created_array, $row['created']);
                 }
             }
-
             $i++;
         }
-
-        //print_r($question_array);
-        //unset($question_array[1]);
-        $question_result_array = array();
-
-        $j = 0;
-        while($j < count($question_array)){
-
-            $item = explode(" ", $question_array[$j]);
-
-            $k = 0;
-            while($k < count($item)){
-                $u = 0;
-                while($u < count($items)) {
-                    if (strtolower($item[$k]) == strtolower($items[$u])) {
-                        $item[$k] = "<span id='found'>$item[$k]</span>";
-                    }
-                    $u++;
-                }
-                $k++;
-            }
-            array_push($question_result_array, $item);
-            $j++;
-        }
-
-        $question_final = array();
-        $i = 0;
-        while($i < count($question_result_array)){
-            array_push($question_final, implode(" ", $question_result_array[$i]));
-
-            $i++;
-        }
-        //print_r($question_final);
 
         /*
-         * @var $question_result_array
-         * Array of all questions
-         * added found class
+         * items - array()
+         * question - array()
          */
 
-        $answer_result_array = array();
+        $found_question_array_non = array();
 
-        $j = 0;
-        while($j < count($answer_array)){
+        $i = 0;
+        while( $i < count($question_array)){
 
-            $item = explode(" ", $answer_array[$j]);
-
-            $k = 0;
-            while($k < count($item)){
-                $u = 0;
-                while($u < count($items)) {
-                    if (strtolower($item[$k]) == strtolower($items[$u])) {
-                        $item[$k] = "<span id='found'>$item[$k]</span>";
-                    }
-                    $u++;
-                }
-                $k++;
+            $u = 0;
+            $item = $question_array;
+            while($u < count($items)){
+                $item = str_replace("$items[$u]", "<span id='found'>$items[$u]</span>", $item, $count);
+                $u++;
             }
-            array_push($answer_result_array, $item);
-            $j++;
+
+            array_push($found_question_array_non, $item);
+            $i++;
         }
 
-        $answer_final = array();
+
+        $found_question_array = $found_question_array_non[0];
+
+        $count_question_array = array();
+
         $i = 0;
-        while($i < count($answer_result_array)){
-            array_push($answer_final, implode(" ", $answer_result_array[$i]));
+        while($i < count($question_array)){
+            $string = str_replace("<span id='found'>", "", $found_question_array[$i], $count);
+
+            array_push($count_question_array, $count);
 
             $i++;
         }
-        //print_r($answer_final);
 
-        //print_r($answer_result_array);
-        /*
-         * @var $answer_result_array
-         * Array of all answers
-         * added found class
-         */
 
-        $product_result_array = array();
 
-        $j = 0;
-        while($j < count($products_array)){
 
-            $item = explode(" ", $products_array[$j]);
 
-            $k = 0;
-            while($k < count($item)){
-                $u = 0;
-                while($u < count($items)) {
-                    if (strtolower($item[$k]) == strtolower($items[$u])) {
-                        $item[$k] = "<span id='found'>$item[$k]</span>";
-                    }
-                    $u++;
-                }
-                $k++;
+        $found_answer_array_non = array();
+
+        $i = 0;
+        while( $i < count($answer_array)){
+
+            $u = 0;
+            $item = $answer_array;
+            while($u < count($items)){
+                $item = str_replace("$items[$u]", "<span id='found'>$items[$u]</span>", $item, $count);
+                $u++;
             }
-            array_push($product_result_array, $item);
-            $j++;
+
+            array_push($found_answer_array_non, $item);
+            $i++;
         }
 
-        $products_final = array();
+        $found_answer_array = $found_answer_array_non[0];
+
+        $count_answer_array = array();
+
         $i = 0;
-        while($i < count($product_result_array)){
-            array_push($products_final, implode(" ", $product_result_array[$i]));
+        while($i < count($answer_array)){
+            $string = str_replace("<span id='found'>", "", $found_answer_array[$i], $count);
+
+            array_push($count_answer_array, $count);
 
             $i++;
         }
-        //print_r($products_final);
 
-        //print_r($product_result_array);
+        $result_q_and_a = array();
+
+        $i = 0;
+        while($i < count($count_question_array)){
+
+            $result_q_and_a[$i] = $count_question_array[$i] + $count_answer_array[$i];
+
+            $i++;
+        }
+
+        //print_r($result_q_and_a);
+        //print_r($result_q_and_a);
+
+        $last_question_array = array();
+        $last_answer_array = array();
+
+        $i = 0;
+        $count_q_and_a = count($result_q_and_a);
+        while($i < $count_q_and_a){
+            $max = max($result_q_and_a);
+
+            $key = array_search($max, $result_q_and_a);
+
+            array_push($last_question_array, $found_question_array[$key]);
+            array_push($last_answer_array, $found_answer_array[$key]);
+
+            unset($result_q_and_a[$key]);
+
+            $i++;
+        }
+
+
+
+
+
+
+
+
+
         $this->model->setAskPerson( $ask_person_array );
-        $this->model->setQuestion( $question_final );
-        $this->model->setAnswer( $answer_final );
+        $this->model->setQuestion( $last_question_array );
+        $this->model->setAnswer( $last_answer_array );
         $this->model->setAnswerPerson( $answer_person_array );
         $this->model->setAnswerTime( $created_array );
-
     }
 }
