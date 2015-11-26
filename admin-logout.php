@@ -19,5 +19,3 @@ $controller = new AdminController($model);
 $view = new AdminView($model);
 
 $controller->actionLogout();
-
-header('Location: admin-login.php');

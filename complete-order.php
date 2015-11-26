@@ -18,10 +18,7 @@ $controller = new OrderController($model);
 
 $view = new OrderView($model);
 
-$controller->actionGetHeaderCart();
-$controller->actionGeneralizeId();
-$controller->actionInsertData();
-$controller->actionInsertIntoOrders();
+$controller->actionCompleteOrder();
 
 $view->DoctypeView( 'order' );
 $view->headerView();

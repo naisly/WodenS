@@ -20,5 +20,3 @@ $controller = new ProfileController($model);
 $view = new ProfileView($model);
 
 $controller->actionRemoveData();
-
-header('Location: cart.php');

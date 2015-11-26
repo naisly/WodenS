@@ -13,7 +13,19 @@ class SubdescriptionController extends DefaultController
         parent::__construct($model);
         $this->model = $model;
     }
-    public function actionGetSubdescription( $product_name, $table, $id, $order_id ) {
+
+    public function actionGetData( $original_name, $table, $id_num, $id, $product_name, $search) {
+
+        $this->actionGetSubdescription( $original_name, $table, $id_num, $id );
+        $this->actionSetDistinctProductsPrice( $table, $product_name );
+        $this->actionSelectRandomProduct();
+        $this->actionMakeComparison( $table );
+        $this->actionGetAssocProducts( $table, $original_name );
+        $this->actionGetQuestionsAndAnswers( $original_name, $search);
+
+        $this->actionGetHeaderCart();
+    }
+    private function actionGetSubdescription( $product_name, $table, $id, $order_id ) {
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
@@ -141,7 +153,7 @@ class SubdescriptionController extends DefaultController
         echo $assoc_products;*/
         //print_r( $technical_details );
     }
-    public function actionSetDistinctProductsPrice( $table, $product_name){
+    private function actionSetDistinctProductsPrice( $table, $product_name){
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
@@ -170,7 +182,7 @@ class SubdescriptionController extends DefaultController
         $this->model->setSortCategory( $category_array );
         $this->model->setSortPhoto( $photo_array );
     }
-    public function actionSelectRandomProduct() {
+    private function actionSelectRandomProduct() {
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
@@ -231,7 +243,7 @@ class SubdescriptionController extends DefaultController
         $this->model->setSequenceQuantity( $sequence_quantity[0] );
         $this->model->setSequencePhoto( $sequence_photo[0] );
     }
-    public function actionMakeComparison( $table ) {
+    private function actionMakeComparison( $table ) {
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
@@ -305,7 +317,7 @@ class SubdescriptionController extends DefaultController
         }
         $this->model->setComparisonTimeOfAdding( $timestamp_array );
     }
-    public function actionGetAssocProducts( $table, $product_name ) {
+    private function actionGetAssocProducts( $table, $product_name ) {
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
@@ -344,7 +356,7 @@ class SubdescriptionController extends DefaultController
         $this->model->setAssocPreviousPrice( $previous_price_array );
         $this->model->setAssocShipping( $shipping_array );
     }
-    public function actionGetQuestionsAndAnswers( $original_name, $search ) {
+    private function actionGetQuestionsAndAnswers( $original_name, $search ) {
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();

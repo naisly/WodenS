@@ -41,6 +41,8 @@ class ProfileController extends DefaultController
      */
     public function actionGetOrderedItems(){
 
+        $this->actionGetHeaderCart();
+
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
@@ -77,6 +79,7 @@ class ProfileController extends DefaultController
         $this->model->setCategoryArray( $category_array );
         $this->model->setPriceArray( $price_array );
         $this->model->setQuantityOfItem( $quantity_array );
+
     }
 
     /*
@@ -104,6 +107,8 @@ class ProfileController extends DefaultController
         $sql_query = $mysqli->prepare("DELETE FROM orderedItems WHERE user='$user' AND id=$id");
 
         $sql_query->execute();
+
+        header('Location: cart.php');
     }
 
 }

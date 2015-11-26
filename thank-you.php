@@ -24,23 +24,6 @@ $controller->actionCheckProvidedEmail();
 
 $view->DoctypeView( 'login' );
 
-if($model->getEmail() !== $model->getEmailAgain()){
-    $view->errorEmailMessage();
-    $view->RegisterView();
-} else if($model->getPassword() !== $model->getPasswordAgain()){
-    $view->errorPasswordMessage();
-    $view->RegisterView();
-} else if($model->getPassword() === $model->getPasswordAgain() && (strlen($model->getPassword()) < 7)){
-    $view->errorMinCountMessage();
-    $view->RegisterView();
-} else if($_SESSION['email_error'] == 1){
-    $view->errorRegisteredEmailMessage();
-    $view->RegisterView();
-} else {
-    $view->headerView();
-    $view->successMessage();
+$view->actionValidate();
 
-    $view->getFooter();
-
-    $controller->actionInsertData();
-}
+$controller->actionDoInsertion();

@@ -20,7 +20,6 @@ $controller = new ProfileController($model);
 $view = new ProfileView($model);
 
 $controller->actionGetOrderedItems();
-$controller->actionGetHeaderCart();
 
 $view->DoctypeView( 'profile' );
 $view->headerView();

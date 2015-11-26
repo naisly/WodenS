@@ -28,11 +28,19 @@ class OrderController extends DefaultController
         $this->model = $model;
     }
 
+    public function actionCompleteOrder() {
+
+        $this->actionGetHeaderCart();
+        $this->actionGeneralizeId();
+        $this->actionInsertData();
+        $this->actionInsertIntoOrders();
+    }
+
     /*
      * Set new Id
      * with Randomize method
      */
-    public function actionGeneralizeId() {
+    private function actionGeneralizeId() {
 
         $this->model->setOrderId();
     }
@@ -49,7 +57,7 @@ class OrderController extends DefaultController
      * @var $quantity_array
      *
      */
-    public function actionInsertData() {
+    private function actionInsertData() {
 
         include_once('/../Storage.php');
         $db = Storage::getInstance();
@@ -112,7 +120,7 @@ class OrderController extends DefaultController
      * @var $giftwrap
      * @var $order_id
      */
-    public function actionInsertIntoOrders() {
+    private function actionInsertIntoOrders() {
 
         include_once('/../Storage.php');
         $db = Storage::getInstance();

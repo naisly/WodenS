@@ -21,10 +21,4 @@ $view = new LoginView($model);
 
 $view->DoctypeView( 'login' );
 
-if(isset($_SESSION['email_error'])){
-    if($_SESSION['email_error'] == 1){
-        $view->errorRegisteredEmailMessage();
-    }
-}
-
 $view->RegisterView();

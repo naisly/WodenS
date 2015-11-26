@@ -20,23 +20,10 @@ $controller = new LoginController($model);
 $view = new LoginView($model);
 
 session_start();
-if(isset($_SESSION['login_user'])){
-
-    header("Location: profile.php");
-}
 
 $view->DoctypeView( 'login' );
 $view->headerView();
 
-if(isset($_SESSION['error'])){
-    if($_SESSION['error'] == 1) {
-        $view->errorLoginMessage();
-    }
-}
-if(isset($_SESSION['add_item'])){
-    if($_SESSION['add_item'] == 1) {
-        $view->errorAddItemMessage();
-    }
-}
+$view->displayLoginErrors();
 
 $view->getLoginForm();

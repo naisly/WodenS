@@ -34,6 +34,12 @@ class LoginView extends DefaultView
      */
     public function RegisterView() {
 
+        if(isset($_SESSION['email_error'])){
+            if($_SESSION['email_error'] == 1){
+                $this->errorRegisteredEmailMessage();
+            }
+        }
+
         echo  '<div class="text-center">
                  <img id="main" src="images/default.png" />
                </div>
@@ -109,7 +115,7 @@ class LoginView extends DefaultView
     /*
      * Alert wrong email
      */
-    public function errorEmailMessage() {
+    private function errorEmailMessage() {
 
         echo '<div class="alert alert-danger" role="alert">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -121,7 +127,7 @@ class LoginView extends DefaultView
     /*
      * Alert wrong password
      */
-    public function errorPasswordMessage() {
+    private function errorPasswordMessage() {
 
         echo '<div class="alert alert-danger" role="alert">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -133,7 +139,7 @@ class LoginView extends DefaultView
     /*
      * Alert Min Count error
      */
-    public function errorMinCountMessage() {
+    private function errorMinCountMessage() {
 
         echo '<div class="alert alert-danger" role="alert">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -145,7 +151,7 @@ class LoginView extends DefaultView
     /*
      * Alrt wrong email or password
      */
-    public function errorLoginMessage() {
+    private function errorLoginMessage() {
 
         echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -157,7 +163,7 @@ class LoginView extends DefaultView
     /*
      * Alert already registered
      */
-    public function errorRegisteredEmailMessage() {
+    private function errorRegisteredEmailMessage() {
 
         echo '<div class="alert alert-danger" role="alert">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -169,7 +175,7 @@ class LoginView extends DefaultView
     /*
      * Alert success
      */
-    public function successMessage() {
+    private function successMessage() {
 
         echo '<div class="alert alert-success" role="alert" style="margin-top: -20px;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -203,7 +209,7 @@ class LoginView extends DefaultView
     /*
      * Error login
      */
-    public function errorAddItemMessage() {
+    private function errorAddItemMessage() {
 
         echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -297,5 +303,46 @@ class LoginView extends DefaultView
                <script src="js/jquery-min.js"></script>
                <script src="js/bootstrap.min.js"></script>';
 
+    }
+
+    public function displayLoginErrors() {
+
+        if(isset($_SESSION['login_user'])){
+
+            header("Location: profile.php");
+        }
+
+        if(isset($_SESSION['error'])){
+            if($_SESSION['error'] == 1) {
+                $this->errorLoginMessage();
+            }
+        }
+        if(isset($_SESSION['add_item'])){
+            if($_SESSION['add_item'] == 1) {
+                $this->errorAddItemMessage();
+            }
+        }
+    }
+
+    public function actionValidate() {
+
+        if($this->model->getEmail() !== $this->model->getEmailAgain()){
+            $this->errorEmailMessage();
+            $this->RegisterView();
+        } else if($this->model->getPassword() !== $this->model->getPasswordAgain()){
+            $this->errorPasswordMessage();
+            $this->RegisterView();
+        } else if($this->model->getPassword() === $this->model->getPasswordAgain() && (strlen($this->model->getPassword()) < 7)){
+            $this->errorMinCountMessage();
+            $this->RegisterView();
+        } else if($_SESSION['email_error'] == 1){
+            $this->errorRegisteredEmailMessage();
+            $this->RegisterView();
+        } else {
+            $this->headerView();
+            $this->successMessage();
+
+            $this->getFooter();
+        }
     }
 }

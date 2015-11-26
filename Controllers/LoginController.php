@@ -61,7 +61,7 @@ class LoginController extends DefaultController
      * @var $email
      * @var $password
      */
-    public function actionInsertData() {
+    private function actionInsertData() {
 
         include_once('/../Storage.php');
         $db = Storage::getInstance();
@@ -75,6 +75,26 @@ class LoginController extends DefaultController
         $stmt = $mysqli->prepare($sql_stmt);
 
         $stmt->execute();
+    }
+
+    /*
+     * Incapsulation for inserting
+     * into the DB data from
+     * register view
+     */
+    public function actionDoInsertion()
+    {
+        echo $this->model->getEmail();
+        echo $this->model->getEmailAgain();
+        if ($this->model->getEmail() == $this->model->getEmailAgain()) {
+            if ($this->model->getPassword() == $this->model->getPasswordAgain()) {
+                if ($this->model->getPassword() === $this->model->getPasswordAgain() && (strlen($this->model->getPassword()) > 7)) {
+                    if ($_SESSION['email_error'] == 0) {
+                        $this->actionInsertData();
+                    }
+                }
+            }
+        }
     }
 
     /*
