@@ -421,9 +421,43 @@ class SubdescriptionController extends DefaultController
         while( $i < count($question_array)){
 
             $u = 0;
-            $item = $question_array;
+
+            $k = 0;
+            while($k < count($question_array)){
+                $item[$k] = strtolower($question_array[$k]);
+
+                $k++;
+            }
+
+
             while($u < count($items)){
+
+                $j = 0;
+                while($j < count($items)){
+                    $items[$j] = strtolower($items[$j]);
+
+                    $j++;
+                }
                 $item = str_replace("$items[$u]", "<span id='found'>$items[$u]</span>", $item, $count);
+
+                $s = 0;
+                while($s < count($items)){
+                    $items_lc[$s] = ucfirst($items[$s]);
+
+                    $s++;
+                }
+                $item = str_replace("<span id='found'>$items[$u]</span>", "<span id='found'>$items_lc[$u]</span>", $item, $count);
+
+                $m = 0;
+                while($m < count($item)){
+                    $item[$m] = ucfirst($item[$m]);
+
+
+                    $m++;
+                }
+
+
+
                 $u++;
             }
 
