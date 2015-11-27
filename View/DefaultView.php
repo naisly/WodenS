@@ -84,6 +84,15 @@ class DefaultView
         } else if ($page == 'search'){
             echo '<link href="css/login.css" rel="stylesheet" type="text/css">
                   <link href="css/subdescription.css" rel="stylesheet" type="text/css">';
+        } else if ($page == 'store'){
+            echo '<link href="css/store.css" rel="stylesheet" type="text/css">
+                  <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+                  <link href="css/jquery.bxslider.css" rel="stylesheet">
+                  <script src="js/jquery-min.js"></script>
+                  <!-- bxSlider Javascript file -->
+                  <script src="js/bootstrap.min.js"></script>
+                  <!-- bxSlider Javascript file -->
+                  <script src="js/jquery.bxslider.min.js"></script>';
         } else {
             echo '<link rel="stylesheet" href="css/default.css" />' .
                  '<link rel="stylesheet" href="css/animate.css" />';
@@ -340,14 +349,7 @@ class DefaultView
         echo   '</div>
                 <footer>
                     <div class="container">
-                         <div class="row">
-                             <div class="col-sm-1"></div>
-                                 <div class="col-sm-12">
-                                 <ul class="nav nav-list">
-                                     <li class="divider"></li>
-                                 </ul>
-                             </div>
-                         </div>
+                         <div class="divider"></div>
                     </div>
                     <div class="container" style="margin-top: 20px;">
                         <div class="row">
@@ -355,7 +357,7 @@ class DefaultView
                             <div class="col-sm-2 wow fadeInLeft">
                                 <ul>
                                     <li class="footer-menu"><b>Shop</b></li>
-                                    <li><a class="items" href="/">Home</a></li>
+                                    <li><a class="items" href="index.php">Home</a></li>
                                     <li><a class="items" href="phones-all.php">Phones</a></li>
                                     <li><a class="items" href="laptops.php">Laptops</a></li>
                                     <li><a class="items" href="devices.php">Devices</a></li>
@@ -367,53 +369,53 @@ class DefaultView
                             <div class="col-sm-2 wow fadeInLeft">
                                 <ul>
                                     <li class="footer-menu"><b>Store</b></li>
-                                    <li><a class="items" href="/store">Find our store</a></li>
-                                    <li><a class="items" href="/financing">Financing</a></li>
-                                    <li><a class="items" href="/order">Order Status</a></li>
-                                    <li><a class="items" href="/shop">Shopping help</a></li>
-                                    <li><a class="items" href="/info">Info</a></li>
-                                    <li><a class="items" href="/offices">Offices</a></li>
-                                    <li><a class="items" href="/cell">Cell</a></li>
+                                    <li><a class="items" href="store.php">Find our store</a></li>
+                                    <li><a class="items" href="financing.php">Financing</a></li>
+                                    <li><a class="items" href="order.php">Order Status</a></li>
+                                    <li><a class="items" href="shop.php">Shopping help</a></li>
+                                    <li><a class="items" href="info.php">Info</a></li>
+                                    <li><a class="items" href="offices.php">Offices</a></li>
+                                    <li><a class="items" href="cell.php">Cell</a></li>
                                 </ul>
                             </div>
                             <div class="col-sm-2 wow fadeInUp">
                                 <ul>
                                     <li class="footer-menu"><b>Account</b></li>
-                                    <li><a class="items" href="/shop-id">Find your Id</a></li>
-                                    <li><a class="items" href="/store">Store account</a></li>
+                                    <li><a class="items" href="shop-id.php">Find your Id</a></li>
+                                    <li><a class="items" href="store.php">Store account</a></li>
                                 </ul>
                                 <ul>
                                     <li class="footer-menu"><b>Most valuable</b></li>
-                                    <li><a class="items" href="/responsibility">Responsibility</a></li>
-                                    <li><a class="items" href="/privacy">Privacy</a></li>
-                                    <li><a class="items" href="/setting">Setting</a></li>
+                                    <li><a class="items" href="responsibility.php">Responsibility</a></li>
+                                    <li><a class="items" href="privacy.php">Privacy</a></li>
+                                    <li><a class="items" href="setting.php">Setting</a></li>
                                 </ul>
                             </div>
                             <div class="col-sm-2 wow fadeInRight">
                                 <ul>
                                     <li class="footer-menu"><b>About Us</b></li>
-                                    <li><a class="items" href="/our-company">Our company</a></li>
-                                    <li><a class="items" href="/people">In-touch People</a></li>
-                                    <li><a class="items" href="/managers">Our managers</a></li>
-                                    <li><a class="items" href="/offices">Offices</a></li>
-                                    <li><a class="items" href="/comments">Comments</a></li>
-                                    <li><a class="items" href="/business">Business</a></li>
-                                    <li><a class="items" href="/director">Director</a></li>
-                                    <li><a class="items" href="/job">Job</a></li>
-                                    <li><a class="items" href="/contact-us">Contact Us</a></li>
+                                    <li><a class="items" href="our-company.php">Our company</a></li>
+                                    <li><a class="items" href="people.php">In-touch People</a></li>
+                                    <li><a class="items" href="managers.php">Our managers</a></li>
+                                    <li><a class="items" href="offices.php">Offices</a></li>
+                                    <li><a class="items" href="comments.php">Comments</a></li>
+                                    <li><a class="items" href="business.php">Business</a></li>
+                                    <li><a class="items" href="director.php">Director</a></li>
+                                    <li><a class="items" href="job.php">Job</a></li>
+                                    <li><a class="items" href="contact-us.php">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-sm-2 wow fadeInRight">
                                 <ul>
                                     <li class="footer-menu"><b>For education</b></li>
-                                    <li><a class="items" href="/notebooks">Notebooks</a></li>
-                                    <li><a class="items" href="/devices">Phones</a></li>
+                                    <li><a class="items" href="notebooks.php">Notebooks</a></li>
+                                    <li><a class="items" href="devices.php">Phones</a></li>
                                 </ul>
                                 <ul>
                                     <li class="footer-menu"><b>Business</b></li>
-                                    <li><a class="items" href="/shop-id">Using notebooks in business</a></li>
-                                    <li><a class="items" href="/store">Using phones in day-to-day life</a></li>
-                                    <li><a class="items" href="/shop-id">Using watches in business</a></li>
+                                    <li><a class="items" href="usage-notebooks-business.php">Using notebooks in business</a></li>
+                                    <li><a class="items" href="using-phones-business.php">Using phones in day-to-day life</a></li>
+                                    <li><a class="items" href="using-devices-business.php">Using devices in business</a></li>
                                 </ul>
                             </div>
                             <div class="col-sm-1"></div>
