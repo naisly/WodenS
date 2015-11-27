@@ -6,16 +6,16 @@
  * Time: 20:38
  */
 
-include_once('Controllers\SearchAnswersController.php');
-include_once('Model\SearchAnswersModel.php');
+include_once('Controllers\SubdescriptionController.php');
+include_once('Model\SubdescriptionModel.php');
 include_once('View\SearchAnswersView.php');
 //initiate the triad
 
-$model = new SearchAnswersModel();
+$model = new SubdescriptionModel();
 
 //It is important that the controller and the view share the model
 
-$controller = new SearchAnswersController($model);
+$controller = new SubdescriptionController($model);
 
 $view = new SearchAnswersView($model);
 

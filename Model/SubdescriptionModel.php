@@ -11,18 +11,6 @@ include_once('DefaultModel.php');
 
 class SubdescriptionModel extends DefaultModel
 {
-    public $product_name;
-    public $original_name;
-    public $photo;
-    public $description;
-    public $category;
-    public $price;
-    public $previous_price;
-    public $time_of_adding;
-    public $features;
-    public $id;
-    public $quantity;
-    public $shipping;
 
     public $assoc_products;
     public $technical_details;

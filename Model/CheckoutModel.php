@@ -26,39 +26,10 @@ class CheckoutModel extends DefaultModel
 
     public $sum;
 
-    public function setId( $id ){
-
-        $this->id = $id;
-    }
-
-    public function getId( $i ) {
-
-        return $this->id[$i];
-    }
 
     public function countId() {
 
         return count($this->order_id);
-    }
-
-    public function setProductName( $product_name ){
-
-        $this->product_name = $product_name;
-    }
-
-    public function getProductName( $i ) {
-
-        return $this->product_name[$i];
-    }
-
-    public function setCategory( $category ){
-
-        $this->category = $category;
-    }
-
-    public function getCategory( $i ) {
-
-        return $this->category[$i];
     }
 
     public function setUser( $user ){
@@ -69,26 +40,6 @@ class CheckoutModel extends DefaultModel
     public function getUser( $i ) {
 
         return $this->user[$i];
-    }
-
-    public function setPrice( $price ){
-
-        $this->price = $price;
-    }
-
-    public function getPrice( $i ) {
-
-        return $this->price[$i];
-    }
-
-    public function setQuantity( $quantity ){
-
-        $this->quantity = $quantity;
-    }
-
-    public function getQuantity( $i ) {
-
-        return $this->quantity[$i];
     }
 
     public function setOrderId( $order_id ){

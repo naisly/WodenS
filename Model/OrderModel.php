@@ -14,10 +14,6 @@ include_once('DefaultModel.php');
 
 class OrderModel extends DefaultModel
 {
-    public $id;
-    public $quantity;
-    public $price;
-
 
     public function setQuantity( $quantity ) {
 

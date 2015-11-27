@@ -19,13 +19,6 @@ class LoginModel extends DefaultModel
     public $password;
     public $password_again;
 
-    public $quantity;
-    public $price;
-    public $photo;
-
-    public $APrice;
-    public $AItems;
-
     public function setName ( $name ){
 
         $this->name = $name;
@@ -96,33 +89,4 @@ class LoginModel extends DefaultModel
         return $this->price;
     }
 
-    public function setPhoto ( $photo ) {
-
-        $this->photo = $photo;
-    }
-
-    public function getPhoto() {
-
-        return $this->photo;
-    }
-
-    public function setAPrice ( $APrice ){
-
-        $this->APrice = $APrice;
-    }
-
-    public function getAPrice() {
-
-        return $this->APrice;
-    }
-
-    public function setAItems( $AItems ) {
-
-        $this->AItems = $AItems;
-    }
-
-    public function getAItems() {
-
-        return $this->AItems;
-    }
 }

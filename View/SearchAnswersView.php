@@ -12,7 +12,7 @@ include_once('SubdescriptionView.php');
 class SearchAnswersView extends SubdescriptionView
 {
     private $model;
-    public function __construct(SearchAnswersModel $model)
+    public function __construct(SubdescriptionModel $model)
     {
         parent::__construct($model);
         $this->model = $model;
