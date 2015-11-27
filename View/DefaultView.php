@@ -336,7 +336,7 @@ class DefaultView
     /*
      * Footer, bottom part
      */
-    private function actionGetFooter( $page ) {
+    public function actionGetFooter( $page ) {
         echo   '</div>
                 <footer>
                     <div class="container">

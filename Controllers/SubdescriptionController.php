@@ -9,11 +9,23 @@ include_once('DefaultController.php');
 class SubdescriptionController extends DefaultController
 {
     public $model;
+
+    /**
+     * @param SubdescriptionModel $model
+     */
     public function __construct(SubdescriptionModel $model) {
         parent::__construct($model);
         $this->model = $model;
     }
 
+    /**
+     * @param $original_name
+     * @param $table
+     * @param $id_num
+     * @param $id
+     * @param $product_name
+     * @param $search
+     */
     public function actionGetData( $original_name, $table, $id_num, $id, $product_name, $search) {
 
         $this->actionGetSubdescription( $original_name, $table, $id_num, $id );
@@ -25,6 +37,13 @@ class SubdescriptionController extends DefaultController
 
         $this->actionGetHeaderCart();
     }
+
+    /**
+     * @param $product_name
+     * @param $table
+     * @param $id
+     * @param $order_id
+     */
     private function actionGetSubdescription( $product_name, $table, $id, $order_id ) {
         include_once('/../Storage.php');
         $db = Storage::getInstance();
@@ -153,6 +172,11 @@ class SubdescriptionController extends DefaultController
         echo $assoc_products;*/
         //print_r( $technical_details );
     }
+
+    /**
+     * @param $table
+     * @param $product_name
+     */
     private function actionSetDistinctProductsPrice( $table, $product_name){
         include_once('/../Storage.php');
         $db = Storage::getInstance();
@@ -243,6 +267,10 @@ class SubdescriptionController extends DefaultController
         $this->model->setSequenceQuantity( $sequence_quantity[0] );
         $this->model->setSequencePhoto( $sequence_photo[0] );
     }
+
+    /**
+     * @param $table
+     */
     private function actionMakeComparison( $table ) {
         include_once('/../Storage.php');
         $db = Storage::getInstance();
@@ -317,6 +345,11 @@ class SubdescriptionController extends DefaultController
         }
         $this->model->setComparisonTimeOfAdding( $timestamp_array );
     }
+
+    /**
+     * @param $table
+     * @param $product_name
+     */
     private function actionGetAssocProducts( $table, $product_name ) {
         include_once('/../Storage.php');
         $db = Storage::getInstance();
@@ -356,7 +389,12 @@ class SubdescriptionController extends DefaultController
         $this->model->setAssocPreviousPrice( $previous_price_array );
         $this->model->setAssocShipping( $shipping_array );
     }
-    private function actionGetQuestionsAndAnswers( $original_name, $search ) {
+
+    /**
+     * @param $original_name
+     * @param $search
+     */
+    public function actionGetQuestionsAndAnswers( $original_name, $search ) {
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();

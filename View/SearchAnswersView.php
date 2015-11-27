@@ -18,7 +18,20 @@ class SearchAnswersView extends SubdescriptionView
         $this->model = $model;
     }
 
-    public function GetFooter() {
+    public function getSearchAnswersPage() {
+
+        $this->DoctypeView( 'search' );
+        $this->headerView();
+        $this->getAnswers();
+        $this->getQuestions();
+
+        if( $this->model->countAskPerson() < 3) {
+            $this->GetFooter();
+        } else
+            $this->actionGetFooter( 'search' );
+    }
+
+    private function GetFooter() {
 
         echo '<div class="bottom-spacer">
                <div class="row">

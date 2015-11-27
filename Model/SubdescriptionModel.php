@@ -352,13 +352,14 @@ class SubdescriptionModel extends DefaultModel
         return $this->product_photo[0];
     }
 
-    public function setDifferentialBtwPrice() {
+    private function setDifferentialBtwPrice() {
 
         $this->differential_price = $this->getPriviousPrice() - $this->getPrice();
     }
 
     public function getDifferentialBtwPrice() {
 
+        $this->setDifferentialBtwPrice();
         return $this->differential_price;
     }
 

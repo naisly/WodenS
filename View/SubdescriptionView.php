@@ -18,11 +18,35 @@ class SubdescriptionView extends DefaultView
         $this->model = $model;
     }
 
-    public function MainView( $category, $table ) {
+    public function getSubdescriptionPage( $category, $table ) {
 
-        $this->model->setDifferentialBtwPrice();
-        echo '
-                <div class="image-margin">
+        $this->DoctypeView( 'subdescription' );
+        $this->headerView();
+
+        $this->getMain( $category , $table );
+        $this->getSlider();
+        $this->getDescription();
+
+        $this->getAsideAddToCart();
+        $this->getAsideOtherSellers();
+        $this->getAsideAlsoInterested();
+
+        $this->getProductDetails();
+
+        $this->actionGetComparisonTable();
+        $this->getAnswers();
+        $this->getQuestions();
+
+        $this->actionGetFooter( 'Index' );
+    }
+
+    /**
+     * @param $category
+     * @param $table
+     */
+    private function getMain( $category, $table) {
+
+        echo '<div class="image-margin">
                   <div class="col-md-9">
                       <div class="col-md-1"></div>
                       <div class="col-md-4">
@@ -37,37 +61,41 @@ class SubdescriptionView extends DefaultView
                            <h class="prev-price">List Price: <strike>$' . $this->model->getPriviousPrice(0) . '</strike></h><br />
                            <h class="price">Price: <span id="price">$' . $this->model->getPrice(0) . '</span> <span id="bold">& FREE SHIPPING</span></h><br />
                            <h class="you-save">You Save: <span id="you-save">$' . $this->model->getDifferentialBtwPrice() . ' (' . $this->model->getDifferentialPercent() . '%)</span></h>';
-            if($this->model->getQuantity(0) !== 0) {
-                echo      '<p class="stock">In Stock</p>';
-            } else {
-                echo      '<h class="no-stock">Out of Stock</h>';
-            }
+        if($this->model->getQuantity(0) !== 0) {
+            echo      '<p class="stock">In Stock</p>';
+        } else {
+            echo      '<h class="no-stock">Out of Stock</h>';
+        }
 
-            echo         '<h class="sold-by" style="float: left">Sold by <a href="http://apple.com" style="text-decoration: none">Apple</a> company. Gift-wrap available</h><br />
+        echo         '<h class="sold-by" style="float: left">Sold by <a href="http://apple.com" style="text-decoration: none">Apple</a> company. Gift-wrap available</h><br />
 
                           <div id="spacer"></div>
 
                           <h class="details">Product details:</h>
                           <ul style="margin-top: 35px;">';
 
-            $i = 0;
-            while ($i < $this->model->countDescription()){
-                echo '<li>' . $this->model->getDescription($i) . '</li>';
+        $i = 0;
+        while ($i < $this->model->countDescription()){
+            echo '<li>' . $this->model->getDescription($i) . '</li>';
 
-                $i++;
-            }
+            $i++;
+        }
 
-            echo         '</ul>
+        echo         '</ul>
                           <div class="spacer">
                               <h class="quantity" style="padding-bottom: 30px;"><a style="text-decoration: none" href="' . $category . "-" . $table . ".php" . '">' . $this->model->getQuantity(0) . ' new</a> from $' . $this->model->getMinimum() . '</h>
                           </div>
                       </div>
 
-                        <div class="divider"></div>
-                        <div class="slider1" style="margin-left: 35px;">';
-            $m = 0;
-            while($m < $this->model->countAssocProducts()){
-                echo '<div class="slide">
+                        <div class="divider"></div>';
+    }
+
+    private function getSlider() {
+
+        echo '<div class="slider1" style="margin-left: 35px;">';
+        $m = 0;
+        while($m < $this->model->countAssocProducts()){
+            echo '<div class="slide">
                           <img src="' . $this->model->getAssocPhoto($m) . '" width="120" height="120" />
                           <div style="height: 90px;">
                               <h><a href="#" style="text-decoration: none;">' . $this->model->getAssocProducts($m) . '</a></h><br />
@@ -77,32 +105,36 @@ class SubdescriptionView extends DefaultView
                       </div>
                      ';
 
-                $m++;
-            }
+            $m++;
+        }
 
 
-            echo       '</div>
-                        <script>
-                            $(document).ready(function(){
-                                $(".slider1" ).bxSlider({
-                                    slideWidth: 200,
-                                    minSlides: 1,
-                                    maxSlides: 4,
-                                    slideMargin: 30,
-                                    pager: false
-                                });
-                            });
+        echo       '</div>
+                    <script>
+                        $(document).ready(function(){
+                             $(".slider1" ).bxSlider({
+                                 slideWidth: 200,
+                                 minSlides: 1,
+                                 maxSlides: 4,
+                                 slideMargin: 30,
+                                 pager: false
+                             });
+                        });
                     </script>
-                    <div class="divider"></div>
-                      <h class="tech-details">' . $this->model->getTechnicalDetails(0) . '</h>
+                    <div class="divider"></div>';
+    }
+
+    private function getDescription() {
+
+        echo '<h class="tech-details">' . $this->model->getTechnicalDetails(0) . '</h>
                       <ul style="margin-top: 35px; margin-left: 30px;">';
 
-                $k = 1;
-                while ($k < $this->model->countTechnicalDetails()){
-                    echo '<li>' . $this->model->getTechnicalDetails($k) . '</li>';
+        $k = 1;
+        while ($k < $this->model->countTechnicalDetails()){
+            echo '<li>' . $this->model->getTechnicalDetails($k) . '</li>';
 
-                    $k++;
-                }
+            $k++;
+        }
         $y = 2;
 
         echo '</ul>
@@ -124,6 +156,7 @@ class SubdescriptionView extends DefaultView
               <h class="header-details">' . $this->model->getTechnicalDetails2(0) . '</h>
               <ul style="margin-top: 35px; margin-left: 30px;">';
 
+        $i = 0;
         while ($i < $this->model->countTechnicalDetails2()){
             echo '<li>' . $this->model->getTechnicalDetails2($i) . '</li>';
 
@@ -173,7 +206,9 @@ class SubdescriptionView extends DefaultView
 
             $u++;
         }
+    }
 
+    private function getAsideAddToCart() {
         echo          '</ul>
                   </div>
 
@@ -241,8 +276,12 @@ class SubdescriptionView extends DefaultView
                           </div>
 
 
-                      </div>
-                      <div class="aside" style="margin-top: 50px;">
+                      </div>';
+    }
+
+    private function getAsideOtherSellers() {
+
+        echo '<div class="aside" style="margin-top: 50px;">
                           <div class="other-sellers text-center">
                                <h>Other sellers on Amazon</h>
                           </div>';
@@ -272,7 +311,9 @@ class SubdescriptionView extends DefaultView
 
             $i++;
         }
+    }
 
+    private function getAsideAlsoInterested() {
 
         echo      '</div>
                    <div class="aside" style="margin-top: 50px;">
@@ -298,6 +339,9 @@ class SubdescriptionView extends DefaultView
 
                   </div>
               </div>';
+    }
+
+    private function getProductDetails() {
 
         echo '<div class="divider"></div>
               <h class="tech-details">' . $this->model->getProductDetails(0) . '</h>
@@ -311,11 +355,6 @@ class SubdescriptionView extends DefaultView
         }
         echo '</ul>
               <div class="divider"></div>';
-
-        $this->actionGetComparisonTable();
-
-        $this->getAnswers();
-        $this->getQuestions();
     }
 
     private function actionGetComparisonTable() {
@@ -539,7 +578,7 @@ class SubdescriptionView extends DefaultView
 
             echo '<div class="row" style="margin-top: 60px;">
                       <div class="col-md-5" id="test">
-                          <h class="question">Question: <span id="question">' . $this->model->getQuestion($i) . '</span></h><br />
+                          <h class="question">Question:<span id="question">' . $this->model->getQuestion($i) . '</span></h><br />
                           <div style="margin-top: 15px;">
                                <h class="answer">Answer: <span id="answer">' . $this->model->getAnswer($i) . '</span></h><br />
                                <h class="by-answer">By ' . $this->model->getAnswerPerson($i) . ' on ' . $this->model->getAnswerTime($i) . '</h>
@@ -549,13 +588,6 @@ class SubdescriptionView extends DefaultView
 
             $i++;
         }
-
-        echo "<script>
-                  $('#test').each(function(){
-                        var t = $(this).text();
-                        $(this).html(t.replace('&lt','<').replace('&gt', '>'));
-                    });
-              </script>";
 
     }
 }

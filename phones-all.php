@@ -2,7 +2,7 @@
 
 include_once('Controllers\DefaultController.php');
 include_once('Model\DefaultModel.php');
-include_once('View\DefaultView.php');
+include_once('View\PhonesView.php');
 //initiate the triad
 
 $model = new DefaultModel();
@@ -11,126 +11,8 @@ $model = new DefaultModel();
 
 $controller = new DefaultController($model);
 
-$view = new DefaultView($model);
+$view = new PhonesView($model);
 
 $controller->actionGetHeaderCart();
 
-$view->DoctypeView( 'phones' );
-
-$view->headerView();
-
-echo   '
-	<div class="background text-center" style="margin-top: 100px;">
-			<h1 class="header">Phones</h1>
-			<p class="the-only">The only thing that can change your life absolutely</p>
-			<a class="links" href="/learn-more" style="text-decoration: none">Learn more ></a> <a class="links" style="font-size: 20px; text-decoration: none" href="phones.php" style="text-decoration: none;">Get it now ></a>
-			<p class="adding">In business from 2010, opened mainly in Kiev</p>
-			<!--<h2><a href="phones.php" id="phones">Search phones for your choice ></a></h2>-->
-
-	</div>
-
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-1"></div>
-			<div class="col-sm-12">
-				<ul class="nav nav-list">
-					<li class="divider"></li>
-				</ul>
-			</div>
-			<div class="col-sm-1"></div>
-		</div>
-	</div>
-
-
-	<div class="space"></div>
-
-	<div class="iphone">
-		<div class="col-sm-2"></div>
-		<div class="col-sm-3">
-			<h1 id="iphone" class="fc">Most people have at least a simple, if not sophisticated, mobile phone. These devices are convenient to carry around and you can use them on the go as long as there is network coverage wherever you are.Mobile phones have clearly made it easier to communicate.</h1>
-		</div>
-		<div class="col-sm-5"><img src="images/iphones.jpg" style="width: 100%"></div>
-		<div class="col-sm-2"></div>
-	</div>
-
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-1"></div>
-			<div class="col-sm-12">
-				<ul class="nav nav-list">
-					<li class="divider"></li>
-				</ul>
-			</div>
-			<div class="col-sm-1"></div>
-		</div>
-	</div>
-
-
-	<div class="iphone">
-		<div class="col-sm-1"></div>
-		<div class="col-sm-6"><img src="images/galaxy.png" style="width: 100%"></div>
-		<div class="col-sm-5">
-			<h1 id="iphone" class="fc">With the upgrades made year in, year out, mobile phones are becoming more like computers with the added benefit of portability. One can receive and send emails, browse websites, download games and videos, book flight tickets,  and even chat with friends.</h1>
-		</div>
-	</div>
-
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-1"></div>
-			<div class="col-sm-12">
-				<ul class="nav nav-list">
-					<li class="divider"></li>
-				</ul>
-			</div>
-			<div class="col-sm-1"></div>
-		</div>
-	</div>
-
-	<div class="iphone">
-		<div class="col-sm-2"></div>
-		<div class="col-sm-3">
-			<h1 id="iphone" class="fc">Although the mobile phone doesnt guarantee safety, you can use it to make calls whenever there is an emergency. Travelling with your phone is very important. In case you have an accident, you can always contact someone who will help you.</h1>
-		</div>
-		<div class="col-sm-5"><img src="images/galaxy.jpg" style="width: 100%"></div>
-		<div class="col-sm-2"></div>
-	</div>
-
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-1"></div>
-			<div class="col-sm-12">
-				<ul class="nav nav-list">
-					<li class="divider"></li>
-				</ul>
-			</div>
-			<div class="col-sm-1"></div>
-		</div>
-	</div>
-
-
-	<div>
-		<div class="col-sm-2"></div>
-		<div class="col-sm-12 header text-center">
-			<h1 class="fc">Usefull, practical, as well as, pleasurable
-				<br /> and much more!</h1>
-
-			<h1 style="margin-bottom: 100px;"><a href="phones.php" id="phones">Order it now ></a></h1>
-		</div>
-	</div>
-
-
-	<div>
-		<div class="col-xs-1"></div>
-		<div class="col-sm-4">
-			<img src="images/left-photo.jpg" style="width: 100%">
-		</div>
-		<div class="col-xs-1"></div>
-		<div class="col-sm-4">
-			<img src="images/right-photo.png" style="width: 100%">
-		</div>
-	</div>';
-
-	$view->actionGetFooter( 'phones' );
-
-echo	'</body>
-	</html>';
+$view->getPhonesPage();

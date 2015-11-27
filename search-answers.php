@@ -21,17 +21,4 @@ $view = new SearchAnswersView($model);
 
 $controller->actionGetQuestionsAndAnswers( $_GET['q'], 1 );
 
-
-
-
-$view->DoctypeView( 'search' );
-
-$view->headerView();
-
-$view->getAnswers();
-$view->getQuestions();
-
-if( $model->countAskPerson() < 3) {
-    $view->GetFooter();
-} else
-    $view->actionGetFooter( 'search' );
+$view->getSearchAnswersPage();
