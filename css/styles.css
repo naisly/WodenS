@@ -1,3 +1,6 @@
+.white-link {
+	color: white !important;
+}
 p, h1,a  {
 	font-family: RobotoRegular;
 }
@@ -148,6 +151,18 @@ a:hover {
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
 	box-shadow: none;
+}
+#link_as_button {
+	background:none!important;
+	border:none;
+	padding:0!important;
+	font: inherit;
+	/*border is optional*/
+	cursor: pointer;
+	font-size: 12px;
+}
+#link_as_button:hover {
+	text-decoration: underline;
 }
 
 

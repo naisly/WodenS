@@ -1,0 +1,132 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+.bordered {
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 1px solid #e4e4e4;
+    width: 100%;
+}
+.sign-in {
+    font-size: 25px;
+    font-family: RobotoRegular;
+}
+.text {
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.divide {
+    width: 96%;
+    height: 1px;
+    background-color: #e4e4e4;
+    margin-top: 6px;
+    margin-bottom: 30px;
+    margin-left: 2%;
+    overflow: hidden;
+}
+.margin-20 {
+    margin-top: 13px;
+    -moz-box-shadow:    inset 0 1px 10px #888;
+    -webkit-box-shadow: inset 0 1px 10px #888;
+    box-shadow:         inset 0 1px 10px #888;
+}
+.account {
+    margin-top: 17%;
+}
+.h-account {
+    font-size: 22px;
+    font-family: RobotoRegular;
+}
+.forgot {
+    margin-top: 10px;
+}
+.button-sign {
+    margin-top: -14px;
+    width: 100px !important;
+}
+.account-space {
+    margin-top: 100px;
+}
+.account-shadows {
+    box-shadow: 10px 0 5px -5px #e3e3e3;
+}
+.button-continue {
+    margin-top: 0;
+    width: 100px !important;
+}
+.forgot .something {
+    visibility: hidden;
+}
+.forgot:hover .something {
+    visibility: visible;
+}
+
+.h-find {
+    font-family: RobotoBold;
+    font-size: 16px;
+    margin-left: 20px;
+}
+.order-support {
+    margin-left: 20px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+.sub-find {
+    font-family: RobotoLight;
+    font-size: 13px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.find-number {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding-top: 13px;
+    border-radius: 5px;
+}
+.something {
+    position: absolute;
+    left: -200px;
+    top: 230px;
+    background-color: white;
+}
+.bottom-spacer {
+    margin-top: 30px;
+}
+#full-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #e4e4e4;
+}
+.cancel-button {
+    color: #1b6d85;
+    margin-left: 30px;
+}
+.contact-customers {
+    margin-right: 30px;
+}
+.margin-footer {
+    margin-top: 30px;
+}
+
+@media (min-width: 300px) and (max-width: 990px){
+    .media-padding {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .account-shadows {
+        box-shadow: none;
+    }
+    .something {
+        left: 0px;
+        top: 170px;
+    }
+    .media-spacer {
+        margin-top: 90px;
+    }
+    .media-padding {
+        margin-top: 20px;
+        padding-left: 30px;
+    }
+}

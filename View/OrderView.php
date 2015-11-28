@@ -82,7 +82,7 @@ class OrderView extends DefaultView
 
     public function thanksMessage() {
 
-        echo '<div class="well">
+        echo '<div class="well" style="margin-top: -20px;">
                   <h2>Thanks!</h2>
                   Thanks for placing your order. Well ship your goods as soon as possible.
                   If you need to contact us, use reference #' . $this->model->getOrderId() . '.

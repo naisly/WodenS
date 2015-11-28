@@ -114,7 +114,7 @@ class SupView extends IndexView
                       <div class="col-md-6" style="margin-top: 80px;">
                           <div class="row">
                               <div class="col-md-3"></div>
-                              <div class="col-md-8">
+                              <div class="col-md-8" id="main-form">
                                   <form role="form" action="get-support.php" method="post">
                                       <div class="form-group">
                                           <label for="name">Your Name</label>
@@ -170,5 +170,11 @@ class SupView extends IndexView
             <script async defer
                   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYh1m89QdvogaeeaJyNuLBsX0ljdxmuK4&callback=initMap">
             </script>';
+
+        if(isset($_POST['shopping_help'])){
+            echo '<script>
+                      document.getElementById("main-form").scrollIntoView()
+                  </script>';
+        }
     }
 }

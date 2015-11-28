@@ -93,6 +93,8 @@ class DefaultView
                   <script src="js/bootstrap.min.js"></script>
                   <!-- bxSlider Javascript file -->
                   <script src="js/jquery.bxslider.min.js"></script>';
+        }  else if ($page == 'order'){
+            echo '<link href="css/checkorder.css" rel="stylesheet" type="text/css">';
         } else {
             echo '<link rel="stylesheet" href="css/default.css" />' .
                  '<link rel="stylesheet" href="css/animate.css" />';
@@ -118,20 +120,20 @@ class DefaultView
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index.php">
+                        <a class="navbar-brand white-link" href="index.php">
                             <img alt="Brand" src="images/default.png">
                         </a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li><a href="phones-all.php">Phones <span class="sr-only">(current)</span></a></li>
-                            <li><a href="laptops.php">Laptops</a></li>
-                            <li><a href="devices.php">Devices</a></li>
-                            <li><a href="tv.php">TV</a></li>
-                            <li><a href="support.php">Support</a></li>
+                            <li><a href="phones-all.php" class="white-link">Phones <span class="sr-only">(current)</span></a></li>
+                            <li><a href="laptops.php" class="white-link">Laptops</a></li>
+                            <li><a href="devices.php" class="white-link">Devices</a></li>
+                            <li><a href="tv.php" class="white-link">TV</a></li>
+                            <li><a href="support.php" class="white-link">Support</a></li>
                             <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle white-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart <span class="caret"></span></a>
                         <ul class="dropdown-menu">';
 
                                 if(isset($_SESSION['login_user'])){
@@ -367,16 +369,19 @@ class DefaultView
                                 </ul>
                             </div>
                             <div class="col-sm-2 wow fadeInLeft">
+                            <form action="support.php" method="post">
                                 <ul>
                                     <li class="footer-menu"><b>Store</b></li>
                                     <li><a class="items" href="store.php">Find our store</a></li>
                                     <li><a class="items" href="financing.php">Financing</a></li>
                                     <li><a class="items" href="order.php">Order Status</a></li>
-                                    <li><a class="items" href="shop.php">Shopping help</a></li>
+                                    <li><button id="link_as_button" class="items">Shopping help</button></li>
                                     <li><a class="items" href="info.php">Info</a></li>
                                     <li><a class="items" href="offices.php">Offices</a></li>
                                     <li><a class="items" href="cell.php">Cell</a></li>
                                 </ul>
+                            <input type="hidden" value="1" name="shopping_help" />
+                            </form>
                             </div>
                             <div class="col-sm-2 wow fadeInUp">
                                 <ul>
@@ -459,10 +464,10 @@ class DefaultView
                         </div>
                     </div>
                 </footer>';
-            if($page !== 'Index'){
-                echo '<script src="js/jquery-min.js"></script>
+        if($page !== 'Index'){
+            echo '<script src="js/jquery-min.js"></script>
                       <script src="js/bootstrap.min.js"></script>';
-            }
+        }
         echo '<script type="text/javascript">
                 var check_preload;
                 function preload_page() {

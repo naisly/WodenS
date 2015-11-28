@@ -469,7 +469,7 @@ class DefaultController
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
-        //session_start();
+        session_start();
         if(isset($_SESSION['login_user'])) {
             $user = $_SESSION['login_user'];
 
