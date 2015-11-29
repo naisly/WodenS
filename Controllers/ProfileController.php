@@ -116,7 +116,7 @@ class ProfileController extends DefaultController
         header('Location: cart.php');
     }
 
-    private function actionGetUser() {
+    protected function actionGetUser() {
 
         include_once('/../Storage.php');
         $db = Storage::getInstance();
@@ -196,7 +196,30 @@ class ProfileController extends DefaultController
         $sql_table = "SELECT product_table, id FROM orderedItems WHERE user='$user' ORDER BY sort_id DESC LIMIT 1";
         $result_table = $mysqli->query( $sql_table );
 
-        if ($result_table->num_rows > 0) {
+        if($result_table->num_rows == 0){
+            $sql_another = "SELECT product_table, id FROM completeOrders WHERE user='$user' ORDER BY sort_id DESC LIMIT 1";
+            $result_another = $mysqli->query( $sql_another );
+
+            if($result_another->num_rows > 0){
+                while ($row = $result_another->fetch_assoc()){
+                    $table = $row['product_table'];
+                    $id = $row['id'];
+                }
+            }
+
+            if($result_another->num_rows == 0){
+                $sql_final = "SELECT product_table, id FROM doneOrders WHERE user='$user' ORDER BY sort_id DESC LIMIT 1";
+                $result_final = $mysqli->query( $sql_final );
+
+                if($result_final->num_rows > 0){
+                    while($row = $result_final->fetch_assoc()){
+                        $table = $row['product_table'];
+                        $id = $row['id'];
+                    }
+                }
+            }
+
+        } else if ($result_table->num_rows > 0) {
             // output data of each row
             while ($row = $result_table->fetch_assoc()) {
                 $table = $row['product_table'];
@@ -204,27 +227,30 @@ class ProfileController extends DefaultController
             }
         }
 
-        $sql_item = "SELECT $table.original_name, orderedItems.price, $table.shipping, $table.photo
-                     FROM orderedItems INNER JOIN $table WHERE orderedItems.user='$user'
-                     AND $table.id='$id' ORDER BY sort_id DESC LIMIT 1";
+        if(isset($table) && isset($id)) {
 
-        $result_item = $mysqli->query( $sql_item );
+            $sql_item = "SELECT original_name, price, shipping, photo
+                     FROM $table WHERE $table.id='$id' LIMIT 1";
 
-        if ($result_item->num_rows > 0) {
-            // output data of each row
-            while ($row = $result_item->fetch_assoc()) {
-                $original_name_item = $row['original_name'];
-                $price_item = $row['price'];
-                $shipping_item = $row['shipping'];
-                $photo_item = $row['photo'];
+            $result_item = $mysqli->query($sql_item);
+
+            if ($result_item->num_rows > 0) {
+                // output data of each row
+                while ($row = $result_item->fetch_assoc()) {
+                    $original_name_item = $row['original_name'];
+                    $price_item = $row['price'];
+                    $shipping_item = $row['shipping'];
+                    $photo_item = $row['photo'];
+                }
             }
+
+            $this->model->setOriginalName($original_name_item);
+            $this->model->setItemPrice($price_item);
+            $this->model->setItemShipping($shipping_item);
+            $this->model->setPhoto($photo_item);
+        } else {
+            $this->model->setNoProduct( 'none' );
         }
-
-        $this->model->setOriginalName( $original_name_item );
-        $this->model->setItemPrice( $price_item );
-        $this->model->setItemShipping( $shipping_item );
-        $this->model->setPhoto( $photo_item );
-
 
 
     }

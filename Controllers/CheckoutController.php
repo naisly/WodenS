@@ -159,7 +159,7 @@ class CheckoutController
 
             while($i < $q){
                 $sql_insert = $mysqli->prepare("INSERT INTO $done_table VALUES ('$id_array[$i]', '$product_name_array[$i]', '$category_array[$i]',
-                              '$price_array[$i]', '$user_array[$i]', '$quantity_array[$i]', '$order_id_array[$i]', '$table_array[$i]')");
+                              '$price_array[$i]', '$user_array[$i]', '$quantity_array[$i]', '$order_id_array[$i]', '$table_array[$i]', '')");
 
                 $sql_insert->execute();
 

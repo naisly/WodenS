@@ -196,8 +196,8 @@ class LoginController extends DefaultController
         if(isset($_POST['id'])){
             $id = $_POST['id'];
         }
-        if(isset($_POST['product_name'])){
-            $product_name = $_POST['product_name'];
+        if(isset($_POST['original_name'])){
+            $original_name = $_POST['original_name'];
         }
         if(isset($_POST['category'])){
             $category = $_POST['category'];
@@ -215,7 +215,7 @@ class LoginController extends DefaultController
 
         $user = $_SESSION['login_user'];
 
-        $sql_stmt = "SELECT id,quantity FROM orderedItems WHERE id=$id AND product_name='$product_name' AND category='$category'
+        $sql_stmt = "SELECT id,quantity FROM orderedItems WHERE id=$id AND product_name='$original_name' AND category='$category'
                       AND price=$price AND user='$user'";
 
         echo $sql_stmt;
@@ -229,7 +229,7 @@ class LoginController extends DefaultController
         }
 
         if(!isset($idQ)) {
-            $sql_query = "INSERT INTO orderedItems VALUES ('$id', '$product_name', '$category', '$price', '$user', 1, '$table', '')";
+            $sql_query = "INSERT INTO orderedItems VALUES ('$id', '$original_name', '$category', '$price', '$user', 1, '$table', '')";
             $stmt = $mysqli->prepare($sql_query);
             echo $sql_query . '<br />';
             $stmt->execute();
@@ -240,7 +240,7 @@ class LoginController extends DefaultController
                 $quantity++;
 
                 $sql_res = $mysqli->prepare("UPDATE orderedItems SET quantity=$quantity WHERE user='$user' AND price=$price
-                            AND product_name='$product_name' AND category='$category'");
+                            AND product_name='$original_name' AND category='$category'");
                 $sql_res->execute();
             }
         }

@@ -97,14 +97,18 @@ class ProfileView extends DefaultView
 
                       <div class="cart-divider"></div>
 
-                      <h class="hello">Last added item:</h><br />
+                      <h class="hello">Last added item:</h><br />';
 
-                      <img src="' . $this->model->getPhoto() . '" width="120" height="120" /><br />
+        if($this->model->getNoProduct() == 'none'){
+            echo '<h class="cart not-found">No products found</h>';
+        } else {
+            echo     '<img src="' . $this->model->getPhoto() . '" width="120" height="120" /><br />
                       <h class="cart cart-header">' . $this->model->getOriginalName() . '</h><br />
                       <h class="cart cart-price">$' . $this->model->getItemPrice() . '</h><br />
-                      <h class="cart"><span class="underline">' . $this->model->getItemShipping() . ' days</span> shipping</h>
+                      <h class="cart"><span class="underline">' . $this->model->getItemShipping() . ' days</span> shipping</h>';
+        }
 
-                      <div class="cart-divider"></div>
+        echo         '<div class="cart-divider"></div>
 
                       <h class="cart">Not Alexandr ? <a href="logout.php">Sign out</a></h>
                   </div>';

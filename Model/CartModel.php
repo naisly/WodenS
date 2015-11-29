@@ -19,6 +19,7 @@ class CartModel extends DefaultModel
 
     private $item_price;
     private $item_shipping;
+    private $no_product;
 
     public function setName( $name ){
 
@@ -98,5 +99,15 @@ class CartModel extends DefaultModel
     public function getPhoto() {
 
         return $this->photo;
+    }
+
+    public function setNoProduct( $no_product ){
+
+        $this->no_product = $no_product;
+    }
+
+    public function getNoProduct() {
+
+        return $this->no_product;
     }
 }

@@ -96,7 +96,7 @@ class OrderController extends DefaultController
 
             $result_price = $price_array[$i] * $quantity_array[$i];
             $sql_stmt = "INSERT INTO completeOrders VALUES('$id_array[$i]', '$product_name_array[$i]',
-                            '$category_array[$i]', $result_price , '$user', '$quantity_array[$i]', '$order_id', '$table_array[$i]')";
+                            '$category_array[$i]', $result_price , '$user', '$quantity_array[$i]', '$order_id', '$table_array[$i]', '')";
 
             $sql = $mysqli->prepare($sql_stmt);
 

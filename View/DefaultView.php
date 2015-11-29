@@ -100,6 +100,11 @@ class DefaultView
                   <link href="css/login.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'profile'){
             echo '<link href="css/profile.css" rel="stylesheet" type="text/css">';
+        }  else if ($page == 'account-order') {
+            echo '<link href="css/account-order.css" rel="stylesheet" type="text/css">
+                  <link href="css/profile.css" rel="stylesheet" type="text/css">
+                  <script src="js/jquery-min.js"></script>
+                  <script language="javascript" src="js/show-hide.js"></script>';
         } else {
             echo '<link rel="stylesheet" href="css/default.css" />' .
                  '<link rel="stylesheet" href="css/animate.css" />';
@@ -335,6 +340,7 @@ class DefaultView
                             <input type="hidden" name="photo" value="' . $this->model->getPhoto($i) . '"/>
                             <input type="hidden" name="price" value="' . $this->model->getPrice($i) . '"/>
                             <input type="hidden" name="table" value="' . $page . '"/>
+                            <input type="hidden" name="original_name" value="' . $this->model->getOriginalName($i) . '"/>
 
                         </form>
                     </div>
