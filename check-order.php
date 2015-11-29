@@ -16,8 +16,6 @@ $controller = new CheckOrderController( $model );
 
 $view = new OrderStatusView( $model );
 
-$controller->actionGetHeaderCart();
-$controller->actionCheckOrder();
-$controller->actionGetOrderedItems();
+$controller->actionGetOrders();
 
 $view->getCheckOrderPage();

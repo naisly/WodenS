@@ -23,7 +23,14 @@ class CheckOrderController extends DefaultController
         $this->model = $model;
     }
 
-    public function actionCheckOrder() {
+    public function actionGetOrders() {
+
+        $this->actionGetHeaderCart();
+        $this->actionCheckOrder();
+        $this->actionGetOrderedItems();
+    }
+
+    private function actionCheckOrder() {
 
         if(isset($_POST['order_number'])) {
             $order_number = $_POST['order_number'];
@@ -127,7 +134,7 @@ class CheckOrderController extends DefaultController
         }
     }
 
-    public function actionGetOrderedItems() {
+    private function actionGetOrderedItems() {
 
         include_once('/../Storage.php');
         $db = Storage::getInstance();

@@ -348,11 +348,10 @@ class DefaultView
                    </script>';
     }
 
-    public function getFooter() {
+        public function getFooter() {
 
         echo '<div class="bottom-spacer">
-               <div class="row">
-                   <div class="col-md-12 text-center">
+               <div class="text-center">
                         <ul class="hor_nav">
                             <li><a class="items" href="/privacy">Privacy</a></li>
                             <li><a class="items" href="/refunds">Refunds</a></li>
@@ -361,11 +360,19 @@ class DefaultView
                         </ul>
                             <p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
                    </div>
-               </div>
               </div>
               <script src="js/jquery-min.js"></script>
               <script src="js/bootstrap.min.js"></script>';
     }
+    /*public function getFooter() {
+
+        echo '<div class="bottom-spacer">
+                  <div class="text-center">
+                       <h>1</h>
+                  </div>
+              </div>
+              ';
+    }*/
 
     /*
      * Footer, bottom part

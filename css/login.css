@@ -46,7 +46,8 @@ ul.hor_nav li {
 .bottom-spacer {
     position: absolute;
     bottom: 0;
-    left: 44%;
+    margin: auto;
+    width: 100%;
 }
 #redirect {
     margin-top: -5px;
