@@ -64,20 +64,26 @@ class ProfileView extends DefaultView
 
         echo         '<div class="cart-divider"></div>
 
-                      <h class="hello">Last order:</h><br />
+                      <h class="hello">Last order:</h><br />';
 
-                      <h class="cart">#' .$this->model->getOrderId() . '</h><br />
+        if($this->model->getOrderId() !== 'None') {
+
+            echo '<h class="cart">#' . $this->model->getOrderId() . '</h><br />
                       <h class="cart">' . $this->model->getLastOrderItems() . '';
 
-        if ( $this->model->getLastOrderItems() == 1){
-            echo ' item </h>';
+            if ($this->model->getLastOrderItems() == 1) {
+                echo ' item </h>';
+            } else {
+                echo ' items </h>';
+            }
+
+            echo '<h class="cart cart-price"> $' . $this->model->getLastOrderSum() . '</h>';
+
         } else {
-            echo ' items </h>';
+            echo '<h class="cart not-found">No orders found</h>';
         }
 
-        echo         '<h class="cart cart-price"> $' . $this->model->getLastOrderSum() . '</h>
-
-                      <div class="cart-divider"></div>
+        echo         '<div class="cart-divider"></div>
 
                       <h class="hello">Account Info</h><br />
                       <h class="cart"><b>Active email: </b><br />' . $_SESSION['login_user'] . '</h><br />
@@ -170,20 +176,4 @@ class ProfileView extends DefaultView
         </html>';
     }
 
-    public function getFooter() {
-
-        echo '<div class="bottom-spacer">
-               <div class="text-center">
-                        <ul class="hor_nav">
-                            <li><a class="items" href="/privacy">Privacy</a></li>
-                            <li><a class="items" href="/refunds">Refunds</a></li>
-                            <li><a class="items" href="/sales">Sales</a></li>
-                            <li><a class="items" href="site-map">Site map</a></li>
-                        </ul>
-                            <p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
-                   </div>
-              </div>
-              <script src="js/jquery-min.js"></script>
-              <script src="js/bootstrap.min.js"></script>';
-    }
 }

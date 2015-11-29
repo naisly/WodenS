@@ -487,4 +487,21 @@ class DefaultView
                 check_preload=1;
               </script>';
     }
+
+    public function getFooter() {
+
+        echo '<div class="bottom-spacer">
+               <div class="text-center">
+                        <ul class="hor_nav">
+                            <li><a class="items" href="/privacy">Privacy</a></li>
+                            <li><a class="items" href="/refunds">Refunds</a></li>
+                            <li><a class="items" href="/sales">Sales</a></li>
+                            <li><a class="items" href="site-map">Site map</a></li>
+                        </ul>
+                            <p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
+                   </div>
+              </div>
+              <script src="js/jquery-min.js"></script>
+              <script src="js/bootstrap.min.js"></script>';
+    }
 }

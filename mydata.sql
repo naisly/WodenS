@@ -236,7 +236,8 @@ CREATE TABLE orderedItems (
   price INT(15) NOT NULL,
   user VARCHAR(150) NOT NULL,
   quantity INT(15),
-  product_table VARCHAR(50) NOT NULL
+  product_table VARCHAR(50) NOT NULL,
+  sort_id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
 );
 
 CREATE TABLE completeOrders (
@@ -247,7 +248,8 @@ CREATE TABLE completeOrders (
   user VARCHAR(150) NOT NULL,
   quantity INT(15),
   order_id INT(15),
-  product_table VARCHAR(50) NOT NULL
+  product_table VARCHAR(50) NOT NULL,
+  sort_id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
 );
 
 SELECT phones.original_name, phones.photo, phones.shipping, completeOrders.order_id, completeOrders.price, completeOrders.category FROM
@@ -261,7 +263,8 @@ CREATE TABLE doneOrders (
   user VARCHAR(150) NOT NULL,
   quantity INT(15),
   order_id INT(15),
-  product_table VARCHAR(50) NOT NULL
+  product_table VARCHAR(50) NOT NULL,
+  sort_id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
 );
 
 CREATE TABLE orders (

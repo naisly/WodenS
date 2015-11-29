@@ -26,3 +26,7 @@
 .underline {
     text-decoration: underline;
 }
+.not-found {
+    color: #ac5050;
+    font-size: 18px;
+}

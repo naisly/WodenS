@@ -229,7 +229,7 @@ class LoginController extends DefaultController
         }
 
         if(!isset($idQ)) {
-            $sql_query = "INSERT INTO orderedItems VALUES ('$id', '$product_name', '$category', '$price', '$user', 1, '$table')";
+            $sql_query = "INSERT INTO orderedItems VALUES ('$id', '$product_name', '$category', '$price', '$user', 1, '$table', '')";
             $stmt = $mysqli->prepare($sql_query);
             echo $sql_query . '<br />';
             $stmt->execute();

@@ -138,56 +138,77 @@ class ProfileController extends DefaultController
             }
         }
 
-        if(isset($name) && isset($order_id)){
-            $this->model->setName( $name );
-            $this->model->setOrderId( $order_id );
-        }
+        /*
+         * If no order found
+         */
+        if($result->num_rows == 0){
+            $sql_names = "SELECT name FROM users WHERE email='$user' LIMIT 1";
+            $sql_names_result = $mysqli->query( $sql_names );
 
-        $sql_stmt = "SELECT price, quantity FROM completeorders WHERE order_id='$order_id'";
+            if ($sql_names_result->num_rows > 0) {
+                // output data of each row
+                while ($row = $sql_names_result->fetch_assoc()) {
+                    $name = $row['name'];
+                }
 
-        $result_stmt = $mysqli->query( $sql_stmt );
-
-        $price_array = array();
-        $quantity_array = array();
-
-        if ($result_stmt->num_rows > 0) {
-            // output data of each row
-            while ($row = $result_stmt->fetch_assoc()) {
-                $price_array = array_merge($price_array, array_map('trim', explode(",", $row['price'])));
-                $quantity_array = array_merge($quantity_array, array_map('trim', explode(",", $row['quantity'])));
+                $this->model->setName( $name );
             }
         }
 
-        $items = '';
-        $price = '';
-        $i = 0;
-        while( $i < count($quantity_array)){
-            $items += $quantity_array[$i];
-            $price += $quantity_array[$i] * $price_array[$i];
-
-            $i++;
+        if(!isset($order_id)){
+            $this->model->setOrderId( 'None' );
         }
 
-        $this->model->setLastOrderItems( $items );
-        $this->model->setLastOrderSum( $price );
+        if(isset($name) && isset($order_id)){
+            $this->model->setName( $name );
+            $this->model->setOrderId( $order_id );
 
-        $sql_table = "SELECT product_table FROM orderedItems WHERE user='$user' ORDER BY product_table DESC LIMIT 1";
+            $sql_stmt = "SELECT price, quantity FROM completeorders WHERE order_id='$order_id'";
+
+            $result_stmt = $mysqli->query( $sql_stmt );
+
+            $price_array = array();
+            $quantity_array = array();
+
+            if ($result_stmt->num_rows > 0) {
+                // output data of each row
+                while ($row = $result_stmt->fetch_assoc()) {
+                    $price_array = array_merge($price_array, array_map('trim', explode(",", $row['price'])));
+                    $quantity_array = array_merge($quantity_array, array_map('trim', explode(",", $row['quantity'])));
+                }
+            }
+
+            $items = '';
+            $price = '';
+            $i = 0;
+            while( $i < count($quantity_array)){
+                $items += $quantity_array[$i];
+                $price += $quantity_array[$i] * $price_array[$i];
+
+                $i++;
+            }
+
+            $this->model->setLastOrderItems( $items );
+            $this->model->setLastOrderSum( $price );
+
+        }
+
+        $sql_table = "SELECT product_table, id FROM orderedItems WHERE user='$user' ORDER BY sort_id DESC LIMIT 1";
         $result_table = $mysqli->query( $sql_table );
-
 
         if ($result_table->num_rows > 0) {
             // output data of each row
             while ($row = $result_table->fetch_assoc()) {
                 $table = $row['product_table'];
+                $id = $row['id'];
             }
         }
 
         $sql_item = "SELECT $table.original_name, orderedItems.price, $table.shipping, $table.photo
                      FROM orderedItems INNER JOIN $table WHERE orderedItems.user='$user'
-                     AND orderedItems.price=$table.price AND orderedItems.product_name = $table.product_name
-                     ORDER BY original_name DESC LIMIT 1";
+                     AND $table.id='$id' ORDER BY sort_id DESC LIMIT 1";
 
-       $result_item = $mysqli->query( $sql_item );
+        $result_item = $mysqli->query( $sql_item );
 
         if ($result_item->num_rows > 0) {
             // output data of each row
@@ -203,6 +224,7 @@ class ProfileController extends DefaultController
         $this->model->setItemPrice( $price_item );
         $this->model->setItemShipping( $shipping_item );
         $this->model->setPhoto( $photo_item );
+
 
 
     }
