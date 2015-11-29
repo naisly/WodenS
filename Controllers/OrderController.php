@@ -74,6 +74,7 @@ class OrderController extends DefaultController
         $category_array = array();
         $price_array = array();
         $quantity_array = array();
+        $table_array = array();
 
         if ($result->num_rows > 0){
             while ($row = $result->fetch_assoc()){
@@ -82,6 +83,7 @@ class OrderController extends DefaultController
                 $category_array = array_merge($category_array, array_map('trim', explode(",", $row['category'])));
                 $price_array = array_merge($price_array, array_map('trim', explode(",", $row['price'])));
                 $quantity_array = array_merge($quantity_array, array_map('trim', explode(",", $row['quantity'])));
+                $table_array = array_merge($table_array, array_map('trim', explode(",", $row['product_table'])));
             }
         }
 
@@ -92,8 +94,9 @@ class OrderController extends DefaultController
 
         while( $i < $q ) {
 
+            $result_price = $price_array[$i] * $quantity_array[$i];
             $sql_stmt = "INSERT INTO completeOrders VALUES('$id_array[$i]', '$product_name_array[$i]',
-                            '$category_array[$i]', $price_array[$i], '$user', '$quantity_array[$i]', '$order_id')";
+                            '$category_array[$i]', $result_price , '$user', '$quantity_array[$i]', '$order_id', '$table_array[$i]')";
 
             $sql = $mysqli->prepare($sql_stmt);
 

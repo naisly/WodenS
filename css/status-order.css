@@ -1,0 +1,19 @@
+.order_id, .order_email {
+    color: #999;
+}
+.contact-us {
+    color: #1b6d85;
+    font-size: 14px !important;
+    text-decoration: none !important;
+}
+.problem {
+    margin-top: 20px;
+}
+.header-lead {
+    font-size: 22px;
+    font-family: RobotoLight;
+}
+.category {
+    color: #1b6d85;
+    font-size: 15px;
+}

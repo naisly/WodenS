@@ -223,24 +223,6 @@ class LoginView extends DefaultView
     /*
      * Footer at the bottom
      */
-    private function getFooter() {
-
-        echo '<div class="bottom-spacer">
-               <div class="row">
-                   <div class="col-md-12 text-center">
-                        <ul class="hor_nav">
-                            <li><a class="items" href="/privacy">Privacy</a></li>
-                            <li><a class="items" href="/refunds">Refunds</a></li>
-                            <li><a class="items" href="/sales">Sales</a></li>
-                            <li><a class="items" href="site-map">Site map</a></li>
-                        </ul>
-                            <p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
-                   </div>
-               </div>
-              </div>
-              <script src="js/jquery-min.js"></script>
-              <script src="js/bootstrap.min.js"></script>';
-    }
 
     public function getLoginForm() {
         echo '<div class="text-center">

@@ -139,6 +139,7 @@ class CheckoutController
             $user_array = array();
             $quantity_array = array();
             $order_id_array = array();
+            $table_array = array();
 
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
@@ -149,6 +150,7 @@ class CheckoutController
                     $user_array = array_merge($user_array, array_map('trim', explode(",", $row['user'])));
                     $quantity_array = array_merge($quantity_array, array_map('trim', explode(",", $row['quantity'])));
                     $order_id_array = array_merge($order_id_array, array_map('trim', explode(",", $row['order_id'])));
+                    $table_array = array_merge($table_array, array_map('trim', explode(",", $row['product_table'])));
                 }
             }
 
@@ -157,7 +159,7 @@ class CheckoutController
 
             while($i < $q){
                 $sql_insert = $mysqli->prepare("INSERT INTO $done_table VALUES ('$id_array[$i]', '$product_name_array[$i]', '$category_array[$i]',
-                              '$price_array[$i]', '$user_array[$i]', '$quantity_array[$i]', '$order_id_array[$i]')");
+                              '$price_array[$i]', '$user_array[$i]', '$quantity_array[$i]', '$order_id_array[$i]', '$table_array[$i]')");
 
                 $sql_insert->execute();
 

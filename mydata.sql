@@ -235,7 +235,8 @@ CREATE TABLE orderedItems (
   category VARCHAR(100) NOT NULL,
   price INT(15) NOT NULL,
   user VARCHAR(150) NOT NULL,
-  quantity INT(15)
+  quantity INT(15),
+  product_table VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE completeOrders (
@@ -245,8 +246,12 @@ CREATE TABLE completeOrders (
   price INT(15) NOT NULL,
   user VARCHAR(150) NOT NULL,
   quantity INT(15),
-  order_id INT(15)
+  order_id INT(15),
+  product_table VARCHAR(50) NOT NULL
 );
+
+SELECT phones.original_name, phones.photo, phones.shipping, completeOrders.order_id, completeOrders.price, completeOrders.category FROM
+       phones INNER JOIN completeOrders WHERE completeOrders.id = phones.id AND completeOrders.id = 7;
 
 CREATE TABLE doneOrders (
   id INT(11) NOT NULL,
@@ -255,7 +260,8 @@ CREATE TABLE doneOrders (
   price INT(15) NOT NULL,
   user VARCHAR(150) NOT NULL,
   quantity INT(15),
-  order_id INT(15)
+  order_id INT(15),
+  product_table VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE orders (

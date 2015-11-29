@@ -76,8 +76,8 @@ class CheckOrderView extends DefaultView
                                               <div class="account">
                                                   <form action="check-order.php" method="post">
                                                       <h class="h-account">Look up for order</h>
-                                                      <input type="text" class="form-control margin-20" placeholder="Order Number" />
-                                                      <input type="password" class="form-control margin-20" placeholder="Your email" />
+                                                      <input type="text" class="form-control margin-20" name="order_number" id="order_number" placeholder="Order Number" />
+                                                      <input type="text" class="form-control margin-20" name="order_email" id="order_email" placeholder="Your email" />
 
                                                       <div class="forgot">
                                                           <a href="#" class="text-left">Where is order number?</a>
@@ -131,20 +131,4 @@ class CheckOrderView extends DefaultView
               </script>';
     }
 
-    private function getFooter() {
-
-        echo '<div class="bottom-spacer">
-                   <div class="text-center">
-                        <ul class="hor_nav">
-                            <li><a class="items" href="/privacy">Privacy</a></li>
-                            <li><a class="items" href="/refunds">Refunds</a></li>
-                            <li><a class="items" href="/sales">Sales</a></li>
-                            <li><a class="items" href="site-map">Site map</a></li>
-                        </ul>
-                            <p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
-                   </div>
-              </div>
-              <script src="js/jquery-min.js"></script>
-              <script src="js/bootstrap.min.js"></script>';
-    }
 }

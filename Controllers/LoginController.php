@@ -209,6 +209,10 @@ class LoginController extends DefaultController
             $price = $_POST['price'];
         }
 
+        if(isset($_POST['table'])){
+            $table = $_POST['table'];
+        }
+
         $user = $_SESSION['login_user'];
 
         $sql_stmt = "SELECT id,quantity FROM orderedItems WHERE id=$id AND product_name='$product_name' AND category='$category'
@@ -225,7 +229,7 @@ class LoginController extends DefaultController
         }
 
         if(!isset($idQ)) {
-            $sql_query = "INSERT INTO orderedItems VALUES ('$id', '$product_name', '$category', '$price', '$user', 1)";
+            $sql_query = "INSERT INTO orderedItems VALUES ('$id', '$product_name', '$category', '$price', '$user', 1, '$table')";
             $stmt = $mysqli->prepare($sql_query);
             echo $sql_query . '<br />';
             $stmt->execute();
