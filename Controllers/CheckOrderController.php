@@ -188,6 +188,7 @@ class CheckOrderController extends DefaultController
                 $i++;
             }
 
+            $this->model->setTable( $product_table_array );
             $this->model->setOriginalName( $original_name_array );
             $this->model->setPhoto( $photo_array );
             $this->model->setShipping( $shipping_array );

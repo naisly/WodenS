@@ -12,8 +12,20 @@
 .header-lead {
     font-size: 22px;
     font-family: RobotoLight;
+    margin-left: 20px;
 }
 .category {
     color: #1b6d85;
     font-size: 15px;
+    margin-left: 20px;
+}
+#underline {
+    text-decoration: underline;
+}
+.original {
+    font-size: 15px;
+    font-family: RobotoLight;
+}
+a, h1, h2, h {
+    font-family: RobotoLight;
 }

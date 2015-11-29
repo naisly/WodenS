@@ -42,15 +42,34 @@ class OrderStatusView extends DefaultView
                           <input type="hidden" value="1" name="shopping_help" />
                       </form>
                   </div>';
-        } else if( $this->model->getStatus() == 'done'){
+        } else if( $this->model->getStatus() == 'done' || $this->model->getStatus() == 'wait'){
 
-            echo '<div class="alert alert-success" role="alert" style="margin-top: -20px;">
-                      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                      <span class="sr-only">Error:</span>
-                          Hello, ' . $this->model->getName() . '<br />
+            echo '<form action="support.php" method="post">';
+            if($this->model->getStatus() == 'done') {
+                echo '<div class="alert alert-success" role="alert" style="margin-top: -20px;">';
+            } else {
+                echo '<div class="alert alert-warning" role="alert" style="margin-top: -20px;">';
+            }
+            echo     '<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+
+
+                      <span class="sr-only">Error:</span>';
+
+            if($this->model->getStatus() == 'done') {
+                echo     'Hello, ' . $this->model->getName() . '<br />
                           Your order #' . $this->model->getOrderId() . ' was accepted by Woden Sims <br />
-                          You will get items in time, that was assigned on your product.
-                  </div>
+                          You will get items in time, that was assigned on your product.';
+            } else {
+                echo     'Hello, ' . $this->model->getName() . '<br />
+                          Your order #' . $this->model->getOrderId() . ' is in an queue<br />
+                          If order will be accepted, you will get items<br />
+                          time, that was assigned on your product. Approximately approval varies about 2 up to 3<br />
+                          working days, if you think that it is out mistake, please <button id="link_as_button" class="contact-us">contact us</button>
+
+                          <input type="hidden" value="1" name="shopping_help" />
+                      </form>';
+            }
+            echo '</div>
                   <div class="items">
                       <h class="header-lead">Items that you have bought:</h><br />
 
@@ -67,21 +86,28 @@ class OrderStatusView extends DefaultView
             }
 
             echo      '</div>
-                       <div class="data">';
+                       <div class="data">
+                            <div class="container">
+                               <div class="row">';
 
             $i = 0;
             while($i < $this->model->countCategories()){
-                echo '<h>' . $this->model->getOriginalName($i) . '</h>
+                echo  '<div class="col-md-3">' .
+                      '<h class="original">' . $this->model->getOriginalName($i) . '</h><br />
                       <img src="' . $this->model->getPhoto($i) . '" width="150" height="150" />
-                      <h>' . $this->model->getCategory($i) . '</h>
-                      <h>' . $this->model->getPrice($i) . '</h>
-                      <h>' . $this->model->getShipping($i) . '</h>';
+                      <h class="category">by <a href="' . $this->model->getCategory($i) . '-' . $this->model->getTable($i) . '.php">' . $this->model->getCategory($i) . ' Inc.</a></h><br />
+                      <h>$' . $this->model->getPrice($i) . '</h><br />
+                      <h>Ordered shipping: <span id="underline">' . $this->model->getShipping($i) . ' days</span></h>' .
+                      '</div>';
 
                 $i++;
             }
 
 
-            echo      '</div>
+            echo                '</div>
+                               </div>
+                            </div>
+                         </div>
 
 
 

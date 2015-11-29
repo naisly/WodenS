@@ -18,6 +18,7 @@ class CheckOrderModel extends DefaultModel
 
     private $categories;
     private $count_categories;
+    private $table;
 
     public function setStatus ( $status ) {
 
@@ -87,6 +88,16 @@ class CheckOrderModel extends DefaultModel
     public function getCountCategories($i) {
 
         return $this->count_categories[$i];
+    }
+
+    public function setTable( $table ) {
+
+        $this->table = $table;
+    }
+
+    public function getTable( $i ) {
+
+        return $this->table[$i];
     }
 
 
