@@ -41,7 +41,21 @@ class OrderStatusView extends DefaultView
 
                           <input type="hidden" value="1" name="shopping_help" />
                       </form>
-                  </div>';
+                  </div>
+                  <div class="pos-center">
+                      <div class="pull-left">
+                          <button id="link_as_button" class="go-back" onclick="goBack();"> << Go back</button>
+                      </div>
+                      <div class="pull-right">
+                          <a id="link_as_button" class="go-back" href="account.php"> Search in account >> </a>
+                      </div>
+                  </div>
+                  <script>
+                      function goBack() {
+                          window.history.back();
+                      }
+                  </script>';
+
         } else if( $this->model->getStatus() == 'done' || $this->model->getStatus() == 'wait'){
 
             echo '<form action="support.php" method="post">';

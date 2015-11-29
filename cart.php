@@ -19,9 +19,6 @@ $controller = new ProfileController($model);
 
 $view = new ProfileView($model);
 
-$controller->actionGetOrderedItems();
+$controller->actionGetUserData();
 
-$view->DoctypeView( 'profile' );
-$view->headerView();
-
-$view->getTable();
+$view->getCartPage();

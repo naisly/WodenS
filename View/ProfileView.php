@@ -28,12 +28,92 @@ class ProfileView extends DefaultView
         $this->model = $model;
     }
 
+    public function getCartPage() {
+        $this->DoctypeView( 'profile' );
+        $this->headerView();
+        $this->getTable();
+        $this->getFooter();
+    }
+
+    protected function getAccountBar() {
+
+        echo '<div class="container">
+              <div class="row">
+                  <div class="col-md-3">
+                      <h class="hello">Hello, ' . $this->model->getName() . '</h><br />
+
+                      <div class="cart-divider"></div>
+
+                      <h class="cart"><a href="cart.php" id="link"> Cart ></a></h><br />
+                      <h class="cart"><a href="active-orders.php" id="link">Your Orders</a></h><br />
+                      <h class="cart"><a href="account.php" id="link">Change account info</a></h><br />
+                      <h class="cart"><a href="billing-info.php" id="link">Billing info</a></h><br />
+
+                      <div class="cart-divider"></div>
+
+                      <h class="hello">Your cart:</h><br />
+
+                      <h class="cart cart-price">' . $this->model->getAPrice() . '$</h><br />
+                      <h class="cart">' . $this->model->getAItems() . '';
+
+        if ( $this->model->getAItems() == 1){
+                  echo ' item </h>';
+        } else {
+                  echo ' items </h>';
+        }
+
+        echo         '<div class="cart-divider"></div>
+
+                      <h class="hello">Last order:</h><br />
+
+                      <h class="cart">#' .$this->model->getOrderId() . '</h><br />
+                      <h class="cart">' . $this->model->getLastOrderItems() . '';
+
+        if ( $this->model->getLastOrderItems() == 1){
+            echo ' item </h>';
+        } else {
+            echo ' items </h>';
+        }
+
+        echo         '<h class="cart cart-price"> $' . $this->model->getLastOrderSum() . '</h>
+
+                      <div class="cart-divider"></div>
+
+                      <h class="hello">Account Info</h><br />
+                      <h class="cart"><b>Active email: </b><br />' . $_SESSION['login_user'] . '</h><br />
+                      <h class="cart"><b>Your name: </b>' . $this->model->getName() . '</h>
+
+                      <div class="cart-divider"></div>
+
+                      <h class="hello">Last Billing info:</h><br />
+
+                      <h class="cart">Add billing info</h>
+
+                      <div class="cart-divider"></div>
+
+                      <h class="hello">Last added item:</h><br />
+
+                      <img src="' . $this->model->getPhoto() . '" width="120" height="120" /><br />
+                      <h class="cart cart-header">' . $this->model->getOriginalName() . '</h><br />
+                      <h class="cart cart-price">$' . $this->model->getItemPrice() . '</h><br />
+                      <h class="cart"><span class="underline">' . $this->model->getItemShipping() . ' days</span> shipping</h>
+
+                      <div class="cart-divider"></div>
+
+                      <h class="cart">Not Alexandr ? <a href="logout.php">Sign out</a></h>
+                  </div>';
+    }
+
     /*
      * Getting user's UI for the
      * Cart page
      */
-    public function getTable() {
+    private function getTable() {
+
+        $this->getAccountBar();
+
         echo '
+        <div class="col-md-9">
             <table class="table">
                 <thead>
                     <tr>
@@ -77,6 +157,8 @@ class ProfileView extends DefaultView
                 <a class="btn btn-primary" onclick="goBack();">Continue shopping</a>
                 <a class="btn btn-primary" href="placeorder.php">Place order now</a>
             </div>
+        </div>
+    </div>
             <script>
             function goBack() {
                 window.history.go(-2);
@@ -86,5 +168,22 @@ class ProfileView extends DefaultView
             <script src="js/bootstrap.min.js"></script>
         </body>
         </html>';
+    }
+
+    public function getFooter() {
+
+        echo '<div class="bottom-spacer">
+               <div class="text-center">
+                        <ul class="hor_nav">
+                            <li><a class="items" href="/privacy">Privacy</a></li>
+                            <li><a class="items" href="/refunds">Refunds</a></li>
+                            <li><a class="items" href="/sales">Sales</a></li>
+                            <li><a class="items" href="site-map">Site map</a></li>
+                        </ul>
+                            <p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
+                   </div>
+              </div>
+              <script src="js/jquery-min.js"></script>
+              <script src="js/bootstrap.min.js"></script>';
     }
 }

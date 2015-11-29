@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
 .order_id, .order_email {
     color: #999;
 }
@@ -28,4 +32,17 @@
 }
 a, h1, h2, h {
     font-family: RobotoLight;
+}
+.pos-center {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+.go-back {
+    font-size: 21px !important;
+    font-family : RobotoLight;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-decoration: none !important;
+    color: #1b6d85;
 }

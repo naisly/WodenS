@@ -1,0 +1,28 @@
+.hello {
+    font-size: 22px;
+    font-family: RobotoLight;
+}
+.cart {
+    font-size: 16px;
+    font-family: RobotoLight;
+    margin-top: 10px;
+}
+.cart-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #e4e4e4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#link {
+    text-decoration: none !important;
+}
+.cart-header {
+    color: #1b6d85;
+}
+.cart-price {
+    color: #ac5050;
+}
+.underline {
+    text-decoration: underline;
+}

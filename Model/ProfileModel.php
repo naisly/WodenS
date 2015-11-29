@@ -10,9 +10,9 @@
  * ==================
  */
 
-include_once('DefaultModel.php');
+include_once('CartModel.php');
 
-class ProfileModel extends DefaultModel
+class ProfileModel extends CartModel
 {
     public $id_array;
     public $product_name_array;

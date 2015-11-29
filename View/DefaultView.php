@@ -98,6 +98,8 @@ class DefaultView
         }  else if ($page == 'status-order'){
             echo '<link href="css/status-order.css" rel="stylesheet" type="text/css">
                   <link href="css/login.css" rel="stylesheet" type="text/css">';
+        } else if ($page == 'profile'){
+            echo '<link href="css/profile.css" rel="stylesheet" type="text/css">';
         } else {
             echo '<link rel="stylesheet" href="css/default.css" />' .
                  '<link rel="stylesheet" href="css/animate.css" />';
@@ -347,32 +349,6 @@ class DefaultView
                          new WOW().init();
                    </script>';
     }
-
-        public function getFooter() {
-
-        echo '<div class="bottom-spacer">
-               <div class="text-center">
-                        <ul class="hor_nav">
-                            <li><a class="items" href="/privacy">Privacy</a></li>
-                            <li><a class="items" href="/refunds">Refunds</a></li>
-                            <li><a class="items" href="/sales">Sales</a></li>
-                            <li><a class="items" href="site-map">Site map</a></li>
-                        </ul>
-                            <p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
-                   </div>
-              </div>
-              <script src="js/jquery-min.js"></script>
-              <script src="js/bootstrap.min.js"></script>';
-    }
-    /*public function getFooter() {
-
-        echo '<div class="bottom-spacer">
-                  <div class="text-center">
-                       <h>1</h>
-                  </div>
-              </div>
-              ';
-    }*/
 
     /*
      * Footer, bottom part
