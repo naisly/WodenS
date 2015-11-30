@@ -7,9 +7,9 @@
  * Time: 16:55
  */
 
-include_once('DefaultModel.php');
+include_once('ProfileMinPriceModel.php');
 
-class CartModel extends DefaultModel
+class CartModel extends ProfileMinPriceModel
 {
 
     private $name;
@@ -20,6 +20,8 @@ class CartModel extends DefaultModel
     private $item_price;
     private $item_shipping;
     private $no_product;
+
+    private $not_found;
 
     public function setName( $name ){
 
@@ -109,5 +111,15 @@ class CartModel extends DefaultModel
     public function getNoProduct() {
 
         return $this->no_product;
+    }
+
+    public function setNotFound( $not_found ){
+
+        $this->not_found = $not_found;
+    }
+
+    public function getNotFound() {
+
+        return $this->not_found;
     }
 }

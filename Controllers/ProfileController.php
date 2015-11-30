@@ -34,6 +34,7 @@ class ProfileController extends DefaultController
         $this->actionGetHeaderCart();
         $this->actionGetOrderedItems();
         $this->actionGetUser();
+        $this->actionGetMinPrice();
     }
 
     /*
@@ -68,22 +69,27 @@ class ProfileController extends DefaultController
         $price_array = array();
         $quantity_array = array();
 
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while ($row = $result->fetch_assoc()) {
-                $id_array = array_merge($id_array, array_map('trim', explode(",", $row['id'])));
-                $product_name_array = array_merge($product_name_array, array_map('trim', explode(",", $row['product_name'])));
-                $category_array = array_merge($category_array, array_map('trim', explode(",", $row['category'])));
-                $price_array = array_merge($price_array, array_map('trim', explode(",", $row['price'])));
-                $quantity_array = array_merge($quantity_array, array_map('trim', explode(",", $row['quantity'])));
+        if ($result->num_rows !== 0) {
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while ($row = $result->fetch_assoc()) {
+                    $id_array = array_merge($id_array, array_map('trim', explode(",", $row['id'])));
+                    $product_name_array = array_merge($product_name_array, array_map('trim', explode(",", $row['product_name'])));
+                    $category_array = array_merge($category_array, array_map('trim', explode(",", $row['category'])));
+                    $price_array = array_merge($price_array, array_map('trim', explode(",", $row['price'])));
+                    $quantity_array = array_merge($quantity_array, array_map('trim', explode(",", $row['quantity'])));
+                }
             }
-        }
 
-        $this->model->setIdArray( $id_array );
-        $this->model->setProductNameArray( $product_name_array );
-        $this->model->setCategoryArray( $category_array );
-        $this->model->setPriceArray( $price_array );
-        $this->model->setQuantityOfItem( $quantity_array );
+            $this->model->setNotFound(0);
+            $this->model->setIdArray($id_array);
+            $this->model->setProductNameArray($product_name_array);
+            $this->model->setCategoryArray($category_array);
+            $this->model->setPriceArray($price_array);
+            $this->model->setQuantityOfItem($quantity_array);
+        } else if ($result->num_rows == 0) {
+            $this->model->setNotFound(1);
+        }
 
     }
 
@@ -251,6 +257,35 @@ class ProfileController extends DefaultController
         } else {
             $this->model->setNoProduct( 'none' );
         }
+
+
+    }
+
+    protected function actionGetMinPrice() {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        $sql_query = "SELECT min(phones.price) as price1, min(notebooks.price) as price2, min(gadgets.price) as price3,
+                      min(television.price) as price4 FROM phones, notebooks, gadgets, television";
+
+        $result = $mysqli->query( $sql_query );
+
+
+        if($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $min_phones = $row['price1'];
+                $min_notebooks = $row['price2'];
+                $min_gadgets = $row['price3'];
+                $min_tv = $row['price4'];
+            }
+        }
+
+        $this->model->setMinPhones( $min_phones );
+        $this->model->setMinNotebooks( $min_notebooks );
+        $this->model->setMinGadgets( $min_gadgets );
+        $this->model->setMinTV( $min_tv );
 
 
     }

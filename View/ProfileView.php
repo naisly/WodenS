@@ -122,62 +122,135 @@ class ProfileView extends DefaultView
 
         $this->getAccountBar();
 
-        echo '
-        <div class="col-md-9">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Product name</th>
-                        <th>Quantity</th>
-                        <th class="text-right">Category</th>
-                        <th class="text-right">Price</th>
-                    </tr>
-                </thead>
-                <tbody>';
-                    $i = 0;
-                    while ($i < count($this->model->id_array)){
-                    echo '
-                    <tr>
-                        <td class="text-center">#' . $this->model->getIdArray($i) . '</td>
-                        <td class="text-left">' . $this->model->getProductNameArray($i) . '</td>
-                        <td>' . $this->model->getQuantityOfItem($i) .'</td>
-                        <td class="text-right">' . $this->model->getCategoryArray($i) . '</td>
-                        <td class="text-right">' . $this->model->getPriceArray($i) * $this->model->getQuantityOfItem($i) . ' $</td>
-                        <td>
-                            <form action="remove.php" method="post">
-                                <input type="hidden" name="id" value="' . $this->model->getIdArray($i) .'"/>
-                                <button class="btn btn-sm btn-warning">Remove</button>
-                            </form>
-                        </td>
-                    </tr>';
-                            $i++;
-                        }
-        echo'   </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="4" class="text-right">Total:</td>
-                        <td class="text-right">' .
+        echo '<div class="col-md-9">';
+
+        if($this->model->getNotFound() == 0) {
+
+            echo '<table class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Product name</th>
+                            <th>Quantity</th>
+                            <th class="text-right">Category</th>
+                            <th class="text-right">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>';
+            $i = 0;
+            while ($i < count($this->model->id_array)) {
+                echo '
+                        <tr>
+                            <td class="text-center">#' . $this->model->getIdArray($i) . '</td>
+                            <td class="text-left">' . $this->model->getProductNameArray($i) . '</td>
+                            <td>' . $this->model->getQuantityOfItem($i) . '</td>
+                            <td class="text-right">' . $this->model->getCategoryArray($i) . '</td>
+                            <td class="text-right">' . $this->model->getPriceArray($i) * $this->model->getQuantityOfItem($i) . ' $</td>
+                            <td>
+                                <form action="remove.php" method="post">
+                                    <input type="hidden" name="id" value="' . $this->model->getIdArray($i) . '"/>
+                                    <button class="btn btn-sm btn-warning">Remove</button>
+                                </form>
+                            </td>
+                        </tr>';
+                $i++;
+            }
+            echo '   </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4" class="text-right">Total:</td>
+                            <td class="text-right">' .
                             $this->model->getAPrice() . ' $'
-                     .   '</td>
-                    </tr>
-                </tfoot>
-            </table>
-            <div class="text-center">
-                <a class="btn btn-primary" onclick="goBack();">Continue shopping</a>
-                <a class="btn btn-primary" href="placeorder.php">Place order now</a>
+                            . '</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="text-center">
+                    <a class="btn btn-primary" onclick="goBack();">Continue shopping</a>
+                    <a class="btn btn-primary" href="placeorder.php">Place order now</a>
+                </div>
             </div>
         </div>
-    </div>
-            <script>
-            function goBack() {
-                window.history.go(-2);
-            }
-            </script>
-            <script src="js/jquery-min.js"></script>
-            <script src="js/bootstrap.min.js"></script>
-        </body>
-        </html>';
+                <script>
+                function goBack() {
+                    window.history.go(-2);
+                }
+                </script>
+                <script src="js/jquery-min.js"></script>
+                <script src="js/bootstrap.min.js"></script>
+            </body>
+            </html>';
+        } else if ($this->model->getNotFound() == 1){
+
+            echo '<h class="no-items">No products found in your cart</h><br />
+
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="page-spacer">
+                              <a class="page" href="phones.php">Go to the phones page <span id="right-bar">>></span></a><br />
+                              <h>From <span class="cart-price">$' . $this->model->getMinPhones() . '</span></h>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <img src="images/iphone6S.jpg" width="120" height="120" />
+                      </div>
+                  </div>
+
+                  <div id="space-divide"></div>
+
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="page-spacer">
+                              <a class="page" href="notebooks.php">Go to the laptops page <span id="right-bar">>></span></a><br />
+                              <h>From <span class="cart-price">$' . $this->model->getMinNotebooks() . '</span></h>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <img src="images/macbookpro.png" width="120" height="120" />
+                      </div>
+                  </div>
+
+                  <div id="space-divide"></div>
+
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="page-spacer">
+                              <a class="page" href="gadgets.php">Go to the devices page <span id="right-bar">>></span></a><br />
+                              <h>From <span class="cart-price">$' . $this->model->getMinGadgets() . '</span></h>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <img src="images/ipadshop1.jpg" width="120" height="120" />
+                      </div>
+                  </div>
+
+                  <div id="space-divide"></div>
+
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="page-spacer">
+                              <a class="page" href="television.php">Go to the TV page <span id="right-bar">>></span></a><br />
+                              <h>From <span class="cart-price">$' . $this->model->getMinTV() . '</span></h>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <img src="images/imac.jpg" width="120" height="120" />
+                      </div>
+                  </div>
+
+                  <div id="space-divide"></div>
+
+                  <div class="row">
+                      <div class="col-md-12">
+                          <div class="page-spacer">
+                              <h id="page">Any questions? <a class="page" href="support.php">Go to our support page <span id="right-bar">>></span></a></h>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div id="space"></div>';
+        }
     }
 
 }

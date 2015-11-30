@@ -30,3 +30,37 @@
     color: #ac5050;
     font-size: 18px;
 }
+.no-items {
+    color: #ac5050;
+    font-size: 24px;
+    font-family: RobotoLight;
+}
+#space {
+    margin-top: 30px;
+}
+.page {
+    font-size: 20px;
+    font-family: RobotoLight;
+    text-decoration: none !important;
+}
+#page {
+    font-family: RobotoLight;
+    font-size: 22px;
+}
+.page-spacer {
+    margin-top: 50px;
+    margin-left: 20px;
+}
+#space-divide {
+    width: 100%;
+    height: 1px;
+    background-color: #e4e4e4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#right-bar {
+    color: #999;
+}
+#right-bar:hover {
+    color: #1b6d85;
+}
