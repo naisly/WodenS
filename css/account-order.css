@@ -4,3 +4,6 @@
 .hidden {
     visibility: hidden;
 }
+.bordered {
+    border: 1px solid black;
+}
