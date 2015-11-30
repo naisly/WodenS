@@ -53,8 +53,13 @@ class AccountOrderView extends ProfileView
 
                 if ($i == 0) {
                     echo '<div style="margin-top: 30px; padding-bottom: 20px;">
-                              <h class="orders">Complete orders:</h>
-                          </div>';
+                              <h class="orders">Complete orders:</h><br />';
+
+                    if($this->model->getNoCompleteOrder() == 0){
+                        echo '<h class="no-order">No complete orders found</h>';
+                    }
+
+                    echo  '</div>';
                 }
 
 
@@ -62,8 +67,13 @@ class AccountOrderView extends ProfileView
 
                 if ($i == $this->model->getCountItems()) {
                     echo '<div style="margin-top: 30px; padding-bottom: 20px;">
-                        <h style="margin-left: 15px;" class="orders">Done orders:</h><br />
-                      </div>';
+                             <h style="margin-left: 15px;" class="orders">Done orders:</h><br />';
+
+                    if($this->model->getNoDoneOrder() == 0){
+                        echo '<h class="no-order">No done orders found</h>';
+                    }
+
+                    echo      '</div>';
                 }
 
                 echo '<h class="order-id">#' . $this->model->getItemsOrder($i) . ' </h><a class="data" id="displayText' . $i . '" href="javascript:toggle' . $i . '();"> hide</a>

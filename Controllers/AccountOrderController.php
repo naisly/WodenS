@@ -104,6 +104,16 @@ class AccountOrderController extends ProfileController
              * NOT FOUND
              */
 
+            if($result->num_rows == 0){
+                $this->model->setNoCompleteOrder(0);
+            } else {
+                $this->model->setNoCompleteOrder(1);
+            }
+            if($result_done->num_rows == 0){
+                $this->model->setNoDoneOrder(0);
+            } else {
+                $this->model->setNoDoneOrder(1);
+            }
             if($result->num_rows == 0 && $result_done->num_rows == 0){
                 $this->model->setNotFound(1);
             } else {
