@@ -40,33 +40,39 @@ class AccountOrderView extends ProfileView
         echo '<div class="col-md-9">
                 <div class="row">';
 
-        $i = 0;
-        $k = 0;
+        if($this->model->getNotFound() == 1){
+            echo '<div style="margin-left: 15px">';
+            $this->getNotFoundPage( 'order' );
 
-        while ($i < $this->model->countProductItem()) {
+        } else if ($this->model->getNotFound() == 0) {
 
-                if( $i == 0){
+            $i = 0;
+            $k = 0;
+
+            while ($i < $this->model->countProductItem()) {
+
+                if ($i == 0) {
                     echo '<div style="margin-top: 30px; padding-bottom: 20px;">
                               <h class="orders">Complete orders:</h>
                           </div>';
                 }
 
 
-                echo      '<div class="col-md-12">';
+                echo '<div class="col-md-12">';
 
-            if( $i == $this->model->getCountItems()){
-                echo '<div style="margin-top: 30px; padding-bottom: 20px;">
+                if ($i == $this->model->getCountItems()) {
+                    echo '<div style="margin-top: 30px; padding-bottom: 20px;">
                         <h style="margin-left: 15px;" class="orders">Done orders:</h><br />
                       </div>';
-            }
+                }
 
-                echo      '<h class="order-id">#' . $this->model->getItemsOrder( $i ) . ' </h><a class="data" id="displayText' . $i . '" href="javascript:toggle' . $i . '();"> hide</a>
+                echo '<h class="order-id">#' . $this->model->getItemsOrder($i) . ' </h><a class="data" id="displayText' . $i . '" href="javascript:toggle' . $i . '();"> hide</a>
                               <div id="toggleText' . $i . '" style="display: block;">
                                   <div class="row">
                                       <div class="col-md-12 bordered">';
 
                 $j = 0;
-                while($j < $this->model->countProductItemIteration($i)) {
+                while ($j < $this->model->countProductItemIteration($i)) {
                     echo '        <div class="col-md-4">
                                     <div class="row">
                                       <div class="col-md-6">
@@ -82,12 +88,12 @@ class AccountOrderView extends ProfileView
                                           <h class="cart-price">$' . $this->model->getPriceItem($i, $j) . '</h>
                                       </div>
                                       <div class="col-md-6 pull-left';
-                    if($j < 3 && ($j % 2 !== 0 || $j == 0)){
+                    if ($j < 3 && ($j % 2 !== 0 || $j == 0)) {
                         echo ' border-right';
-                    } else if ($j > 3 && $j % 3 !== 0){
+                    } else if ($j > 3 && $j % 3 !== 0) {
                         echo ' border-right';
                     }
-                    echo                '">
+                    echo '">
                                         <img style="margin-top: -20px;" src="' . $this->model->getPhotoItems($i, $j) . '" width="120" height="120" /><br />
                                       </div>
                                     </div>
@@ -97,14 +103,13 @@ class AccountOrderView extends ProfileView
                 }
 
 
-                echo
-                                   '</div>
+                echo             '</div>
                                 </div>
                              </div>
                            </div>';
 
 
-                echo          '<script>
+                echo '        <script>
                                   function toggle' . $i . '() {
                                        var ele  = document.getElementById("toggleText' . $i . '");
                                        var text = document.getElementById("displayText' . $i . '");
@@ -119,7 +124,8 @@ class AccountOrderView extends ProfileView
                                    }
                               </script>';
 
-            $i++;
+                $i++;
+            }
         }
 
 
@@ -129,6 +135,3 @@ class AccountOrderView extends ProfileView
           <div id="space"></div>';
     }
 }
-
-http://localhost:8080/shop/subdescription.php?original_name=Iphone+6S+White+32GB+Neverlock&table=phones&id_num=1455&
-//id=1&product_name=Iphone+6S&original_name=Iphone+6S+White+32GB+Neverlock

@@ -180,11 +180,20 @@ class ProfileView extends DefaultView
                 <script src="js/bootstrap.min.js"></script>
             </body>
             </html>';
-        } else if ($this->model->getNotFound() == 1){
+        } else if ($this->model->getNotFound() == 1) {
+            $this->getNotFoundPage( 'cart' );
+        }
+    }
 
-            echo '<h class="no-items">No products found in your cart</h><br />
+    protected function getNotFoundPage( $page ){
 
-                  <div class="row">
+        if ($page == 'cart') {
+            echo '<h class="no-items">No products found in your cart</h><br />';
+        } else if ($page == 'order'){
+            echo '<h class="no-items">No orders found in your account</h><br />';
+        }
+
+        echo      '<div class="row">
                       <div class="col-md-6">
                           <div class="page-spacer">
                               <a class="page" href="phones.php">Go to the phones page <span id="right-bar">>></span></a><br />
@@ -192,7 +201,7 @@ class ProfileView extends DefaultView
                           </div>
                       </div>
                       <div class="col-md-6">
-                          <img src="images/iphone6S.jpg" width="120" height="120" />
+                          <img src="images/iphone6S.jpg" width="120" height="120"/>
                       </div>
                   </div>
 
@@ -249,8 +258,8 @@ class ProfileView extends DefaultView
                   </div>
                 </div>
             </div>
+            </div>
             <div id="space"></div>';
-        }
     }
 
 }
