@@ -22,6 +22,9 @@ class AccountOrderModel extends ProfileModel
     private $countItems;
     private $countDoneItems;
     private $photo_items;
+    private $product_name_items;
+    private $product_table_items;
+    private $id_items;
 
     public function setProductItem( $product_item ){
 
@@ -121,5 +124,35 @@ class AccountOrderModel extends ProfileModel
     public function countPhotoItems() {
 
         return count($this->photo_items);
+    }
+
+    public function setProductNameItems( $product_name_items ){
+
+        $this->product_name_items = $product_name_items;
+    }
+
+    public function getProductNameItems( $i, $k){
+
+        return $this->product_name_items[$i][$k];
+    }
+
+    public function setProductTableItems( $product_table_items ){
+
+        $this->product_table_items = $product_table_items;
+    }
+
+    public function getProductTableItems( $i, $k ){
+
+        return $this->product_table_items[$i][$k];
+    }
+
+    public function setIdItems( $id_items ){
+
+        $this->id_items = $id_items;
+    }
+
+    public function getIdItems( $i, $k){
+
+        return $this->id_items[$i][$k];
     }
 }

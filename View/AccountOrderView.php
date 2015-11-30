@@ -26,8 +26,13 @@ class AccountOrderView extends ProfileView
 
     public function getAccountOrderPage() {
 
+        $this->DoctypeView( 'account-order' );
+        $this->headerView();
+
         $this->getAccountBar();
         $this->getOrders();
+
+        $this->getFooter();
     }
 
     private function getOrders() {
@@ -55,7 +60,7 @@ class AccountOrderView extends ProfileView
                       </div>';
             }
 
-                echo      '<h class="order-id">#' . $this->model->getItemsOrder( $i ) . ' </h><a id="displayText' . $i . '" href="javascript:toggle' . $i . '();"> hide</a>
+                echo      '<h class="order-id">#' . $this->model->getItemsOrder( $i ) . ' </h><a class="data" id="displayText' . $i . '" href="javascript:toggle' . $i . '();"> hide</a>
                               <div id="toggleText' . $i . '" style="display: block;">
                                   <div class="row">
                                       <div class="col-md-12 bordered">';
@@ -65,7 +70,10 @@ class AccountOrderView extends ProfileView
                     echo '        <div class="col-md-4">
                                     <div class="row">
                                       <div class="col-md-6">
-                                          <h class="product">' . $this->model->getProductItem($i, $j) . '</h><br />
+                                          <h class="product"><a href="subdescription.php?original_name=' . $this->model->getProductItem($i, $k) . '
+                                          &amp;table=' . $this->model->getProductTableItems($i, $k) . '&amp;id_num=' . $this->model->getPriceItem($i, $k) . '
+                                          &amp;id=' . $this->model->getIdItems($i, $k) . '&amp;product_name=' . $this->model->getProductTableItems($i, $k) . '
+                                          ">' . $this->model->getProductNameItems($i, $j) . '</a></h><br />
 
                                           <div class="divide"></div>
 
@@ -117,6 +125,10 @@ class AccountOrderView extends ProfileView
 
         echo    '</div>
               </div>
-          </div>';
+          </div>
+          <div id="space"></div>';
     }
 }
+
+http://localhost:8080/shop/subdescription.php?original_name=Iphone+6S+White+32GB+Neverlock&table=phones&id_num=1455&
+//id=1&product_name=Iphone+6S&original_name=Iphone+6S+White+32GB+Neverlock

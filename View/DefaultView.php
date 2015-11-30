@@ -322,7 +322,6 @@ class DefaultView
                             <input type="hidden" name="id_num" value="' . $this->model->getPrice($i) . '"/>
                             <input type="hidden" name="id" value="' . $this->model->getId($i) . '"/>
                             <input type="hidden" name="product_name" value="' . $this->model->getProductName($i) . '"/>
-                            <input type="hidden" name="original_name" value="' . $this->model->getOriginalName($i) . '"/>
                         </form>
                     </div>
                     <div class="col-md-4 wow fadeInUp">

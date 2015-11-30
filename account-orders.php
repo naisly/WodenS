@@ -18,8 +18,4 @@ $view = new AccountOrderView( $model );
 
 $controller->actionGetData();
 
-$view->DoctypeView( 'account-order' );
-$view->headerView();
-
 $view->getAccountOrderPage();
-$view->getFooter();
