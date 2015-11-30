@@ -41,29 +41,48 @@ class AccountOrderView extends ProfileView
         while ($i < $this->model->countProductItem()) {
 
                 if( $i == 0){
-                    echo '<h>Complete orders:</h>';
+                    echo '<div style="margin-top: 30px; padding-bottom: 20px;">
+                              <h class="orders">Complete orders:</h>
+                          </div>';
                 }
 
 
                 echo      '<div class="col-md-12">';
 
             if( $i == $this->model->getCountItems()){
-                echo '<h style="margin-left: -15px;">Done orders:</h><br />';
+                echo '<div style="margin-top: 30px; padding-bottom: 20px;">
+                        <h style="margin-left: 15px;" class="orders">Done orders:</h><br />
+                      </div>';
             }
 
-                echo      '<h>#' . $this->model->getItemsOrder( $i ) . ' </h><a id="displayText' . $i . '" href="javascript:toggle' . $i . '();"> show</a>
-                              <div id="toggleText' . $i . '" style="display: none;">
+                echo      '<h class="order-id">#' . $this->model->getItemsOrder( $i ) . ' </h><a id="displayText' . $i . '" href="javascript:toggle' . $i . '();"> hide</a>
+                              <div id="toggleText' . $i . '" style="display: block;">
                                   <div class="row">
                                       <div class="col-md-12 bordered">';
 
                 $j = 0;
                 while($j < $this->model->countProductItemIteration($i)) {
-                    echo '        <div class="col-md-3">
-                                      <img src="' . $this->model->getPhotoItems($i, $j) . '" width="120" height="120" />
-                                      <h>' . $this->model->getProductItem($i, $j) . '</h><br />
-                                      <h>' . $this->model->getCategoryItem($i, $j) . '</h><br />
-                                      <h>' . $this->model->getQuantityItem($i, $j) . '</h><br />
-                                      <h>' . $this->model->getPriceItem($i, $j) . '</h>
+                    echo '        <div class="col-md-4">
+                                    <div class="row">
+                                      <div class="col-md-6">
+                                          <h class="product">' . $this->model->getProductItem($i, $j) . '</h><br />
+
+                                          <div class="divide"></div>
+
+                                          <h>Category: <em><span id="category-item">' . $this->model->getCategoryItem($i, $j) . '</span></em></h><br />
+                                          <h>' . $this->model->getQuantityItem($i, $j) . ' items</h><br />
+                                          <h class="cart-price">$' . $this->model->getPriceItem($i, $j) . '</h>
+                                      </div>
+                                      <div class="col-md-6 pull-left';
+                    if($j < 3 && ($j % 2 !== 0 || $j == 0)){
+                        echo ' border-right';
+                    } else if ($j > 3 && $j % 3 !== 0){
+                        echo ' border-right';
+                    }
+                    echo                '">
+                                        <img style="margin-top: -20px;" src="' . $this->model->getPhotoItems($i, $j) . '" width="120" height="120" /><br />
+                                      </div>
+                                    </div>
                                   </div>';
 
                     $j++;
@@ -81,12 +100,13 @@ class AccountOrderView extends ProfileView
                                   function toggle' . $i . '() {
                                        var ele  = document.getElementById("toggleText' . $i . '");
                                        var text = document.getElementById("displayText' . $i . '");
-                                       if(ele.style.display == "block") {
-                                           ele.style.display = "none";
-                                           text.innerHTML = "show";
-                                       } else {
+                                       if(ele.style.display !== "block") {
                                            ele.style.display = "block";
                                            text.innerHTML = "hide";
+
+                                       } else {
+                                           ele.style.display = "none";
+                                           text.innerHTML = "show";
                                        }
                                    }
                               </script>';

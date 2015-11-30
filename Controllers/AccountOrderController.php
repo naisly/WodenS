@@ -188,8 +188,8 @@ class AccountOrderController extends ProfileController
             $i--;
             array_push(${'product_name_array' . $i}, $done_product_name_product);
             array_push(${'category_array' . $i}, $done_category_product);
-            array_push(${'quantity_array' . $i}, $done_price_product);
-            array_push(${'price_array' . $i}, $done_quantity_product);
+            array_push(${'quantity_array' . $i}, $done_quantity_product);
+            array_push(${'price_array' . $i}, $done_price_product);
 
             while($i < count($order_id_array) + count($order_done_id_array)){
 
@@ -200,7 +200,6 @@ class AccountOrderController extends ProfileController
                 $i++;
             }
 
-            //print_r($product_name_array);
             $decrease_product_array = array();
             $decrease_category_array = array();
             $decrease_quantity_aray = array();
@@ -253,6 +252,7 @@ class AccountOrderController extends ProfileController
              * @var $count_done_array
              * @var $count_array
              */
+            //print_r($order_array);
 
             $v = 0;
             $position = '';
@@ -271,6 +271,93 @@ class AccountOrderController extends ProfileController
             $this->model->setCategoryItem( $category_array );
             $this->model->setQuantityItem( $quantity_array );
             $this->model->setPriceItem( $price_array );
+
+
+
+
+
+
+
+            $i = 0;
+            $u = 0;
+
+            $tables_array = [ 'completeorders', 'doneorders' ];
+
+            $product_table_array = array();
+            $id_array = array();
+
+            while ($i < count($tables_array)) {
+                while ($u < $this->model->countItemsOrder()) {
+
+                    $sql_query = "SELECT product_table, id FROM $tables_array[$i] WHERE order_id='{$this->model->getItemsOrder( $u )}'";
+                    $result = $mysqli->query( $sql_query );
+
+                    //echo $sql_query;
+
+                    if ($result->num_rows > 0) {
+                        // output data of each row
+                        while ($row = $result->fetch_assoc()) {
+                            array_push( $product_table_array, $row['product_table']);
+                            array_push( $id_array, $row['id']);
+                        }
+                    }
+
+                    $u++;
+                }
+
+                $u = 0;
+                $i++;
+            }
+
+            //print_r($product_table_array);
+            //print_r($id_array);
+
+            $result_photo_array = array();
+            //$photo_array = array();
+
+            $i = 0;
+            $j = 0;
+
+            while($j < count($order_array)) {
+                while ($i < count($product_table_array)) {
+
+                    $sql_query = "SELECT photo FROM $product_table_array[$i] WHERE id='$id_array[$i]'";
+                    $sql_result = $mysqli->query($sql_query);
+
+                    if ($sql_result->num_rows > 0) {
+                        while ($row = $sql_result->fetch_assoc()) {
+
+                            array_push($result_photo_array, $row['photo']);
+                        }
+                    }
+                    $i++;
+                }
+
+                $j++;
+            }
+
+            $photo_count_array = array();
+            $g = 0;
+            while($g < count($product_name_array)){
+                array_push($photo_count_array, count($product_name_array[$g]));
+
+                $g++;
+            }
+
+            $photos = array();
+
+            $i = 0;
+            while($i < count($result_photo_array)){
+
+                ${'photo_array' . $i} = array_splice($result_photo_array, 0, $photo_count_array[$i]);
+                array_push($photos, ${'photo_array' . $i});
+                $i++;
+            }
+
+            $this->model->setPhotoItems( $photos );
+
+
+
 
         }
 

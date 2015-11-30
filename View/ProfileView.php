@@ -39,7 +39,7 @@ class ProfileView extends DefaultView
 
         echo '<div class="container">
               <div class="row">
-                  <div class="col-md-3">
+                  <div class="col-md-3" style="border-right: 1px solid #e4e4e4;">
                       <h class="hello">Hello, ' . $this->model->getName() . '</h><br />
 
                       <div class="cart-divider"></div>
