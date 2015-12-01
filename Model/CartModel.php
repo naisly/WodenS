@@ -21,6 +21,8 @@ class CartModel extends ProfileMinPriceModel
     private $item_shipping;
     private $no_product;
 
+    private $not_found;
+
     public function setName( $name ){
 
         $this->name = $name;
@@ -109,5 +111,15 @@ class CartModel extends ProfileMinPriceModel
     public function getNoProduct() {
 
         return $this->no_product;
+    }
+
+    public function setNotFound( $not_found ){
+
+        $this->not_found = $not_found;
+    }
+
+    public function getNotFound() {
+
+        return $this->not_found;
     }
 }

@@ -7,9 +7,9 @@
  * Time: 22:41
  */
 
-include_once('NotFoundModel.php');
+include_once('DefaultModel.php');
 
-class ProfileMinPriceModel extends NotFoundModel
+class ProfileMinPriceModel extends DefaultModel
 {
 
     private $min_phones;
