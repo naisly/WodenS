@@ -7,9 +7,9 @@
  * Time: 19:23
  */
 
-include_once('DefaultModel.php');
+include_once('BillingModel.php');
 
-class DoneOrdersModel extends DefaultModel
+class DoneOrdersModel extends BillingModel
 {
     private $done_id;
     private $done_product_table;

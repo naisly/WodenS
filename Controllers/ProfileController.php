@@ -35,6 +35,7 @@ class ProfileController extends DefaultController
         $this->actionGetOrderedItems();
         $this->actionGetUser();
         $this->actionGetMinPrice();
+        $this->actionGetBilling();
     }
 
     /*
@@ -286,6 +287,50 @@ class ProfileController extends DefaultController
         $this->model->setMinNotebooks( $min_notebooks );
         $this->model->setMinGadgets( $min_gadgets );
         $this->model->setMinTV( $min_tv );
+
+
+    }
+
+    protected function actionGetBilling() {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        //session_start();
+        if(isset($_SESSION['login_user'])){
+            $user = $_SESSION['login_user'];
+        }
+
+        $sql_query = "SELECT name, street, city, state, zip, country, wrap FROM billing WHERE user='$user'";
+        $result = $mysqli->query( $sql_query );
+
+        //echo $sql_query;
+
+        if($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $name = $row['name'];
+                $street = $row['street'];
+                $city = $row['city'];
+                $state = $row['state'];
+                $zip = $row['zip'];
+                $country = $row['country'];
+                $wrap = $row['wrap'];
+            }
+        }
+        if($result->num_rows !== 0){
+            $this->model->setBillingName( $name );
+            $this->model->setBillingStreet( $street );
+            $this->model->setBillingCity( $city );
+            $this->model->setBillingState( $state );
+            $this->model->setBillingZip( $zip );
+            $this->model->setBillingCountry( $country );
+            $this->model->setBillingWrap( $wrap );
+
+            $this->model->setBillingNotFound(0);
+        } else {
+            $this->model->setBillingNotFound(1);
+        }
 
 
     }

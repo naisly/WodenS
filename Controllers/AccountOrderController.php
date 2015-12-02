@@ -32,6 +32,7 @@ class AccountOrderController extends ProfileController
         $this->getDoneOrders();
 
         $this->actionGetMinPrice();
+        $this->actionGetBilling();
     }
 
     protected function getAllOrders() {

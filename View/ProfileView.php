@@ -44,7 +44,7 @@ class ProfileView extends DefaultView
 
                       <div class="cart-divider"></div>
 
-                      <h class="cart"><a href="cart.php" id="link"> Cart ></a></h><br />
+                      <h class="cart"><a href="cart.php" id="link"> Cart</a></h><br />
                       <h class="cart"><a href="account-orders.php" id="link">Your Orders</a></h><br />
                       <h class="cart"><a href="account.php" id="link">Change account info</a></h><br />
                       <h class="cart"><a href="account-billing.php" id="link">Billing info</a></h><br />
@@ -91,11 +91,27 @@ class ProfileView extends DefaultView
 
                       <div class="cart-divider"></div>
 
-                      <h class="hello">Last Billing info:</h><br />
+                      <h class="hello">Last Billing info:</h><br />';
 
-                      <h class="cart">Add billing info</h>
+        if($this->model->getBillingNotFound() !== 0) {
 
-                      <div class="cart-divider"></div>
+            echo     '<h class="cart"><a style="text-decoration: none" href="account-billing.php">Add billing info</a></h>';
+        } else {
+            echo     '<h class="cart"><b>Name:</b> ' . $this->model->getBillingName() . '</h><br />
+                      <h class="cart"><b>Street:</b> ' . $this->model->getBillingStreet() . '</h><br />
+                      <h class="cart"><b>City:</b> ' . $this->model->getBillingCity() . '</h><br />
+                      <h class="cart"><b>State:</b> ' . $this->model->getBillingState() . '</h><br />
+                      <h class="cart"><b>Zip:</b> ' . $this->model->getBillingZip() . '</h><br />
+                      <h class="cart"><b>Country:</b> ' . $this->model->getBillingCountry() . '</h><br />';
+
+            if($this->model->getBillingWrap() == 1) {
+                echo '<h class="cart"><b>Giftwrap All items <span style="text-decoration: underline">by default</span></b></h>';
+            } else {
+                echo '<h class="cart">No use of <b>Giftwrap</b> for Items</h>';
+            }
+        }
+
+        echo         '<div class="cart-divider"></div>
 
                       <h class="hello">Last added item:</h><br />';
 

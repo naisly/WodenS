@@ -29,6 +29,7 @@ class AccountInfoController extends AccountOrderController
         $this->actionGetUser();
         $this->getAllOrders();
         $this->getBillingData();
+        $this->actionGetBilling();
     }
 
     public function actionCancelOrder() {

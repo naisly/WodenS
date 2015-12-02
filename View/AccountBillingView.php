@@ -46,36 +46,36 @@ class AccountBillingView extends AccountOrderView
 
                              <div class="form-group form-spacer">
                                  <label for="name">Primary Name</label>
-                                 <input type="text" class="form-control" id="name" />
+                                 <input type="text" class="form-control" name="name" id="name" />
                              </div>
 
                              <h class="main-page">Address</h>
 
                              <div class="form-group form-spacer">
                                  <label for="street">Default Street Address</label>
-                                 <input type="text" class="form-control" id="street" />
+                                 <input type="text" class="form-control" name="street" id="street" />
                              </div>
                              <div class="form-group">
                                  <label for="name">Default City</label>
-                                 <input type="text" class="form-control" id="city" />
+                                 <input type="text" class="form-control" name="city" id="city" />
                              </div>
                              <div class="form-group">
                                  <label for="name">Default State</label>
-                                 <input type="text" class="form-control" id="state" />
+                                 <input type="text" class="form-control" name="state" id="state" />
                              </div>
                              <div class="form-group">
                                  <label for="name">Default Zip</label>
-                                 <input type="text" class="form-control" id="zip" />
+                                 <input type="text" class="form-control" name="zip" id="zip" />
                              </div>
                              <div class="form-group">
                                  <label for="name">Default Country</label>
-                                 <input type="text" class="form-control" id="country" />
+                                 <input type="text" class="form-control" name="country" id="country" />
                              </div>
 
                              <h class="main-page">Default Options</h>
 
                              <div class="form-group form-spacer">
-                                <input name="giftwrap" type="checkbox" value="1" />
+                                <input name="giftwrap" id="giftwrap" type="checkbox" value="1" />
                                 <span id="gift">Gift wrap All items</span>
                              </div>
 

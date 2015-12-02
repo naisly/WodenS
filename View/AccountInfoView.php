@@ -160,23 +160,29 @@ class AccountInfoView extends AccountOrderView
 
                           <div class="ship-to">
                               <h class="billing-h">Ship to:</h><br />
-                              <h class="billing-data" style="color: #ac5050;"><b>Oleksandr Serdiuk Nikolaevich</b></h>
+                              <h class="billing-data" style="color: #ac5050;"><b>' . $this->model->getBillingName() . '</b></h>
                           </div>
 
                           <div class="address">
                               <h class="billing-h">Address:</h><br />
 
-                              <h class="billing-data"><b>Street Address:</b> 5 Knyajiy zaton, apt 109</h><br />
-                              <h class="billing-data"><b>City:</b> Kiev</h><br />
-                              <h class="billing-data"><b>State:</b> Kyivskiy</h><br />
-                              <h class="billing-data"><b>Zip:</b> 02095</h><br />
-                              <h class="billing-data"><b>Country:</b> Ukraine</h>
+                              <h class="billing-data"><b>Street Address: </b>' . $this->model->getBillingStreet() . '</h><br />
+                              <h class="billing-data"><b>City: </b>' . $this->model->getBillingCity() . '</h><br />
+                              <h class="billing-data"><b>State: </b>' . $this->model->getBillingState() . '</h><br />
+                              <h class="billing-data"><b>Zip: </b>' . $this->model->getBillingZip() . '</h><br />
+                              <h class="billing-data"><b>Country: </b>' . $this->model->getBillingCountry() . '</h>
                           </div>
 
                           <div class="default-options">
-                              <h class="billing-h">Default options:</h><br />
-                              <h class="billing-data"><b>Non-Gift wrap all items</b></h>
-                          </div>
+                              <h class="billing-h">Default options:</h><br />';
+
+        if($this->model->getBillingWrap() == 0) {
+            echo         '<h class="billing-data">No use of <b>Giftwrap</b> for Items</b></h>';
+        } else {
+            echo         '<h class="billing-data"><b>Giftwrap All Items <span style="text-decoration: underline">by default</span></b></h>';
+        }
+
+        echo             '</div>
 
                           <div class="edit">
                               <h id="edit"><a style="text-decoration: none;" href="account-billing.php">Edit your Billing Info >></a></h>
