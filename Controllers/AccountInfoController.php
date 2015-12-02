@@ -27,7 +27,8 @@ class AccountInfoController extends AccountOrderController
 
         $this->actionGetHeaderCart();
         $this->actionGetUser();
-        $this->getOrders();
+        $this->getAllOrders();
+        $this->getBillingData();
     }
 
     public function actionCancelOrder() {
@@ -78,5 +79,55 @@ class AccountInfoController extends AccountOrderController
         }
 
         header('Location: account.php');
+    }
+
+    public function getBillingData() {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        $this->model->setAllOrders();
+
+        if(isset($_SESSION['login_user'])){
+            $user = $_SESSION['login_user'];
+        }
+
+        $name_array = array();
+        $street_array = array();
+        $city_array = array();
+        $state_array = array();
+        $zip_array = array();
+        $country_array = array();
+        $wrap_array = array();
+
+        $i = 0;
+        while($i < count($this->model->getAllOrders())) {
+            $sql_query = "SELECT name, street, city, state, zip, country, wrap FROM orders WHERE order_id='{$this->model->getEachOrder($i)}'";
+            $result = $mysqli->query( $sql_query );
+
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while ($row = $result->fetch_assoc()) {
+                    array_push($name_array, $row['name']);
+                    array_push($street_array, $row['street']);
+                    array_push($city_array, $row['city']);
+                    array_push($state_array, $row['state']);
+                    array_push($zip_array, $row['zip']);
+                    array_push($country_array, $row['country']);
+                    array_push($wrap_array, $row['wrap']);
+                }
+            }
+
+            $i++;
+        }
+
+        $this->model->setAccountName( $name_array );
+        $this->model->setAccountStreet( $street_array );
+        $this->model->setAccountCity( $city_array );
+        $this->model->setAccountState( $state_array );
+        $this->model->setAccountZip( $zip_array );
+        $this->model->setAccountCountry( $country_array );
+        $this->model->setAccountGift( $wrap_array );
     }
 }

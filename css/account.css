@@ -1,5 +1,5 @@
 .main-page {
-    color: #666;
+    color: #555;
     font-family: RobotoLight;
     font-size: 24px;
 }
@@ -11,4 +11,81 @@
     /*border is optional*/
     cursor: pointer;
     font-size: 20px;
+}
+.margin-top {
+    margin-top: 50px;
+}
+.change {
+    font-family: RobotoLight;
+    font-size: 18px;
+}
+#border-right {
+    border-right: 1px solid #e4e4e4;
+}
+#border-left, #border-right, #no-border {
+    margin-top: 30px;
+}
+#border-left {
+    border-left: 1px solid #e4e4e4;
+}
+.change-spacer {
+    margin-top: 20px;
+}
+.h-label {
+    font-size: 14px;
+    color: #555;
+    font-family: RobotoLight;
+}
+#order-status {
+    font-size: 22px;
+    font-family: RobotoLight;
+    color: #555;
+}
+.table-spacer {
+    margin-top: 20px;
+}
+.billing-h {
+    font-size: 20px;
+    color: #666;
+}
+.ship-to, .address, .default-options {
+    margin-top: 30px;
+}
+.billing-data {
+    font-size: 17px;
+    font-family: RobotoLight;
+}
+#edit {
+    font-family: RobotoLight;
+    font-size: 24px;
+    color: #555;
+}
+.order-num {
+    font-size: 24px;
+    font-family: RobotoLight;
+    color: #555;
+}
+.billing-desc {
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+.desc {
+    font-size: 18px;
+    font-family: RobotoLight;
+    color: #555;
+}
+.show-link {
+    float:right;
+    margin-top: 5px;
+    font-size: 17px;
+    text-decoration: none !important;
+}
+.edit {
+    margin-top: 60px;
+}
+#edit {
+    text-decoration: none !important;
 }

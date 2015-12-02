@@ -68,6 +68,7 @@ class AccountOrderController extends ProfileController
             }
 
         }
+        //print_r($complete_order_id_array);
         $this->model->setCompleteOrderIds( $complete_order_id_array );
         $this->model->setDoneOrderIds( $done_order_id_array );
     }
