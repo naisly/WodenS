@@ -100,9 +100,13 @@ class DefaultView
                   <link href="css/login.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'profile'){
             echo '<link href="css/profile.css" rel="stylesheet" type="text/css">';
-        }  else if ($page == 'account-order' || $page == 'account') {
+        }  else if ($page == 'account-order' || $page == 'account' || $page == 'account-billing') {
             if($page == 'account'){
                 echo '<link href="css/account.css" rel="stylesheet" type="text/css">';
+            }
+
+            if ($page == 'account-billing'){
+                echo '<link href="css/account-billing.css" rel="stylesheet" type="text/css">';
             }
 
             echo '<link href="css/account-order.css" rel="stylesheet" type="text/css">

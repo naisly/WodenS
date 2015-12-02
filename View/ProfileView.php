@@ -47,7 +47,7 @@ class ProfileView extends DefaultView
                       <h class="cart"><a href="cart.php" id="link"> Cart ></a></h><br />
                       <h class="cart"><a href="account-orders.php" id="link">Your Orders</a></h><br />
                       <h class="cart"><a href="account.php" id="link">Change account info</a></h><br />
-                      <h class="cart"><a href="billing-info.php" id="link">Billing info</a></h><br />
+                      <h class="cart"><a href="account-billing.php" id="link">Billing info</a></h><br />
 
                       <div class="cart-divider"></div>
 

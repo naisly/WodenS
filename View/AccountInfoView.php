@@ -112,7 +112,7 @@ class AccountInfoView extends AccountOrderView
                                     <label for="password" class="h-label">Password:</label>
                                     <input type="password" class="form-control" id="password" />
                                 </div>
-                                <button class="btn btn-primary pull-right">Submit</button>
+                                <button class="btn btn-default pull-right">Submit</button>
                             </form>
                         </div>
                         <div class="col-md-4" id="no-border">
@@ -126,7 +126,7 @@ class AccountInfoView extends AccountOrderView
                                     <label for="password" class="h-label">Password:</label>
                                     <input type="password" class="form-control" id="password" />
                                 </div>
-                                <button class="btn btn-success pull-right">Submit</button>
+                                <button class="btn btn-default pull-right">Submit</button>
                             </form>
                         </div>
                         <div class="col-md-4" id="border-left">
@@ -144,7 +144,7 @@ class AccountInfoView extends AccountOrderView
                                     <label for="password" class="h-label">Repeat Your New Password:</label>
                                     <input type="password" class="form-control" id="password2" />
                                 </div>
-                                <button class="btn btn-warning pull-right">Submit</button>
+                                <button class="btn btn-default pull-right">Submit</button>
                             </form>
                         </div>
                     </div>';
