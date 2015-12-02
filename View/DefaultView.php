@@ -100,11 +100,14 @@ class DefaultView
                   <link href="css/login.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'profile'){
             echo '<link href="css/profile.css" rel="stylesheet" type="text/css">';
-        }  else if ($page == 'account-order') {
+        }  else if ($page == 'account-order' || $page == 'account') {
+            if($page == 'account'){
+                echo '<link href="css/account.css" rel="stylesheet" type="text/css">';
+            }
+
             echo '<link href="css/account-order.css" rel="stylesheet" type="text/css">
                   <link href="css/profile.css" rel="stylesheet" type="text/css">
-                  <script src="js/jquery-min.js"></script>
-                  <script language="javascript" src="js/show-hide.js"></script>';
+                  <script src="js/jquery-min.js"></script>';
         } else {
             echo '<link rel="stylesheet" href="css/default.css" />' .
                  '<link rel="stylesheet" href="css/animate.css" />';

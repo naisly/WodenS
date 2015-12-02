@@ -7,9 +7,9 @@
  * Time: 22:41
  */
 
-include_once('DefaultModel.php');
+include_once('CompleteOrdersModel.php');
 
-class ProfileMinPriceModel extends DefaultModel
+class ProfileMinPriceModel extends CompleteOrdersModel
 {
 
     private $min_phones;

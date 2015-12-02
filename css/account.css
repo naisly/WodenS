@@ -1,0 +1,14 @@
+.main-page {
+    color: #666;
+    font-family: RobotoLight;
+    font-size: 24px;
+}
+#button-as-link {
+    background:none!important;
+    border:none;
+    padding:0!important;
+    font: inherit;
+    /*border is optional*/
+    cursor: pointer;
+    font-size: 20px;
+}

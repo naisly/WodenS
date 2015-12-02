@@ -319,9 +319,11 @@ class DefaultController
      * for the product page
      */
     private function actionGetDistinctCategories( $category ) {
+
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
+
         $sql_query = "SELECT DISTINCT category FROM $category";
         $result = $mysqli->query($sql_query);
         $list_categories = array();
