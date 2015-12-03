@@ -112,6 +112,8 @@ class DefaultView
             echo '<link href="css/account-order.css" rel="stylesheet" type="text/css">
                   <link href="css/profile.css" rel="stylesheet" type="text/css">
                   <script src="js/jquery-min.js"></script>';
+        } else if($page == 'financing'){
+            echo '<link href="css/financing.css" rel="stylesheet" type="text/css">';
         } else {
             echo '<link rel="stylesheet" href="css/default.css" />' .
                  '<link rel="stylesheet" href="css/animate.css" />';
@@ -367,11 +369,16 @@ class DefaultView
      */
     public function actionGetFooter( $page ) {
         echo   '</div>
-                <footer>
-                    <div class="container">
+                <footer>';
+
+        if($page !== 'financing') {
+            echo '<div class="container">
                          <div class="divider"></div>
-                    </div>
-                    <div class="container" style="margin-top: 20px;">
+                    </div>';
+        } else {
+
+        }
+        echo        '<div class="container" style="margin-top: 20px;">
                         <div class="row">
                             <div class="col-sm-1"></div>
                             <div class="col-sm-2 wow fadeInLeft">
@@ -404,8 +411,10 @@ class DefaultView
                             <div class="col-sm-2 wow fadeInUp">
                                 <ul>
                                     <li class="footer-menu"><b>Account</b></li>
-                                    <li><a class="items" href="shop-id.php">Find your Id</a></li>
-                                    <li><a class="items" href="store.php">Store account</a></li>
+                                    <li><a class="items" href="account.php">Store account</a></li>
+                                    <li><a class="items" href="cart.php">My Items</a></li>
+                                    <li><a class="items" href="shop-id.php">My Orders</a></li>
+                                    <li><a class="items" href="account-billing.php">Billing Info</a></li>
                                 </ul>
                                 <ul>
                                     <li class="footer-menu"><b>Most valuable</b></li>
@@ -421,7 +430,7 @@ class DefaultView
                                     <li><a class="items" href="people.php">In-touch People</a></li>
                                     <li><a class="items" href="managers.php">Our managers</a></li>
                                     <li><a class="items" href="offices.php">Offices</a></li>
-                                    <li><a class="items" href="comments.php">Comments</a></li>
+                                    <li><a class="items" href="search-answers.php">Questions & Answers</a></li>
                                     <li><a class="items" href="business.php">Business</a></li>
                                     <li><a class="items" href="director.php">Director</a></li>
                                     <li><a class="items" href="job.php">Job</a></li>

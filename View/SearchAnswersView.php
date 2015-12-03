@@ -31,7 +31,7 @@ class SearchAnswersView extends SubdescriptionView
             $this->actionGetFooter( 'search' );
     }
 
-    private function GetFooter() {
+    public function GetFooter() {
 
         echo '<div class="bottom-spacer">
                <div class="row">
