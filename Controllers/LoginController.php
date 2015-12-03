@@ -84,8 +84,6 @@ class LoginController extends DefaultController
      */
     public function actionDoInsertion()
     {
-        echo $this->model->getEmail();
-        echo $this->model->getEmailAgain();
         if ($this->model->getEmail() == $this->model->getEmailAgain()) {
             if ($this->model->getPassword() == $this->model->getPasswordAgain()) {
                 if ($this->model->getPassword() === $this->model->getPasswordAgain() && (strlen($this->model->getPassword()) > 7)) {
@@ -218,7 +216,7 @@ class LoginController extends DefaultController
         $sql_stmt = "SELECT id,quantity FROM orderedItems WHERE id=$id AND product_name='$original_name' AND category='$category'
                       AND price=$price AND user='$user'";
 
-        echo $sql_stmt;
+        //echo $sql_stmt;
 
         $result = $mysqli->query($sql_stmt);
         if ($result->num_rows > 0){

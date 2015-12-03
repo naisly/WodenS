@@ -41,33 +41,40 @@ class OrderView extends DefaultView
                     <h3>Ship to</h3>
                     <div class="form-group">
                         <label>Name</label>
-                        <input name="name" class="form-control" required />
+                        <input name="name" class="form-control" value="' . $this->model->getDefaultName() . '" required />
                     </div>
                     <h3>Address</h3>
                     <div class="form-group">
                         <label>Street Address</label>
-                        <input name="street" class="form-control" required />
+                        <input name="street" class="form-control" value="' . $this->model->getDefaultStreet() . '" required />
                     </div>
                     <div class="form-group">
                         <label>City</label>
-                        <input name="city" class="form-control" required />
+                        <input name="city" class="form-control" value="' . $this->model->getDefaultCity() . '" required />
                     </div>
                     <div class="form-group">
                         <label>State</label>
-                        <input name="state" class="form-control" required />
+                        <input name="state" class="form-control" value="' . $this->model->getDefaultState() . '" required />
                     </div>
                     <div class="form-group">
                         <label>Zip</label>
-                        <input name="zip" class="form-control" required />
+                        <input name="zip" class="form-control" value="' . $this->model->getDefaultZip() . '" required />
                     </div>
                     <div class="form-group">
                         <label>Country</label>
-                        <input name="country" class="form-control" required />
+                        <input name="country" class="form-control" value="' . $this->model->getDefaultCountry() . '" required />
                     </div>
                     <h3>Options</h3>
                     <div class="checkbox">
                         <label>
-                            <input name="giftwrap" type="checkbox" value="1"/>
+                            <input name="giftwrap" type="checkbox" value="1"';
+
+            if($this->model->getDefaultWrap() == 1){
+                echo 'checked="checked"';
+            } else {
+
+            }
+            echo            '/>
                                 Gift wrap these items
                         </label>
                     </div>

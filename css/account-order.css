@@ -53,3 +53,9 @@
 #space {
     margin-top: 30px;
 }
+.no-orders {
+    margin-left: 40px;
+    font-size: 22px;
+    color: #ac5050;
+    font-family: RobotoLight;
+}

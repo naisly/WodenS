@@ -1,5 +1,6 @@
 .white-link {
 	color: white !important;
+	font-family: RobotoMedium !important;
 }
 p, h1,a  {
 	font-family: RobotoRegular;

@@ -31,6 +31,15 @@ class BillingModel extends DefaultModel
         return $this->billing_name;
     }
 
+    public function issetBillingName() {
+
+        if(isset($this->billing_name)){
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
     public function setBillingStreet( $billing_street ){
 
         $this->billing_street = $billing_street;

@@ -41,9 +41,10 @@ class AccountInfoView extends AccountOrderView
         echo '<div class="col-md-9" style="border-left: 1px solid #e4e4e4;">
                 <h class="main-page">This is your main account page</h>
 
-                <div class="cart-divider"></div>
+                <div class="cart-divider"></div>';
 
-                    <div class="table-responsive">
+        if(($this->model->countAccountComplete() !== 0 ) || ($this->model->countAccountDone() !== 0)) {
+            echo '<div class="table-responsive">
                         <h id="order-status">Change your order status:</h><br />
                         <table class="table table-striped table-spacer">
                             <thead>
@@ -55,10 +56,12 @@ class AccountInfoView extends AccountOrderView
                             </thead>
                             <tbody>';
 
-        $i = 0;
-        //echo $this->model->getCompleteOrder(0);
-        while ($i < $this->model->countAccountComplete()) {
-            echo '<tr>
+            //echo $this->model->getAccountComplete(0);
+            if (($this->model->countAccountComplete() !== 0) || ($this->model->countAccountDone() !== 0)) {
+                $i = 0;
+                //echo $this->model->getCompleteOrder(0);
+                while ($i < $this->model->countAccountComplete()) {
+                    echo '<tr>
                       <td>#' . $this->model->getAccountComplete($i) . '</td>
                       <td>Completed</td>
                       <td>
@@ -69,12 +72,12 @@ class AccountInfoView extends AccountOrderView
                       </td>
                   </tr>';
 
-            $i++;
-        }
+                    $i++;
+                }
 
-        $i = 0;
-        while ($i < $this->model->countAccountDone()) {
-            echo '<tr>
+                $i = 0;
+                while ($i < $this->model->countAccountDone()) {
+                    echo '<tr>
                       <td>#' . $this->model->getAccountDone($i) . '</td>
                       <td>Done</td>
                       <td>
@@ -85,20 +88,23 @@ class AccountInfoView extends AccountOrderView
                       </td>
                   </tr>';
 
-            $i++;
-        }
+                    $i++;
+                }
 
-        echo '</tbody>
+                echo '</tbody>
               </table>
-            </div>';
+            </div>
+            <div class="cart-divider"></div>';
+            } else {
+                echo '<div class="cart-divider"></div>';
+            }
+        }
     }
 
 
     private function changeAccountData() {
 
-        echo      '<div class="cart-divider"></div>
-
-                    <h class="main-page">Change your account entrance</h>
+        echo       '<h class="main-page">Change your account entrance</h>
 
                     <div class="row">
                         <div class="col-md-4" id="border-right">
@@ -156,9 +162,12 @@ class AccountInfoView extends AccountOrderView
 
                   <div class="row">
                       <div class="col-md-4">
-                          <h class="main-page">Your Billing Info</h>
+                          <h class="main-page">Your Billing Info</h>';
 
-                          <div class="ship-to">
+        if($this->model->issetBillingName() == 0){
+            echo '<div class="no-orders">No Biling Data found</div>';
+        } else {
+            echo '<div class="ship-to">
                               <h class="billing-h">Ship to:</h><br />
                               <h class="billing-data" style="color: #ac5050;"><b>' . $this->model->getBillingName() . '</b></h>
                           </div>
@@ -176,24 +185,27 @@ class AccountInfoView extends AccountOrderView
                           <div class="default-options">
                               <h class="billing-h">Default options:</h><br />';
 
-        if($this->model->getBillingWrap() == 0) {
-            echo         '<h class="billing-data">No use of <b>Giftwrap</b> for Items</b></h>';
-        } else {
-            echo         '<h class="billing-data"><b>Giftwrap All Items <span style="text-decoration: underline">by default</span></b></h>';
+            if ($this->model->getBillingWrap() == 0) {
+                echo '<h class="billing-data">No use of <b>Giftwrap</b> for Items</b></h>';
+            } else {
+                echo '<h class="billing-data"><b>Giftwrap All Items <span style="text-decoration: underline">by default</span></b></h>';
+            }
+            echo '</div>';
         }
 
-        echo             '</div>
+            echo '
 
                           <div class="edit">
                               <h id="edit"><a style="text-decoration: none;" href="account-billing.php">Edit your Billing Info >></a></h>
                           </div>
                       </div>';
 
-        $this->getBillingOrders();
+            $this->getBillingOrders();
 
-        echo          '</div>
+            echo '</div>
                     </div>
                   <div class="margin-top"></div>';
+
 
     }
 

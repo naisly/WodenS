@@ -159,4 +159,42 @@ class OrderController extends DefaultController
 
         $sql->execute();
     }
+
+    public function getDefaultBilling(){
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        session_start();
+
+        if(isset($_SESSION['login_user'])){
+            $user = $_SESSION['login_user'];
+        }
+
+        $sql_query = "SELECT * FROM billing WHERE user='$user'";
+        $result = $mysqli->query( $sql_query );
+
+        //echo $sql_query;
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $name = $row['name'];
+                $street = $row['street'];
+                $city = $row['city'];
+                $state = $row['state'];
+                $zip = $row['zip'];
+                $country = $row['country'];
+                $wrap = $row['wrap'];
+            }
+        }
+
+        $this->model->setDefaultName( $name );
+        $this->model->setDefaultStreet( $street );
+        $this->model->setDefaultCity( $city );
+        $this->model->setDefaultState( $state );
+        $this->model->setDefaultZip( $zip );
+        $this->model->setDefaultCountry( $country );
+        $this->model->setDefaultWrap( $wrap );
+    }
 }

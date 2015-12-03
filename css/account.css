@@ -89,3 +89,8 @@
 #edit {
     text-decoration: none !important;
 }
+#order-warning {
+    font-size: 22px;
+    font-family: RobotoLight;
+    color: #ac5050;
+}

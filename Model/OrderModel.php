@@ -10,9 +10,9 @@
  * ==================
  */
 
-include_once('DefaultModel.php');
+include_once('DefaultBillingModel.php');
 
-class OrderModel extends DefaultModel
+class OrderModel extends DefaultBillingModel
 {
 
     public function setQuantity( $quantity ) {
@@ -44,4 +44,5 @@ class OrderModel extends DefaultModel
 
         return $this->id;
     }
+
 }

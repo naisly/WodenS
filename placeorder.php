@@ -19,6 +19,7 @@ $controller = new OrderController($model);
 $view = new OrderView($model);
 
 $controller->actionGetHeaderCart();
+$controller->getDefaultBilling();
 
 $view->DoctypeView( 'order' );
 $view->headerView();

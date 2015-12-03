@@ -133,7 +133,7 @@ class ProfileController extends DefaultController
         $user = $_SESSION['login_user'];
 
         $sql_query = "SELECT users.name, completeorders.order_id  FROM users INNER JOIN completeorders
-                      WHERE users.email='$user' AND completeorders.user='$user' ORDER BY completeorders.order_id DESC LIMIT 1";
+                      WHERE users.email='$user' AND completeorders.user='$user' ORDER BY completeorders.sort_id DESC LIMIT 1";
 
         $result = $mysqli->query( $sql_query );
 

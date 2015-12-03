@@ -26,12 +26,27 @@ class AccountOrderView extends ProfileView
 
         $this->getAccountBar();
         $this->getOrders();
+        $this->getFooter();
     }
     private function getOrders() {
         echo '<div class="col-md-9">
                 <div class="row">';
         $i = 0;
         $k = 0;
+
+        if($this->model->countCompleteOrder() == 0) {
+            echo '<div style="margin-top: 30px; padding-bottom: 20px;">
+                      <h class="orders">Complete orders:</h>
+                  </div>
+                  <h class="no-orders">No complete orders found</h>';
+        }
+
+        if($this->model->countDoneOrder() == 0){
+            echo '<div style="margin-top: 30px; padding-bottom: 20px;">
+                      <h class="orders">Done orders:</h>
+                  </div>
+                  <h class="no-orders">No done orders found</h>';
+        }
         while ($i < $this->model->countCompleteOrder()) {
             if( $i == 0){
                 echo '<div style="margin-top: 30px; padding-bottom: 20px;">
@@ -158,6 +173,7 @@ class AccountOrderView extends ProfileView
 
         echo    '</div>
               </div>
-          </div>';
+          </div>
+          <div style="margin-top: 50px;"></div>';
     }
 }
