@@ -188,6 +188,14 @@ a:hover {
 a:link {
 	color: #666;
 }
+.col-large-first {
+	width: 16.66%
+	float: left;
+}
+.col-large-2 {
+	width: 16.66%;
+	float: left;
+}
 @media (max-width: 766px) {
 	#toggleTextFooter, #toggleTextFooter1, #toggleTextFooter2, #toggleTextFooter3, #toggleTextFooter4 {
 		display: none;
@@ -231,7 +239,19 @@ a:link {
 		font-family: RobotoLight;
 		color: #999;
 	}
+	.small-devices-hor-nav {
+		margin-left: 5px;
+	}
+	.hor_nav {
+		position: absolute;
+		left: 8px;
+	}
+	.more-info {
+		margin-left: 0px;
+		margin-top: 30px;
+	}
 }
+
 
 
 

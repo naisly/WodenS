@@ -452,9 +452,7 @@ class DefaultView
                                             <li><a class="items" href="financing.php">Financing</a></li>
                                             <li><a class="items" href="order.php">Order Status</a></li>
                                             <li><button id="link_as_button" class="items">Shopping help</button></li>
-                                            <li><a class="items" href="info.php">Info</a></li>
-                                            <li><a class="items" href="offices.php">Offices</a></li>
-                                            <li><a class="items" href="cell.php">Cell</a></li>
+                                            <li><a class="items" href="search-answers.php">Questions & Answers</a></li>
                                         </ul>
                                     </div>
                             <input type="hidden" value="1" name="shopping_help" />
@@ -475,9 +473,8 @@ class DefaultView
                                     </ul>
                                     <ul>
                                         <li class="footer-menu"><b>Most valuable</b></li>
-                                        <li><a class="items" href="responsibility.php">Responsibility</a></li>
+                                        <li><a class="items" href="site-terms.php">Site Terms</a></li>
                                         <li><a class="items" href="privacy.php">Privacy</a></li>
-                                        <li><a class="items" href="setting.php">Setting</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -493,7 +490,6 @@ class DefaultView
                                         <li><a class="items" href="people.php">In-touch People</a></li>
                                         <li><a class="items" href="managers.php">Our managers</a></li>
                                         <li><a class="items" href="offices.php">Offices</a></li>
-                                        <li><a class="items" href="search-answers.php">Questions & Answers</a></li>
                                         <li><a class="items" href="business.php">Business</a></li>
                                         <li><a class="items" href="director.php">Director</a></li>
                                         <li><a class="items" href="job.php">Job</a></li>
@@ -551,10 +547,10 @@ class DefaultView
                             </div>
                             <div class="col-sm-4">
                                 <ul class="hor_nav">
-                                    <li><a class="items" href="/privacy">Privacy</a></li>
-                                    <li><a class="items" href="/refunds">Refunds</a></li>
-                                    <li><a class="items" href="/sales">Sales</a></li>
-                                    <li><a class="items" href="site-map">Site map</a></li>
+                                    <li><a class="items small-devices-hor-nav" href="/privacy">Privacy</a></li>
+                                    <li><a class="items small-devices-hor-nav" href="/refunds">Refunds</a></li>
+                                    <li><a class="items small-devices-hor-nav" href="/sales">Sales</a></li>
+                                    <li><a class="items small-devices-hor-nav" href="site-map">Site map</a></li>
                                 </ul>
                             </div>
                             <div class="col-sm-1"></div>
