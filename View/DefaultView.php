@@ -23,7 +23,6 @@ class DefaultView
     {
         $this->model = $model;
     }
-
     /*
      * Doctype View includes Doctype, html, head,
      * body TAGS, specified for each page
@@ -50,8 +49,6 @@ class DefaultView
                     <!-- Optional theme -->
                     <link rel="stylesheet" href="css/bootstrap-theme.css">
                     <!-- Files of Styles -->';
-
-
         if($page == 'devices'){
             echo '<link href="css/devices.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'index'){
@@ -65,8 +62,8 @@ class DefaultView
             echo '<link href="css/notebooks.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'phones'){
             echo '<link href="css/phones.css" rel="stylesheet" type="text/css">' .
-                 '<link rel="stylesheet" href="css/default.css">' .
-                 '<link rel="stylesheet" href="css/animate.css">';
+                '<link rel="stylesheet" href="css/default.css">' .
+                '<link rel="stylesheet" href="css/animate.css">';
         } else if ($page == 'support'){
             echo '<link href="css/support.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'TV'){
@@ -104,11 +101,9 @@ class DefaultView
             if($page == 'account'){
                 echo '<link href="css/account.css" rel="stylesheet" type="text/css">';
             }
-
             if ($page == 'account-billing'){
                 echo '<link href="css/account-billing.css" rel="stylesheet" type="text/css">';
             }
-
             echo '<link href="css/account-order.css" rel="stylesheet" type="text/css">
                   <link href="css/profile.css" rel="stylesheet" type="text/css">
                   <script src="js/jquery-min.js"></script>';
@@ -116,13 +111,11 @@ class DefaultView
             echo '<link href="css/financing.css" rel="stylesheet" type="text/css">';
         } else {
             echo '<link rel="stylesheet" href="css/default.css" />' .
-                 '<link rel="stylesheet" href="css/animate.css" />';
+                '<link rel="stylesheet" href="css/animate.css" />';
         }
-
         echo '</head>
             <body onload="preload_page()">';
     }
-
     /*
      * Main navbar Menu for all
      * pages
@@ -154,27 +147,26 @@ class DefaultView
                             <li class="dropdown">
                         <a href="#" class="dropdown-toggle white-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart <span class="caret"></span></a>
                         <ul class="dropdown-menu">';
-
-                                if(isset($_SESSION['login_user'])){
-                                    echo '<li><a href="logout.php">';
-                                    echo 'Logout(' . $_SESSION['login_user'] . ')</a></li>';
-                                    session_write_close();
-                                } else {
-                                    echo '<li><a href="register.php">Register</a></li>';
-                                    echo '<li><a href="login.php">';
-                                    echo 'Login</a></li>';
-                                    session_write_close();
-                                }
-                                echo '
+        if(isset($_SESSION['login_user'])){
+            echo '<li><a href="logout.php">';
+            echo 'Logout(' . $_SESSION['login_user'] . ')</a></li>';
+            session_write_close();
+        } else {
+            echo '<li><a href="register.php">Register</a></li>';
+            echo '<li><a href="login.php">';
+            echo 'Login</a></li>';
+            session_write_close();
+        }
+        echo '
                                                             <li role="separator" class="divider"></li>
                                                             <li class="dropdown-header">Products</li>';
-                                if(isset($_SESSION['login_user'])) {
-                                    echo '<li><a href="cart.php">Cart: ' . $this->model->getAPrice() . '$';
-                                    echo '<li><a href="#">' . $this->model->getAItems() . ' items</a>';
-                                } else {
-                                    echo ' <li><a href="#">Login to see your cart</a></li>';
-                                }
-                                echo    '
+        if(isset($_SESSION['login_user'])) {
+            echo '<li><a href="cart.php">Cart: ' . $this->model->getAPrice() . '$';
+            echo '<li><a href="#">' . $this->model->getAItems() . ' items</a>';
+        } else {
+            echo ' <li><a href="#">Login to see your cart</a></li>';
+        }
+        echo    '
                         </ul>
                     </li>
                         </ul>
@@ -183,13 +175,11 @@ class DefaultView
             </nav>';
     }
     public function getUI( $category, $category_table ){
-
         $this->getItemsNames( $category );
         $this->getFilterMenu( $category_table );
         $this->getItems( $category_table );
         $this->actionGetFooter( $category );
     }
-
     /*
      * Getting distinct items names
      */
@@ -209,7 +199,6 @@ class DefaultView
                    <div class="col-md-3"></div>
               </div>';
     }
-
     /*
      * Filter menu
      * of product pages
@@ -252,7 +241,6 @@ class DefaultView
             }
             $k++;
         }
-
         echo '
                        <div class="row">
                             <div class="col-md-12 bg-item top-margin">
@@ -260,11 +248,11 @@ class DefaultView
                              </div>
                        </div>
                                 <h class="search-item">Min: </h> <input style="margin-left: 4px;" type="text" name="min" value="';
-                                if (isset($_POST['min'])) echo $_POST['min'];
-                                    echo '"><br />
+        if (isset($_POST['min'])) echo $_POST['min'];
+        echo '"><br />
                                 <h class="search-item">Max:</h> <input type="text" name="max" value="';
-                                if (isset($_POST['max'])) echo $_POST['max'];
-                                    echo '"><br />
+        if (isset($_POST['max'])) echo $_POST['max'];
+        echo '"><br />
                        <div class="row">
                             <div class="col-md-12 bg-item top-margin">
                                 <h class="search-item">Sort by price: </h>
@@ -290,7 +278,6 @@ class DefaultView
                            </form>
                         </div>';/* col-md-3 END */
     }
-
     /*
      * Getting items to
      * the product page
@@ -349,7 +336,6 @@ class DefaultView
                             <input type="hidden" name="price" value="' . $this->model->getPrice($i) . '"/>
                             <input type="hidden" name="table" value="' . $page . '"/>
                             <input type="hidden" name="original_name" value="' . $this->model->getOriginalName($i) . '"/>
-
                         </form>
                     </div>
                 </div>
@@ -363,92 +349,176 @@ class DefaultView
                          new WOW().init();
                    </script>';
     }
-
     /*
      * Footer, bottom part
      */
     public function actionGetFooter( $page ) {
         echo   '</div>
                 <footer>';
-
         if($page !== 'financing') {
             echo '<div class="container">
-                         <div class="divider"></div>
+                         <!--<div class="divider"></div>-->
                     </div>';
         } else {
-
         }
-        echo        '<div class="container" style="margin-top: 20px;">
+
+        echo '<div class="footer-spacer"></div>';
+
+        echo        '<div class="footer">
+                     <div class="container" style="margin-top: 20px;">
                         <div class="row">
                             <div class="col-sm-1"></div>
                             <div class="col-sm-2 wow fadeInLeft">
-                                <ul>
-                                    <li class="footer-menu"><b>Shop</b></li>
-                                    <li><a class="items" href="index.php">Home</a></li>
-                                    <li><a class="items" href="phones-all.php">Phones</a></li>
-                                    <li><a class="items" href="laptops.php">Laptops</a></li>
-                                    <li><a class="items" href="devices.php">Devices</a></li>
-                                    <li><a class="items" href="tv.php">TV</a></li>
-                                    <li><a class="items" href="support.php">Support</a></li>
-                                    <li><a class="items" href="cart.php">Cart</a></li>
-                                </ul>
+                                <div class="small-devices-decoration">
+                                    <h class="float-right"><a class="items default-hidden" id="displayTextFooter" href="javascript:toggle();">Shop</a></h>
+
+                                </div>
+                                <div id="toggleTextFooter">
+                                    <ul>
+                                        <li class="footer-menu"><b>Shop</b></li>
+                                        <li><a class="items" href="index.php">Home</a></li>
+                                        <li><a class="items" href="phones-all.php">Phones</a></li>
+                                        <li><a class="items" href="laptops.php">Laptops</a></li>
+                                        <li><a class="items" href="devices.php">Devices</a></li>
+                                        <li><a class="items" href="tv.php">TV</a></li>
+                                        <li><a class="items" href="support.php">Support</a></li>
+                                        <li><a class="items" href="cart.php">Cart</a></li>
+                                    </ul>
+                                </div>
+
                             </div>
+                            <script>
+                                 function toggle(){
+                                     $("#toggleTextFooter").toggle("slow");
+                                     var x = document.getElementById("displayTextFooter");
+
+                                     if(x.style.fontWeight == "bold"){
+                                        x.style.fontWeight = "normal";
+                                     } else {
+                                        x.style.fontWeight = "bold";
+                                     }
+                                 }
+                                 function toggle1(){
+                                     $("#toggleTextFooter1").toggle("slow");
+                                     var y = document.getElementById("displayTextFooter1");
+
+                                     if(y.style.fontWeight == "bold"){
+                                        y.style.fontWeight = "normal";
+                                     } else {
+                                        y.style.fontWeight = "bold";
+                                     }
+                                 }
+                                 function toggle2(){
+                                     $("#toggleTextFooter2").toggle("slow");
+                                     var z = document.getElementById("displayTextFooter2");
+
+                                     if(z.style.fontWeight == "bold"){
+                                        z.style.fontWeight = "normal";
+                                     } else {
+                                        z.style.fontWeight = "bold";
+                                     }
+                                 }
+                                 function toggle3(){
+                                     $("#toggleTextFooter3").toggle("slow");
+                                     var q = document.getElementById("displayTextFooter3");
+
+                                     if(q.style.fontWeight == "bold"){
+                                        q.style.fontWeight = "normal";
+                                     } else {
+                                        q.style.fontWeight = "bold";
+                                     }
+                                 }
+                                 function toggle4(){
+                                     $("#toggleTextFooter4").toggle("slow");
+                                     var g = document.getElementById("displayTextFooter4");
+
+                                     if(g.style.fontWeight == "bold"){
+                                        g.style.fontWeight = "normal";
+                                     } else {
+                                        g.style.fontWeight = "bold";
+                                     }
+                                 }
+                             </script>
                             <div class="col-sm-2 wow fadeInLeft">
-                            <form action="support.php" method="post">
-                                <ul>
-                                    <li class="footer-menu"><b>Store</b></li>
-                                    <li><a class="items" href="store.php">Find our store</a></li>
-                                    <li><a class="items" href="financing.php">Financing</a></li>
-                                    <li><a class="items" href="order.php">Order Status</a></li>
-                                    <li><button id="link_as_button" class="items">Shopping help</button></li>
-                                    <li><a class="items" href="info.php">Info</a></li>
-                                    <li><a class="items" href="offices.php">Offices</a></li>
-                                    <li><a class="items" href="cell.php">Cell</a></li>
-                                </ul>
+                                <div class="small-devices-decoration">
+                                    <h class="float-right"><a class="items default-hidden" id="displayTextFooter1" href="javascript:toggle1();">Store</a></h>
+                                    <div class="divider-for-small-devices"></div>
+                                </div>
+                                <form action="support.php" method="post">
+                                    <div id="toggleTextFooter1">
+                                        <ul>
+                                            <li class="footer-menu"><b>Store</b></li>
+                                            <li><a class="items" href="store.php">Find our store</a></li>
+                                            <li><a class="items" href="financing.php">Financing</a></li>
+                                            <li><a class="items" href="order.php">Order Status</a></li>
+                                            <li><button id="link_as_button" class="items">Shopping help</button></li>
+                                            <li><a class="items" href="info.php">Info</a></li>
+                                            <li><a class="items" href="offices.php">Offices</a></li>
+                                            <li><a class="items" href="cell.php">Cell</a></li>
+                                        </ul>
+                                    </div>
                             <input type="hidden" value="1" name="shopping_help" />
                             </form>
                             </div>
                             <div class="col-sm-2 wow fadeInUp">
-                                <ul>
-                                    <li class="footer-menu"><b>Account</b></li>
-                                    <li><a class="items" href="account.php">Store account</a></li>
-                                    <li><a class="items" href="cart.php">My Items</a></li>
-                                    <li><a class="items" href="shop-id.php">My Orders</a></li>
-                                    <li><a class="items" href="account-billing.php">Billing Info</a></li>
-                                </ul>
-                                <ul>
-                                    <li class="footer-menu"><b>Most valuable</b></li>
-                                    <li><a class="items" href="responsibility.php">Responsibility</a></li>
-                                    <li><a class="items" href="privacy.php">Privacy</a></li>
-                                    <li><a class="items" href="setting.php">Setting</a></li>
-                                </ul>
+                                <div class="small-devices-decoration">
+                                    <h class="float-right"><a class="items default-hidden" id="displayTextFooter2" href="javascript:toggle2();">Account</a></h>
+                                    <div class="divider-for-small-devices"></div>
+                                </div>
+                                <div id="toggleTextFooter2">
+                                    <ul>
+                                        <li class="footer-menu"><b>Account</b></li>
+                                        <li><a class="items" href="account.php">Store account</a></li>
+                                        <li><a class="items" href="cart.php">My Items</a></li>
+                                        <li><a class="items" href="shop-id.php">My Orders</a></li>
+                                        <li><a class="items" href="account-billing.php">Billing Info</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li class="footer-menu"><b>Most valuable</b></li>
+                                        <li><a class="items" href="responsibility.php">Responsibility</a></li>
+                                        <li><a class="items" href="privacy.php">Privacy</a></li>
+                                        <li><a class="items" href="setting.php">Setting</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="col-sm-2 wow fadeInRight">
-                                <ul>
-                                    <li class="footer-menu"><b>About Us</b></li>
-                                    <li><a class="items" href="our-company.php">Our company</a></li>
-                                    <li><a class="items" href="people.php">In-touch People</a></li>
-                                    <li><a class="items" href="managers.php">Our managers</a></li>
-                                    <li><a class="items" href="offices.php">Offices</a></li>
-                                    <li><a class="items" href="search-answers.php">Questions & Answers</a></li>
-                                    <li><a class="items" href="business.php">Business</a></li>
-                                    <li><a class="items" href="director.php">Director</a></li>
-                                    <li><a class="items" href="job.php">Job</a></li>
-                                    <li><a class="items" href="contact-us.php">Contact Us</a></li>
-                                </ul>
+                                <div class="small-devices-decoration">
+                                    <h class="float-right"><a class="items default-hidden" id="displayTextFooter3" href="javascript:toggle3();">Abous Us</a></h>
+                                    <div class="divider-for-small-devices"></div>
+                                </div>
+                                <div id="toggleTextFooter3">
+                                    <ul>
+                                        <li class="footer-menu"><b>About Us</b></li>
+                                        <li><a class="items" href="our-company.php">Our company</a></li>
+                                        <li><a class="items" href="people.php">In-touch People</a></li>
+                                        <li><a class="items" href="managers.php">Our managers</a></li>
+                                        <li><a class="items" href="offices.php">Offices</a></li>
+                                        <li><a class="items" href="search-answers.php">Questions & Answers</a></li>
+                                        <li><a class="items" href="business.php">Business</a></li>
+                                        <li><a class="items" href="director.php">Director</a></li>
+                                        <li><a class="items" href="job.php">Job</a></li>
+                                        <li><a class="items" href="contact-us.php">Contact Us</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="col-sm-2 wow fadeInRight">
-                                <ul>
-                                    <li class="footer-menu"><b>For education</b></li>
-                                    <li><a class="items" href="notebooks.php">Notebooks</a></li>
-                                    <li><a class="items" href="devices.php">Phones</a></li>
-                                </ul>
-                                <ul>
-                                    <li class="footer-menu"><b>Business</b></li>
-                                    <li><a class="items" href="usage-notebooks-business.php">Using notebooks in business</a></li>
-                                    <li><a class="items" href="using-phones-business.php">Using phones in day-to-day life</a></li>
-                                    <li><a class="items" href="using-devices-business.php">Using devices in business</a></li>
-                                </ul>
+                                <div class="small-devices-decoration">
+                                    <h class="float-right"><a class="items default-hidden" id="displayTextFooter4" href="javascript:toggle4();">For education & Business</a></h>
+                                    <div class="divider-for-small-devices"></div>
+                                </div>
+                                <div id="toggleTextFooter4">
+                                    <ul>
+                                        <li class="footer-menu education"><b>For education</b></li>
+                                        <li><a class="items" href="notebooks.php">Notebooks</a></li>
+                                        <li><a class="items" href="devices.php">Phones</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li class="footer-menu"><b>Business</b></li>
+                                        <li><a class="items" href="usage-notebooks-business.php">Using notebooks in business</a></li>
+                                        <li><a class="items" href="using-phones-business.php">Using phones in day-to-day life</a></li>
+                                        <li><a class="items" href="using-devices-business.php">Using devices in business</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="col-sm-1"></div>
                         </div>
@@ -490,6 +560,7 @@ class DefaultView
                             <div class="col-sm-1"></div>
                         </div>
                     </div>
+                </div>
                 </footer>';
         if($page !== 'Index'){
             echo '<script src="js/jquery-min.js"></script>
@@ -508,9 +579,7 @@ class DefaultView
                 check_preload=1;
               </script>';
     }
-
     public function getFooter() {
-
         echo '<div class="bottom-spacer">
                <div class="text-center">
                         <ul class="hor_nav">

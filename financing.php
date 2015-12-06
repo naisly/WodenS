@@ -18,8 +18,4 @@ $view = new FinancingView( $model );
 
 $controller->actionGetHeaderCart();
 
-$view->DoctypeView( 'financing' );
-$view->headerView();
-
-$view->getMenu();
-$view->actionGetFooter( 'financing' );
+$view->getFinancingPage();

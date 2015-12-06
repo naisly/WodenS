@@ -24,7 +24,14 @@ class FinancingView extends DefaultView
         $this->model = $model;
     }
 
-    public function getMenu() {
+    public function getFinancingPage() {
+        $this->DoctypeView( 'financing' );
+        $this->headerView();
+        $this->getMenu();
+        $this->actionGetFooter( 'financing' );
+    }
+
+    private function getMenu() {
 
         echo '<div class="container middle">
                   <div class="row">
