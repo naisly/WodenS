@@ -30,7 +30,7 @@ class ProfileView extends DefaultView
 
     public function getCartPage() {
         $this->DoctypeView( 'profile' );
-        $this->headerView();
+        $this->headerView( 'profile' );
         $this->getTable();
         $this->getFooter();
     }

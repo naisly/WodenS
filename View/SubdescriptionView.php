@@ -21,7 +21,7 @@ class SubdescriptionView extends DefaultView
     public function getSubdescriptionPage( $category, $table ) {
 
         $this->DoctypeView( 'subdescription' );
-        $this->headerView();
+        $this->headerView( 'subdescription' );
 
         $this->getMain( $category , $table );
         $this->getSlider();

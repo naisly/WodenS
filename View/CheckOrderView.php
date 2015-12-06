@@ -27,7 +27,7 @@ class CheckOrderView extends DefaultView
     public function getOrderPage() {
 
         $this->DoctypeView( 'order' );
-        $this->headerView();
+        $this->headerView( 'order' );
         $this->getSignInBar();
         $this->getFooter();
     }

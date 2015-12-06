@@ -22,7 +22,7 @@ class AccountOrderView extends ProfileView
     }
     public function getAccountOrderPage() {
         $this->DoctypeView( 'account-order' );
-        $this->headerView();
+        $this->headerView( 'account-order' );
 
         $this->getAccountBar();
         $this->getOrders();

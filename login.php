@@ -22,7 +22,7 @@ $view = new LoginView($model);
 session_start();
 
 $view->DoctypeView( 'login' );
-$view->headerView();
+$view->headerView( 'login' );
 
 $view->displayLoginErrors();
 

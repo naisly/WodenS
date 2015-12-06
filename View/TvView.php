@@ -21,7 +21,7 @@ class TvView extends IndexView
     public function getTVPage() {
 
         $this->DoctypeView( 'TV' );
-        $this->headerView();
+        $this->headerView( 'TV' );
         $this->getMain();
         $this->getDescription();
         $this->getOrder();

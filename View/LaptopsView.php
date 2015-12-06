@@ -22,7 +22,7 @@ class LaptopsView extends IndexView
     public function getLaptopsPage() {
 
         $this->DoctypeView( 'notebooks' );
-        $this->headerView();
+        $this->headerView( 'notebooks' );
         $this->getMain();
         $this->getDesciprition();
         $this->getOrder();

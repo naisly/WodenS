@@ -23,6 +23,6 @@ $controller->actionGetData( 'IMac', 'Television', 'IMac' );
 
 $view->DoctypeView( 'phones' );
 
-$view->headerView();
+$view->headerView( 'Imac-television' );
 
 $view->GetUI( 'television', 'IMac-television' );

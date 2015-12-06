@@ -323,7 +323,7 @@ class LoginView extends DefaultView
             $this->errorRegisteredEmailMessage();
             $this->RegisterView();
         } else {
-            $this->headerView();
+            $this->headerView( 'login' );
             $this->successMessage();
 
             $this->getFooter();

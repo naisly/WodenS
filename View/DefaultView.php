@@ -43,12 +43,21 @@ class DefaultView
                     <meta http-equiv="X-UA-Compatible" content="IE=EDge">
                     <!-- Bootstrap framework -->
                     <!-- Latest compiled and minified CSS -->
-                    <meta name="viewport" content="width=device-width, initial-scale=1">
-                    <link rel="stylesheet" href="css/bootstrap.css">
+                    <meta name="viewport" content="width=device-width, initial-scale=1">';
+
+        if( $page !== 'education-phones') {
+            echo   '<link rel="stylesheet" href="css/bootstrap.css">
                     <link href="css/styles.css" rel="stylesheet" type="text/css">
                     <!-- Optional theme -->
                     <link rel="stylesheet" href="css/bootstrap-theme.css">
                     <!-- Files of Styles -->';
+        } else {
+            echo   '<link rel="stylesheet" href="../css/bootstrap.css">
+                    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+                    <!-- Optional theme -->
+                    <link rel="stylesheet" href="../css/bootstrap-theme.css">
+                    <!-- Files of Styles -->';
+        }
         if($page == 'devices'){
             echo '<link href="css/devices.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'index'){
@@ -109,10 +118,14 @@ class DefaultView
                   <script src="js/jquery-min.js"></script>';
         } else if($page == 'financing'){
             echo '<link href="css/financing.css" rel="stylesheet" type="text/css">';
-        } else {
+        } else if($page == 'education-phones'){
+            echo '<link href="../css/education-phones.css" rel="stylesheet" tyle="text/css">';
+        }
+        else {
             echo '<link rel="stylesheet" href="css/default.css" />' .
                 '<link rel="stylesheet" href="css/animate.css" />';
         }
+
         echo '</head>
             <body onload="preload_page()">';
     }
@@ -120,7 +133,7 @@ class DefaultView
      * Main navbar Menu for all
      * pages
      */
-    final public function headerView()
+    final public function headerView( $page )
     {
         echo   '<nav class="navbar navbar-inverse navbar-static-top">
                 <div class="container-fluid">
@@ -131,10 +144,17 @@ class DefaultView
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand white-link" href="index.php">
-                            <img alt="Brand" src="images/default.png">
-                        </a>
+                        </button>';
+
+        if ($page == 'education'){
+            echo       '<a class="navbar-brand white-link" href="../index.php">
+                            <img alt="Brand" src="../images/default.png">';
+        } else {
+            echo       '<a class="navbar-brand white-link" href="index.php">
+                            <img alt="Brand" src="images/default.png">';
+        }
+
+        echo           '</a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
@@ -506,7 +526,7 @@ class DefaultView
                                     <ul>
                                         <li class="footer-menu education"><b>For education</b></li>
                                         <li><a class="items" href="notebooks.php">Notebooks</a></li>
-                                        <li><a class="items" href="devices.php">Phones</a></li>
+                                        <li><a class="items" href="education/phones.php">Phones</a></li>
                                     </ul>
                                     <ul>
                                         <li class="footer-menu"><b>Business</b></li>

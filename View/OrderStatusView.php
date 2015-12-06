@@ -22,7 +22,7 @@ class OrderStatusView extends DefaultView
     public function getCheckOrderPage() {
 
         $this->DoctypeView( 'status-order' );
-        $this->headerView();
+        $this->headerView( 'status-order' );
         $this->getContent();
         $this->getFooter();
     }

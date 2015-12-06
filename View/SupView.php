@@ -21,7 +21,7 @@ class SupView extends IndexView
     public function getSupportPage() {
 
         $this->DoctypeView( 'support' );
-        $this->headerView();
+        $this->headerView( 'support' );
         $this->getMain();
         $this->getContactInfo();
         $this->getContactForm();

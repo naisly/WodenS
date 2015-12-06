@@ -23,6 +23,6 @@ $controller->actionGetData( 'AppleTV', 'Television', 'AppleTV' );
 
 $view->DoctypeView( 'phones' );
 
-$view->headerView();
+$view->headerView( 'AppleTV-television' );
 
 $view->GetUI( 'television', 'AppleTV-television' );

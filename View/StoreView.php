@@ -21,7 +21,7 @@ class StoreView extends DefaultView
     public function getStorePage() {
 
         $this->DoctypeView( 'store' );
-        $this->headerView();
+        $this->headerView( 'store' );
         $this->getGoogleMap();
         $this->getSlider();
         $this->getBlocks();

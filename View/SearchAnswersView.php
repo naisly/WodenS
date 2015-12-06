@@ -21,7 +21,7 @@ class SearchAnswersView extends SubdescriptionView
     public function getSearchAnswersPage() {
 
         $this->DoctypeView( 'search' );
-        $this->headerView();
+        $this->headerView( 'search' );
         $this->getAnswers();
         $this->getQuestions();
 
