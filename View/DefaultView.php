@@ -119,7 +119,11 @@ class DefaultView
         } else if($page == 'financing'){
             echo '<link href="css/financing.css" rel="stylesheet" type="text/css">';
         } else if($page == 'education-phones'){
-            echo '<link href="../css/education-phones.css" rel="stylesheet" tyle="text/css">';
+            echo '<link href="../css/education-phones.css" rel="stylesheet" type="text/css">
+                  <link href="../css/financing.css" rel="stylesheet" type="text/css">
+                  <script src="../js/jquery-min.js"></script>
+                  <!-- bxSlider Javascript file -->
+                  <script src="../js/bootstrap.min.js"></script>';
         }
         else {
             echo '<link rel="stylesheet" href="css/default.css" />' .
@@ -149,12 +153,49 @@ class DefaultView
         if ($page == 'education'){
             echo       '<a class="navbar-brand white-link" href="../index.php">
                             <img alt="Brand" src="../images/default.png">';
+            echo '</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="../phones-all.php" class="white-link">Phones <span class="sr-only">(current)</span></a></li>
+                            <li><a href="../laptops.php" class="white-link">Laptops</a></li>
+                            <li><a href="../devices.php" class="white-link">Devices</a></li>
+                            <li><a href="../tv.php" class="white-link">TV</a></li>
+                            <li><a href="../support.php" class="white-link">Support</a></li>
+                            <li class="dropdown">
+                        <a href="#" class="dropdown-toggle white-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart <span class="caret"></span></a>
+                        <ul class="dropdown-menu">';
+            if (isset($_SESSION['login_user'])) {
+                echo '<li><a href="../logout.php">';
+                echo 'Logout(' . $_SESSION['login_user'] . ')</a></li>';
+                session_write_close();
+            } else {
+                echo '<li><a href="../register.php">Register</a></li>';
+                echo '<li><a href="../login.php">';
+                echo 'Login</a></li>';
+                session_write_close();
+            }
+            echo '
+                                                            <li role="separator" class="divider"></li>
+                                                            <li class="dropdown-header">Products</li>';
+            if (isset($_SESSION['login_user'])) {
+                echo '<li><a href="../cart.php">Cart: ' . $this->model->getAPrice() . '$';
+                echo '<li><a href="#">' . $this->model->getAItems() . ' items</a>';
+            } else {
+                echo ' <li><a href="#">Login to see your cart</a></li>';
+            }
+            echo '
+                        </ul>
+                    </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>';
         } else {
-            echo       '<a class="navbar-brand white-link" href="index.php">
+            echo '<a class="navbar-brand white-link" href="index.php">
                             <img alt="Brand" src="images/default.png">';
-        }
-
-        echo           '</a>
+            echo '</a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
@@ -167,32 +208,33 @@ class DefaultView
                             <li class="dropdown">
                         <a href="#" class="dropdown-toggle white-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart <span class="caret"></span></a>
                         <ul class="dropdown-menu">';
-        if(isset($_SESSION['login_user'])){
-            echo '<li><a href="logout.php">';
-            echo 'Logout(' . $_SESSION['login_user'] . ')</a></li>';
-            session_write_close();
-        } else {
-            echo '<li><a href="register.php">Register</a></li>';
-            echo '<li><a href="login.php">';
-            echo 'Login</a></li>';
-            session_write_close();
-        }
-        echo '
+            if (isset($_SESSION['login_user'])) {
+                echo '<li><a href="logout.php">';
+                echo 'Logout(' . $_SESSION['login_user'] . ')</a></li>';
+                session_write_close();
+            } else {
+                echo '<li><a href="register.php">Register</a></li>';
+                echo '<li><a href="login.php">';
+                echo 'Login</a></li>';
+                session_write_close();
+            }
+            echo '
                                                             <li role="separator" class="divider"></li>
                                                             <li class="dropdown-header">Products</li>';
-        if(isset($_SESSION['login_user'])) {
-            echo '<li><a href="cart.php">Cart: ' . $this->model->getAPrice() . '$';
-            echo '<li><a href="#">' . $this->model->getAItems() . ' items</a>';
-        } else {
-            echo ' <li><a href="#">Login to see your cart</a></li>';
-        }
-        echo    '
+            if (isset($_SESSION['login_user'])) {
+                echo '<li><a href="cart.php">Cart: ' . $this->model->getAPrice() . '$';
+                echo '<li><a href="#">' . $this->model->getAItems() . ' items</a>';
+            } else {
+                echo ' <li><a href="#">Login to see your cart</a></li>';
+            }
+            echo '
                         </ul>
                     </li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>';
+        }
     }
     public function getUI( $category, $category_table ){
         $this->getItemsNames( $category );

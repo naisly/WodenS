@@ -18,5 +18,4 @@ $view = new EducationPhonesView( $model );
 
 $controller->actionGetHeaderCart();
 
-$view->DoctypeView( 'education-phones' );
-$view->headerView( 'education' );
+$view->getEducationPhones();
