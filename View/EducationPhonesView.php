@@ -30,7 +30,7 @@ class EducationPhonesView extends DefaultView
         $this->headerView( 'education' );
 
         $this->getMain();
-        $this->actionGetFooter( 'Index' );
+        $this->actionGetFooter( 'daughter' );
     }
 
     private function getMain() {
@@ -40,15 +40,14 @@ class EducationPhonesView extends DefaultView
                       <div class="row">
                           <div class="col-md-1"></div>
                           <div class="col-md-10">
-                              <div class="fixed-main">
+                              <div class="fixed-main pull-left">
                                   <h class="fixed-header">Phones in Education</h>
                               </div>
-                          </div>
-                          <div class="col-md-1">
-                              <div class="buy-main">
+                              <div class="buy-main pull-right">
                                   <a class="btn btn-primary button-buy" href="../phones.php">Buy</a>
                               </div>
                           </div>
+                          <div class="col-md-1"></div>
                       </div>
                   </div>
               </div>

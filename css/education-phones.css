@@ -53,3 +53,15 @@
     font-size: 12px;
     margin-top: 13px;
 }
+.buy-main {
+    margin-right: -20px;
+}
+
+@media (max-width: 766px){
+    .fixed-main {
+        margin-left: 0;
+    }
+    .buy-main {
+        margin-right: 0;
+    }
+}
