@@ -30,7 +30,7 @@ class EducationLaptopsView extends DefaultView
         $this->headerView( 'education' );
 
         $this->getMain();
-        $this->actionGetFooter( 'daughter' );
+        $this->actionGetFooter( 'sub-daughter' );
     }
 
     public function getMain() {
@@ -66,7 +66,7 @@ class EducationLaptopsView extends DefaultView
                                         </h>
                                     </div>
 
-                                    <img src="../images/education-laptops.jpg" id="education-laptop" />
+                                    <img src="../../images/education-laptops.jpg" id="education-laptop" />
 
                                     <div id="education-divider"></div>
 
@@ -82,7 +82,7 @@ class EducationLaptopsView extends DefaultView
                                         </div>
                                     </div>
 
-                                    <img src="../images/macbook-pro.jpg" id="macbook-pro" />
+                                    <img src="../../images/macbook-pro.jpg" id="macbook-pro" />
 
                                     <div class="content-phones">
                                         <h id="sub-every-phones">Another <em>potential benefit of using laptops</em> in classrooms is that using computers is <b>more fun</b> for students
@@ -90,7 +90,7 @@ class EducationLaptopsView extends DefaultView
                                         the classroom <b>are more likely to come to school.</b></h>
                                     </div>
 
-                                    <img src="../images/macbook-air.jpg" id="macbook-air" /><br />
+                                    <img src="../../images/macbook-air.jpg" id="macbook-air" /><br />
 
                                     <div id="education-divider"></div>
 
@@ -104,21 +104,32 @@ class EducationLaptopsView extends DefaultView
                                         </div>
                                     </div>
 
-                                    <img src="../images/macbook.jpg" id="education-laptop" />
+                                    <img src="../../images/macbook.jpg" id="education-laptop" />
 
                                     <div id="education-divider"></div>
 
                                     <h id="main">Useful device for teachers as well</h>
 
-                                    <div class="delivering">
-                                        <h id="sub-every-phones">Having students turn work in <em>via email or another digital system</em> is easier than collecting and sorting through
-                                        stacks of physical paper. Whats more, digital assignments allow students that have to miss school to turn in <b>work remotely</b>, reducing the inequity
-                                        of allowing students extensions on assignments for missing class. Additionally, typewritten assignments are <b>much easier
-                                        to read</b> than those written by hand.</h>
-                                        </h>
+                                    <div class="row">
+                                        <div class="delivering">
+                                            <div class="col-md-4">
+                                                <h id="sub-every-phones">Having students turn work in <em>via email or another digital system</em> is easier than collecting and sorting through
+                                                stacks of physical paper.</h>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h id="sub-every-phones">Whats more, digital assignments allow students that have to miss school to turn in <b>work remotely</b>, reducing the inequity
+                                                of allowing students extensions on assignments for missing class.</h>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h id="sub-every-phones"> Additionally, typewritten assignments are <b>much easier
+                                            to read</b> than those written by hand. Thats why, this will decrease spending time of students
+                                            and teachers either</h>
+                                            </div>
+
+                                        </div>
                                     </div>
 
-                                    <img src="../images/devices.jpg" id="education-laptop" />
+                                    <img src="../../images/devices.jpg" id="education-laptop" />
                                 </div>
                            </div>
                       </div>

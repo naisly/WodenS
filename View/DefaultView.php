@@ -45,7 +45,7 @@ class DefaultView
                     <!-- Latest compiled and minified CSS -->
                     <meta name="viewport" content="width=device-width, initial-scale=1">';
 
-        if( $page == 'education-phones' && $page == 'education-laptops' ) {
+        if( $page == '2nd level of input' ) {
             echo   '<link rel="stylesheet" href="../css/bootstrap.css">
                     <link rel="shortcut icon" href="../images/favicon.ico" />
                     <script src="../js/jquery-min.js"></script>
@@ -56,7 +56,7 @@ class DefaultView
                     <link rel="stylesheet" href="../css/bootstrap-theme.css">
                     <!-- Files of Styles -->
                     ';
-        } else if( $page == 'business-laptops'){
+        } else if( $page == 'business-laptops' || $page == 'education-phones' || $page == 'education-laptops' ){
             echo   '<link rel="stylesheet" href="../../css/bootstrap.css">
                     <link rel="shortcut icon" href="../../images/favicon.ico" />
                     <script src="../../js/jquery-min.js"></script>
@@ -137,12 +137,12 @@ class DefaultView
         } else if($page == 'financing'){
             echo '<link href="css/financing.css" rel="stylesheet" type="text/css">';
         } else if($page == 'education-laptops'){
-            echo '<link href="../css/education-laptops.css" rel="stylesheet" type="text/css">
-                  <link href="../css/education-phones.css" rel="stylesheet" type="text/css">
-                  <link href="../css/financing.css" rel="stylesheet" type="text/css">';
+            echo '<link href="../../css/education-laptops.css" rel="stylesheet" type="text/css">
+                  <link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
+                  <link href="../../css/financing.css" rel="stylesheet" type="text/css">';
         } else if($page == 'education-phones'){
-            echo '<link href="../css/education-phones.css" rel="stylesheet" type="text/css">
-                  <link href="../css/financing.css" rel="stylesheet" type="text/css">';
+            echo '<link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
+                  <link href="../../css/financing.css" rel="stylesheet" type="text/css">';
         } else if($page == 'business-laptops'){
             echo '<link href="../../css/business-laptops.css" rel="stylesheet" type="text/css">
                   <link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
@@ -173,7 +173,7 @@ class DefaultView
                             <span class="icon-bar"></span>
                         </button>';
 
-        if ($page == 'education'){
+        if ($page == '2-nd level input'){
             echo       '<a class="navbar-brand white-link" href="../index.php">
                             <img alt="Brand" src="../images/default.png">';
             echo '</a>
@@ -215,7 +215,7 @@ class DefaultView
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>';
-        } else if($page == 'business'){
+        } else if($page == 'business' || $page == 'education'){
             echo '<a class="navbar-brand white-link" href="index.php">
                             <img alt="Brand" src="../../images/default.png">';
             echo '</a>
@@ -336,7 +336,7 @@ class DefaultView
         $n = 0;
         /*echo '<div class="row">
                   <div class="col-md-3">
-                      <form action="apple-phones.php" method="post">
+                      <form action="apple-index.php" method="post">
                            <h class="search-item">Items: <br/></h>';
         $k = 0;
         while ($k < count($this->model->distinct_product_names)) {
@@ -707,14 +707,14 @@ class DefaultView
                                     <ul>
                                         <li class="footer-menu education"><b>For education</b></li>';
          if( $page == 'daughter') {
-             echo                      '<li><a class="items" href="../education/laptops.php">Notebooks</a></li>
-                                        <li><a class="items" href="../education/phones.php">Phones</a></li>';
+             echo                      '<li><a class="items" href="../education/laptops/">Notebooks</a></li>
+                                        <li><a class="items" href="../education/phones/">Phones</a></li>';
          } else if( $page == 'sub-daughter'){
-             echo                      '<li><a class="items" href="../../education/laptops.php">Notebooks</a></li>
-                                        <li><a class="items" href="../../education/phones.php">Phones</a></li>';
+             echo                      '<li><a class="items" href="../../education/laptops/">Notebooks</a></li>
+                                        <li><a class="items" href="../../education/phones/">Phones</a></li>';
          } else {
-             echo                      '<li><a class="items" href="education/laptops.php">Notebooks</a></li>
-                                        <li><a class="items" href="education/phones.php">Phones</a></li>';
+             echo                      '<li><a class="items" href="education/laptops/">Notebooks</a></li>
+                                        <li><a class="items" href="education/phones/">Phones</a></li>';
          }
          echo                      '</ul>
                                     <ul>

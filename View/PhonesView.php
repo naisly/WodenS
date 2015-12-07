@@ -34,7 +34,7 @@ class PhonesView extends IndexView
         echo '<div class="background text-center" style="margin-top: 100px;">
    			      <h1 class="header">Phones</h1>
 			      <p class="the-only">The only thing that can change your life absolutely</p>
-			      <a class="links" href="/learn-more" style="text-decoration: none">Learn more ></a> <a class="links" style="font-size: 20px; text-decoration: none" href="phones.php" style="text-decoration: none;">Get it now ></a>
+			      <a class="links" href="/learn-more" style="text-decoration: none">Learn more ></a> <a class="links" style="font-size: 20px; text-decoration: none" href="index.php" style="text-decoration: none;">Get it now ></a>
 			      <p class="adding">In business from 2010, opened mainly in Kiev</p>
 
 	          </div>
@@ -129,7 +129,7 @@ class PhonesView extends IndexView
                       <h1 class="fc">Usefull, practical, as well as, pleasurable
                           <br /> and much more!</h1>
 
-                      <h1 style="margin-bottom: 100px;"><a href="phones.php" id="phones">Order it now ></a></h1>
+                      <h1 style="margin-bottom: 100px;"><a href="index.php" id="phones">Order it now ></a></h1>
                   </div>
               </div>
 

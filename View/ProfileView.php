@@ -203,7 +203,7 @@ class ProfileView extends DefaultView
                   <div class="row">
                       <div class="col-md-6">
                           <div class="page-spacer">
-                              <a class="page" href="phones.php">Go to the phones page <span id="right-bar">>></span></a><br />
+                              <a class="page" href="index.php">Go to the phones page <span id="right-bar">>></span></a><br />
                               <h>From <span class="cart-price">$' . $this->model->getMinPhones() . '</span></h>
                           </div>
                       </div>

@@ -6,9 +6,9 @@
  * Time: 0:05
  */
 
-include_once('../Model/DefaultModel.php');
-include_once('../Controllers/DefaultController.php');
-include_once('../View/EducationLaptopsView.php');
+include_once('../../Model/DefaultModel.php');
+include_once('../../Controllers/DefaultController.php');
+include_once('../../View/EducationLaptopsView.php');
 
 $model = new DefaultModel();
 

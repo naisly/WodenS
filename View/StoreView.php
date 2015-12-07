@@ -111,7 +111,7 @@ class StoreView extends DefaultView
                               up in the store near you.
                               </p>
 
-                              <a href="phones.php"><img style="margin-right: 40px" src="images/icon-phones.png" width="120" height="120" /></a>
+                              <a href="index.php"><img style="margin-right: 40px" src="images/icon-phones.png" width="120" height="120" /></a>
                               <a href="notebooks.php"><img style="margin-right: 40px" src="images/icon-laptop.png" width="120" height="120" /></a>
                               <a href="gadgets.php"><img style="margin-right: 40px" src="images/icon-devices.png" width="120" height="120" /></a>
                               <a href="television.php"><img style="margin-right: 40px" src="images/icon-tv.png" width="120" height="120" /></a>

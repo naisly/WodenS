@@ -67,7 +67,7 @@ class BusinessLaptopsView extends DefaultView
                                         </h>
                                     </div>
 
-                                    <img src="../../images/macbook-pro.jpg" id="business-laptop" />
+                                    <img src="../../images/business-laptops7.jpg" id="business-laptop" />
 
                                     <div id="education-divider"></div>
 
@@ -112,15 +112,31 @@ class BusinessLaptopsView extends DefaultView
                                     <h id="main">Feel free with battery life of 8 up to 10 hours. Battery life</h>
 
                                     <div class="delivering">
-                                        <h id="sub-every-phones">There is also the keyboard and optional mouse input methods, making it much easier to type
-                                        for extended periods on a laptop than it is on a tablet. Laptops are typically much faster
-                                        than tablets, which run only basic operating systems. Laptops can now boast similar battery
-                                        performance to tablets, with Apples 2013 MacBook Air offering a 12-hour battery life,
-                                        significantly more than the 10 hours offered by the most recent iPad.</h>
-                                        </h>
+
+                                        <img src="../../images/laptops.jpg" id="business-laptop-no-margin" />
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <h id="sub-every-phones">There is also the keyboard and optional mouse input methods, making it much easier to type
+                                                for extended periods on a laptop than it is on a tablet. Laptops are typically much faster
+                                                than tablets, which run only basic operating systems.
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h id="sub-every-phones">Laptops can now boast similar battery
+                                                performance to tablets, with Apples 2013 MacBook Air offering a 12-hour battery life,
+                                                significantly more than the 10 hours offered by the most recent iPad.</h>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h id="sub-every-phones">Laptops are really useful in a day-to-day life
+                                                Every cafe has wi-fi, so you can speak up with your supervisor or
+                                                employees using Skype, Viber for free. By this, you can internationally
+                                                communicate with each other from lots of countries!</h>
+                                            </div>
+                                        </div>
+
+                                        <div style="margin-bottom: 70px;"></div>
                                     </div>
 
-                                    <img src="../../images/laptops.jpg" id="business-laptop" />
                                 </div>
                            </div>
                       </div>
