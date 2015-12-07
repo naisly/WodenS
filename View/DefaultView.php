@@ -45,14 +45,7 @@ class DefaultView
                     <!-- Latest compiled and minified CSS -->
                     <meta name="viewport" content="width=device-width, initial-scale=1">';
 
-        if( $page !== 'education-phones' && $page !== 'education-laptops') {
-            echo   '<link rel="stylesheet" href="css/bootstrap.css">
-                    <link rel="shortcut icon" href="images/favicon.ico" />
-                    <link href="css/styles.css" rel="stylesheet" type="text/css">
-                    <!-- Optional theme -->
-                    <link rel="stylesheet" href="css/bootstrap-theme.css">
-                    <!-- Files of Styles -->';
-        } else {
+        if( $page == 'education-phones' && $page == 'education-laptops' ) {
             echo   '<link rel="stylesheet" href="../css/bootstrap.css">
                     <link rel="shortcut icon" href="../images/favicon.ico" />
                     <script src="../js/jquery-min.js"></script>
@@ -63,6 +56,25 @@ class DefaultView
                     <link rel="stylesheet" href="../css/bootstrap-theme.css">
                     <!-- Files of Styles -->
                     ';
+        } else if( $page == 'business-laptops'){
+            echo   '<link rel="stylesheet" href="../../css/bootstrap.css">
+                    <link rel="shortcut icon" href="../../images/favicon.ico" />
+                    <script src="../../js/jquery-min.js"></script>
+                    <!-- bxSlider Javascript file -->
+                    <script src="../../js/bootstrap.min.js"></script>
+                    <link href="../../css/styles.css" rel="stylesheet" type="text/css">
+                    <!-- Optional theme -->
+                    <link rel="stylesheet" href="../../css/bootstrap-theme.css">
+                    <!-- Files of Styles -->
+                    ';
+        }
+        else {
+            echo   '<link rel="stylesheet" href="css/bootstrap.css">
+                    <link rel="shortcut icon" href="images/favicon.ico" />
+                    <link href="css/styles.css" rel="stylesheet" type="text/css">
+                    <!-- Optional theme -->
+                    <link rel="stylesheet" href="css/bootstrap-theme.css">
+                    <!-- Files of Styles -->';
         }
         if($page == 'devices'){
             echo '<link href="css/devices.css" rel="stylesheet" type="text/css">';
@@ -131,7 +143,12 @@ class DefaultView
         } else if($page == 'education-phones'){
             echo '<link href="../css/education-phones.css" rel="stylesheet" type="text/css">
                   <link href="../css/financing.css" rel="stylesheet" type="text/css">';
-        } else {
+        } else if($page == 'business-laptops'){
+            echo '<link href="../../css/business-laptops.css" rel="stylesheet" type="text/css">
+                  <link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
+                  <link href="../../css/financing.css" rel="stylesheet" type="text/css">';
+        }
+        else {
             echo '<link rel="stylesheet" href="css/default.css" />' .
                 '<link rel="stylesheet" href="css/animate.css" />';
         }
@@ -187,6 +204,48 @@ class DefaultView
                                                             <li class="dropdown-header">Products</li>';
             if (isset($_SESSION['login_user'])) {
                 echo '<li><a href="../cart.php">Cart: ' . $this->model->getAPrice() . '$';
+                echo '<li><a href="#">' . $this->model->getAItems() . ' items</a>';
+            } else {
+                echo ' <li><a href="#">Login to see your cart</a></li>';
+            }
+            echo '
+                        </ul>
+                    </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>';
+        } else if($page == 'business'){
+            echo '<a class="navbar-brand white-link" href="index.php">
+                            <img alt="Brand" src="../../images/default.png">';
+            echo '</a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="../../phones-all.php" class="white-link">Phones <span class="sr-only">(current)</span></a></li>
+                            <li><a href="../../laptops.php" class="white-link">Laptops</a></li>
+                            <li><a href="../../devices.php" class="white-link">Devices</a></li>
+                            <li><a href="../../tv.php" class="white-link">TV</a></li>
+                            <li><a href="../../support.php" class="white-link">Support</a></li>
+                            <li class="dropdown">
+                        <a href="#" class="dropdown-toggle white-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart <span class="caret"></span></a>
+                        <ul class="dropdown-menu">';
+            if (isset($_SESSION['login_user'])) {
+                echo '<li><a href="../../logout.php">';
+                echo 'Logout(' . $_SESSION['login_user'] . ')</a></li>';
+                session_write_close();
+            } else {
+                echo '<li><a href="../../register.php">Register</a></li>';
+                echo '<li><a href="../../login.php">';
+                echo 'Login</a></li>';
+                session_write_close();
+            }
+            echo '
+                                                            <li role="separator" class="divider"></li>
+                                                            <li class="dropdown-header">Products</li>';
+            if (isset($_SESSION['login_user'])) {
+                echo '<li><a href="../../cart.php">Cart: ' . $this->model->getAPrice() . '$';
                 echo '<li><a href="#">' . $this->model->getAItems() . ' items</a>';
             } else {
                 echo ' <li><a href="#">Login to see your cart</a></li>';
@@ -452,6 +511,14 @@ class DefaultView
                                         <li><a class="items" href="../tv.php">TV</a></li>
                                         <li><a class="items" href="../support.php">Support</a></li>
                                         <li><a class="items" href="../cart.php">Cart</a></li>';
+        } else if($page == 'sub-daughter') {
+            echo                       '<li><a class="items" href="../../index.php">Home</a></li>
+                                        <li><a class="items" href="../../phones-all.php">Phones</a></li>
+                                        <li><a class="items" href="../../laptops.php">Laptops</a></li>
+                                        <li><a class="items" href="../../devices.php">Devices</a></li>
+                                        <li><a class="items" href="../../tv.php">TV</a></li>
+                                        <li><a class="items" href="../../support.php">Support</a></li>
+                                        <li><a class="items" href="../../cart.php">Cart</a></li>';
         } else {
             echo                       '<li><a class="items" href="index.php">Home</a></li>
                                         <li><a class="items" href="phones-all.php">Phones</a></li>
@@ -532,7 +599,14 @@ class DefaultView
                                             <li><a class="items" href="../order.php">Order Status</a></li>
                                             <li><button id="link_as_button" class="items">Shopping help</button></li>
                                             <li><a class="items" href="../search-answers.php">Questions & Answers</a></li>';
-         } else {
+         } else if($page == 'sub-daughter'){
+             echo                          '<li><a class="items" href="../../store.php">Find our store</a></li>
+                                            <li><a class="items" href="../../financing.php">Financing</a></li>
+                                            <li><a class="items" href="../../order.php">Order Status</a></li>
+                                            <li><button id="link_as_button" class="items">Shopping help</button></li>
+                                            <li><a class="items" href="../../search-answers.php">Questions & Answers</a></li>';
+         }
+         else {
              echo                          '<li><a class="items" href="store.php">Find our store</a></li>
                                             <li><a class="items" href="financing.php">Financing</a></li>
                                             <li><a class="items" href="order.php">Order Status</a></li>
@@ -557,7 +631,13 @@ class DefaultView
                                         <li><a class="items" href="../cart.php">My Items</a></li>
                                         <li><a class="items" href="../shop-id.php">My Orders</a></li>
                                         <li><a class="items" href="../account-billing.php">Billing Info</a></li>';
-        } else {
+        } else if ($page == 'sub-daughter'){
+            echo                       '<li><a class="items" href="../../account.php">Store account</a></li>
+                                        <li><a class="items" href="../../cart.php">My Items</a></li>
+                                        <li><a class="items" href="../../shop-id.php">My Orders</a></li>
+                                        <li><a class="items" href="../../account-billing.php">Billing Info</a></li>';
+        }
+        else {
             echo                       '<li><a class="items" href="account.php">Store account</a></li>
                                         <li><a class="items" href="cart.php">My Items</a></li>
                                         <li><a class="items" href="shop-id.php">My Orders</a></li>
@@ -569,6 +649,9 @@ class DefaultView
         if($page == 'daughter') {
             echo                       '<li><a class="items" href="../site-terms.php">Site Terms</a></li>
                                         <li><a class="items" href="../privacy.php">Privacy</a></li>';
+        } else if($page == 'sub-daughter'){
+            echo                       '<li><a class="items" href="../../site-terms.php">Site Terms</a></li>
+                                        <li><a class="items" href="../../privacy.php">Privacy</a></li>';
         } else {
             echo                       '<li><a class="items" href="site-terms.php">Site Terms</a></li>
                                         <li><a class="items" href="privacy.php">Privacy</a></li>';
@@ -593,6 +676,15 @@ class DefaultView
                                         <li><a class="items" href="../director.php">Director</a></li>
                                         <li><a class="items" href="../job.php">Job</a></li>
                                         <li><a class="items" href="../contact-us.php">Contact Us</a></li>';
+         } else if($page == 'sub-daughter'){
+             echo                      '<li><a class="items" href="../../our-company.php">Our company</a></li>
+                                        <li><a class="items" href="../../people.php">In-touch People</a></li>
+                                        <li><a class="items" href="../../managers.php">Our managers</a></li>
+                                        <li><a class="items" href="../../offices.php">Offices</a></li>
+                                        <li><a class="items" href="../../business.php">Business</a></li>
+                                        <li><a class="items" href="../../director.php">Director</a></li>
+                                        <li><a class="items" href="../../job.php">Job</a></li>
+                                        <li><a class="items" href="../../contact-us.php">Contact Us</a></li>';
          } else {
              echo                      '<li><a class="items" href="our-company.php">Our company</a></li>
                                         <li><a class="items" href="people.php">In-touch People</a></li>
@@ -617,6 +709,9 @@ class DefaultView
          if( $page == 'daughter') {
              echo                      '<li><a class="items" href="../education/laptops.php">Notebooks</a></li>
                                         <li><a class="items" href="../education/phones.php">Phones</a></li>';
+         } else if( $page == 'sub-daughter'){
+             echo                      '<li><a class="items" href="../../education/laptops.php">Notebooks</a></li>
+                                        <li><a class="items" href="../../education/phones.php">Phones</a></li>';
          } else {
              echo                      '<li><a class="items" href="education/laptops.php">Notebooks</a></li>
                                         <li><a class="items" href="education/phones.php">Phones</a></li>';
@@ -625,13 +720,18 @@ class DefaultView
                                     <ul>
                                         <li class="footer-menu"><b>Business</b></li>';
          if( $page == 'daughter') {
-             echo                      '<li><a class="items" href="../usage-notebooks-business.php">Using notebooks in business</a></li>
-                                        <li><a class="items" href="../using-phones-business.php">Using phones in day-to-day life</a></li>
-                                        <li><a class="items" href="../using-devices-business.php">Using devices in business</a></li>';
-         } else {
-             echo                      '<li><a class="items" href="usage-notebooks-business.php">Using notebooks in business</a></li>
-                                        <li><a class="items" href="using-phones-business.php">Using phones in day-to-day life</a></li>
-                                        <li><a class="items" href="using-devices-business.php">Using devices in business</a></li>';
+             echo                      '<li><a class="items" href="../business/laptops/">Using notebooks in business</a></li>
+                                        <li><a class="items" href="../business/phones/">Using phones in day-to-day life</a></li>
+                                        <li><a class="items" href="../business/devices/">Using devices in business</a></li>';
+         } else if( $page == 'sub-daughter'){
+             echo                      '<li><a class="items" href="../../business/laptops/">Using notebooks in business</a></li>
+                                        <li><a class="items" href="../../business/phones/">Using phones in day-to-day life</a></li>
+                                        <li><a class="items" href="../../business/devices/">Using devices in business</a></li>';
+         }
+         else {
+             echo                      '<li><a class="items" href="business/laptops/">Using notebooks in business</a></li>
+                                        <li><a class="items" href="business/phones/">Using phones in day-to-day life</a></li>
+                                        <li><a class="items" href="business/devices/">Using devices in business</a></li>';
          }
          echo                       '</ul>
                                 </div>
