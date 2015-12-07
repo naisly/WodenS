@@ -115,7 +115,7 @@ class EducationLaptopsView extends DefaultView
                                         stacks of physical paper. Whats more, digital assignments allow students that have to miss school to turn in <b>work remotely</b>, reducing the inequity
                                         of allowing students extensions on assignments for missing class. Additionally, typewritten assignments are <b>much easier
                                         to read</b> than those written by hand.</h>
-</h>
+                                        </h>
                                     </div>
 
                                     <img src="../images/devices.jpg" id="education-laptop" />
