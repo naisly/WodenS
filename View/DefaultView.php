@@ -511,11 +511,11 @@ class DefaultView
         while($i < $this->model->countBreadcrumbs()){
 
             if($this->model->getBreadcrumbs($i) == 'shop'){
-                echo '<a href="/shop/index.php"><img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/default-small.png" /></a>';
+                echo '<a href="/shop"><img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/default-small.png" /></a>';
             } else if($this->model->getBreadcrumbs($i) == 'index'){
-                echo '<h id="breadcrumbs" href="#">Home</h>';
+                echo '<h id="breadcrumbs">Home</h>';
             } else {
-                echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . $this->model->getBreadcrumbs($i) . "</a>";
+                echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . ucfirst($this->model->getBreadcrumbs($i)) . "</a>";
             }
 
             if ($i < $this->model->countBreadcrumbs() - 1){
@@ -523,6 +523,10 @@ class DefaultView
             }
 
             $i++;
+        }
+        if($this->model->countBreadcrumbs() == 1){
+            echo '<img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/breadcrumbs-next.png" />';
+            echo '<h id="breadcrumbs">Home</h>';
         }
         echo                  '</div>
                               <div class="col-md-8"></div>
