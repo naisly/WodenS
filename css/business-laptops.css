@@ -15,3 +15,10 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
+#main-every-phones {
+    font-size: 20px;
+}
+#link-laptops {
+    color: #1b6d85;
+    text-decoration: none !important;
+}
