@@ -44,15 +44,7 @@ class BusinessPhonesView extends DefaultView
                                   <h class="fixed-header">Phones in Business</h>
                               </div>
                               <div class="buy-main pull-right">
-                                  <div class="education-container">
-                                      <a href="../../phones-all.php" id="education">Main Phones page</a>
-                                  </div>
-                                  <div class="education-container">
-                                      <a href="../education/phones/" id="education">Phones in Education</a>
-                                  </div>
-                                  <div class="buy-container">
-                                      <a style="color: white" class="btn btn-primary button-buy buy-phones" href="../../phones.php">Buy</a>
-                                  </div>
+                                  <a style="color: white" class="btn btn-primary button-buy buy-phones" href="../../phones.php">Buy</a>
                               </div>
                           </div>
                           <div class="col-md-1"></div>

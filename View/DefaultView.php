@@ -146,7 +146,8 @@ class DefaultView
         } else if($page == 'business-laptops'){
             echo '<link href="../../css/business-laptops.css" rel="stylesheet" type="text/css">
                   <link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
-                  <link href="../../css/financing.css" rel="stylesheet" type="text/css">';
+                  <link href="../../css/financing.css" rel="stylesheet" type="text/css">
+                  <link href="../../css/business-phones.css" rel="stylesheet" type="text/css">';
         } else if($page == 'business-phones'){
             echo '<link href="../../css/business-phones.css" rel="stylesheet" type="text/css">
                   <link href="../../css/education-phones.css" rel="stylesheet" type="text/css">

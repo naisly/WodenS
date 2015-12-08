@@ -41,149 +41,137 @@ class BusinessLaptopsView extends DefaultView
                           <div class="col-md-1"></div>
                           <div class="col-md-10">
                               <div class="fixed-main pull-left">
-                                  <h class="fixed-header">Laptops in Business</h>
+                                  <h class="fixed-header">Phones in Business</h>
                               </div>
                               <div class="buy-main pull-right">
-                                  <a style="color: white" class="btn btn-primary button-buy" href="../../Notebooks.php">Buy</a>
+                                  <a style="color: white" class="btn btn-primary button-buy buy-phones" href="../../phones.php">Buy</a>
                               </div>
                           </div>
                           <div class="col-md-1"></div>
                       </div>
                   </div>
-              </div>
-              <div class="container middle">
-                  <div class="row">
-                      <div class="col-md-1"></div>
-                      <div class="col-md-10">
-                           <div class="bordered-middle">
-                                <div class="text-center">
-                                    <h id="main">Laptops were developed to make your life <br /> as complicated as possible</h><br />
-
-                                    <div class="content-phones">
-                                        <h id="sub-every-phones">When weighing up the advantages and disadvantages of laptop computers,
-                                        its important to bear in mind what you\'re comparing them
-                                        to and how you plan to use them for your business. Laptops give you the power and flexibility of a
-                                        desktop computer, where tablets may be limited in these areas.
-                                        </h>
-                                    </div>
-
-                                    <img src="../../images/business-laptops7.jpg" id="business-laptop" />
-
-                                    <div id="education-divider"></div>
-
-                                    <div class="usefull-apps">
-                                        <h id="main">Use it everywhere that you want. Portability</h><br />
-
-                                        <div class="content-phones">
-                                            <h id="sub-every-phones">Working on the move, away from the office or at a different desk is a lot more <br />
-                                            convenient when using a laptop than a desktop. However, in terms of size and weight, tablets <br />
-                                            offer even more portability than laptops.
-                                            </h>
-                                        </div>
-                                    </div>
-
-                                    <img src="../../images/macbook-air.jpg" id="business-laptop" />
-
-                                    <div class="content-phones">
-                                        <h id="sub-every-phones">Generally speaking, laptops are still significantly more powerful than tablets and <br />
-                                        almost up to the level of desktops in capabilities. If you need the most powerful computers <br />
-                                        possible -- for video editing, game development or larger screens, for example -- <br/>
-                                        then desktops are probably the way to go, but high-end laptops are almost equally capable.</b></h>
-                                    </div>
-
-                                    <img src="../../images/business-laptops5.jpg" id="business-laptop" />
-
-                                    <div id="education-divider"></div>
-
-                                    <div class="delivering">
-                                        <h id="main">Make your life easier. Flexibility</h>
-
-                                        <div class="content-phones">
-                                            <h id="sub-every-phones">There is also the keyboard and optional mouse input methods, making it much easier
-                                            to type for extended periods on a laptop than it is on a tablet. Laptops are
-                                            typically much faster than tablets, which run only basic operating systems.</b></h>
-                                        </div>
-                                    </div>
-
-                                    <div class="delivering">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <h id="main-every-phones">Lightweight, small, practical device to use everywhere</h>
-
-                                                <div id="education-divider"></div>
-
-                                                <h id="sub-every-phones">Laptops were developed to be used in any place, in any time
-                                                with the least possible expenditure of energy and problems. Contact your friends by <a id="link-laptops" href="http://www.apple.com/ios/facetime/">Facetime</a>,
-                                                make a lot of photos and instantly throw it to <a id="link-laptops" href="https://www.instagram.com/">Instagram.</a></h>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <h id="main-every-phones">Usability of newest Apple MAC OS X</h>
-
-                                                <div id="education-divider"></div>
-
-                                                <h id="sub-every-phones">Newly released <a id="link-laptops" href="http://www.apple.com/osx/">MAC OS X</a> developed for usability, high performance thats makes your communication
-                                                with laptops instant. Developed <a id="link-laptops" href="https://www.apple.com/support/ios/">IOS Apps</a> makes your schedule perfect, games to be multi-tasking, highly performed.</h>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <h id="main-every-phones">Multi-platform, highly productive Windows 10</h>
-
-                                                <div id="education-divider"></div>
-
-                                                <h id="sub-every-phones">In our era of rapid technological development, every time is going to be done new innovations.
-                                                Microsoft has released <a id="link-laptops" href="https://www.microsoft.com/uk-ua/software-download/windows10">Windows 10</a> to make your life lightweight with newly developed Apps like VK, Calendar, Clocks.
-                                                Interactive keyboard was made to do your work naturally without using native keyboard</h>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <img src="../../images/business-laptops6.png" id="business-laptop" />
-
-                                    <div id="education-divider"></div>
-
-                                    <h id="main">Feel free with battery life of 8 up to 10 hours. Battery life</h>
-
-                                    <div class="delivering">
-
-                                        <img src="../../images/laptops.jpg" id="business-laptop-no-margin" />
-
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <h id="main-every-phones">Speed & Performance</h>
-
-                                                <div id="education-divider"></div>
-
-                                                <h id="sub-every-phones">There is also the keyboard and optional mouse input methods, making it much easier to type
-                                                for extended periods on a laptop than it is on a tablet. Laptops are typically much faster
-                                                than tablets, which run only basic operating systems.
-                                            </div>
-                                            <div class="col-md-4">
-                                                <h id="main-every-phones">Optional Battery life</h>
-
-                                                <div id="education-divider"></div>
-
-                                                <h id="sub-every-phones">Laptops can now boast similar battery
-                                                performance to tablets, with Apples 2013 MacBook Air offering a 12-hour battery life,
-                                                significantly more than the 10 hours offered by the most recent devices.</h>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <h id="main-every-phones">Usability / Contact abilities</h>
-
-                                                <div id="education-divider"></div>
-
-                                                <h id="sub-every-phones">Laptops are really useful in a day-to-day life
-                                                Every cafe has wi-fi, so you can speak up with your supervisor or
-                                                employees using <a id="link-laptops" href="http://www.skype.com">Skype</a>, <a id="link-laptops" href="http://www.viber.com">Viber</a> for free. By this, you can internationally
-                                                communicate with each other from lots of countries!</h>
-                                            </div>
-                                        </div>
-
-                                        <div style="margin-bottom: 70px;"></div>
-                                    </div>
-
-                                </div>
-                           </div>
+              </div>';
+        echo '<div class="container">
+                  <div class="text-center">
+                      <div class="main-container">
+                          <h class="moving-forward">Moving in lockstep with business</h><br />
                       </div>
-                      <div class="col-md-1"></div>
+                      <div class="sub-container">
+                          <h class="sub-main-header">When you use MAC OS X or Windows technology as one of the main business skills, new
+                          possibilities are available. As many people that have laptop, they love their work, productivity is increasing
+                          in a simple working day. Laptops enable your mind with skills that never ever thought about before and operate
+                          with them in random tasks.</h>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="business-content">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-2"></div>
+                          <div class="col-md-4">
+                              <div class="better-phones">
+                                  <div class="text-left">
+                                      <h class="better-than-imagine">Better than you can <br /> just imagine</h><br />
+
+                                      <div style="margin-top: 30px">
+                                          <h class="sub-better">With new tools for IT in IOS, great security you can hold any data in your Laptop.
+                                          Powerful productivity features are pretty useful for your users needs and to make your workday more
+                                          productive.<br /><br /> With Iphone, you are not going to miss any note for your business and stay up-to-date everywhere
+                                          </h>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <img src="../../images/business-laptops8.png" id="business-laptop" />
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="business-laptop">
+                   <div class="container">
+                       <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-4">
+                                <div class="business-in-action">
+                                  <div class="text-left">
+                                      <h class="better-than-imagine" style="color: white;">Apps for Everything</h><br />
+
+                                      <div style="margin-top: 30px" class="for-small-par">
+                                          <h class="sub-better" style="color: white;">The suite of electronic tools a business needs to conduct daily operations is shifting.
+                                          At one time, a business owner needed an Office suite, e-mail, and industry-specific software to open for business.
+                                          <br /><br />Everything from billing and scheduling to project management may be moved to Cloud-based apps, allowing
+                                          small businesses with small budgets to compete against much larger companies.
+                                          </h>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="col-md-6"></div>
+                        </div>
+
+                   </div>
+              </div>
+
+              <div class="business-content" style="margin-top: 0px;">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-2"></div>
+                          <div class="col-md-4">
+                              <div class="better-phones">
+                                  <div class="text-left">
+                                      <h class="better-than-imagine">Reimagine your life with Macbook and Apps</h><br />
+
+                                      <div style="margin-top: 30px">
+                                          <h class="sub-better">Be in touch with others by using laptop. For non-resident calls
+                                          laptops have <a id="apps-link" href="http://skype.com">Skype</a> or <a id="apps-link" href="http://skyp.com">Viber</a> for free calls. In addition, social networks are available with
+                                          fast 3G like <a id="apps-link" href="http://twitter.com">Twitter</a>, <a id="apps-link" href="http://facebook.com">Facebook</a>, <a id="apps-link" href="http://vk.com">VK</a>.
+                                          </h><br /><br />
+                                          <h class="sub-better">Make your photos available for everyone for likes or dislikes, like <a id="apps-link" href="http://instagram.com">Instagram</a>.
+                                          For each photo, available <a href="www.appstore.com" id="apps-link">Apple Store</a> App called <a id="apps-link" href="www.instaphoto.ru">Instaphoto</a> to share your photos instantly.
+                                          </h><br />
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <img src="../../images/business-laptops9.png" id="business-laptop" />
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="business-laptop-container">
+                   <div class="container">
+                       <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4">
+                                <div class="business-in-action">
+                                  <div class="text-left">
+                                      <h class="better-than-imagine">A lot of Cloud Apps</h><br />
+
+                                      <div style="margin-top: 30px">
+                                          <h class="sub-better sub-for-small">Cloud providers who provide connectivity from any approved device
+                                          will be at an advantage as businesses begin to troubleshoot ways they can continue
+                                          to do business in a mobile-preferred workplace. <br /><br /> When a new solution is needed,
+                                          businesses will be able to immediately find and download that solution without having to pay
+                                          a team of software developers to create one.
+                                          </h>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="col-md-7"></div>
+                        </div>
+
+                   </div>
+              </div>
+
+              <div class="text-center">
+                  <div class="search-for">
+                      <a href="../../notebooks.php" id="search">Search laptop for business ></a>
                   </div>
               </div>';
     }

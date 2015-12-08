@@ -1,24 +1,23 @@
+.business-laptop {
+    background: url(../images/business-laptops-mac.jpg) no-repeat center center;
+    background-position: center;
+    min-height: 200px;
+    width: 100%;
+    background-size: cover;
+}
+.business-laptop-container {
+    background: url(../images/business-laptops12.jpg) no-repeat center center;
+    background-position: center;
+    min-height: 200px;
+    width: 100%;
+    background-size: cover;
+}
+#buy {
+    margin-top: 25px;
+}
 #business-laptop {
+    margin-top: 50%;
+    padding-bottom: 50%;
     width: 100%;
     height: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-#business-laptop-no-margin {
-    width: 100%;
-    height: auto;
-}
-#education-divider {
-    width: 100%;
-    height: 2px;
-    background-color: #e4e4e4;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-#main-every-phones {
-    font-size: 20px;
-}
-#link-laptops {
-    color: #1b6d85;
-    text-decoration: none !important;
 }
