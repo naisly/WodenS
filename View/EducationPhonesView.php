@@ -72,7 +72,7 @@ class EducationPhonesView extends DefaultView
                                         <h id="main">Awesome Student & Teacher Apps</h><br />
 
                                         <div class="content-phones">
-                                            <h id="sub-every-phones"><a href="http://dropbox.com">Dropbox</a>: One of my most beloved apps is dropbox. Dropbox allows all my computers
+                                            <h id="sub-every-phones"><a style="color: #1b6d85; text-decoration: none" href="http://dropbox.com">Dropbox</a>: One of my most beloved apps is dropbox. Dropbox allows all my computers
                                             and my phone to interact together. So the photo I take on my cell phone can be put in my Dropbox app and
                                             now it is available on all my devices, love it!
                                             </h>
@@ -82,7 +82,7 @@ class EducationPhonesView extends DefaultView
                                     <img src="../../images/dropbox.png" width="170" height="170" id="dropbox" />
 
                                     <div class="content-phones">
-                                        <h id="sub-every-phones"><a href="http://www.adobe.com/ru/products/photoshop.html">Photoshop</a>:  Next, in line is going app is photoshop. Photoshop
+                                        <h id="sub-every-phones"><a style="color: #1b6d85; text-decoration: none" href="http://www.adobe.com/ru/products/photoshop.html">Photoshop</a>:  Next, in line is going app is photoshop. Photoshop
                                         allows you to improve photos and interact lots of items together. Its now available on phones based on Windows OS</h>
                                     </div>
 

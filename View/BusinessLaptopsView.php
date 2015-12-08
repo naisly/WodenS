@@ -60,9 +60,9 @@ class BusinessLaptopsView extends DefaultView
                                     <h id="main">Laptops were developed to make your life <br /> as complicated as possible</h><br />
 
                                     <div class="content-phones">
-                                        <h id="sub-every-phones">When weighing up the <em>advantages</em> and <em>disadvantages</em> of laptop computers,
-                                        its important to bear in mind <b>what</b> youre comparing them
-                                        to and how you <b>plan to use</b> them for your business. Laptops give you the <b>power and flexibility</b> of a
+                                        <h id="sub-every-phones">When weighing up the advantages and disadvantages of laptop computers,
+                                        its important to bear in mind what you\'re comparing them
+                                        to and how you plan to use them for your business. Laptops give you the power and flexibility of a
                                         desktop computer, where tablets may be limited in these areas.
                                         </h>
                                     </div>
@@ -112,17 +112,17 @@ class BusinessLaptopsView extends DefaultView
 
                                                 <div id="education-divider"></div>
 
-                                                <h id="sub-every-phones">Laptops were developed to be used in <em>any place</em>, in <em>any time</em>
-                                                with the <b>least possible</b> expenditure of energy and problems. Contact your friends by <a id="link-laptops" href="http://www.apple.com/ios/facetime/">facetime</a>,
-                                                make a lot of photos and <b>instantly throw</b> it to <a id="link-laptops" href="https://www.instagram.com/">Instagram.</a></h>
+                                                <h id="sub-every-phones">Laptops were developed to be used in any place, in any time
+                                                with the least possible expenditure of energy and problems. Contact your friends by <a id="link-laptops" href="http://www.apple.com/ios/facetime/">Facetime</a>,
+                                                make a lot of photos and instantly throw it to <a id="link-laptops" href="https://www.instagram.com/">Instagram.</a></h>
                                             </div>
                                             <div class="col-md-4">
                                                 <h id="main-every-phones">Usability of newest Apple MAC OS X</h>
 
                                                 <div id="education-divider"></div>
 
-                                                <h id="sub-every-phones">Newly released <a id="link-laptops" href="http://www.apple.com/osx/">MAC OS X</a> developed for <em>usability</em>, <em>high performance</em> thats makes your communication
-                                                with laptops <b>instant</b>. Developed <a id="link-laptops" href="https://www.apple.com/support/ios/">IOS Apps</a> makes your <b>schedule perfect</b>, games to be <em>multi-tasking</em>, <em>highly performed</em>.  </h>
+                                                <h id="sub-every-phones">Newly released <a id="link-laptops" href="http://www.apple.com/osx/">MAC OS X</a> developed for usability, high performance thats makes your communication
+                                                with laptops instant. Developed <a id="link-laptops" href="https://www.apple.com/support/ios/">IOS Apps</a> makes your schedule perfect, games to be multi-tasking, highly performed.</h>
                                             </div>
                                             <div class="col-md-4">
                                                 <h id="main-every-phones">Multi-platform, highly productive Windows 10</h>
@@ -130,8 +130,8 @@ class BusinessLaptopsView extends DefaultView
                                                 <div id="education-divider"></div>
 
                                                 <h id="sub-every-phones">In our era of rapid technological development, every time is going to be done new innovations.
-                                                Microsoft has released <a id="link-laptops" href="https://www.microsoft.com/uk-ua/software-download/windows10">Windows 10</a> to make your life <b>lightweight</b> with newly developed Apps like <em>VK, Calendar, Clocks</em>.
-                                                <b>Interactive keyboard</b> was made to do your work <b>naturally</b> without using native keyboard</h>
+                                                Microsoft has released <a id="link-laptops" href="https://www.microsoft.com/uk-ua/software-download/windows10">Windows 10</a> to make your life lightweight with newly developed Apps like VK, Calendar, Clocks.
+                                                Interactive keyboard was made to do your work naturally without using native keyboard</h>
                                             </div>
                                         </div>
                                     </div>
@@ -152,28 +152,28 @@ class BusinessLaptopsView extends DefaultView
 
                                                 <div id="education-divider"></div>
 
-                                                <h id="sub-every-phones">There is also the keyboard and optional mouse <em>input methods</em>, making it much easier to type
-                                                for extended periods on a laptop than it is on a tablet. Laptops are typically <b>much faster</b>
-                                                than tablets, which <b>run only basic</b> operating systems.
+                                                <h id="sub-every-phones">There is also the keyboard and optional mouse input methods, making it much easier to type
+                                                for extended periods on a laptop than it is on a tablet. Laptops are typically much faster
+                                                than tablets, which run only basic operating systems.
                                             </div>
                                             <div class="col-md-4">
                                                 <h id="main-every-phones">Optional Battery life</h>
 
                                                 <div id="education-divider"></div>
 
-                                                <h id="sub-every-phones">Laptops can now <em>boast similar</em> battery
-                                                <b>performance</b> to tablets, with Apples 2013 MacBook Air offering a <b>12-hour battery life</b>,
-                                                significantly more than the 10 hours <b>offered by the most recent</b> devices.</h>
+                                                <h id="sub-every-phones">Laptops can now boast similar battery
+                                                performance to tablets, with Apples 2013 MacBook Air offering a 12-hour battery life,
+                                                significantly more than the 10 hours offered by the most recent devices.</h>
                                             </div>
                                             <div class="col-md-4">
                                                 <h id="main-every-phones">Usability / Contact abilities</h>
 
                                                 <div id="education-divider"></div>
 
-                                                <h id="sub-every-phones">Laptops are really useful in a <em>day-to-day</em> life
-                                                Every cafe has wi-fi, so you can <em>speak up</em> with your supervisor or
-                                                employees using <a style="color: #1b6d85; text-decoration: none;" href="http://www.skype.com">Skype</a>, <a style="color: #1b6d85; text-decoration: none;" class="links-apps" href="http://www.viber.com">Viber</a> for free. By this, you can <b>internationally
-                                                communicate</b> with each other from lots of countries!</h>
+                                                <h id="sub-every-phones">Laptops are really useful in a day-to-day life
+                                                Every cafe has wi-fi, so you can speak up with your supervisor or
+                                                employees using <a id="link-laptops" href="http://www.skype.com">Skype</a>, <a id="link-laptops" href="http://www.viber.com">Viber</a> for free. By this, you can internationally
+                                                communicate with each other from lots of countries!</h>
                                             </div>
                                         </div>
 
