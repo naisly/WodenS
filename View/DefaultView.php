@@ -56,7 +56,7 @@ class DefaultView
                     <link rel="stylesheet" href="../css/bootstrap-theme.css">
                     <!-- Files of Styles -->
                     ';
-        } else if( $page == 'business-laptops' || $page == 'education-phones' || $page == 'education-laptops' ){
+        } else if( $page == 'business-laptops' || $page == 'education-phones' || $page == 'education-laptops' || $page == 'business-phones' ){
             echo   '<link rel="stylesheet" href="../../css/bootstrap.css">
                     <link rel="shortcut icon" href="../../images/favicon.ico" />
                     <script src="../../js/jquery-min.js"></script>
@@ -145,6 +145,10 @@ class DefaultView
                   <link href="../../css/financing.css" rel="stylesheet" type="text/css">';
         } else if($page == 'business-laptops'){
             echo '<link href="../../css/business-laptops.css" rel="stylesheet" type="text/css">
+                  <link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
+                  <link href="../../css/financing.css" rel="stylesheet" type="text/css">';
+        } else if($page == 'business-phones'){
+            echo '<link href="../../css/business-phones.css" rel="stylesheet" type="text/css">
                   <link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
                   <link href="../../css/financing.css" rel="stylesheet" type="text/css">';
         }
