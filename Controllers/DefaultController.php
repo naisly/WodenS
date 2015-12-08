@@ -454,6 +454,7 @@ class DefaultController
     public function actionGetHeaderCart() {
         $this->actionGetSumOfItems();
         $this->actionGetQuantityOfItems();
+        $this->actionGetBreadcrumbs();
     }
 
     /*
@@ -549,5 +550,66 @@ class DefaultController
             $this->model->setAItems($quantity);
         }
 
+    }
+
+    protected function actionGetBreadcrumbs() {
+
+        $pageURL = 'http';
+        /*if ($_SERVER["HTTPS"] == "on") {
+            $pageURL .= "s";
+        }*/
+        $pageURL .= "://";
+        if ($_SERVER["SERVER_PORT"] != "80") {
+            $pageURL .= $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"];
+        } else {
+            $pageURL .= $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
+        }
+        //return $pageURL;
+
+        //echo $pageURL . "<br />";
+
+        $links_array = explode("/", $pageURL);
+        $array = explode("/", $pageURL);
+
+        //print_r($array);
+        array_shift($links_array);
+        array_shift($links_array);
+        array_shift($links_array);
+
+        array_shift($array);
+        array_shift($array);
+        array_shift($array);
+
+        $i = 0;
+        while($i < count($array)){
+            if(strlen($array[$i]) < 2){
+                unset($array[$i]);
+            }
+            $i++;
+        }
+
+        $links = array();
+        $first_link = "/" . $links_array[0];
+        array_push($links, $first_link);
+
+        $count = count($array) - 1;
+        $pos = strrpos($array[$count], '.');
+
+        if($pos !== false) {
+            $array[$count] = substr($array[$count], 0, $pos);
+        }
+
+        $active_links = array();
+        $i = 0;
+        while($i < count($links_array) - 1){
+
+            $active_link = $links[$i] . '/' . $links_array[$i+1];
+            array_push($links, $active_link);
+
+            $i++;
+        }
+
+        $this->model->setBreadcrumbs( $array );
+        $this->model->setBreadcrumbsLink( $links );
     }
 }

@@ -503,6 +503,31 @@ class DefaultView
         echo '<div class="footer-spacer"></div>';
 
         echo        '<div class="footer">
+                     <div class="container">
+                          <div class="row">
+                              <div class="col-sm-1"></div>
+                              <div class="col-sm-3">';
+        $i = 0;
+        while($i < $this->model->countBreadcrumbs()){
+
+            if($this->model->getBreadcrumbs($i) == 'shop'){
+                echo '<a href="/shop/index.php"><img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/default-small.png" /></a>';
+            } else if($this->model->getBreadcrumbs($i) == 'index'){
+                echo '<h id="breadcrumbs" href="#">Home</h>';
+            } else {
+                echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . $this->model->getBreadcrumbs($i) . "</a>";
+            }
+
+            if ($i < $this->model->countBreadcrumbs() - 1){
+                    echo '<img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/breadcrumbs-next.png" />';
+            }
+
+            $i++;
+        }
+        echo                  '</div>
+                              <div class="col-md-8"></div>
+                          </div>
+                     </div>
                      <div class="container" style="margin-top: 20px;">
                         <div class="row">
                             <div class="col-sm-1"></div>
@@ -729,7 +754,7 @@ class DefaultView
          }
          echo                      '</ul>
                                     <ul>
-                                        <li class="footer-menu"><b>Business</b></li>';
+                                        <li class="footer-menu"><b>For Business</b></li>';
          if( $page == 'daughter') {
              echo                      '<li><a class="items" href="../business/laptops/">Using notebooks in business</a></li>
                                         <li><a class="items" href="../business/phones/">Using phones in business</a></li>

@@ -32,7 +32,8 @@ class DefaultModel
 
     public $array;
     public $quantity_of_items;
-    /*public $array; */
+    public $breadcrumbs;
+    public $breadcrumbs_link;
 
     public function setProductName ( $product_name ) {
 
@@ -244,5 +245,30 @@ class DefaultModel
     public function setCountOfItems() {
 
         return count($this->quantity_of_items);
+    }
+
+    public function setBreadcrumbs( $breadcrumbs ){
+
+        $this->breadcrumbs = $breadcrumbs;
+    }
+
+    public function getBreadcrumbs( $i ) {
+
+        return $this->breadcrumbs[$i];
+    }
+
+    public function setBreadcrumbsLink( $breadcrumbs_link ){
+
+        $this->breadcrumbs_link = $breadcrumbs_link;
+    }
+
+    public function getBreadcrumbsLink( $i ){
+
+        return $this->breadcrumbs_link[$i];
+    }
+
+    public function countBreadcrumbs() {
+
+        return count($this->breadcrumbs);
     }
 }

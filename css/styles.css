@@ -188,14 +188,13 @@ a:hover {
 a:link {
 	color: #666;
 }
-.col-large-first {
-	width: 16.66%
-	float: left;
+#breadcrumbs {
+	color: #666;
+	text-decoration: none;
 }
-.col-large-2 {
-	width: 16.66%;
-	float: left;
-}
+
+
+
 @media (max-width: 766px) {
 	#toggleTextFooter, #toggleTextFooter1, #toggleTextFooter2, #toggleTextFooter3, #toggleTextFooter4 {
 		display: none;
