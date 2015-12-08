@@ -608,7 +608,6 @@ class DefaultController
 
             $i++;
         }
-        print_r($array);
 
         $this->model->setBreadcrumbs( $array );
         $this->model->setBreadcrumbsLink( $links );
