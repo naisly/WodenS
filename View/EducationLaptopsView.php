@@ -104,6 +104,37 @@ class EducationLaptopsView extends DefaultView
                                         </div>
                                     </div>
 
+                                    <div class="row">
+                                        <div class="delivering">
+                                            <div class="col-md-4">
+                                                <h class=main-sub-every" style="font-size: 20px;">All data in one place</h><br />
+
+                                                <div id="education-divider"></div>
+
+                                                <h id="sub-every-phones">Control your schedule via Macbook\'s Apps like <em>Clocks</em> or <em>Calendar</em>. Its really easy to make <b>important marks</b>
+                                                and <b>control your time</b>. Windows provide either those Apps whats make your life absolutely <b>complete</b></h>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h class=main-sub-every" style="font-size: 20px;">Collect / Compare all projects</h><br />
+
+                                                <div id="education-divider"></div>
+
+                                                <h id="sub-every-phones">It\'s really easy to <em>compare</em> your projects with your mates or <em>send</em> your task to your teacher for review.
+                                                Every project can <b>be saved</b> in one place for an reason <b>to collect all data</b> and <b>rewrite</b> them into another
+                                                one.</h>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h class=main-sub-every" style="font-size: 20px;">Edit / Change everywhere</h><br />
+
+                                                <div id="education-divider"></div>
+
+                                                <h id="sub-every-phones"> If someone wants to make any <em>significant improvements</em> into your work you can make it just in your
+                                                own laptop <b>without correcting</b> the whole assignment paper.</h>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
                                     <img src="../../images/macbook.jpg" id="education-laptop" />
 
                                     <div id="education-divider"></div>
@@ -113,14 +144,26 @@ class EducationLaptopsView extends DefaultView
                                     <div class="row">
                                         <div class="delivering">
                                             <div class="col-md-4">
+                                                <h class=main-sub-every" style="font-size: 20px;">Usability with collection and sorting</h><br />
+
+                                                <div id="education-divider"></div>
+
                                                 <h id="sub-every-phones">Having students turn work in <em>via email or another digital system</em> is easier than collecting and sorting through
                                                 stacks of physical paper.</h>
                                             </div>
                                             <div class="col-md-4">
+                                                <h class=main-sub-every" style="font-size: 20px;">Work remotely, increasing productivity</h><br />
+
+                                                <div id="education-divider"></div>
+
                                                 <h id="sub-every-phones">Whats more, digital assignments allow students that have to miss school to turn in <b>work remotely</b>, reducing the inequity
                                                 of allowing students extensions on assignments for missing class.</h>
                                             </div>
                                             <div class="col-md-4">
+                                                <h class=main-sub-every" style="font-size: 20px;">The best result for the same time</h><br />
+
+                                                <div id="education-divider"></div>
+
                                                 <h id="sub-every-phones"> Additionally, typewritten assignments are <b>much easier
                                             to read</b> than those written by hand. Thats why, this will decrease spending time of students
                                             and teachers either</h>
