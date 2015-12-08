@@ -56,7 +56,7 @@ class DefaultView
                     <link rel="stylesheet" href="../css/bootstrap-theme.css">
                     <!-- Files of Styles -->
                     ';
-        } else if( $page == 'business-laptops' || $page == 'education-phones' || $page == 'education-laptops' || $page == 'business-phones' ){
+        } else if( $page == 'business-laptops' || $page == 'education-phones' || $page == 'education-laptops' || $page == 'business-phones' || $page == 'business-devices' ){
             echo   '<link rel="stylesheet" href="../../css/bootstrap.css">
                     <link rel="shortcut icon" href="../../images/favicon.ico" />
                     <script src="../../js/jquery-min.js"></script>
@@ -150,6 +150,12 @@ class DefaultView
                   <link href="../../css/business-phones.css" rel="stylesheet" type="text/css">';
         } else if($page == 'business-phones'){
             echo '<link href="../../css/business-phones.css" rel="stylesheet" type="text/css">
+                  <link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
+                  <link href="../../css/financing.css" rel="stylesheet" type="text/css">';
+        } else if($page == 'business-devices'){
+            echo '<link href="../../css/business-devices.css" rel="stylesheet" type="text/css">
+                  <link href="../../css/business-phones.css" rel="stylesheet" type="text/css">
+                  <link href="../../css/business-laptops.css" rel="stylesheet" type="text/css">
                   <link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
                   <link href="../../css/financing.css" rel="stylesheet" type="text/css">';
         }
@@ -726,16 +732,16 @@ class DefaultView
                                         <li class="footer-menu"><b>Business</b></li>';
          if( $page == 'daughter') {
              echo                      '<li><a class="items" href="../business/laptops/">Using notebooks in business</a></li>
-                                        <li><a class="items" href="../business/phones/">Using phones in day-to-day life</a></li>
+                                        <li><a class="items" href="../business/phones/">Using phones in business</a></li>
                                         <li><a class="items" href="../business/devices/">Using devices in business</a></li>';
          } else if( $page == 'sub-daughter'){
              echo                      '<li><a class="items" href="../../business/laptops/">Using notebooks in business</a></li>
-                                        <li><a class="items" href="../../business/phones/">Using phones in day-to-day life</a></li>
+                                        <li><a class="items" href="../../business/phones/">Using phones in business</a></li>
                                         <li><a class="items" href="../../business/devices/">Using devices in business</a></li>';
          }
          else {
              echo                      '<li><a class="items" href="business/laptops/">Using notebooks in business</a></li>
-                                        <li><a class="items" href="business/phones/">Using phones in day-to-day life</a></li>
+                                        <li><a class="items" href="business/phones/">Using phones in business</a></li>
                                         <li><a class="items" href="business/devices/">Using devices in business</a></li>';
          }
          echo                       '</ul>

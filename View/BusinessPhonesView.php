@@ -93,11 +93,11 @@ class BusinessPhonesView extends DefaultView
               <div class="business-photo">
                    <div class="container">
                        <div class="row">
-                            <div class="col-md-2"></div>
+                            <div class="col-md-1"></div>
                             <div class="col-md-4">
                                 <div class="business-in-action">
-                                  <div class="text-left">
-                                      <h class="better-than-imagine">Apps for Everything</h><br />
+                                  <div class="text-left for-small-devices-text">
+                                      <h class="better-than-imagine" style="color: #ac5050">Apps for Everything</h><br />
 
                                       <div style="margin-top: 30px">
                                           <h class="sub-better">The suite of electronic tools a business needs to conduct daily operations is shifting.
@@ -109,7 +109,7 @@ class BusinessPhonesView extends DefaultView
                                   </div>
                               </div>
                             </div>
-                            <div class="col-md-6"></div>
+                            <div class="col-md-7"></div>
                         </div>
 
                    </div>
@@ -149,8 +149,8 @@ class BusinessPhonesView extends DefaultView
                             <div class="col-md-1"></div>
                             <div class="col-md-4">
                                 <div class="business-in-action">
-                                  <div class="text-left">
-                                      <h class="better-than-imagine">A lot of Cloud Apps</h><br />
+                                  <div class="text-left for-small-devices-text">
+                                      <h class="better-than-imagine" style="color: #ac5050">A lot of Cloud Apps</h><br />
 
                                       <div style="margin-top: 30px">
                                           <h class="sub-better">Cloud providers who provide connectivity from any approved device

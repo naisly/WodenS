@@ -1,5 +1,5 @@
 .business-laptop {
-    background: url(../images/business-laptops-mac.jpg) no-repeat center center;
+    background: url(../images/business-laptops-large.jpg) no-repeat center center;
     background-position: center;
     min-height: 200px;
     width: 100%;
@@ -20,4 +20,11 @@
     padding-bottom: 50%;
     width: 100%;
     height: auto;
+}
+.for-small-devices-text {
+    padding: 30px;
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
