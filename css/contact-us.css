@@ -8,6 +8,7 @@ html, body {
     background: url('../images/contact-us.jpg') center no-repeat;
     background-position: center top;
     background-size: 100% auto;
+    height: 100%;
 }
 .text-at-the-bottom {
     margin-top: 18%;

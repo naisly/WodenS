@@ -76,6 +76,9 @@ class DefaultView
                     <link rel="stylesheet" href="css/bootstrap-theme.css">
                     <!-- Files of Styles -->';
         }
+
+        echo '<script src="../js/SrcChanger.js"></script>';
+
         if($page == 'devices'){
             echo '<link href="css/devices.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'index'){
@@ -509,7 +512,7 @@ class DefaultView
                      <div class="container">
                           <div class="row">
                               <div class="col-sm-1"></div>
-                              <div class="col-sm-3">';
+                              <div class="col-sm-3 margin-for-small-devices">';
         $i = 0;
         while($i < $this->model->countBreadcrumbs()){
 
@@ -541,7 +544,9 @@ class DefaultView
                             <div class="col-sm-2 wow fadeInLeft">
                                 <div class="small-devices-decoration">
                                     <h class="float-right"><a class="items default-hidden" id="displayTextFooter" href="javascript:toggle();">Shop</a></h>
-
+                                    <div class="pull-right default-hidden margin-for-footer">
+                                        <a id="displayTextFooter" href="javascript:toggle();"><img alt="arrow" src="../images/arrow-down.png" width="20" height="20" /></a>
+                                    </div>
                                 </div>
                                 <div id="toggleTextFooter">
                                     <ul>
@@ -575,61 +580,14 @@ class DefaultView
                                 </div>
 
                             </div>
-                            <script>
-                                 function toggle(){
-                                     $("#toggleTextFooter").toggle("slow");
-                                     var x = document.getElementById("displayTextFooter");
-
-                                     if(x.style.fontWeight == "bold"){
-                                        x.style.fontWeight = "normal";
-                                     } else {
-                                        x.style.fontWeight = "bold";
-                                     }
-                                 }
-                                 function toggle1(){
-                                     $("#toggleTextFooter1").toggle("slow");
-                                     var y = document.getElementById("displayTextFooter1");
-
-                                     if(y.style.fontWeight == "bold"){
-                                        y.style.fontWeight = "normal";
-                                     } else {
-                                        y.style.fontWeight = "bold";
-                                     }
-                                 }
-                                 function toggle2(){
-                                     $("#toggleTextFooter2").toggle("slow");
-                                     var z = document.getElementById("displayTextFooter2");
-
-                                     if(z.style.fontWeight == "bold"){
-                                        z.style.fontWeight = "normal";
-                                     } else {
-                                        z.style.fontWeight = "bold";
-                                     }
-                                 }
-                                 function toggle3(){
-                                     $("#toggleTextFooter3").toggle("slow");
-                                     var q = document.getElementById("displayTextFooter3");
-
-                                     if(q.style.fontWeight == "bold"){
-                                        q.style.fontWeight = "normal";
-                                     } else {
-                                        q.style.fontWeight = "bold";
-                                     }
-                                 }
-                                 function toggle4(){
-                                     $("#toggleTextFooter4").toggle("slow");
-                                     var g = document.getElementById("displayTextFooter4");
-
-                                     if(g.style.fontWeight == "bold"){
-                                        g.style.fontWeight = "normal";
-                                     } else {
-                                        g.style.fontWeight = "bold";
-                                     }
-                                 }
-                             </script>
                             <div class="col-sm-2 wow fadeInLeft">
                                 <div class="small-devices-decoration">
                                     <h class="float-right"><a class="items default-hidden" id="displayTextFooter1" href="javascript:toggle1();">Store</a></h>
+
+                                    <div class="pull-right default-hidden margin-for-footer">
+                                        <a id="displayTextFooter1" href="javascript:toggle1();"><img alt="arrow1" src="../images/arrow-down.png" width="20" height="20" /></a>
+                                    </div>
+
                                     <div class="divider-for-small-devices"></div>
                                 </div>
                                 <form action="support.php" method="post">
@@ -664,6 +622,11 @@ class DefaultView
                             <div class="col-sm-2 wow fadeInUp">
                                 <div class="small-devices-decoration">
                                     <h class="float-right"><a class="items default-hidden" id="displayTextFooter2" href="javascript:toggle2();">Account</a></h>
+
+                                    <div class="pull-right default-hidden margin-for-footer">
+                                        <a id="displayTextFooter2" href="javascript:toggle2();"><img alt="arrow2" src="../images/arrow-down.png" width="20" height="20" /></a>
+                                    </div>
+
                                     <div class="divider-for-small-devices"></div>
                                 </div>
                                 <div id="toggleTextFooter2">
@@ -672,18 +635,18 @@ class DefaultView
         if($page == 'daughter') {
             echo                       '<li><a class="items" href="../account.php">Store account</a></li>
                                         <li><a class="items" href="../cart.php">My Items</a></li>
-                                        <li><a class="items" href="../shop-id.php">My Orders</a></li>
+                                        <li><a class="items" href="../order.php">My Orders</a></li>
                                         <li><a class="items" href="../account-billing.php">Billing Info</a></li>';
         } else if ($page == 'sub-daughter'){
             echo                       '<li><a class="items" href="../../account.php">Store account</a></li>
-                                        <li><a class="items" href="../../cart.php">My Items</a></li>
-                                        <li><a class="items" href="../../shop-id.php">My Orders</a></li>
+                                        <li><a class="items" href="../../cart.php">My Orders</a></li>
+                                        <li><a class="items" href="../../order.php">My Orders</a></li>
                                         <li><a class="items" href="../../account-billing.php">Billing Info</a></li>';
         }
         else {
             echo                       '<li><a class="items" href="account.php">Store account</a></li>
                                         <li><a class="items" href="cart.php">My Items</a></li>
-                                        <li><a class="items" href="shop-id.php">My Orders</a></li>
+                                        <li><a class="items" href="order.php">My Orders</a></li>
                                         <li><a class="items" href="account-billing.php">Billing Info</a></li>';
         }
          echo                      '</ul>
@@ -705,6 +668,11 @@ class DefaultView
                             <div class="col-sm-2 wow fadeInRight">
                                 <div class="small-devices-decoration">
                                     <h class="float-right"><a class="items default-hidden" id="displayTextFooter3" href="javascript:toggle3();">Abous Us</a></h>
+
+                                    <div class="pull-right default-hidden margin-for-footer">
+                                        <a id="displayTextFooter3" href="javascript:toggle3();"><img alt="arrow3" src="../images/arrow-down.png" width="20" height="20" /></a>
+                                    </div>
+
                                     <div class="divider-for-small-devices"></div>
                                 </div>
                                 <div id="toggleTextFooter3">
@@ -718,7 +686,7 @@ class DefaultView
                                         <li><a class="items" href="../business.php">Business</a></li>
                                         <li><a class="items" href="../director.php">Director</a></li>
                                         <li><a class="items" href="../job.php">Job</a></li>
-                                        <li><a class="items" href="../index.php">Contact Us</a></li>';
+                                        <li><a class="items" href="/shop/contact/">Contact Us</a></li>';
          } else if($page == 'sub-daughter'){
              echo                      '<li><a class="items" href="../../our-company.php">Our company</a></li>
                                         <li><a class="items" href="../../people.php">In-touch People</a></li>
@@ -727,7 +695,7 @@ class DefaultView
                                         <li><a class="items" href="../../business.php">Business</a></li>
                                         <li><a class="items" href="../../director.php">Director</a></li>
                                         <li><a class="items" href="../../job.php">Job</a></li>
-                                        <li><a class="items" href="../../index.php">Contact Us</a></li>';
+                                        <li><a class="items" href="/shop/contact/">Contact Us</a></li>';
          } else {
              echo                      '<li><a class="items" href="our-company.php">Our company</a></li>
                                         <li><a class="items" href="people.php">In-touch People</a></li>
@@ -736,7 +704,7 @@ class DefaultView
                                         <li><a class="items" href="business.php">Business</a></li>
                                         <li><a class="items" href="director.php">Director</a></li>
                                         <li><a class="items" href="job.php">Job</a></li>
-                                        <li><a class="items" href="index.php">Contact Us</a></li>';
+                                        <li><a class="items" href="/shop/contact/">Contact Us</a></li>';
          }
          echo                       '</ul>
                                 </div>
@@ -744,6 +712,11 @@ class DefaultView
                             <div class="col-sm-2 wow fadeInRight">
                                 <div class="small-devices-decoration">
                                     <h class="float-right"><a class="items default-hidden" id="displayTextFooter4" href="javascript:toggle4();">For education & Business</a></h>
+
+                                    <div class="pull-right default-hidden margin-for-footer">
+                                        <a id="displayTextFooter4" href="javascript:toggle4();"><img alt="arrow4" src="../images/arrow-down.png" width="20" height="20" /></a>
+                                    </div>
+
                                     <div class="divider-for-small-devices"></div>
                                 </div>
                                 <div id="toggleTextFooter4">

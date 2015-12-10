@@ -233,8 +233,9 @@ p, h1,a  {
 	font-size: 25px;
 	color: #666666;
 }
-.links {
+#main-link {
 	font-size: 20px;
+	color: #5bc0de;
 }
 .adding {
 	font-size: 15px;

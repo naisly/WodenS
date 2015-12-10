@@ -44,7 +44,7 @@ class ContactUsView extends DefaultView
                                   <h class="fixed-header">Contact Us</h>
                               </div>
                               <div class="buy-main pull-right">
-                                  <a style="color: white" class="btn btn-primary button-buy buy-phones" href="/shop/support.php">Support</a>
+                                  <a style="color: white;" class="btn btn-primary button-buy buy-phones" href="/shop/support.php">Support</a>
                               </div>
                           </div>
                           <div class="col-md-1"></div>

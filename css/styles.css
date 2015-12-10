@@ -250,6 +250,9 @@ a:link {
 		margin-left: 0px;
 		margin-top: 30px;
 	}
+	.margin-for-footer {
+		margin-right: 25px;
+	}
 }
 
 
@@ -285,6 +288,9 @@ a:link {
 @media (min-width: 768px){
 	.navbar-brand > img {
 		margin-left: 70px;
+	}
+	.margin-for-small-devices {
+		margin-left: 38px;
 	}
 }
 @media (min-width: 1200px){
