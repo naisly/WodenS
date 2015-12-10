@@ -1,0 +1,90 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.main-content-background {
+    margin-top: -20px;
+    padding-bottom: 54%;
+    background: url('../images/contact-us.jpg') center no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+}
+.text-at-the-bottom {
+    margin-top: 18%;
+}
+.main-header {
+    margin-left: 27px;
+    font-size: 22px;
+    color: #fff;
+    font-family: RobotoLight;
+    letter-spacing: 0.3px;
+}
+ul.sub-navigation li {
+    display: inline-block;
+    font-size: 22px;
+    margin-right: 20px;
+}
+#nav-links {
+    font-size: 22px;
+    color: #fff;
+    text-decoration: none;
+    font-family: RobotoLight;
+}
+.contact {
+    font-size: 48px;
+    font-family: RobotoLight;
+    letter-spacing: 0.2px;
+}
+.header-category {
+    font-size: 35px;
+    font-family: RobotoLight;
+}
+.sub-header-category {
+    font-size: 24px;
+    font-family: RobotoLight;
+}
+#default-link {
+    color: #5bc0de;
+}
+.content-header {
+    font-size: 17px;
+    font-family: RobotoLight;
+}
+#contact-divider {
+    width: 100%;
+    height: 2px;
+    background-color: #e4e4e4;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#business-center {
+    width: 100%;
+    height: auto;
+}
+ul.contact-data li {
+    list-style-type: disc;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+.warning {
+    color: #ac5050;
+    font-family: RobotoLight;
+    font-size: 16px;
+}
+#warning {
+    margin-bottom: 20px;
+}
+.area-name {
+    margin-bottom: 20px;
+}
+.area-header {
+    font-size: 27px;
+    font-family: RobotoLight;
+    letter-spacing: 0.4px;
+}
+
+@media (max-height: 766px){
+    ul.contact-data {
+        margin-top: 20px;
+    }
+}

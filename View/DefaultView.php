@@ -45,7 +45,7 @@ class DefaultView
                     <!-- Latest compiled and minified CSS -->
                     <meta name="viewport" content="width=device-width, initial-scale=1">';
 
-        if( $page == '2nd level of input' ) {
+        if( $page == 'contact-us' ) {
             echo   '<link rel="stylesheet" href="../css/bootstrap.css">
                     <link rel="shortcut icon" href="../images/favicon.ico" />
                     <script src="../js/jquery-min.js"></script>
@@ -158,6 +158,9 @@ class DefaultView
                   <link href="../../css/business-laptops.css" rel="stylesheet" type="text/css">
                   <link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
                   <link href="../../css/financing.css" rel="stylesheet" type="text/css">';
+        } else if($page == 'contact-us'){
+            echo '<link href="../css/contact-us.css" rel="stylesheet" type="text/css">
+                  <link href="../css/education-phones.css" rel="stylesheet" type="text/css">';
         }
         else {
             echo '<link rel="stylesheet" href="css/default.css" />' .
@@ -184,7 +187,7 @@ class DefaultView
                             <span class="icon-bar"></span>
                         </button>';
 
-        if ($page == '2-nd level input'){
+        if ($page == 'daughter'){
             echo       '<a class="navbar-brand white-link" href="../index.php">
                             <img alt="Brand" src="../images/default.png">';
             echo '</a>
@@ -715,7 +718,7 @@ class DefaultView
                                         <li><a class="items" href="../business.php">Business</a></li>
                                         <li><a class="items" href="../director.php">Director</a></li>
                                         <li><a class="items" href="../job.php">Job</a></li>
-                                        <li><a class="items" href="../contact-us.php">Contact Us</a></li>';
+                                        <li><a class="items" href="../index.php">Contact Us</a></li>';
          } else if($page == 'sub-daughter'){
              echo                      '<li><a class="items" href="../../our-company.php">Our company</a></li>
                                         <li><a class="items" href="../../people.php">In-touch People</a></li>
@@ -724,7 +727,7 @@ class DefaultView
                                         <li><a class="items" href="../../business.php">Business</a></li>
                                         <li><a class="items" href="../../director.php">Director</a></li>
                                         <li><a class="items" href="../../job.php">Job</a></li>
-                                        <li><a class="items" href="../../contact-us.php">Contact Us</a></li>';
+                                        <li><a class="items" href="../../index.php">Contact Us</a></li>';
          } else {
              echo                      '<li><a class="items" href="our-company.php">Our company</a></li>
                                         <li><a class="items" href="people.php">In-touch People</a></li>
@@ -733,7 +736,7 @@ class DefaultView
                                         <li><a class="items" href="business.php">Business</a></li>
                                         <li><a class="items" href="director.php">Director</a></li>
                                         <li><a class="items" href="job.php">Job</a></li>
-                                        <li><a class="items" href="contact-us.php">Contact Us</a></li>';
+                                        <li><a class="items" href="index.php">Contact Us</a></li>';
          }
          echo                       '</ul>
                                 </div>
