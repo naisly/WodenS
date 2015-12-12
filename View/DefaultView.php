@@ -45,39 +45,18 @@ class DefaultView
                     <!-- Latest compiled and minified CSS -->
                     <meta name="viewport" content="width=device-width, initial-scale=1">';
 
-        if( $page == 'contact-us' ) {
-            echo   '<link rel="stylesheet" href="../css/bootstrap.css">
-                    <link rel="shortcut icon" href="../images/favicon.ico" />
-                    <script src="../js/jquery-min.js"></script>
+        echo       '<link rel="stylesheet" href="/shop/css/bootstrap.css">
+                    <link rel="shortcut icon" href="/shop/images/favicon-default.png" />
+                    <script src="/shop/js/jquery-min.js"></script>
                     <!-- bxSlider Javascript file -->
-                    <script src="../js/bootstrap.min.js"></script>
-                    <link href="../css/styles.css" rel="stylesheet" type="text/css">
+                    <script src="/shop/js/bootstrap.min.js"></script>
+                    <link href="/shop/css/styles.css" rel="stylesheet" type="text/css">
                     <!-- Optional theme -->
-                    <link rel="stylesheet" href="../css/bootstrap-theme.css">
+                    <link rel="stylesheet" href="/shop/css/bootstrap-theme.css">
                     <!-- Files of Styles -->
                     ';
-        } else if( $page == 'business-laptops' || $page == 'education-phones' || $page == 'education-laptops' || $page == 'business-phones' || $page == 'business-devices' ){
-            echo   '<link rel="stylesheet" href="../../css/bootstrap.css">
-                    <link rel="shortcut icon" href="../../images/favicon.ico" />
-                    <script src="../../js/jquery-min.js"></script>
-                    <!-- bxSlider Javascript file -->
-                    <script src="../../js/bootstrap.min.js"></script>
-                    <link href="../../css/styles.css" rel="stylesheet" type="text/css">
-                    <!-- Optional theme -->
-                    <link rel="stylesheet" href="../../css/bootstrap-theme.css">
-                    <!-- Files of Styles -->
-                    ';
-        }
-        else {
-            echo   '<link rel="stylesheet" href="css/bootstrap.css">
-                    <link rel="shortcut icon" href="images/favicon.ico" />
-                    <link href="css/styles.css" rel="stylesheet" type="text/css">
-                    <!-- Optional theme -->
-                    <link rel="stylesheet" href="css/bootstrap-theme.css">
-                    <!-- Files of Styles -->';
-        }
 
-        echo '<script src="../js/SrcChanger.js"></script>';
+        echo       '<script src="/shop/js/SrcChanger.js"></script>';
 
         if($page == 'devices'){
             echo '<link href="css/devices.css" rel="stylesheet" type="text/css">';
@@ -190,29 +169,29 @@ class DefaultView
                             <span class="icon-bar"></span>
                         </button>';
 
-        if ($page == 'daughter'){
-            echo       '<a class="navbar-brand white-link" href="../index.php">
-                            <img alt="Brand" src="../images/default.png">';
+        #if ($page == 'daughter'){
+            echo       '<a class="navbar-brand white-link" href="/shop/index.php">
+                            <img alt="Brand" src="/shop/images/main-favicon.png" width="35" height="35">';
             echo '</a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li><a href="../phones-all.php" class="white-link">Phones <span class="sr-only">(current)</span></a></li>
-                            <li><a href="../laptops.php" class="white-link">Laptops</a></li>
-                            <li><a href="../devices.php" class="white-link">Devices</a></li>
-                            <li><a href="../tv.php" class="white-link">TV</a></li>
-                            <li><a href="../support.php" class="white-link">Support</a></li>
+                            <li><a href="/shop/phones-all.php" class="white-link">Phones <span class="sr-only">(current)</span></a></li>
+                            <li><a href="/shop/laptops.php" class="white-link">Laptops</a></li>
+                            <li><a href="/shop/devices.php" class="white-link">Devices</a></li>
+                            <li><a href="/shop/tv.php" class="white-link">TV</a></li>
+                            <li><a href="/shop/support.php" class="white-link">Support</a></li>
                             <li class="dropdown">
                         <a href="#" class="dropdown-toggle white-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart <span class="caret"></span></a>
                         <ul class="dropdown-menu">';
             if (isset($_SESSION['login_user'])) {
-                echo '<li><a href="../logout.php">';
+                echo '<li><a href="/shop/logout.php">';
                 echo 'Logout(' . $_SESSION['login_user'] . ')</a></li>';
                 session_write_close();
             } else {
-                echo '<li><a href="../register.php">Register</a></li>';
-                echo '<li><a href="../login.php">';
+                echo '<li><a href="/shop/register.php">Register</a></li>';
+                echo '<li><a href="/shop/login.php">';
                 echo 'Login</a></li>';
                 session_write_close();
             }
@@ -220,7 +199,7 @@ class DefaultView
                                                             <li role="separator" class="divider"></li>
                                                             <li class="dropdown-header">Products</li>';
             if (isset($_SESSION['login_user'])) {
-                echo '<li><a href="../cart.php">Cart: ' . $this->model->getAPrice() . '$';
+                echo '<li><a href="/shop/cart.php">Cart: ' . $this->model->getAPrice() . '$';
                 echo '<li><a href="#">' . $this->model->getAItems() . ' items</a>';
             } else {
                 echo ' <li><a href="#">Login to see your cart</a></li>';
@@ -232,91 +211,6 @@ class DefaultView
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>';
-        } else if($page == 'business' || $page == 'education'){
-            echo '<a class="navbar-brand white-link" href="index.php">
-                            <img alt="Brand" src="../../images/default.png">';
-            echo '</a>
-                    </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li><a href="../../phones-all.php" class="white-link">Phones <span class="sr-only">(current)</span></a></li>
-                            <li><a href="../../laptops.php" class="white-link">Laptops</a></li>
-                            <li><a href="../../devices.php" class="white-link">Devices</a></li>
-                            <li><a href="../../tv.php" class="white-link">TV</a></li>
-                            <li><a href="../../support.php" class="white-link">Support</a></li>
-                            <li class="dropdown">
-                        <a href="#" class="dropdown-toggle white-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart <span class="caret"></span></a>
-                        <ul class="dropdown-menu">';
-            if (isset($_SESSION['login_user'])) {
-                echo '<li><a href="../../logout.php">';
-                echo 'Logout(' . $_SESSION['login_user'] . ')</a></li>';
-                session_write_close();
-            } else {
-                echo '<li><a href="../../register.php">Register</a></li>';
-                echo '<li><a href="../../login.php">';
-                echo 'Login</a></li>';
-                session_write_close();
-            }
-            echo '
-                                                            <li role="separator" class="divider"></li>
-                                                            <li class="dropdown-header">Products</li>';
-            if (isset($_SESSION['login_user'])) {
-                echo '<li><a href="../../cart.php">Cart: ' . $this->model->getAPrice() . '$';
-                echo '<li><a href="#">' . $this->model->getAItems() . ' items</a>';
-            } else {
-                echo ' <li><a href="#">Login to see your cart</a></li>';
-            }
-            echo '
-                        </ul>
-                    </li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </div><!-- /.container-fluid -->
-            </nav>';
-        } else {
-            echo '<a class="navbar-brand white-link" href="index.php">
-                            <img alt="Brand" src="images/default.png">';
-            echo '</a>
-                    </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li><a href="phones-all.php" class="white-link">Phones <span class="sr-only">(current)</span></a></li>
-                            <li><a href="laptops.php" class="white-link">Laptops</a></li>
-                            <li><a href="devices.php" class="white-link">Devices</a></li>
-                            <li><a href="tv.php" class="white-link">TV</a></li>
-                            <li><a href="support.php" class="white-link">Support</a></li>
-                            <li class="dropdown">
-                        <a href="#" class="dropdown-toggle white-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart <span class="caret"></span></a>
-                        <ul class="dropdown-menu">';
-            if (isset($_SESSION['login_user'])) {
-                echo '<li><a href="logout.php">';
-                echo 'Logout(' . $_SESSION['login_user'] . ')</a></li>';
-                session_write_close();
-            } else {
-                echo '<li><a href="register.php">Register</a></li>';
-                echo '<li><a href="login.php">';
-                echo 'Login</a></li>';
-                session_write_close();
-            }
-            echo '
-                                                            <li role="separator" class="divider"></li>
-                                                            <li class="dropdown-header">Products</li>';
-            if (isset($_SESSION['login_user'])) {
-                echo '<li><a href="cart.php">Cart: ' . $this->model->getAPrice() . '$';
-                echo '<li><a href="#">' . $this->model->getAItems() . ' items</a>';
-            } else {
-                echo ' <li><a href="#">Login to see your cart</a></li>';
-            }
-            echo '
-                        </ul>
-                    </li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </div><!-- /.container-fluid -->
-            </nav>';
-        }
     }
     public function getUI( $category, $category_table ){
         $this->getItemsNames( $category );
@@ -517,7 +411,7 @@ class DefaultView
         while($i < $this->model->countBreadcrumbs()){
 
             if($this->model->getBreadcrumbs($i) == 'shop'){
-                echo '<a href="/shop"><img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/default-small.png" /></a>';
+                echo '<a href="/shop/index.php"><img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/favicon-default.png" width="20" height="20"/></a>';
             } else if($this->model->getBreadcrumbs($i) == 'index'){
                 echo '<h id="breadcrumbs">Home</h>';
             } else {
@@ -545,37 +439,20 @@ class DefaultView
                                 <div class="small-devices-decoration">
                                     <h class="float-right"><a class="items default-hidden" id="displayTextFooter" href="javascript:toggle();">Shop</a></h>
                                     <div class="pull-right default-hidden margin-for-footer">
-                                        <a id="displayTextFooter" href="javascript:toggle();"><img alt="arrow" src="../images/arrow-down.png" width="20" height="20" /></a>
+                                        <a id="displayTextFooter" href="javascript:toggle();"><img alt="arrow" src="/shop/images/arrow-down.png" width="20" height="20" /></a>
                                     </div>
                                 </div>
                                 <div id="toggleTextFooter">
                                     <ul>
-                                        <li class="footer-menu"><b>Shop</b></li>';
-        if($page == 'daughter') {
-            echo                       '<li><a class="items" href="../index.php">Home</a></li>
-                                        <li><a class="items" href="../phones-all.php">Phones</a></li>
-                                        <li><a class="items" href="../laptops.php">Laptops</a></li>
-                                        <li><a class="items" href="../devices.php">Devices</a></li>
-                                        <li><a class="items" href="../tv.php">TV</a></li>
-                                        <li><a class="items" href="../support.php">Support</a></li>
-                                        <li><a class="items" href="../cart.php">Cart</a></li>';
-        } else if($page == 'sub-daughter') {
-            echo                       '<li><a class="items" href="../../index.php">Home</a></li>
-                                        <li><a class="items" href="../../phones-all.php">Phones</a></li>
-                                        <li><a class="items" href="../../laptops.php">Laptops</a></li>
-                                        <li><a class="items" href="../../devices.php">Devices</a></li>
-                                        <li><a class="items" href="../../tv.php">TV</a></li>
-                                        <li><a class="items" href="../../support.php">Support</a></li>
-                                        <li><a class="items" href="../../cart.php">Cart</a></li>';
-        } else {
-            echo                       '<li><a class="items" href="index.php">Home</a></li>
-                                        <li><a class="items" href="phones-all.php">Phones</a></li>
-                                        <li><a class="items" href="laptops.php">Laptops</a></li>
-                                        <li><a class="items" href="devices.php">Devices</a></li>
-                                        <li><a class="items" href="tv.php">TV</a></li>
-                                        <li><a class="items" href="support.php">Support</a></li>
-                                        <li><a class="items" href="cart.php">Cart</a></li>';
-        }
+                                        <li class="footer-menu"><b>Shop</b></li>
+                                        <li><a class="items" href="/shop/index.php">Home</a></li>
+                                        <li><a class="items" href="/shop/phones-all.php">Phones</a></li>
+                                        <li><a class="items" href="/shop/laptops.php">Laptops</a></li>
+                                        <li><a class="items" href="/shop/devices.php">Devices</a></li>
+                                        <li><a class="items" href="/shop/tv.php">TV</a></li>
+                                        <li><a class="items" href="/shop/support.php">Support</a></li>
+                                        <li><a class="items" href="/shop/cart.php">Cart</a></li>';
+
          echo                       '</ul>
                                 </div>
 
@@ -585,7 +462,7 @@ class DefaultView
                                     <h class="float-right"><a class="items default-hidden" id="displayTextFooter1" href="javascript:toggle1();">Store</a></h>
 
                                     <div class="pull-right default-hidden margin-for-footer">
-                                        <a id="displayTextFooter1" href="javascript:toggle1();"><img alt="arrow1" src="../images/arrow-down.png" width="20" height="20" /></a>
+                                        <a id="displayTextFooter1" href="javascript:toggle1();"><img alt="arrow1" src="/shop/images/arrow-down.png" width="20" height="20" /></a>
                                     </div>
 
                                     <div class="divider-for-small-devices"></div>
@@ -593,27 +470,13 @@ class DefaultView
                                 <form action="support.php" method="post">
                                     <div id="toggleTextFooter1">
                                         <ul>
-                                            <li class="footer-menu"><b>Store</b></li>';
-         if($page == 'daughter') {
-             echo                          '<li><a class="items" href="../store.php">Find our store</a></li>
-                                            <li><a class="items" href="../financing.php">Financing</a></li>
-                                            <li><a class="items" href="../order.php">Order Status</a></li>
+                                            <li class="footer-menu"><b>Store</b></li>
+                                            <li><a class="items" href="/shop/store.php">Find our store</a></li>
+                                            <li><a class="items" href="/shop/financing.php">Financing</a></li>
+                                            <li><a class="items" href="/shop/order.php">Order Status</a></li>
                                             <li><button id="link_as_button" class="items">Shopping help</button></li>
-                                            <li><a class="items" href="../search-answers.php">Questions & Answers</a></li>';
-         } else if($page == 'sub-daughter'){
-             echo                          '<li><a class="items" href="../../store.php">Find our store</a></li>
-                                            <li><a class="items" href="../../financing.php">Financing</a></li>
-                                            <li><a class="items" href="../../order.php">Order Status</a></li>
-                                            <li><button id="link_as_button" class="items">Shopping help</button></li>
-                                            <li><a class="items" href="../../search-answers.php">Questions & Answers</a></li>';
-         }
-         else {
-             echo                          '<li><a class="items" href="store.php">Find our store</a></li>
-                                            <li><a class="items" href="financing.php">Financing</a></li>
-                                            <li><a class="items" href="order.php">Order Status</a></li>
-                                            <li><button id="link_as_button" class="items">Shopping help</button></li>
-                                            <li><a class="items" href="search-answers.php">Questions & Answers</a></li>';
-         }
+                                            <li><a class="items" href="/shop/search-answers.php">Questions & Answers</a></li>';
+
          echo                           '</ul>
                                     </div>
                             <input type="hidden" value="1" name="shopping_help" />
@@ -624,44 +487,25 @@ class DefaultView
                                     <h class="float-right"><a class="items default-hidden" id="displayTextFooter2" href="javascript:toggle2();">Account</a></h>
 
                                     <div class="pull-right default-hidden margin-for-footer">
-                                        <a id="displayTextFooter2" href="javascript:toggle2();"><img alt="arrow2" src="../images/arrow-down.png" width="20" height="20" /></a>
+                                        <a id="displayTextFooter2" href="javascript:toggle2();"><img alt="arrow2" src="/shop/images/arrow-down.png" width="20" height="20" /></a>
                                     </div>
 
                                     <div class="divider-for-small-devices"></div>
                                 </div>
                                 <div id="toggleTextFooter2">
                                     <ul>
-                                        <li class="footer-menu"><b>Account</b></li>';
-        if($page == 'daughter') {
-            echo                       '<li><a class="items" href="../account.php">Store account</a></li>
-                                        <li><a class="items" href="../cart.php">My Items</a></li>
-                                        <li><a class="items" href="../order.php">My Orders</a></li>
-                                        <li><a class="items" href="../account-billing.php">Billing Info</a></li>';
-        } else if ($page == 'sub-daughter'){
-            echo                       '<li><a class="items" href="../../account.php">Store account</a></li>
-                                        <li><a class="items" href="../../cart.php">My Orders</a></li>
-                                        <li><a class="items" href="../../order.php">My Orders</a></li>
-                                        <li><a class="items" href="../../account-billing.php">Billing Info</a></li>';
-        }
-        else {
-            echo                       '<li><a class="items" href="account.php">Store account</a></li>
-                                        <li><a class="items" href="cart.php">My Items</a></li>
-                                        <li><a class="items" href="order.php">My Orders</a></li>
-                                        <li><a class="items" href="account-billing.php">Billing Info</a></li>';
-        }
+                                        <li class="footer-menu"><b>Account</b></li>
+                                        <li><a class="items" href="/shop/account.php">Store account</a></li>
+                                        <li><a class="items" href="/shop/cart.php">My Items</a></li>
+                                        <li><a class="items" href="/shop/order.php">My Orders</a></li>
+                                        <li><a class="items" href="/shop/account-billing.php">Billing Info</a></li>';
+
          echo                      '</ul>
                                     <ul>
-                                        <li class="footer-menu"><b>Most valuable</b></li>';
-        if($page == 'daughter') {
-            echo                       '<li><a class="items" href="../site-terms.php">Site Terms</a></li>
-                                        <li><a class="items" href="../privacy.php">Privacy</a></li>';
-        } else if($page == 'sub-daughter'){
-            echo                       '<li><a class="items" href="../../site-terms.php">Site Terms</a></li>
-                                        <li><a class="items" href="../../privacy.php">Privacy</a></li>';
-        } else {
-            echo                       '<li><a class="items" href="site-terms.php">Site Terms</a></li>
-                                        <li><a class="items" href="privacy.php">Privacy</a></li>';
-        }
+                                        <li class="footer-menu"><b>Most valuable</b></li>
+                                        <li><a class="items" href="/shop/site-terms.php">Site Terms</a></li>
+                                        <li><a class="items" href="/shop/privacy.php">Privacy</a></li>';
+
          echo                       '</ul>
                                 </div>
                             </div>
@@ -670,42 +514,23 @@ class DefaultView
                                     <h class="float-right"><a class="items default-hidden" id="displayTextFooter3" href="javascript:toggle3();">Abous Us</a></h>
 
                                     <div class="pull-right default-hidden margin-for-footer">
-                                        <a id="displayTextFooter3" href="javascript:toggle3();"><img alt="arrow3" src="../images/arrow-down.png" width="20" height="20" /></a>
+                                        <a id="displayTextFooter3" href="javascript:toggle3();"><img alt="arrow3" src="/shop/images/arrow-down.png" width="20" height="20" /></a>
                                     </div>
 
                                     <div class="divider-for-small-devices"></div>
                                 </div>
                                 <div id="toggleTextFooter3">
                                     <ul>
-                                        <li class="footer-menu"><b>About Us</b></li>';
-         if($page == 'daughter') {
-             echo                      '<li><a class="items" href="../our-company.php">Our company</a></li>
-                                        <li><a class="items" href="../people.php">In-touch People</a></li>
-                                        <li><a class="items" href="../managers.php">Our managers</a></li>
-                                        <li><a class="items" href="../offices.php">Offices</a></li>
-                                        <li><a class="items" href="../business.php">Business</a></li>
-                                        <li><a class="items" href="../director.php">Director</a></li>
-                                        <li><a class="items" href="../job.php">Job</a></li>
+                                        <li class="footer-menu"><b>About Us</b></li>
+                                        <li><a class="items" href="/shop/our-company.php">Our company</a></li>
+                                        <li><a class="items" href="/shop/people.php">In-touch People</a></li>
+                                        <li><a class="items" href="/shop/managers.php">Our managers</a></li>
+                                        <li><a class="items" href="/shop/offices.php">Offices</a></li>
+                                        <li><a class="items" href="/shop/business.php">Business</a></li>
+                                        <li><a class="items" href="/shop/director.php">Director</a></li>
+                                        <li><a class="items" href="/shop/job.php">Job</a></li>
                                         <li><a class="items" href="/shop/contact/">Contact Us</a></li>';
-         } else if($page == 'sub-daughter'){
-             echo                      '<li><a class="items" href="../../our-company.php">Our company</a></li>
-                                        <li><a class="items" href="../../people.php">In-touch People</a></li>
-                                        <li><a class="items" href="../../managers.php">Our managers</a></li>
-                                        <li><a class="items" href="../../offices.php">Offices</a></li>
-                                        <li><a class="items" href="../../business.php">Business</a></li>
-                                        <li><a class="items" href="../../director.php">Director</a></li>
-                                        <li><a class="items" href="../../job.php">Job</a></li>
-                                        <li><a class="items" href="/shop/contact/">Contact Us</a></li>';
-         } else {
-             echo                      '<li><a class="items" href="our-company.php">Our company</a></li>
-                                        <li><a class="items" href="people.php">In-touch People</a></li>
-                                        <li><a class="items" href="managers.php">Our managers</a></li>
-                                        <li><a class="items" href="offices.php">Offices</a></li>
-                                        <li><a class="items" href="business.php">Business</a></li>
-                                        <li><a class="items" href="director.php">Director</a></li>
-                                        <li><a class="items" href="job.php">Job</a></li>
-                                        <li><a class="items" href="/shop/contact/">Contact Us</a></li>';
-         }
+
          echo                       '</ul>
                                 </div>
                             </div>
@@ -714,41 +539,24 @@ class DefaultView
                                     <h class="float-right"><a class="items default-hidden" id="displayTextFooter4" href="javascript:toggle4();">For education & Business</a></h>
 
                                     <div class="pull-right default-hidden margin-for-footer">
-                                        <a id="displayTextFooter4" href="javascript:toggle4();"><img alt="arrow4" src="../images/arrow-down.png" width="20" height="20" /></a>
+                                        <a id="displayTextFooter4" href="javascript:toggle4();"><img alt="arrow4" src="/shop/images/arrow-down.png" width="20" height="20" /></a>
                                     </div>
 
                                     <div class="divider-for-small-devices"></div>
                                 </div>
                                 <div id="toggleTextFooter4">
                                     <ul>
-                                        <li class="footer-menu education"><b>For education</b></li>';
-         if( $page == 'daughter') {
-             echo                      '<li><a class="items" href="../education/laptops/">Notebooks</a></li>
-                                        <li><a class="items" href="../education/phones/">Phones</a></li>';
-         } else if( $page == 'sub-daughter'){
-             echo                      '<li><a class="items" href="../../education/laptops/">Notebooks</a></li>
-                                        <li><a class="items" href="../../education/phones/">Phones</a></li>';
-         } else {
-             echo                      '<li><a class="items" href="education/laptops/">Notebooks</a></li>
-                                        <li><a class="items" href="education/phones/">Phones</a></li>';
-         }
+                                        <li class="footer-menu education"><b>For education</b></li>
+                                        <li><a class="items" href="/shop/education/laptops/">Notebooks</a></li>
+                                        <li><a class="items" href="/shop/education/phones/">Phones</a></li>';
+
          echo                      '</ul>
                                     <ul>
-                                        <li class="footer-menu"><b>For Business</b></li>';
-         if( $page == 'daughter') {
-             echo                      '<li><a class="items" href="../business/laptops/">Using notebooks in business</a></li>
-                                        <li><a class="items" href="../business/phones/">Using phones in business</a></li>
-                                        <li><a class="items" href="../business/devices/">Using devices in business</a></li>';
-         } else if( $page == 'sub-daughter'){
-             echo                      '<li><a class="items" href="../../business/laptops/">Using notebooks in business</a></li>
-                                        <li><a class="items" href="../../business/phones/">Using phones in business</a></li>
-                                        <li><a class="items" href="../../business/devices/">Using devices in business</a></li>';
-         }
-         else {
-             echo                      '<li><a class="items" href="business/laptops/">Using notebooks in business</a></li>
-                                        <li><a class="items" href="business/phones/">Using phones in business</a></li>
-                                        <li><a class="items" href="business/devices/">Using devices in business</a></li>';
-         }
+                                        <li class="footer-menu"><b>For Business</b></li>
+                                        <li><a class="items" href="/shop/business/laptops/">Using notebooks in business</a></li>
+                                        <li><a class="items" href="/shop/business/phones/">Using phones in business</a></li>
+                                        <li><a class="items" href="/shop/business/devices/">Using devices in business</a></li>';
+
          echo                       '</ul>
                                 </div>
                             </div>
@@ -809,7 +617,10 @@ class DefaultView
               </script>
               <script type="text/javascript">
                 check_preload=1;
-              </script>';
+              </script>
+              <script src="/shop/js/jquery-min.js"></script>
+              <!-- bxSlider Javascript file -->
+              <script src="/shop/js/bootstrap.min.js"></script>';
     }
     public function getFooter() {
         echo '<div class="bottom-spacer">
