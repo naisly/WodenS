@@ -89,7 +89,7 @@ class OrderStatusView extends DefaultView
 
                       ';
             $k = 0;
-            while ($k < $this->model->countCategories()){
+            while ($k < 1){
                 echo '<h class="category">' . $this->model->getCategory($k) . ': ' . $this->model->getCountCategories($k);
                 if ($this->model->getCountCategories($k) == 1){
                     echo ' item</p><br />';
@@ -105,11 +105,12 @@ class OrderStatusView extends DefaultView
                                <div class="row">';
 
             $i = 0;
+
             while($i < $this->model->countCategories()){
                 echo  '<div class="col-md-3">' .
                       '<h class="original">' . $this->model->getOriginalName($i) . '</h><br />
-                      <img src="' . $this->model->getPhoto($i) . '" width="150" height="150" />
-                      <h class="category">by <a href="' . $this->model->getCategory($i) . '-' . $this->model->getTable($i) . '.php">' . $this->model->getCategory($i) . ' Inc.</a></h><br />
+                      <img src="' . $this->model->getPhoto($i) . '" width="150" height="150" style="margin-top: 7px; margin-bottom: 7px;" />
+                      <h class="category">by <a href="' . $this->model->getCategory($i) . '-' . $this->model->getTable(0) . '.php">' . $this->model->getCategory($i) . ' Inc.</a></h><br />
                       <h>$' . $this->model->getPrice($i) . '</h><br />
                       <h>Ordered shipping: <span id="underline">' . $this->model->getShipping($i) . ' days</span></h>' .
                       '</div>';

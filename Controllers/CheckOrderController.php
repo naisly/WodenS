@@ -115,7 +115,7 @@ class CheckOrderController extends DefaultController
 
                         $j++;
                     }
-
+                    //print_r( $result_quantity );
                     $this->model->setCategory( $category_result_array );
                     $this->model->setCountCategories( $result_quantity );
                 }
@@ -155,7 +155,7 @@ class CheckOrderController extends DefaultController
         if(isset($status)) {
             $sql_stmt = "SELECT product_table, id FROM $status WHERE order_id='$order_number'";
             $result_stmt = $mysqli->query( $sql_stmt );
-
+            //echo $sql_stmt;
             $product_table_array = array();
             $id_array = array();
 
@@ -173,12 +173,13 @@ class CheckOrderController extends DefaultController
             $shipping_array = array();
             $price_array = array();
             $category_array = array();
-
+            //print_r($id_array);
             while ($i < count($id_array)) {
                 $sql_query = "SELECT $product_table_array[$i].original_name, $product_table_array[$i].photo, $product_table_array[$i].shipping,
                               $status.price, $status.category FROM
-                              $product_table_array[$i] INNER JOIN $status WHERE $status.id = $product_table_array[$i].id AND $status.id = $id_array[$i]";
-
+                              $product_table_array[$i] INNER JOIN $status WHERE $status.id = $product_table_array[$i].id AND $status.id = $id_array[$i]
+                              AND $status.order_id = '$order_number' LIMIT 1";
+                //echo $sql_query;
                 $result = $mysqli->query( $sql_query );
 
                 if ($result->num_rows > 0) {
