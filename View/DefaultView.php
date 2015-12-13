@@ -141,6 +141,8 @@ class DefaultView
         } else if($page == 'Contact Us'){
             echo '<link href="../css/contact-us.css" rel="stylesheet" type="text/css">
                   <link href="../css/education-phones.css" rel="stylesheet" type="text/css">';
+        } else if($page == 'Education'){
+            echo '<link href="../css/education.css" rel="stylesheet" type="text/css">';
         }
         else {
             echo '<link rel="stylesheet" href="css/default.css" />' .
@@ -473,7 +475,9 @@ class DefaultView
                                             <li><a class="items" href="/shop/financing.php">Financing</a></li>
                                             <li><a class="items" href="/shop/order.php">Order Status</a></li>
                                             <li><button id="link_as_button" class="items">Shopping help</button></li>
-                                            <li><a class="items" href="/shop/search-answers.php">Questions & Answers</a></li>';
+                                            <li><a class="items" href="/shop/search-answers.php">Questions & Answers</a></li>
+                                            <li><a class="items" href="/shop/education/">Education</a></li>
+                                            <li><a class="items" href="/shop/business/">Business</a></li>';
 
          echo                           '</ul>
                                     </div>
@@ -545,13 +549,13 @@ class DefaultView
                                 <div id="toggleTextFooter4">
                                     <ul>
                                         <li class="footer-menu education"><b>For education</b></li>
-                                        <li><a class="items" href="/shop/education/laptops/">Notebooks</a></li>
+                                        <li><a class="items" href="/shop/education/laptops/">Laptops</a></li>
                                         <li><a class="items" href="/shop/education/phones/">Phones</a></li>';
 
          echo                      '</ul>
                                     <ul>
                                         <li class="footer-menu"><b>For Business</b></li>
-                                        <li><a class="items" href="/shop/business/laptops/">Using notebooks in business</a></li>
+                                        <li><a class="items" href="/shop/business/laptops/">Using laptops in business</a></li>
                                         <li><a class="items" href="/shop/business/phones/">Using phones in business</a></li>
                                         <li><a class="items" href="/shop/business/devices/">Using devices in business</a></li>';
 
