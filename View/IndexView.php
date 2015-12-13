@@ -20,7 +20,7 @@ class IndexView extends DefaultView
 
     public function getIndexPage() {
 
-        $this->DoctypeView( 'index' );
+        $this->DoctypeView( 'Index' );
         $this->headerView( 'index' );
         $this->getSlider();
         $this->getColumns();

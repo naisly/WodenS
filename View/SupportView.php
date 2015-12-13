@@ -39,7 +39,7 @@ class SupportView extends DefaultView
         $this->getFooter();
     }
 
-    private function getFooter() {
+    public function getFooter() {
 
         echo '<div class="bottom-spacer">
                <div class="row">

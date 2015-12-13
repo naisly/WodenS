@@ -26,7 +26,7 @@ class AccountInfoView extends AccountOrderView
 
     public function getAccountPage() {
 
-        $this->DoctypeView( 'account' );
+        $this->DoctypeView( 'Account' );
         $this->headerView( 'account' );
         $this->getAccountBar();
         $this->getOrderTable();

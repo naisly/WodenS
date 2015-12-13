@@ -26,7 +26,7 @@ class ContactUsView extends DefaultView
 
     public function getContactPage() {
 
-        $this->DoctypeView( 'contact-us' );
+        $this->DoctypeView( 'Contact Us' );
         $this->headerView( 'daughter' );
 
         $this->getPage();

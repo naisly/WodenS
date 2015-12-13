@@ -26,7 +26,7 @@ class BusinessPhonesView extends DefaultView
 
     public function getBusinessPhonesPage() {
 
-        $this->DoctypeView( 'business-phones' );
+        $this->DoctypeView( 'Phones - Business' );
         $this->headerView( 'business' );
 
         $this->getMain();

@@ -20,7 +20,7 @@ class PhonesView extends IndexView
 
     public function getPhonesPage() {
 
-        $this->DoctypeView( 'phones' );
+        $this->DoctypeView( 'Phones' );
         $this->headerView( 'phones' );
         $this->getMain();
         $this->getBlocks();

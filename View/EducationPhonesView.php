@@ -26,7 +26,7 @@ class EducationPhonesView extends DefaultView
 
     public function getEducationPhones() {
 
-        $this->DoctypeView( 'education-phones' );
+        $this->DoctypeView( 'Phones - Education' );
         $this->headerView( 'education' );
 
         $this->getMain();

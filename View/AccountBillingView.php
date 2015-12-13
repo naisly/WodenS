@@ -26,7 +26,7 @@ class AccountBillingView extends AccountOrderView
 
     public function getAccountBilling() {
 
-        $this->DoctypeView( 'account-billing' );
+        $this->DoctypeView( 'Account - Billing' );
         $this->headerView( 'account-billing' );
         $this->getAccountBar();
         $this->getBillingForm();

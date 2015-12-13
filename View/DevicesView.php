@@ -24,7 +24,7 @@ class DevicesView extends IndexView
 
     public function getDevicesPage() {
 
-        $this->DoctypeView( 'devices' );
+        $this->DoctypeView( 'Devices' );
         $this->headerView( 'devices' );
         $this->getMain();
         $this->getDescription();

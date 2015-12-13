@@ -34,8 +34,10 @@ class DefaultView
                 <head>';
         if ( $page == 'subdescription'){
             echo '<title>Woden S: ' . $this->model->getOriginalName(0) . '</title>';
-        } else {
+        } else if( $page == 'Index'){
             echo '<title>Woden S</title>';
+        } else {
+            echo "<title>" . $page . " - Woden S</title>";
         }
         echo       '<!-- HTML 5 markup and encoding utf-8 -->
                     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -58,26 +60,22 @@ class DefaultView
 
         echo       '<script src="/shop/js/SrcChanger.js"></script>';
 
-        if($page == 'devices'){
+        if($page == 'Devices'){
             echo '<link href="css/devices.css" rel="stylesheet" type="text/css">';
-        } else if ($page == 'index'){
+        } else if ($page == 'Index'){
             echo '<link href="css/jquery.bxslider.css" rel="stylesheet">
-                   <script src="js/jquery-min.js"></script>
-                   <!-- bxSlider Javascript file -->
-                   <script src="js/bootstrap.min.js"></script>
-                   <!-- bxSlider Javascript file -->
                   <script src="js/jquery.bxslider.min.js"></script>';
-        } else if ($page == 'notebooks'){
+        } else if ($page == 'Laptops'){
             echo '<link href="css/notebooks.css" rel="stylesheet" type="text/css">';
-        } else if ($page == 'phones'){
+        } else if ($page == 'Phones'){
             echo '<link href="css/phones.css" rel="stylesheet" type="text/css">' .
                 '<link rel="stylesheet" href="css/default.css">' .
                 '<link rel="stylesheet" href="css/animate.css">';
-        } else if ($page == 'support'){
+        } else if ($page == 'Support'){
             echo '<link href="css/support.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'TV'){
             echo '<link href="css/tv.css" rel="stylesheet" type="text/css">';
-        } else if ($page == 'login' || $page == 'admin' || $page == 'support-thanks'){
+        } else if ($page == 'Login' || $page == 'Admin' || $page == 'Thanks - Support'){
             echo '<link href="css/login.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'subdescription'){
             echo '<link href="css/jquery.bxslider.css" rel="stylesheet">
@@ -87,10 +85,10 @@ class DefaultView
                    <!-- bxSlider Javascript file -->
                   <script src="js/jquery.bxslider.min.js"></script>
                   <link href="css/subdescription.css" rel="stylesheet" type="text/css">';
-        } else if ($page == 'search'){
+        } else if ($page == 'Search'){
             echo '<link href="css/login.css" rel="stylesheet" type="text/css">
                   <link href="css/subdescription.css" rel="stylesheet" type="text/css">';
-        } else if ($page == 'store'){
+        } else if ($page == 'Store'){
             echo '<link href="css/store.css" rel="stylesheet" type="text/css">
                   <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
                   <link href="css/jquery.bxslider.css" rel="stylesheet">
@@ -99,48 +97,48 @@ class DefaultView
                   <script src="js/bootstrap.min.js"></script>
                   <!-- bxSlider Javascript file -->
                   <script src="js/jquery.bxslider.min.js"></script>';
-        }  else if ($page == 'order'){
+        }  else if ($page == 'Orders'){
             echo '<link href="css/checkorder.css" rel="stylesheet" type="text/css">';
-        }  else if ($page == 'status-order'){
+        }  else if ($page == 'Order - Status'){
             echo '<link href="css/status-order.css" rel="stylesheet" type="text/css">
                   <link href="css/login.css" rel="stylesheet" type="text/css">';
-        } else if ($page == 'profile'){
+        } else if ($page == 'Account - Cart'){
             echo '<link href="css/profile.css" rel="stylesheet" type="text/css">';
-        }  else if ($page == 'account-order' || $page == 'account' || $page == 'account-billing') {
-            if($page == 'account'){
+        }  else if ($page == 'Account - Orders' || $page == 'Account' || $page == 'Account - Billing') {
+            if($page == 'Account'){
                 echo '<link href="css/account.css" rel="stylesheet" type="text/css">';
             }
-            if ($page == 'account-billing'){
+            if ($page == 'Account - Billing'){
                 echo '<link href="css/account-billing.css" rel="stylesheet" type="text/css">';
             }
             echo '<link href="css/account-order.css" rel="stylesheet" type="text/css">
                   <link href="css/profile.css" rel="stylesheet" type="text/css">
                   <script src="js/jquery-min.js"></script>';
-        } else if($page == 'financing'){
+        } else if($page == 'Financing'){
             echo '<link href="css/financing.css" rel="stylesheet" type="text/css">';
-        } else if($page == 'education-laptops'){
+        } else if($page == 'Laptops - Education'){
             echo '<link href="../../css/education-laptops.css" rel="stylesheet" type="text/css">
                   <link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
                   <link href="../../css/financing.css" rel="stylesheet" type="text/css">';
-        } else if($page == 'education-phones'){
+        } else if($page == 'Phones - Education'){
             echo '<link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
                   <link href="../../css/financing.css" rel="stylesheet" type="text/css">';
-        } else if($page == 'business-laptops'){
+        } else if($page == 'Laptops - Business'){
             echo '<link href="../../css/business-laptops.css" rel="stylesheet" type="text/css">
                   <link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
                   <link href="../../css/financing.css" rel="stylesheet" type="text/css">
                   <link href="../../css/business-phones.css" rel="stylesheet" type="text/css">';
-        } else if($page == 'business-phones'){
+        } else if($page == 'Phones - Business'){
             echo '<link href="../../css/business-phones.css" rel="stylesheet" type="text/css">
                   <link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
                   <link href="../../css/financing.css" rel="stylesheet" type="text/css">';
-        } else if($page == 'business-devices'){
+        } else if($page == 'Devices - Business'){
             echo '<link href="../../css/business-devices.css" rel="stylesheet" type="text/css">
                   <link href="../../css/business-phones.css" rel="stylesheet" type="text/css">
                   <link href="../../css/business-laptops.css" rel="stylesheet" type="text/css">
                   <link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
                   <link href="../../css/financing.css" rel="stylesheet" type="text/css">';
-        } else if($page == 'contact-us'){
+        } else if($page == 'Contact Us'){
             echo '<link href="../css/contact-us.css" rel="stylesheet" type="text/css">
                   <link href="../css/education-phones.css" rel="stylesheet" type="text/css">';
         }
@@ -603,8 +601,8 @@ class DefaultView
                 </div>
                 </footer>';
         if($page !== 'Index'){
-            echo '<script src="js/jquery-min.js"></script>
-                      <script src="js/bootstrap.min.js"></script>';
+            echo '<script src="/shop/js/jquery-min.js"></script>
+                      <script src="/shop/js/bootstrap.min.js"></script>';
         }
         echo '<script type="text/javascript">
                 var check_preload;
@@ -617,10 +615,7 @@ class DefaultView
               </script>
               <script type="text/javascript">
                 check_preload=1;
-              </script>
-              <script src="/shop/js/jquery-min.js"></script>
-              <!-- bxSlider Javascript file -->
-              <script src="/shop/js/bootstrap.min.js"></script>';
+              </script>';
     }
     public function getFooter() {
         echo '<div class="bottom-spacer">

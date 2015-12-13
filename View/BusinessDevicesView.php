@@ -26,7 +26,7 @@ class BusinessDevicesView extends DefaultView
 
     public function getBusinessDevicesPage() {
 
-        $this->DoctypeView( 'business-devices' );
+        $this->DoctypeView( 'Devices - Business' );
         $this->headerView( 'business' );
 
         $this->getMain();
