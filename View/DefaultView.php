@@ -228,10 +228,16 @@ class DefaultView
         echo "<div class='items-row pointer'>
                   <div class='col-md-3'></div>
                        <div class='col-md-6 items-align'>
-                            <ul class='text-align'>
-                                <a style='font-size: 18px; margin-right: 15px; color: #e4e4e4; text-decoration: none;' class='categories-list' href='$category.php'>All</a>";
+                            <ul class='text-align'>";
+
+                            if($category == 'notebooks'){
+                                echo "<a style='font-size: 18px; margin-right: 15px; color: #e4e4e4; text-decoration: none;' class='categories-list' href='laptops.php'>All</a>";
+                            } else {
+                                echo "<a style='font-size: 18px; margin-right: 15px; color: #e4e4e4; text-decoration: none;' class='categories-list' href='$category'>All</a>";
+                            }
+
         foreach ($this->model->distinct_categories as $value => $key) {
-            echo "<a style='font-size: 18px; margin-right: 15px; color: #e4e4e4; text-decoration: none;' class='categories-list' href='{$this->model->distinct_categories[$value]}-{$category}.php'>" . $this->model->distinct_categories[$value] . "</a>";
+            echo "<a style='font-size: 18px; margin-right: 15px; color: #e4e4e4; text-decoration: none;' class='categories-list' href='{$this->model->distinct_categories[$value]}'>" . $this->model->distinct_categories[$value] . "</a>";
         }
         echo '               </ul>
                         </div>
@@ -335,6 +341,7 @@ class DefaultView
                 <div class="f_circleG" id="frotateG_08"></div>
             </div>';
         echo '<div class="col-md-9" id="total">';
+
         while ( $i < count($this->model->id)) {
             echo '<div class="row">
                     <div class="col-md-3 wow fadeInUp"';
@@ -342,7 +349,7 @@ class DefaultView
                 echo 'style="margin-top: 30px"';
             }
             echo    '>
-                        <img src="' . $this->model->getPhoto($i) . '" />
+                        <img src="../../' . $this->model->getPhoto($i) . '" />
                     </div>
                     <div class="col-md-5 wow fadeInUp">
                         <p class="spacer"></p>
@@ -378,8 +385,12 @@ class DefaultView
                             <input type="hidden" name="original_name" value="' . $this->model->getOriginalName($i) . '"/>
                         </form>
                     </div>
-                </div>
-                <div class="divider-items wow fadeInUp"></div>';
+                </div>';
+
+            if ($i < count($this->model->id) -1) {
+                echo '<div class="divider-items wow fadeInUp"></div>';
+            }
+
             $i++;
         }
         echo ' </div>
@@ -444,7 +455,7 @@ class DefaultView
                                         <li class="footer-menu"><b>Shop</b></li>
                                         <li><a class="items" href="/shop/index.php">Home</a></li>
                                         <li><a class="items" href="/shop/phones-all.php">Phones</a></li>
-                                        <li><a class="items" href="/shop/laptops.php">Laptops</a></li>
+                                        <li><a class="items" href="/shop/laptops/">Laptops</a></li>
                                         <li><a class="items" href="/shop/devices.php">Devices</a></li>
                                         <li><a class="items" href="/shop/tv.php">TV</a></li>
                                         <li><a class="items" href="/shop/support.php">Support</a></li>

@@ -3,12 +3,12 @@
  * Created by PhpStorm.
  * User: Home
  * Date: 20.11.2015
- * Time: 18:25
+ * Time: 20:20
  */
 
-include_once('Controllers\DefaultController.php');
-include_once('Model\DefaultModel.php');
-include_once('View\DefaultView.php');
+include_once('..\..\Controllers\DefaultController.php');
+include_once('..\..\Model\DefaultModel.php');
+include_once('..\..\View\DefaultView.php');
 //initiate the triad
 
 $model = new DefaultModel();
@@ -19,10 +19,10 @@ $controller = new DefaultController($model);
 
 $view = new DefaultView($model);
 
-$controller->actionGetData( 'Apple', 'Notebooks', 'Apple' );
+$controller->actionGetData( 'Asus', 'Notebooks', 'Asus' );
 
 $view->DoctypeView( 'phones' );
 
-$view->headerView( 'apple-notebooks' );
+$view->headerView( 'asus-notebooks' );
 
-$view->GetUI( 'notebooks', 'apple-notebooks' );
+$view->GetUI( 'notebooks', 'asus-notebooks' );

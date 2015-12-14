@@ -38,8 +38,8 @@ class LaptopsView extends IndexView
                      Thin, stunning display makes your heart beat faster.
                   </p>
 
-                      <a class="order" href="business/" style="text-decoration: none; margin-right: 30px;">Learn more <img src="../images/arrow-right.png" /></a>
-                      <a class="order" href="notebooks.php" style="text-decoration: none;">Buy <img src="../images/arrow-right.png" /></a>
+                      <a class="order" href="/shop/business/" style="text-decoration: none; margin-right: 30px;">Learn more <img src="../images/arrow-right.png" /></a>
+                      <a class="order" href="/shop/shop/buy-laptop/laptops.php" style="text-decoration: none;">Buy <img src="../images/arrow-right.png" /></a>
 
               </div>
 
