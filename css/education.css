@@ -4,11 +4,10 @@ body, html {
 }
 .overlay {
     margin-top: -20px;
-    padding-bottom: 66%;
+    padding-bottom: 40%;
     background: url('../images/education1.jpg') center no-repeat;
     background-position: center top;
     background-size: 100% auto;
-    height: 100%;
 }
 .content-header {
     padding-top: 5%;

@@ -143,6 +143,8 @@ class DefaultView
                   <link href="../css/education-phones.css" rel="stylesheet" type="text/css">';
         } else if($page == 'Education'){
             echo '<link href="../css/education.css" rel="stylesheet" type="text/css">';
+        } else if($page == 'Business'){
+            echo '<link href="../css/business.css" rel="stylesheet" type="text/css">';
         }
         else {
             echo '<link rel="stylesheet" href="css/default.css" />' .
