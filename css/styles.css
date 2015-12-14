@@ -1,6 +1,15 @@
 .white-link {
 	color: white !important;
-	font-family: RobotoMedium !important;
+	font-family: RobotoRegular !important;
+	letter-spacing: 0.5px !important;
+	font-size: 13px !important;
+	font-weight: normal;
+}
+.white-link:hover {
+	color: #888 !important;
+}
+.no-wrap {
+	white-space: nowrap;
 }
 p, h1,a  {
 	font-family: RobotoRegular;
@@ -83,10 +92,22 @@ ul {
 }
 .footer-menu {
 	font-size: 13px;
+	white-space:nowrap;
+	padding-bottom: 2px;
+	margin-left: -40px;
 }
 .items {
 	font-size: 12px;
-	color: #666666;
+	font-family: RobotoLight;
+	color: #666;
+	white-space: nowrap;
+	margin-left: -40px;
+}
+.hor-items {
+	font-size: 12px;
+	font-family: RobotoLight;
+	color: #666;
+	white-space: nowrap;
 }
 .more-info {
 	margin-left: 15px;
@@ -161,6 +182,7 @@ a:hover {
 	/*border is optional*/
 	cursor: pointer;
 	font-size: 12px;
+	font-family: RobotoLight;
 }
 #link_as_button:hover {
 	text-decoration: underline;
@@ -193,10 +215,53 @@ a:link {
 	text-decoration: none;
 	font-size: 12px;
 }
-
+.margin-more {
+	margin-left: -5px;
+}
+.margin-copy {
+	margin-left: -20px;
+}
+.edu-for-small {
+	margin-top: -20px;
+}
+.margin-for-small {
+	margin-top: 20px;
+}
+.full-image {
+	width: 100%;
+	height: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.part-image {
+	width: 80%;
+	height: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.link {
+	color: #08b;
+	text-decoration: none !important;
+	font-family: RobotoLight;
+}
+.link:hover {
+	color: #08b;
+}
 
 
 @media (max-width: 766px) {
+	.items {
+		margin-left: 0px;
+	}
+	.edu-for-small {
+		margin-top: 0px;
+	}
+	.margin-for-small {
+		margin-top: 0px;
+	}
+	.margin-more, .margin-copy {
+		margin-left: 0px;
+	}
 	#toggleTextFooter, #toggleTextFooter1, #toggleTextFooter2, #toggleTextFooter3, #toggleTextFooter4 {
 		display: none;
 	}
@@ -218,6 +283,7 @@ a:link {
 	}
 	.footer-menu {
 		visibility: hidden;
+		white-space: nowrap;
 	}
 	.divider-for-small-devices {
 		margin-left: auto;
@@ -253,6 +319,9 @@ a:link {
 	.margin-for-footer {
 		margin-right: 25px;
 	}
+}
+@media (min-width: 768px) and (max-width: 1200px){
+
 }
 
 
@@ -290,7 +359,7 @@ a:link {
 		margin-left: 70px;
 	}
 	.margin-for-small-devices {
-		margin-left: 38px;
+		margin-left: 0px;
 	}
 }
 @media (min-width: 1200px){

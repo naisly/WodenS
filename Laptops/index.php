@@ -6,9 +6,9 @@
  * Time: 21:25
  */
 
-include_once('Controllers\DefaultController.php');
-include_once('Model\DefaultModel.php');
-include_once('View\LaptopsView.php');
+include_once('..\Controllers\DefaultController.php');
+include_once('..\Model\DefaultModel.php');
+include_once('..\View\LaptopsView.php');
 //initiate the triad
 
 $model = new DefaultModel();
