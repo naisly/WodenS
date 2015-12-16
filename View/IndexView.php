@@ -31,50 +31,133 @@ class IndexView extends DefaultView
 
     private function getSlider() {
 
-        echo '<div id="slider">
-                  <ul class="bxslider">
-                      <li><a href="notebooks.php"><img src="images/laptop1.jpg"></a></li>
-                      <li><a href="phones-all.php"><img src="images/i6.jpeg"></a></li>
-                      <li><a href="devices.php"><img src="images/skimn-ipad.png"></a></li>
-                      <li><a href="tv.php"><img src="images/imac.png"></a></li>
-                  </ul>
-              </div>';
+        echo '<div class="overlay-main-page">
+                  <div id="slider" style="margin-top: -44px;">
+                      <ul class="bxslider">
+                          <li><a href="/shop/laptops/"><img src="images/laptops-main-page.jpg" class="full-image-main-content"></a></li>
+                          <li><a href="/shop/devices/"><img src="images/devices-main-image.jpg" class="full-image-main-content"></a></li>
+                          <li><a href="/shop/television/"><img src="images/tv-main-image.jpg" class="full-image-main-content"></a></li>
+                          <li><a href="/shop/laptops/"><img src="images/phones-main-image.png" class="full-image-main-content"></a></li>
+                      </ul>
+                  </div>';
     }
 
     private function getColumns() {
 
-        echo '<div class="container margin-top">
-              <h1>Devices</h1>
-              <p id="only">The only thing thats changed is everything.</p>
-              <div class="row">
-                  <div class="col-sm-3">
-                      <a href="notebooks.php"><img src="images/laptop.png" style="display: block; margin-left: auto; margin-right: auto"></a>
-                      <p>Now available with Windows 10, 7, XP, DOS, Linux. </p>
-                  </div>
-                  <div class="col-sm-3">
-                      <a href="phones-all.php"><img src="images/htc.png" style="display: block; margin-left: auto; margin-right: auto"></a>
-                      <p>Great Android OS</p>
-                  </div>
-                  <div class="col-sm-3">
-                      <a href="phones-all.php"><img src="images/smartphone.png" style="display: block; margin-left: auto; margin-right: auto"></a>
-                      <p>Nobody knows whats tommorrows technology are going to be</p>
-                  </div>
-                  <div class="col-sm-3">
-                      <a href="devices.php"><img src="images/apple-watch.jpg" style="display: block; margin-left: auto; margin-right: auto"></a>
-                      <p>Perfect watches with built-in functions</p>
-                  </div>
-              </div>
-          </div>';
+        echo     '<div class="container text-center container-gl-for-sub-header">
+                      <div class="row">
+                          <div class="col-md-1"></div>
+                          <div class="col-md-10">
+                              <h1 class="header-for-category-sub-gl">Thin, powerful devices are developing to make your life as complex
+                              as possible. Productive, easy-to-use desktop computers going to flip absolutely your way of thinking at all.</h1>
+                          </div>
+                          <div class="col-md-1"></div>
+                      </div>
+                  </div>';
+
+
+        echo      '<div class="container-fluid">
+                      <div class="row">
+                          <div class="col-md-6 no-division-for-category">
+                              <a href="/shop/phones/"><img src="images/phones-category-w-text.png" class="full-image-cascade border-left" /></a>
+
+                              <a href="/shop/devices/"><img src="images/ipad-category-w-text.jpg" class="full-image-cascade border-top" /></a>
+                          </div>
+                          <div class="col-md-6 no-division-for-category">
+                              <a href="/shop/laptops/"><img src="images/laptops-category-w-text.jpg" class="full-image-cascade border-right" /></a>
+
+                              <a href="/shop/tv/"><img src="images/tv-category.jpg" class="full-image-cascade border-bottom" /></a>
+                          </div>
+                      </div>
+                  </div>';
+
+        echo     '<div class="container text-center container-gl-header">
+                      <div class="row">
+                          <div class="col-md-1"></div>
+                          <div class="col-md-10">
+                              <h1 class="header-for-category-sub-gl">Moving in lockstep with Business. Increase your productivity
+                              in area of Education. Get new possibilities for your day-to-day life</h1>
+                          </div>
+                          <div class="col-md-1"></div>
+                      </div>
+                  </div>';
+
+        echo      '<div class="container-fluid">
+                      <div class="row">
+                          <div class="col-md-6 no-division-for-category">
+                              <a href="/shop/education/"><img src="images/main-education-category.jpg" class="full-image-cascade border-left" /></a>
+
+                          </div>
+                          <div class="col-md-6 no-division-for-category">
+                              <a href="/shop/business/"><img src="images/main-business-category.jpg" class="full-image-cascade border-top-and-bottom" /></a>
+
+                          </div>
+                      </div>
+                  </div>';
+
+        echo     '<div class="container text-center container-gl-header">
+                      <div class="row">
+                          <div class="col-md-1"></div>
+                          <div class="col-md-10">
+                              <h1 class="header-for-category-sub-gl">Visit our online store. Place orders, then wait
+                              for shipping or pick up at any store.</h1>
+
+                              <div class="divider-main-for-gl-devices" style="margin-top: 25px; margin-bottom: 25px;"></div>
+
+                          </div>
+                          <div class="col-md-1"></div>
+                      </div>
+                  </div>';
+
+        echo      '<div class="container text-center" style="padding-bottom: 40px;">
+                      <div class="row">
+                          <div class="col-md-2"></div>
+                          <div class="col-md-2">
+                              <h class="category-small-for-store">Phones</h>
+
+                              <a href="/shop/shop/buy-phone/"><img src="images/logo-phones-small.png" id="full-logo" /></a>
+                          </div>
+                          <div class="col-md-2">
+                              <h class="category-small-for-store">Laptops</h>
+
+                              <a href="/shop/shop/buy-laptop/"><img src="images/logo-laptops-small.png" id="full-logo" /></a>
+                          </div>
+                          <div class="col-md-2">
+                              <h class="category-small-for-store">Devices</h>
+
+                              <a href="/shop/shop/buy-device/"><img src="images/logo-devices-small.png" id="full-logo" /></a>
+                          </div>
+                          <div class="col-md-2">
+                              <h class="category-small-for-store">TV</h>
+
+                              <a href="/shop/shop/buy-tv/"><img src="images/logo-tv-small.png" id="full-logo" /></a>
+                          </div>
+                          <div class="col-md-2"></div>
+                      </div>
+                   </div>';
+
+
+
+
+        echo '<div class="divider-main-for-gl-devices"></div>';
     }
 
     private function getSliderScript() {
 
         echo '<script>
+
               $(document).ready(function(){
                   $(".bxslider").bxSlider({
                       auto: true,
                       pause: 4000,
-                      controls: false,
+                      controls: false
+                  });
+
+                  $("#overflow-xl-collapsed-cl").click(function(){
+                      $("body")
+                          .css("overflow-y", "hidden");
+                      $("html")
+                          .css("overflow-y", "hidden");
                   });
               });
               </script>';
@@ -82,7 +165,7 @@ class IndexView extends DefaultView
 
     protected function endHTML() {
 
-        echo        '</body>
+        echo '</body>
                 </html>';
     }
 }

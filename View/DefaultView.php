@@ -164,49 +164,53 @@ class DefaultView
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <button type="button" id="overflow-xl-collapsed-cl" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>';
-
         #if ($page == 'daughter'){
-            echo       '<a class="navbar-brand white-link" href="/shop/index.php">
+        echo       '<a class="navbar-brand" href="/shop/index.php">
                             <img alt="Brand" src="/shop/images/main-favicon.png" width="35" height="35" id="main-image">';
-            echo '</a>
+        echo '</a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li><a href="/shop/phones-all.php" class="white-link">Phones <span class="sr-only">(current)</span></a></li>
+                            <li class="divider-li-small"></li>
                             <li><a href="/shop/laptops.php" class="white-link">Laptops</a></li>
+                            <li class="divider-li-small"></li>
                             <li><a href="/shop/devices.php" class="white-link">Devices</a></li>
+                            <li class="divider-li-small"></li>
                             <li><a href="/shop/tv.php" class="white-link">TV</a></li>
+                            <li class="divider-li-small"></li>
                             <li><a href="/shop/support.php" class="white-link">Support</a></li>
+                            <li class="divider-li-small"></li>
                             <li class="dropdown">
                         <a href="#" class="dropdown-toggle white-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart <span class="caret"></span></a>
                         <ul class="dropdown-menu">';
-            if (isset($_SESSION['login_user'])) {
-                echo '<li><a href="/shop/logout.php">';
-                echo 'Logout(' . $_SESSION['login_user'] . ')</a></li>';
-                session_write_close();
-            } else {
-                echo '<li><a href="/shop/register.php">Register</a></li>';
-                echo '<li><a href="/shop/login.php">';
-                echo 'Login</a></li>';
-                session_write_close();
-            }
-            echo '
-                                                            <li role="separator" class="divider"></li>
+        if (isset($_SESSION['login_user'])) {
+            echo '<li><a href="/shop/logout.php" class="color-gl-for-small">';
+            echo 'Logout(' . $_SESSION['login_user'] . ')</a></li>';
+            session_write_close();
+        } else {
+            echo '<li><a href="/shop/register.php" class="color-gl-for-small">Register</a></li>';
+            echo '<li><a href="/shop/login.php" class="color-gl-for-small">';
+            echo 'Login</a></li>';
+            session_write_close();
+        }
+        echo '
+                                                            <li role="separator" class="divider divider-session"></li>
                                                             <li class="dropdown-header">Products</li>';
-            if (isset($_SESSION['login_user'])) {
-                echo '<li><a href="/shop/cart.php">Cart: ' . $this->model->getAPrice() . '$';
-                echo '<li><a href="#">' . $this->model->getAItems() . ' items</a>';
-            } else {
-                echo ' <li><a href="#">Login to see your cart</a></li>';
-            }
-            echo '
+        if (isset($_SESSION['login_user'])) {
+            echo '<li><a href="/shop/cart.php" class="color-gl-for-small">Cart: ' . $this->model->getAPrice() . '$';
+            echo '<li><a href="#" class="color-gl-for-small">' . $this->model->getAItems() . ' items</a></li>';
+        } else {
+            echo ' <li><a href="#" class="color-gl-for-small">Login to see your cart</a></li>';
+        }
+        echo '
                         </ul>
                     </li>
                         </ul>
@@ -406,13 +410,15 @@ class DefaultView
     public function actionGetFooter( $page ) {
         echo   '</div>
                 <footer>';
-        if($page !== 'financing') {
+        if($page !== 'financing' && $page !== 'Index') {
             echo '<div class="container">
                          <!--<div class="divider"></div>-->
-                    </div>';
-        } else {
+                  </div>
+                  <div class="footer-spacer"></div>';
+        } else if($page == 'Index'){
+
         }
-        echo '<div class="footer-spacer"></div>';
+
         echo        '<div class="footer">
                      <div class="container">
                           <div class="row">
