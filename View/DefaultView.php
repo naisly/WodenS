@@ -76,75 +76,75 @@ class DefaultView
         } else if ($page == 'TV'){
             echo '<link href="/shop/css/tv.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Login' || $page == 'Admin' || $page == 'Thanks - Support'){
-            echo '<link href="css/login.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/shop/css/login.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'subdescription'){
-            echo '<link href="css/jquery.bxslider.css" rel="stylesheet">
-                   <script src="js/jquery-min.js"></script>
+            echo '<link href="/shop/css/jquery.bxslider.css" rel="stylesheet">
+                   <script src="/shop/js/jquery-min.js"></script>
                    <!-- bxSlider Javascript file -->
-                   <script src="js/bootstrap.min.js"></script>
+                   <script src="/shop/js/bootstrap.min.js"></script>
                    <!-- bxSlider Javascript file -->
-                  <script src="js/jquery.bxslider.min.js"></script>
-                  <link href="css/subdescription.css" rel="stylesheet" type="text/css">';
+                  <script src="/shop/js/jquery.bxslider.min.js"></script>
+                  <link href="/shop/css/subdescription.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Search'){
-            echo '<link href="css/login.css" rel="stylesheet" type="text/css">
-                  <link href="css/subdescription.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/shop/css/login.css" rel="stylesheet" type="text/css">
+                  <link href="/shop/css/subdescription.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Store'){
-            echo '<link href="css/store.css" rel="stylesheet" type="text/css">
+            echo '<link href="/shop/css/store.css" rel="stylesheet" type="text/css">
                   <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
-                  <link href="css/jquery.bxslider.css" rel="stylesheet">
-                  <script src="js/jquery-min.js"></script>
+                  <link href="/shop/css/jquery.bxslider.css" rel="stylesheet">
+                  <script src="/shop/js/jquery-min.js"></script>
                   <!-- bxSlider Javascript file -->
-                  <script src="js/bootstrap.min.js"></script>
+                  <script src="/shop/js/bootstrap.min.js"></script>
                   <!-- bxSlider Javascript file -->
-                  <script src="js/jquery.bxslider.min.js"></script>';
+                  <script src="/shop/js/jquery.bxslider.min.js"></script>';
         }  else if ($page == 'Orders'){
-            echo '<link href="css/checkorder.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/shop/css/checkorder.css" rel="stylesheet" type="text/css">';
         }  else if ($page == 'Order - Status'){
-            echo '<link href="css/status-order.css" rel="stylesheet" type="text/css">
-                  <link href="css/login.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/shop/css/status-order.css" rel="stylesheet" type="text/css">
+                  <link href="/shop/css/login.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Account - Cart'){
-            echo '<link href="css/profile.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/shop/css/profile.css" rel="stylesheet" type="text/css">';
         }  else if ($page == 'Account - Orders' || $page == 'Account' || $page == 'Account - Billing') {
             if($page == 'Account'){
-                echo '<link href="css/account.css" rel="stylesheet" type="text/css">';
+                echo '<link href="/shop/css/account.css" rel="stylesheet" type="text/css">';
             }
             if ($page == 'Account - Billing'){
-                echo '<link href="css/account-billing.css" rel="stylesheet" type="text/css">';
+                echo '<link href="/shop/css/account-billing.css" rel="stylesheet" type="text/css">';
             }
-            echo '<link href="css/account-order.css" rel="stylesheet" type="text/css">
-                  <link href="css/profile.css" rel="stylesheet" type="text/css">
-                  <script src="js/jquery-min.js"></script>';
+            echo '<link href="/shop/css/account-order.css" rel="stylesheet" type="text/css">
+                  <link href="/shop/css/profile.css" rel="stylesheet" type="text/css">
+                  <script src="/shop/js/jquery-min.js"></script>';
         } else if($page == 'Financing'){
-            echo '<link href="css/financing.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/shop/css/financing.css" rel="stylesheet" type="text/css">';
         } else if($page == 'Laptops - Education'){
-            echo '<link href="../../css/education-laptops.css" rel="stylesheet" type="text/css">
-                  <link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
-                  <link href="../../css/financing.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/shop/css/education-laptops.css" rel="stylesheet" type="text/css">
+                  <link href="/shop/css/education-phones.css" rel="stylesheet" type="text/css">
+                  <link href="/shop/css/financing.css" rel="stylesheet" type="text/css">';
         } else if($page == 'Phones - Education'){
-            echo '<link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
-                  <link href="../../css/financing.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/shop/css/education-phones.css" rel="stylesheet" type="text/css">
+                  <link href="/shop/css/financing.css" rel="stylesheet" type="text/css">';
         } else if($page == 'Laptops - Business'){
-            echo '<link href="../../css/business-laptops.css" rel="stylesheet" type="text/css">
-                  <link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
-                  <link href="../../css/financing.css" rel="stylesheet" type="text/css">
-                  <link href="../../css/business-phones.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/shop/css/business-laptops.css" rel="stylesheet" type="text/css">
+                  <link href="/shop/css/education-phones.css" rel="stylesheet" type="text/css">
+                  <link href="/shop/css/financing.css" rel="stylesheet" type="text/css">
+                  <link href="/shop/css/business-phones.css" rel="stylesheet" type="text/css">';
         } else if($page == 'Phones - Business'){
-            echo '<link href="../../css/business-phones.css" rel="stylesheet" type="text/css">
-                  <link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
-                  <link href="../../css/financing.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/shop/css/business-phones.css" rel="stylesheet" type="text/css">
+                  <link href="/shop/css/education-phones.css" rel="stylesheet" type="text/css">
+                  <link href="/shop/css/financing.css" rel="stylesheet" type="text/css">';
         } else if($page == 'Devices - Business'){
-            echo '<link href="../../css/business-devices.css" rel="stylesheet" type="text/css">
-                  <link href="../../css/business-phones.css" rel="stylesheet" type="text/css">
-                  <link href="../../css/business-laptops.css" rel="stylesheet" type="text/css">
-                  <link href="../../css/education-phones.css" rel="stylesheet" type="text/css">
-                  <link href="../../css/financing.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/shop/css/business-devices.css" rel="stylesheet" type="text/css">
+                  <link href="/shop/css/business-phones.css" rel="stylesheet" type="text/css">
+                  <link href="/shop/css/business-laptops.css" rel="stylesheet" type="text/css">
+                  <link href="/shop/css/education-phones.css" rel="stylesheet" type="text/css">
+                  <link href="/shop/css/financing.css" rel="stylesheet" type="text/css">';
         } else if($page == 'Contact Us'){
-            echo '<link href="../css/contact-us.css" rel="stylesheet" type="text/css">
-                  <link href="../css/education-phones.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/shop/css/contact-us.css" rel="stylesheet" type="text/css">
+                  <link href="/shop/css/education-phones.css" rel="stylesheet" type="text/css">';
         } else if($page == 'Education'){
-            echo '<link href="../css/education.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/shop/css/education.css" rel="stylesheet" type="text/css">';
         } else if($page == 'Business'){
-            echo '<link href="../css/business.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/shop/css/business.css" rel="stylesheet" type="text/css">';
         }
         else {
             echo '<link rel="stylesheet" href="/shop/css/default.css" />' .
@@ -462,13 +462,13 @@ class DefaultView
                                 <div id="toggleTextFooter">
                                     <ul>
                                         <li class="footer-menu"><b>Shop</b></li>
-                                        <li><a class="items" href="/shop/index.php">Home</a></li>
-                                        <li><a class="items" href="/shop/phones-all.php">Phones</a></li>
+                                        <li><a class="items" href="/shop/">Home</a></li>
+                                        <li><a class="items" href="/shop/phones/">Phones</a></li>
                                         <li><a class="items" href="/shop/laptops/">Laptops</a></li>
-                                        <li><a class="items" href="/shop/devices.php">Devices</a></li>
-                                        <li><a class="items" href="/shop/tv.php">TV</a></li>
-                                        <li><a class="items" href="/shop/support.php">Support</a></li>
-                                        <li><a class="items" href="/shop/cart.php">Cart</a></li>';
+                                        <li><a class="items" href="/shop/devices/">Devices</a></li>
+                                        <li><a class="items" href="/shop/tv/">TV</a></li>
+                                        <li><a class="items" href="/shop/support/">Support</a></li>
+                                        <li><a class="items" href="/shop/cart">Cart</a></li>';
         echo                       '</ul>
                                 </div>
                             </div>
@@ -484,11 +484,11 @@ class DefaultView
                                     <div id="toggleTextFooter1">
                                         <ul>
                                             <li class="footer-menu"><b>Store</b></li>
-                                            <li><a class="items" href="/shop/store.php">Find our store</a></li>
-                                            <li><a class="items" href="/shop/financing.php">Financing</a></li>
-                                            <li><a class="items" href="/shop/order.php">Order Status</a></li>
+                                            <li><a class="items" href="/shop/store">Find our store</a></li>
+                                            <li><a class="items" href="/shop/financing">Financing</a></li>
+                                            <li><a class="items" href="/shop/order">Order Status</a></li>
                                             <li><button id="link_as_button" class="items">Shopping help</button></li>
-                                            <li><a class="items" href="/shop/search-answers.php">FAQ</a></li>
+                                            <li><a class="items" href="/shop/search-answers">FAQ</a></li>
                                             <li><a class="items" href="/shop/education/">Education</a></li>
                                             <li><a class="items" href="/shop/business/">Business</a></li>';
         echo                           '</ul>
@@ -507,15 +507,15 @@ class DefaultView
                                 <div id="toggleTextFooter2">
                                     <ul>
                                         <li class="footer-menu"><b>Account</b></li>
-                                        <li><a class="items" href="/shop/account.php">Store account</a></li>
-                                        <li><a class="items" href="/shop/cart.php">My Items</a></li>
-                                        <li><a class="items" href="/shop/order.php">My Orders</a></li>
-                                        <li><a class="items" href="/shop/account-billing.php">Billing Info</a></li>';
+                                        <li><a class="items" href="/shop/account">Store account</a></li>
+                                        <li><a class="items" href="/shop/cart">My Items</a></li>
+                                        <li><a class="items" href="/shop/order">My Orders</a></li>
+                                        <li><a class="items" href="/shop/account-billing">Billing Info</a></li>';
         echo                      '</ul>
                                     <ul>
                                         <li class="footer-menu"><b>Most valuable</b></li>
-                                        <li><a class="items" href="/shop/site-terms.php">Site Terms</a></li>
-                                        <li><a class="items" href="/shop/privacy.php">Privacy</a></li>';
+                                        <li><a class="items" href="/shop/site-terms">Site Terms</a></li>
+                                        <li><a class="items" href="/shop/privacy">Privacy</a></li>';
         echo                       '</ul>
                                 </div>
                             </div>
@@ -531,11 +531,11 @@ class DefaultView
                                 <div id="toggleTextFooter3">
                                     <ul>
                                         <li class="footer-menu"><b>About Us</b></li>
-                                        <li><a class="items" href="/shop/our-company.php">Our company</a></li>
-                                        <li><a class="items" href="/shop/people.php">In-touch People</a></li>
-                                        <li><a class="items" href="/shop/managers.php">Our managers</a></li>
-                                        <li><a class="items" href="/shop/director.php">Director</a></li>
-                                        <li><a class="items" href="/shop/job.php">Job</a></li>
+                                        <li><a class="items" href="/shop/our-company">Our company</a></li>
+                                        <li><a class="items" href="/shop/people">In-touch People</a></li>
+                                        <li><a class="items" href="/shop/managers">Our managers</a></li>
+                                        <li><a class="items" href="/shop/director">Director</a></li>
+                                        <li><a class="items" href="/shop/job">Job</a></li>
                                         <li><a class="items" href="/shop/contact/">Contact Us</a></li>';
         echo                       '</ul>
                                 </div>
