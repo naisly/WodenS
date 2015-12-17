@@ -6,10 +6,9 @@
  * Time: 1:04
  */
 
-include_once('Controllers\DefaultController.php');
-include_once('Model\DefaultModel.php');
-include_once('View\DefaultView.php');
-//initiate the triad
+include_once('..\..\Controllers\DefaultController.php');
+include_once('..\..\Model\DefaultModel.php');
+include_once('..\..\View\DefaultView.php');
 
 $model = new DefaultModel();
 
@@ -19,10 +18,10 @@ $controller = new DefaultController($model);
 
 $view = new DefaultView($model);
 
-$controller->actionGetData( 'Samsung', 'Gadgets', 'Samsung' );
+$controller->actionGetData( 'Apple', 'Gadgets', 'Apple' );
 
 $view->DoctypeView( 'gadgets' );
 
-$view->headerView( 'samsung-gadgets' );
+$view->headerView( 'apple-gadgets' );
 
-$view->GetUI( 'gadgets', 'samsung-gadgets' );
+$view->GetUI( 'gadgets', 'apple-gadgets' );

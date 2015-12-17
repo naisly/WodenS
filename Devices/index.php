@@ -3,12 +3,12 @@
  * Created by PhpStorm.
  * User: Home
  * Date: 13.11.2015
- * Time: 13:50
+ * Time: 15:42
  */
 
-include_once('Controllers\DefaultController.php');
-include_once('Model\DefaultModel.php');
-include_once('View\TvView.php');
+include_once('..\Controllers\DefaultController.php');
+include_once('..\Model\DefaultModel.php');
+include_once('..\View\DevicesView.php');
 //initiate the triad
 
 $model = new DefaultModel();
@@ -17,42 +17,8 @@ $model = new DefaultModel();
 
 $controller = new DefaultController($model);
 
-$view = new TvView($model);
+$view = new DevicesView($model);
 
 $controller->actionGetHeaderCart();
 
-$view->getTVPage();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$view->getDevicesPage();

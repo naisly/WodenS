@@ -61,20 +61,20 @@ class DefaultView
         echo       '<script src="/shop/js/SrcChanger.js"></script>';
 
         if($page == 'Devices'){
-            echo '<link href="css/devices.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/shop/css/devices.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Index'){
             echo '<link href="css/jquery.bxslider.css" rel="stylesheet">
                   <script src="js/jquery.bxslider.min.js"></script>';
         } else if ($page == 'Laptops'){
-            echo '<link href="../css/notebooks.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/shop/css/notebooks.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Phones'){
-            echo '<link href="css/phones.css" rel="stylesheet" type="text/css">' .
-                '<link rel="stylesheet" href="css/default.css">' .
-                '<link rel="stylesheet" href="css/animate.css">';
+            echo '<link href="/shop/css/phones.css" rel="stylesheet" type="text/css">' .
+                '<link rel="stylesheet" href="shop/css/default.css">' .
+                '<link rel="stylesheet" href="shop/css/animate.css">';
         } else if ($page == 'Support'){
-            echo '<link href="css/support.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/shop/css/support.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'TV'){
-            echo '<link href="css/tv.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/shop/css/tv.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Login' || $page == 'Admin' || $page == 'Thanks - Support'){
             echo '<link href="css/login.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'subdescription'){
@@ -147,12 +147,15 @@ class DefaultView
             echo '<link href="../css/business.css" rel="stylesheet" type="text/css">';
         }
         else {
-            echo '<link rel="stylesheet" href="css/default.css" />' .
-                '<link rel="stylesheet" href="css/animate.css" />';
+            echo '<link rel="stylesheet" href="/shop/css/default.css" />' .
+                '<link rel="stylesheet" href="/shop/css/animate.css" />';
         }
 
         echo '</head>
             <body onload="preload_page()" style="overflow-y: visible;">';
+        if($page !== 'Index'){
+            echo '<div style="margin-top: 70px;"></div>';
+        }
     }
     /*
      * Main navbar Menu for all
@@ -171,33 +174,33 @@ class DefaultView
                             <span class="icon-bar"></span>
                         </button>';
         #if ($page == 'daughter'){
-        echo       '<a class="navbar-brand" href="/shop/index.php">
+        echo       '<a class="navbar-brand" href="/shop/">
                             <img alt="Brand" src="/shop/images/main-favicon.png" width="35" height="35" id="main-image">';
         echo '</a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li><a href="/shop/phones-all.php" class="white-link">Phones <span class="sr-only">(current)</span></a></li>
+                            <li><a href="/shop/phones/" class="white-link">Phones <span class="sr-only">(current)</span></a></li>
                             <li class="divider-li-small"></li>
-                            <li><a href="/shop/laptops.php" class="white-link">Laptops</a></li>
+                            <li><a href="/shop/laptops/" class="white-link">Laptops</a></li>
                             <li class="divider-li-small"></li>
-                            <li><a href="/shop/devices.php" class="white-link">Devices</a></li>
+                            <li><a href="/shop/devices/" class="white-link">Devices</a></li>
                             <li class="divider-li-small"></li>
-                            <li><a href="/shop/tv.php" class="white-link">TV</a></li>
+                            <li><a href="/shop/tv/" class="white-link">TV</a></li>
                             <li class="divider-li-small"></li>
-                            <li><a href="/shop/support.php" class="white-link">Support</a></li>
+                            <li><a href="/shop/support/" class="white-link">Support</a></li>
                             <li class="divider-li-small"></li>
                             <li class="dropdown">
                         <a href="#" class="dropdown-toggle white-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart <span class="caret"></span></a>
                         <ul class="dropdown-menu">';
         if (isset($_SESSION['login_user'])) {
-            echo '<li><a href="/shop/logout.php" class="color-gl-for-small">';
+            echo '<li><a href="/shop/logout" class="color-gl-for-small">';
             echo 'Logout(' . $_SESSION['login_user'] . ')</a></li>';
             session_write_close();
         } else {
-            echo '<li><a href="/shop/register.php" class="color-gl-for-small">Register</a></li>';
-            echo '<li><a href="/shop/login.php" class="color-gl-for-small">';
+            echo '<li><a href="/shop/register" class="color-gl-for-small">Register</a></li>';
+            echo '<li><a href="/shop/login" class="color-gl-for-small">';
             echo 'Login</a></li>';
             session_write_close();
         }
@@ -205,7 +208,7 @@ class DefaultView
                                                             <li role="separator" class="divider divider-session"></li>
                                                             <li class="dropdown-header">Products</li>';
         if (isset($_SESSION['login_user'])) {
-            echo '<li><a href="/shop/cart.php" class="color-gl-for-small">Cart: ' . $this->model->getAPrice() . '$';
+            echo '<li><a href="/shop/cart" class="color-gl-for-small">Cart: ' . $this->model->getAPrice() . '$';
             echo '<li><a href="#" class="color-gl-for-small">' . $this->model->getAItems() . ' items</a></li>';
         } else {
             echo ' <li><a href="#" class="color-gl-for-small">Login to see your cart</a></li>';

@@ -62,7 +62,7 @@ class PhonesView extends IndexView
                   <div class="col-sm-3">
                       <h1 id="iphone" class="fc">Most people have at least a simple, if not sophisticated, mobile phone. These devices are convenient to carry around and you can use them on the go as long as there is network coverage wherever you are.Mobile phones have clearly made it easier to communicate.</h1>
                   </div>
-                  <div class="col-sm-5"><img src="images/iphones.jpg" style="width: 100%"></div>
+                  <div class="col-sm-5"><img src="/shop/images/iphones.jpg" style="width: 100%"></div>
                   <div class="col-sm-2"></div>
               </div>
 
@@ -81,7 +81,7 @@ class PhonesView extends IndexView
 
               <div class="iphone">
                   <div class="col-sm-1"></div>
-                  <div class="col-sm-6"><img src="images/galaxy.png" style="width: 100%"></div>
+                  <div class="col-sm-6"><img src="/shop/images/galaxy.png" style="width: 100%"></div>
                   <div class="col-sm-5">
                       <h1 id="iphone" class="fc">With the upgrades made year in, year out, mobile phones are becoming more like computers with the added benefit of portability. One can receive and send emails, browse websites, download games and videos, book flight tickets,  and even chat with friends.</h1>
                   </div>
@@ -104,7 +104,7 @@ class PhonesView extends IndexView
                   <div class="col-sm-3">
                       <h1 id="iphone" class="fc">Although the mobile phone doesnt guarantee safety, you can use it to make calls whenever there is an emergency. Travelling with your phone is very important. In case you have an accident, you can always contact someone who will help you.</h1>
                   </div>
-                  <div class="col-sm-5"><img src="images/galaxy.jpg" style="width: 100%"></div>
+                  <div class="col-sm-5"><img src="/shop/images/galaxy.jpg" style="width: 100%"></div>
                   <div class="col-sm-2"></div>
               </div>
 
@@ -129,7 +129,7 @@ class PhonesView extends IndexView
                       <h1 class="fc">Usefull, practical, as well as, pleasurable
                           <br /> and much more!</h1>
 
-                      <h1 style="margin-bottom: 100px;"><a href="index.php" id="phones">Order it now ></a></h1>
+                      <h1 style="margin-bottom: 100px;"><a href="/shop/shop/buy-phone" id="phones">Order it now ></a></h1>
                   </div>
               </div>
 
@@ -137,11 +137,11 @@ class PhonesView extends IndexView
               <div>
                   <div class="col-xs-1"></div>
                   <div class="col-sm-4">
-                      <img src="images/left-photo.jpg" style="width: 100%">
+                      <img src="/shop/images/left-photo.jpg" style="width: 100%">
                   </div>
                   <div class="col-xs-1"></div>
                   <div class="col-sm-4">
-                      <img src="images/right-photo.png" style="width: 100%">
+                      <img src="/shop/images/right-photo.png" style="width: 100%">
                   </div>
               </div>';
     }

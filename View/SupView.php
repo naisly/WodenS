@@ -55,7 +55,7 @@ class SupView extends IndexView
                   <div class="row">
                       <div class="col-md-2"></div>
                       <div class="col-md-4">
-                          <img src="images/communication.png" />
+                          <img src="/shop/images/communication.png" />
                       </div>
                       <div class="col-md-6">
                           <div class="txt">
@@ -80,7 +80,7 @@ class SupView extends IndexView
                   <div class="row">
                       <div class="col-md-6">
                           <div class="text-center">
-                              <img src="images/contact.png" style="width: 300px;" class="img-contact" />
+                              <img src="/shop/images/contact.png" style="width: 300px;" class="img-contact" />
                               <h1>Contact us</h1>
                               <p class="contact-p">We are going to help you with any issues with products, shipping details, orders and much more!
                               You could get support by Phone, email, contact form or just in our product
@@ -90,7 +90,7 @@ class SupView extends IndexView
                       </div>
                       <div class="col-md-6">
                           <div class="text-center">
-                              <img src="images/order.png" style="width: 80px;" class="img-contact" />
+                              <img src="/shop/images/order.png" style="width: 80px;" class="img-contact" />
                               <h1>Find your order</h1>
                               <p class="contact-p">Check the status of your Order <br />
                               See if the product approved and <br />
@@ -109,7 +109,7 @@ class SupView extends IndexView
         echo '<div class="container">
                   <div class="row">
                       <div class="col-md-6">
-                          <img src="images/support-2.jpg" class="img-contact" />
+                          <img src="/shop/images/support-2.jpg" class="img-contact" />
                       </div>
                       <div class="col-md-6" style="margin-top: 80px;">
                           <div class="row">
