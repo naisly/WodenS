@@ -83,14 +83,19 @@
 	*zoom: 1;
 	*display: inline;
 }
-
+.bx-wrapper .bx-pager.bx-default-pager {
+	background-color: #f1f1f1;
+	height: 50px;
+	margin-top: -100px;
+}
 .bx-wrapper .bx-pager.bx-default-pager a {
+	position: relative;
 	background: #888;
 	text-indent: -9999px;
 	display: block;
 	width: 10px;
 	height: 10px;
-	margin-top: -70px !important;
+	top: -50px;
 	margin-left: 5px;
 	margin-right: 5px;
 	outline: 0;

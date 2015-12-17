@@ -361,6 +361,9 @@ a:link {
 
 
 @media (max-width: 766px) {
+	.margin-tv-for-small {
+		margin-right: 60px;
+	}
 	.dropdown {
 		height: 100vh;
 	}

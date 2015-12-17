@@ -44,7 +44,7 @@ class BusinessLaptopsView extends DefaultView
                                   <h class="fixed-header">Laptops in Business</h>
                               </div>
                               <div class="buy-main pull-right">
-                                  <a style="color: white" class="btn btn-primary button-buy buy-phones" href="../../phones.php">Buy</a>
+                                  <a style="color: white" class="btn btn-primary button-buy buy-phones" href="../../laptops.php">Buy</a>
                               </div>
                           </div>
                           <div class="col-md-1"></div>

@@ -34,10 +34,10 @@ class IndexView extends DefaultView
         echo '<div class="overlay-main-page">
                   <div id="slider" style="margin-top: -44px;">
                       <ul class="bxslider">
-                          <li><a href="/shop/laptops/"><img src="images/laptops-main-page.jpg" class="full-image-main-content"></a></li>
-                          <li><a href="/shop/devices/"><img src="images/devices-main-image.jpg" class="full-image-main-content"></a></li>
-                          <li><a href="/shop/television/"><img src="images/tv-main-image.jpg" class="full-image-main-content"></a></li>
-                          <li><a href="/shop/laptops/"><img src="images/phones-main-image.png" class="full-image-main-content"></a></li>
+                          <li><a href="/shop/phones/"><img src="images/laptops-main-page.jpg" class="full-image-main-content"></a></li>
+                          <li><a href="/shop/television/"><img src="images/tv-main-page.jpg" class="full-image-main-content"></a></li>
+                          <li><a href="/shop/laptops/"><img src="images/laptops-main.jpg" class="full-image-main-content"></a></li>
+                          <li><a href="/shop/devices/"><img src="images/devices-main-img.jpg" class="full-image-main-content"></a></li>
                       </ul>
                   </div>';
     }
@@ -128,7 +128,7 @@ class IndexView extends DefaultView
                               <a href="/shop/shop/buy-device/"><img src="images/logo-devices-small.png" id="full-logo" /></a>
                           </div>
                           <div class="col-md-2">
-                              <h class="category-small-for-store">TV</h>
+                              <h class="category-small-for-store margin-tv-for-small">TV</h>
 
                               <a href="/shop/shop/buy-tv/"><img src="images/logo-tv-small.png" id="full-logo" /></a>
                           </div>
@@ -161,20 +161,11 @@ class IndexView extends DefaultView
                               .css("overflow-y", "hidden");
                           $("html")
                               .css("overflow-y", "hidden");
-                          /*$("#slider")
-                              .css("width", "102%");
-                          $(".navbar")
-                              .css("opacity", "0.97%");*/
-
                       } else {
                           $("body")
                               .css("overflow-y", "visible");
                           $("html")
                               .css("overflow-y", "visible");
-                          /*$("#slider")
-                              .css("width", "100%");
-                          $(".navbar")
-                              .css("opacity", "0.8%");*/
                       }
                   });
 
