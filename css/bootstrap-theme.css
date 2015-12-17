@@ -362,7 +362,7 @@ fieldset[disabled] .btn-danger.active {
 .navbar-nav > li > a {
   text-shadow: 0 1px 0 rgba(255, 255, 255, .25);
 }
-.navbar-inverse {
+/*.navbar-inverse {
   background-image: -webkit-linear-gradient(top, #3c3c3c 0%, #222 100%);
   background-image:      -o-linear-gradient(top, #3c3c3c 0%, #222 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, from(#3c3c3c), to(#222));
@@ -371,7 +371,7 @@ fieldset[disabled] .btn-danger.active {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
   border-radius: 4px;
-}
+}*/
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .active > a {
   /*background-image: -webkit-linear-gradient(top, #080808 0%, #0f0f0f 100%);

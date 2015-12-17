@@ -160,7 +160,7 @@ class DefaultView
      */
     final public function headerView( $page )
     {
-        echo   '<nav class="navbar navbar-inverse navbar-static-top">
+        echo   '<nav class="navbar navbar-inverse">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">

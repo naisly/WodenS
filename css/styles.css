@@ -31,7 +31,8 @@ p, h1,a  {
 	left: 0;
 	right: 0;
 	width: 100%;
-	opacity: 0.8;
+	background-color: rgba(0,0,0,0.8) !important;
+	z-index: 1;
 	border-bottom: none;
 }
 .navbar-inverse .navbar-brand:hover, 
