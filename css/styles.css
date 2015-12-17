@@ -3,12 +3,18 @@ html, body {
 	height: 100%;
 }
 .white-link {
-	color: white !important;
-	font-family: RobotoRegular !important;
-	letter-spacing: 0.5px !important;
-	font-size: 13px !important;
-	font-weight: normal;
+	font-size: 14px;
+	line-height: 2.75;
+	font-weight: 400;
+	letter-spacing: normal;
+	opacity: 1;
+	color: #fff !important;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	white-space: nowrap;
 	margin-top: 0 !important;
+	font-family: Arial !important;
 }
 .white-link:hover {
 	color: #888 !important;
@@ -152,14 +158,20 @@ ul {
 }
 .items {
 	font-size: 12px;
-	font-family: RobotoLight;
 	color: #666;
 	white-space: nowrap;
 	margin-left: -40px;
+	font-weight: 400;
+	letter-spacing: normal;
+	opacity: 1;
+	z-index: 1;
+	text-decoration: none;
+	margin-top: 0 !important;
+	font-family: Arial !important;
 }
 .hor-items {
 	font-size: 12px;
-	font-family: RobotoLight;
+	font-family: Arial !important;
 	color: #666;
 	white-space: nowrap;
 }
@@ -167,6 +179,7 @@ ul {
 	margin-left: 15px;
 	font-size: 12px;
 	color: #999999;
+	font-family: Arial !important;
 }
 ul.hor_nav {
 margin: 0;
@@ -327,6 +340,19 @@ a:link {
 .divider-li-small {
 	padding: 0 !important;
 	margin: 0 !important;
+}
+.color-gl-for-small {
+	font-size: 14px;
+	line-height: 2.75;
+	font-weight: 400;
+	letter-spacing: normal;
+	opacity: 1;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	white-space: nowrap;
+	margin-top: 0 !important;
+	font-family: Arial !important;
 }
 
 

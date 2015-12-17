@@ -2,6 +2,10 @@
 RewriteEngine  on
 # If the request doesn't end in .php (Case insensitive) continue processing rules
 RewriteCond %{REQUEST_URI} !\.php$ [NC]
+RewriteCond %{REQUEST_URI} !\.css$ [NC]
+RewriteCond %{REQUEST_URI} !\.png$ [NC]
+RewriteCond %{REQUEST_URI} !\.jpg$ [NC]
+RewriteCond %{REQUEST_URI} !\.js$ [NC]
 # If the request doesn't end in a slash continue processing the rules
 RewriteCond %{REQUEST_URI} [^/]$
 # Rewrite the request with a .php extension. L means this is the 'Last' rule
