@@ -154,11 +154,35 @@ class IndexView extends DefaultView
                   });
 
                   $("#overflow-xl-collapsed-cl").click(function(){
-                      $("body")
-                          .css("overflow-y", "hidden");
-                      $("html")
-                          .css("overflow-y", "hidden");
+
+                      var x = $("body").css("overflowY");
+                      if(x == "visible"){
+                          $("body")
+                              .css("overflow-y", "hidden");
+                          $("html")
+                              .css("overflow-y", "hidden");
+                          /*$("#slider")
+                              .css("width", "102%");
+                          $(".navbar")
+                              .css("opacity", "0.97%");*/
+
+                      } else {
+                          $("body")
+                              .css("overflow-y", "visible");
+                          $("html")
+                              .css("overflow-y", "visible");
+                          /*$("#slider")
+                              .css("width", "100%");
+                          $(".navbar")
+                              .css("opacity", "0.8%");*/
+                      }
                   });
+
+                  $(function() {
+                    $("#overflow-xl-collapsed-cl").click(function() {
+                       $(".navbar").css("opacity", "0.97%");
+                    })
+                  })
               });
               </script>';
     }

@@ -1,5 +1,4 @@
 html, body {
-	background-color: #f1f1f1;
 	width: 100%;
 	height: 100%;
 }
@@ -27,6 +26,7 @@ p, h1,a  {
 	right: 0;
 	width: 100%;
 	opacity: 0.8;
+	border-bottom: none;
 }
 .navbar-inverse .navbar-brand:hover, 
 .navbar-inverse .navbar-brand:focus {
@@ -317,12 +317,12 @@ a:link {
 	font-family: RobotoLight;
 }
 .container-gl-for-sub-header {
-	padding-bottom: 80px;
-	padding-top: 40px;
+	padding-bottom: 120px;
+	margin-top: 120px;
 }
 .container-gl-header {
-	margin-top: 40px;
-	padding-bottom: 40px;
+	margin-top: 120px;
+	padding-bottom: 120px;
 }
 .divider-li-small {
 	padding: 0 !important;
@@ -459,9 +459,6 @@ a:link {
 	.margin-for-footer {
 		margin-right: 25px;
 	}
-}
-@media (min-width: 768px) and (max-width: 1200px){
-
 }
 
 
