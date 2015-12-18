@@ -23,7 +23,7 @@ html, body {
 	white-space: nowrap;
 }
 p, h1,a  {
-	font-family: RobotoRegular;
+	font-family: RobotoLight;
 }
 .navbar {
 	position: absolute;
@@ -112,6 +112,11 @@ p, h1,a  {
 	height: 1px;
 	background-color: #e4e4e4;
 	margin-bottom: 10px;
+}
+.divider-white {
+	width: 100%;
+	height: 1px;
+	background-color: white;
 }
 
 

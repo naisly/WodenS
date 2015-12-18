@@ -413,13 +413,23 @@ class DefaultView
     public function actionGetFooter( $page ) {
         echo   '</div>
                 <footer>';
-        if($page !== 'financing' && $page !== 'Index') {
+        if($page !== 'financing' && $page !== 'Index' && $page !== 'Phones') {
             echo '<div class="container">
                          <!--<div class="divider"></div>-->
                   </div>
                   <div class="footer-spacer"></div>';
         } else if($page == 'Index'){
 
+        } else if($page == 'Phones'){
+            echo '<div class="container">
+                      <div class="row">
+                          <div class="col-md-1"></div>
+                          <div class="col-md-10">
+                              <div class="divider-white"></div>
+                          </div>
+                          <div class="col-md-1"></div>
+                      </div>
+                  </div>';
         }
 
         echo        '<div class="footer">
