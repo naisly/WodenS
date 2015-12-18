@@ -360,7 +360,7 @@ class DefaultView
                     </div>
                     <div class="col-md-5 wow fadeInUp">
                         <p class="spacer"></p>
-                        <form action="subdescription.php" method="get">
+                        <form action="/shop/shop/subdescription" method="get">
                             <h id="header-items" style="font-size: 20px;"><button type="submit" class="subdescription" style="text-decoration: none;">' . $this->model->getOriginalName($i) . '</button></h>
                             <span><br />by ' . $this->model->getCategory($i) . '</span>
                             <p id="price">' . $this->model->getPrice($i) . '$' . ' ' . '<span id="prev-price"><strike>' . $this->model->getPriviousPrice($i) . '$' . '</strike> (' . $this->model->getShipping($i) . ' ' . 'days shipping)</span></p>
@@ -430,9 +430,15 @@ class DefaultView
         $i = 0;
         while($i < $this->model->countBreadcrumbs()){
             if($this->model->getBreadcrumbs($i) == 'shop'){
-                echo '<a href="/shop/index.php"><img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/favicon-default.png" width="20" height="20"/></a>';
+                if($i < 1) {
+                    echo '<a href="/shop/"><img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/favicon-default.png" width="20" height="20"/></a>';
+                } else {
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . 'Shop' . "</a>";
+                }
             } else if($this->model->getBreadcrumbs($i) == 'index'){
                 echo '<h id="breadcrumbs">Home</h>';
+            } else if(substr($this->model->getBreadcrumbs($i), 0, 14) == 'subdescription'){
+                echo '<h id="breadcrumbs">' . $this->model->getOriginalName(0) . '</h>';
             } else {
                 echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . ucfirst($this->model->getBreadcrumbs($i)) . "</a>";
             }
@@ -578,9 +584,7 @@ class DefaultView
                         <div class="row">
                             <div class="col-sm-1"></div>
                             <div class="col-sm-10 margin-more">
-                                <ul class="nav nav-list">
-                                    <li class="divider"></li>
-                                </ul>
+                                <div class="footer-divider"></div>
                             </div>
                             <div class="col-sm-1"></div>
                         </div>

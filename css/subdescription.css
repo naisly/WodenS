@@ -19,7 +19,7 @@
 }
 .price {
     margin-left: 27px;
-    color: #666;
+    color: black;
 }
 #price {
     font-size: 18px;
@@ -30,7 +30,7 @@
     font-family: RobotoBold;
 }
 .prev-price {
-    color: #666;
+    color: black;
 }
 #you-save {
     color: #ac5050;
@@ -48,7 +48,7 @@
     text-align: left;
     font-size: 18px;
 }
-ul {
+.list-style-items-gl {
     display: block;
     list-style-type: disc;
     margin-top: 1em;
@@ -63,7 +63,7 @@ ul {
     text-align: left;
 }
 .spacer {
-    margin-top: 80px;
+    margin-top: 25%;
 }
 #spacer {
     margin-top: 20px;
@@ -89,6 +89,7 @@ ul {
 .contact {
     margin-left: 30px;
     text-decoration: none !important;
+    font-family: MyriadProSemiBold;
 }
 .aside {
     width: 80%;
@@ -158,7 +159,7 @@ ul {
     float: left;
 }
 .sold-by {
-    color: #999;
+    color: #666;
     font-size: 15px;
 }
 .maybe {
@@ -171,7 +172,7 @@ ul {
 }
 .random-name {
     margin-top: 10px;
-    margin-right: 10px;
+    margin-left: 3px;
     font-size: 12px;
     background-color: white;
     border: none;
@@ -260,32 +261,39 @@ ul {
 .shipping-assoc {
     text-decoration: underline;
 }
-.search-margin {
-    margin-left: 15px;
-}
 .question {
     font-weight: bold;
-    margin-left: 15px;
     padding-bottom: 30px;
 }
 #question {
-    margin-left: 40px;
     color: #1b6d85;
 }
 .answer {
     margin-top: 30px;
     font-weight: bold;
-    margin-left: 15px;
 }
 #answer {
-    margin-left: 50px;
     font-weight: normal;
 }
 .by-answer {
     font-size: 12px;
-    margin-left: 124px;
     color: #666;
 }
 #found {
     background: #ffcc7f;
+}
+.img-store {
+    width: 80%;
+    height: auto;
+}
+.assoc-original-name {
+    text-decoration: none !important;
+    color: black;
+    font-family: MyriadProSemiBold;
+}
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }

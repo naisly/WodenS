@@ -37,7 +37,7 @@ class SubdescriptionView extends DefaultView
         $this->getAnswers();
         $this->getQuestions();
 
-        $this->actionGetFooter( 'Index' );
+        $this->actionGetFooter( 'subdescription' );
     }
 
     /**
@@ -50,11 +50,11 @@ class SubdescriptionView extends DefaultView
                   <div class="col-md-9">
                       <div class="col-md-1"></div>
                       <div class="col-md-4">
-                          <img src="' . $this->model->getProductPhoto() . '" width="230" height="550" />
+                          <img src="/shop/' . $this->model->getProductPhoto() . '" class="img-store" />
                       </div>
                       <div class="col-md-7">
                            <h class="main-header">' . $this->model->getOriginalName(0) . '</h><br />
-                           <h class="p-header">by <a style="text-decoration: none" href="' . $category . "-" . $table . ".php" . '">' . $this->model->getCategory(0) . '</a></h>
+                           <h class="p-header">by <a class="link-default" style="text-decoration: none; cursor: pointer;" onclick="goBack();">' . $this->model->getCategory(0) . '</a></h>
 
                            <div class="divider-main"></div>
 
@@ -67,12 +67,12 @@ class SubdescriptionView extends DefaultView
             echo      '<h class="no-stock">Out of Stock</h>';
         }
 
-        echo         '<h class="sold-by" style="float: left">Sold by <a href="http://apple.com" style="text-decoration: none">Apple</a> company. Gift-wrap available</h><br />
+        echo         '<h class="sold-by" style="float: left">Sold by <a href="http://apple.com" class="link-default">Apple</a> company. Gift-wrap available</h><br />
 
                           <div id="spacer"></div>
 
                           <h class="details">Product details:</h>
-                          <ul style="margin-top: 35px;">';
+                          <ul class="list-style-items-gl" style="margin-top: 35px;">';
 
         $i = 0;
         while ($i < $this->model->countDescription()){
@@ -83,7 +83,7 @@ class SubdescriptionView extends DefaultView
 
         echo         '</ul>
                           <div class="spacer">
-                              <h class="quantity" style="padding-bottom: 30px;"><a style="text-decoration: none" href="' . $category . "-" . $table . ".php" . '">' . $this->model->getQuantity(0) . ' new</a> from $' . $this->model->getMinimum() . '</h>
+                              <h class="quantity" style="padding-bottom: 30px;"><a style="cursor: pointer;text-decoration: none" onclick="goBack();">' . $this->model->getQuantity(0) . ' new</a> from $' . $this->model->getMinimum() . '</h>
                           </div>
                       </div>
 
@@ -96,9 +96,9 @@ class SubdescriptionView extends DefaultView
         $m = 0;
         while($m < $this->model->countAssocProducts()){
             echo '<div class="slide">
-                          <img src="' . $this->model->getAssocPhoto($m) . '" width="120" height="120" />
-                          <div style="height: 90px;">
-                              <h><a href="#" style="text-decoration: none;">' . $this->model->getAssocProducts($m) . '</a></h><br />
+                          <img src="/shop/' . $this->model->getAssocPhoto($m) . '" width="120" height="120" />
+                          <div style="height: 90px;; margin-top: 10px;">
+                              <h><a href="#" class="assoc-original-name">' . $this->model->getAssocProducts($m) . '</a></h><br />
                               <h id="you-save"">$' . $this->model->getAssocPrice($m) . '<span class="striked"><strike> $' . $this->model->getAssocPreviousPrice($m) . '</strike></span></h><br />
                               <h><span class="shipping-assoc"><em>' . $this->model->getAssocShipping($m) . ' days</em></span> of shipping</h><br />
                           </div>
@@ -127,7 +127,7 @@ class SubdescriptionView extends DefaultView
     private function getDescription() {
 
         echo '<h class="tech-details">' . $this->model->getTechnicalDetails(0) . '</h>
-                      <ul style="margin-top: 35px; margin-left: 30px;">';
+                      <ul class="list-style-items-gl" style="margin-top: 35px; margin-left: 30px;">';
 
         $k = 1;
         while ($k < $this->model->countTechnicalDetails()){
@@ -140,7 +140,7 @@ class SubdescriptionView extends DefaultView
         echo '</ul>
               <div class="divider"></div>
               <h class="tech-details">' . $this->model->getTechnicalDetails1(0) . '</h>
-              <ul style="margin-top: 35px; margin-left: 30px;">
+              <ul class="list-style-items-gl" style="margin-top: 35px; margin-left: 30px;">
               <h class="header-details" style="margin-left: -25px">' . $this->model->getTechnicalDetails1(1) . '</h>
 
               <div class="spacer-35"></div>';
@@ -154,7 +154,7 @@ class SubdescriptionView extends DefaultView
 
         echo '</ul>
               <h class="header-details">' . $this->model->getTechnicalDetails2(0) . '</h>
-              <ul style="margin-top: 35px; margin-left: 30px;">';
+              <ul class="list-style-items-gl" style="margin-top: 35px; margin-left: 30px;">';
 
         $i = 0;
         while ($i < $this->model->countTechnicalDetails2()){
@@ -165,7 +165,7 @@ class SubdescriptionView extends DefaultView
 
         echo '</ul>
               <h class="header-details">' . $this->model->getTechnicalDetails3(0) . '</h>
-              <ul style="margin-top: 35px; margin-left: 30px;">';
+              <ul class="list-style-items-gl" style="margin-top: 35px; margin-left: 30px;">';
 
         $u = 1;
         while ($u < $this->model->countTechnicalDetails3()){
@@ -176,7 +176,7 @@ class SubdescriptionView extends DefaultView
 
         echo '</ul>
               <h class="header-details">' . $this->model->getTechnicalDetails4(0) . '</h>
-              <ul style="margin-top: 35px; margin-left: 30px;">';
+              <ul class="list-style-items-gl" style="margin-top: 35px; margin-left: 30px;">';
 
         $u = 1;
         while ($u < $this->model->countTechnicalDetails4()){
@@ -187,7 +187,7 @@ class SubdescriptionView extends DefaultView
 
         echo '</ul>
               <h class="header-details">' . $this->model->getTechnicalDetails5(0) . '</h>
-              <ul style="margin-top: 35px; margin-left: 30px;">';
+              <ul class="list-style-items-gl" style="margin-top: 35px; margin-left: 30px;">';
 
         $u = 1;
         while ($u < $this->model->countTechnicalDetails5()){
@@ -198,7 +198,7 @@ class SubdescriptionView extends DefaultView
 
         echo '</ul>
               <h class="header-details">' . $this->model->getTechnicalDetails6(0) . '</h>
-              <ul style="margin-top: 35px; margin-left: 30px;">';
+              <ul class="list-style-items-gl" style="margin-top: 35px; margin-left: 30px;">';
 
         $u = 1;
         while ($u < $this->model->countTechnicalDetails6()){
@@ -216,19 +216,19 @@ class SubdescriptionView extends DefaultView
                   <div class="col-md-3">
                       <div class="social">
                           <a title="contact via VK" href="http://vk.com/naisly" class="contact">Contact </a>
-                          <a href="http://vk.com/naisly"><img src="images/vk.png" width="30" height="30" /></a>
-                          <a href="https://www.facebook.com/alexandr.serduk.7"><img src="images/facebook.png" width="30" height="30" /></a>
-                          <a href="https://twitter.com/naislygg"><img src="images/twitter.png" width="30" height="30" /></a>
+                          <a href="http://vk.com/naisly"><img src="/shop/images/vk.png" width="30" height="30" /></a>
+                          <a href="https://www.facebook.com/alexandr.serduk.7"><img src="/shop/images/facebook.png" width="30" height="30" /></a>
+                          <a href="https://twitter.com/naislygg"><img src="/shop/images/twitter.png" width="30" height="30" /></a>
                       </div>
                       <div class="aside" style="margin-top: 5px;">
                           <div class="shopping-cart">
-                              <img src="images/shopping-cart.png" />
+                              <img src="/shop/images/shopping-cart.png" />
                               <h class="buy-new">Buy new :</h>
                               <h class="price-new">$' . sprintf("%0.2f", $this->model->getPrice()) . '</h>
                           </div>
                           <div class="nova-poshta">
-                              <h><input type="checkbox" name="free-shipping" value="1" /> Yes, I want <em>FREE shipping</em> that varies from
-                              <b>two weeks</b> up to <b>one month</b> with <a href="https://novaposhta.ua/en">Nova Poshta</a></h>
+                              <h style="font-family: Arial;"><input type="checkbox" name="free-shipping" value="1" /> Yes, I want <em>FREE shipping</em> that varies from
+                              <b>two weeks</b> up to <b>one month</b> with <a class="link-default" href="https://novaposhta.ua/en">Nova Poshta</a></h>
                           </div>
 
                           <div class="qty">
@@ -322,13 +322,13 @@ class SubdescriptionView extends DefaultView
                         </div>
                         <div class="row">
                             <div class="col-md-4">
-                                <img src="'. $this->model->getSequencePhoto() . '" width="85" height="86" class="random-photo" />
+                                <img src="/shop/'. $this->model->getSequencePhoto() . '" width="85" height="86" class="random-photo" />
 
                             </div>
                             <div class="col-md-1"></div>
                             <div class="col-md-7">
                                 <form action="subdescription.php" method="post">
-                                    <button class="random-name">' . $this->model->getSequenceOriginalName() . '</button><br />
+                                    <button class="random-name text-left">' . $this->model->getSequenceOriginalName() . '</button><br />
                                     <input type="hidden" name="id" value="' . $this->model->getSequenceId() . '" />
                                 </form>
                                 <h class="random-quantity">' . $this->model->getSequenceQuantity() . ' items</h><br />
@@ -345,7 +345,7 @@ class SubdescriptionView extends DefaultView
 
         echo '<div class="divider"></div>
               <h class="tech-details">' . $this->model->getProductDetails(0) . '</h>
-              <ul style="margin-top: 35px; margin-left: 30px;">';
+              <ul class="list-style-items-gl" style="margin-top: 35px; margin-left: 30px;">';
 
         $u = 1;
         while ($u < $this->model->countProductDetails()){
@@ -361,7 +361,7 @@ class SubdescriptionView extends DefaultView
 
         echo '<h1 class="compare">Compare to similar items</h1>
               <div class="paddings-table">
-              <table class="table table-bordered">
+              <table class="table table-bordered table-responsive">
                  <thead>
                     <tr>
                         <th style="border-top: 1px solid white; border-left: 1px solid white;"></th>';
@@ -369,7 +369,7 @@ class SubdescriptionView extends DefaultView
         while($i < $this->model->countComparisonId()) {
             echo '<th style="width: 20%;">
                       <div class="text-center">
-                          <img src="' . $this->model->getComparisonPhoto( $i ) . '" width="60" height="80" />
+                          <img src="/shop/' . $this->model->getComparisonPhoto( $i ) . '" width="60" height="80" />
                           <h class="name-margin">' . $this->model->getComparisonProductName($i) . '</h>
                       </div>
 
@@ -558,16 +558,18 @@ class SubdescriptionView extends DefaultView
     {
 
         echo '<form action="search-answers.php" method="get">
-                  <div class="row">
-                      <div class="col-lg-8 search-margin">
-                        <div class="input-group">
-                            <div class="input-group-btn">
-                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                 <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-lg-8">
+                            <div class="input-group">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Have a question? Search for answers" id="q" name="q">
                             </div>
-                            <input type="text" class="form-control" placeholder="Have a question? Search for answers" id="q" name="q">
-                        </div>
-                      </div><!-- /.col-lg-6 -->
-                  </div><!-- /.row -->
+                          </div><!-- /.col-lg-6 -->
+                      </div><!-- /.row -->
+
                </form>';
     }
 
@@ -577,17 +579,25 @@ class SubdescriptionView extends DefaultView
         while ($i < $this->model->countAskPerson()) {
 
             echo '<div class="row" style="margin-top: 60px;">
-                      <div class="col-md-5" id="test">
-                          <h class="question">Question:<span id="question">' . $this->model->getQuestion($i) . '</span></h><br />
-                          <div style="margin-top: 15px;">
-                               <h class="answer">Answer: <span id="answer">' . $this->model->getAnswer($i) . '</span></h><br />
+                      <div class="col-md-1" id="test">
+                          <h class="question">Question:</h><br />
+                          <h class="answer">Answer:</h>
+                      </div>
+                      <div class="col-md-4">
+                               <h class="answer"><span id="question">' . $this->model->getQuestion($i) . '</span></h><br /></h>
+                               <h class="answer"><span id="answer">' . $this->model->getAnswer($i) . '</span></h><br />
                                <h class="by-answer">By ' . $this->model->getAnswerPerson($i) . ' on ' . $this->model->getAnswerTime($i) . '</h>
                           </div>
-                      </div>
                  </div>';
 
             $i++;
         }
+        echo '</div>
+              <script>
+                function goBack() {
+                    window.history.back();
+                }
+              </script>';
 
     }
 }

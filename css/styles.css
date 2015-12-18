@@ -107,6 +107,12 @@ p, h1,a  {
 	height: 2px;
 	background-color: white;
 }
+.footer-divider {
+	width: 100%;
+	height: 1px;
+	background-color: #e4e4e4;
+	margin-bottom: 10px;
+}
 
 
 
@@ -282,6 +288,7 @@ a:link {
 	color: #666;
 	text-decoration: none;
 	font-size: 12px;
+	font-family: Arial;
 }
 .margin-more {
 	margin-left: -5px;
@@ -354,6 +361,11 @@ a:link {
 	white-space: nowrap;
 	margin-top: 0 !important;
 	font-family: Arial !important;
+}
+.link-default {
+	color: #08b !important;
+	text-decoration: none !important;
+	font-family: Arial;
 }
 
 
