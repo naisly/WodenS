@@ -630,6 +630,23 @@ class DefaultView
               </script>
               <script type="text/javascript">
                 check_preload=1;
+              </script>
+              <script>
+                  $("#overflow-xl-collapsed-cl").click(function(){
+
+                      var x = $("body").css("overflowY");
+                      if(x == "visible"){
+                          $("body")
+                              .css("overflow-y", "hidden");
+                          $("html")
+                              .css("overflow-y", "hidden");
+                      } else {
+                          $("body")
+                              .css("overflow-y", "visible");
+                          $("html")
+                              .css("overflow-y", "visible");
+                      }
+                  });
               </script>';
     }
     public function getFooter() {

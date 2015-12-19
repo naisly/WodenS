@@ -25,7 +25,6 @@ class LaptopsView extends IndexView
         $this->headerView( 'notebooks' );
         $this->getMain();
         $this->getDesciprition();
-        $this->getOrder();
         $this->actionGetFooter( 'notebooks' );
         $this->endHTML();
     }
@@ -34,16 +33,19 @@ class LaptopsView extends IndexView
 
         echo '<div class="text-center">
                   <h1 class="macbook-header">Laptops</h1>
-                  <p class="macbook-p">All the power you want. All day long.<br/>
-                     Thin, stunning display makes your heart beat faster.
-                  </p>
-
-                      <a class="order" href="/shop/business/" style="text-decoration: none; margin-right: 30px;">Learn more <img src="../images/arrow-right.png" /></a>
-                      <a class="order" href="/shop/shop/buy-laptop/laptops.php" style="text-decoration: none;">Buy <img src="../images/arrow-right.png" /></a>
+                  <p class="macbook-p">Thin, stunning display makes your heart beat faster.</p>
+                  <p class="macbook-p" style="font-size: 28px;">All the power you want. All day long.</p>
+                  <div style="margin-top: 15px; margin-bottom: 30px;">
+                      <a class="links" id="main-link" href="/shop/education/laptops/" style="text-decoration: none">For education <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
+                      <a class="links" id="main-link" href="/shop/business/laptops/" style="text-decoration: none">For business <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
+                      <a id="main-link" href="/shop/shop/buy-laptop/" style="text-decoration: none;">Buy <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
+                  </div>
 
               </div>
 
-              <img src="../images/macbook-pro.jpg" class="full-image" />
+              <div class="container">
+                  <img src="../images/macbook-pro.png" class="full-image" />
+              </div>
 
               <div class="container">
                   <div class="divider-block"></div>
@@ -53,54 +55,9 @@ class LaptopsView extends IndexView
     private function getDesciprition() {
 
         echo '<div class="text-center">
-                  <h1 class="header-laptops">The best design. For the best performance</h1>
-                  <h2 class="sub-white" style="padding-bottom: 40px;">Special All-day battery life</h2>
-              </div>
-
-              <div class="container">
-                   <div class="row">
-                       <div class="col-md-1"></div>
-                       <div class="col-md-10">
-                           <div class="row">
-                               <div class="col-md-4">
-                                   <h class="header-for-category">Usability</h><br /><br />
-                                   <p class="sub-h" style="text-align: left;">With the usability and high performance of
-                                   each newly developed Laptop, you\'re going to change your mind as well as fundamental
-                                   principals at all.</p>
-                               </div>
-                               <div class="col-md-4" style="border-right: 1px solid #e4e4e4; border-left: 1px solid #e4e4e4;">
-                                   <h class="header-for-category">High Performance</h><br /><br />
-                                   <p class="sub-h" style="text-align: left;">The entire internal structure was built to keep
-                                   the very best high-performance components: all-flash storage, the latest processors,
-                                   powerful discrete graphics, massive amounts of memory, autonomy.</p>
-                               </div>
-                               <div class="col-md-4">
-                                   <h class="header-for-category">Be connected</h><br /><br />
-                                   <p class="sub-h" style="text-align: left;">Nowadays, despite all most casual situations,
-                                   every person from Kid up to Businessman must be connected to the world. With newly developed
-                                   24 hours battery you\'re going to forget about lack of power in general.
-                                   </p>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="col-md-1"></div>
-                   </div>
-              </div>
-
-              <div class="text-center" style="margin-top: 40px;">
-                  <img src="../images/macbook-air.jpg" class="part-image" />
-              </div>
-
-              <div class="container">
-                  <div class="divider-block"></div>
-              </div>
-
-              <div class="text-center">
                    <h1 class="header-laptops">Build your life as easy as it could be</h1>
-                   <h2 class="sub-white">Powerful apps included</h2>
-
-                   <a class="order" href="/shop/education/" style="text-decoration: none;">For education <img src="../images/arrow-right.png" /></a>
-
+                   <h2 class="macbook-p" style="font-size: 28px;">Powerful apps included</h2>
+                   <a class="links" id="default-link" href="/shop/education/laptops/" style="text-decoration: none">For education <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
               </div>
 
               <div class="container" style="margin-top: 60px;">
@@ -108,7 +65,7 @@ class LaptopsView extends IndexView
                        <div class="col-md-1"></div>
                        <div class="col-md-10">
                            <div class="row">
-                               <div class="col-md-4">
+                               <!--<div class="col-md-4">
                                    <h class="header-for-category">Apps</h><br /><br />
                                    <p class="sub-h" style="text-align: left;">Really useful apps for Windows 10 like Live Table Calendar, Mail with build-in
                                    system sign up. Every new Mac comes with Photos, iMovie, GarageBand, Pages, Numbers, and Keynote. </p>
@@ -123,16 +80,76 @@ class LaptopsView extends IndexView
                                    <p class="sub-h" style="text-align: left;">Be connected worldwide with new apps like Skype, Viber for free. Share for free of charge your
                                    documents, photos, tasks and get instant messages by online chat.
                                    </p>
+                               </div>-->
+                               <div class="col-md-4" style="margin-top: 8%;">
+                                   <h class="header-for-category">Apps</h><br /><br />
+                                   <p class="sub-h" style="text-align: left;">Really useful apps for Windows 10 like Live Table Calendar, Mail with build-in
+                                   system sign up. Every new Mac comes with Photos, iMovie, GarageBand, Pages, Numbers, and Keynote. </p>
+
+                                   <div class="divider" style="margin-top: 25px; margin-bottom: 25px;"></div>
+
+                                   <h class="header-for-category">Anywhere you want</h><br /><br />
+                                   <p class="sub-h" style="text-align: left;">So you can be creative and productive right from the start. You also get great
+                                   apps for email, sending texts, and making FaceTime calls, there even an app for new apps. Be connected to the social networks.</p>
                                </div>
+                               <div class="col-md-1"></div>
+                               <div class="col-md-7">
+                                   <img src="/shop/images/macbook-drop.png" class="full-image-cascade" id="for-small-cascade"/>
+                               </div>
+
                            </div>
                        </div>
                        <div class="col-md-1"></div>
                   </div>
               </div>
 
-              <div class="text-center">
-                  <img src="../images/macbook.jpg" class="part-image" style="margin-top: 60px; margin-bottom: 60px;"/>
+              <div class="container">
+                  <div class="divider-block"></div>
               </div>
+
+              <div class="text-center" style="padding-bottom: 40px;">
+                  <h1 class="header-laptops">The best design. For the best performance</h1>
+                  <h2 class="macbook-p" style="font-size: 28px;">Special All-day battery life</h2>
+                  <a class="links" id="default-link" href="/shop/business/laptops/" style="text-decoration: none">For business <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
+              </div>
+
+              <div class="container">
+                   <div class="row">
+                       <div class="col-md-1"></div>
+                       <div class="col-md-10">
+                           <div class="row">
+                               <div class="col-md-4">
+                                   <h class="header-for-category">Usability</h><br /><br />
+                                   <p class="sub-h" style="text-align: left;">With the usability and high performance of
+                                   each newly developed Laptop, you\'re going to change your mind as well as fundamental
+                                   principals at all.</p>
+                               </div>
+                               <div class="col-md-4" style="border-right: 1px solid #e4e4e4; border-left: 1px solid #e4e4e4;">
+                                   <h class="header-for-category">Be connected</h><br /><br />
+                                   <p class="sub-h" style="text-align: left;">Nowadays, despite all most casual situations,
+                                   every person from Kid up to Businessman must be connected to the world. With newly developed
+                                   24 hours battery you\'re going to forget about lack of power in general.
+                                   </p>
+                               </div>
+                               <div class="col-md-4">
+                                   <h class="header-for-category">High Performance</h><br /><br />
+                                   <p class="sub-h" style="text-align: left;">The entire internal structure was built to keep
+                                   the very best high-performance components: all-flash storage, the latest processors,
+                                   powerful discrete graphics, massive amounts of memory, autonomy.</p>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-md-1"></div>
+                   </div>
+              </div>
+
+              <div class="text-center" style="margin-top: 40px;">
+                  <img src="../images/macbook-air.jpg" class="part-image" />
+              </div>
+
+              <!--<div class="text-center">
+                  <img src="../images/macbook-real.jpg" class="part-image"/>
+              </div>-->
 
               <div class="container">
                   <div class="divider-block"></div>
@@ -140,7 +157,8 @@ class LaptopsView extends IndexView
 
               <div class="text-center">
                    <h1 class="header-laptops">Stunning display</h1>
-                   <h2 class="sub-white">Best quality for your performance</h2>
+                   <h2 class="macbook-p" style="font-size: 28px;">Best quality for your performance</h2>
+                   <a id="default-link" href="/shop/shop/buy-laptop/" style="text-decoration: none;">Buy <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
               </div>
 
               <div class="container" style="margin-top: 40px;">
@@ -173,14 +191,7 @@ class LaptopsView extends IndexView
               </div>
 
               <div class="text-center">
-                   <img src="../images/laptops.jpg" class="part-image" />
-              </div>';
-    }
-
-    private function getOrder() {
-
-        echo '<div class="text-center">
-                  <a href="notebooks.php" class="order-now">Order it now <img src="../images/arrow-right.png" /></a>
+                   <img src="../images/macbook-different-w-text-light.jpg" class="full-image-cascade" style="margin-top: 80px;"/>
               </div>';
     }
 }

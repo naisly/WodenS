@@ -152,28 +152,6 @@ class IndexView extends DefaultView
                       pause: 4000,
                       controls: false
                   });
-
-                  $("#overflow-xl-collapsed-cl").click(function(){
-
-                      var x = $("body").css("overflowY");
-                      if(x == "visible"){
-                          $("body")
-                              .css("overflow-y", "hidden");
-                          $("html")
-                              .css("overflow-y", "hidden");
-                      } else {
-                          $("body")
-                              .css("overflow-y", "visible");
-                          $("html")
-                              .css("overflow-y", "visible");
-                      }
-                  });
-
-                  $(function() {
-                    $("#overflow-xl-collapsed-cl").click(function() {
-                       $(".navbar").css("opacity", "0.97%");
-                    })
-                  })
               });
               </script>';
     }

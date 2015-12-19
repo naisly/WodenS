@@ -372,6 +372,18 @@ a:link {
 	text-decoration: none !important;
 	font-family: Arial;
 }
+.links:hover {
+	color: #3366BB;
+}
+#main-link {
+	font-size: 25px;
+	color: #08b;
+	margin-right: 40px;
+}
+#default-link {
+	font-size: 25px;
+	color: #08b;
+}
 
 
 

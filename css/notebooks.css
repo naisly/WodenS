@@ -1,14 +1,14 @@
 .macbook-header {
-    margin-top: 50px;
+    margin-top: 100px;
     font-size: 55px;
     font-family: RobotoLight;
 }
 .macbook-p {
-    font-size: 28px;
-    font-family: RobotoLight;
+    font-size: 34px;
+    font-family: RobotoBold;
 }
 .header-laptops {
-    font-size: 36px;
+    font-size: 38px;
     font-family: RobotoLight;
 }
 .divider-block {
@@ -19,8 +19,8 @@
     background-color: #e4e4e4;
 }
 .sub-h {
-    font-family: RobotoRegular;
-    font-size: 16px;
+    font-family: MyriadProSemiBold;
+    font-size: 20px;
 }
 .sub-white {
     color: #666;
@@ -57,6 +57,13 @@
     color: #08b;
 }
 .header-for-category {
-    font-size: 22px;
-    font-family: RobotoLight;
+    font-size: 26px;
+    font-family: RobotoBold;
+}
+
+@media (max-width: 766px){
+    #for-small-cascade {
+        width: 70%;
+        margin-left: 15%;
+    }
 }
