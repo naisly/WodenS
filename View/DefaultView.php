@@ -413,7 +413,7 @@ class DefaultView
     public function actionGetFooter( $page ) {
         echo   '</div>
                 <footer>';
-        if($page !== 'financing' && $page !== 'Index' && $page !== 'Phones') {
+        if($page !== 'financing' && $page !== 'Index' && $page !== 'Phones' && $page !== 'Devices') {
             echo '<div class="container">
                          <!--<div class="divider"></div>-->
                   </div>
