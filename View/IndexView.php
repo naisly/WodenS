@@ -48,8 +48,11 @@ class IndexView extends DefaultView
                       <div class="row">
                           <div class="col-md-1"></div>
                           <div class="col-md-10">
-                              <h1 class="header-for-category-sub-gl">Thin, powerful devices are developing to make your life as complex
-                              as possible. Productive, easy-to-use desktop computers going to flip absolutely your way of thinking at all.</h1>
+                              <h1 class="header-for-category-sub-gl">';
+
+        echo $this->model->Translate('Thin, powerful devices are developing to make your life as complex as possible. Productive, easy-to-use desktop computers going to flip absolutely your way of thinking at all.');
+
+        echo                 '</h1>
                           </div>
                           <div class="col-md-1"></div>
                       </div>
@@ -75,8 +78,11 @@ class IndexView extends DefaultView
                       <div class="row">
                           <div class="col-md-1"></div>
                           <div class="col-md-10">
-                              <h1 class="header-for-category-sub-gl">Moving in lockstep with Business. Increase your productivity
-                              in area of Education. Get new possibilities for your day-to-day life</h1>
+                              <h1 class="header-for-category-sub-gl">';
+
+        echo $this->model->Translate('Moving in lockstep with Business. Increase your productivity in area of Education. Get new possibilities for your day-to-day life');
+
+        echo                  '</h1>
                           </div>
                           <div class="col-md-1"></div>
                       </div>
@@ -99,8 +105,11 @@ class IndexView extends DefaultView
                       <div class="row">
                           <div class="col-md-1"></div>
                           <div class="col-md-10">
-                              <h1 class="header-for-category-sub-gl">Visit our online store. Place orders, then wait
-                              for shipping or pick up at any store.</h1>
+                              <h1 class="header-for-category-sub-gl">';
+
+        echo $this->model->Translate('Visit our online store. Place orders, then wait for shipping or pick up at any store.');
+
+        echo                 '</h1>
 
                               <div class="divider-main-for-gl-devices" style="margin-top: 25px; margin-bottom: 25px;"></div>
 
@@ -113,22 +122,38 @@ class IndexView extends DefaultView
                       <div class="row">
                           <div class="col-md-2"></div>
                           <div class="col-md-2">
-                              <h class="category-small-for-store">Phones</h>
+                              <h class="category-small-for-store">';
+
+        echo $this->model->Translate('Phones');
+
+        echo                 '</h>
 
                               <a href="/shop/shop/buy-phone/"><img src="images/logo-phones-small.png" id="full-logo" /></a>
                           </div>
                           <div class="col-md-2">
-                              <h class="category-small-for-store">Laptops</h>
+                              <h class="category-small-for-store">';
+
+        echo $this->model->Translate('Laptops');
+
+        echo                 '</h>
 
                               <a href="/shop/shop/buy-laptop/"><img src="images/logo-laptops-small.png" id="full-logo" /></a>
                           </div>
                           <div class="col-md-2">
-                              <h class="category-small-for-store">Devices</h>
+                              <h class="category-small-for-store">';
+
+        echo $this->model->Translate('Devices');
+
+        echo                 '</h>
 
                               <a href="/shop/shop/buy-device/"><img src="images/logo-devices-small.png" id="full-logo" /></a>
                           </div>
                           <div class="col-md-2">
-                              <h class="category-small-for-store margin-tv-for-small">TV</h>
+                              <h class="category-small-for-store margin-tv-for-small">';
+
+        echo $this->model->Translate('TV');
+
+        echo                 '</h>
 
                               <a href="/shop/shop/buy-tv/"><img src="images/logo-tv-small.png" id="full-logo" /></a>
                           </div>

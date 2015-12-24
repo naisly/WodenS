@@ -446,12 +446,24 @@ class DefaultController
         $this->model->setDistinctProductNames($product_names_array);
     }
 
+    private function actionGetLanguage() {
+
+        //echo $_SESSION['language'];
+        if(!isset($_SESSION['language'])){
+            $_SESSION['language'] = 'us';
+        }
+
+        include_once('/Languages/lang.' . $_SESSION['language'] . '.php');
+
+        $this->model->setLanguage($lang);
+    }
     /*
      * Incapsulation for
      * header area
      * Cart menu
      */
     public function actionGetHeaderCart() {
+        $this->actionGetLanguage();
         $this->actionGetSumOfItems();
         $this->actionGetQuantityOfItems();
         $this->actionGetBreadcrumbs();

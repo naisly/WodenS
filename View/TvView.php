@@ -31,6 +31,20 @@ class TvView extends IndexView
 
     private function getMain() {
 
+        /*echo '<div class="full-background">
+                  <div class="text-center">
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-md-2"></div>
+                              <div class="col-md-8">
+                                  <h class="main-header-gl">Our development future is mainly focused on TV</h>
+                              </div>
+                              <div class="col-md-2"></div>
+                          </div>
+                      </div>
+                  </div>
+             </div>';*/
+        echo '<img src="/shop/images/watching-tv.jpg" class="bg-full-image-gl-xs" />';
         echo '<div class="text-center">
                   <h1 class="future-main">The future of television is here now!</h1>
                   <p><a href="television.php" class="link-nav">Search TV for your choice ></a></p>

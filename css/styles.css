@@ -2,6 +2,9 @@ html, body {
 	width: 100%;
 	height: 100%;
 }
+h, a, h1, p {
+	font-family: Arial;
+}
 .white-link {
 	font-size: 14px;
 	line-height: 2.75;
@@ -169,7 +172,7 @@ ul {
 	margin-left: -40px;
 }
 .items {
-	font-size: 12px;
+	font-size: 0.9em;
 	color: #666;
 	white-space: nowrap;
 	margin-left: -40px;
@@ -384,15 +387,46 @@ a:link {
 	font-size: 25px;
 	color: #08b;
 }
+.lang {
+	margin-left: 7px;
+	font-size: 13px;
+	font-family: MyriadProSemiBold;
+	color: #666;
+	text-decoration: none;
+}
+.dropup-menu-for-sm {
+	cursor: pointer;
+	float: right;
+	margin-left: -5px;
+}
+#marger-for-small-devices-xs {
+	margin-left: 10px;
+}
+
 
 
 
 
 
 @media (max-width: 766px) {
+	#marger-for-small-devices-xs {
+		margin-left: 30px;
+	}
+	.lang:hover {
+		background-color: white !important;
+	}
+	.dropup-menu-for-sm {
+		float: left;
+	}
+	.language {
+		margin-left: 5px;
+	}
 	#full-logo {
 		width: 90px;
 		height: 90px;
+	}
+	.full-image-main-content {
+		height: 40vh;
 	}
 	.header-for-category-sub-gl {
 		font-size: 21px;

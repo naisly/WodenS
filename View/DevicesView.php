@@ -42,7 +42,7 @@ class DevicesView extends IndexView
                           <p class="main-p-lead">Thin, capable that you have never ever seen before</p>
                           <p class="sub-main-lead">Never worry about where to place this incredible thing.</p>
 
-                          <a class="links" id="main-link" href="/shop/business/devices/" style="text-decoration: none">For business <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
+                          <a class="links" id="main-link" href="/shop/business/devices/" style="text-decoration: none;">For business <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
                           <a id="main-link" href="/shop/shop/buy-device/" style="text-decoration: none;">Buy <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
                       </div>
                   </div>

@@ -3,6 +3,8 @@
 include_once('Controllers\DefaultController.php');
 include_once('Model\DefaultModel.php');
 include_once('View\IndexView.php');
+
+#include_once('Translate.php');
 //initiate the triad
 
 $model = new DefaultModel();
@@ -16,5 +18,7 @@ $view = new IndexView($model);
 $controller->actionGetHeaderCart();
 
 $view->getIndexPage();
+
+
 
 ?>

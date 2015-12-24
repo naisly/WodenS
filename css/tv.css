@@ -2,6 +2,22 @@ body, html {
     width: 100%;
     height: 100%;
 }
+.main-header-gl {
+    font-size: 45px;
+    font-family: RobotoBold !important;
+    color: black;
+}
+.full-background {
+    background: url(../images/watching-tv.jpg);
+    margin-top: -70px;
+    padding-top: 41vh;
+    width: 100%;
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 .main-overlay {
     background: url(../images/tv4.jpg) no-repeat center center;
     width: 100%;
@@ -81,4 +97,21 @@ body, html {
 .order-nav:hover {
     text-decoration: none;
     color: #3366BB;
+}
+.bg-full-image-gl-xs {
+    width: 100%;
+    height: 100%;
+    margin-top: -65px;
+}
+
+@media (min-width: 766px) and (max-width: 1000px) {
+    .bg-full-image-gl-xs {
+        height: 65%;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 765px) {
+    .bg-full-image-gl-xs {
+        height: 45%;
+    }
 }

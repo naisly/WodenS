@@ -35,6 +35,8 @@ class DefaultModel
     public $breadcrumbs;
     public $breadcrumbs_link;
 
+    private $language;
+
     public function setProductName ( $product_name ) {
 
         $this->product_name = $product_name;
@@ -270,5 +272,15 @@ class DefaultModel
     public function countBreadcrumbs() {
 
         return count($this->breadcrumbs);
+    }
+
+    public function setLanguage( $language ){
+
+        $this->language = $language;
+    }
+
+    public function Translate( $text ){
+
+        return $this->language[$text];
     }
 }

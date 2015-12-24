@@ -462,7 +462,7 @@ class DefaultView
             echo '<h id="breadcrumbs">Home</h>';
         }
         echo                  '</div>
-                              <div class="col-md-8"></div>
+                              <div class="col-md-5"></div>
                           </div>
                      </div>
                      <div class="container" style="margin-top: 20px;">
@@ -605,13 +605,68 @@ class DefaultView
                             <div class="col-sm-5 margin-copy">
                                 <p class="more-info pull-left">Copyright &copy; Woden S Inc. All rights reserved.
                             </div>
-                            <div class="col-sm-5">
-                                <ul class="hor_nav">
-                                    <li><a class="hor-items small-devices-hor-nav" href="/privacy">Privacy</a></li>
-                                    <li><a class="hor-items small-devices-hor-nav" href="/refunds">Refunds</a></li>
-                                    <li><a class="hor-items small-devices-hor-nav" href="/sales">Sales</a></li>
-                                    <li><a class="hor-items small-devices-hor-nav" href="site-map">Site map</a></li>
-                                </ul>
+                            <div class="col-sm-5 language" style="margin-top: -5px;">
+                                <div class="dropup dropup-menu-for-sm">
+                                    <a class="dropdown-toggle" type="button" data-toggle="dropdown" style="text-decoration: none;">';
+        //$_SESSION['language'] = 'us';
+        if(!isset($_SESSION['language'])){
+            $_SESSION['language'] = 'us';
+        }
+        $language = $_SESSION['language'];
+        //echo $language;
+        switch ($language) {
+            case 'ru': $name_of_country =  'Russian Federation';
+                break;
+            case 'us': $name_of_country =  'United States';
+                break;
+            case 'fr': $name_of_country =  'France';
+                break;
+        }
+
+
+        $language_array = ['ru', 'us', 'fr'];
+        foreach($language_array as $val => $assoc){
+            if($assoc == $language){
+                unset($language_array[$val]);
+            }
+        }
+        sort($language_array);
+
+        $name_of_country_array = array();
+        $i = 0;
+        $k = count($language_array);
+        while ($i < $k){
+            switch($language_array[$i]){
+                case 'ru': array_push($name_of_country_array,'Russian Federation');
+                    break;
+                case 'us': array_push($name_of_country_array, 'United States');
+                    break;
+                case 'fr': array_push($name_of_country_array,'France');
+                    break;
+            }
+
+            $i++;
+        }
+
+        echo                          '<img src="/shop/images/' . $language . '-flag.png" height="16" width="16" /><h class="lang">' . $name_of_country . '</h>
+                                    </a>
+                                    <ul class="dropdown-menu">';
+        $i = 0;
+        while ($i < $k){
+            echo '<form action="/shop/change-language" method="post" id="form-' . $i . '">
+                     <input type="hidden" value="' . $language_array[$i] . '" name="checked-language" id="checked-language" />
+                     <li id="marger-for-small-devices-xs"><img id="margin-for-small" src="/shop/images/' . $language_array[$i] . '-flag.png" height="16" width="16" /><button id="link_as_button" style="font-size: 13px; margin-left: 7px; text-decoration: none;">' . $name_of_country_array[$i] . '</span></button></li>
+                  </form>';
+
+            if($i < ($k -1)){
+                echo '<div class="divider" style="margin-left: 8px; padding-right: 4px; width: 90%;"></div>';
+            }
+
+            $i++;
+        }
+
+        echo                         '</ul>
+                                  </div>
                             </div>
                             <div class="col-sm-1"></div>
                         </div>
