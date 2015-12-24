@@ -36,7 +36,7 @@ class PageNotFoundView extends DefaultView
 
         echo '<div class="overlay-main">';
         echo '<div class="container text-center">
-                  <div class="row" style="margin-top: 15%; padding-bottom: 10%;">
+                  <div class="row" style="margin-top: 15%; padding-bottom: 8%;">
                       <div class="col-md-3"></div>
                       <div class="col-md-6">
                           <h class="not-found-h">The page that you are looking can not be found</h>
@@ -44,6 +44,8 @@ class PageNotFoundView extends DefaultView
                           <div style="margin-top: 3%;">
                               <h class="search-for-choice">Search items for your choice</h>
                           </div>
+
+                          <a href="/shop/"><img src="/shop/images/not-found.png" style="margin-top: 5%;" /></a>
                       </div>
                       <div class="col-md-3"></div>
                   </div>
