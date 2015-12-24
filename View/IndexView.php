@@ -62,14 +62,14 @@ class IndexView extends DefaultView
         echo      '<div class="container-fluid">
                       <div class="row">
                           <div class="col-md-6 no-division-for-category">
-                              <a href="/shop/phones/"><img src="images/phones-category-w-text.png" class="full-image-cascade border-left" /></a>
+                              <a href="/shop/phones/"><img src="/shop/images/phones-category-w-text.png" class="full-image-cascade border-left" /></a>
 
-                              <a href="/shop/devices/"><img src="images/ipad-category-w-text.jpg" class="full-image-cascade border-top" /></a>
+                              <a href="/shop/devices/"><img src="/shop/images/ipad-category-w-text.jpg" class="full-image-cascade border-top" /></a>
                           </div>
                           <div class="col-md-6 no-division-for-category">
-                              <a href="/shop/laptops/"><img src="images/laptops-category-w-text.jpg" class="full-image-cascade border-right" /></a>
+                              <a href="/shop/laptops/"><img src="/shop/images/laptops-category-w-text.jpg" class="full-image-cascade border-right" /></a>
 
-                              <a href="/shop/tv/"><img src="images/tv-category.jpg" class="full-image-cascade border-bottom" /></a>
+                              <a href="/shop/tv/"><img src="/shop/images/tv-category.jpg" class="full-image-cascade border-bottom" /></a>
                           </div>
                       </div>
                   </div>';

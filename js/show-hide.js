@@ -26,3 +26,16 @@ function toggle1() {
         text1.innerHTML = "hide";
     }
 }
+
+/*function toggle5() {
+    var ele1 = document.getElementById("toggleText5");
+    var text1 = document.getElementById("displayText5");
+    if(ele1.style.display == "block") {
+        ele1.style.display = "none";
+        text1.innerHTML = "show";
+    }
+    else {
+        ele1.style.display = "block";
+        text1.innerHTML = "hide";
+    }
+}*/

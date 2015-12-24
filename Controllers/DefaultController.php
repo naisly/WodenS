@@ -455,7 +455,7 @@ class DefaultController
         }
         session_write_close();
         //echo $_SESSION['language'];
-        include_once('/Languages/lang.' . $_SESSION['language'] . '.php');
+        include_once('C:/xampp/htdocs/shop/Languages/lang.' . $_SESSION['language'] . '.php');
 
         $this->model->setLanguage($lang);
         //print_r($lang);

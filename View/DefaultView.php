@@ -145,6 +145,8 @@ class DefaultView
             echo '<link href="/shop/css/education.css" rel="stylesheet" type="text/css">';
         } else if($page == 'Business'){
             echo '<link href="/shop/css/business.css" rel="stylesheet" type="text/css">';
+        } else if($page == 'Page Not Found'){
+            echo '<link href="/shop/css/NotFoundPage.css" rel="stylesheet" type="text/css">';
         }
         else {
             echo '<link rel="stylesheet" href="/shop/css/default.css" />' .
@@ -415,7 +417,7 @@ class DefaultView
     public function actionGetFooter( $page ) {
         echo   '</div>
                 <footer>';
-        if($page !== 'financing' && $page !== 'Index' && $page !== 'Phones' && $page !== 'Devices') {
+        if($page !== 'financing' && $page !== 'Index' && $page !== 'Phones' && $page !== 'Devices' && $page !== 'Page Not Found') {
             echo '<div class="container">
                          <!--<div class="divider"></div>-->
                   </div>
@@ -439,25 +441,32 @@ class DefaultView
                           <div class="row">
                               <div class="col-sm-1"></div>
                               <div class="col-sm-6 margin-for-small-devices">';
-        $i = 0;
-        while($i < $this->model->countBreadcrumbs()){
-            if($this->model->getBreadcrumbs($i) == 'shop'){
-                if($i < 1) {
-                    echo '<a href="/shop/"><img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/favicon-default.png" width="20" height="20"/></a>';
+
+        if($page !== 'Page Not Found') {
+            $i = 0;
+            while ($i < $this->model->countBreadcrumbs()) {
+                if ($this->model->getBreadcrumbs($i) == 'shop') {
+                    if ($i < 1) {
+                        echo '<a href="/shop/"><img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/favicon-default.png" width="20" height="20"/></a>';
+                    } else {
+                        echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . 'Shop' . "</a>";
+                    }
+                } else if ($this->model->getBreadcrumbs($i) == 'index') {
+                    echo '<h id="breadcrumbs">Home</h>';
+                } else if (substr($this->model->getBreadcrumbs($i), 0, 14) == 'subdescription') {
+                    echo '<h id="breadcrumbs">' . $this->model->getOriginalName(0) . '</h>';
                 } else {
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . 'Shop' . "</a>";
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . ucfirst($this->model->getBreadcrumbs($i)) . "</a>";
                 }
-            } else if($this->model->getBreadcrumbs($i) == 'index'){
-                echo '<h id="breadcrumbs">Home</h>';
-            } else if(substr($this->model->getBreadcrumbs($i), 0, 14) == 'subdescription'){
-                echo '<h id="breadcrumbs">' . $this->model->getOriginalName(0) . '</h>';
-            } else {
-                echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . ucfirst($this->model->getBreadcrumbs($i)) . "</a>";
+                if ($i < $this->model->countBreadcrumbs() - 1) {
+                    echo '<img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/breadcrumbs-next.png" />';
+                }
+                $i++;
             }
-            if ($i < $this->model->countBreadcrumbs() - 1){
-                echo '<img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/breadcrumbs-next.png" />';
-            }
-            $i++;
+        } else {
+            echo '<a href="/shop/"><img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/favicon-default.png" width="20" height="20"/></a>
+                  <img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/breadcrumbs-next.png" />
+                  <h id="breadcrumbs">Page Not Found</h>';
         }
         if($this->model->countBreadcrumbs() == 1){
             echo '<img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/breadcrumbs-next.png" />';
@@ -608,7 +617,7 @@ class DefaultView
                                 <p class="more-info pull-left">Copyright &copy; Woden S Inc. All rights reserved.
                             </div>
                             <div class="col-sm-5 language" style="margin-top: -5px;">
-                                <div class="dropup dropup-menu-for-sm">
+                                <div class="dropup dropup-menu-for-sm dropup-for-small">
                                     <a class="dropdown-toggle" type="button" data-toggle="dropdown" style="text-decoration: none;">';
         //$_SESSION['language'] = 'us';
         $language = $_SESSION['language'];
@@ -664,8 +673,8 @@ class DefaultView
             $i++;
         }
 
-        echo                         '</ul>
-                                  </div>
+        echo                       '</ul>
+                                </div><!-- End of dropup -->
                             </div>
                             <div class="col-sm-1"></div>
                         </div>

@@ -409,12 +409,6 @@ a:link {
 
 
 @media (max-width: 766px) {
-	#marger-for-small-devices-xs {
-		margin-left: 30px;
-	}
-	.lang:hover {
-		background-color: white !important;
-	}
 	.dropup-menu-for-sm {
 		float: left;
 	}
@@ -505,10 +499,10 @@ a:link {
 	.margin-more, .margin-copy {
 		margin-left: 0px;
 	}
-	#toggleTextFooter, #toggleTextFooter1, #toggleTextFooter2, #toggleTextFooter3, #toggleTextFooter4 {
+	#toggleTextFooter, #toggleTextFooter1, #toggleTextFooter2, #toggleTextFooter3, #toggleTextFooter4, #toggleTextFooter5 {
 		display: none;
 	}
-	#displayTextFooter, #displayTextFooter1, #displayTextFooter2, #displayTextFooter3, #displayTextFooter4 {
+	#displayTextFooter, #displayTextFooter1, #displayTextFooter2, #displayTextFooter3, #displayTextFooter4, #displayTextFooter5 {
 		float: left !important;
 		font-size: 15px;
 		font-family: RobotoRegular;
