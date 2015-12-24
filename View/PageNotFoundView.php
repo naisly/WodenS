@@ -45,26 +45,33 @@ class PageNotFoundView extends DefaultView
                               <h class="search-for-choice">Search items for your choice</h>
                           </div>
 
-                          <a href="/shop/"><img src="/shop/images/not-found.png" style="margin-top: 5%;" /></a>
+                          <a onclick="toggle_categories();" style="cursor: pointer;"><img src="/shop/images/not-found.png" style="margin-top: 5%;" /></a>
                       </div>
                       <div class="col-md-3"></div>
                   </div>
               </div>';
 
-        echo      '<div class="container-fluid">
-                      <div class="row">
-                          <div class="col-md-6 no-division-for-category">
-                              <a href="/shop/phones/"><img src="/shop/images/phones-category-w-text.png" class="full-image-cascade border-left" /></a>
+        echo          '<div id="toggleCategories">
+                           <div class="container-fluid">
+                              <div class="row">
+                                  <div class="col-md-6 no-division-for-category">
+                                      <a href="/shop/phones/"><img src="/shop/images/phones-category-w-text.png" class="full-image-cascade border-left" /></a>
 
-                              <a href="/shop/devices/"><img src="/shop/images/ipad-category-w-text.jpg" class="full-image-cascade border-top" /></a>
-                          </div>
-                          <div class="col-md-6 no-division-for-category">
-                              <a href="/shop/laptops/"><img src="/shop/images/laptops-category-w-text.jpg" class="full-image-cascade border-right" /></a>
+                                      <a href="/shop/devices/"><img src="/shop/images/ipad-category-w-text.jpg" class="full-image-cascade border-top" /></a>
+                                  </div>
+                                  <div class="col-md-6 no-division-for-category">
+                                      <a href="/shop/laptops/"><img src="/shop/images/laptops-category-w-text.jpg" class="full-image-cascade border-right" /></a>
 
-                              <a href="/shop/tv/"><img src="/shop/images/tv-category.jpg" class="full-image-cascade border-bottom" /></a>
+                                      <a href="/shop/tv/"><img src="/shop/images/tv-category.jpg" class="full-image-cascade border-bottom" /></a>
+                                  </div>
+                              </div>
                           </div>
                       </div>
                   </div>
-              </div>';
+                  <script type="text/javascript">
+                      function toggle_categories() {
+                          $("#toggleCategories").slideToggle("slow");
+                      }
+                  </script>';
     }
 }
