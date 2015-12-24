@@ -40,7 +40,7 @@ class DefaultView
             echo "<title>" . $page . " - Woden S</title>";
         }
         echo       '<!-- HTML 5 markup and encoding utf-8 -->
-                    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+                    <meta http-equiv="Content-type" content="text/html; charset=windows-1251">
                     <!-- For Internet Explorer -->
                     <meta http-equiv="X-UA-Compatible" content="IE=EDge">
                     <!-- Bootstrap framework -->
@@ -156,6 +156,8 @@ class DefaultView
         if($page !== 'Index'){
             echo '<div style="margin-top: 70px;"></div>';
         }
+
+
     }
     /*
      * Main navbar Menu for all
@@ -609,9 +611,6 @@ class DefaultView
                                 <div class="dropup dropup-menu-for-sm">
                                     <a class="dropdown-toggle" type="button" data-toggle="dropdown" style="text-decoration: none;">';
         //$_SESSION['language'] = 'us';
-        if(!isset($_SESSION['language'])){
-            $_SESSION['language'] = 'us';
-        }
         $language = $_SESSION['language'];
         //echo $language;
         switch ($language) {

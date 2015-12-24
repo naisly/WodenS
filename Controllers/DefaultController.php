@@ -449,13 +449,16 @@ class DefaultController
     private function actionGetLanguage() {
 
         //echo $_SESSION['language'];
+        session_start();
         if(!isset($_SESSION['language'])){
             $_SESSION['language'] = 'us';
         }
-
+        session_write_close();
+        //echo $_SESSION['language'];
         include_once('/Languages/lang.' . $_SESSION['language'] . '.php');
 
         $this->model->setLanguage($lang);
+        //print_r($lang);
     }
     /*
      * Incapsulation for
