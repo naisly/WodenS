@@ -45,7 +45,7 @@ class PageNotFoundView extends DefaultView
                               <h class="search-for-choice">Search items for your choice</h>
                           </div>
 
-                          <a onclick="toggle_categories();" style="cursor: pointer;"><img src="/shop/images/not-found.png" style="margin-top: 5%;" /></a>
+                          <a onclick="toggle_categories();" style="cursor: pointer;"><img alt="not-found" src="/shop/images/plus.png" style="margin-top: 5%;" /></a>
                       </div>
                       <div class="col-md-3"></div>
                   </div>
@@ -68,10 +68,6 @@ class PageNotFoundView extends DefaultView
                           </div>
                       </div>
                   </div>
-                  <script type="text/javascript">
-                      function toggle_categories() {
-                          $("#toggleCategories").slideToggle("slow");
-                      }
-                  </script>';
+                  <script src="/shop/js/not-found.js"></script>';
     }
 }
