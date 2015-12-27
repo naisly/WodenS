@@ -16,6 +16,7 @@ class ChangeLanguage {
 
         session_start();
 
-        header("Location: /shop/");
+        $url = $_SERVER['HTTP_REFERER'];
+        header("Location: $url");
     }
 }

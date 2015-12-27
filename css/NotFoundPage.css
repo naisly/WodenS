@@ -17,3 +17,7 @@
 #toggleCategories {
     display: none;
 }
+#image-get-data-gl {
+    transform: rotate(90deg);
+    transition: 0.3s ease-in;
+}

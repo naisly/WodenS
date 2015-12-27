@@ -4,15 +4,12 @@
 function toggle_categories() {
     $("#toggleCategories").slideToggle("slow");
 
-    var src = $('img[alt="not-found"]').attr('src');
-    var newSrc;
+    var q = document.getElementById("image-get-data-gl");
 
-    if(src === "/shop/images/plus.png"){
-        newSrc = "/shop/images/close.png";
-    } else if(src === "/shop/images/close.png"){
-        newSrc = "/shop/images/plus.png";
+    if(q.style.transform == "rotate(45deg)"){
+        q.style.transform = "rotate(90deg)";
+    } else {
+        q.style.transform = "rotate(45deg)";
     }
-
-    $('img[alt="not-found"]').attr("src", newSrc);
 
 }
