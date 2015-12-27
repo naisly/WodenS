@@ -37,10 +37,52 @@ $lang = array(
     'Logout' => 'Выйти',
     'Register' => 'Регистрация',
     'Login' => 'Вход',
-    'Products' => 'Изделия',
+    'Products' => 'Предметы',
     'items' => 'штуки',
     'Login to see your cart' => 'Войдите для просмотра',
     /*
      * End Header NavBar
+     */
+
+    /*
+     * Footer
+     */
+    'Shop' => 'Магазин',
+    'Home' => 'Домашняя страница',
+    'Page Not Found' => 'Страница не найдена',
+    'Store' => 'Склад',
+    'Find our store' => 'Найти наш магазин',
+    'Financing' => 'Финансирование',
+    'Order Status' => 'Статус заказа',
+    'Shopping help' => 'Помощь в покупке',
+    'Education' => 'Образование',
+    'Business' => 'Бизнес',
+    'Account' => 'Аккаунт',
+    'Store Account' => 'Аккаунт Магазина',
+    'My Items' => 'Мои предметы',
+    'My Orders' => 'Мои заказы',
+    'Billing Info' => 'Доставка',
+    'Most Valuable' => 'Важное',
+    'Site Terms' => 'Условия использывания',
+    'Privacy' => 'Приватность',
+    'About Us' => 'Про Нас',
+    'Our Company' => 'Наша Компания',
+    'In-touch People' => 'Люди с которыми работаем',
+    'Our managers' => 'Менеджеры',
+    'Director' => 'Директор',
+    'Job' => 'Работа',
+    'Contact Us' => 'Свяжитесь с нами',
+    'For education & Business' => 'Для Образования & Бизнеса',
+    'For Education' => 'Для Образования',
+    'Phones and Education' => 'Телефоны и Образование',
+    'Laptops and Education' => 'Ноутбуки и Образование',
+    'For Business' => 'Для Бизнеса',
+    'Laptops in Business' => 'Ноутбуки для Бизнеса',
+    'Phones in Business' => 'Телефоны для Бизнеса',
+    'Devices in Business' => 'Устройства для Бизнеса',
+    'For more info about return items and shopping & delivery call +(380) 95 094 82 68.' => 'Для большей информации об возвращении предметов и сроках доставки & доставке звонить +(380) 095 094 82 68',
+    'Copyright &copy; Woden S Inc. All rights reserved.' => 'Авторские права. Woden S Inc. Все права защищены',
+    /*
+     * End Footer
      */
 );

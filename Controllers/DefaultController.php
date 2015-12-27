@@ -455,9 +455,11 @@ class DefaultController
         }
         session_write_close();
         //echo $_SESSION['language'];
-        include_once('C:/xampp/htdocs/shop/Languages/lang.' . $_SESSION['language'] . '.php');
+        if($_SESSION['language'] !== 'us') {
+            include_once('C:/xampp/htdocs/shop/Languages/lang.' . $_SESSION['language'] . '.php');
 
-        $this->model->setLanguage($lang);
+            $this->model->setLanguage($lang);
+        }
         //print_r($lang);
     }
     /*

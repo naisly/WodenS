@@ -498,10 +498,18 @@ class DefaultView
                     if ($i < 1) {
                         echo '<a href="/shop/"><img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/favicon-default.png" width="20" height="20"/></a>';
                     } else {
-                        echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . 'Shop' . "</a>";
+                        echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">';
+
+                        echo $this->model->Translate('Shop');
+
+                        echo '</a>';
                     }
                 } else if ($this->model->getBreadcrumbs($i) == 'index') {
-                    echo '<h id="breadcrumbs">Home</h>';
+                    echo '<h id="breadcrumbs">';
+
+                    echo $this->model->Translate('Home');
+
+                    echo '</h>';
                 } else if (substr($this->model->getBreadcrumbs($i), 0, 14) == 'subdescription') {
                     echo '<h id="breadcrumbs">' . $this->model->getOriginalName(0) . '</h>';
                 } else {
@@ -515,11 +523,19 @@ class DefaultView
         } else {
             echo '<a href="/shop/"><img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/favicon-default.png" width="20" height="20"/></a>
                   <img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/breadcrumbs-next.png" />
-                  <h id="breadcrumbs">Page Not Found</h>';
+                  <h id="breadcrumbs">';
+
+            echo $this->model->Translate('Page Not Found');
+
+            echo '</h>';
         }
         if($this->model->countBreadcrumbs() == 1){
             echo '<img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/breadcrumbs-next.png" />';
-            echo '<h id="breadcrumbs">Home</h>';
+            echo '<h id="breadcrumbs">';
+
+            echo $this->model->Translate('Home');
+
+            echo '</h>';
         }
         echo                  '</div>
                               <div class="col-md-5"></div>
@@ -530,27 +546,69 @@ class DefaultView
                             <div class="col-sm-1"></div>
                             <div class="col-sm-2 wow fadeInLeft">
                                 <div class="small-devices-decoration">
-                                    <h class="float-right"><a class="items default-hidden" id="displayTextFooter" href="javascript:toggle();">Shop</a></h>
+                                    <h class="float-right"><a class="items default-hidden" id="displayTextFooter" href="javascript:toggle();">';
+
+        echo $this->model->Translate('Shop');
+
+        echo                       '</a></h>
                                     <div class="pull-right default-hidden margin-for-footer">
                                         <a id="displayTextFooter" href="javascript:toggle();"><img alt="arrow" src="/shop/images/arrow-down.png" width="20" height="20" /></a>
                                     </div>
                                 </div>
                                 <div id="toggleTextFooter">
                                     <ul>
-                                        <li class="footer-menu"><b>Shop</b></li>
-                                        <li><a class="items" href="/shop/">Home</a></li>
-                                        <li><a class="items" href="/shop/phones/">Phones</a></li>
-                                        <li><a class="items" href="/shop/laptops/">Laptops</a></li>
-                                        <li><a class="items" href="/shop/devices/">Devices</a></li>
-                                        <li><a class="items" href="/shop/tv/">TV</a></li>
-                                        <li><a class="items" href="/shop/support/">Support</a></li>
-                                        <li><a class="items" href="/shop/cart">Cart</a></li>';
+                                        <li class="footer-menu"><b>';
+
+        echo $this->model->Translate('Shop');
+
+        echo                           '</b></li>
+                                        <li><a class="items" href="/shop/">';
+
+        echo $this->model->Translate('Home');
+
+        echo                           '</a></li>
+                                        <li><a class="items" href="/shop/phones/">';
+
+        echo $this->model->Translate('Phones');
+
+        echo                           '</a></li>
+                                        <li><a class="items" href="/shop/laptops/">';
+
+        echo $this->model->Translate('Laptops');
+
+        echo                           '</a></li>
+                                        <li><a class="items" href="/shop/devices/">';
+
+        echo $this->model->Translate('Devices');
+
+        echo                           '</a></li>
+                                        <li><a class="items" href="/shop/tv/">';
+
+        echo $this->model->Translate('TV');
+
+        echo                           '</a></li>
+                                        <li><a class="items" href="/shop/support/">';
+
+        echo $this->model->Translate('Support');
+
+        echo                           '</a></li>
+                                        <li><a class="items" href="/shop/cart">';
+
+        echo $this->model->Translate('Cart');
+
+        echo                           '</a></li>';
+
+
         echo                       '</ul>
                                 </div>
                             </div>
                             <div class="col-sm-2 wow fadeInLeft">
                                 <div class="small-devices-decoration">
-                                    <h class="float-right"><a class="items default-hidden" id="displayTextFooter1" href="javascript:toggle1();">Store</a></h>
+                                    <h class="float-right"><a class="items default-hidden" id="displayTextFooter1" href="javascript:toggle1();">';
+
+        echo $this->model->Translate('Store');
+
+        echo                       '</a></h>
                                     <div class="pull-right default-hidden margin-for-footer">
                                         <a id="displayTextFooter1" href="javascript:toggle1();"><img alt="arrow1" src="/shop/images/arrow-down.png" width="20" height="20" /></a>
                                     </div>
@@ -559,14 +617,44 @@ class DefaultView
                                 <form action="support.php" method="post">
                                     <div id="toggleTextFooter1">
                                         <ul>
-                                            <li class="footer-menu"><b>Store</b></li>
-                                            <li><a class="items" href="/shop/store">Find our store</a></li>
-                                            <li><a class="items" href="/shop/financing">Financing</a></li>
-                                            <li><a class="items" href="/shop/order">Order Status</a></li>
-                                            <li><button id="link_as_button" class="items">Shopping help</button></li>
+                                            <li class="footer-menu"><b>';
+
+        echo $this->model->Translate('Store');
+
+        echo                               '</b></li>
+                                            <li><a class="items" href="/shop/store">';
+
+        echo $this->model->Translate('Find our store');
+
+        echo                               '</a></li>
+                                            <li><a class="items" href="/shop/financing">';
+
+        echo $this->model->Translate('Financing');
+
+        echo                               '</a></li>
+                                            <li><a class="items" href="/shop/order">';
+
+        echo $this->model->Translate('Order Status');
+
+        echo                               '</a></li>
+                                            <li><button id="link_as_button" class="items">';
+
+        echo $this->model->Translate('Shopping help');
+
+        echo                               '</button></li>
                                             <li><a class="items" href="/shop/search-answers">FAQ</a></li>
-                                            <li><a class="items" href="/shop/education/">Education</a></li>
-                                            <li><a class="items" href="/shop/business/">Business</a></li>';
+                                            <li><a class="items" href="/shop/education/">';
+
+        echo $this->model->Translate('Education');
+
+        echo                               '</a></li>
+                                            <li><a class="items" href="/shop/business/">';
+
+        echo $this->model->Translate('Business');
+
+        echo                               '</a></li>';
+
+
         echo                           '</ul>
                                     </div>
                             <input type="hidden" value="1" name="shopping_help" />
@@ -574,7 +662,11 @@ class DefaultView
                             </div>
                             <div class="col-sm-2 wow fadeInUp">
                                 <div class="small-devices-decoration">
-                                    <h class="float-right"><a class="items default-hidden" id="displayTextFooter2" href="javascript:toggle2();">Account</a></h>
+                                    <h class="float-right"><a class="items default-hidden" id="displayTextFooter2" href="javascript:toggle2();">';
+
+        echo $this->model->Translate('Account');
+
+        echo                       '</a></h>
                                     <div class="pull-right default-hidden margin-for-footer">
                                         <a id="displayTextFooter2" href="javascript:toggle2();"><img alt="arrow2" src="/shop/images/arrow-down.png" width="20" height="20" /></a>
                                     </div>
@@ -582,22 +674,62 @@ class DefaultView
                                 </div>
                                 <div id="toggleTextFooter2">
                                     <ul>
-                                        <li class="footer-menu"><b>Account</b></li>
-                                        <li><a class="items" href="/shop/account">Store account</a></li>
-                                        <li><a class="items" href="/shop/cart">My Items</a></li>
-                                        <li><a class="items" href="/shop/order">My Orders</a></li>
-                                        <li><a class="items" href="/shop/account-billing">Billing Info</a></li>';
+                                        <li class="footer-menu"><b>';
+
+        echo $this->model->Translate('Account');
+
+        echo                           '</b></li>
+                                        <li><a class="items" href="/shop/account">';
+
+        echo $this->model->Translate('Store Account');
+
+        echo                           '</a></li>
+                                        <li><a class="items" href="/shop/cart">';
+
+        echo $this->model->Translate('My Items');
+
+        echo                           '</a></li>
+                                        <li><a class="items" href="/shop/order">';
+
+        echo $this->model->Translate('My Orders');
+
+        echo                           '</a></li>
+                                        <li><a class="items" href="/shop/account-billing">';
+
+        echo $this->model->Translate('Billing Info');
+
+        echo                           '</a></li>';
+
+
         echo                      '</ul>
                                     <ul>
-                                        <li class="footer-menu"><b>Most valuable</b></li>
-                                        <li><a class="items" href="/shop/site-terms">Site Terms</a></li>
-                                        <li><a class="items" href="/shop/privacy">Privacy</a></li>';
+                                        <li class="footer-menu"><b>';
+
+        echo $this->model->Translate('Most Valuable');
+
+        echo                           '</b></li>
+                                        <li><a class="items" href="/shop/site-terms">';
+
+        echo $this->model->Translate('Site Terms');
+
+        echo                           '</a></li>
+                                        <li><a class="items" href="/shop/privacy">';
+
+        echo $this->model->Translate('Privacy');
+
+        echo                           '</a></li>';
+
+
         echo                       '</ul>
                                 </div>
                             </div>
                             <div class="col-sm-2 wow fadeInRight">
                                 <div class="small-devices-decoration">
-                                    <h class="float-right"><a class="items default-hidden" id="displayTextFooter3" href="javascript:toggle3();">Abous Us</a></h>
+                                    <h class="float-right"><a class="items default-hidden" id="displayTextFooter3" href="javascript:toggle3();">';
+
+        echo $this->model->Translate('About Us');
+
+        echo                       '</a></h>
                                     <div class="pull-right default-hidden margin-for-footer">
                                         <a id="displayTextFooter3" href="javascript:toggle3();"><img alt="arrow3" src="/shop/images/arrow-down.png" width="20" height="20" /></a>
                                     </div>
@@ -606,19 +738,53 @@ class DefaultView
 
                                 <div id="toggleTextFooter3">
                                     <ul>
-                                        <li class="footer-menu"><b>About Us</b></li>
-                                        <li><a class="items" href="/shop/our-company">Our company</a></li>
-                                        <li><a class="items" href="/shop/people">In-touch People</a></li>
-                                        <li><a class="items" href="/shop/managers">Our managers</a></li>
-                                        <li><a class="items" href="/shop/director">Director</a></li>
-                                        <li><a class="items" href="/shop/job">Job</a></li>
-                                        <li><a class="items" href="/shop/contact/">Contact Us</a></li>';
+                                        <li class="footer-menu"><b>';
+
+        echo $this->model->Translate('About Us');
+
+        echo                           '</b></li>
+                                        <li><a class="items" href="/shop/our-company">';
+
+        echo $this->model->Translate('Our Company');
+
+        echo                           '</a></li>
+                                        <li><a class="items" href="/shop/people">';
+
+        echo $this->model->Translate('In-touch People');
+
+        echo                           '</a></li>
+                                        <li><a class="items" href="/shop/managers">';
+
+        echo $this->model->Translate('Our managers');
+
+        echo                           '</a></li>
+                                        <li><a class="items" href="/shop/director">';
+
+        echo $this->model->Translate('Director');
+
+        echo                           '</a></li>
+                                        <li><a class="items" href="/shop/job">';
+
+        echo $this->model->Translate('Job');
+
+        echo                           '</a></li>
+                                        <li><a class="items" href="/shop/contact/">';
+
+        echo $this->model->Translate('Contact Us');
+
+        echo                           '</a></li>';
+
+
         echo                       '</ul>
                                 </div>
                             </div>
                             <div class="col-sm-2 wow fadeInRight edu-for-small">
                                 <div class="small-devices-decoration">
-                                    <h class="float-right"><a class="items default-hidden" id="displayTextFooter4" href="javascript:toggle4();">For education & Business</a></h>
+                                    <h class="float-right"><a class="items default-hidden" id="displayTextFooter4" href="javascript:toggle4();">';
+
+        echo $this->model->Translate('For education & Business');
+
+        echo                       '</a></h>
                                     <div class="pull-right default-hidden margin-for-footer">
                                         <a id="displayTextFooter4" href="javascript:toggle4();"><img alt="arrow4" src="/shop/images/arrow-down.png" width="20" height="20" /></a>
                                     </div>
@@ -626,15 +792,46 @@ class DefaultView
                                 </div>
                                 <div id="toggleTextFooter4">
                                     <ul>
-                                        <li class="footer-menu margin-for-small"><b>For Education</b></li>
-                                        <li><a class="items" href="/shop/education/phones">Phones and Education</a></li>
-                                        <li><a class="items" href="/shop/education/laptops">Laptops and Education</a></li>';
+                                        <li class="footer-menu margin-for-small"><b>';
+
+        echo $this->model->Translate('For Education');
+
+        echo                           '</b></li>
+                                        <li><a class="items" href="/shop/education/phones">';
+
+        echo $this->model->Translate('Phones and Education');
+
+        echo                           '</a></li>
+                                        <li><a class="items" href="/shop/education/laptops">';
+
+        echo $this->model->Translate('Laptops and Education');
+
+        echo                           '</a></li>';
+
+
         echo                      '</ul>
                                     <ul>
-                                        <li class="footer-menu"><b>For Business</b></li>
-                                        <li><a class="items" href="/shop/business/laptops/">Laptops in business</a></li>
-                                        <li><a class="items" href="/shop/business/phones/">Phones in business</a></li>
-                                        <li><a class="items" href="/shop/business/devices/">Devices in business</a></li>';
+                                        <li class="footer-menu"><b>';
+
+        echo $this->model->Translate('For Business');
+
+        echo                           '</b></li>
+                                        <li><a class="items" href="/shop/business/laptops/">';
+
+        echo $this->model->Translate('Laptops in Business');
+
+        echo                           '</a></li>
+                                        <li><a class="items" href="/shop/business/phones/">';
+
+        echo $this->model->Translate('Phones in Business');
+
+        echo                           '</a></li>
+                                        <li><a class="items" href="/shop/business/devices/">';
+
+        echo $this->model->Translate('Devices in Business');
+
+        echo                           '</a></li>';
+
         echo                       '</ul>
                                 </div>
                             </div>
@@ -645,7 +842,11 @@ class DefaultView
                         <div class="row">
                             <div class="col-sm-1"></div>
                             <div class="col-sm-10" style="margin-top: 40px">
-                                <p class="more-info pull-left margin-more">For more info about return items and shopping & delivery call +(380) 95 094 82 68.</p>
+                                <p class="more-info pull-left margin-more">';
+
+        echo $this->model->Translate('For more info about return items and shopping & delivery call +(380) 95 094 82 68.');
+
+        echo                   '</p>
                             </div>
                             <div class="col-sm-1"></div>
                         </div>
@@ -663,8 +864,11 @@ class DefaultView
                         <div class="row">
                             <div class="col-sm-1"></div>
                             <div class="col-sm-5 margin-copy">
-                                <p class="more-info pull-left">Copyright &copy; Woden S Inc. All rights reserved.
-                            </div>
+                                <p class="more-info pull-left">';
+
+        echo $this->model->Translate('Copyright &copy; Woden S Inc. All rights reserved.');
+
+        echo               '</div>
                             <div class="col-sm-5 language" style="margin-top: -5px;">
                                 <div class="dropup dropup-menu-for-sm dropup-for-small">
                                     <a class="dropdown-toggle" type="button" data-toggle="dropdown" style="text-decoration: none;">';
@@ -672,7 +876,7 @@ class DefaultView
         $language = $_SESSION['language'];
         //echo $language;
         switch ($language) {
-            case 'ru': $name_of_country =  'Russian Federation';
+            case 'ru': $name_of_country =  'Российская Федерация';
                 break;
             case 'us': $name_of_country =  'United States';
                 break;
@@ -694,11 +898,11 @@ class DefaultView
         $k = count($language_array);
         while ($i < $k){
             switch($language_array[$i]){
-                case 'ru': array_push($name_of_country_array,'Russian Federation');
+                case 'ru': array_push($name_of_country_array, 'Россия');
                     break;
                 case 'us': array_push($name_of_country_array, 'United States');
                     break;
-                case 'fr': array_push($name_of_country_array,'France');
+                case 'fr': array_push($name_of_country_array, 'France');
                     break;
             }
 

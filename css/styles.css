@@ -476,6 +476,9 @@ a:link {
 
 
 @media (max-width: 766px) {
+	.language {
+		position: absolute;
+	}
 	/*
 	 * For categories
 	 */
@@ -624,10 +627,9 @@ a:link {
 		position: relative;
 	}
 	ul li a, #link_as_button {
-		margin-left: -20px;
 		font-size: 12px;
 		font-family: RobotoLight;
-		color: #999;
+		color: #666;
 	}
 	.small-devices-hor-nav {
 		margin-left: 5px;

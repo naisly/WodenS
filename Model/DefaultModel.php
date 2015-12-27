@@ -281,6 +281,10 @@ class DefaultModel
 
     public function Translate( $text ){
 
-        return $this->language[$text];
+        if($_SESSION['language'] !== 'us') {
+            return $this->language[$text];
+        } else {
+            return $text;
+        }
     }
 }
