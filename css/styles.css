@@ -79,6 +79,7 @@ p, h1,a  {
 .border-left {
 	border-right: 3px solid #fff;
 	border-bottom: 3px solid #fff;
+	border-top: 3px solid #fff;
 }
 .border-top {
 	border-right: 3px solid #fff;
@@ -86,6 +87,7 @@ p, h1,a  {
 }
 .border-right {
 	border-bottom: 3px solid #fff;
+	border-top: 3px solid #fff;
 }
 .border-bottom {
 	border-bottom: 3px solid #fff;

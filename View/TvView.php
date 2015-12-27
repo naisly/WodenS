@@ -44,46 +44,95 @@ class TvView extends IndexView
                       </div>
                   </div>
              </div>';*/
-        echo '<img src="/shop/images/watching-tv.jpg" class="bg-full-image-gl-xs" />';
-        echo '<div class="text-center">
-                  <h1 class="future-main">The future of television is here now!</h1>
-                  <p><a href="television.php" class="link-nav">Search TV for your choice ></a></p>
-                  <p class="sub-future">And thats where TV on your big screen is headed. The new Apple TV is designed around this reality.<br />
-                   And the Siri Remote with Touch surface takes the effort out of searching through all these <br/>
-                   apps to find something great to watch. Its really easy to use with most popular apps <br />
-                   like Netflix, HBO. Amazing HD will catch your eyes
-                   </p>
+        echo '<div class="container abs-pos-for-xs">
+                  <div class="row text-center">
+                      <div class="col-md-1"></div>
+                      <div class="col-md-5">
+                          <h class="main-header">iMac</h><br />
+                          <h class="sub-main-header">Thin, powerful.</h>
+                          <h class="sub-main-header">Retina <br />development is vaste</h><br />
+                          <a id="main-link" href="/shop/shop/buy-tv/Imac" style="text-decoration: none; margin-right: 0px;">Buy <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
+                      </div>
+                      <div class="col-md-6"></div>
+                  </div>
               </div>
-              <div class="main-overlay"></div>
+              <img src="/shop/images/imac-tv2.png" class="full-image-cs" />';
 
-              <div class="sub-overlay"></div>';
+        echo '<img src="/shop/images/apple-tv-concept.jpg" class="full-image-cascade" style="margin-top: 30px;"/>
+              <div class="text-center">
+                  <h1 class="future-main">Apple TV</h1>
+                  <h1 class="future-main" style="margin-top: 0px; font-size: 32px;">Moving in lockstep with future</h1>
+                  <a id="main-link" href="/shop/shop/buy-tv/AppleTV" style="text-decoration: none; margin-right: 0px;">Buy <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-6" style="margin-top: 50px;">
+                              <img src="/shop/images/apple-tv-pult1.jpg" class="full-image-cascade" />
+                          </div>
+                          <div class="col-md-4" style="margin-top: 65px;">
+                              <p class="header-future text-left">Something great to watch</p>
+                              <p class="sub-future text-left">And thats where TV on your big screen is headed. The new Apple TV is designed around this reality.
+                              And the Siri Remote with Touch surface takes the effort out of searching through all these Apps to find something great to watch.</p>
+
+                              <p class="header-future text-left">Easy to use</p>
+                              <p class="sub-future text-left">Its really easy to use with most popular apps
+                              like Netflix, HBO. Amazing HD will catch your eyes</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <img src="/shop/images/avengers.jpg" class="full-image-cascade" style="margin-top: 50px;" />';
     }
 
     private function getDescription() {
 
-        echo '<div class="text-center">
-                  <h1 class="future-main">Technical support and the Apple TV warranty</h1>
-                  <p class="sub-h">Get the longest guarantee</p>
-                  <p class="sub-future">Every Apple TV comes with complimentary telephone technical support within 90 days of your Apple TV <br />
-                  purchase. In addition, Apple TV and all accessories are covered against defects for one <br />
-                  year from the original purchase date by a limited hardware warranty.
-                  </p>
+        echo '<div class="container">
+                  <!--<p class="future-main">Apple TV and awesome</p>
+                  <p class="sub-future" style="font-size: 32px;">Games and Apps on TV gonna be excited</p>
+                  <div class="row">
+                      <div class="col-md-2"></div>
+                      <div class="col-md-8">
+                          <p style="font-size: 22px;">Lets look at big, high resolution games that makes you feel excited, thrilled. Apps
+                          can absolutely flip your life from routine, dreary to entire, outright way of being.</p>
+                      </div>
+                      <div class="col-md-2"></div>
+                  </div>-->
+                  <div class="row" style="margin-top: 50px;">
+                      <div class="col-md-5 border-box">
+                          <p class="future-main text-left" style="font-size: 26px;">Apple TV and awesome</p>
+                          <p class="sub-future text-left" style="font-size: 44px;">Games and Apps on TV gonna be excited</p>
+                          <p class="text-left" style="font-size: 22px;">Lets look at big, high resolution games that makes you feel excited, thrilled. Apps
+                          can absolutely flip your life from routine, dreary to entire, outright way of being.</p>
+
+                          <a id="main-link" href="/shop/shop/buy-tv/ShowTop" style="text-decoration: none; margin-right: 0px;">Also, you might be interested in ShowTop <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
+                          <div style="margin-bottom: 100px;"></div>
+                      </div>
+                      <div class="col-md-2"></div>
+                      <div class="col-md-4">
+                          <img src="/shop/images/apple-tv-in-hand.jpg" class="full-image-responsive" style="margin-top: 20px;" />
+                      </div>
+                      <div class=col-md-1"></div>
+                  </div>
               </div>
+              <img src="/shop/images/games1.jpg" class="full-image-cascade" style="margin-top: 100px;"/>';
 
-              <div class="mid-overlay"></div>
+        /*echo '<div class="container">
+                  <div class="row">
+                       <div class="col-md-4">
 
-              <div class="container">
-                  <div class="divider-main"></div>
-              </div>';
+                       </div>
+                       <div class="col-md-6">
+                          <img src="/shop/images/show-top1.jpg" class="full-image-cascade" />
+                       </div>
+                       <div class="col-md-2"></div>
+                  </div>
+              </div>';*/
     }
 
     private function getOrder() {
 
-        echo '<div class="text-center">
-                  <h1 class="order-margin"><a href="television.php" class="order-nav">Order it now ></a></h1>
+        echo '<div class="text-center" style="margin-top: 40px;">
+                  <a id="main-link" href="/shop/shop/buy-tv/" style="text-decoration: none; margin-right: 0px;">Buy <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
                   <p class="sub-future">Free shipping available!</p>
-              </div>
-
-              <div class="footer-overlay"></div>';
+              </div>';
     }
 }
