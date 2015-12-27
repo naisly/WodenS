@@ -108,4 +108,6 @@ function toggle4(){
 }
 function toggle5() {
     $("#toggleTextFooter5").toggle("slow");
+
+    $("body").animate({"scrollTop": $('#scroll-handler').offset().top }, "slow");
 }

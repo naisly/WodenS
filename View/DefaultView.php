@@ -958,6 +958,7 @@ class DefaultView
 
 
         echo                       '</ul>
+                                    <div id="scroll-handler"></div>
                                 </div>
                             </div>
                         </div>
