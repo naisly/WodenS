@@ -876,7 +876,7 @@ class DefaultView
         $language = $_SESSION['language'];
         //echo $language;
         switch ($language) {
-            case 'ru': $name_of_country =  'Российская Федерация';
+            case 'ru': $name_of_country =  'Россия';
                 break;
             case 'us': $name_of_country =  'United States';
                 break;
@@ -927,13 +927,76 @@ class DefaultView
         }
 
         echo                       '</ul>
-                                </div><!-- End of dropup -->
+                                </div><!-- End of dropup -->';
+
+        echo                   '</div>
                             </div>
                             <div class="col-sm-1"></div>
                         </div>
+                        <div class="container-fluid non-for-large">
+                        <div class="row">
+                        <div class="col-md-12" style="padding-bottom: 20px; margin-top: -15px;">
+                            <div class="small-devices-decoration">
+                                    <h class="float-right"><a style="text-decoration: none" class="items default-hidden" id="displayTextFooter5" href="javascript:toggle5();">';
+
+        echo '<img src="/shop/images/' . $language . '-flag.png" height="16" width="16" /><h class="lang">' . $name_of_country . '</h>';
+
+        echo                       '</a></h>
+                                </div>
+                                <div id="toggleTextFooter5">
+                                    <ul>';
+
+        $i = 0;
+        while ($i < $k) {
+            echo '<form action="/shop/change-language" method="post" id="form-' . $i . '">
+                     <input type="hidden" value="' . $language_array[$i] . '" name="checked-language" id="checked-language" />
+                     <li id="marger-for-small-devices-xs" style="margin-top: 5px"><img id="margin-for-small" src="/shop/images/' . $language_array[$i] . '-flag.png" height="16" width="16" /><button id="link_as_button" style="font-size: 13px; margin-left: 7px; text-decoration: none;">' . $name_of_country_array[$i] . '</span></button></li>
+                  </form>';
+
+            $i++;
+        }
+
+
+        echo                       '</ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </footer>';
+                    </div>
+                </div>';
+
+        /*echo   '<div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="small-devices-decoration">
+                                    <h class="float-right"><a class="items default-hidden" id="displayTextFooter5" href="javascript:toggle5();">';
+
+        echo '<img src="/shop/images/' . $language . '-flag.png" height="16" width="16" /><h class="lang">' . $name_of_country . '</h>';
+
+        echo                       '</a></h>
+                                    <div class="divider-for-small-devices"></div>
+                                </div>
+                                <div id="toggleTextFooter5">
+                                    <ul>';
+
+        $i = 0;
+        while ($i < $k) {
+            echo '<form action="/shop/change-language" method="post" id="form-' . $i . '">
+                     <input type="hidden" value="' . $language_array[$i] . '" name="checked-language" id="checked-language" />
+                     <li id="marger-for-small-devices-xs"><img id="margin-for-small" src="/shop/images/' . $language_array[$i] . '-flag.png" height="16" width="16" /><button id="link_as_button" style="font-size: 13px; margin-left: 7px; text-decoration: none;">' . $name_of_country_array[$i] . '</span></button></li>
+                  </form>';
+
+            $i++;
+        }
+
+
+        echo                       '</ul>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                </footer>';*/
 
         echo '<script type="text/javascript">
                 var check_preload;

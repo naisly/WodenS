@@ -469,13 +469,29 @@ a:link {
 		margin-right: 55px;
 	}
 }
-
+.toggle-language {
+	display: none;
+}
+.non-for-large {
+	display: none;
+}
 
 
 
 
 
 @media (max-width: 766px) {
+	/*
+	 * Drop up Language
+	 */
+	.dropup-menu-for-sm {
+		display: none;
+	}
+	.non-for-large {
+		display: block;
+	}
+
+	/* */
 	.language {
 		position: absolute;
 	}
@@ -588,6 +604,9 @@ a:link {
 	}
 	.margin-more, .margin-copy {
 		margin-left: 0px;
+	}
+	.margin-copy {
+		margin-top: -30px;
 	}
 	#toggleTextFooter, #toggleTextFooter1, #toggleTextFooter2, #toggleTextFooter3, #toggleTextFooter4, #toggleTextFooter5 {
 		display: none;

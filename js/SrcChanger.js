@@ -106,3 +106,6 @@ function toggle4(){
 
     $('img[alt="arrow4"]').attr("src", newSrc);
 }
+function toggle5() {
+    $("#toggleTextFooter5").toggle("slow");
+}
