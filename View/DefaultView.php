@@ -40,7 +40,7 @@ class DefaultView
             echo "<title>" . $page . " - Woden S</title>";
         }
         echo       '<!-- HTML 5 markup and encoding utf-8 -->
-                    <meta http-equiv="Content-type" content="text/html; charset=windows-1251">
+                    <meta http-equiv="Content-type" content="text/html" charset="utf-8">
                     <!-- For Internet Explorer -->
                     <meta http-equiv="X-UA-Compatible" content="IE=EDge">
                     <!-- Bootstrap framework -->
@@ -185,37 +185,86 @@ class DefaultView
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li><a href="/shop/phones/" class="white-link">Phones <span class="sr-only">(current)</span></a></li>
+                            <li><a href="/shop/phones/" class="white-link">';
+
+        echo $this->model->Translate('Phones');
+
+        echo                   '<span class="sr-only">(current)</span></a></li>
                             <li class="divider-li-small"></li>
-                            <li><a href="/shop/laptops/" class="white-link">Laptops</a></li>
+                            <li><a href="/shop/laptops/" class="white-link">';
+
+        echo $this->model->Translate('Laptops');
+
+        echo                   '</a></li>
                             <li class="divider-li-small"></li>
-                            <li><a href="/shop/devices/" class="white-link">Devices</a></li>
+                            <li><a href="/shop/devices/" class="white-link">';
+
+        echo $this->model->Translate('Devices');
+
+        echo                    '</a></li>
                             <li class="divider-li-small"></li>
-                            <li><a href="/shop/tv/" class="white-link">TV</a></li>
+                            <li><a href="/shop/tv/" class="white-link">';
+
+        echo $this->model->Translate('TV');
+
+        echo                    '</a></li>
                             <li class="divider-li-small"></li>
-                            <li><a href="/shop/support/" class="white-link">Support</a></li>
+                            <li><a href="/shop/support/" class="white-link">';
+
+        echo $this->model->Translate('Support');
+
+        echo                    '</a></li>
                             <li class="divider-li-small"></li>
                             <li class="dropdown">
-                        <a href="#" class="dropdown-toggle white-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle white-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">';
+
+        echo $this->model->Translate('Cart');
+
+        echo               '<span class="caret"></span></a>
                         <ul class="dropdown-menu">';
         if (isset($_SESSION['login_user'])) {
             echo '<li><a href="/shop/logout" class="color-gl-for-small">';
-            echo 'Logout(' . $_SESSION['login_user'] . ')</a></li>';
+
+            echo $this->model->Translate('Logout');
+
+            echo '(' . $_SESSION['login_user'] . ')</a></li>';
             session_write_close();
         } else {
-            echo '<li><a href="/shop/register" class="color-gl-for-small">Register</a></li>';
+            echo '<li><a href="/shop/register" class="color-gl-for-small">';
+
+            echo $this->model->Translate('Register');
+
+            echo '</a></li>';
             echo '<li><a href="/shop/login" class="color-gl-for-small">';
-            echo 'Login</a></li>';
+
+            echo $this->model->Translate('Login');
+
+            echo '</a></li>';
             session_write_close();
         }
-        echo '
-                                                            <li role="separator" class="divider divider-session"></li>
-                                                            <li class="dropdown-header">Products</li>';
+        echo '<li role="separator" class="divider divider-session"></li>
+              <li class="dropdown-header">';
+
+        echo $this->model->Translate('Products');
+
+        echo '</li>';
         if (isset($_SESSION['login_user'])) {
-            echo '<li><a href="/shop/cart" class="color-gl-for-small">Cart: ' . $this->model->getAPrice() . '$';
-            echo '<li><a href="#" class="color-gl-for-small">' . $this->model->getAItems() . ' items</a></li>';
+            echo '<li><a href="/shop/cart" class="color-gl-for-small">';
+
+            echo $this->model->Translate('Cart');
+
+            echo ':' . $this->model->getAPrice() . "$";
+            echo '<li><a href="#" class="color-gl-for-small">' . $this->model->getAItems() . ' ';
+
+            echo $this->model->Translate('items');
+
+            echo '</a></li>';
         } else {
-            echo ' <li><a href="#" class="color-gl-for-small">Login to see your cart</a></li>';
+            echo ' <li><a href="#" class="color-gl-for-small">';
+
+            echo $this->model->Translate('Login to see your cart');
+
+            echo '</a></li>';
         }
         echo '
                         </ul>

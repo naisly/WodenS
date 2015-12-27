@@ -35,7 +35,7 @@ class IndexView extends DefaultView
                   <div id="slider" style="margin-top: -44px;">
                       <ul class="bxslider">
                           <li><a href="/shop/phones/"><img src="images/laptops-main-page.jpg" class="full-image-main-content"></a></li>
-                          <li><a href="/shop/television/"><img src="images/tv-main-page.jpg" class="full-image-main-content"></a></li>
+                          <li><a href="/shop/tv/"><img src="images/tv-main-page.jpg" class="full-image-main-content"></a></li>
                           <li><a href="/shop/laptops/"><img src="images/laptops-main.jpg" class="full-image-main-content"></a></li>
                           <li><a href="/shop/devices/"><img src="images/devices-main-img.jpg" class="full-image-main-content"></a></li>
                       </ul>
@@ -62,14 +62,54 @@ class IndexView extends DefaultView
         echo      '<div class="container-fluid">
                       <div class="row">
                           <div class="col-md-6 no-division-for-category">
-                              <a href="/shop/phones/"><img src="/shop/images/phones-category-w-text.png" class="full-image-cascade border-left" /></a>
+                              <!--<a href="/shop/phones/"><img src="/shop/images/phones-category-w-text.png" class="full-image-cascade border-left" /></a>-->
+                              <a href="/shop/phones/" style="text-decoration: none">
+                                  <div class="bg-phones">
+                                      <div style="margin-top: -10px;">
+                                          <h1 class="sub-decision-for-xs">';
 
-                              <a href="/shop/devices/"><img src="/shop/images/ipad-category-w-text.jpg" class="full-image-cascade border-top" /></a>
+        echo $this->model->Translate("There's nothing quite like this.");
+
+        echo                              '</h1>
+                                      </div>
+                                  </div>
+                              </a>
+
+                              <!--<a href="/shop/devices/"><img src="/shop/images/ipad-category-w-text.jpg" class="full-image-cascade border-top" /></a>-->
+                              <a href="/shop/devices/" style="text-decoration: none">
+                                  <div class="bg-ipad">
+                                      <h1 class="sub-decision-for-xs">';
+
+        echo $this->model->Translate('Devices.') . "<br />";
+        echo $this->model->Translate('Thin. Lightweight. Epic.');
+
+        echo                         '</h1>
+                                  </div>
+                              </a>
                           </div>
                           <div class="col-md-6 no-division-for-category">
-                              <a href="/shop/laptops/"><img src="/shop/images/laptops-category-w-text.jpg" class="full-image-cascade border-right" /></a>
+                              <!--<a href="/shop/laptops/"><img src="/shop/images/laptops-category-w-text.jpg" class="full-image-cascade border-right" /></a>-->
+                              <a href="/shop/laptops/" style="text-decoration: none">
+                                  <div class="bg-laptops">
+                                      <h1 class="sub-decision-for-xs">';
 
-                              <a href="/shop/tv/"><img src="/shop/images/tv-category.jpg" class="full-image-cascade border-bottom" /></a>
+        echo $this->model->Translate('Laptops. Change your way of thinking.') . '<br />';
+        echo $this->model->Translate('Powerful as never before.');
+
+        echo                         '</h1>
+                                  </div>
+                              </a>
+
+                              <!--<a href="/shop/tv/"><img src="/shop/images/tv-category.jpg" class="full-image-cascade border-bottom" /></a>-->
+                              <a href="/shop/tv/" style="text-decoration: none">
+                                  <div class="bg-tv">
+                                      <h1 class="sub-decision-for-xs">';
+
+        echo $this->model->Translate('Gorgeous. Marvelous.');
+
+        echo                         '</h1>
+                                  </div>
+                              </a>
                           </div>
                       </div>
                   </div>';
@@ -95,7 +135,7 @@ class IndexView extends DefaultView
 
                           </div>
                           <div class="col-md-6 no-division-for-category">
-                              <a href="/shop/business/"><img src="images/main-business-category.jpg" class="full-image-cascade border-top-and-bottom" /></a>
+                              <a href="/shop/business/"><img src="images/main-business-category.jpg" class="full-image-cascade border-bottom" /></a>
 
                           </div>
                       </div>
@@ -149,7 +189,7 @@ class IndexView extends DefaultView
                               <a href="/shop/shop/buy-device/"><img src="images/logo-devices-small.png" id="full-logo" /></a>
                           </div>
                           <div class="col-md-2">
-                              <h class="category-small-for-store margin-tv-for-small">';
+                              <h class="category-small-for-store margin-tv-for-small tv-gl-xs-container">';
 
         echo $this->model->Translate('TV');
 
