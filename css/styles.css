@@ -382,6 +382,7 @@ a:link {
 	font-size: 25px;
 	color: #08b;
 	margin-right: 40px;
+	white-space: nowrap;
 }
 #default-link {
 	font-size: 25px;

@@ -6,7 +6,7 @@
  * Time: 22:56
  */
 
-header("Content-Type: text/html; charset=windows-1251");
+header("Content-Type: text/html; charset=utf-8");
 
 $lang = array(
     /*
@@ -84,5 +84,26 @@ $lang = array(
     'Copyright &copy; Woden S Inc. All rights reserved.' => 'Copyright & copy; Woden S Inc. Tous droits reserves',
     /*
      * End Footer
+     */
+    /*
+     * For Phones
+     */
+
+    'The only thing that can change your life absolutely.' => 'La seule chose qui peut changer votre vie absolument.',
+    'Describe new possibilities.' => 'Decrire les nouvelles possibilites.',
+    'For education' => 'Pour l\'Education',
+    'For business' => 'Für Hochschulen einkaufen',
+    'Buy' => 'Acheter',
+    'Most people have at least a simple, if not sophisticated, mobile phone. These devices are convenient to carry around and you can use them on the go as long as there is network coverage wherever you are. Mobile phones have clearly made it easier to communicate.' => 'La plupart des gens ont au moins un sinon sophistiquee, simple telephone, mobile. Ces dispositifs sont faciles a transporter et vous pouvez les utiliser sur la route aussi longtemps que il ya une couverture de reseau ou que vous soyez. Les telephones mobiles ont clairement rendu plus facile de communiquer.',
+    "Although the mobile phone doesn't guarantee safety, you can use it to make calls whenever there is an emergency." => 'Bien que le telephone mobile ne garantit pas la securite, vous pouvez l\'utiliser pour faire des appels chaque fois qu\'il ya une situation d\'urgence.',
+    'Thin, powerful and awesome.' => 'Mince, puissant et redoutable.',
+    'Change your way of thinking. Interact with each other. Awesome Apps for your needs.' => 'Changez votre facon de penser. Interagir avec les autres. Applications impressionnants pour vos besoins.',
+    'Search for education' => 'Recherche pour l\'Education',
+    'With the upgrades made year in, year out, mobile phones are becoming more like computers with the added benefit of portability.' => 'Avec les ameliorations apportees l\'an, mal an, les telephones mobiles sont de plus en plus comme des ordinateurs avec l\'avantage supplementaire de la portabilite.',
+    'One can receive and send emails, browse websites, download games and videos, book flight tickets, and even chat with friends.' => 'On peut recevoir et envoyer des courriels, sites Web navigation, t?l?charger des jeux et des vid?os, de r?server des billets d\'avion, et m?me discuter avec vos amis.',
+    'Be productive, move forward.' => 'Soyez productif, aller de l\'avant.',
+    'Reimagine work and tasks with next-generation Apps. Transform your business strategy. Be mobile as much as possible. Go in lockstep with future.' => 'Reimagine travail et des t?ches avec les applications de la prochaine g?n?ration. Transformez votre strat?gie d\'entreprise. ?tre mobile dans la mesure du possible. Aller au m?me rythme que l\'avenir.',
+    /*
+     * End Phones
      */
 );

@@ -6,24 +6,24 @@
  * Time: 17:10
  */
 
-header("Content-Type: text/html; charset=windows-1251");
+header("Content-Type: text/html; charset=utf-8");
 
 $lang = array(
     /*
      * Index View
      */
-    'Thin, powerful devices are developing to make your life as complex as possible. Productive, easy-to-use desktop computers going to flip absolutely your way of thinking at all.' => '“ÓÌÍËÂ, ÏÓ˘Ì˚Â ÛÒÚÓÈÒÚ‚‡ ‡Á‚Ë‚‡˛ÚÒˇ, ˜ÚÓ·˚ ‚‡¯‡ ÊËÁÌ¸ Ú‡Í ÒÎÓÊÌÓ, Í‡Í ˝ÚÓ ‚ÓÁÏÓÊÌÓ. œÓËÁ‚Ó‰ËÚÂÎ¸Ì˚È, ÔÓÒÚÓÈ ‚ ËÒÔÓÎ¸ÁÓ‚‡ÌËË Õ‡ÒÚÓÎ¸Ì˚Â ÍÓÏÔ¸˛ÚÂ˚ ÒÓ·Ë‡˛ÚÒˇ ‡·ÒÓÎ˛ÚÌÓ ÔÂÂ‚ÂÌÛÚ¸ Ï˚¯ÎÂÌËÂ ‚ÓÓ·˘Â.',
-    'There\'s nothing quite like this.' => 'ÕÂÚ ÌË˜Â„Ó, ÔÓıÓÊÂ„Ó Ì‡ ˝ÚÓ',
-    'Devices.' => '”ÒÚÓÈÒÚ‚‡.',
-    'Thin. Lightweight. Epic.' => '“ÓÌÍËÈ. ÀÂ„ÍËÈ. ›ÔË˜ÂÒÍËÈ.',
-    'Laptops. Change your way of thinking.' => 'ÕÓÛÚ·ÛÍË. »ÁÏÂÌËÚÂ Ï‡ÌÂÛ ‡ÁÏ˚¯ÎÂÌËˇ.',
-    'Powerful as never before.' => '—ËÎ¸Ì˚È Í‡Í ÌËÍ‡Í ‡Ì¸¯Â.',
-    'Gorgeous. Marvelous.' => '¬ÂÎËÍÓÎÂÔÌ˚È. ◊Û‰ÂÒÌ˚È.',
-    'Moving in lockstep with Business. Increase your productivity in area of Education. Get new possibilities for your day-to-day life' => 'ƒ‚Ë„‡ÈÚÂÒ¸ ÌÓ„‡ ‚ ÌÓ„Û ‚ ÒÙÂÂ ¡ËÁÌÂÒ‡. ”ÎÛ˜¯ËÚÂ ‚‡¯Û ÔÓ‰ÛÍÚË‚ÌÓÒÚ¸ ‚ ÒÙÂÂ Œ·‡ÁÓ‚‡ÌËˇ. œÓÎÛ˜ËÚÂ ÌÓ‚˚Â ‚ÓÁÏÓÊÌÓÒÚË ‰Îˇ ÔÓ‚ÒÂ‰ÌÂ‚ÌÓÈ ÊËÁÌË.',
-    'Visit our online store. Place orders, then wait for shipping or pick up at any store.' => 'œÓÒÂÚËÚÂ Ì‡¯ ËÌÚÂÌÂÚ Ï‡Á‡„ËÌ. ŒÒÚ‡‚ÎˇÈÚÂ Á‡Í‡Á˚, ÔÓÚÓÏ Ê‰ËÚÂ ‰ÓÒÚ‡‚ÍÛ ËÎË Á‡·ÂËÚÂ ‚ ·ÎËÊ‡È¯ÂÏ Ï‡„‡ÁËÌÂ',
-    'Phones' => '“ÂÎÂÙÓÌ˚',
-    'Laptops' => 'ÕÓÛÚ·ÛÍË',
-    'Devices' => '”ÒÚÓÈÒÚ‚‡',
+    'Thin, powerful devices are developing to make your life as complex as possible. Productive, easy-to-use desktop computers going to flip absolutely your way of thinking at all.' => '–¢–æ–Ω–∫–∏–µ, –º–æ—â–Ω—ã–µ —É—Å—Ç—Ä–æ–π—Å—Ç–≤–∞ —Ä–∞–∑–≤–∏–≤–∞—é—Ç—Å—è, —á—Ç–æ–±—ã –≤–∞—à–∞ –∂–∏–∑–Ω—å —Ç–∞–∫ —Å–ª–æ–∂–Ω–æ, –∫–∞–∫ —ç—Ç–æ –≤–æ–∑–º–æ–∂–Ω–æ. –ü—Ä–æ–∏–∑–≤–æ–¥–∏—Ç–µ–ª—å–Ω—ã–π, –ø—Ä–æ—Å—Ç–æ–π –≤ –∏—Å–ø–æ–ª—å–∑–æ–≤–∞–Ω–∏–∏ –ù–∞—Å—Ç–æ–ª—å–Ω—ã–µ –∫–æ–º–ø—å—é—Ç–µ—Ä—ã —Å–æ–±–∏—Ä–∞—é—Ç—Å—è –∞–±—Å–æ–ª—é—Ç–Ω–æ –ø–µ—Ä–µ–≤–µ—Ä–Ω—É—Ç—å –º—ã—à–ª–µ–Ω–∏–µ –≤–æ–æ–±—â–µ.',
+    'There\'s nothing quite like this.' => '–ù–µ—Ç –Ω–∏—á–µ–≥–æ, –ø–æ—Ö–æ–∂–µ–≥–æ –Ω–∞ —ç—Ç–æ',
+    'Devices.' => '–£—Å—Ç—Ä–æ–π—Å—Ç–≤–∞.',
+    'Thin. Lightweight. Epic.' => '–¢–æ–Ω–∫–∏–π. –õ–µ–≥–∫–∏–π. –≠–ø–∏—á–µ—Å–∫–∏–π.',
+    'Laptops. Change your way of thinking.' => '–ù–æ—É—Ç–±—É–∫–∏. –ò–∑–º–µ–Ω–∏—Ç–µ –º–∞–Ω–µ—Ä—É —Ä–∞–∑–º—ã—à–ª–µ–Ω–∏—è.',
+    'Powerful as never before.' => '–°–∏–ª—å–Ω—ã–π –∫–∞–∫ –Ω–∏–∫–∞–∫ —Ä–∞–Ω—å—à–µ.',
+    'Gorgeous. Marvelous.' => '–í–µ–ª–∏–∫–æ–ª–µ–ø–Ω—ã–π. –ß—É–¥–µ—Å–Ω—ã–π.',
+    'Moving in lockstep with Business. Increase your productivity in area of Education. Get new possibilities for your day-to-day life' => '–î–≤–∏–≥–∞–π—Ç–µ—Å—å –Ω–æ–≥–∞ –≤ –Ω–æ–≥—É –≤ —Å—Ñ–µ—Ä–µ –ë–∏–∑–Ω–µ—Å–∞. –£–ª—É—á—à–∏—Ç–µ –≤–∞—à—É –ø—Ä–æ–¥—É–∫—Ç–∏–≤–Ω–æ—Å—Ç—å –≤ —Å—Ñ–µ—Ä–µ –û–±—Ä–∞–∑–æ–≤–∞–Ω–∏—è. –ü–æ–ª—É—á–∏—Ç–µ –Ω–æ–≤—ã–µ –≤–æ–∑–º–æ–∂–Ω–æ—Å—Ç–∏ –¥–ª—è –ø–æ–≤—Å–µ–¥–Ω–µ–≤–Ω–æ–π –∂–∏–∑–Ω–∏.',
+    'Visit our online store. Place orders, then wait for shipping or pick up at any store.' => '–ü–æ—Å–µ—Ç–∏—Ç–µ –Ω–∞—à –∏–Ω—Ç–µ—Ä–Ω–µ—Ç –º–∞–∑–∞–≥–∏–Ω. –û—Å—Ç–∞–≤–ª—è–π—Ç–µ –∑–∞–∫–∞–∑—ã, –ø–æ—Ç–æ–º –∂–¥–∏—Ç–µ –¥–æ—Å—Ç–∞–≤–∫—É –∏–ª–∏ –∑–∞–±–µ—Ä–∏—Ç–µ –≤ –±–ª–∏–∂–∞–π—à–µ–º –º–∞–≥–∞–∑–∏–Ω–µ',
+    'Phones' => '–¢–µ–ª–µ—Ñ–æ–Ω—ã',
+    'Laptops' => '–ù–æ—É—Ç–±—É–∫–∏',
+    'Devices' => '–£—Å—Ç—Ä–æ–π—Å—Ç–≤–∞',
     'TV' => 'TV',
     /*
      * End Index View
@@ -32,14 +32,14 @@ $lang = array(
     /*
      * Header NavBar, Default View
      */
-    'Support' => 'œÓÏÓ˘¸',
-    'Cart' => ' ÓÁËÌ‡',
-    'Logout' => '¬˚ÈÚË',
-    'Register' => '–Â„ËÒÚ‡ˆËˇ',
-    'Login' => '¬ıÓ‰',
-    'Products' => 'œÂ‰ÏÂÚ˚',
-    'items' => '¯ÚÛÍË',
-    'Login to see your cart' => '¬ÓÈ‰ËÚÂ ‰Îˇ ÔÓÒÏÓÚ‡',
+    'Support' => '–ü–æ–º–æ—â—å',
+    'Cart' => '–ö–æ—Ä–∑–∏–Ω–∞',
+    'Logout' => '–í—ã–π—Ç–∏',
+    'Register' => '–†–µ–≥–∏—Å—Ç—Ä–∞—Ü–∏—è',
+    'Login' => '–í—Ö–æ–¥',
+    'Products' => '–ü—Ä–µ–¥–º–µ—Ç—ã',
+    'items' => '—à—Ç—É–∫–∏',
+    'Login to see your cart' => '–í–æ–π–¥–∏—Ç–µ –¥–ª—è –ø—Ä–æ—Å–º–æ—Ç—Ä–∞',
     /*
      * End Header NavBar
      */
@@ -47,42 +47,64 @@ $lang = array(
     /*
      * Footer
      */
-    'Shop' => 'Ã‡„‡ÁËÌ',
-    'Home' => 'ƒÓÏ‡¯Ìˇˇ ÒÚ‡ÌËˆ‡',
-    'Page Not Found' => '—Ú‡ÌËˆ‡ ÌÂ Ì‡È‰ÂÌ‡',
-    'Store' => '—ÍÎ‡‰',
-    'Find our store' => 'Õ‡ÈÚË Ì‡¯ Ï‡„‡ÁËÌ',
-    'Financing' => '‘ËÌ‡ÌÒËÓ‚‡ÌËÂ',
-    'Order Status' => '—Ú‡ÚÛÒ Á‡Í‡Á‡',
-    'Shopping help' => 'œÓÏÓ˘¸ ‚ ÔÓÍÛÔÍÂ',
-    'Education' => 'Œ·‡ÁÓ‚‡ÌËÂ',
-    'Business' => '¡ËÁÌÂÒ',
-    'Account' => '¿ÍÍ‡ÛÌÚ',
-    'Store Account' => '¿ÍÍ‡ÛÌÚ Ã‡„‡ÁËÌ‡',
-    'My Items' => 'ÃÓË ÔÂ‰ÏÂÚ˚',
-    'My Orders' => 'ÃÓË Á‡Í‡Á˚',
-    'Billing Info' => 'ƒÓÒÚ‡‚Í‡',
-    'Most Valuable' => '¬‡ÊÌÓÂ',
-    'Site Terms' => '”ÒÎÓ‚Ëˇ ËÒÔÓÎ¸Á˚‚‡ÌËˇ',
-    'Privacy' => 'œË‚‡ÚÌÓÒÚ¸',
-    'About Us' => 'œÓ Õ‡Ò',
-    'Our Company' => 'Õ‡¯‡  ÓÏÔ‡ÌËˇ',
-    'In-touch People' => 'À˛‰Ë Ò ÍÓÚÓ˚ÏË ‡·ÓÚ‡ÂÏ',
-    'Our managers' => 'ÃÂÌÂ‰ÊÂ˚',
-    'Director' => 'ƒËÂÍÚÓ',
-    'Job' => '–‡·ÓÚ‡',
-    'Contact Us' => '—‚ˇÊËÚÂÒ¸ Ò Ì‡ÏË',
-    'For education & Business' => 'ƒÎˇ Œ·‡ÁÓ‚‡ÌËˇ & ¡ËÁÌÂÒ‡',
-    'For Education' => 'ƒÎˇ Œ·‡ÁÓ‚‡ÌËˇ',
-    'Phones and Education' => '“ÂÎÂÙÓÌ˚ Ë Œ·‡ÁÓ‚‡ÌËÂ',
-    'Laptops and Education' => 'ÕÓÛÚ·ÛÍË Ë Œ·‡ÁÓ‚‡ÌËÂ',
-    'For Business' => 'ƒÎˇ ¡ËÁÌÂÒ‡',
-    'Laptops in Business' => 'ÕÓÛÚ·ÛÍË ‰Îˇ ¡ËÁÌÂÒ‡',
-    'Phones in Business' => '“ÂÎÂÙÓÌ˚ ‰Îˇ ¡ËÁÌÂÒ‡',
-    'Devices in Business' => '”ÒÚÓÈÒÚ‚‡ ‰Îˇ ¡ËÁÌÂÒ‡',
-    'For more info about return items and shopping & delivery call +(380) 95 094 82 68.' => 'ƒÎˇ ·ÓÎ¸¯ÂÈ ËÌÙÓÏ‡ˆËË Ó· ‚ÓÁ‚‡˘ÂÌËË ÔÂ‰ÏÂÚÓ‚ Ë ÒÓÍ‡ı ‰ÓÒÚ‡‚ÍË & ‰ÓÒÚ‡‚ÍÂ Á‚ÓÌËÚ¸ +(380) 095 094 82 68',
-    'Copyright &copy; Woden S Inc. All rights reserved.' => '¿‚ÚÓÒÍËÂ Ô‡‚‡. Woden S Inc. ¬ÒÂ Ô‡‚‡ Á‡˘Ë˘ÂÌ˚',
+    'Shop' => '–ú–∞–≥–∞–∑–∏–Ω',
+    'Home' => '–î–æ–º–∞—à–Ω—è—è —Å—Ç—Ä–∞–Ω–∏—Ü–∞',
+    'Page Not Found' => '–°—Ç—Ä–∞–Ω–∏—Ü–∞ –Ω–µ –Ω–∞–π–¥–µ–Ω–∞',
+    'Store' => '–°–∫–ª–∞–¥',
+    'Find our store' => '–ù–∞–π—Ç–∏ –Ω–∞—à –º–∞–≥–∞–∑–∏–Ω',
+    'Financing' => '–§–∏–Ω–∞–Ω—Å–∏—Ä–æ–≤–∞–Ω–∏–µ',
+    'Order Status' => '–°—Ç–∞—Ç—É—Å –∑–∞–∫–∞–∑–∞',
+    'Shopping help' => '–ü–æ–º–æ—â—å –≤ –ø–æ–∫—É–ø–∫–µ',
+    'Education' => '–û–±—Ä–∞–∑–æ–≤–∞–Ω–∏–µ',
+    'Business' => '–ë–∏–∑–Ω–µ—Å',
+    'Account' => '–ê–∫–∫–∞—É–Ω—Ç',
+    'Store Account' => '–ê–∫–∫–∞—É–Ω—Ç –ú–∞–≥–∞–∑–∏–Ω–∞',
+    'My Items' => '–ú–æ–∏ –ø—Ä–µ–¥–º–µ—Ç—ã',
+    'My Orders' => '–ú–æ–∏ –∑–∞–∫–∞–∑—ã',
+    'Billing Info' => '–î–æ—Å—Ç–∞–≤–∫–∞',
+    'Most Valuable' => '–í–∞–∂–Ω–æ–µ',
+    'Site Terms' => '–£—Å–ª–æ–≤–∏—è –∏—Å–ø–æ–ª—å–∑—ã–≤–∞–Ω–∏—è',
+    'Privacy' => '–ü—Ä–∏–≤–∞—Ç–Ω–æ—Å—Ç—å',
+    'About Us' => '–ü—Ä–æ –ù–∞—Å',
+    'Our Company' => '–ù–∞—à–∞ –ö–æ–º–ø–∞–Ω–∏—è',
+    'In-touch People' => '–õ—é–¥–∏ —Å –∫–æ—Ç–æ—Ä—ã–º–∏ —Ä–∞–±–æ—Ç–∞–µ–º',
+    'Our managers' => '–ú–µ–Ω–µ–¥–∂–µ—Ä—ã',
+    'Director' => '–î–∏—Ä–µ–∫—Ç–æ—Ä',
+    'Job' => '–†–∞–±–æ—Ç–∞',
+    'Contact Us' => '–°–≤—è–∂–∏—Ç–µ—Å—å —Å –Ω–∞–º–∏',
+    'For education & Business' => '–î–ª—è –û–±—Ä–∞–∑–æ–≤–∞–Ω–∏—è & –ë–∏–∑–Ω–µ—Å–∞',
+    'For Education' => '–î–ª—è –û–±—Ä–∞–∑–æ–≤–∞–Ω–∏—è',
+    'Phones and Education' => '–¢–µ–ª–µ—Ñ–æ–Ω—ã –∏ –û–±—Ä–∞–∑–æ–≤–∞–Ω–∏–µ',
+    'Laptops and Education' => '–ù–æ—É—Ç–±—É–∫–∏ –∏ –û–±—Ä–∞–∑–æ–≤–∞–Ω–∏–µ',
+    'For Business' => '–î–ª—è –ë–∏–∑–Ω–µ—Å–∞',
+    'Laptops in Business' => '–ù–æ—É—Ç–±—É–∫–∏ –¥–ª—è –ë–∏–∑–Ω–µ—Å–∞',
+    'Phones in Business' => '–¢–µ–ª–µ—Ñ–æ–Ω—ã –¥–ª—è –ë–∏–∑–Ω–µ—Å–∞',
+    'Devices in Business' => '–£—Å—Ç—Ä–æ–π—Å—Ç–≤–∞ –¥–ª—è –ë–∏–∑–Ω–µ—Å–∞',
+    'For more info about return items and shopping & delivery call +(380) 95 094 82 68.' => '–î–ª—è –±–æ–ª—å—à–µ–π –∏–Ω—Ñ–æ—Ä–º–∞—Ü–∏–∏ –æ–± –≤–æ–∑–≤—Ä–∞—â–µ–Ω–∏–∏ –ø—Ä–µ–¥–º–µ—Ç–æ–≤ –∏ —Å—Ä–æ–∫–∞—Ö –¥–æ—Å—Ç–∞–≤–∫–∏ & –¥–æ—Å—Ç–∞–≤–∫–µ –∑–≤–æ–Ω–∏—Ç—å +(380) 095 094 82 68',
+    'Copyright &copy; Woden S Inc. All rights reserved.' => '–ê–≤—Ç–æ—Ä—Å–∫–∏–µ –ø—Ä–∞–≤–∞. Woden S Inc. –í—Å–µ –ø—Ä–∞–≤–∞ –∑–∞—â–∏—â–µ–Ω—ã',
     /*
      * End Footer
+     */
+    /*
+     * For Phones
+     */
+
+    'The only thing that can change your life absolutely.' => '–¢–æ–ª—å–∫–æ –æ–Ω–∏, –º–æ–≥—É—Ç–∞ –∏–∑–º–µ–Ω–∏—Ç—å –í–∞—à—É –∂–∏–∑–Ω—å –∞–±—Å–æ–ª—é—Ç–Ω–æ.',
+    'Describe new possibilities.' => '–ü–æ–ø—Ä–æ–±—É–π—Ç–µ –Ω–æ–≤—ã–µ –≤–æ–∑–º–æ–∂–Ω–æ—Å—Ç–∏',
+    'For education' => '–î–ª—è –æ–±—Ä–∞–∑–æ–≤–∞–Ω–∏—è',
+    'For business' => '–î–ª—è –±–∏–∑–Ω–µ—Å–∞',
+    'Buy' => '–ö—É–ø–∏—Ç—å',
+    'Most people have at least a simple, if not sophisticated, mobile phone. These devices are convenient to carry around and you can use them on the go as long as there is network coverage wherever you are. Mobile phones have clearly made it easier to communicate.' =>
+    '–ú–Ω–æ–≥–∏–µ –ª—é–¥–∏ –∏–º–µ—é—Ç –∫–∞–∫ –º–∏–Ω–∏–º—É–º –æ–±—ã—á–Ω—ã–π —Ç–µ–ª–µ—Ñ–æ–Ω, –µ—Å–ª–∏ –Ω–µ –∫—Ä—É—Ç–æ–π, –º–æ–±–∏–ª—å–Ω—ã–π —Ç–µ–ª–µ—Ñ–æ–Ω. –≠—Ç–∏ —É—Å—Ç—Ä–æ–π—Å—Ç–≤–∞ —Å–¥–µ–ª–∞–Ω—ã —á—Ç–æ –±—ã –≤—ã —á—É–≤—Å—Ç–≤–æ–≤–∞–ª–∏ —Å–µ–±—è —Å–ø–æ–∫–æ–π–Ω–æ –∏ –∏—Å–ø–æ–ª—å–∑–æ–≤–∞—Ç—å –∏—Ö –º–æ–∂–Ω–æ –≤ –ª—é–±–æ–π –∑–æ–Ω–µ –ø–æ–∫—Ä—ã—Ç–∏—è —Å–µ—Ç–∏. –ú–æ–±–∏–ª—å–Ω—ã–µ —Ç–µ–ª–µ—Ñ–æ–Ω—ã —Å–¥–µ–ª–∞–ª–∏ –≤–æ–∑–º–æ–∂–Ω–æ—Å—Ç—å –∫–æ–Ω—Ç–∞–∫—Ç–∏—Ä–æ–≤–∞—Ç—å –ª–µ–≥—á–µ —á–µ–º –Ω–µ–∫—É–¥–∞.',
+    "Although the mobile phone doesn't guarantee safety, you can use it to make calls whenever there is an emergency." => '–ù–µ—Å–º–æ—Ç—Ä—è –Ω–∞ —ç—Ç–æ, –º–æ–±–∏–ª—å–Ω—ã–µ —Ç–µ–ª–µ—Ñ–æ–Ω—ã –Ω–µ –≥–∞—Ä–∞–Ω—Ç–∏—Ä—É—é—Ç –±–µ–∑–æ–ø–∞—Å–Ω–æ—Å—Ç—å, –Ω–æ –≤—ã –º–æ–∂–µ—Ç–µ –∏—Ö –∏—Å–ø–æ–ª—å–∑–æ–≤–∞—Ç—å –∏—Ö –≤ –ª—é–±–æ–π —Å–ª—É—á–∞–µ –æ–ø–∞—Å–Ω–æ—Å—Ç–∏.',
+    'Thin, powerful and awesome.' => '–¢–æ–∫–Ω–∏–π, –º–æ—â–Ω—ã–π –∏ –∫–∞–∫–æ–π –ª–∏–±–æ.',
+    'Change your way of thinking. Interact with each other. Awesome Apps for your needs.' => '–ò–∑–º–µ–Ω–∏—Ç–µ –≤–∞—à —Å—Ç–∏–ª—å –º—ã—à–ª–µ–Ω–∏—è. –°–≤—è–∑—ã–≤–∞–π—Ç–µ—Å—å –¥—Ä—É–≥ —Å –¥—Ä—É–≥–æ–º. –†–∞–∑–Ω—ã–µ –ü—Ä–∏–ª–æ–∂–µ–Ω–∏—è –¥–ª—è –í–∞—à–∏—Ö –ø–æ—Ç—Ä–µ–±–Ω–æ—Å—Ç–µ–π.',
+    'Search for education' => '–ò—Å–∫–∞—Ç—å –¥–ª—è –æ–±—Ä–∞–∑–æ–≤–∞–Ω–∏—è',
+    'With the upgrades made year in, year out, mobile phones are becoming more like computers with the added benefit of portability.' => '–í —Å–≤—è–∑–∏ —Å –Ω–æ–≤—ã–º–∏ –æ–±–Ω–æ–≤–ª–µ–Ω–∏—è–º–∏ —Å–¥–µ–ª–∞–Ω—ã–º–∏ —ç—Ç–∏–º –≥–æ–¥–æ–º, –≥–æ–¥–æ–º –¥—Ä—É–≥–∏–º, –º–æ–±–∏–ª—å–Ω—ã–µ —Ç–µ–ª–µ—Ñ–æ–Ω—ã —Å—Ç–∞—é—Ç –ø–æ—á—Ç–∏ –∫–∞–∫ –∫–æ–º–ø—å—é—Ç–µ—Ä–∞–º–∏ —Å –ø—Ä–µ–π–º—É—â–µ—Å—Ç–≤–æ–º –∏—Ö –∫–æ–º–ø–∞–∫—Ç–Ω–æ—Å—Ç–∏.',
+    'One can receive and send emails, browse websites, download games and videos, book flight tickets, and even chat with friends.' => '–ö—Ç–æ-–ª–∏–±–æ –º–æ–∂–µ—Ç –ø–æ–ª—É—á–∞—Ç—å –∏ –æ—Ç–ø—Ä–∞–≤–ª—è—Ç—å –µ–ª–µ–∫—Ç–æ–Ω–Ω—ã–µ –ø–∏—Å—å–º–∞, –ª–∏—Å—Ç–∞—Ç—å –≤–µ–±-—Å–∞–π—Ç—ã, —Å–∫–∞—á–∏–≤–∞—Ç—å –∏–≥—Ä—ã –∏ –≤–∏–¥–µ–æ, –∏–º–µ—Ç—å –∫–Ω–∏–≥—É –∞–≤–∏–∞–ø–æ–ª–µ—Ç–æ–≤, –∏ —Å–ø–∏—Å—ã–≤–∞—Ç—å—Å—è –¥—Ä—É–≥ —Å –¥—Ä—É–≥–æ–º.',
+    'Be productive, move forward.' => '–ë—É–¥—å—Ç–µ –ø—Ä–æ–¥—É–∫—Ç–∏–≤–Ω—ã, –¥–≤–∏–≥–∞–π—Ç–µ—Å—å –≤–ø–µ—Ä–µ–¥',
+    'Reimagine work and tasks with next-generation Apps. Transform your business strategy. Be mobile as much as possible. Go in lockstep with future.' => '–ü—Ä–µ–æ—Å–º–æ—Ç—Ä–∏—Ç–µ —Ä–∞–±–æ—Ç—É –∏ –∑–∞–¥–∞–Ω–∏—è —Å –Ω–æ–≤—ã–º–∏ –ø—Ä–∏–ª–æ–∂–µ–Ω–∏—è–º–∏. –¢—Ä–∞–Ω—Å—Ñ–æ—Ä–º–∏—Ä—É–π—Ç–µ –≤–∞—à—É –±–∏–∑–Ω–µ—Å —Å—Ç—Ä–∞—Ç–µ–≥–∏—é. –ë—É–¥—å—Ç–µ –º–æ–±–∏–ª—å–Ω—ã–º–∏ –Ω–∞—Å—Ç–æ–ª—å–∫–æ –Ω–∞ —Å–∫–æ–ª—å–∫–æ –≤–æ–∑–º–æ–∂–Ω–æ. –î–≤–∏–≥–∞–π—Ç–µ—Å—å –Ω–æ–≥–∞ –≤ –Ω–æ–≥—É —Å –±—É–¥—É—â–∏–º.',
+    /*
+     * End Phones
      */
 );

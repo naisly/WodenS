@@ -276,7 +276,7 @@ class DefaultModel
 
     public function setLanguage( $language ){
 
-        header("Content-Type: text/html; charset=windows-1251");
+        header("Content-Type: text/html; charset=utf-8");
         $this->language = $language;
     }
 

@@ -40,7 +40,7 @@ class DefaultView
             echo "<title>" . $page . " - Woden S</title>";
         }
         echo       '<!-- HTML 5 markup and encoding utf-8 -->
-                    <meta http-equiv="Content-type" content="text/html" charset="utf-8">
+                    <meta charset="utf-8" />
                     <!-- For Internet Explorer -->
                     <meta http-equiv="X-UA-Compatible" content="IE=EDge">
                     <!-- Bootstrap framework -->
@@ -877,7 +877,7 @@ class DefaultView
         $language = $_SESSION['language'];
         //echo $language;
         switch ($language) {
-            case 'ru': $name_of_country =  'Россия';
+            case 'ru': $name_of_country =  'Р РѕСЃСЃРёСЏ';
                 break;
             case 'us': $name_of_country =  'United States';
                 break;
@@ -899,7 +899,7 @@ class DefaultView
         $k = count($language_array);
         while ($i < $k){
             switch($language_array[$i]){
-                case 'ru': array_push($name_of_country_array, 'Россия');
+                case 'ru': array_push($name_of_country_array, 'Р РѕСЃСЃРёСЏ');
                     break;
                 case 'us': array_push($name_of_country_array, 'United States');
                     break;
