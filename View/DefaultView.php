@@ -487,9 +487,9 @@ class DefaultView
         }
 
         echo        '<div class="footer">
-                     <div class="container">
+                     <div class="container full-container">
                           <div class="row">
-                              <div class="col-sm-1"></div>
+                              <div class="col-sm-1 no-width-for-sm"></div>
                               <div class="col-sm-6 margin-for-small-devices">';
 
         if($page !== 'Page Not Found') {
@@ -542,10 +542,10 @@ class DefaultView
                               <div class="col-md-5"></div>
                           </div>
                      </div>
-                     <div class="container" style="margin-top: 20px;">
+                     <div class="container full-container" style="margin-top: 20px;">
                         <div class="row">
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-2 wow fadeInLeft">
+                            <div class="col-sm-1 no-width-for-sm"></div>
+                            <div class="col-sm-2 wow fadeInLeft full-row-for-small">
                                 <div class="small-devices-decoration">
                                     <h class="float-right"><a class="items default-hidden" id="displayTextFooter" href="javascript:toggle();">';
 
@@ -603,7 +603,7 @@ class DefaultView
         echo                       '</ul>
                                 </div>
                             </div>
-                            <div class="col-sm-2 wow fadeInLeft">
+                            <div class="col-sm-2 wow fadeInLeft full-row-for-small">
                                 <div class="small-devices-decoration">
                                     <h class="float-right"><a class="items default-hidden" id="displayTextFooter1" href="javascript:toggle1();">';
 
@@ -661,7 +661,7 @@ class DefaultView
                             <input type="hidden" value="1" name="shopping_help" />
                             </form>
                             </div>
-                            <div class="col-sm-2 wow fadeInUp">
+                            <div class="col-sm-2 wow fadeInUp full-row-for-small">
                                 <div class="small-devices-decoration">
                                     <h class="float-right"><a class="items default-hidden" id="displayTextFooter2" href="javascript:toggle2();">';
 
@@ -724,7 +724,7 @@ class DefaultView
         echo                       '</ul>
                                 </div>
                             </div>
-                            <div class="col-sm-2 wow fadeInRight">
+                            <div class="col-sm-2 wow fadeInRight full-row-for-small">
                                 <div class="small-devices-decoration">
                                     <h class="float-right"><a class="items default-hidden" id="displayTextFooter3" href="javascript:toggle3();">';
 
@@ -779,7 +779,7 @@ class DefaultView
         echo                       '</ul>
                                 </div>
                             </div>
-                            <div class="col-sm-2 wow fadeInRight edu-for-small">
+                            <div class="col-sm-2 wow fadeInRight edu-for-small full-row-for-small-minus-width">
                                 <div class="small-devices-decoration">
                                     <h class="float-right"><a class="items default-hidden" id="displayTextFooter4" href="javascript:toggle4();">';
 
@@ -836,41 +836,47 @@ class DefaultView
         echo                       '</ul>
                                 </div>
                             </div>
-                            <div class="col-sm-1"></div>
+                            <div class="col-sm-1 no-width-for-sm"></div>
                         </div>
                     </div>
-                    <div class="container">
+                    <div class="container full-container">
                         <div class="row">
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-10" style="margin-top: 40px">
+                            <div class="col-sm-1 no-width-for-sm"></div>
+                            <div class="col-sm-10 full-width-for-md" style="margin-top: 40px">
                                 <p class="more-info pull-left margin-more">';
 
-        echo $this->model->Translate('For more info about return items and shopping & delivery call +(380) 95 094 82 68.');
+        echo $this->model->Translate('For more info about return items and shopping & delivery') . " ";
+
+        echo                   '<a class="contact-us" href="/shop/Contact/">';
+
+        echo $this->model->Translate('Contact Us');
+
+        echo                   '</a>';
 
         echo                   '</p>
                             </div>
-                            <div class="col-sm-1"></div>
+                            <div class="col-sm-1 no-width-for-sm"></div>
                         </div>
                     </div>
-                    <div class="container">
+                    <div class="container full-container">
                         <div class="row">
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-10 margin-more">
+                            <div class="col-sm-1 no-width-for-sm"></div>
+                            <div class="col-sm-10 full-width-for-md margin-more">
                                 <div class="footer-divider"></div>
                             </div>
-                            <div class="col-sm-1"></div>
+                            <div class="col-sm-1 no-width-for-sm"></div>
                         </div>
                     </div>
-                    <div class="container">
+                    <div class="container full-container">
                         <div class="row">
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-5 margin-copy">
+                            <div class="col-sm-1 no-width-for-sm"></div>
+                            <div class="col-sm-5 width-80-for-md margin-copy">
                                 <p class="more-info pull-left">';
 
         echo $this->model->Translate('Copyright &copy; Woden S Inc. All rights reserved.');
 
         echo               '</div>
-                            <div class="col-sm-5 language" style="margin-top: -5px;">
+                            <div class="col-sm-5 half-width-for-sm-md language" style="margin-top: -5px;">
                                 <div class="dropup dropup-menu-for-sm dropup-for-small">
                                     <a class="dropdown-toggle" type="button" data-toggle="dropdown" style="text-decoration: none;">';
         //$_SESSION['language'] = 'us';
@@ -932,7 +938,7 @@ class DefaultView
 
         echo                   '</div>
                             </div>
-                            <div class="col-sm-1"></div>
+                            <div class="col-sm-1 no-width-for-sm"></div>
                         </div>
                         <div class="container-fluid non-for-large">
                         <div class="row">

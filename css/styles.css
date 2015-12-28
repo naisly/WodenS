@@ -121,6 +121,11 @@ p, h1,a  {
 	height: 1px;
 	background-color: white;
 }
+.contact-us {
+	color: rgb(0, 175, 253) !important;
+	font-family: Arial;
+	font-size: 12px;
+}
 
 
 
@@ -677,8 +682,38 @@ a:link {
 		margin-right: 25px;
 	}
 }
-
-
+@media (min-width: 766px) and (max-width: 1022px){
+	.full-container {
+		margin-left: 0;
+		margin-right: 0;
+		width: 99%;
+	}
+	.no-width-for-sm {
+		width: 0;
+		height: 0;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.full-row-for-small {
+		width: 20%;
+	}
+	.full-width-for-md {
+		width: 100%;
+	}
+	.half-width-for-sm-md {
+		width: 20%;
+	}
+	.width-80-for-md {
+		width: 80%;
+	}
+	.full-row-for-small-minus-width {
+		width: 20%;
+		margin-left: -15px;
+	}
+	.dropdown-menu {
+		left: -70px;
+	}
+}
 
 
 
