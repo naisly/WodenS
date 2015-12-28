@@ -464,6 +464,7 @@ class DefaultView
      * Footer, bottom part
      */
     public function actionGetFooter( $page ) {
+
         echo   '</div>
                 <footer>';
         if($page !== 'financing' && $page !== 'Index' && $page !== 'Phones' && $page !== 'Devices' && $page !== 'Page Not Found') {

@@ -418,6 +418,7 @@ a:link {
 	border-bottom: 3px solid white;
 	border-top: 3px solid white;
 	border-right: 3px solid white;
+	background-color: #f1f1f1;
 }
 .sub-decision-for-xs {
 	font-size: 20px;
@@ -432,6 +433,7 @@ a:link {
 	padding-left: 38%;
 	border-bottom: 3px solid white;
 	border-right: 3px solid white;
+	background-color: #f1f1f1;
 }
 .bg-laptops {
 	background: url('../images/laptops-category.jpg') center no-repeat;
@@ -443,6 +445,7 @@ a:link {
 	padding-left: 24%;
 	border-bottom: 3px solid white;
 	border-top: 3px solid white;
+	background-color: #f1f1f1;
 }
 .bg-tv {
 	background: url('../images/tv-category.jpg') center no-repeat;
@@ -453,6 +456,7 @@ a:link {
 	padding-bottom: 0.5%;
 	padding-left: 3%;
 	border-bottom: 3px solid white;
+	background-color: #f1f1f1;
 }
 
 @media (min-width: 766px) and (max-width: 991px){
@@ -481,6 +485,13 @@ a:link {
 
 
 @media (max-width: 766px) {
+	.bg-phones {
+		border-right: none;
+	}
+	.bg-ipad {
+		border-bottom: none;
+		border-right: none;
+	}
 	/*
 	 * Drop up Language
 	 */

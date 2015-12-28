@@ -449,6 +449,7 @@ class DefaultController
     private function actionGetLanguage() {
 
         //echo $_SESSION['language'];
+        header("Content-Type: text/html; charset=windows-1251");
         session_start();
         if(!isset($_SESSION['language'])){
             $_SESSION['language'] = 'us';
