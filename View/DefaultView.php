@@ -842,7 +842,7 @@ class DefaultView
                     <div class="container full-container">
                         <div class="row">
                             <div class="col-sm-1 no-width-for-sm"></div>
-                            <div class="col-sm-10 full-width-for-md" style="margin-top: 40px">
+                            <div class="col-sm-10 full-width-for-md" style="margin-top: 60px">
                                 <p class="more-info pull-left margin-more">';
 
         echo $this->model->Translate('For more info about return items and shopping & delivery') . " ";
@@ -889,10 +889,12 @@ class DefaultView
                 break;
             case 'fr': $name_of_country =  'France';
                 break;
+            case 'de': $name_of_country = 'Deutschland';
+                break;
         }
 
 
-        $language_array = ['ru', 'us', 'fr'];
+        $language_array = ['ru', 'us', 'fr', 'de'];
         foreach($language_array as $val => $assoc){
             if($assoc == $language){
                 unset($language_array[$val]);
@@ -910,6 +912,8 @@ class DefaultView
                 case 'us': array_push($name_of_country_array, 'United States');
                     break;
                 case 'fr': array_push($name_of_country_array, 'France');
+                    break;
+                case 'de': array_push($name_of_country_array, 'Deutschland');
                     break;
             }
 
