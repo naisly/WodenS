@@ -501,6 +501,9 @@ class DefaultController
             $i++;
         }
 
+        /*
+         * Setting Model
+         */
         $this->model->setCurrentLanguage( $language );
         $this->model->setCurrentCountry( $name_of_country );
         $this->model->setNameOfLanguages( $language_array );
