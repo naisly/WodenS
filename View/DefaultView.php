@@ -879,58 +879,19 @@ class DefaultView
                             <div class="col-sm-5 half-width-for-sm-md language" style="margin-top: -5px;">
                                 <div class="dropup dropup-menu-for-sm dropup-for-small">
                                     <a class="dropdown-toggle" type="button" data-toggle="dropdown" style="text-decoration: none;">';
-        //$_SESSION['language'] = 'us';
-        $language = $_SESSION['language'];
-        //echo $language;
-        switch ($language) {
-            case 'ru': $name_of_country =  'Россия';
-                break;
-            case 'us': $name_of_country =  'United States';
-                break;
-            case 'fr': $name_of_country =  'France';
-                break;
-            case 'de': $name_of_country = 'Deutschland';
-                break;
-        }
 
 
-        $language_array = ['ru', 'us', 'fr', 'de'];
-        foreach($language_array as $val => $assoc){
-            if($assoc == $language){
-                unset($language_array[$val]);
-            }
-        }
-        sort($language_array);
-
-        $name_of_country_array = array();
-        $i = 0;
-        $k = count($language_array);
-        while ($i < $k){
-            switch($language_array[$i]){
-                case 'ru': array_push($name_of_country_array, 'Россия');
-                    break;
-                case 'us': array_push($name_of_country_array, 'United States');
-                    break;
-                case 'fr': array_push($name_of_country_array, 'France');
-                    break;
-                case 'de': array_push($name_of_country_array, 'Deutschland');
-                    break;
-            }
-
-            $i++;
-        }
-
-        echo                          '<img src="/shop/images/' . $language . '-flag.png" height="16" width="16" /><h class="lang">' . $name_of_country . '</h>
+        echo                          '<img src="/shop/images/' . $this->model->getCurrentLanguage() . '-flag.png" height="16" width="16" /><h class="lang">' . $this->model->getCurrentCountry() . '</h>
                                     </a>
                                     <ul class="dropdown-menu">';
         $i = 0;
-        while ($i < $k){
+        while ($i < $this->model->countNameOfLanguages()){
             echo '<form action="/shop/change-language" method="post" id="form-' . $i . '">
-                     <input type="hidden" value="' . $language_array[$i] . '" name="checked-language" id="checked-language" />
-                     <li id="marger-for-small-devices-xs"><img id="margin-for-small" src="/shop/images/' . $language_array[$i] . '-flag.png" height="16" width="16" /><button id="link_as_button" style="font-size: 13px; margin-left: 7px; text-decoration: none;">' . $name_of_country_array[$i] . '</span></button></li>
+                     <input type="hidden" value="' . $this->model->getNameOfLanguages( $i ) . '" name="checked-language" id="checked-language" />
+                     <li id="marger-for-small-devices-xs"><img id="margin-for-small" src="/shop/images/' . $this->model->getNameOfLanguages( $i ) . '-flag.png" height="16" width="16" /><button id="link_as_button" style="font-size: 13px; margin-left: 7px; text-decoration: none;">' . $this->model->getNameOfCountries( $i ) . '</span></button></li>
                   </form>';
 
-            if($i < ($k -1)){
+            if($i < ($this->model->countNameOfLanguages() -1)){
                 echo '<div class="divider" style="margin-left: 8px; padding-right: 4px; width: 90%;"></div>';
             }
 

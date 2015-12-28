@@ -461,7 +461,50 @@ class DefaultController
 
             $this->model->setLanguage($lang);
         }
-        //print_r($lang);
+
+        $language = $_SESSION['language'];
+
+        switch ($language) {
+            case 'ru': $name_of_country =  'Россия';
+                break;
+            case 'us': $name_of_country =  'United States';
+                break;
+            case 'fr': $name_of_country =  'France';
+                break;
+            case 'de': $name_of_country = 'Deutschland';
+                break;
+        }
+
+        $language_array = ['ru', 'us', 'fr', 'de'];
+        foreach($language_array as $val => $assoc){
+            if($assoc == $language){
+                unset($language_array[$val]);
+            }
+        }
+        sort($language_array);
+
+        $name_of_country_array = array();
+        $i = 0;
+        $k = count($language_array);
+        while ($i < $k){
+            switch($language_array[$i]){
+                case 'ru': array_push($name_of_country_array, 'Россия');
+                    break;
+                case 'us': array_push($name_of_country_array, 'United States');
+                    break;
+                case 'fr': array_push($name_of_country_array, 'France');
+                    break;
+                case 'de': array_push($name_of_country_array, 'Deutschland');
+                    break;
+            }
+
+            $i++;
+        }
+
+        $this->model->setCurrentLanguage( $language );
+        $this->model->setCurrentCountry( $name_of_country );
+        $this->model->setNameOfLanguages( $language_array );
+        $this->model->setNameOfCountries( $name_of_country_array );
     }
     /*
      * Incapsulation for

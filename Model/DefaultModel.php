@@ -36,6 +36,10 @@ class DefaultModel
     public $breadcrumbs_link;
 
     private $language;
+    private $current_language;
+    private $current_country;
+    private $name_of_countries_array;
+    private $name_of_languages_array;
 
     public function setProductName ( $product_name ) {
 
@@ -287,5 +291,57 @@ class DefaultModel
         } else {
             return $text;
         }
+    }
+
+    /*
+     * private $current_language;
+       private $current_country;
+       private $name_of_countries_array;
+       private $name_of_languages_array;
+     */
+
+    public function setCurrentLanguage( $current_language ){
+
+        $this->current_language = $current_language;
+    }
+
+    public function getCurrentLanguage() {
+
+        return $this->current_language;
+    }
+
+    public function setCurrentCountry( $current_country ){
+
+        $this->current_country = $current_country;
+    }
+
+    public function getCurrentCountry() {
+
+        return $this->current_country;
+    }
+
+    public function setNameOfCountries( $name_of_countries_array ){
+
+        $this->name_of_countries_array = $name_of_countries_array;
+    }
+
+    public function getNameOfCountries( $i ){
+
+        return $this->name_of_countries_array[$i];
+    }
+
+    public function setNameOfLanguages( $name_of_languages_array ){
+
+        $this->name_of_languages_array = $name_of_languages_array;
+    }
+
+    public function getNameOfLanguages( $i ){
+
+        return $this->name_of_languages_array[$i];
+    }
+
+    public function countNameOfLanguages() {
+
+        return count($this->name_of_languages_array);
     }
 }
