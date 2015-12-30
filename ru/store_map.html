@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/store.css" />
+    <script src="js/jquery-min.js"></script>
+</head>
+<body>
+
+<div id="map_wrapper">
+    <div id="map_canvas" class="mapping"></div>
+</div>
+
+<script>
+    jQuery(function($) {
+        // Asynchronously Load the map API
+        var script = document.createElement('script');
+        script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&callback=initialize";
+        document.body.appendChild(script);
+    });
+
+    function initialize() {
+        var map;
+        var bounds = new google.maps.LatLngBounds();
+        var mapOptions = {
+            mapTypeId: 'roadmap'
+        };
+
+        // Display a map on the page
+        map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+        map.setTilt(45);
+
+        // Multiple Markers
+        var markers = [
+            ['Business Center Gulliver', 50.437206,30.522305],
+            ['Warsaw', 52.2146595,21.09168315],
+            ['Moscow', 55.75214413, 37.70301127],
+            ['Vilnus', 54.6741338, 25.31043315],
+            ['Lviv', 49.80996954, 24.01404643],
+            ['Kharkiv', 49.97982455, 36.25281596],
+            ['Praha', 50.10682363, 14.49988628]
+        ];
+
+        // Info Window Content
+        var infoWindowContent = [
+            ['<div class="info_content">' +
+            '<h3>Trade-entertainment Business center Gulliver</h3>' +
+            '<p>Our office situated at the center of Kyiv, Lvivskya Square in most popular as well as the heighest building in Ukraine. Visit us from 8 a.m until 7 p.m and from 10 a.m till 6 p.m at Weekend days</p>' +        '</div>'],
+            ['<div class="info_content">' +
+            '<h3>International Business Center</h3>' +
+            '<p>We are located at International Business Center  Building A: ul. Armii Ludowej 14 00 - 638 Warszawa. Visit us from 8 a.m until 8 p.m and from 9 a.m till 6 p.m at Weened days</p>' +
+            '</div>'],
+            ['<div class="info_content">' +
+            '<h3>International Moscow Business Center Facto</h3>' +
+            '<p>We are located at street 6, building 1, Presnenskaya nab., 123317, Moscow, IMBC IBC Capital City, Moscow City. Visit us from 8 a.m until 8 p.m and from 9 a.m till 6 p.m at Weened days</p>' +
+            '</div>'],
+            ['<div class="info_content">' +
+            '<h3>Vilnius Old Town</h3>' +
+            '<p>We are located at Vilniaus g.31, LT-01402 Vilnius. Visit us from 8 a.m until 8 p.m and from 9 a.m till 6 p.m at Weened days</p>' +
+            '</div>'],
+            ['<div class="info_content">' +
+            '<h3>Trade-entertainment center King Cross Leopolis</h3>' +
+            '<p>We are located at Striyska street, 30, Lviv. Visit us from 8 a.m until 8 p.m</p>' +
+            '</div>'],
+            ['<div class="info_content">' +
+            '<h3>Trade-entertainment center Sun Mall</h3>' +
+            '<p>We are located at Gagarina street, 181, Kharkiv. Visit us from 8 a.m until 5 p.m</p>' +
+            '</div>'],
+            ['<div class="info_content">' +
+            '<h3>Rosmarin Business Center</h3>' +
+            '<p>We are located at Dělnická 213/12, Praha. Call us if you have any questions +420 266 793 177. Visit us from 10 a.m until 8 p.m</p>' +
+            '</div>']
+        ];
+
+        // Display multiple markers on a map
+        var infoWindow = new google.maps.InfoWindow(), marker, i;
+
+        // Loop through our array of markers & place each one on the map
+        for( i = 0; i < markers.length; i++ ) {
+            var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+            bounds.extend(position);
+            marker = new google.maps.Marker({
+                position: position,
+                map: map,
+                title: markers[i][0]
+            });
+
+            // Allow each marker to have an info window
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infoWindow.setContent(infoWindowContent[i][0]);
+                    infoWindow.open(map, marker);
+                }
+            })(marker, i));
+
+            // Automatically center the map fitting all markers on the screen
+            map.fitBounds(bounds);
+        }
+
+        // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
+        var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+            this.setZoom(5);
+            google.maps.event.removeListener(boundsListener);
+        });
+
+    }
+</script>
