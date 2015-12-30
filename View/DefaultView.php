@@ -183,7 +183,13 @@ class DefaultView
                             <span class="icon-bar"></span>
                         </button>';
         #if ($page == 'daughter'){
-        echo       '<a class="navbar-brand" href="/shop/">
+        echo       '<a class="navbar-brand" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo       '">
                             <img alt="Brand" src="/shop/images/main-favicon.png" width="35" height="35" id="main-image">';
         echo '</a>
                     </div>
@@ -556,7 +562,13 @@ class DefaultView
             while ($i < $this->model->countBreadcrumbs()) {
                 if ($this->model->getBreadcrumbs($i) == 'shop') {
                     if ($i < 1) {
-                        echo '<a href="/shop/"><img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/favicon-default.png" width="20" height="20"/></a>';
+                        echo '<a href="/shop/';
+
+                        if($_SESSION['language'] !== 'us'){
+                            echo $_SESSION['language'] . '/';
+                        }
+
+                        echo '"><img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/favicon-default.png" width="20" height="20"/></a>';
                     } else {
                         echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">';
 

@@ -662,6 +662,8 @@ class DefaultController
         $array = explode("/", $pageURL);
 
         //print_r($array);
+        $languages = ['us', 'ru', 'de', 'fr'];
+
         array_shift($links_array);
         array_shift($links_array);
         array_shift($links_array);
@@ -669,6 +671,12 @@ class DefaultController
         array_shift($array);
         array_shift($array);
         array_shift($array);
+
+        print_r($links_array);
+        if(in_array($array[1], $languages)){
+            array_splice($array, 1, 1);
+
+        }
 
         $i = 0;
         while($i < count($array)){
@@ -698,6 +706,20 @@ class DefaultController
 
             $i++;
         }
+
+        //session_start();
+
+        if($_SESSION['language'] !== 'us') {
+            $i = 0;
+            while($i < count($links) - 1){
+                $links[$i] = $links[$i+1] . '/';
+
+                $i++;
+            }
+            #$links[1] = $links[2];
+            #$links[2] = $links[3];
+        }
+
 
         $this->model->setBreadcrumbs( $array );
         $this->model->setBreadcrumbsLink( $links );
