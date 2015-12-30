@@ -24,7 +24,6 @@ class PhonesView extends IndexView
         $this->headerView( 'phones' );
         $this->getMain();
         $this->getBlocks();
-        #$this->getOrder();
         $this->actionGetFooter( 'Phones' );
         $this->endHTML();
     }
@@ -77,7 +76,7 @@ class PhonesView extends IndexView
 
         echo '<div class="container">
                   <div class="row" style="margin-top: 8%; margin-bottom: 8%;">
-                      <div class="col-sm-4 text-left" style="margin-top: 10%;">
+                      <div class="col-sm-4 text-left" style="margin-top: 5%;">
                           <h1 id="iphone" class="fc">';
 
         echo $this->model->Translate('Most people have at least a simple, if not sophisticated, mobile phone. These devices are convenient to carry around and you can use them on the go as long as there is network coverage wherever you are. Mobile phones have clearly made it easier to communicate.') . "<br />" . "<br />";

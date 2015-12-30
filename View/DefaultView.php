@@ -180,7 +180,7 @@ class DefaultView
             session_start();
         }
 
-        echo   '<nav class="navbar navbar-inverse">
+        echo   '<nav class="navbar navbar-inverse" id="navbar">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <!--<div class="container">-->
@@ -199,6 +199,14 @@ class DefaultView
 
         echo       '">
                             <img alt="Brand" src="/shop/images/main-favicon.png" width="35" height="35" id="main-image">';
+
+        /*
+         * Mid
+         */
+        echo '<a class="nav-brand text-center" href="#"><img src="/shop/images/icon_shipping_medium.png" width="30" height="34"></a>';
+        /*
+         * End
+         */
         echo '</a>
                  </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -272,96 +280,35 @@ class DefaultView
         echo $this->model->Translate('Support');
 
         echo                    '</a></li>
-                            <li class="divider-li-small"></li>
-                            <li class="dropdown">
-                        <a href="#" class="dropdown-toggle white-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">';
+                            <li class="non-visible-for-small"><h class="paddings-for-nav"><a href="/shop/';
 
-        echo $this->model->Translate('Cart');
-
-        echo               '</a>
-                        <ul class="dropdown-menu">';
-        if (isset($_SESSION['login_user'])) {
-            echo '<li><a href="/shop/';
-
-            if($_SESSION['language'] !== 'us'){
-                echo $_SESSION['language'] . '/';
-            }
-
-            echo    'logout" class="color-gl-for-small">';
-
-            echo $this->model->Translate('Logout');
-
-            echo '(' . $_SESSION['login_user'] . ')</a></li>';
-            session_write_close();
-        } else {
-            echo '<li><a class="color-gl-for-small" href="#"></a></li>';
-            echo '<li><a href="/shop/';
-            if($_SESSION['language'] !== 'us'){
-                echo $_SESSION['language'] . '/';
-            }
-
-
-            echo    'register" class="color-gl-for-small">';
-
-            echo $this->model->Translate('Register');
-
-            echo '</a></li>';
-            echo '<li><a href="/shop/';
-
-            if($_SESSION['language'] !== 'us'){
-                echo $_SESSION['language'] . '/';
-            }
-
-            echo    'login" class="color-gl-for-small">';
-
-            echo $this->model->Translate('Login');
-
-            echo '</a></li>';
-            session_write_close();
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
         }
-        echo '<li role="separator" class="divider divider-session"></li>
-              <li class="dropdown-header"><h class="margin-for-small-h-sm">';
 
-        echo $this->model->Translate('Products');
+        echo                'cart">';
 
-        echo '<h></li>';
-        if (isset($_SESSION['login_user'])) {
-            echo '<li><a href="/shop/';
+        echo '<img style="margin-top: 7px;" src="/shop/images/icon_shipping_medium.png" width="30" height="34">';
 
-            if($_SESSION['language'] !== 'us'){
-                echo $_SESSION['language'] . '/';
-            }
-
-            echo    'cart" class="color-gl-for-small">';
-
-            echo $this->model->Translate('Cart');
-
-            echo ':' . $this->model->getAPrice() . "$";
-            echo '<li><a href="#" class="color-gl-for-small">' . $this->model->getAItems() . ' ';
-
-            echo $this->model->Translate('items');
-
-            echo '</a></li>';
-        } else {
-            echo ' <li><a href="/shop/';
-
-            if($_SESSION['language'] !== 'us'){
-                echo $_SESSION['language'] . '/';
-            }
-
-            echo 'login" class="color-gl-for-small">';
-
-            echo $this->model->Translate('Login to see your cart');
-
-            echo '</a></li>';
-        }
-        echo '
-                        </ul>
-                    </li>
+        echo '              </a></h></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>';
+
+        echo '<script>
+                  function changeCss(){
+
+                      x = document.getElementById("navbar");
+
+                      if(x.style.height !== "100%"){
+                          x.style.height = "100%";
+                      } else {
+                          x.style.height = "auto";
+                      }
+                  }
+              </script>';
+
     }
     public function getUI( $category, $category_table ){
         $this->getItemsNames( $category );

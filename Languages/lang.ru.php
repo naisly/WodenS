@@ -89,7 +89,7 @@ $lang = array(
      * For Phones
      */
 
-    'The only thing that can change your life absolutely.' => 'Только они, могута изменить Вашу жизнь абсолютно.',
+    'The only thing that can change your life absolutely.' => 'Только они, могут изменить Вашу жизнь абсолютно.',
     'Describe new possibilities.' => 'Попробуйте новые возможности',
     'For education' => 'Для образования',
     'For business' => 'Для бизнеса',
