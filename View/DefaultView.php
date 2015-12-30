@@ -63,8 +63,8 @@ class DefaultView
         if($page == 'Devices'){
             echo '<link href="/shop/css/devices.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Index'){
-            echo '<link href="css/jquery.bxslider.css" rel="stylesheet">
-                  <script src="js/jquery.bxslider.min.js"></script>';
+            echo '<link href="/shop/css/jquery.bxslider.css" rel="stylesheet">
+                  <script src="/shop/js/jquery.bxslider.min.js"></script>';
         } else if ($page == 'Laptops'){
             echo '<link href="/shop/css/notebooks.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Phones'){
@@ -167,6 +167,11 @@ class DefaultView
      */
     final public function headerView( $page )
     {
+
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+
         echo   '<nav class="navbar navbar-inverse">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -185,31 +190,61 @@ class DefaultView
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li><a href="/shop/phones/" class="white-link">';
+                            <li><a href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                'phones/" class="white-link">';
 
         echo $this->model->Translate('Phones');
 
         echo                   '<span class="sr-only">(current)</span></a></li>
                             <li class="divider-li-small"></li>
-                            <li><a href="/shop/laptops/" class="white-link">';
+                            <li><a href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo               'laptops/" class="white-link">';
 
         echo $this->model->Translate('Laptops');
 
         echo                   '</a></li>
                             <li class="divider-li-small"></li>
-                            <li><a href="/shop/devices/" class="white-link">';
+                            <li><a href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                'devices/" class="white-link">';
 
         echo $this->model->Translate('Devices');
 
         echo                    '</a></li>
                             <li class="divider-li-small"></li>
-                            <li><a href="/shop/tv/" class="white-link">';
+                            <li><a href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                 'tv/" class="white-link">';
 
         echo $this->model->Translate('TV');
 
         echo                    '</a></li>
                             <li class="divider-li-small"></li>
-                            <li><a href="/shop/support/" class="white-link">';
+                            <li><a href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                'support/" class="white-link">';
 
         echo $this->model->Translate('Support');
 
@@ -223,19 +258,37 @@ class DefaultView
         echo               '<span class="caret"></span></a>
                         <ul class="dropdown-menu">';
         if (isset($_SESSION['login_user'])) {
-            echo '<li><a href="/shop/logout" class="color-gl-for-small">';
+            echo '<li><a href="/shop/';
+
+            if($_SESSION['language'] !== 'us'){
+                echo $_SESSION['language'] . '/';
+            }
+
+            echo    'logout" class="color-gl-for-small">';
 
             echo $this->model->Translate('Logout');
 
             echo '(' . $_SESSION['login_user'] . ')</a></li>';
             session_write_close();
         } else {
-            echo '<li><a href="/shop/register" class="color-gl-for-small">';
+            echo '<li><a href="/shop/';
+
+            if($_SESSION['language'] !== 'us'){
+                echo $_SESSION['language'] . '/';
+            }
+
+            echo    'register" class="color-gl-for-small">';
 
             echo $this->model->Translate('Register');
 
             echo '</a></li>';
-            echo '<li><a href="/shop/login" class="color-gl-for-small">';
+            echo '<li><a href="/shop/';
+
+            if($_SESSION['language'] !== 'us'){
+                echo $_SESSION['language'] . '/';
+            }
+
+            echo    'login" class="color-gl-for-small">';
 
             echo $this->model->Translate('Login');
 
@@ -249,7 +302,13 @@ class DefaultView
 
         echo '</li>';
         if (isset($_SESSION['login_user'])) {
-            echo '<li><a href="/shop/cart" class="color-gl-for-small">';
+            echo '<li><a href="/shop/';
+
+            if($_SESSION['language'] !== 'us'){
+                echo $_SESSION['language'] . '/';
+            }
+
+            echo    'cart" class="color-gl-for-small">';
 
             echo $this->model->Translate('Cart');
 

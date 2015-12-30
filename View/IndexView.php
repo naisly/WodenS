@@ -34,10 +34,10 @@ class IndexView extends DefaultView
         echo '<div class="overlay-main-page">
                   <div id="slider" style="margin-top: -44px;">
                       <ul class="bxslider">
-                          <li><a href="/shop/phones/"><img src="images/laptops-main-page.jpg" class="full-image-main-content"></a></li>
-                          <li><a href="/shop/tv/"><img src="images/tv-main-page.jpg" class="full-image-main-content"></a></li>
-                          <li><a href="/shop/laptops/"><img src="images/laptops-main.jpg" class="full-image-main-content"></a></li>
-                          <li><a href="/shop/devices/"><img src="images/devices-main-img.jpg" class="full-image-main-content"></a></li>
+                          <li><a href="/shop/phones/"><img src="/shop/images/laptops-main-page.jpg" class="full-image-main-content"></a></li>
+                          <li><a href="/shop/tv/"><img src="/shop/images/tv-main-page.jpg" class="full-image-main-content"></a></li>
+                          <li><a href="/shop/laptops/"><img src="/shop/images/laptops-main.jpg" class="full-image-main-content"></a></li>
+                          <li><a href="/shop/devices/"><img src="/shop/images/devices-main-img.jpg" class="full-image-main-content"></a></li>
                       </ul>
                   </div>';
     }
@@ -131,11 +131,11 @@ class IndexView extends DefaultView
         echo      '<div class="container-fluid">
                       <div class="row">
                           <div class="col-md-6 no-division-for-category">
-                              <a href="/shop/education/"><img src="images/main-education-category.jpg" class="full-image-cascade border-left" /></a>
+                              <a href="/shop/education/"><img src="/shop/images/main-education-category.jpg" class="full-image-cascade border-left" /></a>
 
                           </div>
                           <div class="col-md-6 no-division-for-category">
-                              <a href="/shop/business/"><img src="images/main-business-category.jpg" class="full-image-cascade border-bottom" /></a>
+                              <a href="/shop/business/"><img src="/shop/images/main-business-category.jpg" class="full-image-cascade border-bottom" /></a>
 
                           </div>
                       </div>
@@ -168,7 +168,7 @@ class IndexView extends DefaultView
 
         echo                 '</h>
 
-                              <a href="/shop/shop/buy-phone/"><img src="images/logo-phones-small.png" id="full-logo" /></a>
+                              <a href="/shop/shop/buy-phone/"><img src="/shop/images/logo-phones-small.png" id="full-logo" /></a>
                           </div>
                           <div class="col-md-2">
                               <h class="category-small-for-store">';
@@ -177,7 +177,7 @@ class IndexView extends DefaultView
 
         echo                 '</h>
 
-                              <a href="/shop/shop/buy-laptop/"><img src="images/logo-laptops-small.png" id="full-logo" /></a>
+                              <a href="/shop/shop/buy-laptop/"><img src="/shop/images/logo-laptops-small.png" id="full-logo" /></a>
                           </div>
                           <div class="col-md-2">
                               <h class="category-small-for-store">';
@@ -186,7 +186,7 @@ class IndexView extends DefaultView
 
         echo                 '</h>
 
-                              <a href="/shop/shop/buy-device/"><img src="images/logo-devices-small.png" id="full-logo" /></a>
+                              <a href="/shop/shop/buy-device/"><img src="/shop/images/logo-devices-small.png" id="full-logo" /></a>
                           </div>
                           <div class="col-md-2">
                               <h class="category-small-for-store margin-tv-for-small tv-gl-xs-container">';
@@ -195,7 +195,7 @@ class IndexView extends DefaultView
 
         echo                 '</h>
 
-                              <a href="/shop/shop/buy-tv/"><img src="images/logo-tv-small.png" id="full-logo" /></a>
+                              <a href="/shop/shop/buy-tv/"><img src="/shop/images/logo-tv-small.png" id="full-logo" /></a>
                           </div>
                           <div class="col-md-2"></div>
                       </div>

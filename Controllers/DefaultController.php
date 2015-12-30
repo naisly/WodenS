@@ -451,9 +451,36 @@ class DefaultController
         //echo $_SESSION['language'];
         header("Content-Type: text/html; charset=utf-8");
         session_start();
-        if(!isset($_SESSION['language'])){
+
+        $language_array = ['ru', 'us', 'fr', 'de'];
+
+        /*
+         * Change for language
+         */
+        $pageURL = 'http';
+
+        $pageURL .= "://";
+        if ($_SERVER["SERVER_PORT"] != "80") {
+            $pageURL .= $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"];
+        } else {
+            $pageURL .= $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
+        }
+
+        $links_array = explode("/", $pageURL);
+        $array = explode("/", $pageURL);
+
+        if(in_array($array[4], $language_array)){
+            $_SESSION['language'] = $array[4];
+        } else {
             $_SESSION['language'] = 'us';
         }
+        /*
+         * End
+         */
+
+        /*if(!isset($_SESSION['language'])){
+            $_SESSION['language'] = 'us';
+        }*/
         session_write_close();
         //echo $_SESSION['language'];
         if($_SESSION['language'] !== 'us') {
@@ -475,7 +502,6 @@ class DefaultController
                 break;
         }
 
-        $language_array = ['ru', 'us', 'fr', 'de'];
         foreach($language_array as $val => $assoc){
             if($assoc == $language){
                 unset($language_array[$val]);
