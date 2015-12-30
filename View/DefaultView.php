@@ -970,7 +970,7 @@ class DefaultView
                             <div class="small-devices-decoration">
                                     <h class="float-right"><a style="text-decoration: none" class="items default-hidden" id="displayTextFooter5" href="javascript:toggle5();">';
 
-        echo '<img src="/shop/images/' . $language . '-flag.png" height="16" width="16" /><h class="lang">' . $name_of_country . '</h>';
+        echo '<img src="/shop/images/' . $this->model->getCurrentLanguage() . '-flag.png" height="16" width="16" /><h class="lang">' . $this->model->getCurrentCountry() . '</h>';
 
         echo                       '</a></h>
                                 </div>
@@ -978,10 +978,10 @@ class DefaultView
                                     <ul>';
 
         $i = 0;
-        while ($i < $k) {
+        while ($i < $this->model->countNameOfLanguages()) {
             echo '<form action="/shop/change-language" method="post" id="form-' . $i . '">
-                     <input type="hidden" value="' . $language_array[$i] . '" name="checked-language" id="checked-language" />
-                     <li id="marger-for-small-devices-xs" style="margin-top: 5px"><img id="margin-for-small" src="/shop/images/' . $language_array[$i] . '-flag.png" height="16" width="16" /><button id="link_as_button" style="font-size: 13px; margin-left: 7px; text-decoration: none;">' . $name_of_country_array[$i] . '</span></button></li>
+                     <input type="hidden" value="' . $this->model->getNameOfLanguages( $i ) . '" name="checked-language" id="checked-language" />
+                     <li id="marger-for-small-devices-xs" style="margin-top: 5px"><img id="margin-for-small" src="/shop/images/' . $this->model->getNameOfLanguages( $i ) . '-flag.png" height="16" width="16" /><button id="link_as_button" style="font-size: 13px; margin-left: 7px; text-decoration: none;">' . $this->model->getNameOfCountries( $i ) . '</span></button></li>
                   </form>';
 
             $i++;
