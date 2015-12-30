@@ -175,6 +175,7 @@ class DefaultView
         echo   '<nav class="navbar navbar-inverse">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
+                    <!--<div class="container">-->
                     <div class="navbar-header">
                         <button type="button" id="overflow-xl-collapsed-cl" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" onclick="changeCss();">
                             <span class="sr-only">Toggle navigation</span>
@@ -182,7 +183,6 @@ class DefaultView
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>';
-        #if ($page == 'daughter'){
         echo       '<a class="navbar-brand" href="/shop/';
 
         if($_SESSION['language'] !== 'us'){
@@ -192,10 +192,19 @@ class DefaultView
         echo       '">
                             <img alt="Brand" src="/shop/images/main-favicon.png" width="35" height="35" id="main-image">';
         echo '</a>
-                    </div>
+                 </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
+                            <li class="non-visible-for-small"><a class="navbar-brand" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo       '">
+                            <img alt="Brand" src="/shop/images/main-favicon.png" width="35" height="35" id="main-image">';
+        echo '</a></li>
                             <li><a href="/shop/';
 
         if($_SESSION['language'] !== 'us'){
@@ -261,7 +270,7 @@ class DefaultView
 
         echo $this->model->Translate('Cart');
 
-        echo               '<span class="caret"></span></a>
+        echo               '</a>
                         <ul class="dropdown-menu">';
         if (isset($_SESSION['login_user'])) {
             echo '<li><a href="/shop/';
@@ -277,6 +286,7 @@ class DefaultView
             echo '(' . $_SESSION['login_user'] . ')</a></li>';
             session_write_close();
         } else {
+            echo '<li><a class="color-gl-for-small" href="#"></a></li>';
             echo '<li><a href="/shop/';
             if($_SESSION['language'] !== 'us'){
                 echo $_SESSION['language'] . '/';
@@ -302,11 +312,11 @@ class DefaultView
             session_write_close();
         }
         echo '<li role="separator" class="divider divider-session"></li>
-              <li class="dropdown-header">';
+              <li class="dropdown-header"><h class="margin-for-small-h-sm">';
 
         echo $this->model->Translate('Products');
 
-        echo '</li>';
+        echo '<h></li>';
         if (isset($_SESSION['login_user'])) {
             echo '<li><a href="/shop/';
 
@@ -325,7 +335,13 @@ class DefaultView
 
             echo '</a></li>';
         } else {
-            echo ' <li><a href="#" class="color-gl-for-small">';
+            echo ' <li><a href="/shop/';
+
+            if($_SESSION['language'] !== 'us'){
+                echo $_SESSION['language'] . '/';
+            }
+
+            echo 'login" class="color-gl-for-small">';
 
             echo $this->model->Translate('Login to see your cart');
 
@@ -1191,14 +1207,22 @@ class DefaultView
         echo                       '</a></h>
                                 </div>
                                 <div id="toggleTextFooter5">
-                                    <ul>';
+                                    <ul style="padding-top: 20px;">';
 
         $i = 0;
         while ($i < $this->model->countNameOfLanguages()) {
-            echo '<form action="/shop/change-language" method="post" id="form-' . $i . '">
-                     <input type="hidden" value="' . $this->model->getNameOfLanguages( $i ) . '" name="checked-language" id="checked-language" />
-                     <li id="marger-for-small-devices-xs" style="margin-top: 5px"><img id="margin-for-small" src="/shop/images/' . $this->model->getNameOfLanguages( $i ) . '-flag.png" height="16" width="16" /><button id="link_as_button" style="font-size: 13px; margin-left: 7px; text-decoration: none;">' . $this->model->getNameOfCountries( $i ) . '</span></button></li>
-                  </form>';
+
+            echo '<a class="language-link" href="/shop/';
+
+            if($this->model->getNameOfLanguages($i) !== 'us'){
+                echo $this->model->getNameOfLanguages($i) . '/';
+            }
+            echo '"><li id="marger-for-small-devices-xs"><img id="margin-for-small" style="margin-left: 7px;" src="/shop/images/' . $this->model->getNameOfLanguages( $i ) . '-flag.png"
+                  height="16" width="16" /><h class="lang">' . $this->model->getNameOfCountries( $i ) . '</h></li></a>';
+
+            if($i < ($this->model->countNameOfLanguages() -1)){
+                echo '<div class="divider" style="margin-left: 8px; padding-right: 4px; width: 90%; height: 1px;"></div>';
+            }
 
             $i++;
         }

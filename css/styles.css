@@ -19,6 +19,61 @@ a, h1, p {
 	margin-top: 0 !important;
 	font-family: Arial !important;
 }
+/*.test {
+	width: 150px;
+	text-align: center;
+}*/
+.navbar-brand {
+	display: none;
+}
+
+@media (max-width: 766px){
+	.nav > li > a {
+		text-align: left !important;
+		float: left;
+		padding: 0;
+	}
+	.navbar-nav {
+		margin: 0 !important;
+		display: block;
+		table-layout: auto;
+		float: left;
+		width: 100%;
+		padding-top: 40px;
+	}
+	.non-visible-for-small {
+		display: none !important;
+	}
+	.divider-li-small {
+		float: left;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.white-link {
+		font-family: RobotoLight;
+		font-size: 14px;
+	}
+	.margin-drop-down-for-sm {
+		margin-top: 20px;
+	}
+}
+
+@media (min-width: 766px) and (max-width: 1066px){
+	.nav > li > a {
+		padding-left: 3.1vw !important;
+		padding-right: 3.1vw !important;
+	}
+}
+.nav > li > a {
+	text-align: center;
+	padding-left: 4.1vw;
+	padding-right: 4.1vw;
+}
+.navbar-nav {
+	margin: 0 auto;
+	display: table;
+	float: none;
+}
 .white-link:hover {
 	color: #888 !important;
 }
@@ -136,6 +191,9 @@ p, h1,a  {
 
 
 @media (max-width: 768px) {
+	.navbar-brand {
+		display: block;
+	}
 	.navbar-brand > img {
 		margin-left: -35px;
 	}
@@ -358,10 +416,6 @@ a:link {
 	margin-top: 8%;
 	padding-bottom: 8%;
 }
-.divider-li-small {
-	padding: 0 !important;
-	margin: 0 !important;
-}
 .color-gl-for-small {
 	font-size: 14px;
 	line-height: 2.75;
@@ -395,7 +449,7 @@ a:link {
 }
 .lang {
 	margin-left: 7px;
-	font-size: 13px;
+	font-size: 12px;
 	font-family: RobotoLight;
 	color: #666;
 	text-decoration: none;
@@ -403,6 +457,7 @@ a:link {
 .language-link {
 	text-decoration: none !important;
 	color: #666;
+	font-size: 12px;
 }
 .dropup-menu-for-sm {
 	cursor: pointer;
@@ -491,10 +546,21 @@ a:link {
 }
 
 
-
-
+@media (min-width: 350px) and (max-width: 550px){
+	.full-image-main-content {
+		height: 40vh;
+	}
+}
+@media (min-width: 550px) and (max-width: 765px){
+	.full-image-main-content {
+		height: 60vh;
+	}
+}
 
 @media (max-width: 766px) {
+	.margin-for-small-h-sm {
+		margin-left: 20px;
+	}
 	.bg-phones {
 		border-right: none;
 	}
@@ -546,9 +612,9 @@ a:link {
 		width: 90px;
 		height: 90px;
 	}
-	.full-image-main-content {
-		height: 40vh;
-	}
+	/*.full-image-main-content {
+		height: 60vh;
+	}*/
 	.header-for-category-sub-gl {
 		font-size: 24px;
 	}
@@ -581,12 +647,8 @@ a:link {
 		height: 1px;
 		background-color: white;
 	}
-	.divider-session {
+	.divider {
 		width: 80%;
-		margin-left: 10%;
-		margin-right: 10%;
-		height: 1px;
-		background-color: white;
 	}
 	.divider-li-huge {
 		width: 96%;
@@ -744,9 +806,7 @@ a:link {
 
 
 
-
-
-
+/*
 @media (min-width: 768px){
 	.navbar-brand > img {
 		margin-left: 70px;
@@ -956,7 +1016,7 @@ a:link {
 	.margin-top {
 		margin-top: 950px;
 	}
-}
+}*/
 /* Код для подключения шрифта в /css/stylename.css */ 
 /* font-family: "RobotoRegular"; */
 @font-face {

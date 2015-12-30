@@ -23,7 +23,7 @@ $lang = array(
     'Visit our online store. Place orders, then wait for shipping or pick up at any store.' => 'Посетите наш интернет мазагин. Оставляйте заказы, потом ждите доставку или заберите в ближайшем магазине',
     'Phones' => 'Телефоны',
     'Laptops' => 'Ноутбуки',
-    'Devices' => 'Устройства',
+    'Devices' => 'Девайсы',
     'TV' => 'TV',
     /*
      * End Index View
@@ -32,7 +32,7 @@ $lang = array(
     /*
      * Header NavBar, Default View
      */
-    'Support' => 'Помощь',
+    'Support' => 'Поддержка',
     'Cart' => 'Корзина',
     'Logout' => 'Выйти',
     'Register' => 'Регистрация',
