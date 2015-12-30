@@ -33,11 +33,19 @@ class DefaultView
                 <html>
                 <head>';
         if ( $page == 'subdescription'){
-            echo '<title>Woden S: ' . $this->model->getOriginalName(0) . '</title>';
+            if ( $this->model->getCurrentLanguage() !== 'us') {
+                echo '<title>Woden S (' . strtoupper($this->model->getCurrentLanguage()) . ') : ' . $this->model->getOriginalName(0) . '</title>';
+            } else {
+                echo '<title>Woden S : ' . $this->model->getOriginalName(0) . '</title>';
+            }
         } else if( $page == 'Index'){
-            echo '<title>Woden S</title>';
+            if( $this->model->getCurrentLanguage() !== 'us') {
+                echo '<title>Woden S (' . $this->model->getCurrentCountry() . ')</title>';
+            } else {
+                echo '<title>Woden S</title>';
+            }
         } else {
-            echo "<title>" . $page . " - Woden S</title>";
+            echo '<title>' . $this->model->Translate($page) . ' - Woden S (' . strtoupper($this->model->getCurrentLanguage()) . ')</title>';
         }
         echo       '<!-- HTML 5 markup and encoding utf-8 -->
                     <meta charset="utf-8" />
