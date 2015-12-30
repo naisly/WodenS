@@ -278,10 +278,10 @@ class DefaultView
             session_write_close();
         } else {
             echo '<li><a href="/shop/';
-
             if($_SESSION['language'] !== 'us'){
                 echo $_SESSION['language'] . '/';
             }
+
 
             echo    'register" class="color-gl-for-small">';
 
@@ -584,6 +584,8 @@ class DefaultView
                     echo '</h>';
                 } else if (substr($this->model->getBreadcrumbs($i), 0, 14) == 'subdescription') {
                     echo '<h id="breadcrumbs">' . $this->model->getOriginalName(0) . '</h>';
+                } else if ($this->model->getBreadcrumbs($i) == 'tv'){
+                    echo '<h id="breadcrumbs">TV</h>';
                 } else {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . ucfirst($this->model->getBreadcrumbs($i)) . "</a>";
                 }
@@ -593,7 +595,13 @@ class DefaultView
                 $i++;
             }
         } else {
-            echo '<a href="/shop/"><img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/favicon-default.png" width="20" height="20"/></a>
+            echo '<a href="/shop/';
+
+            if($_SESSION['language'] !== 'us'){
+                echo $_SESSION['language'] . '/';
+            }
+
+            echo '"><img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/favicon-default.png" width="20" height="20"/></a>
                   <img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/breadcrumbs-next.png" />
                   <h id="breadcrumbs">';
 
@@ -634,37 +642,79 @@ class DefaultView
         echo $this->model->Translate('Shop');
 
         echo                           '</b></li>
-                                        <li><a class="items" href="/shop/">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                           '">';
 
         echo $this->model->Translate('Home');
 
         echo                           '</a></li>
-                                        <li><a class="items" href="/shop/phones/">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                           'phones/">';
 
         echo $this->model->Translate('Phones');
 
         echo                           '</a></li>
-                                        <li><a class="items" href="/shop/laptops/">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                           'laptops/">';
 
         echo $this->model->Translate('Laptops');
 
         echo                           '</a></li>
-                                        <li><a class="items" href="/shop/devices/">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                           'devices/">';
 
         echo $this->model->Translate('Devices');
 
         echo                           '</a></li>
-                                        <li><a class="items" href="/shop/tv/">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                           'tv/">';
 
         echo $this->model->Translate('TV');
 
         echo                           '</a></li>
-                                        <li><a class="items" href="/shop/support/">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'support/">';
 
         echo $this->model->Translate('Support');
 
         echo                           '</a></li>
-                                        <li><a class="items" href="/shop/cart">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'cart">';
 
         echo $this->model->Translate('Cart');
 
@@ -686,7 +736,13 @@ class DefaultView
                                     </div>
                                     <div class="divider-for-small-devices"></div>
                                 </div>
-                                <form action="support.php" method="post">
+                                <form action="/shop/support/support/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                    '" method="post">
                                     <div id="toggleTextFooter1">
                                         <ul>
                                             <li class="footer-menu"><b>';
@@ -694,17 +750,35 @@ class DefaultView
         echo $this->model->Translate('Store');
 
         echo                               '</b></li>
-                                            <li><a class="items" href="/shop/store">';
+                                            <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                                'store">';
 
         echo $this->model->Translate('Find our store');
 
         echo                               '</a></li>
-                                            <li><a class="items" href="/shop/financing">';
+                                            <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                                'financing">';
 
         echo $this->model->Translate('Financing');
 
         echo                               '</a></li>
-                                            <li><a class="items" href="/shop/order">';
+                                            <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                                'order">';
 
         echo $this->model->Translate('Order Status');
 
@@ -714,13 +788,31 @@ class DefaultView
         echo $this->model->Translate('Shopping help');
 
         echo                               '</button></li>
-                                            <li><a class="items" href="/shop/search-answers">FAQ</a></li>
-                                            <li><a class="items" href="/shop/education/">';
+                                            <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                               'search-answers">FAQ</a></li>
+                                            <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                                'education/">';
 
         echo $this->model->Translate('Education');
 
         echo                               '</a></li>
-                                            <li><a class="items" href="/shop/business/">';
+                                            <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                                'business/">';
 
         echo $this->model->Translate('Business');
 
@@ -751,22 +843,46 @@ class DefaultView
         echo $this->model->Translate('Account');
 
         echo                           '</b></li>
-                                        <li><a class="items" href="/shop/account">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'account">';
 
         echo $this->model->Translate('Store Account');
 
         echo                           '</a></li>
-                                        <li><a class="items" href="/shop/cart">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'cart">';
 
         echo $this->model->Translate('My Items');
 
         echo                           '</a></li>
-                                        <li><a class="items" href="/shop/order">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'order">';
 
         echo $this->model->Translate('My Orders');
 
         echo                           '</a></li>
-                                        <li><a class="items" href="/shop/account-billing">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'account-billing">';
 
         echo $this->model->Translate('Billing Info');
 
@@ -780,12 +896,24 @@ class DefaultView
         echo $this->model->Translate('Most Valuable');
 
         echo                           '</b></li>
-                                        <li><a class="items" href="/shop/site-terms">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'site-terms">';
 
         echo $this->model->Translate('Site Terms');
 
         echo                           '</a></li>
-                                        <li><a class="items" href="/shop/privacy">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'privacy">';
 
         echo $this->model->Translate('Privacy');
 
@@ -815,32 +943,68 @@ class DefaultView
         echo $this->model->Translate('About Us');
 
         echo                           '</b></li>
-                                        <li><a class="items" href="/shop/our-company">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'our-company">';
 
         echo $this->model->Translate('Our Company');
 
         echo                           '</a></li>
-                                        <li><a class="items" href="/shop/people">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'people">';
 
         echo $this->model->Translate('In-touch People');
 
         echo                           '</a></li>
-                                        <li><a class="items" href="/shop/managers">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'managers">';
 
         echo $this->model->Translate('Our managers');
 
         echo                           '</a></li>
-                                        <li><a class="items" href="/shop/director">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'director">';
 
         echo $this->model->Translate('Director');
 
         echo                           '</a></li>
-                                        <li><a class="items" href="/shop/job">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'job">';
 
         echo $this->model->Translate('Job');
 
         echo                           '</a></li>
-                                        <li><a class="items" href="/shop/contact/">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'contact/">';
 
         echo $this->model->Translate('Contact Us');
 
@@ -869,12 +1033,24 @@ class DefaultView
         echo $this->model->Translate('For Education');
 
         echo                           '</b></li>
-                                        <li><a class="items" href="/shop/education/phones">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'education/phones">';
 
         echo $this->model->Translate('Phones and Education');
 
         echo                           '</a></li>
-                                        <li><a class="items" href="/shop/education/laptops">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'education/laptops">';
 
         echo $this->model->Translate('Laptops and Education');
 
@@ -888,17 +1064,35 @@ class DefaultView
         echo $this->model->Translate('For Business');
 
         echo                           '</b></li>
-                                        <li><a class="items" href="/shop/business/laptops/">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'business/laptops/">';
 
         echo $this->model->Translate('Laptops in Business');
 
         echo                           '</a></li>
-                                        <li><a class="items" href="/shop/business/phones/">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'business/phones/">';
 
         echo $this->model->Translate('Phones in Business');
 
         echo                           '</a></li>
-                                        <li><a class="items" href="/shop/business/devices/">';
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'business/devices/">';
 
         echo $this->model->Translate('Devices in Business');
 
@@ -918,7 +1112,13 @@ class DefaultView
 
         echo $this->model->Translate('For more info about return items and shopping & delivery') . " ";
 
-        echo                   '<a class="contact-us" href="/shop/Contact/">';
+        echo                   '<a class="contact-us" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                    'contact/">';
 
         echo $this->model->Translate('Contact Us');
 
@@ -957,10 +1157,14 @@ class DefaultView
                                     <ul class="dropdown-menu">';
         $i = 0;
         while ($i < $this->model->countNameOfLanguages()){
-            echo '<form action="/shop/change-language" method="post" id="form-' . $i . '">
-                     <input type="hidden" value="' . $this->model->getNameOfLanguages( $i ) . '" name="checked-language" id="checked-language" />
-                     <li id="marger-for-small-devices-xs"><img id="margin-for-small" src="/shop/images/' . $this->model->getNameOfLanguages( $i ) . '-flag.png" height="16" width="16" /><button id="link_as_button" style="font-size: 13px; margin-left: 7px; text-decoration: none;">' . $this->model->getNameOfCountries( $i ) . '</span></button></li>
-                  </form>';
+
+            echo '<a class="language-link" href="/shop/';
+
+            if($this->model->getNameOfLanguages($i) !== 'us'){
+                echo $this->model->getNameOfLanguages($i) . '/';
+            }
+            echo '"><li id="marger-for-small-devices-xs"><img id="margin-for-small" style="margin-left: 7px;" src="/shop/images/' . $this->model->getNameOfLanguages( $i ) . '-flag.png"
+                  height="16" width="16" /><h class="lang">' . $this->model->getNameOfCountries( $i ) . '</h></li></a>';
 
             if($i < ($this->model->countNameOfLanguages() -1)){
                 echo '<div class="divider" style="margin-left: 8px; padding-right: 4px; width: 90%;"></div>';

@@ -672,7 +672,7 @@ class DefaultController
         array_shift($array);
         array_shift($array);
 
-        print_r($links_array);
+        //print_r($links_array);
         if(in_array($array[1], $languages)){
             array_splice($array, 1, 1);
 
