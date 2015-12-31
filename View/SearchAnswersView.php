@@ -37,7 +37,7 @@ class SearchAnswersView extends SubdescriptionView
                <div class="row">
                    <div class="col-md-12 text-center">
                         <ul class="hor_nav">
-                            <li><a class="items" href="/privacy">Privacy</a></li>
+                            <li><a class="items" href="/privacy-policy">Privacy</a></li>
                             <li><a class="items" href="/refunds">Refunds</a></li>
                             <li><a class="items" href="/sales">Sales</a></li>
                             <li><a class="items" href="site-map">Site map</a></li>

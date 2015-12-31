@@ -40,7 +40,7 @@ class LoginView extends DefaultView
             }
         }
 
-        echo  '<div class="text-center">
+        echo '<div class="text-center">
                  <img id="main" src="images/default.png" />
                </div>
                <div class="container">
@@ -100,7 +100,7 @@ class LoginView extends DefaultView
                <div class="row">
                    <div class="col-md-12 text-center">
                         <ul class="hor_nav">
-                            <li><a class="items" href="/privacy">Privacy</a></li>
+                            <li><a class="items" href="/privacy-policy">Privacy</a></li>
                             <li><a class="items" href="/refunds">Refunds</a></li>
                             <li><a class="items" href="/sales">Sales</a></li>
                             <li><a class="items" href="site-map">Site map</a></li>
@@ -276,7 +276,7 @@ class LoginView extends DefaultView
                <div class="row">
                    <div class="col-md-12 text-center">
                         <ul class="hor_nav">
-                            <li><a class="items" href="/privacy">Privacy</a></li>
+                            <li><a class="items" href="/privacy-policy">Privacy</a></li>
                             <li><a class="items" href="/refunds">Refunds</a></li>
                             <li><a class="items" href="/sales">Sales</a></li>
                             <li><a class="items" href="site-map">Site map</a></li>

@@ -159,7 +159,7 @@ class DefaultView
             echo '<link href="/shop/css/business.css" rel="stylesheet" type="text/css">';
         } else if($page == 'Page Not Found'){
             echo '<link href="/shop/css/NotFoundPage.css" rel="stylesheet" type="text/css">';
-        } else if($page == 'Terms of Use'){
+        } else if($page == 'Terms of Use' || $page == 'Privacy Policy'){
             echo '<link href="/shop/css/Terms.css" rel="stylesheet" type="text/css">';
         }
         else {
@@ -568,8 +568,11 @@ class DefaultView
                 } else if (substr($this->model->getBreadcrumbs($i), 0, 14) == 'subdescription') {
                     echo '<h id="breadcrumbs">' . $this->model->getOriginalName(0) . '</h>';
                 } else if ($this->model->getBreadcrumbs($i) == 'tv'){
-                    echo '<h id="breadcrumbs">TV</h>';
-                } else {
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">TV</h></a>';
+                } else if ($this->model->getBreadcrumbs($i) == 'privacy-policy'){
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Privacy Policy</h></a>';
+                }
+                else {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . ucfirst($this->model->getBreadcrumbs($i)) . "</a>";
                 }
                 if ($i < $this->model->countBreadcrumbs() - 1) {
@@ -885,7 +888,7 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo                            'site-terms">';
+        echo                            'terms/">';
 
         echo $this->model->Translate('Site Terms');
 
@@ -896,9 +899,9 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo                            'privacy">';
+        echo                            'privacy-policy/">';
 
-        echo $this->model->Translate('Privacy');
+        echo $this->model->Translate('Privacy Policy');
 
         echo                           '</a></li>';
 
@@ -1271,7 +1274,7 @@ class DefaultView
         echo '<div class="bottom-spacer">
                <div class="text-center">
                         <ul class="hor_nav">
-                            <li><a class="items" href="/privacy">Privacy</a></li>
+                            <li><a class="items" href="/privacy-policy">Privacy</a></li>
                             <li><a class="items" href="/refunds">Refunds</a></li>
                             <li><a class="items" href="/sales">Sales</a></li>
                             <li><a class="items" href="site-map">Site map</a></li>

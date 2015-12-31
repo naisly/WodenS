@@ -62,8 +62,8 @@ a, h1, p {
 
 @media (min-width: 766px) and (max-width: 1066px){
 	.nav > li > a {
-		padding-left: 3.5vw !important;
-		padding-right: 3.5vw !important;
+		padding-left: 3.2vw !important;
+		padding-right: 3.2vw !important;
 	}
 }
 .nav > li > a {

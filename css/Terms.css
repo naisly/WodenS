@@ -51,3 +51,7 @@
     font-family: RobotoLight;
     word-break: keep-all;
 }
+.items-list > li {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

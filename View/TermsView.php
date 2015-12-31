@@ -86,7 +86,7 @@ class TermsView extends DefaultView
                         will govern your uses of the Services or the Sites.
                    </h1>
                    <h1 class="sub-header-terms">
-                        You may be required to enter into a separate agreement, whether online or offline, with Alibaba.com or
+                        You may be required to enter into a separate agreement, whether online or offline, with <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a> or
                         our affiliate for any Service ("<b>Additional Agreements</b>").  If there is any conflict or inconsistency
                         between the Terms and an Additional Agreement, the Additional Agreement shall take precedence over
                         the Terms only in relation to that Service concerned.
@@ -226,7 +226,7 @@ class TermsView extends DefaultView
                            may impose include, among others, warning, removing any product listing or other User Content
                            that the Member has submitted, posted or displayed, imposing restrictions on the number of
                            product listings that the Member may post or display, or imposing restrictions on the Member\'s
-                           use of any features or functions of any Service for such period as Alibaba.com may consider
+                           use of any features or functions of any Service for such period as <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a> may consider
                            appropriate in our sole discretion.
                    </h1>
                    <h1 class="sub-header-terms">
