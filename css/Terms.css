@@ -1,0 +1,53 @@
+.sub-header-terms a {
+    color: #08b !important;
+}
+.h-terms {
+    font-size: 44px;
+    font-family: MyriadProSemiBold;
+}
+.sub-h-terms {
+    font-size: 35px;
+    font-family: MyriadProSemiBold;
+}
+.navigation {
+    margin-top: 30px;
+}
+.navigation li {
+    display: inline;
+    margin-right: 20px;
+    white-space: nowrap;
+}
+.navigation > li > a {
+    color: #333;
+    text-decoration: none;
+    font-family: MyriadProRegular;
+}
+.navigation > li > a:hover {
+    color : #08b;
+}
+.read-terms {
+    font-size: 30px;
+    font-family: RobotoLight;
+}
+.divider-terms {
+    width: 100%;
+    height: 1px;
+    background-color: #e4e4e4;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    z-index: -1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.paddings-terms-content {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.main-header-terms {
+    font-size: 22px;
+    font-family: MyriadProSemiBold;
+}
+.sub-header-terms {
+    font-size: 17px;
+    font-family: RobotoLight;
+    word-break: keep-all;
+}

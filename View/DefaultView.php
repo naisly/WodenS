@@ -45,7 +45,11 @@ class DefaultView
                 echo '<title>Woden S</title>';
             }
         } else {
-            echo '<title>' . $this->model->Translate($page) . ' - Woden S (' . strtoupper($this->model->getCurrentLanguage()) . ')</title>';
+            if( $this->model->getCurrentLanguage() !== 'us') {
+                echo '<title>' . $this->model->Translate($page) . ' - Woden S (' . strtoupper($this->model->getCurrentLanguage()) . ')</title>';
+            } else {
+                echo '<title>' . $this->model->Translate($page) . ' - Woden S </title>';
+            }
         }
         echo       '<!-- HTML 5 markup and encoding utf-8 -->
                     <meta charset="utf-8" />
@@ -155,6 +159,8 @@ class DefaultView
             echo '<link href="/shop/css/business.css" rel="stylesheet" type="text/css">';
         } else if($page == 'Page Not Found'){
             echo '<link href="/shop/css/NotFoundPage.css" rel="stylesheet" type="text/css">';
+        } else if($page == 'Terms of Use'){
+            echo '<link href="/shop/css/Terms.css" rel="stylesheet" type="text/css">';
         }
         else {
             echo '<link rel="stylesheet" href="/shop/css/default.css" />' .
@@ -203,7 +209,13 @@ class DefaultView
         /*
          * Mid
          */
-        echo '<a class="nav-brand text-center" href="#"><img src="/shop/images/icon_shipping_medium.png" width="30" height="34"></a>';
+        echo '<a class="nav-brand text-center" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'cart"><img style="margin-top: 3px;" src="/shop/images/cart_icon.png" width="25" height="30"></a>';
         /*
          * End
          */
@@ -212,7 +224,7 @@ class DefaultView
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li class="non-visible-for-small"><a class="navbar-brand" href="/shop/';
+                            <li class="non-visible-for-small"><a id="no-margin-for-md" class="navbar-brand" href="/shop/';
 
         if($_SESSION['language'] !== 'us'){
             echo $_SESSION['language'] . '/';
@@ -288,7 +300,7 @@ class DefaultView
 
         echo                'cart">';
 
-        echo '<img style="margin-top: 7px;" src="/shop/images/icon_shipping_medium.png" width="30" height="34">';
+        echo '<img style="margin-top: 9px;" src="/shop/images/cart_icon.png" width="25" height="30">';
 
         echo '              </a></h></li>
                         </ul>
