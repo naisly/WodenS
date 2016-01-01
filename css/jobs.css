@@ -1,0 +1,118 @@
+h1 {
+    word-break: keep-all;
+}
+body, html {
+    background-color: #f1f1f1;
+}
+.default-overlay {
+    background: url(../images/woden-s-store.JPG) no-repeat center center;
+    background-position: center;
+    min-height: 200px;
+    width: 100%;
+    background-size: cover;
+    margin-top: -70px;
+    padding-top: 40px;
+    padding-bottom: 6%;
+}
+.jobs {
+    color: White;
+}
+#white-divider-md {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: 1px;
+    background-color: white;
+}
+.navigation {
+    margin-top: 30px;
+}
+.navigation > li > a {
+    color: white;
+    text-decoration: none;
+}
+.navigation li {
+    display: inline;
+    font-size: 20px;
+    margin-right: 20px;
+    color: white;
+}
+.we-hire {
+    font-size: 55px;
+    font-family: RobotoLight;
+    color: black;
+}
+.main-job, .main-job-main {
+    font-size: 44px;
+    font-family: RobotoLight;
+    color: white;
+}
+.main-job-main {
+    color: black;
+    padding-top: 3%;
+}
+.sub-job {
+    font-size: 35px;
+    color: white;
+}
+.sub-job-main {
+    color: black;
+    font-size: 27px;
+}
+.main-content {
+    margin-top: 50%;
+}
+.listed-group-sm-gl {
+    list-style-type: disc;
+}
+.visible-for-small {
+    display: none;
+}
+.listed-group-sm-gl li {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-family: RobotoLight;
+    font-size: 18px;
+    color: #666;
+}
+.job-border-right {
+    border-right: 1px solid white;
+}
+.job-border-left {
+    border-left: 1px solid white;
+}
+
+@media (max-width: 992px) {
+    .job-border-left, .job-border-right {
+        border: none;
+    }
+}
+@media (max-width: 766px){
+    .navigation > li > a {
+        font-size: 20px;
+    }
+    .display-none-for-small {
+        display: none;
+    }
+    .default-overlay {
+        margin-top: 30px;
+    }
+    .visible-for-small {
+        display: block;
+    }
+    .navigation li {
+        margin-left: 0px;
+    }
+    .main-job {
+        margin-top: -50%;
+    }
+    .sub-job {
+        margin-top: 50%;
+    }
+    .main-job, .sub-job {
+        font-size: 35px;
+    }
+
+}

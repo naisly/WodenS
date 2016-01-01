@@ -161,6 +161,8 @@ class DefaultView
             echo '<link href="/shop/css/NotFoundPage.css" rel="stylesheet" type="text/css">';
         } else if($page == 'Terms of Use' || $page == 'Privacy Policy'){
             echo '<link href="/shop/css/Terms.css" rel="stylesheet" type="text/css">';
+        } else if($page == 'Jobs'){
+            echo '<link href="/shop/css/jobs.css" rel="stylesheet" type="text/css">';
         }
         else {
             echo '<link rel="stylesheet" href="/shop/css/default.css" />' .
@@ -174,6 +176,11 @@ class DefaultView
         }
 
 
+    }
+    protected function endHTML() {
+
+        echo '</body>
+           </html>';
     }
     /*
      * Main navbar Menu for all
@@ -979,7 +986,7 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo                            'job">';
+        echo                            'jobs/">';
 
         echo $this->model->Translate('Job');
 

@@ -30,8 +30,8 @@ class TermsView extends DefaultView
     private function getMain() {
 
         echo '<div class="container">
-                  <div class="row" style="border-bottom: 1px solid #e4e4e4;">
-                      <div class="col-md-3">
+                  <div class="row" style="border-bottom: 1px solid #e4e4e4; margin-top: -15px;">
+                      <div class="col-md-3" style="margin-top: 15px;">
                           <h1 class="sub-h-terms">Terms of Use</h1>
                       </div>
                       <div class="col-md-1"></div>
@@ -53,7 +53,7 @@ class TermsView extends DefaultView
                   <h1 class="h-terms">Woden Sims Terms of Use</h1>
                   <h1 class="read-terms">Please, read these terms and conditions carefully.</h1>
 
-                  <div class="divider-terms"></div>
+                  <div class="divider-terms" style="margin-top: 90px;"></div>
               </div>
               <div class="paddings-terms-content">
                    <div id="application-and-acceptance"></div>
@@ -331,7 +331,7 @@ class TermsView extends DefaultView
               </div>';
     }
 
-    private function endHTML() {
+    public function endHTML() {
 
         echo '<script src="/shop/js/terms-scroll.js"></script>';
         echo '</body>

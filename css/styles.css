@@ -60,6 +60,9 @@ a, h1, p {
 	}
 }
 
+.non-visible-for-small {
+	height: 50px !important;
+}
 @media (min-width: 766px) and (max-width: 1066px){
 	.nav > li > a {
 		padding-left: 3.2vw !important;
