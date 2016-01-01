@@ -53,9 +53,9 @@ class JobsView extends DefaultView
                           </div>
                       </div>
                       <div class="main-content text-center">
-                          <h1 class="main-job">Love your job working here.</h1>
+                          <h1 class="main-job-sub">Love your job working here.</h1>
                           <div class="margin-for-sm-job">
-                              <h1 class="sub-job">Convenient schedule. Pleasant co-workers</h1>
+                              <h1 class="main-job-sub">Hardworking, pleasant atmosphere</h1>
                           </div>
                       </div>
                   </div>
@@ -63,8 +63,8 @@ class JobsView extends DefaultView
 
         echo '<div class="text-center" id="sales-assistant">
                   <h1 class="main-job-main">Sales Assistant</h1>
-                  <p class="sub-job-main">Be part of our team.</p>
-                  <p class="sub-job-main" style="padding-bottom: 20px;">Make your routine day as diverse as it could be.</p>
+                  <p class="sub-job-main">Make your routine day as diverse as it could be.</p>
+                  <p class="sub-job-main" style="padding-bottom: 20px;">Be part of our team.</p>
               </div>
 
               <div class="container">
@@ -260,7 +260,18 @@ class JobsView extends DefaultView
                   </div>
               </div>
 
-              <img src="/shop/images/job-director.jpg" style="margin-top: 50px;" class="full-image-cascade" />
+              <img src="/shop/images/job-director.jpg" style="margin-top: 50px; margin-bottom: 50px;" class="full-image-cascade" />
+
+              <div class="text-center">
+                  <h1 class="looking-for">If you think that you\'re a person that we are looking for, please</h1>
+
+                  <a class="links" id="main-link" href="/shop/contact-us/" style="text-decoration: none">';
+
+        echo $this->model->Translate('Contact Us');
+
+        echo         ' ' . '<img src="/shop/images/arrow-blue-f1.png" width="20" height="20"/></a>
+
+              </div>
 
               <script src="/shop/js/jobs-scroll.js"></script>';
     }

@@ -542,6 +542,7 @@ class DefaultView
         }
 
         echo        '<div class="footer">
+                     <div class="divider-white-for-classes"></div>
                      <div class="container full-container">
                           <div class="row">
                               <div class="col-sm-1 no-width-for-sm"></div>

@@ -12,10 +12,20 @@ body, html {
     background-size: cover;
     margin-top: -70px;
     padding-top: 40px;
-    padding-bottom: 6%;
+    padding-bottom: 3%;
 }
 .jobs {
     color: White;
+}
+.divider-white-for-classes {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+.looking-for {
+    font-family: RobotoLight;
+    font-size: 27px;
 }
 #white-divider-md {
     margin-top: 40px;
@@ -44,8 +54,36 @@ body, html {
     font-family: RobotoLight;
     color: black;
 }
+.main-job-sub {
+    font-size: 47px;
+    letter-spacing: 1px;
+    line-height: 1;
+    color: white;
+    margin-top: 0;
+}
+
+@media (max-width: 1000px){
+    .main-job-sub {
+        font-size: 40px;
+    }
+}
+@media (max-width: 800px){
+    .main-job-sub {
+        font-size: 33px;
+    }
+}
+@media (max-width: 600px){
+    .main-job-sub {
+        font-size: 24px;
+    }
+}
+@media (max-width: 450px){
+    .main-job-sub {
+        font-size: 17px;
+    }
+}
 .main-job, .main-job-main {
-    font-size: 44px;
+    font-size: 38px;
     font-family: RobotoLight;
     color: white;
 }
@@ -62,7 +100,7 @@ body, html {
     font-size: 27px;
 }
 .main-content {
-    margin-top: 50%;
+    margin-top: 54%;
 }
 .listed-group-sm-gl {
     list-style-type: disc;
@@ -105,14 +143,15 @@ body, html {
     .navigation li {
         margin-left: 0px;
     }
-    .main-job {
-        margin-top: -50%;
-    }
-    .sub-job {
-        margin-top: 50%;
-    }
     .main-job, .sub-job {
-        font-size: 35px;
+        font-size: 22px;
+        margin-top: 0;
+    }
+    .main-content {
+        margin-top: 54%;
+    }
+    .default-overlay {
+        padding-bottom: 3%;
     }
 
 }
