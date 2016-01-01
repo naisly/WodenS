@@ -32,7 +32,7 @@ class ProfileView extends DefaultView
         $this->DoctypeView( 'Account - Cart' );
         $this->headerView( 'profile' );
         $this->getTable();
-        $this->getFooter();
+        $this->actionGetFooter( 'Account - Cart' );
     }
 
     protected function getAccountBar() {
@@ -44,10 +44,10 @@ class ProfileView extends DefaultView
 
                       <div class="cart-divider"></div>
 
-                      <h class="cart"><a href="cart.php" id="link"> Cart</a></h><br />
-                      <h class="cart"><a href="account-orders.php" id="link">Your Orders</a></h><br />
-                      <h class="cart"><a href="account.php" id="link">Change account info</a></h><br />
-                      <h class="cart"><a href="account-billing.php" id="link">Billing info</a></h><br />
+                      <h class="cart"><a href="/shop/account/cart" id="link" style="color: #08b;"> Cart</a></h><br />
+                      <h class="cart"><a href="/shop/account/orders" id="link" style="color: #08b;">Your Orders</a></h><br />
+                      <h class="cart"><a href="/shop/account/" id="link" style="color: #08b;">Change account info</a></h><br />
+                      <h class="cart"><a href="/shop/account/billing" id="link" style="color: #08b;">Billing info</a></h><br />
 
                       <div class="cart-divider"></div>
 
@@ -118,7 +118,7 @@ class ProfileView extends DefaultView
         if($this->model->getNoProduct() == 'none'){
             echo '<h class="cart not-found">No products found</h>';
         } else {
-            echo     '<img src="' . $this->model->getPhoto() . '" width="120" height="120" /><br />
+            echo     '<img src="/shop/' . $this->model->getPhoto() . '" width="120" height="120" /><br />
                       <h class="cart cart-header">' . $this->model->getOriginalName() . '</h><br />
                       <h class="cart cart-price">$' . $this->model->getItemPrice() . '</h><br />
                       <h class="cart"><span class="underline">' . $this->model->getItemShipping() . ' days</span> shipping</h>';
@@ -165,6 +165,7 @@ class ProfileView extends DefaultView
                             <td>
                                 <form action="remove.php" method="post">
                                     <input type="hidden" name="id" value="' . $this->model->getIdArray($i) . '"/>
+                                    <input type="hidden" name="name" value="' . $this->model->getProductNameArray($i) . '"/>
                                     <button class="btn btn-sm btn-warning">Remove</button>
                                 </form>
                             </td>
@@ -183,9 +184,10 @@ class ProfileView extends DefaultView
                 </table>
                 <div class="text-center">
                     <a class="btn btn-primary" onclick="goBack();">Continue shopping</a>
-                    <a class="btn btn-primary" href="placeorder.php">Place order now</a>
+                    <a class="btn btn-primary" href="placeorder" style="color: white;">Place order now</a>
                 </div>
             </div>
+        </div>
         </div>
                 <script>
                 function goBack() {
@@ -193,9 +195,7 @@ class ProfileView extends DefaultView
                 }
                 </script>
                 <script src="js/jquery-min.js"></script>
-                <script src="js/bootstrap.min.js"></script>
-            </body>
-            </html>';
+                <script src="js/bootstrap.min.js"></script>';
         } else if ($this->model->getNotFound() == 1){
 
             echo '<h class="no-items">No products found in your cart</h><br />
@@ -208,7 +208,7 @@ class ProfileView extends DefaultView
                           </div>
                       </div>
                       <div class="col-md-6">
-                          <img src="images/iphone6S.jpg" width="120" height="120" />
+                          <img src="/shop/images/iphone6S.jpg" width="120" height="120" />
                       </div>
                   </div>
 
@@ -222,7 +222,7 @@ class ProfileView extends DefaultView
                           </div>
                       </div>
                       <div class="col-md-6">
-                          <img src="images/macbookpro.png" width="120" height="120" />
+                          <img src="/shop/images/macbookpro.png" width="120" height="120" />
                       </div>
                   </div>
 
@@ -236,7 +236,7 @@ class ProfileView extends DefaultView
                           </div>
                       </div>
                       <div class="col-md-6">
-                          <img src="images/ipadshop1.jpg" width="120" height="120" />
+                          <img src="/shop/images/ipadshop1.jpg" width="120" height="120" />
                       </div>
                   </div>
 
@@ -250,7 +250,7 @@ class ProfileView extends DefaultView
                           </div>
                       </div>
                       <div class="col-md-6">
-                          <img src="images/imac.jpg" width="120" height="120" />
+                          <img src="/shop/images/imac.jpg" width="120" height="120" />
                       </div>
                   </div>
 
@@ -259,7 +259,7 @@ class ProfileView extends DefaultView
                   <div class="row">
                       <div class="col-md-12">
                           <div class="page-spacer">
-                              <h id="page">Any questions? <a class="page" href="support.php">Go to our support page <span id="right-bar">>></span></a></h>
+                              <h id="page">Any questions? <a class="page" href="support.php" style="color: #08b;">Go to our support page <span id="right-bar">>></span></a></h>
                           </div>
                       </div>
                   </div>

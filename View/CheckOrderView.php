@@ -29,7 +29,7 @@ class CheckOrderView extends DefaultView
         $this->DoctypeView( 'Orders' );
         $this->headerView( 'order' );
         $this->getSignInBar();
-        $this->getFooter();
+        $this->actionGetFooter( 'Order' );
     }
 
     private function getSignInBar() {
@@ -40,7 +40,7 @@ class CheckOrderView extends DefaultView
                           <div class="bordered">
                               <div class="text">
                                   <h class="text-left sign-in">Sign In</h>
-                                  <h class="pull-right secured">Secured</h><img src="images/secured.png" width="20" height="20"class="pull-right"/>
+                                  <h class="pull-right secured">Secured</h><img src="/shop/images/secured.png" width="20" height="20"class="pull-right"/>
                               </div>
 
                               <div class="divide"></div>

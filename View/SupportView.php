@@ -39,25 +39,6 @@ class SupportView extends DefaultView
         $this->getFooter();
     }
 
-    public function getFooter() {
-
-        echo '<div class="bottom-spacer">
-               <div class="row">
-                   <div class="col-md-12 text-center">
-                        <ul class="hor_nav">
-                            <li><a class="items" href="/privacy-policy">Privacy</a></li>
-                            <li><a class="items" href="/refunds">Refunds</a></li>
-                            <li><a class="items" href="/sales">Sales</a></li>
-                            <li><a class="items" href="site-map">Site map</a></li>
-                        </ul>
-                            <p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
-                   </div>
-               </div>
-              </div>
-              <script src="js/jquery-min.js"></script>
-              <script src="js/bootstrap.min.js"></script>';
-    }
-
     /*
      * Support messages table for the
      * Admin page

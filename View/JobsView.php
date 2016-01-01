@@ -265,7 +265,7 @@ class JobsView extends DefaultView
               <div class="text-center">
                   <h1 class="looking-for">If you think that you\'re a person that we are looking for, please</h1>
 
-                  <a class="links" id="main-link" href="/shop/contact-us/" style="text-decoration: none">';
+                  <a class="links" id="main-link" href="/shop/contact/" style="text-decoration: none">';
 
         echo $this->model->Translate('Contact Us');
 

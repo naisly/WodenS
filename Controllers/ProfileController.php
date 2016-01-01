@@ -113,10 +113,13 @@ class ProfileController extends DefaultController
         if(isset($_POST['id'])){
             $id = $_POST['id'];
         }
+        if(isset($_POST['name'])){
+            $name = $_POST['name'];
+        }
 
         session_write_close();
 
-        $sql_query = $mysqli->prepare("DELETE FROM orderedItems WHERE user='$user' AND id=$id");
+        $sql_query = $mysqli->prepare("DELETE FROM orderedItems WHERE user='$user' AND id=$id AND product_name='$name'");
 
         $sql_query->execute();
 

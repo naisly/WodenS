@@ -193,14 +193,14 @@ class LoginView extends DefaultView
         echo '<div class="alert alert-success" role="alert" style="margin-top: -20px;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
-                <img src="' . $_SESSION['photo'] . '" width="50" height="50" />
+                <img src="/shop/' . $_SESSION['photo'] . '" width="50" height="50" />
                 Your selected item was Added to cart! Cart subtotal (' . $this->model->getAItems() . ' items) $' . $this->model->getAPrice() .'
                     <div class="pull-right" style="margin-top: 8px;">
-                        <button class="cart btn btn-default" onclick="location.href=';
-                            echo "'cart.php'";
+                        <button class="cart btn btn-default" style="margin-right: 20px;" onclick="location.href=';
+                            echo "'/shop/account/cart'";
                             echo '">Cart</button>';
         echo            '<button class="cart btn btn-primary" onclick="location.href=';
-                            echo "'placeorder.php'";
+                            echo "'/shop/account/placeorder'";
                             echo '">Procceed to checkout (' . $this->model->getAItems() . ' items)</button>
                     </div>
                 </div>';

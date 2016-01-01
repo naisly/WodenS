@@ -557,7 +557,7 @@ class SubdescriptionView extends DefaultView
     public function getAnswers()
     {
 
-        echo '<form action="search-answers.php" method="get">
+        echo '<form action="/shop/FAQ/?" method="get">
                  <div class="container-fluid">
                       <div class="row">
                           <div class="col-lg-8">

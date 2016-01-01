@@ -291,6 +291,7 @@ class DefaultModel
         } else {
             return $text;
         }
+
     }
 
     /*

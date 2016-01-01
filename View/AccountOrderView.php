@@ -26,7 +26,7 @@ class AccountOrderView extends ProfileView
 
         $this->getAccountBar();
         $this->getOrders();
-        $this->getFooter();
+        $this->actionGetFooter( 'Account - Orders' );
     }
     private function getOrders() {
         echo '<div class="col-md-9">
@@ -80,7 +80,7 @@ class AccountOrderView extends ProfileView
                     echo ' border-right';
                 }*/
                 echo                '">
-                                        <img style="margin-top: 20px;" src="' . $this->model->getCompletePhoto($i, $j) . '" width="120" height="120" /><br />
+                                        <img style="margin-top: 20px;" src="/shop/' . $this->model->getCompletePhoto($i, $j) . '" width="120" height="120" /><br />
                                       </div>
                                     </div>
                                   </div>';
@@ -144,7 +144,7 @@ class AccountOrderView extends ProfileView
                         echo ' border-right';
                     }*/
                     echo                '">
-                                        <img style="margin-top: 20px;" src="' . $this->model->getDonePhoto($i, $j) . '" width="120" height="120" /><br />
+                                        <img style="margin-top: 20px;" src="/shop/' . $this->model->getDonePhoto($i, $j) . '" width="120" height="120" /><br />
                                       </div>
                                     </div>
                                   </div>';

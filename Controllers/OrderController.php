@@ -189,12 +189,14 @@ class OrderController extends DefaultController
             }
         }
 
-        $this->model->setDefaultName( $name );
-        $this->model->setDefaultStreet( $street );
-        $this->model->setDefaultCity( $city );
-        $this->model->setDefaultState( $state );
-        $this->model->setDefaultZip( $zip );
-        $this->model->setDefaultCountry( $country );
-        $this->model->setDefaultWrap( $wrap );
+        if(isset($name)) {
+            $this->model->setDefaultName($name);
+            $this->model->setDefaultStreet($street);
+            $this->model->setDefaultCity($city);
+            $this->model->setDefaultState($state);
+            $this->model->setDefaultZip($zip);
+            $this->model->setDefaultCountry($country);
+            $this->model->setDefaultWrap($wrap);
+        }
     }
 }

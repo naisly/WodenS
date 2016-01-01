@@ -32,7 +32,7 @@ class AccountInfoView extends AccountOrderView
         $this->getOrderTable();
         $this->changeAccountData();
         $this->getBillingInfo();
-        $this->getFooter();
+        $this->actionGetFooter( 'Account' );
     }
 
     private function getOrderTable()

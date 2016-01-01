@@ -27,22 +27,25 @@ class SearchAnswersView extends SubdescriptionView
 
         if( $this->model->countAskPerson() < 3) {
             $this->GetFooter();
-        } else
-            $this->actionGetFooter( 'search' );
+        } else {
+            $this->actionGetFooter('search');
+        }
     }
 
     public function GetFooter() {
 
-        echo '<div class="bottom-spacer">
+        echo '<div class="container-fluid bottom-spacer">
                <div class="row">
                    <div class="col-md-12 text-center">
-                        <ul class="hor_nav">
+                        <!--<ul class="hor_nav">
                             <li><a class="items" href="/privacy-policy">Privacy</a></li>
                             <li><a class="items" href="/refunds">Refunds</a></li>
                             <li><a class="items" href="/sales">Sales</a></li>
                             <li><a class="items" href="site-map">Site map</a></li>
-                        </ul>
-                            <p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
+                        </ul>-->';
+
+
+        echo                       '<p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
                    </div>
                </div>
               </div>

@@ -222,7 +222,7 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'cart"><img style="margin-top: 3px;" src="/shop/images/cart_icon.png" width="25" height="30"></a>';
+        echo 'account/cart"><img style="margin-top: 3px;" src="/shop/images/cart_icon.png" width="25" height="30"></a>';
         /*
          * End
          */
@@ -305,7 +305,7 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo                'cart">';
+        echo                'account/cart">';
 
         echo '<img style="margin-top: 9px;" src="/shop/images/cart_icon.png" width="25" height="30">';
 
@@ -487,7 +487,7 @@ class DefaultView
                         <p class="align-left">Free shipping on orders greater than $35 </p>
                         <p class="align-left"><b>Product features: </b></p>
                         <p class="align-left">' . $this->model->getFeatures($i) . '</p>
-                        <form action="add-item.php" method="post">
+                        <form action="../add-item.php" method="post">
                             <button class="btn btn-default">
                                 Add to cart
                             </button>
@@ -579,6 +579,8 @@ class DefaultView
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">TV</h></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'privacy-policy'){
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Privacy Policy</h></a>';
+                } else if ($this->model->getBreadcrumbs($i) == 'order-status'){
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Order Status</h></a>';
                 }
                 else {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . ucfirst($this->model->getBreadcrumbs($i)) . "</a>";
@@ -750,7 +752,7 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo                                'store">';
+        echo                                'store/">';
 
         echo $this->model->Translate('Find our store');
 
@@ -761,7 +763,7 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo                                'financing">';
+        echo                                'financing/">';
 
         echo $this->model->Translate('Financing');
 
@@ -772,7 +774,7 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo                                'order">';
+        echo                                'order-status/">';
 
         echo $this->model->Translate('Order Status');
 
@@ -788,7 +790,7 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo                               'search-answers">FAQ</a></li>
+        echo                               'FAQ/">FAQ</a></li>
                                             <li><a class="items" href="/shop/';
 
         if($_SESSION['language'] !== 'us'){
@@ -884,10 +886,10 @@ class DefaultView
 
 
         echo                      '</ul>
-                                    <ul>
+                                   <ul>
                                         <li class="footer-menu"><b>';
 
-        echo $this->model->Translate('Most Valuable');
+        echo $this->model->Translate('Manage your ID');
 
         echo                           '</b></li>
                                         <li><a class="items" href="/shop/';
@@ -896,9 +898,9 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo                            'terms/">';
+        echo                            'register">';
 
-        echo $this->model->Translate('Site Terms');
+        echo $this->model->Translate('Register');
 
         echo                           '</a></li>
                                         <li><a class="items" href="/shop/';
@@ -907,12 +909,15 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo                            'privacy-policy/">';
-
-        echo $this->model->Translate('Privacy Policy');
+        if(isset($_SESSION['login_user'])){
+            echo 'logout">';
+            echo $this->model->Translate('Logout');
+        } else {
+            echo 'Login/">';
+            echo $this->model->Translate('Login');
+        }
 
         echo                           '</a></li>';
-
 
         echo                       '</ul>
                                 </div>
@@ -965,31 +970,9 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo                            'managers">';
-
-        echo $this->model->Translate('Our managers');
-
-        echo                           '</a></li>
-                                        <li><a class="items" href="/shop/';
-
-        if($_SESSION['language'] !== 'us'){
-            echo $_SESSION['language'] . '/';
-        }
-
-        echo                            'director">';
-
-        echo $this->model->Translate('Director');
-
-        echo                           '</a></li>
-                                        <li><a class="items" href="/shop/';
-
-        if($_SESSION['language'] !== 'us'){
-            echo $_SESSION['language'] . '/';
-        }
-
         echo                            'jobs/">';
 
-        echo $this->model->Translate('Job');
+        echo $this->model->Translate('Job possibilities');
 
         echo                           '</a></li>
                                         <li><a class="items" href="/shop/';
@@ -1002,8 +985,36 @@ class DefaultView
 
         echo $this->model->Translate('Contact Us');
 
-        echo                           '</a></li>';
+        echo                           '</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li class="footer-menu"><b>';
 
+        echo $this->model->Translate('Most Valuable');
+
+        echo                           '</b></li>
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'terms/">';
+
+        echo $this->model->Translate('Site Terms');
+
+        echo                           '</a></li>
+                                        <li><a class="items" href="/shop/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                            'privacy-policy/">';
+
+        echo $this->model->Translate('Privacy Policy');
+
+        echo                           '</a></li>';
 
         echo                       '</ul>
                                 </div>
@@ -1279,14 +1290,14 @@ class DefaultView
               </script>';
     }
     public function getFooter() {
-        echo '<div class="bottom-spacer">
+        echo '<div class="bottom-spacer" style="position: absolute; bottom: 0; width: 100%;">
                <div class="text-center">
-                        <ul class="hor_nav">
+                        <!--<ul class="hor_nav">
                             <li><a class="items" href="/privacy-policy">Privacy</a></li>
                             <li><a class="items" href="/refunds">Refunds</a></li>
                             <li><a class="items" href="/sales">Sales</a></li>
                             <li><a class="items" href="site-map">Site map</a></li>
-                        </ul>
+                        </ul>-->
                             <p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
                    </div>
               </div>

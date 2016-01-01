@@ -61,7 +61,7 @@ class SupportController extends DefaultController
 
         $mysql_query->execute();
 
-        header('Location: thanks-support.php');
+        header('Location: thanks-support');
 
 
     }

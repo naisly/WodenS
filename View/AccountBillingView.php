@@ -30,7 +30,7 @@ class AccountBillingView extends AccountOrderView
         $this->headerView( 'account-billing' );
         $this->getAccountBar();
         $this->getBillingForm();
-        $this->getFooter();
+        $this->actionGetFooter( 'Account - Billing' );
     }
 
     private function getBillingForm(){
