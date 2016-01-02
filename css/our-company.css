@@ -1,0 +1,56 @@
+.woden-sims-xl {
+    margin-top: 10%;
+}
+.woden-sims-xl h1 {
+    font-size: 55px;
+    font-family: RobotoLight;
+}
+h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#divider-e4 {
+    width: 100%;
+    height: 1px;
+    background-color: #e4e4e4;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.header-ws-xl {
+    font-size: 30px;
+}
+.border-right-row {
+    border-right: 1px solid #e4e4e4;
+}
+
+@media (max-width: 766px){
+    .header-ws-xl {
+        font-size: 20px;
+    }
+    .desc-row {
+        font-size: 20px !important;
+    }
+    .border-right-row {
+        border: none;
+    }
+}
+.image-xl {
+    margin-top: 10%;
+}
+.career {
+    font-size: 40px;
+}
+#sub-career {
+    font-size: 30px;
+    font-family: RobotoLight;
+}
+.main-row {
+    font-size: 34px;
+    font-family: MyriadProSemiBold;
+}
+.desc-row {
+    font-size: 27px;
+    font-family: RobotoLight;
+}

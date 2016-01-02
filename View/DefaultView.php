@@ -163,6 +163,8 @@ class DefaultView
             echo '<link href="/shop/css/Terms.css" rel="stylesheet" type="text/css">';
         } else if($page == 'Jobs'){
             echo '<link href="/shop/css/jobs.css" rel="stylesheet" type="text/css">';
+        } else if($page == 'Our Company'){
+            echo '<link href="/shop/css/our-company.css" rel="stylesheet" type="text/css">';
         }
         else {
             echo '<link rel="stylesheet" href="/shop/css/default.css" />' .
@@ -522,7 +524,7 @@ class DefaultView
 
         echo   '</div>
                 <footer>';
-        if($page !== 'financing' && $page !== 'Index' && $page !== 'Phones' && $page !== 'Devices' && $page !== 'Page Not Found') {
+        if($page !== 'financing' && $page !== 'Index' && $page !== 'Phones' && $page !== 'Devices' && $page !== 'Page Not Found' && $page !== 'Our Company') {
             echo '<div class="container">
                          <!--<div class="divider"></div>-->
                   </div>
@@ -845,7 +847,7 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo                            'account">';
+        echo                            'account/">';
 
         echo $this->model->Translate('Store Account');
 
@@ -856,7 +858,7 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo                            'cart">';
+        echo                            'account/cart">';
 
         echo $this->model->Translate('My Items');
 
@@ -867,7 +869,7 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo                            'order">';
+        echo                            'account/order">';
 
         echo $this->model->Translate('My Orders');
 
@@ -878,7 +880,7 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo                            'account-billing">';
+        echo                            'account/billing">';
 
         echo $this->model->Translate('Billing Info');
 
@@ -926,7 +928,7 @@ class DefaultView
                                 <div class="small-devices-decoration">
                                     <h class="float-right"><a class="items default-hidden" id="displayTextFooter3" href="javascript:toggle3();">';
 
-        echo $this->model->Translate('About Us');
+        echo $this->model->Translate('About Us and Values');
 
         echo                       '</a></h>
                                     <div class="pull-right default-hidden margin-for-footer">
@@ -948,7 +950,7 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo                            'our-company">';
+        echo                            'company/">';
 
         echo $this->model->Translate('Our Company');
 
@@ -959,7 +961,7 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo                            'people">';
+        echo                            'work-people/">';
 
         echo $this->model->Translate('In-touch People');
 
