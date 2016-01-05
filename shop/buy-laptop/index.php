@@ -2,13 +2,13 @@
 /**
  * Created by PhpStorm.
  * User: Home
- * Date: 13.11.2015
- * Time: 16:33
+ * Date: 17.11.2015
+ * Time: 22:40
  */
 
 include_once('..\..\Controllers\DefaultController.php');
 include_once('..\..\Model\DefaultModel.php');
-include_once('..\..\View\SupView.php');
+include_once('..\..\View\DefaultView.php');
 //initiate the triad
 
 $model = new DefaultModel();
@@ -17,8 +17,12 @@ $model = new DefaultModel();
 
 $controller = new DefaultController($model);
 
-$view = new SupView($model);
+$view = new DefaultView($model);
 
-$controller->actionGetHeaderCart();
+$controller->actionGetData( 'Notebooks', 'Notebooks', 'All' );
 
-$view->getSupportPage();
+$view->DoctypeView( 'phones' );
+
+$view->headerView( 'notebooks' );
+
+$view->GetUI( 'laptop', 'notebooks' );

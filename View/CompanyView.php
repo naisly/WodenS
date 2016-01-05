@@ -76,7 +76,7 @@ class CompanyView extends DefaultView
 
                           <div id="divider-e4"></div>
 
-                          <h1 class="header-ws-xl text-center">If you have friendly and engaging personality, responsive manners as well as
+                          <h1 class="header-ws-md text-center">If you have friendly and engaging personality, responsive manners as well as
                           helpful and polite, that all you need to growth in our team</h1>
 
                           <div class="row" style="margin-top: 5%;">
@@ -118,7 +118,7 @@ class CompanyView extends DefaultView
                   <div class="row">
                       <div class="col-md-1"></div>
                       <div class="col-md-10">
-                          <h1 class="desc-row">On the one hand, Woden Sims is a store located at more than
+                          <h1 class="header-ws-md">On the one hand, Woden Sims is a store located at more than
                           seven countries <a href="/shop/store/" style="text-decoration: none; color: #08b;">primary in Europe</a>. On the other hand, our Company
                           provides software in the industry of IT. We are developing Apps for Android as well as IOS, web-sites.</h1>
                       </div>
@@ -142,7 +142,7 @@ class CompanyView extends DefaultView
                       </div>
                       <div class="col-md-5 text-center" style="border-left: 1px solid #e4e4e4;">
                           <img src="/shop/images/bulb.png" height="90" width="90" />
-                          <h1 class="main-row" style="font-size: 30px; font-family: RobotoLight; color: rgb(236, 0, 140);">Custom Software Development</h1>
+                          <h1 class="main-row text-left" style="font-size: 30px; font-family: RobotoLight; color: rgb(236, 0, 140);">Custom Software Development</h1>
 
                           <h1 class="desc-row text-left">Woden Sims employs a staff of talented developers who are ready to
                           tackle your next development project. Our custom software development is ideal for short-term

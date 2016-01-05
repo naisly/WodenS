@@ -225,30 +225,27 @@ class LoginView extends DefaultView
      */
 
     public function getLoginForm() {
-        echo '<div class="text-center">
-                 <img id="main" src="images/default.png" />
-               </div>
-               <div class="container">
+        echo  '<div class="container-fluid">
                   <div class="row">
                      <div class="col-md-4"></div>
                      <div class="col-md-4 margin-auto">
                               <fieldset class="field_set">
-                                  <h1>Sign In</h1>
+                                  <h1>Woden Sims Account</h1>
                                   <form action="check.php" method="post">
-                                     <div class="form-group">
+                                     <div class="form-group" style="margin-top: 10%;">
                                         <label for="email">Email</label>
                                         <input type="email" class="form-control" name="email" id="email" required/>
                                      </div>
                                      <div class="form-group">
                                         <label for="password">Password</label>
-                                        <input type="password" class="form-control" name="password" id="password" placeholder="at least 6 characters" required/>
+                                        <input type="password" class="form-control" name="password" id="password" required/>
                                      </div>
                                      <div class="form-group text-center">
                                         <button class="form-control btn btn-default" id="submit">Sign In</button>
                                      </div>
                                   </form>
-                                  <p>By signing in you are agreeing to our <a href="#">Conditions of Use and Sale</a>
-                                     and our <a href="#">Privacy Notice</a>.
+                                  <p>By signing in you are agreeing to our <a href="/shop/terms/" class="link">Conditions of Use and Sale</a>
+                                     and our <a href="/shop/privacy-policy/" class="link">Privacy Notice</a>.
                                   </p>
                                   <div class="row">
                                       <div class="col-md-2"></div>
@@ -257,7 +254,6 @@ class LoginView extends DefaultView
                                       </div>
                                       <div class="col-md-2"></div>
                                   </div>
-
                                   <p class="already-registered">New to WodenS ?</p>
                                   <form action="register.php" method="post">
                                      <button class="form-control btn btn-primary" id="redirect">Create an account</button>
@@ -266,27 +262,9 @@ class LoginView extends DefaultView
                      </div>
                      <div class="col-md-4"></div>
                   </div>
-               </div>
-               <div class="container">
-                   <div class="col-md-12">
-                       <div class="line"></div>
-                   </div>
-               </div>
-               <div class="min-spacer"></div>
-               <div class="row">
-                   <div class="col-md-12 text-center">
-                        <ul class="hor_nav">
-                            <li><a class="items" href="/privacy-policy">Privacy</a></li>
-                            <li><a class="items" href="/refunds">Refunds</a></li>
-                            <li><a class="items" href="/sales">Sales</a></li>
-                            <li><a class="items" href="site-map">Site map</a></li>
-                        </ul>
-                            <p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
-                   </div>
-               </div>
-               <script src="js/jquery-min.js"></script>
-               <script src="js/bootstrap.min.js"></script>';
+               </div>';
 
+        $this->actionGetFooter( 'Login' );
     }
 
     public function displayLoginErrors() {

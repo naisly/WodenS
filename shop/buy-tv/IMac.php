@@ -25,4 +25,4 @@ $view->DoctypeView( 'phones' );
 
 $view->headerView( 'Imac-television' );
 
-$view->GetUI( 'television', 'IMac-television' );
+$view->GetUI( 'tv', 'IMac-television' );

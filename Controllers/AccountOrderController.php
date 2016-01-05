@@ -24,6 +24,14 @@ class AccountOrderController extends ProfileController
 
     public function actionGetData()
     {
+        session_start();
+
+        if(!isset($_SESSION['login_user'])){
+            header('Location: /shop/login');
+        }
+
+        session_write_close();
+
         $this->actionGetHeaderCart();
         $this->actionGetUser();
 

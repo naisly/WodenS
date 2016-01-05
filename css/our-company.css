@@ -21,6 +21,9 @@ h2 {
 .header-ws-xl {
     font-size: 30px;
 }
+.header-ws-md {
+    font-size: 30px;
+}
 .border-right-row {
     border-right: 1px solid #e4e4e4;
 }
@@ -31,6 +34,9 @@ h2 {
     }
     .desc-row {
         font-size: 20px !important;
+    }
+    .header-ws-md {
+        font-size: 25px;
     }
     .border-right-row {
         border: none;
@@ -51,6 +57,6 @@ h2 {
     font-family: MyriadProSemiBold;
 }
 .desc-row {
-    font-size: 27px;
+    font-size: 25px;
     font-family: RobotoLight;
 }

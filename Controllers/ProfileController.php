@@ -31,6 +31,14 @@ class ProfileController extends DefaultController
 
     public function actionGetUserData() {
 
+        session_start();
+
+        if(!isset($_SESSION['login_user'])){
+            header('Location: /shop/login');
+        }
+
+        session_write_close();
+
         $this->actionGetHeaderCart();
         $this->actionGetOrderedItems();
         $this->actionGetUser();

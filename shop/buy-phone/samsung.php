@@ -25,4 +25,4 @@ $view->DoctypeView( 'Samsung' );
 
 $view->headerView( 'Samsung-phones' );
 
-$view->GetUI( 'phones', 'samsung-phones' );
+$view->GetUI( 'phone', 'samsung-phones' );

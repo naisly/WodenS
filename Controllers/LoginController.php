@@ -161,9 +161,9 @@ class LoginController extends DefaultController
             $_SESSION['login_user'] = $email;
             $_SESSION['admin'] = $email;
             $_SESSION['add_item'] = '0';
-            header("Location: cart.php");
+            header("Location: account/");
         } else {
-            header("Location: login.php");
+            header("Location: login");
             $_SESSION['error'] = '1';
         }
 

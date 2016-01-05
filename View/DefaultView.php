@@ -333,7 +333,7 @@ class DefaultView
     }
     public function getUI( $category, $category_table ){
         $this->getItemsNames( $category );
-        $this->getFilterMenu( $category_table );
+        $this->getFilterMenu();
         $this->getItems( $category_table );
         $this->actionGetFooter( $category );
     }
@@ -347,11 +347,12 @@ class DefaultView
                        <div class='col-md-6 items-align'>
                             <ul class='text-align'>";
 
-                            if($category == 'notebooks'){
-                                echo "<a style='font-size: 18px; margin-right: 15px; color: #e4e4e4; text-decoration: none;' class='categories-list' href='laptops.php'>All</a>";
-                            } else {
-                                echo "<a style='font-size: 18px; margin-right: 15px; color: #e4e4e4; text-decoration: none;' class='categories-list' href='$category'>All</a>";
-                            }
+
+        echo "<a style='font-size: 18px; margin-right: 15px; color: #e4e4e4; text-decoration: none;' class='categories-list' href='";
+
+        echo '/shop/shop/buy-' . $category . '/';
+
+        echo "'>All</a>";
 
         foreach ($this->model->distinct_categories as $value => $key) {
             echo "<a style='font-size: 18px; margin-right: 15px; color: #e4e4e4; text-decoration: none;' class='categories-list' href='{$this->model->distinct_categories[$value]}'>" . $this->model->distinct_categories[$value] . "</a>";
@@ -366,7 +367,7 @@ class DefaultView
      * Filter menu
      * of product pages
      */
-    private function getFilterMenu( $item )
+    private function getFilterMenu()
     {
         $i = 0;
         $n = 0;
@@ -385,7 +386,7 @@ class DefaultView
         echo '<div class="container">
                   <div class="row">
                        <div class="col-md-3" style="border: 1px solid #e4e4e4; border-top: none;">
-                            <form action="' . $item . '.php" method="post">
+                            <form action="" method="post">
                             <div class="row">
                                 <div class="col-md-12 bg-item top-margin" style="margin-top: 0px;">
                                     <h class="search-item">Items: <br/></h>
@@ -869,7 +870,7 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo                            'account/order">';
+        echo                            'account/orders">';
 
         echo $this->model->Translate('My Orders');
 
@@ -950,20 +951,9 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo                            'company/">';
+        echo                            'about/">';
 
         echo $this->model->Translate('Our Company');
-
-        echo                           '</a></li>
-                                        <li><a class="items" href="/shop/';
-
-        if($_SESSION['language'] !== 'us'){
-            echo $_SESSION['language'] . '/';
-        }
-
-        echo                            'work-people/">';
-
-        echo $this->model->Translate('In-touch People');
 
         echo                           '</a></li>
                                         <li><a class="items" href="/shop/';

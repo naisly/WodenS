@@ -19,9 +19,9 @@ $controller = new LoginController($model);
 
 $view = new LoginView($model);
 
-session_start();
+$controller->actionGetHeaderCart();
 
-$view->DoctypeView( 'login' );
+$view->DoctypeView( 'Login' );
 $view->headerView( 'login' );
 
 $view->displayLoginErrors();
