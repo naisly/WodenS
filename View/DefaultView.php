@@ -87,7 +87,7 @@ class DefaultView
             echo '<link href="/shop/css/support.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'TV'){
             echo '<link href="/shop/css/tv.css" rel="stylesheet" type="text/css">';
-        } else if ($page == 'Login' || $page == 'Admin' || $page == 'Thanks - Support'){
+        } else if ($page == 'Login' || $page == 'Admin' || $page == 'Thanks - Support' || $page == 'Registration' || $page == 'Registration Completed'){
             echo '<link href="/shop/css/login.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'subdescription'){
             echo '<link href="/shop/css/jquery.bxslider.css" rel="stylesheet">
@@ -544,8 +544,12 @@ class DefaultView
                   </div>';
         }
 
-        echo        '<div class="footer">
-                     <div class="divider-white-for-classes"></div>
+        if($page == 'Thank You'){
+            echo '<div class="footer footer-bottom">';
+        } else {
+            echo '<div class="footer">';
+        }
+        echo        '<div class="divider-white-for-classes"></div>
                      <div class="container full-container">
                           <div class="row">
                               <div class="col-sm-1 no-width-for-sm"></div>
@@ -584,6 +588,12 @@ class DefaultView
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Privacy Policy</h></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'order-status'){
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Order Status</h></a>';
+                } else if (substr($this->model->getBreadcrumbs($i), 0, 5) == 'login'){
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Login</h></a>';
+                } else if (substr($this->model->getBreadcrumbs($i), 0, 8) == 'register'){
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Register</h></a>';
+                } else if ($this->model->getBreadcrumbs($i) == 'registration-completed'){
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Registration Completed</h></a>';
                 }
                 else {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . ucfirst($this->model->getBreadcrumbs($i)) . "</a>";
@@ -1218,38 +1228,6 @@ class DefaultView
                 </div>
                     </div>
                 </div>';
-
-        /*echo   '<div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="small-devices-decoration">
-                                    <h class="float-right"><a class="items default-hidden" id="displayTextFooter5" href="javascript:toggle5();">';
-
-        echo '<img src="/shop/images/' . $language . '-flag.png" height="16" width="16" /><h class="lang">' . $name_of_country . '</h>';
-
-        echo                       '</a></h>
-                                    <div class="divider-for-small-devices"></div>
-                                </div>
-                                <div id="toggleTextFooter5">
-                                    <ul>';
-
-        $i = 0;
-        while ($i < $k) {
-            echo '<form action="/shop/change-language" method="post" id="form-' . $i . '">
-                     <input type="hidden" value="' . $language_array[$i] . '" name="checked-language" id="checked-language" />
-                     <li id="marger-for-small-devices-xs"><img id="margin-for-small" src="/shop/images/' . $language_array[$i] . '-flag.png" height="16" width="16" /><button id="link_as_button" style="font-size: 13px; margin-left: 7px; text-decoration: none;">' . $name_of_country_array[$i] . '</span></button></li>
-                  </form>';
-
-            $i++;
-        }
-
-
-        echo                       '</ul>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-                </footer>';*/
 
         echo '<script type="text/javascript">
                 var check_preload;

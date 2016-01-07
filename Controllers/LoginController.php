@@ -114,12 +114,8 @@ class LoginController extends DefaultController
 
         $result = $mysqli->query($sql_stmt);
 
-        session_start();
-
-        if ($result->num_rows == 1){
-            $_SESSION['email_error'] = '1';
-        } else {
-            $_SESSION['email_error'] = '0';
+        if ($result->num_rows >= 1){
+            header('Location: register?email_error=1');
         }
     }
 
@@ -157,14 +153,18 @@ class LoginController extends DefaultController
 
         session_start();
 
+        if(!isset($_SESSION['login_try'])){
+            $_SESSION['login_try'] = 1;
+        }
+
         if ($result->num_rows == 1) {
             $_SESSION['login_user'] = $email;
             $_SESSION['admin'] = $email;
             $_SESSION['add_item'] = '0';
             header("Location: account/");
+            $_SESSION['login_try'] = 1;
         } else {
-            header("Location: login");
-            $_SESSION['error'] = '1';
+            header("Location: login?auth=false&try=" . $_SESSION['login_try']++);
         }
 
         session_write_close();
@@ -259,9 +259,9 @@ class LoginController extends DefaultController
 
             $this->actionAddItems();
             if(isset($_POST['one-click-order'])){
-                header('Location: placeorder.php');
+                header('Location: placeorder');
             } else {
-                header('Location: thanks-order.php');
+                header('Location: thanks-order');
             }
         }
     }

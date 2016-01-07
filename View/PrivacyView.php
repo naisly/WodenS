@@ -27,7 +27,7 @@ class PrivacyView extends DefaultView
         $this->endHTML();
     }
 
-    private function endHTML() {
+    public function endHTML() {
 
         echo '    <script src="/shop/js/privacy-scroll.js"></script>
                 </body>

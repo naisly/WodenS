@@ -126,7 +126,7 @@ class ProfileView extends DefaultView
 
         echo         '<div class="cart-divider"></div>
 
-                      <h class="cart">Not ' . $this->model->getName() . ' ? <a href="logout.php">Sign out</a></h>
+                      <h class="cart">Not ' . $this->model->getName() . ' ? <a href="/shop/logout" class="link">Sign out</a></h>
                   </div>';
     }
 

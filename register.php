@@ -19,6 +19,7 @@ $controller = new LoginController($model);
 
 $view = new LoginView($model);
 
-$view->DoctypeView( 'login' );
+$controller->actionGetHeaderCart();
+$view->DoctypeView( 'Registration' );
 
 $view->RegisterView();

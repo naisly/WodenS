@@ -34,22 +34,20 @@ class LoginView extends DefaultView
      */
     public function RegisterView() {
 
-        if(isset($_SESSION['email_error'])){
-            if($_SESSION['email_error'] == 1){
+        $this->headerView( 'register' );
+        if(isset($_GET['email_error'])){
+            if($_GET['email_error'] == 1){
                 $this->errorRegisteredEmailMessage();
             }
         }
 
-        echo '<div class="text-center">
-                 <img id="main" src="images/default.png" />
-               </div>
-               <div class="container">
+        echo '<div class="container-fluid">
                   <div class="row">
                      <div class="col-md-4"></div>
                      <div class="col-md-4 margin-auto">
                               <fieldset class="field_set">
                                   <h1>Create account</h1>
-                                  <form action="thank-you.php" method="post">
+                                  <form action="registration-completed" method="post">
                                      <div class="form-group">
                                         <label for="name">Your name</label>
                                         <input type="text" class="form-control" name="name" id="name" required/>
@@ -74,8 +72,8 @@ class LoginView extends DefaultView
                                         <button class="form-control btn btn-default" id="submit">Create your WodenS account</button>
                                      </div>
                                   </form>
-                                  <p>By creating an account, you agree to Woden S <a href="#">Conditions of Use</a>
-                                     and <a href="#">Privacy Notice</a>.
+                                  <p>By creating an account, you agree to Woden S <a href="/shop/terms/" class="link">Conditions of Use</a>
+                                     and <a href="/shop/privacy-policy/" class="link">Privacy Notice</a>.
                                   </p>
                                   <div class="row">
                                       <div class="col-md-2"></div>
@@ -85,31 +83,14 @@ class LoginView extends DefaultView
                                       <div class="col-md-2"></div>
                                   </div>
 
-                                  <p class="already-registered">Already have an account? <a href="login.php">Sign In</a></p>
+                                  <p class="already-registered">Already have an account? <a href="login" class="link">Sign In</a></p>
                               </fieldset>
                      </div>
                      <div class="col-md-4"></div>
                   </div>
-               </div>
-               <div class="container">
-                   <div class="col-md-12">
-                       <div class="line"></div>
-                   </div>
-               </div>
-               <div class="min-spacer"></div>
-               <div class="row">
-                   <div class="col-md-12 text-center">
-                        <ul class="hor_nav">
-                            <li><a class="items" href="/privacy-policy">Privacy</a></li>
-                            <li><a class="items" href="/refunds">Refunds</a></li>
-                            <li><a class="items" href="/sales">Sales</a></li>
-                            <li><a class="items" href="site-map">Site map</a></li>
-                        </ul>
-                            <p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
-                   </div>
-               </div>
-               <script src="js/jquery-min.js"></script>
-               <script src="js/bootstrap.min.js"></script>';
+               </div>';
+
+        $this->actionGetFooter( 'Register' );
     }
 
     /*
@@ -117,7 +98,7 @@ class LoginView extends DefaultView
      */
     private function errorEmailMessage() {
 
-        echo '<div class="alert alert-danger" role="alert">
+        echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px !important;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 Please enter a valid email address or check the second one
@@ -129,7 +110,7 @@ class LoginView extends DefaultView
      */
     private function errorPasswordMessage() {
 
-        echo '<div class="alert alert-danger" role="alert">
+        echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px !important;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 Please write correct password or check the second one
@@ -141,7 +122,7 @@ class LoginView extends DefaultView
      */
     private function errorMinCountMessage() {
 
-        echo '<div class="alert alert-danger" role="alert">
+        echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px !important;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 Password may contain at least 6 characters
@@ -149,7 +130,7 @@ class LoginView extends DefaultView
     }
 
     /*
-     * Alrt wrong email or password
+     * Alert wrong email or password
      */
     private function errorLoginMessage() {
 
@@ -165,7 +146,7 @@ class LoginView extends DefaultView
      */
     private function errorRegisteredEmailMessage() {
 
-        echo '<div class="alert alert-danger" role="alert">
+        echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px !important;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 This email is already in use! Try another one
@@ -177,11 +158,20 @@ class LoginView extends DefaultView
      */
     private function successMessage() {
 
-        echo '<div class="alert alert-success" role="alert" style="margin-top: -20px;">
+        /*echo '<div class="alert alert-success" role="alert" style="margin-top: -20px;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
-                Well done! Thank you for the register. <a href="login.php">Login >></a>
-                </div>';
+                Well done! Thank you for the register. <a href="login">Login >></a>
+                </div>';*/
+
+        echo '<div class="text-center thank-you">
+                  <h1>Thank you for the registration.</h1>
+                  <a class="links" id="main-link" href="login" style="text-decoration: none; margin: 0 !important;">';
+
+        echo $this->model->Translate('Login');
+
+        echo         ' ' . '<img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
+              </div>';
     }
 
     /*
@@ -231,7 +221,7 @@ class LoginView extends DefaultView
                      <div class="col-md-4 margin-auto">
                               <fieldset class="field_set">
                                   <h1>Woden Sims Account</h1>
-                                  <form action="check.php" method="post">
+                                  <form action="check" method="post">
                                      <div class="form-group" style="margin-top: 10%;">
                                         <label for="email">Email</label>
                                         <input type="email" class="form-control" name="email" id="email" required/>
@@ -244,7 +234,7 @@ class LoginView extends DefaultView
                                         <button class="form-control btn btn-default" id="submit">Sign In</button>
                                      </div>
                                   </form>
-                                  <p>By signing in you are agreeing to our <a href="/shop/terms/" class="link">Conditions of Use and Sale</a>
+                                  <p>By signing in you are agreeing to our <a href="/shop/terms/" class="link">Conditions of Use</a>
                                      and our <a href="/shop/privacy-policy/" class="link">Privacy Notice</a>.
                                   </p>
                                   <div class="row">
@@ -254,10 +244,11 @@ class LoginView extends DefaultView
                                       </div>
                                       <div class="col-md-2"></div>
                                   </div>
-                                  <p class="already-registered">New to WodenS ?</p>
-                                  <form action="register.php" method="post">
+                                  <p class="already-registered" style="padding-bottom: 3%;">New to Woden Sims ?</p>
+                                  <!--<form action="register" method="post">
                                      <button class="form-control btn btn-primary" id="redirect">Create an account</button>
-                                  </form>
+                                  </form>-->
+                                  <a class="btn btn-primary" href="register" style="width: 100%; margin-bottom: 20px;">Create an account</a>
                               </fieldset>
                      </div>
                      <div class="col-md-4"></div>
@@ -271,14 +262,15 @@ class LoginView extends DefaultView
 
         if(isset($_SESSION['login_user'])){
 
-            header("Location: profile.php");
+            header("Location: account/");
         }
 
-        if(isset($_SESSION['error'])){
-            if($_SESSION['error'] == 1) {
+        if(isset($_GET['auth'])){
+            if($_GET['auth'] == 'false'){
                 $this->errorLoginMessage();
             }
         }
+
         if(isset($_SESSION['add_item'])){
             if($_SESSION['add_item'] == 1) {
                 $this->errorAddItemMessage();
@@ -297,14 +289,16 @@ class LoginView extends DefaultView
         } else if($this->model->getPassword() === $this->model->getPasswordAgain() && (strlen($this->model->getPassword()) < 7)){
             $this->errorMinCountMessage();
             $this->RegisterView();
-        } else if($_SESSION['email_error'] == 1){
-            $this->errorRegisteredEmailMessage();
-            $this->RegisterView();
+        } else if(isset($_GET['email_error'])){
+            if($_GET['email_error'] == 1) {
+                $this->errorRegisteredEmailMessage();
+                $this->RegisterView();
+            }
         } else {
             $this->headerView( 'login' );
             $this->successMessage();
 
-            $this->getFooter();
+            $this->actionGetFooter( 'Thank You' );
         }
     }
 }

@@ -19,10 +19,11 @@ $controller = new LoginController($model);
 
 $view = new LoginView($model);
 
+$controller->actionGetHeaderCart();
 $controller->actionGetData();
 $controller->actionCheckProvidedEmail();
 
-$view->DoctypeView( 'login' );
+$view->DoctypeView( 'Registration Completed' );
 
 $view->actionValidate();
 
