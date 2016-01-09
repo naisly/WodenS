@@ -20,6 +20,16 @@ $controller = new LoginController($model);
 $view = new LoginView($model);
 
 $controller->actionGetHeaderCart();
-$view->DoctypeView( 'Registration' );
 
-$view->RegisterView();
+if(!isset($_POST['email'])) {
+    $view->DoctypeView( 'Registration' );
+    $view->getRegisterHeader();
+    $view->RegisterView();
+} else {
+    #$controller->actionGetData();
+    $controller->actionCheckProvidedEmail();
+
+    $view->DoctypeView( 'Registration Completed' );
+    $view->actionValidate();
+    $controller->actionDoInsertion();
+}

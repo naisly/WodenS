@@ -218,7 +218,7 @@ ul.hor_nav li {
 .btn-group {width: 100%}
 .dropdown-menu {width: 100%;}
 
-.checkbox label:after,
+/*.checkbox label:after,
 .radio label:after {
     content: '';
     display: table;
@@ -252,14 +252,15 @@ ul.hor_nav li {
 
 .radio .cr .cr-icon {
     margin-left: 0.04em;
-}
+}*/
 
 .checkbox label input[type="checkbox"],
 .radio label input[type="radio"] {
-    display: none;
+    width: 18px;
+    height: 18px;
 }
 
-.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+/*.checkbox label input[type="checkbox"] + .cr > .cr-icon,
 .radio label input[type="radio"] + .cr > .cr-icon {
     transform: scale(3) rotateZ(-20deg);
     opacity: 0;
@@ -275,4 +276,4 @@ ul.hor_nav li {
 .checkbox label input[type="checkbox"]:disabled + .cr,
 .radio label input[type="radio"]:disabled + .cr {
     opacity: .5;
-}
+}*/

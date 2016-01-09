@@ -34,7 +34,7 @@ class LoginController extends DefaultController
      * Getting data from the
      * Register page
      */
-    public function actionGetData() {
+    /*public function actionGetData() {
         if(isset($_POST['email'])){
             $this->model->setEmail($_POST['email']);
         }
@@ -85,7 +85,7 @@ class LoginController extends DefaultController
         if(isset($_POST['site-terms'])){
             $this->model->setName($_POST['site-terms']);
         }
-    }
+    }*/
 
     /*
      * Inserting into the Database

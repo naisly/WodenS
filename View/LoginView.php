@@ -29,6 +29,15 @@ class LoginView extends DefaultView
         $this->model = $model;
     }
 
+    public function getRegisterHeader() {
+
+        echo '<div class="register-bg">
+                  <div class="text-center">
+                       <h1 style="padding-top: 20px; color: white;">Create Woden Sims Account</h1>
+                  </div>
+              </div>';
+    }
+
     /*
      * Register page
      */
@@ -41,17 +50,11 @@ class LoginView extends DefaultView
             }
         }
 
-        echo '<div class="register-bg">
-                  <div class="text-center">
-                       <h1 style="padding-top: 20px; color: white;">Create Woden Sims Account</h1>
-                  </div>
-              </div>';
-
-        echo '<form action="registration-completed.php" method="post" id="registation">
+        echo '<form action="register" method="post" id="registation">
               <div class="container">
                   <div class="row">
                       <div class="col-md-3"></div>
-                      <div class="col-md-6 text-center" style="margin-top: 40px;">
+                      <div class="col-md-6 col-xs-12 text-center" style="margin-top: 40px;">
                           <h1 class="one-account">Only one Account for all your needs.</h1>
                           <h1 class="one-account">Already have Woden Sims Account? <a href="/shop/login">Find it here<img style="margin-left: 3px;" src="/shop/images/arrow-blue.png" width="13" height="13"/></a></h1>
 
@@ -130,8 +133,8 @@ class LoginView extends DefaultView
                   <div class="row">
                       <div class="col-md-3"></div>
                       <div class="col-md-6">
-                          <select class="form-control" name="country">
-                            <option value="default">Select your country of residence</option>
+                          <select class="form-control" name="country" required>
+                            <option value="">Select your country of residence</option>
                             <option value="AFG">Afghanistan</option>
                             <option value="ALB">Albania</option>
                             <option value="DZA">Algeria</option>
@@ -375,9 +378,8 @@ class LoginView extends DefaultView
 
                         <div class="checkbox" style="margin-top: 15px;">
                           <label style="padding-left: 0 !important;">
-                              <input type="checkbox" value="" checked="checked" id="advertisements" name="advertisements">
-                              <span class="cr" style="margin-top: 5px !important;"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-                              <span style="font-size: 22px">Advertisements</span><br />
+                              <input type="checkbox" value="" id="advertisements" style="margin-left: 0px;" name="advertisements" checked>
+                              <span style="font-size: 22px; margin-left: 25px;">Advertisements</span><br />
                               <div class="row">
                                   <div class="col-md-8" style="margin-left: 25px;">
                                       <span style="font-size: 13px;">Get announcements, news about interested for You items, recommendations and much more.</span>
@@ -392,10 +394,9 @@ class LoginView extends DefaultView
                         </div>
 
                         <div class="checkbox" style="margin-top: 15px;">
-                          <label style="padding-left: 0 !important;">
-                              <input type="checkbox" value="" checked="checked" id="privacy-policy" name="privacy-policy" required>
-                              <span class="cr" style="margin-top: 5px !important;"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-                              <span style="font-size: 22px">You are accepting Woden Sims Privacy Policy</span><br />
+                          <label style="padding-left: 0 !important;" class="checkbox control-label">
+                              <input type="checkbox" id="privacy-policy" style="margin-left: 0px;" name="privacy-policy" checked required>
+                              <span style="font-size: 22px; margin-left: 25px;">You are accepting Woden Sims Privacy Policy</span><br />
                               <div class="row">
                                   <div class="col-md-10" style="margin-left: 25px;">
                                       <span style="font-size: 13px;">This <a href="/shop/privacy-policy/" id="main-link-check">Privacy Policy</a> is meant to help you understand
@@ -409,10 +410,9 @@ class LoginView extends DefaultView
                         </div>
 
                         <div class="checkbox" style="margin-top: 15px;">
-                          <label style="padding-left: 0 !important;">
-                              <input type="checkbox" value="" checked="checked" id="site-terms" name="site-terms" required>
-                              <span class="cr" style="margin-top: 5px !important;"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-                              <span style="font-size: 22px">You are accepting Woden Sims Site Terms of Use</span><br />
+                          <label style="padding-left: 0 !important;" class="checkbox control-label">
+                              <input type="checkbox" value="some" id="site-terms" name="site-terms" style="margin-left: 0px;" checked required>
+                              <span style="font-size: 22px; margin-left: 25px;">You are accepting Woden Sims Site Terms of Use</span><br />
                               <div class="row">
                                   <div class="col-md-10" style="margin-left: 25px;">
                                       <span style="font-size: 13px;">Woden Sims reserves the right, at its sole discretion,
@@ -459,7 +459,7 @@ class LoginView extends DefaultView
      */
     private function errorPasswordMessage() {
 
-        echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px !important;">
+        echo '<div class="alert alert-danger" role="alert">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 Please write correct password or check the second one
@@ -471,7 +471,7 @@ class LoginView extends DefaultView
      */
     private function errorMinCountMessage() {
 
-        echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px !important;">
+        echo '<div class="alert alert-danger" role="alert">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 Password may contain at least 6 characters
@@ -483,7 +483,7 @@ class LoginView extends DefaultView
      */
     private function errorLoginMessage() {
 
-        echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px;">
+        echo '<div class="alert alert-danger" role="alert">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 Incorrert email or password! Please check again
@@ -495,7 +495,7 @@ class LoginView extends DefaultView
      */
     private function errorRegisteredEmailMessage() {
 
-        echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px !important;">
+        echo '<div class="alert alert-danger" role="alert">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 This email is already in use! Try another one

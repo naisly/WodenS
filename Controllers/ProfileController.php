@@ -143,7 +143,7 @@ class ProfileController extends DefaultController
         session_start();
         $user = $_SESSION['login_user'];
 
-        $sql_query = "SELECT users.name, completeorders.order_id  FROM users INNER JOIN completeorders
+        $sql_query = "SELECT users.first_name, users.last_name, completeorders.order_id  FROM users INNER JOIN completeorders
                       WHERE users.email='$user' AND completeorders.user='$user' ORDER BY completeorders.sort_id DESC LIMIT 1";
 
         $result = $mysqli->query( $sql_query );
@@ -151,7 +151,8 @@ class ProfileController extends DefaultController
         if ($result->num_rows > 0) {
             // output data of each row
             while ($row = $result->fetch_assoc()) {
-                $name = $row['name'];
+                $f_name = $row['first_name'];
+                $l_name = $row['last_name'];
                 $order_id = $row['order_id'];
             }
         }
@@ -160,16 +161,19 @@ class ProfileController extends DefaultController
          * If no order found
          */
         if($result->num_rows == 0){
-            $sql_names = "SELECT name FROM users WHERE email='$user' LIMIT 1";
+            $sql_names = "SELECT first_name, last_name FROM users WHERE email='$user' LIMIT 1";
             $sql_names_result = $mysqli->query( $sql_names );
 
             if ($sql_names_result->num_rows > 0) {
                 // output data of each row
                 while ($row = $sql_names_result->fetch_assoc()) {
-                    $name = $row['name'];
+                    $first_name = $row['first_name'];
+                    $last_name = $row['last_name'];
                 }
 
-                $this->model->setName( $name );
+                $full_name = $first_name . ' ' . $last_name;
+
+                $this->model->setName( $full_name );
             }
         }
 
