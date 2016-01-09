@@ -35,22 +35,56 @@ class LoginController extends DefaultController
      * Register page
      */
     public function actionGetData() {
-        if(isset($_POST['name'])){
-            $this->model->setName($_POST['name']);
-        }
         if(isset($_POST['email'])){
             $this->model->setEmail($_POST['email']);
         }
-        if(isset($_POST['email-again'])){
-            $this->model->setEmailAgain($_POST['email-again']);
-        }
         if(isset($_POST['password'])){
             $this->model->setPassword($_POST['password']);
+            //echo $_POST['password'];
         }
         if(isset($_POST['password-again'])){
             $this->model->setPasswordAgain($_POST['password-again']);
+            //echo $_POST['password-again'];
         }
-
+        if(isset($_POST['first_name'])){
+            $this->model->setPasswordAgain($_POST['first_name']);
+        }
+        if(isset($_POST['last_name'])){
+            $this->model->setName($_POST['last_name']);
+        }
+        if(isset($_POST['day_of_birth'])){
+            $this->model->setName($_POST['day_of_birth']);
+        }
+        if(isset($_POST['sc-q-1'])){
+            $this->model->setName($_POST['sc-q-1']);
+        }
+        if(isset($_POST['sc-q-2'])){
+            $this->model->setName($_POST['sc-q-2']);
+        }
+        if(isset($_POST['sc-q-3'])){
+            $this->model->setName($_POST['sc-q-3']);
+        }
+        if(isset($_POST['sc-a-1'])){
+            $this->model->setName($_POST['sc-a-1']);
+        }
+        if(isset($_POST['sc-a-2'])){
+            $this->model->setName($_POST['sc-a-2']);
+        }
+        if(isset($_POST['sc-a-3'])){
+            $this->model->setName($_POST['sc-a-3']);
+        }
+        if(isset($_POST['country'])){
+            $this->model->setName($_POST['country']);
+        }
+        if(isset($_POST['advertisements'])){
+            $this->model->setName($_POST['advertisements']);
+        }
+        if(isset($_POST['privacy-policy'])){
+            $this->model->setName($_POST['privacy-policy']);
+        }
+        if(isset($_POST['site-terms'])){
+            $this->model->setName($_POST['site-terms']);
+        }
     }
 
     /*
@@ -67,13 +101,54 @@ class LoginController extends DefaultController
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+        if(isset($_POST['email'])){
+            $email = $_POST['email'];
+        }
+        if(isset($_POST['password'])){
+            $password = $_POST['password'];
+        }
+        if(isset($_POST['first_name'])){
+            $first_name = str_replace("'", "''", $_POST['first_name']);
+        }
+        if(isset($_POST['last_name'])){
+            $last_name = str_replace("'", "''", $_POST['last_name']);
+        }
+        if(isset($_POST['day_of_birth'])){
+            $day_of_birth = $_POST['day_of_birth'];
+        }
+        if(isset($_POST['sc-q-1'])){
+            $sc_q_1 = str_replace("'", "''", $_POST['sc-q-1']);
+        }
+        if(isset($_POST['sc-q-2'])){
+            $sc_q_2 = str_replace("'", "''", $_POST['sc-q-2']);
+        }
+        if(isset($_POST['sc-q-3'])){
+            $sc_q_3 = str_replace("'", "''", $_POST['sc-q-3']);
+        }
+        if(isset($_POST['sc-a-1'])){
+            $sc_a_1 = str_replace("'", "''", $_POST['sc-a-1']);
+        }
+        if(isset($_POST['sc-a-2'])){
+            $sc_a_2 = str_replace("'", "''", $_POST['sc-a-2']);
+        }
+        if(isset($_POST['sc-a-3'])){
+            $sc_a_3= str_replace("'", "''", $_POST['sc-a-3']);
+        }
+        if(isset($_POST['country'])){
+            $country = $_POST['country'];
+        }
+        if(isset($_POST['advertisements'])){
+            $advertisements = '1';
+        } else {
+            $advertisements = '0';
+        }
 
-        $sql_stmt = "INSERT INTO users VALUES ('', '$name', '$email', '$password')";
+        $sql_stmt = "INSERT INTO users VALUES ('', '$email', '$password', '$first_name', '$last_name', '$day_of_birth', '$sc_q_1', '$sc_q_2',
+                    '$sc_q_3', '$sc_a_1', '$sc_a_2', '$sc_a_3', '$country', 'advertisements')";
+
+        //echo $sql_stmt;
         $stmt = $mysqli->prepare($sql_stmt);
-
+        //echo $email;
         $stmt->execute();
     }
 
@@ -84,15 +159,19 @@ class LoginController extends DefaultController
      */
     public function actionDoInsertion()
     {
-        if ($this->model->getEmail() == $this->model->getEmailAgain()) {
-            if ($this->model->getPassword() == $this->model->getPasswordAgain()) {
-                if ($this->model->getPassword() === $this->model->getPasswordAgain() && (strlen($this->model->getPassword()) > 7)) {
-                    if ($_SESSION['email_error'] == 0) {
+        if(isset($_POST['password'])){
+            $password = $_POST['password'];
+        }
+        if(isset($_POST['password-again'])){
+            $password_again = $_POST['password-again'];
+        }
+        if ($password == $password_again) {
+                if (strlen($password) > 7) {
+                    if (!isset($_GET['email_error'])) {
                         $this->actionInsertData();
                     }
                 }
             }
-        }
     }
 
     /*
@@ -108,7 +187,9 @@ class LoginController extends DefaultController
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
-        $email = $_POST['email'];
+        if(isset($_POST['email'])){
+            $email = $_POST['email'];
+        }
 
         $sql_stmt = "SELECT email FROM users WHERE email='$email'";
 

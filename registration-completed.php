@@ -28,3 +28,5 @@ $view->DoctypeView( 'Registration Completed' );
 $view->actionValidate();
 
 $controller->actionDoInsertion();
+
+//$controller->actionInsertData();

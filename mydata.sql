@@ -229,6 +229,23 @@ INSERT INTO phones VALUES (44, 'Samsung Galaxy S5', 'Samsung Galaxy S5 SM-G900H 
 SELECT product_name, photo, description, category, price, previous_price, time_of_adding, features,
   id, quantity, shipping, average_price FROM phones WHERE product_name = 'Iphone 5S' AND price > 100 AND price < 1500;
 
+CREATE TABLE users (
+  id INT(11) NOT NULL,
+  email VARCHAR(200) NOT NULL,
+  password VARCHAR(100) NOT NULL,
+  first_name VARCHAR(100) NOT NULL,
+  last_name VARCHAR(100) NOT NULL,
+  day_of_birth TIMESTAMP NOT NULL,
+  question1 VARCHAR(200) NOT NULL,
+  question2 VARCHAR(200) NOT NULL,
+  question3 VARCHAR(200) NOT NULL,
+  answer1 VARCHAR(200) NOT NULL,
+  answer2 VARCHAR(200) NOT NULL,
+  answer3 VARCHAR(200) NOT NULL,
+  country VARCHAR(100) NOT NULL,
+  advertisements INT(1) NOT NULL
+);
+
 CREATE TABLE orderedItems (
   id INT(11) NOT NULL,
   product_name VARCHAR(150) NOT NULL,

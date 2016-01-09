@@ -30,7 +30,7 @@ class DefaultView
     final public function DoctypeView( $page )
     {
         echo '<!DOCTYPE html>
-                <html>
+                <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US" prefix="og: http://ogp.me/ns#">
                 <head>';
         if ( $page == 'subdescription'){
             if ( $this->model->getCurrentLanguage() !== 'us') {
@@ -525,7 +525,7 @@ class DefaultView
 
         echo   '</div>
                 <footer>';
-        if($page !== 'financing' && $page !== 'Index' && $page !== 'Phones' && $page !== 'Devices' && $page !== 'Page Not Found' && $page !== 'Our Company') {
+        if($page !== 'financing' && $page !== 'Index' && $page !== 'Phones' && $page !== 'Devices' && $page !== 'Page Not Found' && $page !== 'Our Company' && $page !== 'Login' && $page !== 'Registration') {
             echo '<div class="container">
                          <!--<div class="divider"></div>-->
                   </div>
@@ -926,7 +926,7 @@ class DefaultView
             echo 'logout">';
             echo $this->model->Translate('Logout');
         } else {
-            echo 'Login/">';
+            echo 'login">';
             echo $this->model->Translate('Login');
         }
 
