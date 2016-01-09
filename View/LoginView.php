@@ -54,7 +54,7 @@ class LoginView extends DefaultView
               <div class="container">
                   <div class="row">
                       <div class="col-md-3"></div>
-                      <div class="col-md-6 col-xs-12 text-center" style="margin-top: 40px;">
+                      <div class="col-md-6 text-center" style="margin-top: 40px;">
                           <h1 class="one-account">Only one Account for all your needs.</h1>
                           <h1 class="one-account">Already have Woden Sims Account? <a href="/shop/login">Find it here<img style="margin-left: 3px;" src="/shop/images/arrow-blue.png" width="13" height="13"/></a></h1>
 
@@ -483,7 +483,7 @@ class LoginView extends DefaultView
      */
     private function errorLoginMessage() {
 
-        echo '<div class="alert alert-danger" role="alert">
+        echo '<div class="alert alert-danger" role="alert" style="position: relative; top: -20px;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 Incorrert email or password! Please check again
@@ -564,44 +564,33 @@ class LoginView extends DefaultView
      */
 
     public function getLoginForm() {
-        echo  '<div class="container-fluid login-bg-for-xs">
-                  <div class="row">
-                     <div class="col-md-4"></div>
-                     <div class="col-md-4 margin-auto">
-                              <fieldset class="field_set">
-                                  <h1>Woden Sims Account</h1>
-                                  <form action="check" method="post">
-                                     <div class="form-group" style="margin-top: 10%;">
-                                        <label for="email">Email</label>
-                                        <input type="email" class="form-control" name="email" id="email" required/>
-                                     </div>
-                                     <div class="form-group">
-                                        <label for="password">Password</label>
-                                        <input type="password" class="form-control" name="password" id="password" required/>
-                                     </div>
-                                     <div class="form-group text-center">
-                                        <button class="form-control btn btn-default" id="submit">Sign In</button>
-                                     </div>
-                                  </form>
-                                  <p>By signing in you are agreeing to our <a href="/shop/terms/" class="link">Conditions of Use</a>
-                                     and our <a href="/shop/privacy-policy/" class="link">Privacy Notice</a>.
-                                  </p>
-                                  <div class="row">
-                                      <div class="col-md-2"></div>
-                                      <div class="col-md-8">
-                                          <div class="line"></div>
-                                      </div>
-                                      <div class="col-md-2"></div>
-                                  </div>
-                                  <p class="already-registered" style="padding-bottom: 3%;">New to Woden Sims ?</p>
-                                  <!--<form action="register" method="post">
-                                     <button class="form-control btn btn-primary" id="redirect">Create an account</button>
-                                  </form>-->
-                                  <a class="btn btn-primary" href="register" style="width: 100%; margin-bottom: 20px;">Create an account</a>
-                              </fieldset>
-                     </div>
-                     <div class="col-md-4"></div>
+        echo  '<!--<div class="login-bg-for-xs">-->
+                  <div class="text-center" style="';
+
+        if(isset($_GET['auth'])){
+            echo 'margin-top: 5%;';
+        } else {
+            echo 'margin-top: 12%;';
+        }
+
+        echo       '"><h1 class="sign">Sign in Account</h1>
+                      <h2 class="only-one">Only one Account for All your needs</h2>
+                      <h2 class="only-one" style="font-size: 20px;">Have no account? <a href="/shop/register" class="links" id="link" style="text-decoration: none;">Create your Woden Sims ID <img style="margin-top: -5px;" src="/shop/images/arrow-blue.png" width="15" height="15"/></a></h2>
                   </div>
+                  <div class="margin-auto" style="margin-top: 5%;"><form action="check" method="post">
+                              <div class="input-group" style="width: 100%;">
+                                  <input type="text" name="email" id="email" class="form-control" placeholder="Woden Sims Email" style="height: 40px !important; border-bottom: none !important; border-radius: 4px;">
+                              </div>
+                              <div class="input-group">
+                                  <input type="password" name="password" id="password" class="form-control" placeholder="Password" style="height: 40px !important; border-right: none !important;">
+                                  <span class="input-group-addon" id="basic-addon2"><button class="image-as-button"><span class="glyphicon glyphicon-arrow-right" style="color: #666;"></span></button></span>
+                              </div>
+                          </form>
+                  </div>
+                  <div class="text-center" style="margin-top: 15px;">
+                      <a href="/shop/restore-password-step-1" class="forgot links" id="link">Forgot your password?</a>
+                  </div>
+                  <img style="margin-top: 40px;" src="/shop/images/phones-category-white.png" class="full-image-cascade" />
                </div>';
 
         $this->actionGetFooter( 'Login' );

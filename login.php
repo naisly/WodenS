@@ -19,6 +19,11 @@ $controller = new LoginController($model);
 
 $view = new LoginView($model);
 
+session_start();
+
+if(isset($_SESSION['login_user'])){
+    header('Location: /shop/account/');
+}
 
 $controller->actionGetHeaderCart();
 
