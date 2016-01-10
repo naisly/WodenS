@@ -89,4 +89,5 @@ class LoginModel extends DefaultModel
         return $this->price;
     }
 
+
 }

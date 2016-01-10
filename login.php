@@ -25,6 +25,12 @@ if(isset($_SESSION['login_user'])){
     header('Location: /shop/account/');
 }
 
+$controller->actionGenerateSessionAuth();
+
+$_SESSION['session_auth'] = $model->getSessionAuth();
+
+session_write_close();
+
 $controller->actionGetHeaderCart();
 
 $view->DoctypeView( 'Login' );

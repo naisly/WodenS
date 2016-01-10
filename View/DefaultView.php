@@ -165,6 +165,8 @@ class DefaultView
             echo '<link href="/shop/css/jobs.css" rel="stylesheet" type="text/css">';
         } else if($page == 'Our Company'){
             echo '<link href="/shop/css/our-company.css" rel="stylesheet" type="text/css">';
+        } else if($page == 'Recover your Woden Sims Account'){
+            echo '<link href="/shop/css/forgot.css" rel="stylesheet" type="text/css">';
         }
         else {
             echo '<link rel="stylesheet" href="/shop/css/default.css" />' .
@@ -594,6 +596,8 @@ class DefaultView
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Register</h></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'registration-completed'){
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Registration Completed</h></a>';
+                } else if ($this->model->getBreadcrumbs($i) == 'forgot-password'){
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Recover your Woden Sims Account</h></a>';
                 }
                 else {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . ucfirst($this->model->getBreadcrumbs($i)) . "</a>";

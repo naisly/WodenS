@@ -41,6 +41,10 @@ class DefaultModel
     private $name_of_countries_array;
     private $name_of_languages_array;
 
+    private $session_auth;
+
+
+
     public function setProductName ( $product_name ) {
 
         $this->product_name = $product_name;
@@ -344,5 +348,15 @@ class DefaultModel
     public function countNameOfLanguages() {
 
         return count($this->name_of_languages_array);
+    }
+
+    public function setSessionAuth( $session_auth ) {
+
+        $this->session_auth = $session_auth;
+    }
+
+    public function getSessionAuth() {
+
+        return $this->session_auth;
     }
 }

@@ -564,6 +564,7 @@ class LoginView extends DefaultView
      */
 
     public function getLoginForm() {
+
         echo  '<!--<div class="login-bg-for-xs">-->
                   <div class="text-center" style="';
 
@@ -588,7 +589,7 @@ class LoginView extends DefaultView
                           </form>
                   </div>
                   <div class="text-center" style="margin-top: 15px;">
-                      <a href="/shop/restore-password-step-1" class="forgot links" id="link">Forgot your password?</a>
+                      <a href="/shop/forgot-password/?session_auth=' . $_SESSION["session_auth"] . '" class="forgot links" id="link">Forgot your password?</a>
                   </div>
                   <img style="margin-top: 40px;" src="/shop/images/phones-category-white.png" class="full-image-cascade" />
                </div>';

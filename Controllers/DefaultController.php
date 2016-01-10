@@ -34,6 +34,16 @@ class DefaultController
 
     }
 
+    public function actionGenerateSessionAuth($length = 25) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        $this->model->setSessionAuth($randomString);
+    }
+
     /*
      * Search method for Selling
      * page for adding items in your Cart
@@ -541,6 +551,7 @@ class DefaultController
      * Cart menu
      */
     public function actionGetHeaderCart() {
+
         $this->actionGetLanguage();
         $this->actionGetSumOfItems();
         $this->actionGetQuantityOfItems();
