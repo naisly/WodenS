@@ -12,18 +12,18 @@ include_once('DefaultView.php');
 class ForgotView extends DefaultView
 {
     private $model;
-    public function __construct(DefaultModel $model)
+    public function __construct(ForgotModel $model)
     {
         parent::__construct( $model );
         $this->model = $model;
     }
 
-    public function getProblemsBar() {
+    public function getTopBar( $text ) {
 
         echo '<div class="gradient-bg">
                   <div class="text-center">
                       <div class="main-sign" style="padding-top: 80px;">
-                          <h1 class="any-problems">Any problems with Sign In?</h1>
+                          <h1 class="any-problems">' . $text . '</h1>
                       </div>
                   </div>
               </div>';
@@ -38,7 +38,6 @@ class ForgotView extends DefaultView
                           Follow the instructions below.</h1>
                     </div>
                     <form action="check-first-step" method="get">
-                        <input type="hidden" name="session_auth" id="session_auth" value="' . $_SESSION["session_auth"] . '" />
 
                         <div class="container">
                             <div class="row">
@@ -46,7 +45,7 @@ class ForgotView extends DefaultView
                                 <div class="col-md-4">';
 
         if(isset($_GET['error_email'])){
-            $this->errorEmailMessage();
+            $this->getErrorMessage( 'Email that you have written not found in our database! Please, check another one.' );
         }
 
         echo                       '<div class="form-group" style="margin-top: 15px;">
@@ -69,23 +68,88 @@ class ForgotView extends DefaultView
     /*
      * Alert wrong email or password
      */
-    private function errorEmailMessage() {
+    protected function getErrorMessage( $text ){
 
         echo '<div class="alert alert-danger" role="alert">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                <span class="sr-only">Error:</span>
-                Email that you have written not found in our database! Please, check another one.
-              </div>';
+                <span class="sr-only">Error:</span>' . $text . '</div>';
     }
 
     public function getSecondStep() {
 
-        echo '';
+        echo '<div class="main">
+                    <div class="text-center">
+                          <h1 id="get-started">Verify your birthday to continue.</h1>
+                    </div>
+                    <form action="check-second-step" method="get">
+                        <input type="hidden" value="' . $_GET["email"] . '" name="email" id="email" />
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4">';
+
+        if(isset($_GET['error_day_of_birth'])){
+            $this->getErrorMessage( 'Your information doesn\'t match the security information.' );
+        }
+
+        echo                       '<div class="form-group" style="margin-top: 15px;">
+                                        <input type="date" class="form-control" id="day_of_birth" name="day_of_birth" required />
+                                    </div>
+
+                                    <div class="text-center" style="margin-top: 50px;">
+                                        <button class="btn_as_link links" id="link">Next <img src="/shop/images/arrow-blue.png" width="20" height="20"/></button>
+                                    </div>
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+                        </div>
+                    </form>
+              </div>';
     }
 
     public function getThirdStep() {
 
-        echo '';
+        echo '<div class="main">
+                    <div class="text-center">
+                          <h1 id="get-started">Answer security questions</h1>
+                    </div>
+                    <form action="check-third-step" method="get">
+                        <input type="hidden" value="' . $_GET["email"] . '" name="email" id="email" />
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6" style="margin-top: 50px;">';
+
+        if(isset($_GET['error_day_of_birth'])){
+            $this->getErrorMessage( 'Your information doesn\'t match the security information.' );
+        }
+
+        echo '<h1 class="question">' . $this->model->getQuestion1() . '</h1>';
+        echo '<div class="form-group" style="margin-top: 15px;">
+                  <input type="text" class="form-control" placeholder="Answer for Question 1" id="sc-a-1" name="sc-a-1" required />
+             </div>';
+
+        echo '<h1 class="question">' . $this->model->getQuestion2() . '</h1>';
+        echo '<div class="form-group" style="margin-top: 15px;">
+                  <input type="text" class="form-control" placeholder="Answer for Question 2" id="sc-a-2" name="sc-a-2" required />
+             </div>';
+
+        echo '<h1 class="question">' . $this->model->getQuestion3() . '</h1>';
+        echo '<div class="form-group" style="margin-top: 15px;">
+                  <input type="text" class="form-control" placeholder="Answer for Question 3" id="sc-a-3" name="sc-a-3" required />
+             </div>';
+
+        echo                       '<div class="text-center" style="margin-top: 50px;">
+                                        <button class="btn_as_link links" id="link">Next <img src="/shop/images/arrow-blue.png" width="20" height="20"/></button>
+                                    </div>
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+                        </div>
+                    </form>
+              </div>';
     }
 
     public function getFourthStep() {
