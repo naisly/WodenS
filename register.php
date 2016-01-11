@@ -29,7 +29,7 @@ if(!isset($_POST['email'])) {
     #$controller->actionGetData();
     $controller->actionCheckProvidedEmail();
 
-    $view->DoctypeView( 'Registration Completed' );
+    $view->DoctypeView( 'Registration' );
     $view->actionValidate();
     $controller->actionDoInsertion();
 }

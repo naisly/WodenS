@@ -158,11 +158,15 @@ class ForgotController extends DefaultController
             }
         }
 
+        session_start();
+
         if(( $sc_a_1 == $answer1 ) && ( $sc_a_2 == $answer2 ) && ( $sc_a_3 == $answer3 )){
             header('Location: /shop/forgot-password/?session_auth=' . $_SESSION['session_auth'] . '&email=' . urldecode($email) . '&day_of_birth=' . urldecode($day_of_birth) . '&sc-a-1=' . urldecode($sc_a_1) . '&sc-a-2=' . urldecode($sc_a_2) . '&sc-a-3=' . urldecode($sc_a_3));
         } else {
             header('Location: /shop/forgot-password/?session_auth=' . $_SESSION['session_auth'] . '&email=' . urldecode($email) . '&day_of_birth=' . urldecode($day_of_birth) . '&error_questions=1');
         }
+
+        session_write_close();
     }
 
     public function actionChangePassword() {
@@ -201,6 +205,61 @@ class ForgotController extends DefaultController
             header('Location: /shop/forgot-password/?success=true');
         } else {
             header('Location: /shop/forgot-password/?session_auth=' . $_SESSION['session_auth'] . '&email=' . urldecode($email) . '&day_of_birth=' . urldecode($day_of_birth) . '&sc-a-1=' . urldecode($sc_a_1) . '&sc-a-2=' . urldecode($sc_a_2) . '&sc-a-3=' . urldecode($sc_a_3) . '&success=false');
+        }
+
+    }
+
+    public function actionSaveDataFromInjection() {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        if(isset($_GET['email'])){
+            $email = $_GET['email'];
+
+            $sql_query = "SELECT * FROM users WHERE email='$email'";
+
+            $result = $mysqli->query($sql_query);
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $day_of_birth = $row['day_of_birth'];
+                    $answer1 = $row['answer1'];
+                    $answer2 = $row['answer2'];
+                    $answer3 = $row['answer3'];
+                }
+
+                if(isset($_GET['day_of_birth'])){
+                    $new_date = substr($day_of_birth, 0, 10);
+
+                    if($_GET['day_of_birth'] !== $new_date){
+                        header('Location: /shop/forgot-password/');
+                    }
+                }
+
+                if(isset($_GET['sc-a-1'])){
+                    if($_GET['sc-a-1'] !== $answer1){
+                        header('Location: /shop/forgot-password/');
+                    }
+                }
+
+                if(isset($_GET['sc-a-2'])){
+                    if($_GET['sc-a-2'] !== $answer2){
+                        header('Location: /shop/forgot-password/');
+                    }
+                }
+
+                if(isset($_GET['sc-a-3'])){
+                    if($_GET['sc-a-3'] !== $answer3){
+                        header('Location: /shop/forgot-password/');
+                    }
+                }
+            } else {
+                header('Location: /shop/forgot-password/');
+            }
+        } else {
+            #header('Location: /shop/forgot-password/');
         }
 
     }

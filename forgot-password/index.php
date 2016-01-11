@@ -18,10 +18,12 @@ $view = new ForgotView( $model );
 
 $controller->actionGetHeaderCart();
 
+$controller->actionSaveDataFromInjection();
+
 $view->DoctypeView( 'Recover your Woden Sims Account' );
 $view->headerView( 'Recover your Woden Sims Account' );
 
-if(isset($_GET['session_auth']) && !isset($_GET['email'])){
+if(!isset($_GET['email'])){
     $view->getTopBar( 'Any problems with Sign In?' );
     $view->getFirstStep();
 } else if(isset($_GET['email']) && !isset($_GET['day_of_birth'])){

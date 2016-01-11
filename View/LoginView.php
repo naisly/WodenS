@@ -443,23 +443,11 @@ class LoginView extends DefaultView
     }
 
     /*
-     * Alert wrong email
-     */
-    private function errorEmailMessage() {
-
-        echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px !important;">
-                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                <span class="sr-only">Error:</span>
-                Please enter a valid email address or check the second one
-              </div>';
-    }
-
-    /*
      * Alert wrong password
      */
     private function errorPasswordMessage() {
 
-        echo '<div class="alert alert-danger" role="alert">
+        echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 Please write correct password or check the second one
@@ -471,7 +459,7 @@ class LoginView extends DefaultView
      */
     private function errorMinCountMessage() {
 
-        echo '<div class="alert alert-danger" role="alert">
+        echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 Password may contain at least 6 characters
@@ -506,12 +494,6 @@ class LoginView extends DefaultView
      * Alert success
      */
     private function successMessage() {
-
-        /*echo '<div class="alert alert-success" role="alert" style="margin-top: -20px;">
-                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                <span class="sr-only">Error:</span>
-                Well done! Thank you for the register. <a href="login">Login >></a>
-                </div>';*/
 
         echo '<div class="text-center thank-you">
                   <h1>Thank you for the registration.</h1>

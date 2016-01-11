@@ -110,10 +110,14 @@ ul.hor_nav li {
     margin-top: 10% !important;
 }
 .register-bg {
-    margin-top: -20px;
-    background: linear-gradient(to top, #e4e4e4, #777);
+    margin-top: -70px;
+    padding-top: 40px;
+    /*background: linear-gradient(to top, #e4e4e4, #777);*/
     /*background-color: #666;*/
-    height: 80px;
+    background: url('../images/gradient-bg.jpg') center no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+    height: 150px;
     z-index: 1000;
 }
 .one-account {
