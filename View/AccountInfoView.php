@@ -148,6 +148,10 @@ class AccountInfoView extends AccountOrderView
             if($_GET['success_email'] == 1){
                 $this->successMessage('Your email was successfully changed.');
             }
+        } else if(isset($_GET['success_username'])){
+            if($_GET['success_username'] == 1){
+                $this->successMessage('Your First name and Last name was successfully changed.');
+            }
         }
 
         echo       '<div class="row">

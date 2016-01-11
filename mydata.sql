@@ -230,7 +230,7 @@ SELECT product_name, photo, description, category, price, previous_price, time_o
   id, quantity, shipping, average_price FROM phones WHERE product_name = 'Iphone 5S' AND price > 100 AND price < 1500;
 
 CREATE TABLE users (
-  id INT(11) NOT NULL,
+  id INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   email VARCHAR(200) NOT NULL,
   password VARCHAR(100) NOT NULL,
   first_name VARCHAR(100) NOT NULL,
