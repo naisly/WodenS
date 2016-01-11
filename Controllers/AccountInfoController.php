@@ -187,7 +187,7 @@ class AccountInfoController extends AccountOrderController
         }
 
         if($_POST['email'] !== $_POST['email_again']){
-            header('Location: /shop/account/?email_error=1');
+            header('Location: /shop/account/?emails_not_match=1');
         } else if($password !== $password_database){
             header('Location: /shop/account/?wrong_password=1');
         } else if(in_array($email, $email_array)){
@@ -270,11 +270,11 @@ class AccountInfoController extends AccountOrderController
         }
 
         if($new_password !== $confirm_new_password){
-            header('Location: /shop/account/?incorrect_password=1');
+            header('Location: /shop/account/?passwords_not_match=1');
         } else if($password !== $password_database){
             header('Location: /shop/account/?wrong_password=1');
         } else if(strlen($new_password) < 7){
-            header('Location: /shop/account/?password_error=2');
+            header('Location: /shop/account/?password_count_error=1');
         } else {
 
             $query = $mysqli->prepare("UPDATE users SET password='$new_password' WHERE email='" . $_SESSION['login_user'] . '\'');

@@ -130,20 +130,20 @@ class AccountInfoView extends AccountOrderView
             if($_GET['wrong_password'] == 1) {
                 $this->errorMessage('Incorrect password. The data does not match the security information.');
             }
-        } else if(isset($_GET['email_error'])) {
-            if($_GET['email_error'] == 1) {
-                $this->errorMessage('Incorrect email or check the second one.');
+        } else if(isset($_GET['emails_not_match'])) {
+            if($_GET['emails_not_match'] == 1) {
+                $this->errorMessage('Incorrect input emails or check that they match.');
             }
         } else if(isset($_GET['email_registered'])) {
             if($_GET['email_registered'] == 1) {
                 $this->errorMessage('This email already in use.');
             }
         } else if(isset($_GET['password_error'])) {
-            if($_GET['password_error'] == 1) {
+            if ($_GET['password_error'] == 1) {
                 $this->errorMessage('Incorrect password or check the second one.');
-            } else if($_GET['password_error'] == 2){
-                $this->errorMessage('Password at least must contain 7 letters.');
             }
+        } else if($_GET['password_count_error'] == 1){
+                $this->errorMessage('Password at least must contain 7 letters.');
         } else if(isset($_GET['success_email'])){
             if($_GET['success_email'] == 1){
                 $this->successMessage('Your email was successfully changed.');
@@ -152,12 +152,11 @@ class AccountInfoView extends AccountOrderView
             if($_GET['success_username'] == 1){
                 $this->successMessage('Your First name and Last name was successfully changed.');
             }
-        } else if(isset($_GET['incorrect_password'])){
-            if($_GET['incorrect_password'] == 1){
-                $this->errorMessage('Incorrect input password or check the second one.');
+        } else if(isset($_GET['passwords_not_match'])){
+            if($_GET['passwords_not_match'] == 1){
+                $this->errorMessage('Incorrect input passwords or check that they match.');
             }
-        }
-        else if(isset($_GET['success_password'])){
+        } else if(isset($_GET['success_password'])){
             if($_GET['success_password'] == 1){
                 $this->successMessage('Your password was successfully changed.');
             }
