@@ -598,6 +598,16 @@ class DefaultView
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Registration Completed</h></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'forgot-password'){
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Recover your Woden Sims Account</h></a>';
+                } else if (isset($_GET['session_auth']) && !isset($_GET['email']) && !isset($_GET['day_of_birth']) && !isset($_GET['sc-a-1']) && !isset($_GET['sc-a-2']) && !isset($_GET['sc-a-3'])) {
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Step 1</h></a>';
+                } else if (isset($_GET['session_auth']) && isset($_GET['email']) && !isset($_GET['day_of_birth']) && !isset($_GET['sc-a-1']) && !isset($_GET['sc-a-2']) && !isset($_GET['sc-a-3'])) {
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Step 2</h></a>';
+                } else if (isset($_GET['session_auth']) && isset($_GET['email']) && isset($_GET['day_of_birth']) && !isset($_GET['sc-a-1']) && !isset($_GET['sc-a-2']) && !isset($_GET['sc-a-3'])) {
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Step 3</h></a>';
+                } else if (isset($_GET['session_auth']) && isset($_GET['email']) && isset($_GET['day_of_birth']) && isset($_GET['sc-a-1']) && isset($_GET['sc-a-2']) && isset($_GET['sc-a-3'])) {
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Last step</h></a>';
+                } else if (isset($_GET['success'])){
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Success</h></a>';
                 }
                 else {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . ucfirst($this->model->getBreadcrumbs($i)) . "</a>";
