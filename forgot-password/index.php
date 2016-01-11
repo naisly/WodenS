@@ -23,7 +23,7 @@ $controller->actionSaveDataFromInjection();
 $view->DoctypeView( 'Recover your Woden Sims Account' );
 $view->headerView( 'Recover your Woden Sims Account' );
 
-if(!isset($_GET['email'])){
+if(!isset($_GET['email']) && !isset($_GET['success'])){
     $view->getTopBar( 'Any problems with Sign In?' );
     $view->getFirstStep();
 } else if(isset($_GET['email']) && !isset($_GET['day_of_birth'])){

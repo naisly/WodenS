@@ -37,7 +37,7 @@ class ForgotView extends DefaultView
                           <h1 id="sub-get-started">We can help you reset your password and security info. <br />
                           Follow the instructions below.</h1>
                     </div>
-                    <form action="check-first-step" method="get">
+                    <form action="check-data" method="get">
 
                         <div class="container">
                             <div class="row">
@@ -81,7 +81,7 @@ class ForgotView extends DefaultView
                     <div class="text-center">
                           <h1 id="get-started">Verify your birthday to continue.</h1>
                     </div>
-                    <form action="check-second-step" method="get">
+                    <form action="check-data" method="get">
                         <input type="hidden" value="' . $_GET["email"] . '" name="email" id="email" />
 
                         <div class="container">
@@ -114,7 +114,7 @@ class ForgotView extends DefaultView
                     <div class="text-center">
                           <h1 id="get-started">Answer security questions</h1>
                     </div>
-                    <form action="check-third-step" method="get">
+                    <form action="check-data" method="get">
                         <input type="hidden" value="' . $_GET["email"] . '" name="email" id="email" />
                         <input type="hidden" value="' . $_GET["day_of_birth"] . '" name="day_of_birth" id="day_of_birth" />
 
@@ -160,8 +160,12 @@ class ForgotView extends DefaultView
                           <h1 id="get-started">Please, complete the last step in your Recovering process.</h1>
                           <h1 id="sub-get-started">Enter the new password and make sure that they are the same.</h1>
                     </div>
-                    <form action="check-last-step" method="post">
+                    <form action="check-data" method="post">
                         <input type="hidden" value="' . $_GET["email"] . '" name="email" id="email" />
+                        <input type="hidden" value="' . $_GET["day_of_birth"] . '" name="day_of_birth" id="day_of_birth" />
+                        <input type="hidden" value="' . $_GET["sc-a-1"] . '" name="sc-a-1" id="sc-a-1" />
+                        <input type="hidden" value="' . $_GET["sc-a-2"] . '" name="sc-a-2" id="sc-a-2" />
+                        <input type="hidden" value="' . $_GET["sc-a-3"] . '" name="sc-a-3" id="sc-a-3" />
 
                         <div class="container">
                             <div class="row">
@@ -203,7 +207,7 @@ class ForgotView extends DefaultView
         echo '<div class="text-center" style="margin-top: 200px;">
                   <h1 class="success">You have successfully changed your password.</h1>
                   <h1 class="sub-success">Now you can use your Account</h1>
-                  <a id="main-link" href="/shop/shop/buy-phone/" style="text-decoration: none; margin-left: 0 !important; font-size: 30px;">Login<img src="/shop/images/arrow-blue-f1.png" width="25" height="25"/></a>
+                  <a id="main-link" href="/shop/login" style="text-decoration: none; margin-left: 0 !important; font-size: 30px;">Login<img src="/shop/images/arrow-blue-f1.png" width="25" height="25"/></a>
               </div>
 
               <img src="/shop/images/phones-bg.png" class="full-image-cascade" />';

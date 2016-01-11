@@ -7,7 +7,7 @@
  * Time: 23:35
  */
 
-include_once('View/DefaultView.php');
+include_once('DefaultView.php');
 
 class PageNotFoundView extends DefaultView
 {

@@ -178,17 +178,17 @@ class ForgotController extends DefaultController
         if(isset($_POST['email'])){
             $email = $_POST['email'];
         }
-        if(isset($_GET['day_of_birth'])){
-            $day_of_birth = $_GET['day_of_birth'];
+        if(isset($_POST['day_of_birth'])){
+            $day_of_birth = $_POST['day_of_birth'];
         }
-        if(isset($_GET['sc-a-1'])){
-            $sc_a_1 = $_GET['sc-a-1'];
+        if(isset($_POST['sc-a-1'])){
+            $sc_a_1 = $_POST['sc-a-1'];
         }
-        if(isset($_GET['sc-a-2'])){
-            $sc_a_2 = $_GET['sc-a-2'];
+        if(isset($_POST['sc-a-2'])){
+            $sc_a_2 = $_POST['sc-a-2'];
         }
-        if(isset($_GET['sc-a-3'])){
-            $sc_a_3 = $_GET['sc-a-3'];
+        if(isset($_POST['sc-a-3'])){
+            $sc_a_3 = $_POST['sc-a-3'];
         }
         if(isset($_POST['password'])){
             $password = $_POST['password'];
@@ -204,7 +204,11 @@ class ForgotController extends DefaultController
 
             header('Location: /shop/forgot-password/?success=true');
         } else {
+            session_start();
+
             header('Location: /shop/forgot-password/?session_auth=' . $_SESSION['session_auth'] . '&email=' . urldecode($email) . '&day_of_birth=' . urldecode($day_of_birth) . '&sc-a-1=' . urldecode($sc_a_1) . '&sc-a-2=' . urldecode($sc_a_2) . '&sc-a-3=' . urldecode($sc_a_3) . '&success=false');
+
+            session_write_close();
         }
 
     }
