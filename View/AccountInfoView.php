@@ -101,16 +101,60 @@ class AccountInfoView extends AccountOrderView
         }
     }
 
+    /*
+     * Alert wrong email or password
+     */
+    private function errorMessage( $text ) {
+
+        echo '<div class="alert alert-danger" role="alert" style="margin-top: 15px;">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>' .
+                $text .
+              '</div>';
+    }
+
+    private function successMessage( $text ) {
+
+        echo '<div class="alert alert-success" role="alert" style="margin-top: 15px;">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>' .
+            $text .
+            '</div>';
+    }
 
     private function changeAccountData() {
 
-        echo       '<h class="main-page">Change your account entrance</h>
+        echo       '<h class="main-page">Change your account entrance</h>';
 
-                    <div class="row">
+        if(isset($_GET['wrong_password'])) {
+            if($_GET['wrong_password'] == 1) {
+                $this->errorMessage('Incorrect password. The data does not match the security information.');
+            }
+        } else if(isset($_GET['email_error'])) {
+            if($_GET['email_error'] == 1) {
+                $this->errorMessage('Incorrect email or check the second one.');
+            }
+        } else if(isset($_GET['email_registered'])) {
+            if($_GET['email_registered'] == 1) {
+                $this->errorMessage('This email already in use.');
+            }
+        } else if(isset($_GET['password_error'])) {
+            if($_GET['password_error'] == 1) {
+                $this->errorMessage('Incorrect password or check the second one.');
+            } else if($_GET['password_error'] == 2){
+                $this->errorMessage('Password at least must contain 7 letters.');
+            }
+        } else if(isset($_GET['success_email'])){
+            if($_GET['success_email'] == 1){
+                $this->successMessage('Your email was successfully changed.');
+            }
+        }
+
+        echo       '<div class="row">
                         <div class="col-md-4" id="no-border">
                             <h class="change">Change Your Active Email</h>
-                            <h1 class="make-sure">Please, be sure that you have access to this email.</h1>
-                            <form role="form" action="account-change-email.php" method="post">
+                            <h1 class="make-sure" style="padding-bottom: 19px;">Please, be sure that you have access to this email.</h1>
+                            <form role="form" action="change-data" method="post">
                                 <div class="form-group change-spacer">
                                     <input type="email" class="form-control" name="email" id="email" placeholder="New Email Address" required />
                                 </div>
@@ -126,7 +170,7 @@ class AccountInfoView extends AccountOrderView
                         <div class="col-md-4" id="border">
                             <h class="change">Change Your Username</h>
                             <h1 class="make-sure">Please, fill the correct data in order to have no problems with shipping.</h1>
-                            <form role="form" action="account-change-name.php" method="post">
+                            <form role="form" action="change-data" method="post">
                                 <div class="form-group change-spacer">
                                     <input type="text" class="form-control" name="first_name" id="first_name" placeholder="New First Name" required />
                                 </div>
@@ -141,7 +185,8 @@ class AccountInfoView extends AccountOrderView
                         </div>
                         <div class="col-md-4" id="no-border">
                             <h class="change">Change Your Password</h>
-                            <form role="form" action="account-change-name.php" method="post">
+                            <h1 class="make-sure">If you forgot your password, please follow those instructions for <a href="/shop/forgot-password/" class="link-forgot">recovering your password.</a></h1>
+                            <form role="form" action="change-data" method="post">
                                 <div class="form-group change-spacer">
                                     <input type="text" class="form-control" name="new_password" id="new_password" placeholder="New Password" required />
                                 </div>

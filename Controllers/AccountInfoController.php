@@ -139,4 +139,78 @@ class AccountInfoController extends AccountOrderController
         $this->model->setAccountCountry( $country_array );
         $this->model->setAccountGift( $wrap_array );
     }
+
+    public function actionChangeData() {
+
+        if(isset($_POST['email']) && isset($_POST['email_again']) && isset($_POST['password'])) {
+            $this->actionChangeEmail();
+        } else if(isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['password'])) {
+            $this->actionChangeUsername();
+        } else if(isset($_POST['new_password']) && isset($_POST['confirm_new_password']) && isset($_POST['password'])){
+            $this->actionChangePassword();
+        }
+    }
+
+    private function actionChangeEmail(){
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        session_start();
+
+        $sql_query = "SELECT password FROM users WHERE email='" . $_SESSION['login_user'] . '\'';
+        $result = $mysqli->query( $sql_query );
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                $password_database = $row['password'];
+            }
+        }
+
+        $sql_stmt = "SELECT email FROM users";
+        $result_stmt = $mysqli->query($sql_stmt);
+
+        $email_array = array();
+
+        if ($result_stmt->num_rows > 0) {
+            while ($row = $result_stmt->fetch_assoc()) {
+                $email_array = array_merge($email_array, array_map('trim', explode(",", $row['email'])));
+            }
+        }
+
+        $count_emails = count($email_array);
+
+        if(isset($_POST['email']) && isset($_POST['email_again']) && isset($_POST['password'])){
+            $email = $_POST['email'];
+            $email_again = $_POST['email_again'];
+            $password = $_POST['password'];
+        }
+
+        if($_POST['email'] !== $_POST['email_again']){
+            header('Location: /shop/account/?email_error=1');
+        } else if($_POST['password'] !== $password_database){
+            header('Location: /shop/account/?wrong_password=1');
+        } else {
+            $i = 0;
+            while($i < $count_emails) {
+                if($email == $email_array[$i]){
+                    header('Location: /shop/account/?email_registered=1');
+                }
+
+                $i++;
+            }
+        }
+
+        $query = $mysqli->prepare("UPDATE users SET email='$email' WHERE email='" . $_SESSION['login_user'] . '\'');
+        $query->execute();
+
+        $_SESSION['login_user'] = $email;
+
+        header('Location: /shop/account/?success_email=1');
+
+        session_write_close();
+
+    }
 }
