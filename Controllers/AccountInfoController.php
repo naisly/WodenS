@@ -244,4 +244,46 @@ class AccountInfoController extends AccountOrderController
 
         session_write_close();
     }
+
+    private function actionChangePassword(){
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        session_start();
+
+        $sql_query = "SELECT password FROM users WHERE email='" . $_SESSION['login_user'] . '\'';
+        $result = $mysqli->query( $sql_query );
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while ($row = $result->fetch_assoc()) {
+                $password_database = $row['password'];
+            }
+        }
+
+        if(isset($_POST['new_password']) && isset($_POST['confirm_new_password']) && isset($_POST['password'])){
+            $new_password = $_POST['new_password'];
+            $confirm_new_password = $_POST['confirm_new_password'];
+            $password = $_POST['password'];
+        }
+
+        if($new_password !== $confirm_new_password){
+            header('Location: /shop/account/?incorrect_password=1');
+        } else if($password !== $password_database){
+            header('Location: /shop/account/?wrong_password=1');
+        } else if(strlen($new_password) < 7){
+            header('Location: /shop/account/?password_error=2');
+        } else {
+
+            $query = $mysqli->prepare("UPDATE users SET password='$new_password' WHERE email='" . $_SESSION['login_user'] . '\'');
+            $query->execute();
+
+            header('Location: /shop/account/?success_password=1');
+        }
+
+        session_write_close();
+
+    }
 }

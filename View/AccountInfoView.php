@@ -152,6 +152,15 @@ class AccountInfoView extends AccountOrderView
             if($_GET['success_username'] == 1){
                 $this->successMessage('Your First name and Last name was successfully changed.');
             }
+        } else if(isset($_GET['incorrect_password'])){
+            if($_GET['incorrect_password'] == 1){
+                $this->errorMessage('Incorrect input password or check the second one.');
+            }
+        }
+        else if(isset($_GET['success_password'])){
+            if($_GET['success_password'] == 1){
+                $this->successMessage('Your password was successfully changed.');
+            }
         }
 
         echo       '<div class="row">
@@ -192,10 +201,10 @@ class AccountInfoView extends AccountOrderView
                             <h1 class="make-sure">If you forgot your password, please follow those instructions for <a href="/shop/forgot-password/" class="link-forgot">recovering your password.</a></h1>
                             <form role="form" action="change-data" method="post">
                                 <div class="form-group change-spacer">
-                                    <input type="text" class="form-control" name="new_password" id="new_password" placeholder="New Password" required />
+                                    <input type="password" class="form-control" name="new_password" id="new_password" placeholder="New Password" required />
                                 </div>
                                 <div class="form-group change-spacer">
-                                    <input type="text" class="form-control" name="confirm_new_password" id="confirm_new_password" placeholder="Confirm New Password" required />
+                                    <input type="password" class="form-control" name="confirm_new_password" id="confirm_new_password" placeholder="Confirm New Password" required />
                                 </div>
                                 <div class="input-group">
                                   <input type="password" name="password" id="password" class="form-control" placeholder="Current Password" style=" border-right: none !important;">
