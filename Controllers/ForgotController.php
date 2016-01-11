@@ -123,4 +123,85 @@ class ForgotController extends DefaultController
         $this->model->setQuestion2($question2);
         $this->model->setQuestion3($question3);
     }
+
+    public function actionCheckSecurityQuestions() {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        if(isset($_GET['email'])){
+            $email = $_GET['email'];
+        }
+        if(isset($_GET['day_of_birth'])){
+            $day_of_birth = $_GET['day_of_birth'];
+        }
+        if(isset($_GET['sc-a-1'])){
+            $sc_a_1 = $_GET['sc-a-1'];
+        }
+        if(isset($_GET['sc-a-2'])){
+            $sc_a_2 = $_GET['sc-a-2'];
+        }
+        if(isset($_GET['sc-a-3'])){
+            $sc_a_3 = $_GET['sc-a-3'];
+        }
+
+        $sql_query = "SELECT answer1, answer2, answer3 FROM users WHERE email='$email'";
+
+        $result = $mysqli->query($sql_query);
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $answer1 = $row['answer1'];
+                $answer2 = $row['answer2'];
+                $answer3 = $row['answer3'];
+            }
+        }
+
+        if(( $sc_a_1 == $answer1 ) && ( $sc_a_2 == $answer2 ) && ( $sc_a_3 == $answer3 )){
+            header('Location: /shop/forgot-password/?session_auth=' . $_SESSION['session_auth'] . '&email=' . urldecode($email) . '&day_of_birth=' . urldecode($day_of_birth) . '&sc-a-1=' . urldecode($sc_a_1) . '&sc-a-2=' . urldecode($sc_a_2) . '&sc-a-3=' . urldecode($sc_a_3));
+        } else {
+            header('Location: /shop/forgot-password/?session_auth=' . $_SESSION['session_auth'] . '&email=' . urldecode($email) . '&day_of_birth=' . urldecode($day_of_birth) . '&error_questions=1');
+        }
+    }
+
+    public function actionChangePassword() {
+
+        include_once('/../Storage.php');
+        $db = Storage::getInstance();
+        $mysqli = $db->getConnection();
+
+        if(isset($_POST['email'])){
+            $email = $_POST['email'];
+        }
+        if(isset($_GET['day_of_birth'])){
+            $day_of_birth = $_GET['day_of_birth'];
+        }
+        if(isset($_GET['sc-a-1'])){
+            $sc_a_1 = $_GET['sc-a-1'];
+        }
+        if(isset($_GET['sc-a-2'])){
+            $sc_a_2 = $_GET['sc-a-2'];
+        }
+        if(isset($_GET['sc-a-3'])){
+            $sc_a_3 = $_GET['sc-a-3'];
+        }
+        if(isset($_POST['password'])){
+            $password = $_POST['password'];
+        }
+        if(isset($_POST['repeat_password'])){
+            $repeat_password = $_POST['repeat_password'];
+        }
+
+        if($password == $repeat_password){
+            $sql_query = $mysqli->prepare("UPDATE users SET password='$password' where email='$email'");
+
+            $sql_query->execute();
+
+            header('Location: /shop/forgot-password/?success=true');
+        } else {
+            header('Location: /shop/forgot-password/?session_auth=' . $_SESSION['session_auth'] . '&email=' . urldecode($email) . '&day_of_birth=' . urldecode($day_of_birth) . '&sc-a-1=' . urldecode($sc_a_1) . '&sc-a-2=' . urldecode($sc_a_2) . '&sc-a-3=' . urldecode($sc_a_3) . '&success=false');
+        }
+
+    }
 }

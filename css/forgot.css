@@ -30,3 +30,7 @@
 .question {
     font-size: 22px;
 }
+.success, .sub-success {
+    font-size: 40px;
+    letter-spacing: -1px;
+}

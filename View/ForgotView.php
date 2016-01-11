@@ -116,13 +116,14 @@ class ForgotView extends DefaultView
                     </div>
                     <form action="check-third-step" method="get">
                         <input type="hidden" value="' . $_GET["email"] . '" name="email" id="email" />
+                        <input type="hidden" value="' . $_GET["day_of_birth"] . '" name="day_of_birth" id="day_of_birth" />
 
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-3"></div>
                                 <div class="col-md-6" style="margin-top: 50px;">';
 
-        if(isset($_GET['error_day_of_birth'])){
+        if(isset($_GET['error_questions'])){
             $this->getErrorMessage( 'Your information doesn\'t match the security information.' );
         }
 
@@ -152,13 +153,59 @@ class ForgotView extends DefaultView
               </div>';
     }
 
-    public function getFourthStep() {
-
-        echo '';
-    }
-
     public function getLastStep() {
 
-        echo '';
+        echo '<div class="main">
+                    <div class="text-center">
+                          <h1 id="get-started">Please, complete the last step in your Recovering process.</h1>
+                          <h1 id="sub-get-started">Enter the new password and make sure that they are the same.</h1>
+                    </div>
+                    <form action="check-last-step" method="post">
+                        <input type="hidden" value="' . $_GET["email"] . '" name="email" id="email" />
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4">';
+
+        if(isset($_GET['success'])){
+            if($_GET['success'] == 'false') {
+                $this->getErrorMessage('The entered passwords do not match. Please, fill the correct data.');
+            }
+        }
+
+        echo                       '<div class="form-group" style="margin-top: 15px;">
+                                        <input type="password" class="form-control" placeholder="New password" id="password" name="password" required />
+                                    </div>
+
+                                    <div class="form-group" style="margin-top: 15px;">
+                                        <input type="password" class="form-control" placeholder="New password again" id="repeat_password" name="repeat_password" required />
+                                    </div>
+
+                                    <div class="text-center" style="margin-top: 50px;">
+                                        <button class="btn_as_link links" id="link">Complete</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+                        </div>
+                    </form>
+              </div>';
+    }
+
+    public function getSuccessMessage() {
+
+        echo '<style>
+                  body, html {
+                      background-color: #f1f1f1;;
+                  }
+              </style>';
+        echo '<div class="text-center" style="margin-top: 200px;">
+                  <h1 class="success">You have successfully changed your password.</h1>
+                  <h1 class="sub-success">Now you can use your Account</h1>
+                  <a id="main-link" href="/shop/shop/buy-phone/" style="text-decoration: none; margin-left: 0 !important; font-size: 30px;">Login<img src="/shop/images/arrow-blue-f1.png" width="25" height="25"/></a>
+              </div>
+
+              <img src="/shop/images/phones-bg.png" class="full-image-cascade" />';
     }
 }

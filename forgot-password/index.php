@@ -27,14 +27,15 @@ if(isset($_GET['session_auth']) && !isset($_GET['email'])){
 } else if(isset($_GET['email']) && !isset($_GET['day_of_birth'])){
     $view->getTopBar( 'Reset Password' );
     $view->getSecondStep();
-} else if(isset($_GET['day_of_birth'])){
+} else if(isset($_GET['day_of_birth']) && !isset($_GET['sc-a-1'])){
     $controller->actionGetQuestion();
     $view->getTopBar( 'Secret Questions' );
     $view->getThirdStep();
-} else if(isset($_GET['email']) && isset($_GET['first_name']) && isset($_GET['last_name'])){
-    $view->getFourthStep();
-} else if(isset($_POST['new-password']) && isset($_POST['password-again'])){
+} else if(isset($_GET['sc-a-1']) && isset($_GET['sc-a-2']) && isset($_GET['sc-a-3'])){
+    $view->getTopBar( 'Change your password' );
     $view->getLastStep();
+} else if(isset($_GET['success'])){
+    $view->getSuccessMessage();
 }
 
 $view->actionGetFooter( 'Recover your Woden Sims Account' );
