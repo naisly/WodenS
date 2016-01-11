@@ -107,50 +107,51 @@ class AccountInfoView extends AccountOrderView
         echo       '<h class="main-page">Change your account entrance</h>
 
                     <div class="row">
-                        <div class="col-md-4" id="border-right">
+                        <div class="col-md-4" id="no-border">
                             <h class="change">Change Your Active Email</h>
+                            <h1 class="make-sure">Please, be sure that you have access to this email.</h1>
                             <form role="form" action="account-change-email.php" method="post">
                                 <div class="form-group change-spacer">
-                                    <label for="email" class="h-label">New Email address:</label>
-                                    <input type="email" class="form-control" id="email" />
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="New Email Address" required />
                                 </div>
-                                <div class="form-group">
-                                    <label for="password" class="h-label">Password:</label>
-                                    <input type="password" class="form-control" id="password" />
+                                <div class="form-group change-spacer">
+                                    <input type="email" class="form-control" name="email_again" id="email_again" placeholder="Confirm New Email Address" required />
                                 </div>
-                                <button class="btn btn-default pull-right">Submit</button>
+                                <div class="input-group">
+                                  <input type="password" name="password" id="password" class="form-control" placeholder="Password" style="border-right: none !important;">
+                                  <span class="input-group-addon" id="basic-addon2"><button class="image-as-button"><span class="glyphicon glyphicon-arrow-right" style="color: #666;"></span></button></span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4" id="border">
+                            <h class="change">Change Your Username</h>
+                            <h1 class="make-sure">Please, fill the correct data in order to have no problems with shipping.</h1>
+                            <form role="form" action="account-change-name.php" method="post">
+                                <div class="form-group change-spacer">
+                                    <input type="text" class="form-control" name="first_name" id="first_name" placeholder="New First Name" required />
+                                </div>
+                                <div class="form-group change-spacer">
+                                    <input type="text" class="form-control" name="last_name" id="last_name" placeholder="New Last Name" required />
+                                </div>
+                                <div class="input-group">
+                                  <input type="password" name="password" id="password" class="form-control" placeholder="Password" style=" border-right: none !important;">
+                                  <span class="input-group-addon" id="basic-addon2"><button class="image-as-button"><span class="glyphicon glyphicon-arrow-right" style="color: #666;"></span></button></span>
+                                </div>
                             </form>
                         </div>
                         <div class="col-md-4" id="no-border">
-                            <h class="change">Change Your Username</h>
+                            <h class="change">Change Your Password</h>
                             <form role="form" action="account-change-name.php" method="post">
                                 <div class="form-group change-spacer">
-                                    <label for="email" class="h-label">New Username:</label>
-                                    <input type="text" class="form-control" id="username" />
+                                    <input type="text" class="form-control" name="new_password" id="new_password" placeholder="New Password" required />
                                 </div>
-                                <div class="form-group">
-                                    <label for="password" class="h-label">Password:</label>
-                                    <input type="password" class="form-control" id="password" />
-                                </div>
-                                <button class="btn btn-default pull-right">Submit</button>
-                            </form>
-                        </div>
-                        <div class="col-md-4" id="border-left">
-                            <h class="change">Change Your Password</h>
-                            <form role="form" action="account-change-password.php" method="post">
                                 <div class="form-group change-spacer">
-                                    <label for="email" class="h-label">Password:</label>
-                                    <input type="password" class="form-control" id="username" />
+                                    <input type="text" class="form-control" name="confirm_new_password" id="confirm_new_password" placeholder="Confirm New Password" required />
                                 </div>
-                                <div class="form-group">
-                                    <label for="password" class="h-label">New Password:</label>
-                                    <input type="password" class="form-control" id="password1" />
+                                <div class="input-group">
+                                  <input type="password" name="password" id="password" class="form-control" placeholder="Current Password" style=" border-right: none !important;">
+                                  <span class="input-group-addon" id="basic-addon2"><button class="image-as-button"><span class="glyphicon glyphicon-arrow-right" style="color: #666;"></span></button></span>
                                 </div>
-                                <div class="form-group">
-                                    <label for="password" class="h-label">Repeat Your New Password:</label>
-                                    <input type="password" class="form-control" id="password2" />
-                                </div>
-                                <button class="btn btn-default pull-right">Submit</button>
                             </form>
                         </div>
                     </div>';
