@@ -178,11 +178,45 @@ class DevicesView extends IndexView
 
               <div class="container-fluid">
                   <div class="row">
-                      <div class="col-md-6 no-division-for-category" style="border-right: 1px solid white; border-bottom: 2px solid white;">
+                      <!--<div class="col-md-6 no-division-for-category" style="border-right: 1px solid white; border-bottom: 2px solid white;">
                           <a href="/shop/shop/buy-device/"><img src="/shop/images/ipad-usage1-w-text.jpg" class="full-image-cascade" /></a>
+                      </div>-->
+                      <div class="col-md-6 no-division-for-category">
+                          <a href="/shop/shop/buy-device/" style="text-decoration: none;"><div class="ipad-usage">
+                              <h1 class="main-ipad">Thin. Productive. Practical.</h1>
+                              <h1 class="sub-ipad"">Order it now</h1>
+                          </div>
                       </div>
-                      <div class="col-md-6 no-division-for-category" style="border-bottom: 2px solid white;">
+                      <!--<div class="col-md-6 no-division-for-category" style="border-bottom: 2px solid white;">
                           <a href="/shop/business/devices/"><img src="/shop/images/ipad-usage2-w-text.jpg" class="full-image-cascade" /></a>
+                      </div>-->
+                      <div class="col-md-6 no-division-for-category">
+                          <a href="/shop/business/devices/" style="text-decoration: none;"><div class="ipad-usage-next">
+                              <h1 class="reimagine-main">Reimagine your life with new technology</h1>
+                              <h1 class="reimagine-sub" style="color: black;">Discover for business</h1>
+                          </div></a>
+                      </div>
+
+                      <div class="container invisible-for-xs" style="padding-left: 0 !important; padding-right: 0 !important;">
+                          <h1 class="header-ipad">Thin. Productive. Practical.</h1>
+                          <a class="links" id="main-link" href="/shop/education/phones/" style="text-decoration: none;">';
+
+        echo $this->model->Translate('Order it now');
+
+        echo         ' ' . '<img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
+                          <div class="col-md-6 no-division-for-category" style="border-right: 1px solid white; border-bottom: 2px solid white;">
+                              <a href="/shop/shop/buy-device/"><img src="/shop/images/ipad-usage1.jpg" class="full-image-cascade" style="margin-top: 15px;" /></a>
+                          </div>
+
+                          <h1 class="header-ipad">Reimagine your life with new technology</h1>
+                          <a class="links" id="main-link" href="/shop/business/devices/" style="text-decoration: none;">';
+
+        echo $this->model->Translate('Discover for business');
+
+        echo         ' ' . '<img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
+                          <div class="col-md-6 no-division-for-category" style="border-bottom: 2px solid white;">
+                              <a href="/shop/business/devices/"><img src="/shop/images/ipad-usage2.jpg" class="full-image-cascade" style="margin-top: 15px;" /></a>
+                          </div>
                       </div>
                   </div>
               </div>';

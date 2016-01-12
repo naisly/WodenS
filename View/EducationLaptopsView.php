@@ -35,38 +35,22 @@ class EducationLaptopsView extends DefaultView
 
     public function getMain() {
 
-        echo '<div class="main-fixed-container">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-1"></div>
-                          <div class="col-md-10">
-                              <div class="fixed-main pull-left">
-                                  <h class="fixed-header">Laptops in Education</h>
-                              </div>
-                              <div class="buy-main pull-right">
-                                  <a style="color: white" class="btn btn-primary button-buy" href="../Notebooks.php">Buy</a>
-                              </div>
-                          </div>
-                          <div class="col-md-1"></div>
-                      </div>
-                  </div>
-              </div>
-              <div class="container middle">
+        echo '<div class="container middle">
                   <div class="row">
                       <div class="col-md-1"></div>
                       <div class="col-md-10">
                            <div class="bordered-middle">
                                 <div class="text-center">
-                                    <h id="main">Expand your skills of usage Laptops to improve your knowledge <br /> in area of education</h><br />
+                                    <h id="main">Expand your skills of usage Laptops to improve your knowledge in area of education</h><br />
 
                                     <div class="content-phones">
-                                        <h id="sub-every-phones">Laptop computers are becoming increasingly prevalent in education<br /> Great part of
-                                        skills required to maintain the device became readily to know all the special. <br /> While laptops may present opportunities
-                                        for distraction, utilizing portable computers in <br /> classrooms can yield several significant benefits.
+                                        <h id="sub-every-phones">Laptop computers are becoming increasingly prevalent in education. Great part of
+                                        skills required to maintain the device became readily to know all the special. While laptops may present opportunities
+                                        for distraction, utilizing portable computers in classrooms can yield several significant benefits.
                                         </h>
                                     </div>
 
-                                    <img src="../../images/education-laptops.jpg" id="education-laptop" />
+                                    <img src="../../images/laptops-falling.png" id="education-laptop" />
 
                                     <div id="education-divider"></div>
 
@@ -75,14 +59,14 @@ class EducationLaptopsView extends DefaultView
 
                                         <div class="content-phones">
                                             <h id="sub-every-phones">Laptops can provide a high level of interactivity between students, teachers and subject matter.
-                                            For instance, a teacher could challenge students to find the answer to a question <br /> about history or some other subject
+                                            For instance, a teacher could challenge students to find the answer to a question about history or some other subject
                                             using their laptops online. This would force students to conduct quick research and use creativity to find the answer, rather
-                                            than paging <br /> through a dense textbook.
+                                            than paging through a dense textbook.
                                             </h>
                                         </div>
                                     </div>
 
-                                    <img src="../../images/macbook-pro.jpg" id="macbook-pro" />
+                                    <img src="../../images/laptop-gold.jpg" id="macbook-pro" />
 
                                     <div class="content-phones">
                                         <h id="sub-every-phones">Another potential benefit of using laptops in classrooms is that using computers is more fun for students
@@ -114,7 +98,7 @@ class EducationLaptopsView extends DefaultView
                                                 <h id="sub-every-phones">Control your schedule via Macbook\'s Apps like Clocks or Calendar. Its really easy to make important marks
                                                 and control your time. Windows provide either those Apps whats make your life absolutely complete</h>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-4 margin-for-small-devices">
                                                 <h class=main-sub-every" style="font-size: 20px;">Collect / Compare all projects</h><br />
 
                                                 <div id="education-divider"></div>
@@ -123,7 +107,7 @@ class EducationLaptopsView extends DefaultView
                                                 Every project can be saved in one place for an reason to collect all data and rewrite them into another
                                                 one.</h>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-4 margin-for-small-devices">
                                                 <h class=main-sub-every" style="font-size: 20px;">Edit / Change everywhere</h><br />
 
                                                 <div id="education-divider"></div>
@@ -135,7 +119,7 @@ class EducationLaptopsView extends DefaultView
                                         </div>
                                     </div>
 
-                                    <img src="../../images/macbook.jpg" id="education-laptop" />
+                                    <img src="../../images/laptops-thin.png" id="education-laptop" />
 
                                     <div id="education-divider"></div>
 
@@ -151,7 +135,7 @@ class EducationLaptopsView extends DefaultView
                                                 <h id="sub-every-phones">Having students turn work in via email or another digital system is easier than collecting and sorting through
                                                 stacks of physical paper.</h>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-4 margin-for-small-devices">
                                                 <h class=main-sub-every" style="font-size: 20px;">Work remotely, increasing productivity</h><br />
 
                                                 <div id="education-divider"></div>
@@ -159,7 +143,7 @@ class EducationLaptopsView extends DefaultView
                                                 <h id="sub-every-phones">Whats more, digital assignments allow students that have to miss school to turn in work remotely, reducing the inequity
                                                 of allowing students extensions on assignments for missing class.</h>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-4 margin-for-small-devices">
                                                 <h class=main-sub-every" style="font-size: 20px;">The best result for the same time</h><br />
 
                                                 <div id="education-divider"></div>

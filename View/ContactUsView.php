@@ -35,22 +35,6 @@ class ContactUsView extends DefaultView
 
     private function getPage() {
 
-        echo '<div class="main-fixed-container">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-1"></div>
-                          <div class="col-md-10">
-                              <div class="fixed-main pull-left">
-                                  <h class="fixed-header">Contact Us</h>
-                              </div>
-                              <div class="buy-main pull-right">
-                                  <a style="color: white;" class="btn btn-primary button-buy buy-phones" href="/shop/support.php">Support</a>
-                              </div>
-                          </div>
-                          <div class="col-md-1"></div>
-                      </div>
-                  </div>
-              </div>';
         echo '<div class="main-content-background">
                    <div class="container">
                        <div class="row" style="margin-top: 20px;">

@@ -35,23 +35,7 @@ class EducationPhonesView extends DefaultView
 
     private function getMain() {
 
-        echo '<div class="main-fixed-container">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-1"></div>
-                          <div class="col-md-10">
-                              <div class="fixed-main pull-left">
-                                  <h class="fixed-header">Phones in Education</h>
-                              </div>
-                              <div class="buy-main pull-right">
-                                  <a class="btn btn-primary button-buy" href="../index.php">Buy</a>
-                              </div>
-                          </div>
-                          <div class="col-md-1"></div>
-                      </div>
-                  </div>
-              </div>
-              <div class="container middle">
+        echo '<div class="container middle">
                   <div class="row">
                       <div class="col-md-1"></div>
                       <div class="col-md-10">

@@ -18,12 +18,11 @@
     padding-top: 6%;
 }
 .category-main {
-    font-size: 26px;
+    font-size: 30px;
     font-family: RobotoLight;
 }
 .sub-category {
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 18px;
 }
 .learn-more {
     color: #08c !important;
@@ -35,9 +34,15 @@
 
 @media (max-width: 766px){
     .main-header-content {
-        font-size: 25px;
+        font-size: 36px;
     }
     .with-devices {
-        font-size: 15px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 992px){
+    .spacer-for-small-devices {
+        margin-top: 40px;
     }
 }

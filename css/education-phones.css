@@ -64,4 +64,14 @@
     .buy-main {
         margin-right: 0;
     }
+    #bordered-middle {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 450px){
+    #main {
+        font-size: 33px !important;
+    }
 }

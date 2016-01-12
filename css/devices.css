@@ -101,6 +101,57 @@
     background-color: #e4e4e4;
     margin-bottom: 15px;
 }
+.ipad-usage {
+    background: url(../images/ipad-usage1.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 6%;
+    padding-bottom: 19.7%;
+    padding-left: 30px;
+    border-right: 1px solid white;
+}
+.ipad-usage-next {
+    background: url(../images/ipad-usage2.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-top: 1%;
+    padding-bottom: 0.9%;
+    padding-left: 30px;
+    border-right: 1px solid white;
+}
+.ipad-usage h1 {
+    color: white;
+    font-size: 28px;
+}
+.ipad-usage-next h1 {
+    color: white;
+    font-size: 28px;
+}
+.main-ipad {
+    width: 300px;
+}
+.sub-ipad {
+    margin-top: 50px;
+}
+.reimagine-main {
+    margin-left: 5.3%;
+    width: 200px;
+    padding-bottom: 20%;
+}
+.reimagine-sub {
+    margin-top: 8%;
+    margin-left: 27%;
+}
+
+@media (max-width: 992px){
+    .ipad-usage-next {
+        border-top: 1px solid white;
+    }
+}
 @media (max-width: 766px){
     #image-small {
         margin-top: 5%;
@@ -121,5 +172,28 @@
     }
     .sub-main-h {
         font-size: 25px;
+    }
+}
+
+.invisible-for-xs {
+    display: none;
+}
+
+@media (max-width: 500px){
+    .ipad-usage {
+        display: none;
+    }
+    .ipad-usage-next {
+        display: none;
+    }
+    .header-ipad {
+        font-size: 35px;
+        padding-left: 15px;
+    }
+    .invisible-for-xs {
+        display: block;
+    }
+    #main-link {
+        padding-left: 15px !important;
     }
 }

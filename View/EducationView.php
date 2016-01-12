@@ -35,13 +35,16 @@ class EducationView extends DefaultView
 
     private function getMain() {
 
-        echo '<div class="overlay">
-                  <div class="content">
-                      <div class="text-center content-header">
-                           <h class="lots-of-ways">Even lots of ways to make your <br /> education more convenient</h>
+        echo '<div class="container">
+                  <div class="row text-center content-header">
+                      <div class="col-md-2"></div>
+                      <div class="col-md-8">
+                          <h class="lots-of-ways">Even lots of ways to make your education more convenient</h>
                       </div>
+                      <div class="col-md-2"></div>
                   </div>
               </div>
+              <img src="/shop/images/education-xs.png" class="full-image-cascade" />
               <div class="text-center">
                   <div class="container">
                       <div class="row">
@@ -50,11 +53,15 @@ class EducationView extends DefaultView
                                <h class="main-header">With usability, handy Phones, powerful as well as practical, comfortable and
                                easy to use Laptops, you have everything to start thinking in a new way that gonna change your mind
                                in more productive, practical way.</h>
+
+                               <div id="content-divider"></div>
+
                           </div>
                           <div class="col-md-2"></div>
                       </div>
                   </div>
               </div>
+
               <div class="container">
                   <div class="row">
                       <div class="col-md-1"></div>
@@ -64,7 +71,11 @@ class EducationView extends DefaultView
                           <h class="sub-category">Phones have powerful, reusable, complex apps and features to make your schedule
                           flexible as well as precise, lightly usable together with many devices.</h><br /><br />
 
-                          <h><a class="learn-more" href="phones/">Learn more ></a></h>
+                          <a class="links" id="main-link" href="/shop/education/phones/" style="text-decoration: none">';
+
+        echo $this->model->Translate('Learn more');
+
+        echo         ' ' . '<img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
                       </div>
                       <div class="col-md-2"></div>
                       <div class="col-md-4 container-content">
@@ -73,7 +84,11 @@ class EducationView extends DefaultView
                           <h class="sub-category">Meanwhile its thin and powerful handy computer, the Laptop consider every detail
                           to make your study exciting as well as pleasurable. </h><br /><br />
 
-                          <h><a class="learn-more" href="laptops/">Learn more ></a></h>
+                          <a class="links" id="main-link" href="/shop/education/laptops/" style="text-decoration: none">';
+
+        echo $this->model->Translate('Learn more');
+
+        echo         ' ' . '<img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
                       </div>
                       <div class="col-md-1"></div>
                   </div>

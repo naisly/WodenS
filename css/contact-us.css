@@ -45,7 +45,8 @@ ul.sub-navigation li {
     font-family: RobotoLight;
 }
 #default-link {
-    color: #5bc0de;
+    color: #08b;
+    font-size: 1em;
 }
 .content-header {
     font-size: 17px;

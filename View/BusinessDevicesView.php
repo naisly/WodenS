@@ -35,22 +35,6 @@ class BusinessDevicesView extends DefaultView
 
     private function getMain() {
 
-        echo '<div class="main-fixed-container">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-1"></div>
-                          <div class="col-md-10">
-                              <div class="fixed-main pull-left">
-                                  <h class="fixed-header">Devices in Business</h>
-                              </div>
-                              <div class="buy-main pull-right">
-                                  <a style="color: white" class="btn btn-primary button-buy buy-phones" href="../../gadgets.php">Buy</a>
-                              </div>
-                          </div>
-                          <div class="col-md-1"></div>
-                      </div>
-                  </div>
-              </div>';
         echo '<div class="container">
                   <div class="text-center">
                       <div class="main-container">
