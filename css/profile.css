@@ -65,3 +65,28 @@
 #right-bar:hover {
     color: #1b6d85;
 }
+
+.border-right {
+    border-right: 1px solid #e4e4e4;
+}
+
+@media (max-width: 990px){
+    .border-right {
+        border: none;
+    }
+    .margin-for-small-sm {
+        margin-top: 50px;
+    }
+    .border-margin-for-md {
+        border-top: 1px solid #e4e4e4;
+        margin-bottom: 20px;
+    }
+    .bg-divider {
+        display: block;
+    }
+}
+
+.category-image {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

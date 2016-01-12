@@ -24,4 +24,4 @@ $view->DoctypeView( 'gadgets' );
 
 $view->headerView( 'apple-gadgets' );
 
-$view->GetUI( 'device', 'apple-gadgets' );
+$view->GetUI( 'device', 'gadgets' );

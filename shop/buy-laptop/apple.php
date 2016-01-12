@@ -25,4 +25,4 @@ $view->DoctypeView( 'phones' );
 
 $view->headerView( 'apple-notebooks' );
 
-$view->GetUI( 'laptop', 'apple-notebooks' );
+$view->GetUI( 'laptop', 'notebooks' );

@@ -122,6 +122,7 @@ class AccountOrderController extends ProfileController
 
                 $i++;
             }
+            //print_r($complete_product_table);
             /*
              * GETTING PHOTOS FOR EACH
              * PRODUCT FOR THE ORDER

@@ -21,3 +21,10 @@
     font-size: 17px;
     color: #555;
 }
+
+@media (max-width: 992px){
+    .form-bordered {
+        border: none !important;
+        box-shadow: none !important;
+    }
+}

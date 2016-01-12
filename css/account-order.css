@@ -23,8 +23,7 @@
     margin-bottom: 30px;
 }
 .border-right {
-    border-right: 1px solid #e4e4e4;
-    padding-right: 20px;
+    border-right: 1px solid #f1f1f1 !important;
 }
 .orders {
     padding-bottom: 20px;
@@ -58,4 +57,14 @@
     font-size: 22px;
     color: #ac5050;
     font-family: RobotoLight;
+}
+
+@media (max-width: 991px){
+    .table-for-small {
+        width: 200px;
+        float: left;
+    }
+    .bordered {
+
+    }
 }

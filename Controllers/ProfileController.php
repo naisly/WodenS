@@ -146,6 +146,8 @@ class ProfileController extends DefaultController
         $sql_query = "SELECT users.first_name, users.last_name, completeorders.order_id  FROM users INNER JOIN completeorders
                       WHERE users.email='$user' AND completeorders.user='$user' ORDER BY completeorders.sort_id DESC LIMIT 1";
 
+        //echo $sql_query;
+
         $result = $mysqli->query( $sql_query );
 
         if ($result->num_rows > 0) {
@@ -155,6 +157,10 @@ class ProfileController extends DefaultController
                 $l_name = $row['last_name'];
                 $order_id = $row['order_id'];
             }
+
+            $full_name = $f_name . ' ' . $l_name;
+            $this->model->setName( $full_name );
+
         }
 
         /*
@@ -181,8 +187,7 @@ class ProfileController extends DefaultController
             $this->model->setOrderId( 'None' );
         }
 
-        if(isset($name) && isset($order_id)){
-            $this->model->setName( $name );
+        if(isset($order_id)){
             $this->model->setOrderId( $order_id );
 
             $sql_stmt = "SELECT price, quantity FROM completeorders WHERE order_id='$order_id'";

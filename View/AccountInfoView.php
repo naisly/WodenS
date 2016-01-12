@@ -27,7 +27,8 @@ class AccountInfoView extends AccountOrderView
     public function getAccountPage() {
 
         $this->DoctypeView( 'Account' );
-        $this->headerView( 'account' );
+        $this->headerView( 'Account' );
+        $this->getHeader( 'Main Account Page' );
         $this->getAccountBar();
         $this->getOrderTable();
         $this->changeAccountData();
@@ -38,10 +39,7 @@ class AccountInfoView extends AccountOrderView
     private function getOrderTable()
     {
 
-        echo '<div class="col-md-9" style="border-left: 1px solid #e4e4e4;">
-                <h class="main-page">This is your main account page</h>
-
-                <div class="cart-divider"></div>';
+        echo '<div class="col-md-9" style="border-left: 1px solid #e4e4e4;">';
 
         if(($this->model->countAccountComplete() !== 0 ) || ($this->model->countAccountDone() !== 0)) {
             echo '<div class="table-responsive">
@@ -142,8 +140,10 @@ class AccountInfoView extends AccountOrderView
             if ($_GET['password_error'] == 1) {
                 $this->errorMessage('Incorrect password or check the second one.');
             }
-        } else if($_GET['password_count_error'] == 1){
+        } else if(isset($_GET['password_count_error'])) {
+            if($_GET['password_count_error'] == 1) {
                 $this->errorMessage('Password at least must contain 7 letters.');
+            }
         } else if(isset($_GET['success_email'])){
             if($_GET['success_email'] == 1){
                 $this->successMessage('Your email was successfully changed.');

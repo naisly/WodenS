@@ -1,6 +1,6 @@
 html, body {
 	width: 100%;
-	height: auto !important
+	height: auto !important;
 }
 a, h1, p {
 	font-family: Arial;
@@ -11,13 +11,19 @@ a, h1, p {
 	font-weight: 400;
 	letter-spacing: normal;
 	opacity: 1;
-	color: #fff !important;
+	color: #fff;
 	position: relative;
 	z-index: 1;
 	text-decoration: none;
 	white-space: nowrap;
 	margin-top: 0 !important;
 	font-family: Arial !important;
+}
+li.active {
+	color: #888 !important;
+}
+.active {
+	color: #888 !important;
 }
 /*.test {
 	width: 150px;
@@ -548,6 +554,17 @@ a:link {
 }
 .non-for-large {
 	display: none;
+}
+
+.bg-divider {
+	margin-top: -70px;
+	padding-top: 50px;
+	margin-bottom: 40px;
+	background: url('../images/gradient-bg.jpg') center no-repeat;
+	background-position: center top;
+	background-size: 100% auto;
+	height: 170px;
+	z-index: 1000;
 }
 
 

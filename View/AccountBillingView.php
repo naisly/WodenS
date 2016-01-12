@@ -26,17 +26,17 @@ class AccountBillingView extends AccountOrderView
 
     public function getAccountBilling() {
 
-        $this->DoctypeView( 'Account - Billing' );
-        $this->headerView( 'account-billing' );
+        $this->DoctypeView( 'Billing - Account' );
+        $this->headerView( 'Billing - Account' );
+        $this->getHeader( 'Billing Information' );
         $this->getAccountBar();
         $this->getBillingForm();
-        $this->actionGetFooter( 'Account - Billing' );
+        $this->actionGetFooter( 'Billing - Account' );
     }
 
     private function getBillingForm(){
 
         echo '<div class="col-md-9">
-                 <h class="main-page">Change Your Billing Info</h>
                  <div class="row main-form">
                      <div class="col-md-3"></div>
                      <div class="col-md-6 form-bordered">

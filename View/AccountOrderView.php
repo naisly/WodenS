@@ -21,26 +21,24 @@ class AccountOrderView extends ProfileView
         $this->model = $model;
     }
     public function getAccountOrderPage() {
-        $this->DoctypeView( 'Account - Orders' );
-        $this->headerView( 'account-order' );
-
+        $this->DoctypeView( 'Orders - Account' );
+        $this->headerView( 'Orders - Account' );
+        $this->getHeader( 'Your Orders' );
         $this->getAccountBar();
         $this->getOrders();
-        $this->actionGetFooter( 'Account - Orders' );
+        $this->actionGetFooter( 'Orders - Account' );
     }
     private function getOrders() {
         echo '<div class="col-md-9">
                 <div class="row">';
         $i = 0;
         $k = 0;
-
         if($this->model->countCompleteOrder() == 0) {
             echo '<div style="margin-top: 30px; padding-bottom: 20px;">
                       <h class="orders">Complete orders:</h>
                   </div>
                   <h class="no-orders">No complete orders found</h>';
         }
-
         if($this->model->countDoneOrder() == 0){
             echo '<div style="margin-top: 30px; padding-bottom: 20px;">
                       <h class="orders">Done orders:</h>
@@ -54,17 +52,16 @@ class AccountOrderView extends ProfileView
                           </div>';
             }
             echo      '<div class="col-md-12">';
-
-            echo      '<h class="order-id">#' . $this->model->getCompleteOrder( $i ) . ' </h><a id="displayText' . $i . '" href="javascript:toggle' . $i . '();"> hide</a>
-                              <div id="toggleText' . $i . '" style="display: block;">
+            echo      '<h class="order-id">#' . $this->model->getCompleteOrder( $i ) . ' </h><a style="color: #08b; text-decoration: none;" id="displayText' . $i . '" href="javascript:toggle' . $i . '();"> hide</a>
+                              <div id="toggleText' . $i . '" style="display: block;" class="bordered">
                                   <div class="row">
-                                      <div class="col-md-12 bordered">';
+                                      <div class="col-md-12">';
             $j = 0;
             while($j < $this->model->countCompleteProductNameIteration($i)) {
-                echo '        <div class="col-md-4">
+                echo '        <div class="col-md-5 table-for-small">
                                     <div class="row">
                                       <div class="col-md-6" style="margin-top: 20px;">
-                                          <h class="product"><a href="subdescription.php?original_name=' . $this->model->getCompleteOriginalName($i, $j) . '
+                                          <h class="product"><a style="color: #08b !important;" href="subdescription?original_name=' . $this->model->getCompleteOriginalName($i, $j) . '
                                                &amp;table=' . $this->model->getCompleteProductTable($i, $j) . '&amp;id_num=' . $this->model->getCompletePrice($i, $j) . '
                                                &amp;id=' . $this->model->getCompleteId($i, $j) . '&amp;product_name=' . $this->model->getCompleteProductTable($i, $j) . '
                                                ">' . $this->model->getCompleteProductName($i, $j) . '</a></h><br />
@@ -73,15 +70,21 @@ class AccountOrderView extends ProfileView
                                           <h>' . $this->model->getCompleteQuantity($i, $j) . ' items</h><br />
                                           <h class="cart-price">$' . $this->model->getCompletePrice($i, $j) . '</h>
                                       </div>
-                                      <div class="col-md-6';
+                                      <div class="col-md-5';
                 /*if($j < 3 && ($j % 2 !== 0 || $j == 0)){
                     echo ' border-right';
                 } else if ($j > 3 && $j % 3 !== 0){
                     echo ' border-right';
                 }*/
+                /*if($j == 0){
+                    echo ' border-right';
+                } else if($j == 1 || $j == 2){
+                    echo ' border-right';
+                }*/
                 echo                '">
                                         <img style="margin-top: 20px;" src="/shop/' . $this->model->getCompletePhoto($i, $j) . '" width="120" height="120" /><br />
                                       </div>
+                                      <div class="col-md-2"></div>
                                     </div>
                                   </div>';
                 $j++;
@@ -105,10 +108,8 @@ class AccountOrderView extends ProfileView
                               </script>';
             $i++;
         }
-
         $i = 0;
         $k = 0;
-
         $iterate =  $this->model->countCompleteOrder() + 1;
         while ($i < $this->model->countDoneOrder()) {
             if( $i == 0) {
@@ -116,16 +117,14 @@ class AccountOrderView extends ProfileView
                          <h style="margin-left: 25px;" class="orders">Done orders:</h><br />
                       </div>';
             }
-
-                echo      '<div class="col-md-12">';
-
-                echo      '<h class="order-id">#' . $this->model->getDoneOrder( $i ) . ' </h><a id="displayText' . $iterate . '" href="javascript:toggle' . $iterate . '();"> hide</a>
+            echo      '<div class="col-md-12">';
+            echo      '<h class="order-id">#' . $this->model->getDoneOrder( $i ) . ' </h><a id="displayText' . $iterate . '" href="javascript:toggle' . $iterate . '();"> hide</a>
                               <div id="toggleText' . $iterate . '" style="display: block;">
                                   <div class="row">
                                       <div class="col-md-12 bordered">';
-                $j = 0;
-                while($j < $this->model->countDoneProductNameIteration($i)) {
-                    echo '        <div class="col-md-4">
+            $j = 0;
+            while($j < $this->model->countDoneProductNameIteration($i)) {
+                echo '        <div class="col-md-4">
                                     <div class="row">
                                       <div class="col-md-6" style="margin-top: 20px;">
                                           <h class="product"><a href="subdescription.php?original_name=' . $this->model->getDoneOriginalName($i, $j) . '
@@ -138,23 +137,23 @@ class AccountOrderView extends ProfileView
                                           <h class="cart-price">$' . $this->model->getDonePrice($i, $j) . '</h>
                                       </div>
                                       <div class="col-md-6';
-                    /*if($j < 3 && ($j % 2 !== 0 || $j == 0)){
-                        echo ' border-right';
-                    } else if ($j > 3 && $j % 3 !== 0){
-                        echo ' border-right';
-                    }*/
-                    echo                '">
+                /*if($j < 3 && ($j % 2 !== 0 || $j == 0)){
+                    echo ' border-right';
+                } else if ($j > 3 && $j % 3 !== 0){
+                    echo ' border-right';
+                }*/
+                echo                '">
                                         <img style="margin-top: 20px;" src="/shop/' . $this->model->getDonePhoto($i, $j) . '" width="120" height="120" /><br />
                                       </div>
                                     </div>
                                   </div>';
-                    $j++;
-                }
-                echo                 '</div>
+                $j++;
+            }
+            echo                 '</div>
                                 </div>
                              </div>
                            </div>';
-                echo          '<script>
+            echo          '<script>
                                   function toggle' . $iterate . '() {
                                        var ele  = document.getElementById("toggleText' . $iterate . '");
                                        var text = document.getElementById("displayText' . $iterate . '");
@@ -167,10 +166,9 @@ class AccountOrderView extends ProfileView
                                        }
                                    }
                               </script>';
-                $i++;
-                $iterate++;
-            }
-
+            $i++;
+            $iterate++;
+        }
         echo    '</div>
               </div>
           </div>
