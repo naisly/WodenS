@@ -44,16 +44,16 @@ class EducationPhonesView extends DefaultView
                                     <h id="main">Useful cells in education to increase quality of received knowledge</h><br />
 
                                     <div class="content-phones">
-                                        <h id="sub-every-phones">Every phone is packed and designed for usability with software, built-in <br /> applications
-                                        that makes you greater productive. And in this era of technological <br /> development, increased compound
-                                        between laptops and TVs. With easy up-to-day tasks, <br /> it makes your life absolutely complete and plain
+                                        <h id="sub-every-phones">Every phone is packed and designed for usability with software, built-in applications
+                                        that makes you greater productive. And in this era of technological development, increased compound
+                                        between laptops and TVs. With easy up-to-day tasks, it makes your life absolutely complete and plain
                                         </h>
                                     </div>
 
                                     <img src="../../images/education-phones3.jpg" id="education-phone" />
 
                                     <div class="usefull-apps">
-                                        <h id="main">Awesome Student & Teacher Apps</h><br />
+                                        <h id="main">Awesome Student and Teacher Apps</h><br />
 
                                         <div class="content-phones">
                                             <h id="sub-every-phones"><a style="color: #1b6d85; text-decoration: none" href="http://dropbox.com">Dropbox</a>: One of my most beloved apps is dropbox. Dropbox allows all my computers

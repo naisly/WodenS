@@ -201,6 +201,8 @@ class DefaultView
             session_start();
         }
 
+        echo '<div id="divider"></div>';
+
         echo '<nav class="navbar navbar-inverse" id="navbar">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -307,7 +309,12 @@ class DefaultView
         echo $this->model->Translate('Support');
 
         echo '</a></li>
-                            <li class="non-visible-for-small"><h class="paddings-for-nav"><a href="/shop/';
+                            <li class="non-visible-for-small"><h class="paddings-for-nav"><a style="cursor: pointer;">';
+
+        echo '<img style="margin-top: 9px;" src="/shop/images/search-icon.png" width="30" height="30" onclick="changeCss();">';
+
+        echo              '</a></li>
+                           <li class="non-visible-for-small"><h class="paddings-for-nav"><a href="/shop/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
@@ -317,7 +324,7 @@ class DefaultView
 
         echo '<img style="margin-top: 9px;" src="/shop/images/cart_icon.png" width="25" height="30">';
 
-        echo '              </a></h></li>
+        echo '              </a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -327,14 +334,48 @@ class DefaultView
                   function changeCss(){
 
                       x = document.getElementById("navbar");
+                      y = document.getElementById("invisible");
+                      z = document.getElementById("divider");
+
+                      //alert(z);
 
                       if(x.style.height !== "100%"){
                           x.style.height = "100%";
                       } else {
                           x.style.height = "auto";
                       }
+
+                      $("#invisible").toggle("slow");
+
+                      if(y.style.visibility == "visible"){
+                          y.style.visibility = "hidden";
+                      } else {
+                          y.style.visibility = "visible";
+                      }
                   }
               </script>';
+
+        echo '<div id="invisible">
+                  <div class="search-form">
+                      <div class="form-group">
+                          <input type="text" class="form-control" id="email" placeholder="Search woden-sims@hol.es">
+                          <div class="most-popular">
+                              <div class="marger">
+                                  <h class="popular-matches">Most popular requests</h>
+
+                                  <ul class="nav-popular">
+                                      <li style="padding-top: 20px;"><a href="/shop/shop/buy-phone/apple">Apple</a></li>
+                                      <li><a href="/shop/account/">Account</a></li>
+                                      <li><a href="/shop/store/">Find a Store</a></li>
+                                      <li><a href="/shop/financing/">Financing</a></li>
+                                      <li style="padding-bottom: 20px;"><a href="/shop/business/">Business</a></li>
+                                  </ul>
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>';
 
     }
 

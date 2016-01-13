@@ -26,9 +26,9 @@ class FinancingView extends DefaultView
 
     public function getFinancingPage() {
         $this->DoctypeView( 'Financing' );
-        $this->headerView( 'financing' );
+        $this->headerView( 'Financing' );
         $this->getMenu();
-        $this->actionGetFooter( 'financing' );
+        $this->actionGetFooter( 'Financing' );
     }
 
     private function getMenu() {
@@ -39,42 +39,51 @@ class FinancingView extends DefaultView
                       <div class="col-md-10">
                           <div class="bordered-middle">
                               <div class="text-center">
-                                  <h id="main">Get additional prices and financing getting<br /> items with Woden Sims</h><br />
+                                  <h id="main">Get additional prices and financing getting items with Woden Sims</h><br />
 
                                   <div class="content">
                                       <h id="sub-main">If you use VISA or MASTERCARD payment methods to pay online you are
-                                      going to earn <br /> points each time. For every 250$ you will earn 10% sale for next item</h>
+                                      going to earn points each time. For every 250$ you will earn 10% sale for next item</h>
                                   </div>
 
-                                  <img src="images/devices.jpg" class="image-main" />
+                                  <img src="/shop/images/devices.jpg" class="image-main" />
 
                                   <div id="divider-main"></div>
 
                                   <div id="apply">
                                       <h class="apply-for">Apply for financing with Card usage by getting an Woden Sims shopping card</h>
                                   </div>
+                              </div>
 
                                   <div class="row" id="margin-spacer">
-                                      <div class="col-md-4 border-right">
-                                          <h class="lead-header">Earn reward for every <br /> dollar spent</h><br />
+                                      <div class="col-md-4">
+                                          <h class="lead-header">Earn reward for every dollar spent</h><br />
+
+                                          <div class="spacer-min"></div>
 
                                           <h class="sub-header">For every purchase that is greater than 250$ you will earn 10% sale for
                                           next item. Earn 5% discount by getting old-phones.</h>
                                       </div>
-                                      <div class="col-md-4 border-right">
-                                          <h class="lead-header">Make order online, get discount for each product</h><br />
+                                      <div class="col-md-4 margin-sm" id="border-both">
+                                          <h class="lead-header">Accumulate each dollar into your cart</h><br />
 
-                                          <h class="sub-header">Getting payed online, you are going to save your time,
-                                          getting 3% discount for the sum order</h>
-                                      </div>
-                                      <div class="col-md-4">
-                                          <h class="lead-header">Accumulate each dollar into <br /> your cart</h><br />
+                                          <div class="spacer-min"></div>
 
                                           <h class="sub-header"> Every 1$ of check you are going to
                                           accumulate dollars in your Woden Sims card. While this sum is greater than 5, 000$ you
                                           are going to get discount amount of 7%.</h>
+
+                                      </div>
+                                      <div class="col-md-4 margin-sm">
+                                          <h class="lead-header">Make order online, get discount for each product</h><br />
+
+                                          <div class="spacer"></div>
+
+                                          <h class="sub-header">Getting payed online, you are going to save your time,
+                                          getting 3% discount for the sum order</h>
                                       </div>
                                   </div>
+                                  <div style="height: 130px;"></div>
                               </div>
 
                                       <div class="tax">

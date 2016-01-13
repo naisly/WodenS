@@ -65,14 +65,77 @@ li.active {
 		margin-top: 20px;
 	}
 }
+#invisible {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 50%;
+	height: 50%;
+	display: none;
+	margin-top: 15%;
+	margin-left: auto;
+	margin-right: auto;
+	border: none;
+	z-index: 10000;
+}
+#email {
+	background-color: rgba(0, 0, 0, 0.9);
+}
+input, select, textarea{
+	color: #fff !important;
+	border-color: #66afe9 !important;
+	outline: 0 !important;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6) !important;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6) !important;
+	z-index: 2000;
+}
+.most-popular {
+	background-color: rgba(0, 0, 0, 0.9);
+	position: absolute;
+	top: 35px;
+	width: 100%;
+}
+.popular-matches {
+	margin-top: 5px;
+	margin-left: 35px;
+	color: #777;
+	font-size: 12px;
+}
+#divider {
+	visibility: hidden;
+	width: 100%;
+	height: 1px;
+	background-color: #f1f1f1;
+	position: absolute;
+	top: 50px;
+	z-index: 4000;
+}
+.marger {
+	margin-top: 10px;
+}
+.nav-popular li {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	margin-left: 50px;
+	font-size: 15px;
+}
+.nav-popular > li > a {
+	color: #777 !important;
+	text-decoration: none;
+}
+.nav-popular > li > a:hover {
+	color: #08b !important;
+}
 
 .non-visible-for-small {
 	height: 50px !important;
 }
 @media (min-width: 766px) and (max-width: 1066px){
 	.nav > li > a {
-		padding-left: 3.2vw !important;
-		padding-right: 3.2vw !important;
+		padding-left: 2.9vw !important;
+		padding-right: 2.9vw !important;
 	}
 }
 .nav > li > a {
