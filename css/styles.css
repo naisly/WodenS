@@ -11,7 +11,7 @@ a, h1, p {
 	font-weight: 400;
 	letter-spacing: normal;
 	opacity: 1;
-	color: #fff;
+	color: rgba(255, 255, 255, 0.9) !important;
 	position: relative;
 	z-index: 1;
 	text-decoration: none;
@@ -32,6 +32,7 @@ li.active {
 .navbar-brand {
 	display: none;
 }
+
 
 @media (max-width: 766px){
 	.nav > li > a {
@@ -59,7 +60,7 @@ li.active {
 	}
 	.white-link {
 		font-family: RobotoLight;
-		font-size: 15px;
+		font-size: 16px;
 	}
 	.margin-drop-down-for-sm {
 		margin-top: 20px;
@@ -83,31 +84,32 @@ li.active {
 #email {
 	background-color: rgba(0, 0, 0, 0.9);
 }
-input, select, textarea{
+#search-xs {
 	color: #fff !important;
 	border-color: #66afe9 !important;
+	background-color: rgba(0, 0, 0, 0.8);
 	outline: 0 !important;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6) !important;
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6) !important;
 	z-index: 2000;
 }
 .most-popular {
-	background-color: rgba(0, 0, 0, 0.9);
+	background-color: rgba(255, 255, 255, 1);
 	position: absolute;
-	top: 35px;
+	top: 36px;
 	width: 100%;
 }
 .popular-matches {
 	margin-top: 5px;
-	margin-left: 35px;
-	color: #777;
+	margin-left: 25px;
+	color: #999;
 	font-size: 12px;
 }
 #divider {
-	visibility: hidden;
+	display: none;
 	width: 100%;
 	height: 1px;
-	background-color: #f1f1f1;
+	background-color: #e4e4e4;
 	position: absolute;
 	top: 50px;
 	z-index: 4000;
@@ -118,15 +120,35 @@ input, select, textarea{
 .nav-popular li {
 	padding-top: 8px;
 	padding-bottom: 8px;
-	margin-left: 50px;
+	margin-left: -20px;
+	padding-left: 50px;
 	font-size: 15px;
+	font-family: RobotoLight;
+	font-weight: 500;
 }
-.nav-popular > li > a {
-	color: #777 !important;
+.nav-popular > a {
+	color: #999 !important;
 	text-decoration: none;
+	font-weight: 500;
 }
-.nav-popular > li > a:hover {
+.nav-popular > a > li:hover {
 	color: #08b !important;
+	font-weight: 500;
+}
+.nav-popular > a:hover {
+	text-decoration: none !important;
+}
+.nav-popular {
+	display: block;
+	text-decoration: none !important;
+}
+.nav-popular > a > li {
+	display: block;
+	width: 100%;
+}
+.nav-popular > a > li:hover {
+	background-color: #f1f1f1;
+	text-decoration: none !important;
 }
 
 .non-visible-for-small {
@@ -615,8 +637,9 @@ a:link {
 .toggle-language {
 	display: none;
 }
+
 .non-for-large {
-	display: none;
+	display: none !important;
 }
 
 .bg-divider {
@@ -629,6 +652,30 @@ a:link {
 	height: 170px;
 	z-index: 1000;
 }
+.search-nav {
+	display: none !important;
+}
+
+#search::-webkit-input-placeholder {
+	/* WebKit, Blink, Edge */
+	color: white;
+}
+#search:-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	color: white;
+	opacity: 1;
+}
+#search::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	color: white;
+	opacity: 1;
+}
+#search:-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: white;
+}
+
+
 
 
 @media (min-width: 350px) and (max-width: 550px){
@@ -643,6 +690,21 @@ a:link {
 }
 
 @media (max-width: 766px) {
+	.division-main {
+		padding-top: 15px !important;
+		padding-bottom: 15px !important;
+		padding-left: 0 !important;
+		width: 76%;
+		margin-left: 12% !important;
+		margin-right: 12% !important;
+		border-bottom: 1px solid #666;
+	}
+	.spacer-for-small-nav {
+		margin-bottom: 5px !important;
+	}
+	.search-nav {
+		display: block !important;
+	}
 	.margin-for-small-h-sm {
 		margin-left: 20px;
 	}
@@ -660,7 +722,7 @@ a:link {
 		display: none;
 	}
 	.non-for-large {
-		display: block;
+		display: block !important;
 	}
 
 	/* */
@@ -731,6 +793,23 @@ a:link {
 		margin-left: 12% !important;
 		height: 1px;
 		background-color: white;
+	}
+	.element-divider {
+		padding-top: 10px !important;
+		padding-bottom: 10px !important;
+		padding-left: 0 !important;
+		margin-left: 24%;
+		width: 50%;
+		border-bottom: 1px solid #666;
+	}
+	.requests {
+		margin-left: 12%;
+		font-size: 14px;
+		width: 70%;
+		display: none;
+	}
+	.requests:hover {
+		color: white !important;
 	}
 	.divider {
 		width: 80%;
@@ -884,6 +963,38 @@ a:link {
 		margin-top: 8px;
 	}
 }
+
+@media (max-width: 766px){
+	.invisible {
+		visibility: hidden;
+	}
+	#divider {
+		visibility: hidden;
+	}
+}
+#search {
+	border: none !important;
+	background-color: transparent;
+	box-shadow: none !important;
+	color: white;
+	font-size: 18px;
+	line-height: 1.2;
+	font-weight: 300;
+	letter-spacing: normal;
+	font-family: RobotoLight;
+}
+#search:focus {
+	border: none !important;
+	box-shadow: none !important;
+}
+
+
+
+
+
+
+
+
 /* Код для подключения шрифта в /css/stylename.css */ 
 /* font-family: "RobotoRegular"; */
 @font-face {

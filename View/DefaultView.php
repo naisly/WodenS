@@ -256,62 +256,58 @@ class DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'phones/" class="white-link">';
+        echo 'phones/" class="white-link division-main">';
 
         echo $this->model->Translate('Phones');
 
-        echo '<span class="sr-only">(current)</span></a></li>
-                            <li class="divider-li-small"></li>
+        echo '</a></li>
                             <li><a href="/shop/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'laptops/" class="white-link">';
+        echo 'laptops/" class="white-link division-main">';
 
         echo $this->model->Translate('Laptops');
 
         echo '</a></li>
-                            <li class="divider-li-small"></li>
                             <li><a href="/shop/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'devices/" class="white-link">';
+        echo 'devices/" class="white-link division-main">';
 
         echo $this->model->Translate('Devices');
 
         echo '</a></li>
-                            <li class="divider-li-small"></li>
                             <li><a href="/shop/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'tv/" class="white-link">';
+        echo 'tv/" class="white-link division-main">';
 
         echo $this->model->Translate('TV');
 
         echo '</a></li>
-                            <li class="divider-li-small"></li>
                             <li><a href="/shop/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'support/" class="white-link">';
+        echo 'support/" class="white-link division-main">';
 
         echo $this->model->Translate('Support');
 
         echo '</a></li>
                             <li class="non-visible-for-small"><h class="paddings-for-nav"><a style="cursor: pointer;">';
 
-        echo '<img style="margin-top: 9px;" src="/shop/images/search-icon.png" width="30" height="30" onclick="changeCss();">';
+        echo '<img style="margin-top: 9px;" src="/shop/images/search-icon.png" width="30" height="30" alt="search" onclick="getSearchBox();">';
 
         echo              '</a></li>
                            <li class="non-visible-for-small"><h class="paddings-for-nav"><a href="/shop/';
@@ -325,50 +321,76 @@ class DefaultView
         echo '<img style="margin-top: 9px;" src="/shop/images/cart_icon.png" width="25" height="30">';
 
         echo '              </a></li>
+                            <li class="spacer-for-small-nav"></li>
+                            <li class="search-nav"><a class="white-link" style="width: 80%; padding-right: 0 !important;">
+                                    <!--
+                                    <img src="/shop/images/search-icon.png" width="30" height="30" style="float: left;" />
+                                    <input type="text" class="form-control" id="search-gl" name="search-gl"  style="float: left;" />-->
+
+                                    <div class="input-group" style="margin-top: 7px;">
+                                        <span class="input-group-btn">
+                                            <img src="/shop/images/search-icon.png" width="30" height="30" style="float: left;" />
+                                        </span>
+                                        <input type="text" class="form-control" id="search" placeholder="Search woden-sims.hol.es">
+                                    </div>';
+
+        echo '</a></li>
+              <li class="divider-li-small" style="background-color: white !important; margin-top: 7px !important;"></li>
+
+              <li id="popular" class="non-for-large"><a class="white-link requests" style="display: none;">Most popular requests</a></li>
+              <li class="non-for-large"><a href="/shop/shop/buy-phone/apple" class="white-link element-divider" style="color: white; display: none;">Apple</a></li>
+
+              <li class="non-for-large"><a href="/shop/account/" class="white-link element-divider" style="display: none;">Account</a></li>
+
+              <li class="non-for-large"><a href="/shop/store/" class="white-link element-divider" style="display: none;">Find a Store</a></li>
+
+              <li class="non-for-large"><a href="/shop/financing/" class="white-link element-divider" style="display: none;">Financing</a></li>
+
+              <li class="non-for-large"><a href="/shop/business/" class="white-link element-divider" style="display: none;">Business</a></li>
+
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>';
 
         echo '<script>
-                  function changeCss(){
-
-                      x = document.getElementById("navbar");
-                      y = document.getElementById("invisible");
-                      z = document.getElementById("divider");
-
-                      //alert(z);
-
-                      if(x.style.height !== "100%"){
-                          x.style.height = "100%";
-                      } else {
-                          x.style.height = "auto";
-                      }
-
-                      $("#invisible").toggle("slow");
-
-                      if(y.style.visibility == "visible"){
-                          y.style.visibility = "hidden";
-                      } else {
-                          y.style.visibility = "visible";
-                      }
-                  }
+                  $("#search").focus(function(){
+                      /*$(".element-divider, .requests").css("visibility", "visible");*/
+                      /*$(".element-divider, .requests").css("display", "block")*/
+                      $(".element-divider, .requests").fadeIn("slow");
+                  })
+                  .blur(function() {
+                      /*$(".element-divider, .requests").css("visibility", "hidden");*/
+                      /*$(".element-divider, .requests").css("display", "none");*/
+                      $(".element-divider, .requests").fadeOut("slow");
+                  })
               </script>';
+        echo '<script src="/shop/js/search.js"></script>';
 
         echo '<div id="invisible">
                   <div class="search-form">
                       <div class="form-group">
-                          <input type="text" class="form-control" id="email" placeholder="Search woden-sims@hol.es">
+                          <input type="text" class="form-control" id="search-xs" placeholder="Search woden-sims@hol.es">
                           <div class="most-popular">
                               <div class="marger">
                                   <h class="popular-matches">Most popular requests</h>
 
                                   <ul class="nav-popular">
-                                      <li style="padding-top: 20px;"><a href="/shop/shop/buy-phone/apple">Apple</a></li>
-                                      <li><a href="/shop/account/">Account</a></li>
-                                      <li><a href="/shop/store/">Find a Store</a></li>
-                                      <li><a href="/shop/financing/">Financing</a></li>
-                                      <li style="padding-bottom: 20px;"><a href="/shop/business/">Business</a></li>
+                                      <a href="/shop/shop/buy-phone/apple">
+                                          <li>Apple</li>
+                                      </a>
+                                      <a href="/shop/account/">
+                                          <li>Account</li>
+                                      </a>
+                                      <a href="/shop/store/">
+                                          <li>Find a Store</li>
+                                      </a>
+                                      <a href="/shop/financing/">
+                                          <li>Financing</li>
+                                      </a>
+                                      <a href="/shop/business/">
+                                          <li>Business</li>
+                                      </a>
                                   </ul>
                               </div>
 
@@ -1111,18 +1133,7 @@ class DefaultView
               </script>
               <script>
                   $("#overflow-xl-collapsed-cl").click(function(){
-                      var x = $("body").css("overflowY");
-                      if(x == "visible"){
-                          $("body")
-                              .css("overflow-y", "hidden");
-                          $("html")
-                              .css("overflow-y", "hidden");
-                      } else {
-                          $("body")
-                              .css("overflow-y", "visible");
-                          $("html")
-                              .css("overflow-y", "visible");
-                      }
+                      disableOverflow();
                   });
               </script>';
     }
