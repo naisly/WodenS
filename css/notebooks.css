@@ -5,7 +5,7 @@
 }
 .macbook-p {
     font-size: 34px;
-    font-family: RobotoBold;
+    font-family: RobotoLight;
 }
 .header-laptops {
     font-size: 38px;
@@ -19,7 +19,7 @@
     background-color: #e4e4e4;
 }
 .sub-h {
-    font-family: MyriadProSemiBold;
+    font-family: RobotoLight;
     font-size: 20px;
 }
 .sub-white {
@@ -58,12 +58,57 @@
 }
 .header-for-category {
     font-size: 26px;
-    font-family: RobotoBold;
+    font-family: MyriadProRegular;
+}
+.footer-bg-xs {
+    background: url(../images/macbook-different.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-top: 100px;
+    width: 100%;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+.powerful, .thin, .awesome {
+    font-size: 37px;
+    font-family: RobotoLight;
+    color: rgba(0, 0, 0, 0.9);
+}
+.powerful {
+    padding-top: 25%;
+    padding-left: 45%;
+}
+.thin {
+    padding-top: 10%;
+    padding-left: 20%;
+}
+.awesome {
+    float: right;
+    margin-top: -60px;
+    padding-right: 20%;
+}
+.main-footer {
+    display: none;
+    background-color: #f1f1f1;
+}
+
+@media (min-width: 766px) and (max-width: 800px){
+    .powerful {
+        padding-left: 41%;
+    }
 }
 
 @media (max-width: 766px){
     #for-small-cascade {
         width: 70%;
         margin-left: 15%;
+    }
+    .main-footer {
+        display: block;
+    }
+    .footer-bg-xs {
+        display: none;
     }
 }

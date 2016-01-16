@@ -52,13 +52,13 @@ class CheckOrderView extends DefaultView
                                            <div class="col-md-2"></div>
                                            <div class="col-md-7">
                                               <div class="account">
-                                                  <form action="login-account.php" method="post">
+                                                  <form action="/shop/check" method="post">
                                                       <h class="h-account">Account</h>
-                                                      <input type="text" class="form-control margin-20" placeholder="Account username" />
-                                                      <input type="password" class="form-control margin-20" placeholder="Password" />
+                                                      <input type="text" class="form-control margin-20" name="email" id="email" placeholder="Woden Sims Email" style="background-color: white;" />
+                                                      <input type="password" class="form-control margin-20" name="password" id="password" placeholder="Password" />
 
                                                       <div class="forgot">
-                                                          <a href="forgot-password.php" class="text-left">Forgot your Username <br />or Password?</a>
+                                                          <a href="/shop/forgot-password/" class="text-left link">Forgot your Username <br />or Password?</a>
                                                           <button class="btn btn-primary pull-right button-sign">Sign In</button>
                                                       </div>
                                                   </form>
@@ -74,19 +74,19 @@ class CheckOrderView extends DefaultView
                                            <div class="col-md-2"></div>
                                            <div class="col-md-7">
                                               <div class="account">
-                                                  <form action="check-order.php" method="post">
+                                                  <form action="/shop/order-status/single" method="get">
                                                       <h class="h-account">Look up for order</h>
                                                       <input type="text" class="form-control margin-20" name="order_number" id="order_number" placeholder="Order Number" />
                                                       <input type="text" class="form-control margin-20" name="order_email" id="order_email" placeholder="Your email" />
 
                                                       <div class="forgot">
-                                                          <a href="#" class="text-left">Where is order number?</a>
+                                                          <a href="#" class="text-left link" style="color: #08b;">Where is order number?</a>
                                                           <button class="btn btn-primary pull-right button-continue">Continue</button>
                                                           <div class="something">
                                                               <div class="find-number">
                                                                   <h class="h-find">Find your order number</h><br />
                                                                   <h class="sub-find">Number is located with thanks message or in your account</h>
-                                                                  <img class="order-support" src="images/order-support.png" width="500"/>
+                                                                  <img class="order-support" src="/shop/images/order-support.png" width="500"/>
                                                               </div>
                                                           </div>
                                                           <div class="media-spacer"></div>

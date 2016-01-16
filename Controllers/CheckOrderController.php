@@ -32,11 +32,11 @@ class CheckOrderController extends DefaultController
 
     private function actionCheckOrder() {
 
-        if(isset($_POST['order_number'])) {
-            $order_number = $_POST['order_number'];
+        if(isset($_GET['order_number'])) {
+            $order_number = $_GET['order_number'];
         }
-        if(isset($_POST['order_email'])) {
-            $order_email = $_POST['order_email'];
+        if(isset($_GET['order_email'])) {
+            $order_email = $_GET['order_email'];
         }
 
         include_once('/../Storage.php');
@@ -50,27 +50,31 @@ class CheckOrderController extends DefaultController
             $i = 0;
 
             while($i < count($status_tables)) {
-                $sql_query = "SELECT DISTINCT $status_tables[$i].*, users.name FROM $status_tables[$i] INNER JOIN users WHERE (order_id='$order_number'
+                $sql_query = "SELECT DISTINCT $status_tables[$i].*, users.email, users.first_name, users.last_name FROM $status_tables[$i] INNER JOIN users WHERE (order_id='$order_number'
                               AND user='$order_email') AND $status_tables[$i].user = users.email";
                 $result = $mysqli->query($sql_query);
 
                 //echo $sql_query;
 
-                $product_name_array = array();
-                $category_array = array();
-                $price_array = array();
-                $quantity_array = array();
-                $name_array = array();
-                $result_quantity = array();
+                #$product_name_array = array();
+                #$category_array = array();
+                #$price_array = array();
+                #$quantity_array = array();
+                $first_name_array = array();
+                $last_name_array = array();
+                #$result_quantity = array();
 
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
-                        $product_name_array = array_merge($product_name_array, array_map('trim', explode(",", $row['product_name'])));
-                        $category_array = array_merge($category_array, array_map('trim', explode(",", $row['category'])));
-                        $price_array = array_merge($price_array, array_map('trim', explode(",", $row['price'])));
-                        $quantity_array = array_merge($quantity_array, array_map('trim', explode(",", $row['quantity'])));
-                        $name_array = array_merge($name_array, array_map('trim', explode(",", $row['name'])));
+                        #$product_name_array = array_merge($product_name_array, array_map('trim', explode(",", $row['product_name'])));
+                        #$category_array = array_merge($category_array, array_map('trim', explode(",", $row['category'])));
+                        #$price_array = array_merge($price_array, array_map('trim', explode(",", $row['price'])));
+                        #$quantity_array = array_merge($quantity_array, array_map('trim', explode(",", $row['quantity'])));
+                        $first_name_array = array_merge($first_name_array, array_map('trim', explode(",", $row['first_name'])));
+                        $last_name_array = array_merge($last_name_array, array_map('trim', explode(",", $row['last_name'])));
                     }
+
+                    $name_array[0] = $first_name_array[0] . ' ' . $last_name_array[0];
 
                     if ($i == 0){
                         $status = 'done';
@@ -78,16 +82,26 @@ class CheckOrderController extends DefaultController
                         $status = 'wait';
                     }
 
-                    if(isset($status)) {
-                        $this->model->setStatus($status);
-                    }
-                    $this->model->setProductName($product_name_array);
-                    $this->model->setCategory($category_array);
-                    $this->model->setPrice($price_array);
-                    $this->model->setQuantity($quantity_array);
+                    /*$i = 0;
+                    while($i < count($category_array)){
+                        if($category_array[$i] == 'AppleTV' || $category_array[$i] == 'IMac'){
+                            $category_array[$i] = 'Apple';
+                        } else if($category_array[$i] == 'ShowTop'){
+                            $category_array[$i] = 'Amazon';
+                        }
+                        $i++;
+                    }*/
+
+                    //echo 123;
+
+                    #print_r($category_array);
+                    #$this->model->setProductName($product_name_array);
+                    //$this->model->setCategory($category_array);
+                    #$this->model->setPrice($price_array);
+                    #$this->model->setQuantity($quantity_array);
                     $this->model->setName($name_array[0]);
 
-                    $sql_stmt = "SELECT DISTINCT category FROM $status_tables[$i] WHERE order_id='$order_number' AND user='$order_email'";
+                    /*$sql_stmt = "SELECT DISTINCT category FROM $status_tables[$i] WHERE order_id='$order_number' AND user='$order_email'";
                     $result_stmt = $mysqli->query( $sql_stmt );
 
                     $category_result_array = array();
@@ -114,10 +128,12 @@ class CheckOrderController extends DefaultController
                         }
 
                         $j++;
-                    }
-                    //print_r( $result_quantity );
-                    $this->model->setCategory( $category_result_array );
-                    $this->model->setCountCategories( $result_quantity );
+                    }*/
+                    //print_r($category_result_array);
+                    //$this->model->setCategory( $category_result_array );
+                    #$this->model->setCountCategories( $result_quantity );
+
+                    //print_r($category_result_array);
                 }
 
                 $i++;
@@ -127,6 +143,8 @@ class CheckOrderController extends DefaultController
 
             if(!isset($status)) {
                 $this->model->setStatus( 'not_found' );
+            } else {
+                $this->model->setStatus($status);
             }
 
             $this->model->setOrderId( $order_number );
@@ -140,11 +158,11 @@ class CheckOrderController extends DefaultController
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
-        if(isset($_POST['order_number'])) {
-            $order_number = $_POST['order_number'];
+        if(isset($_GET['order_number'])) {
+            $order_number = $_GET['order_number'];
         }
-        if(isset($_POST['order_email'])) {
-            $order_email = $_POST['order_email'];
+        if(isset($_GET['order_email'])) {
+            $order_email = $_GET['order_email'];
         }
 
         if($this->model->getStatus() == 'done'){
@@ -173,10 +191,11 @@ class CheckOrderController extends DefaultController
             $shipping_array = array();
             $price_array = array();
             $category_array = array();
+            $product_name_array = array();
             //print_r($id_array);
             while ($i < count($id_array)) {
                 $sql_query = "SELECT $product_table_array[$i].original_name, $product_table_array[$i].photo, $product_table_array[$i].shipping,
-                              $status.price, $status.category FROM
+                              $status.price, $status.category, $status.id, $product_table_array[$i].product_name FROM
                               $product_table_array[$i] INNER JOIN $status WHERE $status.id = $product_table_array[$i].id AND $status.id = $id_array[$i]
                               AND $status.order_id = '$order_number' LIMIT 1";
                 //echo $sql_query;
@@ -189,6 +208,7 @@ class CheckOrderController extends DefaultController
                         $shipping_array = array_merge($shipping_array, array_map('trim', explode(",", $row['shipping'])));
                         $price_array = array_merge($price_array, array_map('trim', explode(",", $row['price'])));
                         $category_array = array_merge($category_array, array_map('trim', explode(",", $row['category'])));
+                        $product_name_array = array_merge($product_name_array, array_map('trim', explode(",", $row['product_name'])));
                     }
                 }
 
@@ -196,12 +216,32 @@ class CheckOrderController extends DefaultController
                 $i++;
             }
 
+            $count_price = 0;
+            $i = 0;
+            while($i < count($category_array)){
+                if($category_array[$i] == 'AppleTV' || $category_array[$i] == 'IMac'){
+                    $category_array[$i] = 'Apple';
+                } else if($category_array[$i] == 'ShowTop'){
+                    $category_array[$i] = 'Amazon';
+                }
+
+                $count_price += $price_array[$i];
+
+                $i++;
+            }
+
+            $this->model->setId( $id_array );
             $this->model->setTable( $product_table_array );
             $this->model->setOriginalName( $original_name_array );
             $this->model->setPhoto( $photo_array );
             $this->model->setShipping( $shipping_array );
             $this->model->setPrice( $price_array );
             $this->model->setCategory( $category_array );
+            $this->model->setProductName( $product_name_array );
+
+            $this->model->setCountItems( $original_name_array );
+            $this->model->setCountPrice( $count_price );
+
         }
     }
 

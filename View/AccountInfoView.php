@@ -63,7 +63,7 @@ class AccountInfoView extends AccountOrderView
                       <td>#' . $this->model->getAccountComplete($i) . '</td>
                       <td>Completed</td>
                       <td>
-                          <form action="account-cancel-order.php" method="post">
+                          <form action="account-cancel-order" method="post">
                               <button id="button-as-link">Cancel order</button>
                               <input type="hidden" value="' . $this->model->getAccountComplete($i) . '" name="order_id" id="order_id" />
                           </form>
@@ -79,7 +79,7 @@ class AccountInfoView extends AccountOrderView
                       <td>#' . $this->model->getAccountDone($i) . '</td>
                       <td>Done</td>
                       <td>
-                          <form action="account-cancel-order.php" method="post">
+                          <form action="account-cancel-order" method="post">
                               <button id="button-as-link">Remove</button>
                               <input type="hidden" value="' . $this->model->getAccountDone($i) . '" name="order_id" id="order_id" />
                           </form>
@@ -168,7 +168,7 @@ class AccountInfoView extends AccountOrderView
                             <h1 class="make-sure" style="padding-bottom: 19px;">Please, be sure that you have access to this email.</h1>
                             <form role="form" action="change-data" method="post">
                                 <div class="form-group change-spacer">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="New Email Address" required />
+                                    <input type="email" style="background-color: white;" class="form-control" name="email" id="email" placeholder="New Email Address" required />
                                 </div>
                                 <div class="form-group change-spacer">
                                     <input type="email" class="form-control" name="email_again" id="email_again" placeholder="Confirm New Email Address" required />

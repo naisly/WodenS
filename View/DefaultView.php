@@ -116,6 +116,11 @@ class DefaultView
         } else if ($page == 'Order - Status') {
             echo '<link href="/shop/css/status-order.css" rel="stylesheet" type="text/css">
                   <link href="/shop/css/login.css" rel="stylesheet" type="text/css">';
+        } else if ($page == 'Single Order Lookup'){
+            echo '<link href="/shop/css/checkorder.css" rel="stylesheet" type="text/css">';
+
+            echo '<link href="/shop/css/status-order.css" rel="stylesheet" type="text/css">
+                  <link href="/shop/css/login.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Cart - Account') {
             echo '<link href="/shop/css/profile.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Orders - Account' || $page == 'Account' || $page == 'Billing - Account') {

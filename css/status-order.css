@@ -16,7 +16,7 @@ html, body {
 .header-lead {
     font-size: 22px;
     font-family: RobotoLight;
-    margin-left: 20px;
+    margin-left: 50px;
 }
 .category {
     color: #1b6d85;
@@ -28,9 +28,11 @@ html, body {
 }
 .original {
     font-size: 15px;
+    color: #08b !important;
+    text-decoration: none !important;
     font-family: RobotoLight;
 }
-a, h1, h2, h {
+a, h1, h2 {
     font-family: RobotoLight;
 }
 .pos-center {
@@ -45,4 +47,43 @@ a, h1, h2, h {
     margin-right: 20px;
     text-decoration: none !important;
     color: #1b6d85;
+}
+.default-link {
+    color: #08b !important;
+}
+.item-price {
+    color: rgb(236, 0, 140);
+    font-size: 15px;
+}
+#ordered {
+    font-family: Arial;
+    font-size: 14px;
+}
+.divider-for-small {
+    padding-bottom: 15px;
+    height: 350px;
+}
+.something {
+    top: 260px !important;
+    left: 0px !important;
+    padding-right: 10px !important;
+}
+.h-find {
+    color: black;
+}
+.sub-find {
+    color: black;
+}
+
+
+@media (max-width: 991px){
+    .divider-for-small {
+        border-bottom: 1px solid #e4e4e4;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        height: auto;
+    }
+    .header-lead {
+        margin-left: 10px;
+    }
 }

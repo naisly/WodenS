@@ -29,6 +29,12 @@ body, html {
     margin-left: auto;
     margin-right: auto;
 }
+.woden-sims-email {
+    height: 40px !important;
+    border-bottom: none !important;
+    border-radius: 4px !important;
+    background-color: white !important;
+}
 
 @media (max-width: 766px){
     .margin-auto {

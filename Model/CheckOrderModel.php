@@ -20,6 +20,9 @@ class CheckOrderModel extends DefaultModel
     private $count_categories;
     private $table;
 
+    private $count_items;
+    private $count_price;
+
     public function setStatus ( $status ) {
 
         $this->status = $status;
@@ -98,6 +101,36 @@ class CheckOrderModel extends DefaultModel
     public function getTable( $i ) {
 
         return $this->table[$i];
+    }
+
+    public function setProductCategory( $categories ){
+
+        $this->categories = $categories;
+    }
+
+    public function getProductCategory( $i ){
+
+        return $this->categories[$i];
+    }
+
+    public function setCountItems( $count_items ){
+
+        $this->count_items = $count_items;
+    }
+
+    public function getCountItems(){
+
+        return count($this->count_items);
+    }
+
+    public function setCountPrice( $count_price ){
+
+        $this->count_price = $count_price;
+    }
+
+    public function getCountPrice() {
+
+        return $this->count_price;
     }
 
 

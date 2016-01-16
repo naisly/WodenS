@@ -11,7 +11,7 @@ a, h1, p {
 	font-weight: 400;
 	letter-spacing: normal;
 	opacity: 1;
-	color: rgba(255, 255, 255, 0.9) !important;
+	color: rgba(255, 255, 255, 1) !important;
 	position: relative;
 	z-index: 1;
 	text-decoration: none;
@@ -61,6 +61,7 @@ li.active {
 	.white-link {
 		font-family: RobotoLight;
 		font-size: 16px;
+		color: rgba(255, 255, 255, 0.9);
 	}
 	.margin-drop-down-for-sm {
 		margin-top: 20px;

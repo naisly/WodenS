@@ -190,8 +190,18 @@ class LaptopsView extends IndexView
                   </div>
               </div>
 
-              <div class="text-center">
-                   <img src="../images/macbook-different-w-text-light.jpg" class="full-image-cascade" style="margin-top: 80px;"/>
-              </div>';
+              <div class="text-center main-footer">
+                   <div class="header-footer" style="padding-top: 15px; padding-bottom: 15px; margin-top: 50px;">
+                       <h1>Powerful. Thin. Awesome.</h1>
+                   </div>
+                   <img src="../images/macbook-different.jpg" class="full-image-cascade"/>
+              </div>
+              <div class="footer-bg-xs">
+                  <h1 class="powerful">Powerful</h1>
+                  <h1 class="thin">Thin</h1>
+                  <h1 class="awesome">Awesome</h1>
+              </div>
+
+              ';
     }
 }

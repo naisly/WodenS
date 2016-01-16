@@ -76,7 +76,7 @@ html, body {
 }
 .sub-find {
     font-family: RobotoLight;
-    font-size: 13px;
+    font-size: 14px;
     margin-left: 20px;
     margin-top: 20px;
 }
@@ -109,6 +109,9 @@ html, body {
 .margin-footer {
     margin-top: 30px;
 }
+.media-padding {
+    padding-top: 10px;
+}
 
 @media (min-width: 300px) and (max-width: 990px){
     .media-padding {
@@ -125,8 +128,5 @@ html, body {
     .media-spacer {
         margin-top: 90px;
     }
-    .media-padding {
-        margin-top: 20px;
-        padding-left: 30px;
-    }
+
 }

@@ -562,7 +562,7 @@ class LoginView extends DefaultView
                   </div>
                   <div class="margin-auto" style="margin-top: 5%;"><form action="check" method="post">
                               <div class="input-group" style="width: 100%;">
-                                  <input type="text" name="email" id="email" class="form-control" placeholder="Woden Sims Email" style="height: 40px !important; border-bottom: none !important; border-radius: 4px;">
+                                  <input type="text" name="email" id="email" class="form-control woden-sims-email" placeholder="Woden Sims Email">
                               </div>
                               <div class="input-group">
                                   <input type="password" name="password" id="password" class="form-control" placeholder="Password" style="height: 40px !important; border-right: none !important;">
