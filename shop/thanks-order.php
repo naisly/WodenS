@@ -21,7 +21,7 @@ $view = new LoginView($model);
 
 $controller->actionGetHeaderCart();
 
-$view->DoctypeView( 'login' );
+$view->DoctypeView( 'Thanks message' );
 $view->headerView( 'thanks-order' );
 
 $view->addedItemMessage();

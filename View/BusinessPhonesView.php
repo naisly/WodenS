@@ -30,7 +30,7 @@ class BusinessPhonesView extends DefaultView
         $this->headerView( 'business' );
 
         $this->getMain();
-        $this->actionGetFooter( 'sub-daughter' );
+        $this->actionGetFooter( 'Phones - Business' );
     }
 
     private function getMain() {
@@ -151,12 +151,6 @@ class BusinessPhonesView extends DefaultView
                         </div>
 
                    </div>
-              </div>
-
-              <div class="text-center">
-                  <div class="search-for">
-                      <a href="../../phones.php" id="search">Search phone for business ></a>
-                  </div>
               </div>';
     }
 }

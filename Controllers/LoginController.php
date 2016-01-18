@@ -291,6 +291,9 @@ class LoginController extends DefaultController
         if(isset($_POST['table'])){
             $table = $_POST['table'];
         }
+        if(isset($_POST['item_quantity'])){
+            $post_quantity = $_POST['item_quantity'];
+        }
 
         $user = $_SESSION['login_user'];
 
@@ -306,16 +309,32 @@ class LoginController extends DefaultController
                 $idQ = $row['id'];
             }
         }
+        //echo $post_quantity;
+        //echo $_POST['item_quantity'];
+        //echo $_GET['id'];
+        //echo $id;
+        //echo $original_name;
 
-        if(!isset($idQ)) {
+        if(isset($post_quantity) && !isset($idQ)){
+            $sql_query = "INSERT INTO orderedItems VALUES ('$id', '$original_name', '$category', '$price', '$user', '$post_quantity', '$table', '')";
+            $stmt = $mysqli->prepare($sql_query);
+
+            $stmt->execute();
+        } else if(!isset($idQ)) {
             $sql_query = "INSERT INTO orderedItems VALUES ('$id', '$original_name', '$category', '$price', '$user', 1, '$table', '')";
             $stmt = $mysqli->prepare($sql_query);
-            echo $sql_query . '<br />';
             $stmt->execute();
         }
 
         if(isset($quantity)) {
-            if ($quantity !== 1) {
+            if(isset($post_quantity)){
+
+                $res_quantity = $quantity + $post_quantity;
+
+                $sql_res = $mysqli->prepare("UPDATE orderedItems SET quantity=$res_quantity WHERE user='$user' AND price=$price
+                            AND product_name='$original_name' AND category='$category'");
+                $sql_res->execute();
+            } else if ($quantity !== 1) {
                 $quantity++;
 
                 $sql_res = $mysqli->prepare("UPDATE orderedItems SET quantity=$quantity WHERE user='$user' AND price=$price

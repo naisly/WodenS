@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: Home
- * Date: 21.11.2015
- * Time: 1:35
+ * Date: 28.10.2015
+ * Time: 18:57
  */
 
 include_once('..\..\Controllers\DefaultController.php');
@@ -19,10 +19,10 @@ $controller = new DefaultController($model);
 
 $view = new DefaultView($model);
 
-$controller->actionGetData( 'AppleTV', 'Television', 'AppleTV' );
+$controller->actionGetData( 'Phones', 'Phones', 'All' );
 
-$view->DoctypeView( 'phones' );
+$view->DoctypeView( 'Buy Phone' );
 
-$view->headerView( 'AppleTV-television' );
+$view->headerView( 'phones' );
 
-$view->GetUI( 'tv', 'television' );
+$view->GetUI( 'phone', 'phones' );

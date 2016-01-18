@@ -2,14 +2,13 @@
 /**
  * Created by PhpStorm.
  * User: Home
- * Date: 28.10.2015
- * Time: 18:57
+ * Date: 22.11.2015
+ * Time: 1:04
  */
 
 include_once('..\..\Controllers\DefaultController.php');
 include_once('..\..\Model\DefaultModel.php');
 include_once('..\..\View\DefaultView.php');
-//initiate the triad
 
 $model = new DefaultModel();
 
@@ -19,10 +18,10 @@ $controller = new DefaultController($model);
 
 $view = new DefaultView($model);
 
-$controller->actionGetData( 'Phones', 'Phones', 'All' );
+$controller->actionGetData( 'Apple', 'Gadgets', 'Apple' );
 
-$view->DoctypeView( 'phones' );
+$view->DoctypeView( 'Buy Ipad' );
 
-$view->headerView( 'phones' );
+$view->headerView( 'apple-gadgets' );
 
-$view->GetUI( 'phone', 'phones' );
+$view->GetUI( 'device', 'gadgets' );

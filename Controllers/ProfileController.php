@@ -220,7 +220,7 @@ class ProfileController extends DefaultController
 
         }
 
-        $sql_table = "SELECT product_table, id FROM orderedItems WHERE user='$user' ORDER BY sort_id DESC LIMIT 1";
+        $sql_table = "SELECT product_table, id FROM orderedItems WHERE user='$user' ORDER BY 'sort_id' DESC LIMIT 1";
         $result_table = $mysqli->query( $sql_table );
 
         if($result_table->num_rows == 0){

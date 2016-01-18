@@ -54,7 +54,7 @@ class SubdescriptionView extends DefaultView
                       </div>
                       <div class="col-md-7">
                            <h class="main-header">' . $this->model->getOriginalName(0) . '</h><br />
-                           <h class="p-header">by <a class="link-default" style="text-decoration: none; cursor: pointer;" onclick="goBack();">' . $this->model->getCategory(0) . '</a></h>
+                           <h class="p-header">by ' . $this->model->getCategory(0) . '</a></h>
 
                            <div class="divider-main"></div>
 
@@ -227,32 +227,37 @@ class SubdescriptionView extends DefaultView
                               <h class="price-new">$' . sprintf("%0.2f", $this->model->getPrice()) . '</h>
                           </div>
                           <div class="nova-poshta">
-                              <h style="font-family: Arial;"><input type="checkbox" name="free-shipping" value="1" /> Yes, I want <em>FREE shipping</em> that varies from
+                              <h style="font-family: Arial;"><input type="checkbox" name="free-shipping" value="1" /> Yes, I want <em>Shipping</em> that varies from
                               <b>two weeks</b> up to <b>one month</b> with <a class="link-default" href="https://novaposhta.ua/en">Nova Poshta</a></h>
                           </div>
-
+                      <form action="/shop/shop/add-item" method="post">
                           <div class="qty">
                               <h id="qty">Quantity</h>
-                              <select name="quantity">';
+                              <select name="item_quantity" id="item_quantity" required>';
         $i = 0;
         while ( $i < $this->model->getQuantity()){
-            echo                  '<option value="' . $i . '">' . $i . '</option>';
+            if($i == 0){
+                echo '<option value="">0</option>';
+            } else {
+                echo '<option value="' . $i . '">' . $i . '</option>';
+            }
 
             $i++;
         }
-        echo                  '</select>
-                          </div>
-                          <div class="form-group">
-                              <form action="add-item.php" method="post">
+        echo                   '</select>
+                            </div>
+                            <div class="form-group">
                                     <div class="paddings">
                                         <button class="btn btn-default form-control">
                                             Add to cart
                                         </button>
                                     </div>
                                     <input type="hidden" name="id" value="' . $this->model->getId() . '"/>
+                                    <input type="hidden" name="original_name" value="' . $this->model->getOriginalName() . '"/>
                                     <input type="hidden" name="product_name" value="' . $this->model->getProductName() . '"/>
                                     <input type="hidden" name="category" value="' . $this->model->getCategory() . '"/>
                                     <input type="hidden" name="photo" value="' . $this->model->getPhoto() . '"/>
+                                    <input type="hidden" name="table" value="' . $_GET['category'] . '"/>
                                     <input type="hidden" name="price" value="' . $this->model->getPrice() . '"/>
                               </form>
                           </div>
@@ -260,16 +265,18 @@ class SubdescriptionView extends DefaultView
                           <div class="divider"></div>
 
                           <div class="form-group text-center">
-                              <form action="add-item.php" method="post">
+                              <form action="add-item" method="post">
                                     <div class="paddings">
                                         <button class="button-link">
                                             Click here to complete fast order
                                         </button>
                                     </div>
                                     <input type="hidden" name="id" value="' . $this->model->getId() . '"/>
+                                    <input type="hidden" name="original_name" value="' . $this->model->getOriginalName() . '"/>
                                     <input type="hidden" name="product_name" value="' . $this->model->getProductName() . '"/>
                                     <input type="hidden" name="category" value="' . $this->model->getCategory() . '"/>
                                     <input type="hidden" name="photo" value="' . $this->model->getPhoto() . '"/>
+                                    <input type="hidden" name="table" value="' . $_GET['category'] . '"/>
                                     <input type="hidden" name="price" value="' . $this->model->getPrice() . '"/>
                                     <input type="hidden" name="one-click-order" value="1" />
                               </form>
@@ -301,6 +308,7 @@ class SubdescriptionView extends DefaultView
                                                Add to cart
                                           </button>
                                           <input type="hidden" name="id" value="' . $this->model->getSortId($i) . '"/>
+                                          <input type="hidden" name="original_name" value="' . $this->model->getOriginalName() . '"/>
                                           <input type="hidden" name="product_name" value="' . $this->model->getSortProductNames($i) . '"/>
                                           <input type="hidden" name="category" value="' . $this->model->getSortCategory($i) . '"/>
                                           <input type="hidden" name="photo" value="' . $this->model->getSortPhoto($i) . '"/>

@@ -419,25 +419,35 @@ class DefaultView
      */
     private function getItemsNames($category)
     {
-        echo "<div class='items-row pointer'>
-                  <div class='col-md-3'></div>
-                       <div class='col-md-6 items-align'>
+        echo "
+                  <div class='items-row pointer' style='margin-top: -20px;'>
+                       <div class='col-md-12 items-align' style='padding-left: 0; padding-right: 0; background-color: #f1f1f1; padding-bottom: 20px;'>
+                            <div class='text-center'>
+                                <h1 class='nav-category'>";
+
+        if($category !== 'tv'){
+            echo ucfirst($category) . 's';
+        } else {
+            echo strtoupper($category);
+        }
+
+        echo                    "</h1>
+                            </div>
                             <ul class='text-align'>";
 
 
-        echo "<a style='font-size: 18px; margin-right: 15px; color: #e4e4e4; text-decoration: none;' class='categories-list' href='";
+        echo "<a class='categories-list' href='";
 
         echo '/shop/shop/buy-' . $category . '/';
 
         echo "'>All</a>";
 
         foreach ($this->model->distinct_categories as $value => $key) {
-            echo "<a style='font-size: 18px; margin-right: 15px; color: #e4e4e4; text-decoration: none;' class='categories-list' href='{$this->model->distinct_categories[$value]}'>" . $this->model->distinct_categories[$value] . "</a>";
+            echo "<a class='categories-list' href='{$this->model->distinct_categories[$value]}'>" . $this->model->distinct_categories[$value] . "</a>";
         }
         echo '               </ul>
                         </div>
                    </div>
-                   <div class="col-md-3"></div>
               </div>';
     }
 
@@ -447,8 +457,8 @@ class DefaultView
      */
     private function getFilterMenu()
     {
-        $i = 0;
-        $n = 0;
+        #$i = 0;
+        #$n = 0;
         /*echo '<div class="row">
                   <div class="col-md-3">
                       <form action="apple-index.php" method="post">
@@ -463,60 +473,103 @@ class DefaultView
         }*/
         echo '<div class="container">
                   <div class="row">
-                       <div class="col-md-3" style="border: 1px solid #e4e4e4; border-top: none;">
-                            <form action="" method="post">
+                       <div class="col-md-3 search-box">
+                            <form action="" method="post" oninput="minValue.value=min.value; maxValue.value=max.value">
                             <div class="row">
                                 <div class="col-md-12 bg-item top-margin" style="margin-top: 0px;">
-                                    <h class="search-item">Items: <br/></h>
+                                    <h class="search-item">Store <br/></h>
                                  </div>
-                            </div>';
+                            </div>
+                            <div class="spacer-for-small">';
+
         $k = 0;
         while ($k < count($this->model->distinct_product_names)) {
-            echo '<input type="checkbox" name="array' . $k . '" id="array' . $k . '" value="' . $this->model->getDistinctProductNames($k) . '"';
+            echo '<input style="margin-right: 6px;" type="checkbox" name="array' . $k . '" id="array' . $k . '" value="' . $this->model->getDistinctProductNames($k) . '"';
             if (isset($_POST['array' . $k])) echo "checked='checked'";
             echo "/>";
-            echo "<em> " . $this->model->getDistinctProductNames($k);
+            echo $this->model->getDistinctProductNames($k);
             if ($this->model->getQuantityOfItems($k) == 0) {
-                echo '</em><br />';
+                echo '<br />';
             } else {
-                echo '(' . $this->model->getQuantityOfItems($k) . ')</em><br />';
+                echo '(' . $this->model->getQuantityOfItems($k) . ')<br />';
             }
             $k++;
         }
-        echo '
+        echo '            </div>
                        <div class="row">
                             <div class="col-md-12 bg-item top-margin">
                                 <h class="search-item">Price: </h>
                              </div>
                        </div>
-                                <h class="search-item">Min: </h> <input style="margin-left: 4px;" type="text" name="min" value="';
+                       <p class="min-and-max">Min: <output name="minValue" for="min" id="minValue">';
+
+        if(isset($_POST['min'])){
+            echo $_POST['min'];
+        } else {
+            echo '0';
+        }
+
+        echo          '</output><span id="symb-for-output-xs">$</span></p>
+                       <input type="range" id="min" name="min" min="0" max="5000" value="';
+
+        if(isset($_POST['min'])){
+            echo $_POST['min'];
+        } else {
+            echo '0';
+        }
+        echo           '">
+
+                       <p class="min-and-max">Max: <output name="maxValue" for="max" id="maxValue">';
+
+        if(isset($_POST['max'])){
+            echo $_POST['max'];
+        } else {
+            echo '5000';
+        }
+
+        echo          '</output><span id="symb-for-output-xs">$</span></p>
+                       <input type="range" id="max" name="max" min="0" max="5000" value="';
+
+        if(isset($_POST['max'])){
+            echo $_POST['max'];
+        } else {
+            echo '5000';
+        }
+        echo            '">
+                                <!--<input class="form-control" style="margin-top: 10px;" placeholder="Minimum" type="text" name="min" value="';
         if (isset($_POST['min'])) echo $_POST['min'];
-        echo '"><br />
-                                <h class="search-item">Max:</h> <input type="text" name="max" value="';
+        echo '"><br /><br />
+                                <input class="form-control" style="margin-top: -10px;" placeholder="Maximum" type="text" name="max" value="';
         if (isset($_POST['max'])) echo $_POST['max'];
-        echo '"><br />
+        echo '"><br />-->
                        <div class="row">
                             <div class="col-md-12 bg-item top-margin">
                                 <h class="search-item">Sort by price: </h>
                              </div>
                        </div>
-                                    <input type="radio" name="sort_by_price" value="price " /> By highest <br />
-                                    <input type="radio" name="sort_by_price" value="price DESC" /> By lowest <br />
+                       <div class="spacer-for-small">
+                            <input type="radio" name="sort_by_price" value="price " /> By highest <br />
+                            <input type="radio" name="sort_by_price" value="price DESC" /> By lowest <br />
+                       </div>
                        <div class="row">
                             <div class="col-md-12 bg-item top-margin">
                                 <h class="search-item">Sort by time of adding: </h>
                              </div>
                        </div>
-                                    <input type="radio" name="sort_by_time" value="time" /> By latest <br />
-                                    <input type="radio" name="sort_by_time" value="time DESC" /> By oldest <br />
+                       <div class="spacer-for-small">
+                             <input type="radio" name="sort_by_time" value="time" /> By latest <br />
+                             <input type="radio" name="sort_by_time" value="time DESC" /> By oldest <br />
+                       </div>
                        <div class="row">
                             <div class="col-md-12 bg-item top-margin">
                                 <h class="search-item">Shipping: </h>
                              </div>
                        </div>
+                       <div class="spacer-for-small">
                                     <input type="radio" name="sort_by_shipping" value="shipping" /> By fastest <br />
                                     <input type="radio" name="sort_by_shipping" value="shipping DESC" /> By slowest <br />
                                     <input class="btn btn-primary" id="submit" type="submit" style="margin-bottom: 20px;" value="Get items!">
+                       </div>
                            </form>
                         </div>';/* col-md-3 END */
     }
@@ -538,39 +591,55 @@ class DefaultView
                 <div class="f_circleG" id="frotateG_07"></div>
                 <div class="f_circleG" id="frotateG_08"></div>
             </div>';
-        echo '<div class="col-md-9" id="total">';
+        echo '<div class="col-md-9" id="total" style="margin-top: 40px;">';
 
         while ($i < count($this->model->id)) {
-            echo '<div class="row">
-                    <div class="col-md-3 wow fadeInUp"';
+            echo '<div class="row" style="margin-left: 5px;';
+
+            if($i < count($this->model->id) - 1){
+                echo 'border-bottom: 1px solid #e4e4e4;';
+            }
+
+            echo 'padding-bottom: 20px; margin-right: 5px;">
+                    <div class="col-md-3"';
             if ($page === 'notebooks' || $page === 'television') {
                 echo 'style="margin-top: 30px"';
             }
-            echo '>
-                        <img src="../../' . $this->model->getPhoto($i) . '" />
+            echo ' style="padding-left: 0 !important;">
+                        <img src="/shop/' . $this->model->getPhoto($i) . '" style="margin-top: 21px;" />
                     </div>
-                    <div class="col-md-5 wow fadeInUp">
-                        <p class="spacer"></p>
-                        <form action="/shop/shop/subdescription" method="get">
-                            <h id="header-items" style="font-size: 20px;"><button type="submit" class="subdescription" style="text-decoration: none;">' . $this->model->getOriginalName($i) . '</button></h>
-                            <span><br />by ' . $this->model->getCategory($i) . '</span>
-                            <p id="price">' . $this->model->getPrice($i) . '$' . ' ' . '<span id="prev-price"><strike>' . $this->model->getPriviousPrice($i) . '$' . '</strike> (' . $this->model->getShipping($i) . ' ' . 'days shipping)</span></p>
-                            <p id="prev-price"> In stock on ' . $this->model->getTimeOfAdding($i) . '</p>
-                            <p>Average price for this product: ' . $this->model->getAverage($i) . '$' . '</p>
-                            <p style="text-align: left"><em>Short description: </em>' . $this->model->getDescription($i) . '</p>
+                    <div class="col-md-5">
+                            <p class="spacer"></p>
+                            <a class="subdescription" href="/shop/shop/subdescription?name=' . $this->model->getOriginalName($i) . '&category=' . $page . '&product_price=' . $this->model->getPrice($i) . '&id=' . $this->model->getId($i) . '&product_name=' . $this->model->getProductName($i) . '">' . $this->model->getOriginalName($i) . '</a>
+                            <span><br />by ';
+
+            if($this->model->getCategory($i) == 'IMac' || $this->model->getCategory($i) == 'AppleTV' ) {
+                echo 'Apple';
+            } else if($this->model->getCategory($i) == 'ShowTop'){
+                echo 'Amazon';
+            } else {
+                echo $this->model->getCategory($i);
+            }
+
+            echo           '</span>
+                            <p id="price">' . $this->model->getPrice($i) . '$' . ' ' . '<span id="prev-price"><strike>' . $this->model->getPriviousPrice($i) . '$' . '</strike></span> (' . $this->model->getShipping($i) . ' ' . 'days shipping)</p>
+                            <p id="on-stock"> In stock on ' . $this->model->getTimeOfAdding($i) . '</p>
+                            <p id="average">Average price for this product: <span id="prev-price">' . $this->model->getAverage($i) . '$' . '</span></p>
+                            <p style="text-align: left;"><b style="font-size: 16px;">Short description: </b>' . $this->model->getDescription($i) . '</p>
+                            <!--
                             <input type="hidden" name="original_name" value="' . $this->model->getOriginalName($i) . '"/>
                             <input type="hidden" name="table" value="phones" />
                             <input type="hidden" name="id_num" value="' . $this->model->getPrice($i) . '"/>
                             <input type="hidden" name="id" value="' . $this->model->getId($i) . '"/>
                             <input type="hidden" name="product_name" value="' . $this->model->getProductName($i) . '"/>
-                        </form>
+                        </form>-->
                     </div>
-                    <div class="col-md-4 wow fadeInUp">
+                    <div class="col-md-4">
                         <p class="spacer"></p>
-                        <p class="align-left">Free shipping on orders greater than $35 </p>
-                        <p class="align-left"><b>Product features: </b></p>
+                        <p class="align-left">Free shipping on orders greater than <span id="prev-price">$35</span></p>
+                        <p class="align-left"><b style="font-size: 16px;">Product features: </b></p>
                         <p class="align-left">' . $this->model->getFeatures($i) . '</p>
-                        <form action="../add-item.php" method="post">
+                        <form action="/shop/shop/add-item" method="post">
                             <button class="btn btn-default">
                                 Add to cart
                             </button>
@@ -585,18 +654,14 @@ class DefaultView
                     </div>
                 </div>';
 
-            if ($i < count($this->model->id) - 1) {
+            /*if ($i < count($this->model->id) - 1) {
                 echo '<div class="divider-items wow fadeInUp"></div>';
-            }
+            }*/
 
             $i++;
         }
         echo ' </div>
-                </div>
-                    <script src="js/wow.js"></script>
-                   <script>
-                         new WOW().init();
-                   </script>';
+                </div>';
     }
 
     /*
@@ -606,7 +671,7 @@ class DefaultView
     {
         echo '</div>
                 <footer>';
-        if ($page !== 'financing' && $page !== 'Index' && $page !== 'Phones' && $page !== 'Devices' && $page !== 'Page Not Found' && $page !== 'Our Company' && $page !== 'Login' && $page !== 'Registration') {
+        if ($page !== 'financing' && $page !== 'Index' && $page !== 'Phones' && $page !== 'Devices' && $page !== 'Page Not Found' && $page !== 'Our Company' && $page !== 'Login' && $page !== 'Registration' && $page !== 'Phones - Business') {
             echo '<div class="container">
                          <!--<div class="divider"></div>-->
                   </div>
@@ -678,7 +743,16 @@ class DefaultView
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Last step</h></a>';
                 } else if (isset($_GET['success'])) {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Success</h></a>';
-                } else {
+                } else if ($this->model->getBreadcrumbs($i) == 'buy-phone'){
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Phones</h></a>';
+                } else if ($this->model->getBreadcrumbs($i) == 'buy-tv'){
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">TV</h></a>';
+                } else if ($this->model->getBreadcrumbs($i) == 'buy-device'){
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Devices</h></a>';
+                } else if ($this->model->getBreadcrumbs($i) == 'buy-laptop'){
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Laptops</h></a>';
+                }
+                else {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . ucfirst($this->model->getBreadcrumbs($i)) . "</a>";
                 }
                 if ($i < $this->model->countBreadcrumbs() - 1) {
@@ -844,7 +918,7 @@ class DefaultView
                             <input type="hidden" value="1" name="shopping_help" />
                             </form>
                             </div>
-                            <div class="col-sm-2 wow fadeInUp full-row-for-small">
+                            <div class="col-sm-2 full-row-for-small">
                                 <div class="small-devices-decoration">
                                     <h class="float-right"><a class="items default-hidden" id="displayTextFooter2" href="javascript:toggle2();">';
         echo $this->model->Translate('Account');
@@ -914,7 +988,7 @@ class DefaultView
         echo '</ul>
                                 </div>
                             </div>
-                            <div class="col-sm-2 wow fadeInRight full-row-for-small">
+                            <div class="col-sm-2 full-row-for-small">
                                 <div class="small-devices-decoration">
                                     <h class="float-right"><a class="items default-hidden" id="displayTextFooter3" href="javascript:toggle3();">';
         echo $this->model->Translate('About Us and Values');
@@ -972,7 +1046,7 @@ class DefaultView
         echo '</ul>
                                 </div>
                             </div>
-                            <div class="col-sm-2 wow fadeInRight edu-for-small full-row-for-small-minus-width">
+                            <div class="col-sm-2 edu-for-small full-row-for-small-minus-width">
                                 <div class="small-devices-decoration">
                                     <h class="float-right"><a class="items default-hidden" id="displayTextFooter4" href="javascript:toggle4();">';
         echo $this->model->Translate('For education & Business');

@@ -43,7 +43,7 @@ class DevicesView extends IndexView
                           <p class="sub-main-lead">Never worry about where to place this incredible thing.</p>
 
                           <a class="links" id="main-link" href="/shop/business/devices/" style="text-decoration: none;">For business <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
-                          <a id="main-link" href="/shop/shop/buy-device/" style="text-decoration: none;">Buy <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
+                          <a id="main-link" href="/shop/devices/buy-device/" style="text-decoration: none;">Buy <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
                       </div>
                   </div>
               </div>';

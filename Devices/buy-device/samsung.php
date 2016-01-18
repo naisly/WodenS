@@ -9,6 +9,7 @@
 include_once('..\..\Controllers\DefaultController.php');
 include_once('..\..\Model\DefaultModel.php');
 include_once('..\..\View\DefaultView.php');
+//initiate the triad
 
 $model = new DefaultModel();
 
@@ -18,10 +19,10 @@ $controller = new DefaultController($model);
 
 $view = new DefaultView($model);
 
-$controller->actionGetData( 'Apple', 'Gadgets', 'Apple' );
+$controller->actionGetData( 'Samsung', 'Gadgets', 'Samsung' );
 
-$view->DoctypeView( 'gadgets' );
+$view->DoctypeView( 'Buy Galaxy Tab' );
 
-$view->headerView( 'apple-gadgets' );
+$view->headerView( 'samsung-gadgets' );
 
 $view->GetUI( 'device', 'gadgets' );

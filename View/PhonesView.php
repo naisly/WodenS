@@ -57,7 +57,7 @@ class PhonesView extends IndexView
         echo $this->model->Translate('For business');
 
         echo         ' ' . '<img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
-                      <a id="main-link" href="/shop/shop/buy-phone/" style="text-decoration: none;">';
+                      <a id="main-link" href="/shop/phones/buy-phone/" style="text-decoration: none;">';
 
         echo $this->model->Translate('Buy');
 

@@ -18,6 +18,6 @@ $controller = new SubdescriptionController($model);
 
 $view = new SubdescriptionView($model);
 
-$controller->actionGetData( $_GET['original_name'], $_GET['table'], $_GET['id_num'], $_GET['id'], $_GET['product_name'], 0);
+$controller->actionGetData( $_GET['name'], $_GET['category'], $_GET['product_price'], $_GET['id'], $_GET['product_name'], 0);
 
 $view->getSubdescriptionPage( 'Apple', 'Phones' );

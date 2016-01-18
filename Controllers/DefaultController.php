@@ -103,8 +103,9 @@ class DefaultController
             $timer++;
         }
         if (isset($_POST['min'])) {
-            $min = $_POST["min"];
+            $min = $_POST['min'];
         }
+        //echo $min;
         if (isset($_POST['max'])) {
             $max = $_POST["max"];
         }
@@ -496,7 +497,7 @@ class DefaultController
         if($_SESSION['language'] !== 'us') {
             include_once('C:/xampp/htdocs/shop/Languages/lang.' . $_SESSION['language'] . '.php');
 
-            $this->model->setLanguage($lang);
+            $this->model->setLanguage($_SESSION['language']);
         }
 
         $language = $_SESSION['language'];

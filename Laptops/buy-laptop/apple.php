@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: Home
  * Date: 20.11.2015
- * Time: 20:40
+ * Time: 18:25
  */
 
 include_once('..\..\Controllers\DefaultController.php');
@@ -19,10 +19,10 @@ $controller = new DefaultController($model);
 
 $view = new DefaultView($model);
 
-$controller->actionGetData( 'Television', 'Television', 'All' );
+$controller->actionGetData( 'Apple', 'Notebooks', 'Apple' );
 
-$view->DoctypeView( 'phones' );
+$view->DoctypeView( 'Buy Macbook' );
 
-$view->headerView( 'television' );
+$view->headerView( 'apple-notebooks' );
 
-$view->GetUI( 'tv', 'television' );
+$view->GetUI( 'laptop', 'notebooks' );

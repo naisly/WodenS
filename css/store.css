@@ -16,7 +16,10 @@
 }
 .store-h {
     font-family: RobotoLight;
-    font-size: 28px;
+    font-size: 36px;
+}
+.sub-store {
+    font-size: 21px;
 }
 .header-buy {
     font-family: RobotoRegular;

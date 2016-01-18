@@ -38,7 +38,7 @@ class LaptopsView extends IndexView
                   <div style="margin-top: 15px; margin-bottom: 30px;">
                       <a class="links" id="main-link" href="/shop/education/laptops/" style="text-decoration: none">For education <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
                       <a class="links" id="main-link" href="/shop/business/laptops/" style="text-decoration: none">For business <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
-                      <a id="main-link" href="/shop/shop/buy-laptop/" style="text-decoration: none;">Buy <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
+                      <a id="main-link" href="/shop/laptops/buy-laptop/" style="text-decoration: none;">Buy <img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
                   </div>
 
               </div>

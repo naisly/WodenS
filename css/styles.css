@@ -298,12 +298,18 @@ p, h1,a  {
 .navbar-brand > img {
 	margin-top: -5px; 
 }
-.margin-top h1, p {
-	text-align: center;
-}
+/*.margin-top h1, p {
+	text-align: right !important;
+}*/
 .margin-top h1 {
 	font-size: 40px;
 	color: #333333;
+}
+#price {
+	text-align: right;
+}
+#on-stock, #average {
+	text-align: right;
 }
 #only {
 	font-size: 26px;
@@ -376,12 +382,14 @@ padding: 2px;
 }
 .text-align {
 	text-align: center;
+	background-color: #f1f1f1;
 }
 a:hover {
 	color: #666666;
 }
 .search-item {
-	font-size: 24px;
+	font-size: 20px;
+	float: left;
 }
 #submit {
 	margin-top: 20px;
@@ -399,16 +407,25 @@ a:hover {
 .bg-item {
 	background-color: #f9f9f9;
 }
+
 .top-margin {
 	margin-bottom: 20px;
 	margin-top: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
 }
 .subdescription {
-	color: #666;
-	background-color: white;
-	border: none;
-	text-align: left;
-	margin-left: -7px;
+	color: #08b;
+	font-size: 20px !important;
+}
+.subdescription:hover {
+	color: #c45500;
+	text-decoration: none !important;
+}
+#prev-price {
+	color: #b12704 !important;
+	font-weight: 700;
+	font-size: 16px;
 }
 .bx-wrapper .bx-viewport
 {
@@ -449,8 +466,19 @@ a:hover {
 .education {
 	position: absolute;
 }
-a:link {
+.default-hidden, .default-hidden:hover {
 	color: #666;
+}
+.search-box {
+	border: 1px solid #e4e4e4;
+	border-top: none;
+	margin-top: 40px;
+}
+
+@media (max-width: 1002px){
+	.search-box {
+		border: none !important;
+	}
 }
 #breadcrumbs {
 	color: #666;
@@ -656,7 +684,6 @@ a:link {
 .search-nav {
 	display: none !important;
 }
-
 #search::-webkit-input-placeholder {
 	/* WebKit, Blink, Edge */
 	color: white;
@@ -678,7 +705,6 @@ a:link {
 
 
 
-
 @media (min-width: 350px) and (max-width: 550px){
 	.full-image-main-content {
 		height: 40vh;
@@ -689,7 +715,33 @@ a:link {
 		height: 60vh;
 	}
 }
-
+output {
+	display: inline-block;
+	font-size: 22px;
+	color: #b12704;
+}
+.min-and-max {
+	font-size: 22px;
+}
+#symb-for-output-xs {
+	font-size: 22px;
+	color: #b12704;
+}
+@media(max-width: 1002px){
+	.bg-item {
+		background-color: #fff;
+	}
+	.spacer-for-small {
+		margin-top: 20px;
+	}
+	.search-item {
+		display: block;
+		width: 100%;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		border-bottom: 1px solid #e4e4e4;
+	}
+}
 @media (max-width: 766px) {
 	.division-main {
 		padding-top: 15px !important;
@@ -956,6 +1008,10 @@ a:link {
 .nav-brand {
 	display: none;
 }
+.store-items {
+	font-size: 15px;
+	font-family: MyriadProSemiBold;
+}
 
 @media (max-width: 766px){
 	.nav-brand {
@@ -990,12 +1046,69 @@ a:link {
 }
 
 
+input[type='range'] {
+	margin-top: 10px !important;
+	margin-bottom: 10px !important;
+	-webkit-appearance: none;
+	appearance: none;
+	-moz-appearance: none;
+	border-radius: 5px;
+	box-shadow: inset 1px 1px 1px rgba(000,000,000,0.25);
+	background-color: #f1f1f1;
+	height: 8px;
+	vertical-align: middle;
+	width: 250px;
+}
+input[type=range]::-webkit-slider-runnable-track {
+	-webkit-appearance: none;
+	appearance: none;
+	border-radius: 5px;
+	box-shadow: inset 1px 1px 1px rgba(000,000,000,0.25);
+	background-color: #f1f1f1;
+	height: 10px;
+	vertical-align:middle;
+	border:solid 1px rgba(0,0,0,0.25);
+}
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	border-radius: 5px;
+	background-color: #f1f1f1;
+	box-shadow:inset 0px 1px 0px rgba(000,000,000,0.5);
+	border: 1px solid #999;
+	height: 20px;
+	width: 7px;
+	vertical-align:middle;
+	margin-top: -6px;
+}
+input[type='range']::-moz-range-track {
+	-moz-appearance: none;
+	border-radius: 5px;
+	box-shadow: inset 1px 1px 1px rgba(000,000,000,0.25);
+	background-color: #f1f1f1;
+	height: 8px;
+	border:solid 1px rgba(0,0,0,0.25);
+	vertical-align:middle;
+	margin:0;
+	padding:0;
+}
+input[type='range']::-moz-range-thumb {
+	-moz-appearance: none;
+	border-radius: 5px;
+	background-color: #f1f1f1;
+	box-shadow:inset 0px 1px 0px rgba(000,000,000,0.5);
+	border: 1px solid #999;
+	height: 20px;
+	width: 5px;
+}
 
 
 
 
 
-
+@font-face {
+	font-family: 'Myriad Pro Set';
+	src: url('../fonts/MyriadPro-Light.otf');
+}
 /* Код для подключения шрифта в /css/stylename.css */ 
 /* font-family: "RobotoRegular"; */
 @font-face {

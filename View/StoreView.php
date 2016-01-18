@@ -38,13 +38,13 @@ class StoreView extends DefaultView
 
         echo '<div id="slideshow">
                <div>
-                 <img class="images-slideshow" src="images/office1.jpg">
+                 <img class="images-slideshow" src="/shop/images/office1.jpg">
                </div>
                <div>
-                 <img class="images-slideshow" src="images/office2.jpg">
+                 <img class="images-slideshow" src="/shop/images/office2.jpg">
                </div>
                <div>
-                 <img class="images-slideshow" src="images/office4.jpg">
+                 <img class="images-slideshow" src="/shop/images/office4.jpg">
                </div>
             </div>
             <script>
@@ -68,29 +68,29 @@ class StoreView extends DefaultView
                   <div class="row">
                       <div class="col-md-4">
                           <h1 class="store-h">Ask what you want</h1>
-                          <p class="text-left">Join us for free explains that covers all answers for your questions, like
+                          <p class="text-left sub-store">Join us for free explains that covers all answers for your questions, like
                           the basic tricks about the bought product up to professional skills. Come to our
                           shop to use the product, see all the pros and cons as well as getting lots of advices.
                           </p>
                       </div>
                       <div class="col-md-1"></div>
                       <div class="col-md-7">
-                          <img class="images-slideshow" src="images/store_support1.jpg" />
+                          <img class="images-slideshow" src="/shop/images/store_support1.jpg" />
                       </div>
                   </div>
                   <div class="margin-space"></div>
                   <div class="row">
                       <div class="col-md-4">
                           <h1 class="store-h">Get the help you need</h1>
-                          <p class="text-left">Ask us about what you should do about repairing. In each of our stores we have
+                          <p class="text-left sub-store">Ask us about what you should do about repairing. In each of our stores we have
                           some professionals that are experts in an area of software.
                           </p>
 
-                          <p class="text-left">In order to get help as fast as possible, contact us by phone</p>
+                          <p class="text-left sub-store">In order to get help as fast as possible, contact us by phone</p>
                       </div>
                       <div class="col-md-1"></div>
                       <div class="col-md-7">
-                          <img class="images-slideshow" src="images/store_support2.jpg" />
+                          <img class="images-slideshow" src="/shop/images/store_support2.jpg" />
                       </div>
                   </div>
               </div>';
@@ -111,10 +111,22 @@ class StoreView extends DefaultView
                               up in the store near you.
                               </p>
 
-                              <a href="index.php"><img style="margin-right: 40px" src="images/icon-phones.png" width="120" height="120" /></a>
-                              <a href="notebooks.php"><img style="margin-right: 40px" src="images/icon-laptop.png" width="120" height="120" /></a>
-                              <a href="gadgets.php"><img style="margin-right: 40px" src="images/icon-devices.png" width="120" height="120" /></a>
-                              <a href="television.php"><img style="margin-right: 40px" src="images/icon-tv.png" width="120" height="120" /></a>
+                              <div class="row" style="margin-top: 70px">
+                                  <div class="col-md-2"></div>
+                                  <div class="col-md-2">
+                                      <a href="/shop/phones/buy-phone/"><img style="margin-right: 40px" src="/shop/images/icon-phones.png" width="150" height="150" /></a>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <a href="/shop/laptops/buy-laptop/"><img style="margin-right: 40px" src="/shop/images/icon-laptop.png" width="150" height="150" /></a>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <a href="/shop/devices/buy-device/"><img style="margin-right: 40px" src="/shop/images/icon-devices.png" width="150" height="150" /></a>
+                                  </div>
+                                  <div class="col-md-2">
+                                      <a href="/shop/tv/buy-tv/"><img style="margin-right: 40px" src="/shop/images/icon-tv.png" width="150" height="150" /></a>
+                                  </div>
+                                  <div class="col-md-2"></div>
+                              </div>
                           </div>
                       </div>
                   </div>
