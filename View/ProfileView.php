@@ -45,10 +45,10 @@ class ProfileView extends DefaultView
 
                       <div class="cart-divider"></div>
 
-                      <h class="cart"><a href="/shop/account/cart" id="link" style="color: #08b;"> Cart</a></h><br />
-                      <h class="cart"><a href="/shop/account/orders" id="link" style="color: #08b;">Your Orders</a></h><br />
-                      <h class="cart"><a href="/shop/account/" id="link" style="color: #08b;">Change account info</a></h><br />
-                      <h class="cart"><a href="/shop/account/billing" id="link" style="color: #08b;">Billing info</a></h><br />
+                      <h class="cart"><a href="/account/cart" id="link" style="color: #08b;"> Cart</a></h><br />
+                      <h class="cart"><a href="/account/orders" id="link" style="color: #08b;">Your Orders</a></h><br />
+                      <h class="cart"><a href="/account/" id="link" style="color: #08b;">Change account info</a></h><br />
+                      <h class="cart"><a href="/account/billing" id="link" style="color: #08b;">Billing info</a></h><br />
 
                       <div class="cart-divider"></div>
 
@@ -119,7 +119,7 @@ class ProfileView extends DefaultView
         if($this->model->getNoProduct() == 'none'){
             echo '<h class="cart not-found">No products found</h>';
         } else {
-            echo     '<img src="/shop/' . $this->model->getPhoto() . '" width="120" height="120" style="margin-top: 15px; margin-bottom: 15px;" /><br />
+            echo     '<img src="/' . $this->model->getPhoto() . '" width="120" height="120" style="margin-top: 15px; margin-bottom: 15px;" /><br />
                       <h class="cart cart-header">' . $this->model->getOriginalName() . '</h><br />
                       <h class="cart cart-price">$' . $this->model->getItemPrice() . '</h><br />
                       <h class="cart"><span class="underline">' . $this->model->getItemShipping() . ' days</span> shipping</h>';
@@ -127,7 +127,7 @@ class ProfileView extends DefaultView
 
         echo         '<div class="cart-divider"></div>
 
-                      <h class="cart">Not ' . $this->model->getName() . ' ? <a href="/shop/logout" class="link">Sign out</a></h>
+                      <h class="cart">Not ' . $this->model->getName() . ' ? <a href="/logout" class="link">Sign out</a></h>
                   </div>';
     }
 
@@ -207,16 +207,16 @@ class ProfileView extends DefaultView
                       <div class="col-md-9">
                           <div class="page-spacer border-margin-for-md">
                               <div class="margin-for-small-sm"></div>
-                              <a class="links" id="main-link" href="/shop/shop/buy-phones/" style="text-decoration: none; white-space: normal;">';
+                              <a class="links" id="main-link" href="/phones/buy-phone/" style="text-decoration: none; white-space: normal;">';
 
             echo $this->model->Translate('Describe new <nobr> possibilities');
 
-            echo         ' ' . '<img src="/shop/images/arrow-blue.png" width="20" height="20"/></nobr></a><br />
+            echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></nobr></a><br />
                               <h>From <span class="cart-price">$' . $this->model->getMinPhones() . '</span></h>
                           </div>
                       </div>
                       <div class="col-md-3">
-                          <img src="/shop/images/iphone6S.jpg" width="120" height="120" class="category-image" />
+                          <img src="/images/iphone6S.jpg" width="120" height="120" class="category-image" />
                       </div>
                   </div>
 
@@ -225,16 +225,16 @@ class ProfileView extends DefaultView
                   <div class="row">
                       <div class="col-md-9">
                           <div class="page-spacer">
-                              <a class="links" id="main-link" href="/shop/shop/buy-laptops/" style="text-decoration: none; white-space: normal;">';
+                              <a class="links" id="main-link" href="/laptops/buy-laptop/" style="text-decoration: none; white-space: normal;">';
 
             echo $this->model->Translate('Fully equipped for a <nobr>world');
 
-            echo         ' ' . '<img src="/shop/images/arrow-blue.png" width="20" height="20"/></nobr></a><br />
+            echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></nobr></a><br />
                               <h>From <span class="cart-price">$' . $this->model->getMinNotebooks() . '</span></h>
                           </div>
                       </div>
                       <div class="col-md-3">
-                          <img src="/shop/images/macbookpro.png" width="120" height="120" class="category-image" />
+                          <img src="/images/macbookpro.png" width="120" height="120" class="category-image" />
                       </div>
                   </div>
 
@@ -243,16 +243,16 @@ class ProfileView extends DefaultView
                   <div class="row">
                       <div class="col-md-9">
                           <div class="page-spacer">
-                              <a class="links" id="main-link" href="/shop/shop/buy-devices/" style="text-decoration: none; white-space: normal;">';
+                              <a class="links" id="main-link" href="/devices/buy-device/" style="text-decoration: none; white-space: normal;">';
 
             echo $this->model->Translate('Smart. Mighty. <nobr> Heavyweight.');
 
-            echo         ' ' . '<img src="/shop/images/arrow-blue.png" width="20" height="20"/></nobr></a><br />
+            echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></nobr></a><br />
                               <h>From <span class="cart-price">$' . $this->model->getMinGadgets() . '</span></h>
                           </div>
                       </div>
                       <div class="col-md-3">
-                          <img src="/shop/images/ipadshop1.jpg" width="120" height="120" class="category-image" />
+                          <img src="/images/ipadshop1.jpg" width="120" height="120" class="category-image" />
                       </div>
                   </div>
 
@@ -261,16 +261,16 @@ class ProfileView extends DefaultView
                   <div class="row">
                       <div class="col-md-9">
                           <div class="page-spacer">
-                              <a class="links" id="main-link" href="/shop/shop/buy-tv/" style="text-decoration: none; white-space: normal;">';
+                              <a class="links" id="main-link" href="/tv/buy-tv/" style="text-decoration: none; white-space: normal;">';
 
             echo $this->model->Translate('The future of television is <nobr> here');
 
-            echo         ' ' . '<img src="/shop/images/arrow-blue.png" width="20" height="20" /></nobr></a><br />
+            echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20" /></nobr></a><br />
                               <h>From <span class="cart-price">$' . $this->model->getMinTV() . '</span></h>
                           </div>
                       </div>
                       <div class="col-md-3">
-                          <img src="/shop/images/imac.jpg" width="120" height="120" class="category-image" />
+                          <img src="/images/imac.jpg" width="120" height="120" class="category-image" />
                       </div>
                   </div>
 
@@ -279,7 +279,7 @@ class ProfileView extends DefaultView
                   <div class="row">
                       <div class="col-md-12">
                           <div class="page-spacer">
-                              <h id="page">Any questions? <a class="page" href="support.php" style="color: #08b;">Go to our support page <img src="/shop/images/arrow-blue.png" width="18" height="18"/></a></h>
+                              <h id="page">Any questions? <a class="page" href="support.php" style="color: #08b;">Go to our support page <img src="/images/arrow-blue.png" width="18" height="18"/></a></h>
                           </div>
                       </div>
                   </div>

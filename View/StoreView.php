@@ -38,13 +38,13 @@ class StoreView extends DefaultView
 
         echo '<div id="slideshow">
                <div>
-                 <img class="images-slideshow" src="/shop/images/office1.jpg">
+                 <img class="images-slideshow" src="/images/office1.jpg">
                </div>
                <div>
-                 <img class="images-slideshow" src="/shop/images/office2.jpg">
+                 <img class="images-slideshow" src="/images/office2.jpg">
                </div>
                <div>
-                 <img class="images-slideshow" src="/shop/images/office4.jpg">
+                 <img class="images-slideshow" src="/images/office4.jpg">
                </div>
             </div>
             <script>
@@ -75,7 +75,7 @@ class StoreView extends DefaultView
                       </div>
                       <div class="col-md-1"></div>
                       <div class="col-md-7">
-                          <img class="images-slideshow" src="/shop/images/store_support1.jpg" />
+                          <img class="images-slideshow" src="/images/store_support1.jpg" />
                       </div>
                   </div>
                   <div class="margin-space"></div>
@@ -90,7 +90,7 @@ class StoreView extends DefaultView
                       </div>
                       <div class="col-md-1"></div>
                       <div class="col-md-7">
-                          <img class="images-slideshow" src="/shop/images/store_support2.jpg" />
+                          <img class="images-slideshow" src="/images/store_support2.jpg" />
                       </div>
                   </div>
               </div>';
@@ -114,16 +114,16 @@ class StoreView extends DefaultView
                               <div class="row" style="margin-top: 70px">
                                   <div class="col-md-2"></div>
                                   <div class="col-md-2">
-                                      <a href="/shop/phones/buy-phone/"><img style="margin-right: 40px" src="/shop/images/icon-phones.png" width="150" height="150" /></a>
+                                      <a href="/phones/buy-phone/"><img style="margin-right: 40px" src="/images/icon-phones.png" width="150" height="150" /></a>
                                   </div>
                                   <div class="col-md-2">
-                                      <a href="/shop/laptops/buy-laptop/"><img style="margin-right: 40px" src="/shop/images/icon-laptop.png" width="150" height="150" /></a>
+                                      <a href="/laptops/buy-laptop/"><img style="margin-right: 40px" src="/images/icon-laptop.png" width="150" height="150" /></a>
                                   </div>
                                   <div class="col-md-2">
-                                      <a href="/shop/devices/buy-device/"><img style="margin-right: 40px" src="/shop/images/icon-devices.png" width="150" height="150" /></a>
+                                      <a href="/devices/buy-device/"><img style="margin-right: 40px" src="/images/icon-devices.png" width="150" height="150" /></a>
                                   </div>
                                   <div class="col-md-2">
-                                      <a href="/shop/tv/buy-tv/"><img style="margin-right: 40px" src="/shop/images/icon-tv.png" width="150" height="150" /></a>
+                                      <a href="/tv/buy-tv/"><img style="margin-right: 40px" src="/images/icon-tv.png" width="150" height="150" /></a>
                                   </div>
                                   <div class="col-md-2"></div>
                               </div>

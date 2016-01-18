@@ -56,7 +56,7 @@ class LoginView extends DefaultView
                       <div class="col-md-3"></div>
                       <div class="col-md-6 text-center" style="margin-top: 40px;">
                           <h1 class="one-account">Only one Account for all your needs.</h1>
-                          <h1 class="one-account">Already have Woden Sims Account? <a href="/shop/login">Find it here<img style="margin-left: 3px;" src="/shop/images/arrow-blue.png" width="13" height="13"/></a></h1>
+                          <h1 class="one-account">Already have Woden Sims Account? <a href="/login">Find it here<img style="margin-left: 3px;" src="/images/arrow-blue.png" width="13" height="13"/></a></h1>
 
                           <div class="form-group" style="margin-top: 30px;">
                               <input type="email" class="form-control" placeholder="email@example.com" id="email" name="email" required />
@@ -399,10 +399,10 @@ class LoginView extends DefaultView
                               <span style="font-size: 22px; margin-left: 25px;">You are accepting Woden Sims Privacy Policy</span><br />
                               <div class="row">
                                   <div class="col-md-10" style="margin-left: 25px;">
-                                      <span style="font-size: 13px;">This <a href="/shop/privacy-policy/" id="main-link-check">Privacy Policy</a> is meant to help you understand
+                                      <span style="font-size: 13px;">This <a href="/privacy-policy/" id="main-link-check">Privacy Policy</a> is meant to help you understand
                                       what data we collect, why we collect it, and what we do with it. This is important;
                                       we hope you will take time to read it carefully. And remember, you can find controls
-                                      to manage your information and protect your privacy and security at <a href="/shop/account/" id="main-link-check">My Account.</a></span>
+                                      to manage your information and protect your privacy and security at <a href="/account/" id="main-link-check">My Account.</a></span>
                                   </div>
                                   <div class="col-md-2"></div>
                               </div>
@@ -416,7 +416,7 @@ class LoginView extends DefaultView
                               <div class="row">
                                   <div class="col-md-10" style="margin-left: 25px;">
                                       <span style="font-size: 13px;">Woden Sims reserves the right, at its sole discretion,
-                                      to change, modify, add or remove portions of these <a href="/shop/terms/" id="main-link-check">Terms of Use</a>, at any time. It
+                                      to change, modify, add or remove portions of these <a href="/terms/" id="main-link-check">Terms of Use</a>, at any time. It
                                       is your responsibility to check these Terms of Use periodically for changes.</span>
                                   </div>
                                   <div class="col-md-2"></div>
@@ -428,7 +428,7 @@ class LoginView extends DefaultView
                   </div>
 
                   <div class="text-center" style="margin-bottom: 40px; margin-top: 40px;">
-                      <button class="register">Register <img src="/shop/images/arrow-blue.png" width="20" height="20"/></button>
+                      <button class="register">Register <img src="/images/arrow-blue.png" width="20" height="20"/></button>
                   </div>
               </div>
               </form>';
@@ -501,7 +501,7 @@ class LoginView extends DefaultView
 
         echo $this->model->Translate('Login');
 
-        echo         ' ' . '<img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
+        echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></a>
               </div>';
     }
 
@@ -514,14 +514,14 @@ class LoginView extends DefaultView
         echo '<div class="alert alert-success" role="alert" style="margin-top: -20px;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
-                <img src="/shop/' . $_SESSION['photo'] . '" width="50" height="50" />
+                <img src="/' . $_SESSION['photo'] . '" width="50" height="50" />
                 Your selected item was Added to cart! Cart subtotal (' . $this->model->getAItems() . ' items) $' . $this->model->getAPrice() .'
                     <div class="pull-right" style="margin-top: 8px;">
                         <button class="cart btn btn-default" style="margin-right: 20px;" onclick="location.href=';
-                            echo "'/shop/account/cart'";
+                            echo "'/account/cart'";
                             echo '">Cart</button>';
         echo            '<button class="cart btn btn-primary" onclick="location.href=';
-                            echo "'/shop/account/placeorder'";
+                            echo "'/account/placeorder'";
                             echo '">Procceed to checkout (' . $this->model->getAItems() . ' items)</button>
                     </div>
                 </div>';
@@ -558,7 +558,7 @@ class LoginView extends DefaultView
 
         echo       '"><h1 class="sign">Sign in Account</h1>
                       <h2 class="only-one">Only one Account for All your needs</h2>
-                      <h2 class="only-one" style="font-size: 20px;">Have no account? <a href="/shop/register" class="links" id="link" style="text-decoration: none;">Create your Woden Sims ID <img style="margin-top: -5px;" src="/shop/images/arrow-blue.png" width="15" height="15"/></a></h2>
+                      <h2 class="only-one" style="font-size: 20px;">Have no account? <a href="/register" class="links" id="link" style="text-decoration: none;">Create your Woden Sims ID <img style="margin-top: -5px;" src="/shop/images/arrow-blue.png" width="15" height="15"/></a></h2>
                   </div>
                   <div class="margin-auto" style="margin-top: 5%;"><form action="check" method="post">
                               <div class="input-group" style="width: 100%;">
@@ -571,9 +571,9 @@ class LoginView extends DefaultView
                           </form>
                   </div>
                   <div class="text-center" style="margin-top: 15px;">
-                      <a href="/shop/forgot-password/?session_auth=' . $_SESSION["session_auth"] . '" class="forgot links" id="link">Forgot your password?</a>
+                      <a href="/forgot-password/?session_auth=' . $_SESSION["session_auth"] . '" class="forgot links" id="link">Forgot your password?</a>
                   </div>
-                  <img style="margin-top: 40px;" src="/shop/images/phones-category-white.png" class="full-image-cascade" />
+                  <img style="margin-top: 40px;" src="/images/phones-category-white.png" class="full-image-cascade" />
                </div>';
 
         $this->actionGetFooter( 'Login' );

@@ -34,7 +34,7 @@ class OrderStatusView extends DefaultView
             echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px;">
                       <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                       <span class="sr-only">Error:</span>
-                      <form action="/shop/support/" method="post">
+                      <form action="/support/" method="post">
                           Order <span class="order_id">#' . $this->model->getOrderId() . '</span> not found or incorrect email you<br />
                           have been entered: <span class="order_email">' . $this->model->getOrderEmail() . '</span>. Please check the provided info.<br />
                           If you think that it was our mistake, please <button id="link_as_button" class="contact-us">contact us</button>
@@ -48,7 +48,7 @@ class OrderStatusView extends DefaultView
                                            <div class="col-md-2"></div>
                                            <div class="col-md-8">
                                               <div class="account">
-                                                  <form action="/shop/order-status/single" method="get">
+                                                  <form action="/order-status/single" method="get">
                                                       <h class="h-account">Look up for order</h>
                                                       <input type="text" class="form-control margin-20" name="order_number" id="order_number" placeholder="Order Number" />
                                                       <input type="text" class="form-control margin-20" name="order_email" id="order_email" placeholder="Your email" />
@@ -60,7 +60,7 @@ class OrderStatusView extends DefaultView
                                                               <div class="find-number">
                                                                   <h class="h-find">Find your order number</h><br />
                                                                   <h class="sub-find">Number is located with thanks message or in your account</h>
-                                                                  <img class="order-support" src="/shop/images/order-support.png" width="400"/>
+                                                                  <img class="order-support" src="/images/order-support.png" width="400"/>
                                                               </div>
                                                           </div>
                                                           <div class="media-spacer"></div>
@@ -81,7 +81,7 @@ class OrderStatusView extends DefaultView
 
         } else if( $this->model->getStatus() == 'done' || $this->model->getStatus() == 'wait'){
 
-            echo '<form action="/shop/support/" method="post">';
+            echo '<form action="/support/" method="post">';
             if($this->model->getStatus() == 'done') {
                 echo '<div class="alert alert-success" role="alert" style="margin-top: -20px;">';
             } else {
@@ -148,8 +148,8 @@ class OrderStatusView extends DefaultView
                 }
 
                 echo '">' .
-                     '<a class="original" style="height: 50px;" href="/shop/shop/subdescription?original_name=' . $this->model->getOriginalName($i) . '&table=' . $this->model->getTable($i) . '&id_num=' . $this->model->getPrice($i) . '&id=' . $this->model->getId($i) . '&product_name=' . $this->model->getProductName($i) . '">' . $this->model->getOriginalName($i) . '</a><br />
-                      <img src="/shop/' . $this->model->getPhoto($i) . '" width="150" height="150" style="margin-top: 7px; margin-bottom: 7px;" />
+                     '<a class="original" style="height: 50px;" href="/shop/subdescription?original_name=' . $this->model->getOriginalName($i) . '&table=' . $this->model->getTable($i) . '&id_num=' . $this->model->getPrice($i) . '&id=' . $this->model->getId($i) . '&product_name=' . $this->model->getProductName($i) . '">' . $this->model->getOriginalName($i) . '</a><br />
+                      <img src="/' . $this->model->getPhoto($i) . '" width="150" height="150" style="margin-top: 7px; margin-bottom: 7px;" />
                       <h class="category">by <a class="default-link" href="http://' . $this->model->getCategory($i) . '.com">' . $this->model->getCategory($i) . '</a></h><br />
                       <h class="item-price">$' . $this->model->getPrice($i) . '</h><br />
                       <h id="ordered">Ordered shipping: <span id="underline">' . $this->model->getShipping($i) . ' days</span></h>' .

@@ -47,25 +47,25 @@ class PhonesView extends IndexView
 
         echo     '</h><br />
 			      <div style="margin-top: 15px; margin-bottom: 30px;">
-                      <a class="links" id="main-link" href="/shop/education/phones/" style="text-decoration: none">';
+                      <a class="links" id="main-link" href="/education/phones/" style="text-decoration: none">';
 
         echo $this->model->Translate('For education');
 
-        echo         ' ' . '<img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
-                      <a class="links" id="main-link" href="/shop/business/phones/" style="text-decoration: none">';
+        echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></a>
+                      <a class="links" id="main-link" href="/business/phones/" style="text-decoration: none">';
 
         echo $this->model->Translate('For business');
 
-        echo         ' ' . '<img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
-                      <a id="main-link" href="/shop/phones/buy-phone/" style="text-decoration: none;">';
+        echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></a>
+                      <a id="main-link" href="/phones/buy-phone/" style="text-decoration: none;">';
 
         echo $this->model->Translate('Buy');
 
-        echo         ' ' . '<img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
+        echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></a>
                   </div>
 	          </div>
 
-	          <img src="/shop/images/phones-category-white.png" class="full-image-cascade" />
+	          <img src="/images/phones-category-white.png" class="full-image-cascade" />
 
               <div class="container">
 	              <div class="divider-phones"></div>
@@ -85,7 +85,7 @@ class PhonesView extends IndexView
 
         echo             '</h1>
                       </div>
-                      <div class="col-sm-8"><img src="/shop/images/phones-three-pos-gl.png" class="full-image-cascade"></div>
+                      <div class="col-sm-8"><img src="/images/phones-three-pos-gl.png" class="full-image-cascade"></div>
                   </div>
               </div>
 
@@ -104,11 +104,11 @@ class PhonesView extends IndexView
 
         echo             '</h><br /><br />
 
-                          <a id="main-link" href="/shop/education/phones/" style="text-decoration: none" class="search-education">';
+                          <a id="main-link" href="/education/phones/" style="text-decoration: none" class="search-education">';
 
         echo $this->model->Translate('Search for education');
 
-        echo         ' ' . '<img src="/shop/images/arrow-blue-f1.png" width="20" height="20"/></a>
+        echo         ' ' . '<img src="/images/arrow-blue-f1.png" width="20" height="20"/></a>
                       </div>
                       <div class="col-md-2"></div>
                   </div>
@@ -128,13 +128,12 @@ class PhonesView extends IndexView
         echo             '</h1>
                       </div>
                       <div class="col-sm-6">
-                          <img src="/shop/images/phones-iphone-desc.png" class="full-image-cascade" />
+                          <img src="/images/phones-iphone-desc.png" class="full-image-cascade" />
                       </div>
                       <div class="col-sm-2"></div>
                   </div>
               </div>
 
-              <!--<img src="/shop/images/phones-bg.png" class="full-image-cascade" />-->
               <div class="phones-category-xs container">
                   <div class="row">
                       <div class="col-md-4"></div>
@@ -150,7 +149,7 @@ class PhonesView extends IndexView
 
         echo              '</h><br /><br />
 
-                          <a id="main-link" href="/shop/education/phones/" style="text-decoration: none" class="search-education">Search for business <img src="/shop/images/arrow-blue-f1.png" width="20" height="20"/></a>
+                          <a id="main-link" href="/education/phones/" style="text-decoration: none" class="search-education">Search for business <img src="/shop/images/arrow-blue-f1.png" width="20" height="20"/></a>
                       </div>
                       <div class="col-md-4"></div>
                   </div>

@@ -63,7 +63,7 @@ class TermsView extends DefaultView
                    <h1 class="sub-header-terms">
                         Your use of the Sites and <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a>\'s services, software and products (collectively the as the
                         "<b>Services</b>" hereinafter) is subject to the terms and conditions contained in this document as well
-                        as the <a href="/shop/privacy-policy/">Privacy Policy</a> , the Product Listing Policy  and any other rules and policies of the Sites
+                        as the <a href="/privacy-policy/">Privacy Policy</a> , the Product Listing Policy  and any other rules and policies of the Sites
                         that <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a> may publish from time to time.  This document and such other rules and policies
                         of the Sites are collectively referred to below as the "<b>Terms</b>".  By accessing the Sites or using
                         the Services, you agree to accept and be bound by the Terms.  Please do not use the Services or
@@ -156,10 +156,10 @@ class TermsView extends DefaultView
                        expressly permitted in the Terms is prohibited.
                    </h1>
                    <h1 class="sub-header-terms">
-                       You must read <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a>\'s <a href="/shop/privacy-policy/">Privacy Policy</a> which governs the protection and use of personal
+                       You must read <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a>\'s <a href="/privacy-policy/">Privacy Policy</a> which governs the protection and use of personal
                        information about Users in the possession of <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a> and our affiliates. You accept
-                       the terms of the <a href="/shop/privacy-policy/">Privacy Policy</a> and agree to the use of the personal information about
-                       you in accordance with the <a href="/shop/privacy-policy/">Privacy Policy</a>.
+                       the terms of the <a href="/privacy-policy/">Privacy Policy</a> and agree to the use of the personal information about
+                       you in accordance with the <a href="/privacy-policy/">Privacy Policy</a>.
                    </h1>
                    <h1 class="sub-header-terms">
                        <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a> may allow Users to access to content, products or services offered by third parties
@@ -333,7 +333,7 @@ class TermsView extends DefaultView
 
     public function endHTML() {
 
-        echo '<script src="/shop/js/terms-scroll.js"></script>';
+        echo '<script src="/js/terms-scroll.js"></script>';
         echo '</body>
             </html>';
     }

@@ -36,7 +36,7 @@ class OrderView extends DefaultView
         echo '
             <h2>Check out now</h2>
             <p class="text-left">Please enter your details, and well ship your goods right away!</p>
-            <form name="shippingForm" action="/shop/account/complete-order" method="post">
+            <form name="shippingForm" action="/account/complete-order" method="post">
                 <div class="well">
                     <h3>Ship to</h3>
                     <div class="form-group">

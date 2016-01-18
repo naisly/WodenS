@@ -50,7 +50,7 @@ class EducationPhonesView extends DefaultView
                                         </h>
                                     </div>
 
-                                    <img src="../../images/education-phones3.jpg" id="education-phone" />
+                                    <img src="/images/education-phones3.jpg" id="education-phone" />
 
                                     <div class="usefull-apps">
                                         <h id="main">Awesome Student and Teacher Apps</h><br />
@@ -63,14 +63,14 @@ class EducationPhonesView extends DefaultView
                                         </div>
                                     </div>
 
-                                    <img src="../../images/dropbox.png" width="170" height="170" id="dropbox" />
+                                    <img src="/images/dropbox.png" width="170" height="170" id="dropbox" />
 
                                     <div class="content-phones">
                                         <h id="sub-every-phones"><a style="color: #1b6d85; text-decoration: none" href="http://www.adobe.com/ru/products/photoshop.html">Photoshop</a>:  Next, in line is going app is photoshop. Photoshop
                                         allows you to improve photos and interact lots of items together. Its now available on phones based on Windows OS</h>
                                     </div>
 
-                                    <img src="../../images/education-phones1.jpg" id="photoshop" /><br />
+                                    <img src="/images/education-phones1.jpg" id="photoshop" /><br />
 
                                     <div class="delivering">
                                         <h id="main">Delivering Materials via Phone using developed cross usage platforms</h>
@@ -82,7 +82,7 @@ class EducationPhonesView extends DefaultView
                                         </div>
                                     </div>
 
-                                    <img src="../../images/education-phones.jpg" id="delivering" />
+                                    <img src="/images/education-phones.jpg" id="delivering" />
 
                                     <h id="main">Usage of phones through adults nowadays</h>
 
@@ -92,7 +92,7 @@ class EducationPhonesView extends DefaultView
                                         have started to replace other devices like cameras and desktop computers.</h>
                                     </div>
 
-                                    <img src="../../images/education-phones4.jpg" id="chart" />
+                                    <img src="/images/education-phones4.jpg" id="chart" />
                                 </div>
                            </div>
                       </div>

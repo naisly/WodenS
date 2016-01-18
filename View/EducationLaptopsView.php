@@ -50,7 +50,7 @@ class EducationLaptopsView extends DefaultView
                                         </h>
                                     </div>
 
-                                    <img src="../../images/laptops-falling.png" id="education-laptop" />
+                                    <img src="/images/laptops-falling.png" id="education-laptop" />
 
                                     <div id="education-divider"></div>
 
@@ -66,7 +66,7 @@ class EducationLaptopsView extends DefaultView
                                         </div>
                                     </div>
 
-                                    <img src="../../images/laptop-gold.jpg" id="macbook-pro" />
+                                    <img src="/images/laptop-gold.jpg" id="macbook-pro" />
 
                                     <div class="content-phones">
                                         <h id="sub-every-phones">Another potential benefit of using laptops in classrooms is that using computers is more fun for students
@@ -74,7 +74,7 @@ class EducationLaptopsView extends DefaultView
                                         the classroom are more likely to come to school.</h>
                                     </div>
 
-                                    <img src="../../images/macbook-air.jpg" id="macbook-air" /><br />
+                                    <img src="/images/macbook-air.jpg" id="macbook-air" /><br />
 
                                     <div id="education-divider"></div>
 
@@ -119,7 +119,7 @@ class EducationLaptopsView extends DefaultView
                                         </div>
                                     </div>
 
-                                    <img src="../../images/laptops-thin.png" id="education-laptop" />
+                                    <img src="/images/laptops-thin.png" id="education-laptop" />
 
                                     <div id="education-divider"></div>
 
@@ -156,7 +156,7 @@ class EducationLaptopsView extends DefaultView
                                         </div>
                                     </div>
 
-                                    <img src="../../images/devices.jpg" id="education-laptop" />
+                                    <img src="/images/devices.jpg" id="education-laptop" />
                                 </div>
                            </div>
                       </div>

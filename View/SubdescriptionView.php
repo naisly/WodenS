@@ -50,7 +50,7 @@ class SubdescriptionView extends DefaultView
                   <div class="col-md-9">
                       <div class="col-md-1"></div>
                       <div class="col-md-4">
-                          <img src="/shop/' . $this->model->getProductPhoto() . '" class="img-store" />
+                          <img src="/' . $this->model->getProductPhoto() . '" class="img-store" />
                       </div>
                       <div class="col-md-7">
                            <h class="main-header">' . $this->model->getOriginalName(0) . '</h><br />
@@ -96,7 +96,7 @@ class SubdescriptionView extends DefaultView
         $m = 0;
         while($m < $this->model->countAssocProducts()){
             echo '<div class="slide">
-                          <img src="/shop/' . $this->model->getAssocPhoto($m) . '" width="120" height="120" />
+                          <img src="/' . $this->model->getAssocPhoto($m) . '" width="120" height="120" />
                           <div style="height: 90px;; margin-top: 10px;">
                               <h><a href="#" class="assoc-original-name">' . $this->model->getAssocProducts($m) . '</a></h><br />
                               <h id="you-save"">$' . $this->model->getAssocPrice($m) . '<span class="striked"><strike> $' . $this->model->getAssocPreviousPrice($m) . '</strike></span></h><br />
@@ -216,13 +216,13 @@ class SubdescriptionView extends DefaultView
                   <div class="col-md-3">
                       <div class="social">
                           <a title="contact via VK" href="http://vk.com/naisly" class="contact">Contact </a>
-                          <a href="http://vk.com/naisly"><img src="/shop/images/vk.png" width="30" height="30" /></a>
-                          <a href="https://www.facebook.com/alexandr.serduk.7"><img src="/shop/images/facebook.png" width="30" height="30" /></a>
-                          <a href="https://twitter.com/naislygg"><img src="/shop/images/twitter.png" width="30" height="30" /></a>
+                          <a href="http://vk.com/naisly"><img src="/images/vk.png" width="30" height="30" /></a>
+                          <a href="https://www.facebook.com/alexandr.serduk.7"><img src="/images/facebook.png" width="30" height="30" /></a>
+                          <a href="https://twitter.com/naislygg"><img src="/images/twitter.png" width="30" height="30" /></a>
                       </div>
                       <div class="aside" style="margin-top: 5px;">
                           <div class="shopping-cart">
-                              <img src="/shop/images/shopping-cart.png" />
+                              <img src="/images/shopping-cart.png" />
                               <h class="buy-new">Buy new :</h>
                               <h class="price-new">$' . sprintf("%0.2f", $this->model->getPrice()) . '</h>
                           </div>
@@ -230,7 +230,7 @@ class SubdescriptionView extends DefaultView
                               <h style="font-family: Arial;"><input type="checkbox" name="free-shipping" value="1" /> Yes, I want <em>Shipping</em> that varies from
                               <b>two weeks</b> up to <b>one month</b> with <a class="link-default" href="https://novaposhta.ua/en">Nova Poshta</a></h>
                           </div>
-                      <form action="/shop/shop/add-item" method="post">
+                      <form action="/shop/add-item" method="post">
                           <div class="qty">
                               <h id="qty">Quantity</h>
                               <select name="item_quantity" id="item_quantity" required>';
@@ -330,7 +330,7 @@ class SubdescriptionView extends DefaultView
                         </div>
                         <div class="row">
                             <div class="col-md-4">
-                                <img src="/shop/'. $this->model->getSequencePhoto() . '" width="85" height="86" class="random-photo" />
+                                <img src="/'. $this->model->getSequencePhoto() . '" width="85" height="86" class="random-photo" />
 
                             </div>
                             <div class="col-md-1"></div>
@@ -377,7 +377,7 @@ class SubdescriptionView extends DefaultView
         while($i < $this->model->countComparisonId()) {
             echo '<th style="width: 20%;">
                       <div class="text-center">
-                          <img src="/shop/' . $this->model->getComparisonPhoto( $i ) . '" width="60" height="80" />
+                          <img src="/' . $this->model->getComparisonPhoto( $i ) . '" width="60" height="80" />
                           <h class="name-margin">' . $this->model->getComparisonProductName($i) . '</h>
                       </div>
 
@@ -565,7 +565,7 @@ class SubdescriptionView extends DefaultView
     public function getAnswers()
     {
 
-        echo '<form action="/shop/FAQ/?" method="get">
+        echo '<form action="/FAQ/?" method="get">
                  <div class="container-fluid">
                       <div class="row">
                           <div class="col-lg-8">

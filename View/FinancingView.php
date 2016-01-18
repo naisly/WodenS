@@ -46,7 +46,7 @@ class FinancingView extends DefaultView
                                       going to earn points each time. For every 250$ you will earn 10% sale for next item</h>
                                   </div>
 
-                                  <img src="/shop/images/devices.jpg" class="image-main" />
+                                  <img src="/images/devices.jpg" class="image-main" />
 
                                   <div id="divider-main"></div>
 

@@ -114,7 +114,7 @@ class JobsView extends DefaultView
                   </div>
               </div>
 
-              <img src="/shop/images/jobs-store-hq.jpeg" class="full-image-cascade" style="margin-top: 60px;" />';
+              <img src="/images/jobs-store-hq.jpeg" class="full-image-cascade" style="margin-top: 60px;" />';
 
         echo '<div class="text-center" id="consultant">
                   <h1 class="main-job-main">Consultant</h1>
@@ -189,7 +189,7 @@ class JobsView extends DefaultView
                       </div>
                   </div>
 
-                  <img src="/shop/images/sales-assistant.jpg" class="full-image-cascade" style="margin-top: 50px;"/>';
+                  <img src="/images/sales-assistant.jpg" class="full-image-cascade" style="margin-top: 50px;"/>';
 
         echo '<div class="text-center" id="director">
                   <h1 class="main-job-main">Store Director</h1>
@@ -260,19 +260,19 @@ class JobsView extends DefaultView
                   </div>
               </div>
 
-              <img src="/shop/images/job-director.jpg" style="margin-top: 50px; margin-bottom: 50px;" class="full-image-cascade" />
+              <img src="/images/job-director.jpg" style="margin-top: 50px; margin-bottom: 50px;" class="full-image-cascade" />
 
               <div class="text-center">
                   <h1 class="looking-for">If you think that you\'re a person that we are looking for, please</h1>
 
-                  <a class="links" id="main-link" href="/shop/contact/" style="text-decoration: none">';
+                  <a class="links" id="main-link" href="/contact/" style="text-decoration: none">';
 
         echo $this->model->Translate('Contact Us');
 
-        echo         ' ' . '<img src="/shop/images/arrow-blue-f1.png" width="20" height="20"/></a>
+        echo         ' ' . '<img src="/images/arrow-blue-f1.png" width="20" height="20"/></a>
 
               </div>
 
-              <script src="/shop/js/jobs-scroll.js"></script>';
+              <script src="/js/jobs-scroll.js"></script>';
     }
 }

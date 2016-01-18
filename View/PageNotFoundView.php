@@ -45,7 +45,7 @@ class PageNotFoundView extends DefaultView
                               <h class="search-for-choice">Search items for your choice</h>
                           </div>
 
-                          <a onclick="toggle_categories();" style="cursor: pointer;"><img alt="not-found" src="/shop/images/plus1.png" style="margin-top: 5%;" id="image-get-data-gl"/></a>
+                          <a onclick="toggle_categories();" style="cursor: pointer;"><img alt="not-found" src="/images/plus1.png" style="margin-top: 5%;" id="image-get-data-gl"/></a>
                       </div>
                       <div class="col-md-3"></div>
                   </div>
@@ -55,8 +55,7 @@ class PageNotFoundView extends DefaultView
                       <div class="container-fluid">
                       <div class="row">
                           <div class="col-md-6 no-division-for-category">
-                              <!--<a href="/shop/phones/"><img src="/shop/images/phones-category-w-text.png" class="full-image-cascade border-left" /></a>-->
-                              <a href="/shop/phones/" style="text-decoration: none">
+                              <a href="/phones/" style="text-decoration: none">
                                   <div class="bg-phones">
                                       <div style="margin-top: -10px;">
                                           <h1 class="sub-decision-for-xs">';
@@ -68,8 +67,7 @@ class PageNotFoundView extends DefaultView
                                   </div>
                               </a>
 
-                              <!--<a href="/shop/devices/"><img src="/shop/images/ipad-category-w-text.jpg" class="full-image-cascade border-top" /></a>-->
-                              <a href="/shop/devices/" style="text-decoration: none">
+                              <a href="/devices/" style="text-decoration: none">
                                   <div class="bg-ipad">
                                       <h1 class="sub-decision-for-xs">';
 
@@ -81,8 +79,8 @@ class PageNotFoundView extends DefaultView
                               </a>
                           </div>
                           <div class="col-md-6 no-division-for-category">
-                              <!--<a href="/shop/laptops/"><img src="/shop/images/laptops-category-w-text.jpg" class="full-image-cascade border-right" /></a>-->
-                              <a href="/shop/laptops/" style="text-decoration: none">
+
+                              <a href="/laptops/" style="text-decoration: none">
                                   <div class="bg-laptops">
                                       <h1 class="sub-decision-for-xs">';
 
@@ -93,8 +91,7 @@ class PageNotFoundView extends DefaultView
                                   </div>
                               </a>
 
-                              <!--<a href="/shop/tv/"><img src="/shop/images/tv-category.jpg" class="full-image-cascade border-bottom" /></a>-->
-                              <a href="/shop/tv/" style="text-decoration: none">
+                              <a href="/tv/" style="text-decoration: none">
                                   <div class="bg-tv">
                                       <h1 class="sub-decision-for-xs">';
 
@@ -108,6 +105,6 @@ class PageNotFoundView extends DefaultView
                   </div>
                       </div>
                   </div>
-                  <script src="/shop/js/not-found.js"></script>';
+                  <script src="/js/not-found.js"></script>';
     }
 }

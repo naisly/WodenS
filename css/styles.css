@@ -612,6 +612,7 @@ a:hover {
 }
 .sub-decision-for-xs {
 	font-size: 20px;
+	color: #444 !important;
 }
 .bg-ipad {
 	background: url('../images/ipad-category.jpg') center no-repeat;
@@ -652,6 +653,7 @@ a:hover {
 @media (min-width: 766px) and (max-width: 991px){
 	.sub-decision-for-xs {
 		font-size: 30px;
+		color: #444 !important;
 	}
 	.bg-ipad, .bg-phones {
 		border-right: none;
@@ -795,6 +797,7 @@ output {
 	}
 	.sub-decision-for-xs {
 		font-size: 30px;
+		color: #444 !important;
 	}
 	.border-top-and-bottom {
 		border-bottom: none;

@@ -59,16 +59,16 @@ class CompanyView extends DefaultView
                   </div>
               </div>
 
-              <img src="/shop/images/company.jpg" class="full-image-cascade image-xl" />
+              <img src="/images/company.jpg" class="full-image-cascade image-xl" />
 
               <div class="container text-center" style="margin-top: 4%;">
                   <h1 class="career">Career opportunities</h1>
                   <h2 id="sub-career" style="padding-bottom: 1%;">Make your routine day as diverse as it could be.</h2>
-                  <a class="links" id="main-link" href="/shop/jobs/" style="text-decoration: none; margin-right: 0;">';
+                  <a class="links" id="main-link" href="/jobs/" style="text-decoration: none; margin-right: 0;">';
 
         echo $this->model->Translate('Join our team');
 
-        echo      '<img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
+        echo      '<img src="/images/arrow-blue.png" width="20" height="20"/></a>
 
                   <div class="row">
                       <div class="col-md-1"></div>
@@ -110,7 +110,7 @@ class CompanyView extends DefaultView
                   </div>
               </div>
 
-              <img src="/shop/images/company-work.jpg" class="full-image-cascade image-xl" />
+              <img src="/images/company-work.jpg" class="full-image-cascade image-xl" />
 
               <div class="container text-center" style="margin-top: 3%;">
                   <h1 class="career">Investors</h1>
@@ -119,7 +119,7 @@ class CompanyView extends DefaultView
                       <div class="col-md-1"></div>
                       <div class="col-md-10">
                           <h1 class="header-ws-md">On the one hand, Woden Sims is a store located at more than
-                          seven countries <a href="/shop/store/" style="text-decoration: none; color: #08b;">primary in Europe</a>. On the other hand, our Company
+                          seven countries <a href="/store/" style="text-decoration: none; color: #08b;">primary in Europe</a>. On the other hand, our Company
                           provides software in the industry of IT. We are developing Apps for Android as well as IOS, web-sites.</h1>
                       </div>
                       <div class="col-md-1"></div>
@@ -130,7 +130,7 @@ class CompanyView extends DefaultView
                   <div class="row">
                       <div class="col-md-1"></div>
                       <div class="col-md-5 text-center">
-                          <img src="/shop/images/team.png" height="90" width="90" />
+                          <img src="/images/team.png" height="90" width="90" />
                           <h1 class="main-row text-left" style="font-size: 30px; font-family: RobotoLight; color: rgb(236, 0, 140);">Our development team</h1>
 
                           <h1 class="desc-row text-left">Woden Sims\'s own software development team model is a great choice for
@@ -141,7 +141,7 @@ class CompanyView extends DefaultView
 
                       </div>
                       <div class="col-md-5 text-center" style="border-left: 1px solid #e4e4e4;">
-                          <img src="/shop/images/bulb.png" height="90" width="90" />
+                          <img src="/images/bulb.png" height="90" width="90" />
                           <h1 class="main-row text-left" style="font-size: 30px; font-family: RobotoLight; color: rgb(236, 0, 140);">Custom Software Development</h1>
 
                           <h1 class="desc-row text-left">Woden Sims employs a staff of talented developers who are ready to
@@ -155,6 +155,6 @@ class CompanyView extends DefaultView
                   </div>
               </div>
 
-              <img src="/shop/images/inverstors.jpg" class="full-image-cascade" style="margin-top: 4%;"/>';
+              <img src="/images/inverstors.jpg" class="full-image-cascade" style="margin-top: 4%;"/>';
     }
 }

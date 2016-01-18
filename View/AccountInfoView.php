@@ -197,7 +197,7 @@ class AccountInfoView extends AccountOrderView
                         </div>
                         <div class="col-md-4" id="no-border">
                             <h class="change">Change Your Password</h>
-                            <h1 class="make-sure">If you forgot your password, please follow those instructions for <a href="/shop/forgot-password/" class="link-forgot">recovering your password.</a></h1>
+                            <h1 class="make-sure">If you forgot your password, please follow those instructions for <a href="/forgot-password/" class="link-forgot">recovering your password.</a></h1>
                             <form role="form" action="change-data" method="post">
                                 <div class="form-group change-spacer">
                                     <input type="password" class="form-control" name="new_password" id="new_password" placeholder="New Password" required />

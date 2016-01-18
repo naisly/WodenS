@@ -28,7 +28,7 @@ class AccountInfoController extends AccountOrderController
         session_start();
 
         if(!isset($_SESSION['login_user'])){
-            header('Location: /shop/login');
+            header('Location: /login');
         }
 
         session_write_close();
@@ -187,11 +187,11 @@ class AccountInfoController extends AccountOrderController
         }
 
         if($_POST['email'] !== $_POST['email_again']){
-            header('Location: /shop/account/?emails_not_match=1');
+            header('Location: /account/?emails_not_match=1');
         } else if($password !== $password_database){
-            header('Location: /shop/account/?wrong_password=1');
+            header('Location: /account/?wrong_password=1');
         } else if(in_array($email, $email_array)){
-            header('Location: /shop/account/?email_registered=1');
+            header('Location: /account/?email_registered=1');
         } else {
 
             $query = $mysqli->prepare("UPDATE users SET email='$email' WHERE email='" . $_SESSION['login_user'] . '\'');
@@ -199,7 +199,7 @@ class AccountInfoController extends AccountOrderController
 
             $_SESSION['login_user'] = $email;
 
-            header('Location: /shop/account/?success_email=1');
+            header('Location: /account/?success_email=1');
 
         }
 
@@ -232,13 +232,13 @@ class AccountInfoController extends AccountOrderController
         }
 
         if($password !== $password_database){
-            header('Location: /shop/account/?wrong_password=1');
+            header('Location: /account/?wrong_password=1');
         } else {
 
             $query = $mysqli->prepare("UPDATE users SET first_name='$first_name', last_name='$last_name' WHERE email='" . $_SESSION['login_user'] . '\'');
             $query->execute();
 
-            header('Location: /shop/account/?success_username=1');
+            header('Location: /account/?success_username=1');
 
         }
 
@@ -270,17 +270,17 @@ class AccountInfoController extends AccountOrderController
         }
 
         if($new_password !== $confirm_new_password){
-            header('Location: /shop/account/?passwords_not_match=1');
+            header('Location: /account/?passwords_not_match=1');
         } else if($password !== $password_database){
-            header('Location: /shop/account/?wrong_password=1');
+            header('Location: /account/?wrong_password=1');
         } else if(strlen($new_password) < 7){
-            header('Location: /shop/account/?password_count_error=1');
+            header('Location: /account/?password_count_error=1');
         } else {
 
             $query = $mysqli->prepare("UPDATE users SET password='$new_password' WHERE email='" . $_SESSION['login_user'] . '\'');
             $query->execute();
 
-            header('Location: /shop/account/?success_password=1');
+            header('Location: /account/?success_password=1');
         }
 
         session_write_close();

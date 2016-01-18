@@ -61,122 +61,122 @@ class DefaultView
                     <!-- Latest compiled and minified CSS -->
                     <meta name="viewport">';
 
-        echo '<link rel="stylesheet" href="/shop/css/bootstrap.css">
-                    <link rel="shortcut icon" href="/shop/images/favicon-default.png" />
-                    <script src="/shop/js/jquery-min.js"></script>
+        echo '<link rel="stylesheet" href="/css/bootstrap.css">
+                    <link rel="shortcut icon" href="/images/favicon-default.png" />
+                    <script src="/js/jquery-min.js"></script>
                     <!-- bxSlider Javascript file -->
-                    <script src="/shop/js/bootstrap.min.js"></script>
-                    <link href="/shop/css/styles.css" rel="stylesheet" type="text/css">
+                    <script src="/js/bootstrap.min.js"></script>
+                    <link href="/css/styles.css" rel="stylesheet" type="text/css">
                     <!-- Optional theme -->
-                    <link rel="stylesheet" href="/shop/css/bootstrap-theme.css">
+                    <link rel="stylesheet" href="/css/bootstrap-theme.css">
                     <!-- Files of Styles -->
                     ';
 
-        echo '<script src="/shop/js/SrcChanger.js"></script>';
+        echo '<script src="/js/SrcChanger.js"></script>';
 
         if ($page == 'Devices') {
-            echo '<link href="/shop/css/devices.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/devices.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Index') {
-            echo '<link href="/shop/css/jquery.bxslider.css" rel="stylesheet">
-                  <script src="/shop/js/jquery.bxslider.min.js"></script>';
+            echo '<link href="/css/jquery.bxslider.css" rel="stylesheet">
+                  <script src="/js/jquery.bxslider.min.js"></script>';
         } else if ($page == 'Laptops') {
-            echo '<link href="/shop/css/notebooks.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/notebooks.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Phones') {
-            echo '<link href="/shop/css/phones.css" rel="stylesheet" type="text/css">' .
-                '<link rel="stylesheet" href="shop/css/default.css">' .
-                '<link rel="stylesheet" href="shop/css/animate.css">';
+            echo '<link href="/css/phones.css" rel="stylesheet" type="text/css">' .
+                '<link rel="stylesheet" href="/css/default.css">' .
+                '<link rel="stylesheet" href="/css/animate.css">';
         } else if ($page == 'Support') {
-            echo '<link href="/shop/css/support.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/support.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'TV') {
-            echo '<link href="/shop/css/tv.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/tv.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Login' || $page == 'Admin' || $page == 'Thanks - Support' || $page == 'Registration' || $page == 'Registration Completed') {
-            echo '<link href="/shop/css/login.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/login.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'subdescription') {
-            echo '<link href="/shop/css/jquery.bxslider.css" rel="stylesheet">
-                   <script src="/shop/js/jquery-min.js"></script>
+            echo '<link href="/css/jquery.bxslider.css" rel="stylesheet">
+                   <script src="/js/jquery-min.js"></script>
                    <!-- bxSlider Javascript file -->
-                   <script src="/shop/js/bootstrap.min.js"></script>
+                   <script src="/js/bootstrap.min.js"></script>
                    <!-- bxSlider Javascript file -->
-                  <script src="/shop/js/jquery.bxslider.min.js"></script>
-                  <link href="/shop/css/subdescription.css" rel="stylesheet" type="text/css">';
+                  <script src="/js/jquery.bxslider.min.js"></script>
+                  <link href="/css/subdescription.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Search') {
-            echo '<link href="/shop/css/login.css" rel="stylesheet" type="text/css">
-                  <link href="/shop/css/subdescription.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/login.css" rel="stylesheet" type="text/css">
+                  <link href="/css/subdescription.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Store') {
-            echo '<link href="/shop/css/store.css" rel="stylesheet" type="text/css">
+            echo '<link href="/css/store.css" rel="stylesheet" type="text/css">
                   <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
-                  <link href="/shop/css/jquery.bxslider.css" rel="stylesheet">
-                  <script src="/shop/js/jquery-min.js"></script>
+                  <link href="/css/jquery.bxslider.css" rel="stylesheet">
+                  <script src="/js/jquery-min.js"></script>
                   <!-- bxSlider Javascript file -->
-                  <script src="/shop/js/bootstrap.min.js"></script>
+                  <script src="/js/bootstrap.min.js"></script>
                   <!-- bxSlider Javascript file -->
-                  <script src="/shop/js/jquery.bxslider.min.js"></script>';
+                  <script src="/js/jquery.bxslider.min.js"></script>';
         } else if ($page == 'Orders') {
-            echo '<link href="/shop/css/checkorder.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/checkorder.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Order - Status') {
-            echo '<link href="/shop/css/status-order.css" rel="stylesheet" type="text/css">
-                  <link href="/shop/css/login.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/status-order.css" rel="stylesheet" type="text/css">
+                  <link href="/css/login.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Single Order Lookup'){
-            echo '<link href="/shop/css/checkorder.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/checkorder.css" rel="stylesheet" type="text/css">';
 
-            echo '<link href="/shop/css/status-order.css" rel="stylesheet" type="text/css">
-                  <link href="/shop/css/login.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/status-order.css" rel="stylesheet" type="text/css">
+                  <link href="/css/login.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Cart - Account') {
-            echo '<link href="/shop/css/profile.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/profile.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Orders - Account' || $page == 'Account' || $page == 'Billing - Account') {
             if ($page == 'Account') {
-                echo '<link href="/shop/css/account.css" rel="stylesheet" type="text/css">';
+                echo '<link href="/css/account.css" rel="stylesheet" type="text/css">';
             }
             if ($page == 'Billing - Account') {
-                echo '<link href="/shop/css/account-billing.css" rel="stylesheet" type="text/css">';
+                echo '<link href="/css/account-billing.css" rel="stylesheet" type="text/css">';
             }
-            echo '<link href="/shop/css/account-order.css" rel="stylesheet" type="text/css">
-                  <link href="/shop/css/profile.css" rel="stylesheet" type="text/css">
-                  <script src="/shop/js/jquery-min.js"></script>';
+            echo '<link href="/css/account-order.css" rel="stylesheet" type="text/css">
+                  <link href="/css/profile.css" rel="stylesheet" type="text/css">
+                  <script src="/js/jquery-min.js"></script>';
         } else if ($page == 'Financing') {
-            echo '<link href="/shop/css/financing.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/financing.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Laptops - Education') {
-            echo '<link href="/shop/css/education-laptops.css" rel="stylesheet" type="text/css">
-                  <link href="/shop/css/education-phones.css" rel="stylesheet" type="text/css">
-                  <link href="/shop/css/financing.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/education-laptops.css" rel="stylesheet" type="text/css">
+                  <link href="/css/education-phones.css" rel="stylesheet" type="text/css">
+                  <link href="/css/financing.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Phones - Education') {
-            echo '<link href="/shop/css/education-phones.css" rel="stylesheet" type="text/css">
-                  <link href="/shop/css/financing.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/education-phones.css" rel="stylesheet" type="text/css">
+                  <link href="/css/financing.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Laptops - Business') {
-            echo '<link href="/shop/css/business-laptops.css" rel="stylesheet" type="text/css">
-                  <link href="/shop/css/education-phones.css" rel="stylesheet" type="text/css">
-                  <link href="/shop/css/financing.css" rel="stylesheet" type="text/css">
-                  <link href="/shop/css/business-phones.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/business-laptops.css" rel="stylesheet" type="text/css">
+                  <link href="/css/education-phones.css" rel="stylesheet" type="text/css">
+                  <link href="/css/financing.css" rel="stylesheet" type="text/css">
+                  <link href="/css/business-phones.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Phones - Business') {
-            echo '<link href="/shop/css/business-phones.css" rel="stylesheet" type="text/css">
-                  <link href="/shop/css/education-phones.css" rel="stylesheet" type="text/css">
-                  <link href="/shop/css/financing.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/business-phones.css" rel="stylesheet" type="text/css">
+                  <link href="/css/education-phones.css" rel="stylesheet" type="text/css">
+                  <link href="/css/financing.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Devices - Business') {
-            echo '<link href="/shop/css/business-devices.css" rel="stylesheet" type="text/css">
-                  <link href="/shop/css/business-phones.css" rel="stylesheet" type="text/css">
-                  <link href="/shop/css/business-laptops.css" rel="stylesheet" type="text/css">
-                  <link href="/shop/css/education-phones.css" rel="stylesheet" type="text/css">
-                  <link href="/shop/css/financing.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/business-devices.css" rel="stylesheet" type="text/css">
+                  <link href="/css/business-phones.css" rel="stylesheet" type="text/css">
+                  <link href="/css/business-laptops.css" rel="stylesheet" type="text/css">
+                  <link href="/css/education-phones.css" rel="stylesheet" type="text/css">
+                  <link href="/css/financing.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Contact Us') {
-            echo '<link href="/shop/css/contact-us.css" rel="stylesheet" type="text/css">
-                  <link href="/shop/css/education-phones.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/contact-us.css" rel="stylesheet" type="text/css">
+                  <link href="/css/education-phones.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Education') {
-            echo '<link href="/shop/css/education.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/education.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Business') {
-            echo '<link href="/shop/css/business.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/business.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Page Not Found') {
-            echo '<link href="/shop/css/NotFoundPage.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/NotFoundPage.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Terms of Use' || $page == 'Privacy Policy') {
-            echo '<link href="/shop/css/Terms.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/Terms.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Jobs') {
-            echo '<link href="/shop/css/jobs.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/jobs.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Our Company') {
-            echo '<link href="/shop/css/our-company.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/our-company.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Recover your Woden Sims Account') {
-            echo '<link href="/shop/css/forgot.css" rel="stylesheet" type="text/css">';
+            echo '<link href="/css/forgot.css" rel="stylesheet" type="text/css">';
         } else {
-            echo '<link rel="stylesheet" href="/shop/css/default.css" />' .
-                '<link rel="stylesheet" href="/shop/css/animate.css" />';
+            echo '<link rel="stylesheet" href="/css/default.css" />' .
+                '<link rel="stylesheet" href="/css/animate.css" />';
         }
 
         echo '</head>
@@ -219,25 +219,25 @@ class DefaultView
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>';
-        echo '<a class="navbar-brand" href="/shop/';
+        echo '<a class="navbar-brand" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
         echo '">
-                            <img alt="Brand" src="/shop/images/main-favicon.png" width="35" height="35" id="main-image">';
+                            <img alt="Brand" src="/images/main-favicon.png" width="35" height="35" id="main-image">';
 
         /*
          * Mid
          */
-        echo '<a class="nav-brand text-center" href="/shop/';
+        echo '<a class="nav-brand text-center" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'account/cart"><img style="margin-top: 3px;" src="/shop/images/cart_icon.png" width="25" height="30"></a>';
+        echo 'account/cart"><img style="margin-top: 3px;" src="/images/cart_icon.png" width="25" height="30"></a>';
         /*
          * End
          */
@@ -246,16 +246,16 @@ class DefaultView
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li class="non-visible-for-small"><a id="no-margin-for-md" class="navbar-brand" href="/shop/';
+                            <li class="non-visible-for-small"><a id="no-margin-for-md" class="navbar-brand" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
         echo '">
-                            <img alt="Brand" src="/shop/images/main-favicon.png" width="35" height="35" id="main-image">';
+                            <img alt="Brand" src="/images/main-favicon.png" width="35" height="35" id="main-image">';
         echo '</a></li>
-                            <li><a href="/shop/';
+                            <li><a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
@@ -266,7 +266,7 @@ class DefaultView
         echo $this->model->Translate('Phones');
 
         echo '</a></li>
-                            <li><a href="/shop/';
+                            <li><a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
@@ -277,7 +277,7 @@ class DefaultView
         echo $this->model->Translate('Laptops');
 
         echo '</a></li>
-                            <li><a href="/shop/';
+                            <li><a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
@@ -288,7 +288,7 @@ class DefaultView
         echo $this->model->Translate('Devices');
 
         echo '</a></li>
-                            <li><a href="/shop/';
+                            <li><a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
@@ -299,7 +299,7 @@ class DefaultView
         echo $this->model->Translate('TV');
 
         echo '</a></li>
-                            <li><a href="/shop/';
+                            <li><a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
@@ -312,10 +312,10 @@ class DefaultView
         echo '</a></li>
                             <li class="non-visible-for-small"><h class="paddings-for-nav"><a style="cursor: pointer;">';
 
-        echo '<img style="margin-top: 9px;" src="/shop/images/search-icon.png" width="30" height="30" alt="search" onclick="getSearchBox();">';
+        echo '<img style="margin-top: 9px;" src="/images/search-icon.png" width="30" height="30" alt="search" onclick="getSearchBox();">';
 
         echo              '</a></li>
-                           <li class="non-visible-for-small"><h class="paddings-for-nav"><a href="/shop/';
+                           <li class="non-visible-for-small"><h class="paddings-for-nav"><a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
@@ -323,18 +323,15 @@ class DefaultView
 
         echo 'account/cart">';
 
-        echo '<img style="margin-top: 9px;" src="/shop/images/cart_icon.png" width="25" height="30">';
+        echo '<img style="margin-top: 9px;" src="/images/cart_icon.png" width="25" height="30">';
 
         echo '              </a></li>
                             <li class="spacer-for-small-nav"></li>
                             <li class="search-nav"><a class="white-link" style="width: 80%; padding-right: 0 !important;">
-                                    <!--
-                                    <img src="/shop/images/search-icon.png" width="30" height="30" style="float: left;" />
-                                    <input type="text" class="form-control" id="search-gl" name="search-gl"  style="float: left;" />-->
 
                                     <div class="input-group" style="margin-top: 7px;">
                                         <span class="input-group-btn">
-                                            <img src="/shop/images/search-icon.png" width="30" height="30" style="float: left;" />
+                                            <img src="/images/search-icon.png" width="30" height="30" style="float: left;" />
                                         </span>
                                         <input type="text" class="form-control" id="search" placeholder="Search woden-sims.hol.es">
                                     </div>';
@@ -343,15 +340,15 @@ class DefaultView
               <li class="divider-li-small" style="background-color: white !important; margin-top: 7px !important;"></li>
 
               <li id="popular" class="non-for-large"><a class="white-link requests" style="display: none;">Most popular requests</a></li>
-              <li class="non-for-large"><a href="/shop/shop/buy-phone/apple" class="white-link element-divider" style="color: white; display: none;">Apple</a></li>
+              <li class="non-for-large"><a href="/phones/buy-phone/apple" class="white-link element-divider" style="color: white; display: none;">Apple</a></li>
 
-              <li class="non-for-large"><a href="/shop/account/" class="white-link element-divider" style="display: none;">Account</a></li>
+              <li class="non-for-large"><a href="/account/" class="white-link element-divider" style="display: none;">Account</a></li>
 
-              <li class="non-for-large"><a href="/shop/store/" class="white-link element-divider" style="display: none;">Find a Store</a></li>
+              <li class="non-for-large"><a href="/store/" class="white-link element-divider" style="display: none;">Find a Store</a></li>
 
-              <li class="non-for-large"><a href="/shop/financing/" class="white-link element-divider" style="display: none;">Financing</a></li>
+              <li class="non-for-large"><a href="/financing/" class="white-link element-divider" style="display: none;">Financing</a></li>
 
-              <li class="non-for-large"><a href="/shop/business/" class="white-link element-divider" style="display: none;">Business</a></li>
+              <li class="non-for-large"><a href="/business/" class="white-link element-divider" style="display: none;">Business</a></li>
 
                         </ul>
                     </div><!-- /.navbar-collapse -->
@@ -370,7 +367,7 @@ class DefaultView
                       $(".element-divider, .requests").fadeOut("slow");
                   })
               </script>';
-        echo '<script src="/shop/js/search.js"></script>';
+        echo '<script src="/js/search.js"></script>';
 
         echo '<div id="invisible">
                   <div class="search-form">
@@ -381,19 +378,19 @@ class DefaultView
                                   <h class="popular-matches">Most popular requests</h>
 
                                   <ul class="nav-popular">
-                                      <a href="/shop/shop/buy-phone/apple">
+                                      <a href="/phones/buy-phone/apple">
                                           <li>Apple</li>
                                       </a>
-                                      <a href="/shop/account/">
+                                      <a href="/account/">
                                           <li>Account</li>
                                       </a>
-                                      <a href="/shop/store/">
+                                      <a href="/store/">
                                           <li>Find a Store</li>
                                       </a>
-                                      <a href="/shop/financing/">
+                                      <a href="/financing/">
                                           <li>Financing</li>
                                       </a>
-                                      <a href="/shop/business/">
+                                      <a href="/business/">
                                           <li>Business</li>
                                       </a>
                                   </ul>
@@ -438,7 +435,7 @@ class DefaultView
 
         echo "<a class='categories-list' href='";
 
-        echo '/shop/shop/buy-' . $category . '/';
+        echo $category . '/buy-' . substr($category, 0, -1) . '/';
 
         echo "'>All</a>";
 
@@ -606,11 +603,11 @@ class DefaultView
                 echo 'style="margin-top: 30px"';
             }
             echo ' style="padding-left: 0 !important;">
-                        <img src="/shop/' . $this->model->getPhoto($i) . '" style="margin-top: 21px;" />
+                        <img src="/' . $this->model->getPhoto($i) . '" style="margin-top: 21px;" />
                     </div>
                     <div class="col-md-5">
                             <p class="spacer"></p>
-                            <a class="subdescription" href="/shop/shop/subdescription?name=' . $this->model->getOriginalName($i) . '&category=' . $page . '&product_price=' . $this->model->getPrice($i) . '&id=' . $this->model->getId($i) . '&product_name=' . $this->model->getProductName($i) . '">' . $this->model->getOriginalName($i) . '</a>
+                            <a class="subdescription" href="/shop/subdescription?name=' . $this->model->getOriginalName($i) . '&category=' . $page . '&product_price=' . $this->model->getPrice($i) . '&id=' . $this->model->getId($i) . '&product_name=' . $this->model->getProductName($i) . '">' . $this->model->getOriginalName($i) . '</a>
                             <span><br />by ';
 
             if($this->model->getCategory($i) == 'IMac' || $this->model->getCategory($i) == 'AppleTV' ) {
@@ -639,7 +636,7 @@ class DefaultView
                         <p class="align-left">Free shipping on orders greater than <span id="prev-price">$35</span></p>
                         <p class="align-left"><b style="font-size: 16px;">Product features: </b></p>
                         <p class="align-left">' . $this->model->getFeatures($i) . '</p>
-                        <form action="/shop/shop/add-item" method="post">
+                        <form action="/shop/add-item" method="post">
                             <button class="btn btn-default">
                                 Add to cart
                             </button>
@@ -703,11 +700,11 @@ class DefaultView
             while ($i < $this->model->countBreadcrumbs()) {
                 if ($this->model->getBreadcrumbs($i) == 'shop') {
                     if ($i < 1) {
-                        echo '<a href="/shop/';
+                        echo '<a href="/';
                         if ($_SESSION['language'] !== 'us') {
                             echo $_SESSION['language'] . '/';
                         }
-                        echo '"><img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/favicon-default.png" width="20" height="20"/></a>';
+                        echo '"><img style="margin-left: 4px; margin-right: 4px;" src="/images/favicon-default.png" width="20" height="20"/></a>';
                     } else {
                         echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">';
                         echo $this->model->Translate('Shop');
@@ -756,23 +753,23 @@ class DefaultView
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . ucfirst($this->model->getBreadcrumbs($i)) . "</a>";
                 }
                 if ($i < $this->model->countBreadcrumbs() - 1) {
-                    echo '<img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/breadcrumbs-next.png" />';
+                    echo '<img style="margin-left: 4px; margin-right: 4px;" src="/images/breadcrumbs-next.png" />';
                 }
                 $i++;
             }
         } else {
-            echo '<a href="/shop/';
+            echo '<a href="/';
             if ($_SESSION['language'] !== 'us') {
                 echo $_SESSION['language'] . '/';
             }
-            echo '"><img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/favicon-default.png" width="20" height="20"/></a>
-                  <img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/breadcrumbs-next.png" />
+            echo '"><img style="margin-left: 4px; margin-right: 4px;" src="/images/favicon-default.png" width="20" height="20"/></a>
+                  <img style="margin-left: 4px; margin-right: 4px;" src="/images/breadcrumbs-next.png" />
                   <h id="breadcrumbs">';
             echo $this->model->Translate('Page Not Found');
             echo '</h>';
         }
         if ($this->model->countBreadcrumbs() == 1) {
-            echo '<img style="margin-left: 4px; margin-right: 4px;" src="/shop/images/breadcrumbs-next.png" />';
+            echo '<img style="margin-left: 4px; margin-right: 4px;" src="/images/breadcrumbs-next.png" />';
             echo '<h id="breadcrumbs">';
             echo $this->model->Translate('Home');
             echo '</h>';
@@ -790,7 +787,7 @@ class DefaultView
         echo $this->model->Translate('Shop');
         echo '</a></h>
                                     <div class="pull-right default-hidden margin-for-footer">
-                                        <a id="displayTextFooter" href="javascript:toggle();"><img alt="arrow" src="/shop/images/arrow-down.png" width="20" height="20" /></a>
+                                        <a id="displayTextFooter" href="javascript:toggle();"><img alt="arrow" src="/images/arrow-down.png" width="20" height="20" /></a>
                                     </div>
                                 </div>
                                 <div id="toggleTextFooter">
@@ -798,49 +795,49 @@ class DefaultView
                                         <li class="footer-menu"><b>';
         echo $this->model->Translate('Shop');
         echo '</b></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo '">';
         echo $this->model->Translate('Home');
         echo '</a></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo 'phones/">';
         echo $this->model->Translate('Phones');
         echo '</a></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo 'laptops/">';
         echo $this->model->Translate('Laptops');
         echo '</a></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo 'devices/">';
         echo $this->model->Translate('Devices');
         echo '</a></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo 'tv/">';
         echo $this->model->Translate('TV');
         echo '</a></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo 'support/">';
         echo $this->model->Translate('Support');
         echo '</a></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
@@ -856,11 +853,11 @@ class DefaultView
         echo $this->model->Translate('Store');
         echo '</a></h>
                                     <div class="pull-right default-hidden margin-for-footer">
-                                        <a id="displayTextFooter1" href="javascript:toggle1();"><img alt="arrow1" src="/shop/images/arrow-down.png" width="20" height="20" /></a>
+                                        <a id="displayTextFooter1" href="javascript:toggle1();"><img alt="arrow1" src="/images/arrow-down.png" width="20" height="20" /></a>
                                     </div>
                                     <div class="divider-for-small-devices"></div>
                                 </div>
-                                <form action="/shop/support/support/';
+                                <form action="/support/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
@@ -870,21 +867,21 @@ class DefaultView
                                             <li class="footer-menu"><b>';
         echo $this->model->Translate('Store');
         echo '</b></li>
-                                            <li><a class="items" href="/shop/';
+                                            <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo 'store/">';
         echo $this->model->Translate('Find our store');
         echo '</a></li>
-                                            <li><a class="items" href="/shop/';
+                                            <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo 'financing/">';
         echo $this->model->Translate('Financing');
         echo '</a></li>
-                                            <li><a class="items" href="/shop/';
+                                            <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
@@ -894,19 +891,19 @@ class DefaultView
                                             <li><button id="link_as_button" class="items">';
         echo $this->model->Translate('Shopping help');
         echo '</button></li>
-                                            <li><a class="items" href="/shop/';
+                                            <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo 'FAQ/">FAQ</a></li>
-                                            <li><a class="items" href="/shop/';
+                                            <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo 'education/">';
         echo $this->model->Translate('Education');
         echo '</a></li>
-                                            <li><a class="items" href="/shop/';
+                                            <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
@@ -924,7 +921,7 @@ class DefaultView
         echo $this->model->Translate('Account');
         echo '</a></h>
                                     <div class="pull-right default-hidden margin-for-footer">
-                                        <a id="displayTextFooter2" href="javascript:toggle2();"><img alt="arrow2" src="/shop/images/arrow-down.png" width="20" height="20" /></a>
+                                        <a id="displayTextFooter2" href="javascript:toggle2();"><img alt="arrow2" src="/images/arrow-down.png" width="20" height="20" /></a>
                                     </div>
                                     <div class="divider-for-small-devices"></div>
                                 </div>
@@ -933,28 +930,28 @@ class DefaultView
                                         <li class="footer-menu"><b>';
         echo $this->model->Translate('Account');
         echo '</b></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo 'account/">';
         echo $this->model->Translate('Store Account');
         echo '</a></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo 'account/cart">';
         echo $this->model->Translate('My Items');
         echo '</a></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo 'account/orders">';
         echo $this->model->Translate('My Orders');
         echo '</a></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
@@ -966,14 +963,14 @@ class DefaultView
                                         <li class="footer-menu"><b>';
         echo $this->model->Translate('Manage your ID');
         echo '</b></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo 'register">';
         echo $this->model->Translate('Register');
         echo '</a></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
@@ -994,7 +991,7 @@ class DefaultView
         echo $this->model->Translate('About Us and Values');
         echo '</a></h>
                                     <div class="pull-right default-hidden margin-for-footer">
-                                        <a id="displayTextFooter3" href="javascript:toggle3();"><img alt="arrow3" src="/shop/images/arrow-down.png" width="20" height="20" /></a>
+                                        <a id="displayTextFooter3" href="javascript:toggle3();"><img alt="arrow3" src="/images/arrow-down.png" width="20" height="20" /></a>
                                     </div>
                                     <div class="divider-for-small-devices"></div>
                                 </div>
@@ -1003,21 +1000,21 @@ class DefaultView
                                         <li class="footer-menu"><b>';
         echo $this->model->Translate('About Us');
         echo '</b></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo 'about/">';
         echo $this->model->Translate('Our Company');
         echo '</a></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo 'jobs/">';
         echo $this->model->Translate('Job possibilities');
         echo '</a></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
@@ -1029,14 +1026,14 @@ class DefaultView
                                         <li class="footer-menu"><b>';
         echo $this->model->Translate('Most Valuable');
         echo '</b></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo 'terms/">';
         echo $this->model->Translate('Site Terms');
         echo '</a></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
@@ -1052,7 +1049,7 @@ class DefaultView
         echo $this->model->Translate('For education & Business');
         echo '</a></h>
                                     <div class="pull-right default-hidden margin-for-footer">
-                                        <a id="displayTextFooter4" href="javascript:toggle4();"><img alt="arrow4" src="/shop/images/arrow-down.png" width="20" height="20" /></a>
+                                        <a id="displayTextFooter4" href="javascript:toggle4();"><img alt="arrow4" src="/images/arrow-down.png" width="20" height="20" /></a>
                                     </div>
                                     <div class="divider-for-small-devices"></div>
                                 </div>
@@ -1061,14 +1058,14 @@ class DefaultView
                                         <li class="footer-menu margin-for-small"><b>';
         echo $this->model->Translate('For Education');
         echo '</b></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo 'education/phones">';
         echo $this->model->Translate('Phones and Education');
         echo '</a></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
@@ -1080,21 +1077,21 @@ class DefaultView
                                         <li class="footer-menu"><b>';
         echo $this->model->Translate('For Business');
         echo '</b></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo 'business/laptops/">';
         echo $this->model->Translate('Laptops in Business');
         echo '</a></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
         echo 'business/phones/">';
         echo $this->model->Translate('Phones in Business');
         echo '</a></li>
-                                        <li><a class="items" href="/shop/';
+                                        <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
@@ -1113,7 +1110,7 @@ class DefaultView
                             <div class="col-sm-10 full-width-for-md" style="margin-top: 60px">
                                 <p class="more-info pull-left margin-more">';
         echo $this->model->Translate('For more info about return items and shopping & delivery') . " ";
-        echo '<a class="contact-us" href="/shop/';
+        echo '<a class="contact-us" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
@@ -1144,16 +1141,16 @@ class DefaultView
                             <div class="col-sm-5 half-width-for-sm-md language" style="margin-top: -5px;">
                                 <div class="dropup dropup-menu-for-sm dropup-for-small">
                                     <a class="dropdown-toggle" type="button" data-toggle="dropdown" style="text-decoration: none;">';
-        echo '<img src="/shop/images/' . $this->model->getCurrentLanguage() . '-flag.png" height="16" width="16" /><h class="lang">' . $this->model->getCurrentCountry() . '</h>
+        echo '<img src="/images/' . $this->model->getCurrentLanguage() . '-flag.png" height="16" width="16" /><h class="lang">' . $this->model->getCurrentCountry() . '</h>
                                     </a>
                                     <ul class="dropdown-menu">';
         $i = 0;
         while ($i < $this->model->countNameOfLanguages()) {
-            echo '<a class="language-link" href="/shop/';
+            echo '<a class="language-link" href="/';
             if ($this->model->getNameOfLanguages($i) !== 'us') {
                 echo $this->model->getNameOfLanguages($i) . '/';
             }
-            echo '"><li id="marger-for-small-devices-xs"><img id="margin-for-small" style="margin-left: 7px;" src="/shop/images/' . $this->model->getNameOfLanguages($i) . '-flag.png"
+            echo '"><li id="marger-for-small-devices-xs"><img id="margin-for-small" style="margin-left: 7px;" src="/images/' . $this->model->getNameOfLanguages($i) . '-flag.png"
                   height="16" width="16" /><h class="lang">' . $this->model->getNameOfCountries($i) . '</h></li></a>';
             if ($i < ($this->model->countNameOfLanguages() - 1)) {
                 echo '<div class="divider" style="margin-left: 8px; padding-right: 4px; width: 90%;"></div>';
@@ -1171,18 +1168,18 @@ class DefaultView
                         <div class="col-md-12" style="padding-bottom: 20px; margin-top: -15px;">
                             <div class="small-devices-decoration">
                                     <h class="float-right"><a style="text-decoration: none" class="items default-hidden" id="displayTextFooter5" href="javascript:toggle5();">';
-        echo '<img src="/shop/images/' . $this->model->getCurrentLanguage() . '-flag.png" height="16" width="16" /><h class="lang">' . $this->model->getCurrentCountry() . '</h>';
+        echo '<img src="/images/' . $this->model->getCurrentLanguage() . '-flag.png" height="16" width="16" /><h class="lang">' . $this->model->getCurrentCountry() . '</h>';
         echo '</a></h>
                                 </div>
                                 <div id="toggleTextFooter5">
                                     <ul style="padding-top: 20px;">';
         $i = 0;
         while ($i < $this->model->countNameOfLanguages()) {
-            echo '<a class="language-link" href="/shop/';
+            echo '<a class="language-link" href="/';
             if ($this->model->getNameOfLanguages($i) !== 'us') {
                 echo $this->model->getNameOfLanguages($i) . '/';
             }
-            echo '"><li id="marger-for-small-devices-xs"><img id="margin-for-small" style="margin-left: 7px;" src="/shop/images/' . $this->model->getNameOfLanguages($i) . '-flag.png"
+            echo '"><li id="marger-for-small-devices-xs"><img id="margin-for-small" style="margin-left: 7px;" src="/images/' . $this->model->getNameOfLanguages($i) . '-flag.png"
                   height="16" width="16" /><h class="lang">' . $this->model->getNameOfCountries($i) . '</h></li></a>';
             if ($i < ($this->model->countNameOfLanguages() - 1)) {
                 echo '<div class="divider" style="margin-left: 8px; padding-right: 4px; width: 90%; height: 1px;"></div>';

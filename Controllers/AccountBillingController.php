@@ -28,7 +28,7 @@ class AccountBillingController extends AccountOrderController
         session_start();
 
         if(!isset($_SESSION['login_user'])){
-            header('Location: /shop/login');
+            header('Location: /login');
         }
 
         session_write_close();

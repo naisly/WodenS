@@ -53,7 +53,7 @@ class ForgotView extends DefaultView
                                     </div>
 
                                     <div class="text-center" style="margin-top: 50px;">
-                                        <button class="btn_as_link links" id="link">Next <img src="/shop/images/arrow-blue.png" width="20" height="20"/></button>
+                                        <button class="btn_as_link links" id="link">Next <img src="/images/arrow-blue.png" width="20" height="20"/></button>
                                     </div>
                                 </div>
                                 <div class="col-md-4"></div>
@@ -98,7 +98,7 @@ class ForgotView extends DefaultView
                                     </div>
 
                                     <div class="text-center" style="margin-top: 50px;">
-                                        <button class="btn_as_link links" id="link">Next <img src="/shop/images/arrow-blue.png" width="20" height="20"/></button>
+                                        <button class="btn_as_link links" id="link">Next <img src="/images/arrow-blue.png" width="20" height="20"/></button>
                                     </div>
                                 </div>
                                 <div class="col-md-4"></div>
@@ -143,7 +143,7 @@ class ForgotView extends DefaultView
              </div>';
 
         echo                       '<div class="text-center" style="margin-top: 50px;">
-                                        <button class="btn_as_link links" id="link">Next <img src="/shop/images/arrow-blue.png" width="20" height="20"/></button>
+                                        <button class="btn_as_link links" id="link">Next <img src="/images/arrow-blue.png" width="20" height="20"/></button>
                                     </div>
                                 </div>
                                 <div class="col-md-3"></div>
@@ -207,9 +207,9 @@ class ForgotView extends DefaultView
         echo '<div class="text-center" style="margin-top: 200px;">
                   <h1 class="success">You have successfully changed your password.</h1>
                   <h1 class="sub-success">Now you can use your Account</h1>
-                  <a id="main-link" href="/shop/login" style="text-decoration: none; margin-left: 0 !important; font-size: 30px;">Login<img src="/shop/images/arrow-blue-f1.png" width="25" height="25"/></a>
+                  <a id="main-link" href="/login" style="text-decoration: none; margin-left: 0 !important; font-size: 30px;">Login<img src="/images/arrow-blue-f1.png" width="25" height="25"/></a>
               </div>
 
-              <img src="/shop/images/phones-bg.png" class="full-image-cascade" />';
+              <img src="/images/phones-bg.png" class="full-image-cascade" />';
     }
 }

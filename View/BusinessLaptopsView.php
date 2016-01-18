@@ -68,7 +68,7 @@ class BusinessLaptopsView extends DefaultView
                               </div>
                           </div>
                           <div class="col-md-6">
-                              <img src="../../images/business-laptops8.png" id="business-laptop" />
+                              <img src="/images/business-laptops8.png" id="business-laptop" />
                           </div>
                       </div>
                   </div>
@@ -121,7 +121,7 @@ class BusinessLaptopsView extends DefaultView
                               </div>
                           </div>
                           <div class="col-md-6">
-                              <img src="../../images/business-laptops9.png" id="business-laptop" />
+                              <img src="/images/business-laptops9.png" id="business-laptop" />
                           </div>
                       </div>
                   </div>

@@ -44,7 +44,7 @@ class EducationView extends DefaultView
                       <div class="col-md-2"></div>
                   </div>
               </div>
-              <img src="/shop/images/education-xs.png" class="full-image-cascade" />
+              <img src="/images/education-xs.png" class="full-image-cascade" />
               <div class="text-center">
                   <div class="container">
                       <div class="row">
@@ -71,11 +71,11 @@ class EducationView extends DefaultView
                           <h class="sub-category">Phones have powerful, reusable, complex apps and features to make your schedule
                           flexible as well as precise, lightly usable together with many devices.</h><br /><br />
 
-                          <a class="links" id="main-link" href="/shop/education/phones/" style="text-decoration: none">';
+                          <a class="links" id="main-link" href="/education/phones/" style="text-decoration: none">';
 
         echo $this->model->Translate('Learn more');
 
-        echo         ' ' . '<img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
+        echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></a>
                       </div>
                       <div class="col-md-2"></div>
                       <div class="col-md-4 container-content">
@@ -84,11 +84,11 @@ class EducationView extends DefaultView
                           <h class="sub-category">Meanwhile its thin and powerful handy computer, the Laptop consider every detail
                           to make your study exciting as well as pleasurable. </h><br /><br />
 
-                          <a class="links" id="main-link" href="/shop/education/laptops/" style="text-decoration: none">';
+                          <a class="links" id="main-link" href="/education/laptops/" style="text-decoration: none">';
 
         echo $this->model->Translate('Learn more');
 
-        echo         ' ' . '<img src="/shop/images/arrow-blue.png" width="20" height="20"/></a>
+        echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></a>
                       </div>
                       <div class="col-md-1"></div>
                   </div>

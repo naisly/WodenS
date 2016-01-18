@@ -497,7 +497,7 @@ class DefaultController
         if($_SESSION['language'] !== 'us') {
             include_once('C:/xampp/htdocs/shop/Languages/lang.' . $_SESSION['language'] . '.php');
 
-            $this->model->setLanguage($_SESSION['language']);
+            $this->model->setLanguage($lang);
         }
 
         $language = $_SESSION['language'];
