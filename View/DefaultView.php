@@ -710,6 +710,12 @@ class DefaultView
                         echo $this->model->Translate('Shop');
                         echo '</a>';
                     }
+                } else if ($this->model->getBreadcrumbs($i) == 'Woden Sims'){
+                    echo '<a href="/';
+                    if ($_SESSION['language'] !== 'us') {
+                        echo $_SESSION['language'] . '/';
+                    }
+                    echo '"><img style="margin-left: 4px; margin-right: 4px;" src="/images/favicon-default.png" width="20" height="20"/></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'index') {
                     echo '<h id="breadcrumbs">';
                     echo $this->model->Translate('Home');

@@ -480,8 +480,8 @@ class DefaultController
         $links_array = explode("/", $pageURL);
         $array = explode("/", $pageURL);
 
-        if(in_array($array[4], $language_array)){
-            $_SESSION['language'] = $array[4];
+        if(in_array($array[3], $language_array)){
+            $_SESSION['language'] = $array[3];
         } else {
             $_SESSION['language'] = 'us';
         }
@@ -657,83 +657,104 @@ class DefaultController
     protected function actionGetBreadcrumbs() {
 
         $pageURL = 'http';
-        /*if ($_SERVER["HTTPS"] == "on") {
-            $pageURL .= "s";
-        }*/
+
         $pageURL .= "://";
         if ($_SERVER["SERVER_PORT"] != "80") {
             $pageURL .= $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"];
         } else {
             $pageURL .= $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
         }
-        //return $pageURL;
-
-        //echo $pageURL . "<br />";
 
         $links_array = explode("/", $pageURL);
         $array = explode("/", $pageURL);
 
-        //print_r($array);
+        $language_check = explode("/", $pageURL);
+
         $languages = ['us', 'ru', 'de', 'fr'];
 
-        array_shift($links_array);
-        array_shift($links_array);
-        array_shift($links_array);
+        if($links_array[0] == 'http:' && $links_array[2] == 'localhost:8080' && $links_array[3] == ''){
+            $breadcrumbs[0] = 'Woden Sims';
+            $links = $pageURL;
 
-        array_shift($array);
-        array_shift($array);
-        array_shift($array);
+            $this->model->setBreadcrumbs( $breadcrumbs );
+            $this->model->setBreadcrumbsLink( $links );
+        } elseif ($links_array[3] !== ''){
+            array_shift($links_array);
+            array_shift($links_array);
+            array_shift($links_array);
 
-        //print_r($links_array);
-        if(in_array($array[1], $languages)){
-            array_splice($array, 1, 1);
+            array_shift($array);
+            array_shift($array);
+            array_shift($array);
 
-        }
-
-        $i = 0;
-        while($i < count($array)){
-            if(strlen($array[$i]) < 2){
-                unset($array[$i]);
-            }
-            $i++;
-        }
-
-        $links = array();
-        $first_link = "/" . $links_array[0];
-        array_push($links, $first_link);
-
-        $count = count($array) - 1;
-        $pos = strrpos($array[$count], '.');
-
-        if($pos !== false) {
-            $array[$count] = substr($array[$count], 0, $pos);
-        }
-
-        $active_links = array();
-        $i = 0;
-        while($i < count($links_array) - 1){
-
-            $active_link = $links[$i] . '/' . $links_array[$i+1];
-            array_push($links, $active_link);
-
-            $i++;
-        }
-
-        //session_start();
-
-        if($_SESSION['language'] !== 'us') {
             $i = 0;
-            while($i < count($links) - 1){
-                $links[$i] = $links[$i+1] . '/';
+            while($i < count($array)){
+                if(strlen($array[$i]) < 2){
+                    unset($array[$i]);
+                }
+                $i++;
+            }
+
+            array_unshift($array, 'Woden Sims');
+
+            $breadcrumbs_links = array();
+
+            session_start();
+
+            if(in_array($languages, $language_check)) {
+                $breadcrumbs_links[0] = 'http://localhost:8080';
+            } else {
+                if($_SESSION['language'] !== 'us') {
+                    $breadcrumbs_links[0] = "http://localhost:8080/" . $_SESSION['language'];
+
+                    array_shift($links_array);
+
+                    array_shift($array);
+                    array_shift($array);
+                    array_unshift($array, 'Woden Sims');
+
+                } else {
+                    $breadcrumbs_links[0] = "http://localhost:8080";
+                }
+            }
+
+            session_write_close();
+
+            $i = 0;
+            while($i < count($links_array) && count($links_array) > 1){
+                $links_array[$i] .= '/';
 
                 $i++;
             }
-            #$links[1] = $links[2];
-            #$links[2] = $links[3];
+
+            $i = 0;
+            if(count($links_array) > 1){
+                $count = count($links_array) - 1;
+            } else {
+                $count = count($links_array);
+            }
+            while ($i < $count){
+
+                $link = $breadcrumbs_links[$i];
+
+                if($i % 2 == 0){
+                    $link .= '/';
+                }
+
+                $link .= $links_array[$i];
+
+                if (end($links_array) == '' && $i == $count - 1) {
+                    $link .= '/';
+                }
+
+                array_push($breadcrumbs_links, $link);
+
+                $i++;
+            }
+
+            $this->model->setBreadcrumbs( $array );
+            $this->model->setBreadcrumbsLink( $breadcrumbs_links );
         }
 
-
-        $this->model->setBreadcrumbs( $array );
-        $this->model->setBreadcrumbsLink( $links );
     }
 }
