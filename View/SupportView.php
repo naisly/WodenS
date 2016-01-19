@@ -31,9 +31,9 @@ class SupportView extends DefaultView
     public function thanksMessage() {
 
         echo '<div class="well" style="margin-top: -20px;">
-                  <h2>Thanks!</h2>
-                  For sending an request. We will help you with your issue as much as it is possible! <br />
-                  Our employees will do utmost to make you pleased
+                  <h2>' . $this->model->Translate('Thanks') . '!</h2>
+                  ' . $this->model->Translate('For sending an request. We will help you with your issue as much as it is possible') . '!<br />' .
+                  $this->model->Translate('Our employees will do utmost to make you pleased') . '
               </div>';
 
         $this->getFooter();
@@ -69,7 +69,7 @@ class SupportView extends DefaultView
                       <td>' . $this->model->getSubject($i) . '</td>
                       <td>' . $this->model->getMessage($i) . '</td>
                       <td>
-                          <form action="admin-solved.php" method="post">
+                          <form action="admin-solved" method="post">
                               <input type="hidden" name="id" id="id" value="' . $this->model->getId($i) . '" />
 
                               <button class="btn btn-warning">Solved</button>

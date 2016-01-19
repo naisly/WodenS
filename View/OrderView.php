@@ -34,37 +34,37 @@ class OrderView extends DefaultView
     public function getPlaceOrder() {
 
         echo '
-            <h2>Check out now</h2>
-            <p class="text-left">Please enter your details, and well ship your goods right away!</p>
+            <h2>' . $this->model->Translate('Check out now') . '</h2>
+            <p class="text-left">' . $this->model->Translate('Please enter your details, and well ship your goods right away!') .'</p>
             <form name="shippingForm" action="/account/complete-order" method="post">
                 <div class="well">
-                    <h3>Ship to</h3>
+                    <h3>' . $this->model->Translate('Ship to') . '</h3>
                     <div class="form-group">
-                        <label>Name</label>
+                        <label>' . $this->model->Translate('Name') . '</label>
                         <input name="name" class="form-control" value="' . $this->model->getDefaultName() . '" required />
                     </div>
-                    <h3>Address</h3>
+                    <h3>' . $this->model->Translate('Address') . '</h3>
                     <div class="form-group">
-                        <label>Street Address</label>
+                        <label>' . $this->model->Translate('Street Address') . '</label>
                         <input name="street" class="form-control" value="' . $this->model->getDefaultStreet() . '" required />
                     </div>
                     <div class="form-group">
-                        <label>City</label>
+                        <label>' . $this->model->Translate('City') . '</label>
                         <input name="city" class="form-control" value="' . $this->model->getDefaultCity() . '" required />
                     </div>
                     <div class="form-group">
-                        <label>State</label>
+                        <label>' . $this->model->Translate('State') . '</label>
                         <input name="state" class="form-control" value="' . $this->model->getDefaultState() . '" required />
                     </div>
                     <div class="form-group">
-                        <label>Zip</label>
+                        <label>' . $this->model->Translate('Zip') . '</label>
                         <input name="zip" class="form-control" value="' . $this->model->getDefaultZip() . '" required />
                     </div>
                     <div class="form-group">
-                        <label>Country</label>
+                        <label>' . $this->model->Translate('Country') . '</label>
                         <input name="country" class="form-control" value="' . $this->model->getDefaultCountry() . '" required />
                     </div>
-                    <h3>Options</h3>
+                    <h3>' . $this->model->Translate('Options') . '</h3>
                     <div class="checkbox">
                         <label>
                             <input name="giftwrap" type="checkbox" value="1"';
@@ -75,11 +75,11 @@ class OrderView extends DefaultView
 
             }
             echo            '/>
-                                Gift wrap these items
+                                ' . $this->model->Translate('Gift wrap these items') . '
                         </label>
                     </div>
                     <div class="text-center">
-                        <button class="btn btn-primary">Complete order</button>
+                        <button class="btn btn-primary">' . $this->model->Translate('Complete order') . '</button>
                     </div>
                 </div>
             </form>
@@ -90,9 +90,9 @@ class OrderView extends DefaultView
     public function thanksMessage() {
 
         echo '<div class="well" style="margin-top: -20px;">
-                  <h2>Thanks!</h2>
-                  Thanks for placing your order. Well ship your goods as soon as possible.
-                  If you need to contact us, use reference #' . $this->model->getOrderId() . '.
+                  <h2>' . $this->model->Translate('Thanks!') . '</h2>
+                  ' . $this->model->Translate('Thanks for placing your order. Well ship your goods as soon as possible.
+                  If you need to contact us, use reference') . '#' . $this->model->getOrderId() . '.
               </div>
               <script src="js/jquery-min.js"></script>
               <script src="js/bootstrap.min.js"></script>';

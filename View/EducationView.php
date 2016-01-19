@@ -39,7 +39,11 @@ class EducationView extends DefaultView
                   <div class="row text-center content-header">
                       <div class="col-md-2"></div>
                       <div class="col-md-8">
-                          <h class="lots-of-ways">Even lots of ways to make your education more convenient</h>
+                          <h class="lots-of-ways">';
+
+        echo $this->model->Translate('Even lots of ways to make your education more convenient');
+
+        echo              '</h>
                       </div>
                       <div class="col-md-2"></div>
                   </div>
@@ -50,9 +54,11 @@ class EducationView extends DefaultView
                       <div class="row">
                           <div class="col-md-2"></div>
                           <div class="col-md-8 container-content">
-                               <h class="main-header">With usability, handy Phones, powerful as well as practical, comfortable and
-                               easy to use Laptops, you have everything to start thinking in a new way that gonna change your mind
-                               in more productive, practical way.</h>
+                               <h class="main-header">';
+
+        echo $this->model->Translate('With usability, handy Phones, powerful as well as practical, comfortable and easy to use Laptops, you have everything to start thinking in a new way that gonna change your mind in more productive, practical way.');
+
+        echo                   '</h>
 
                                <div id="content-divider"></div>
 
@@ -66,10 +72,17 @@ class EducationView extends DefaultView
                   <div class="row">
                       <div class="col-md-1"></div>
                       <div class="col-md-4 container-content">
-                          <h class="category-main">Phones in education</h><br /><br />
+                          <h class="category-main">';
 
-                          <h class="sub-category">Phones have powerful, reusable, complex apps and features to make your schedule
-                          flexible as well as precise, lightly usable together with many devices.</h><br /><br />
+        echo $this->model->Translate('Phones in education');
+
+        echo             '</h><br /><br />
+
+                          <h class="sub-category">';
+
+        echo $this->model->Translate('Phones have powerful, reusable, complex apps and features to make your schedule flexible as well as precise, lightly usable together with many devices.');
+
+        echo              '</h><br /><br />
 
                           <a class="links" id="main-link" href="/';
 
@@ -85,10 +98,17 @@ class EducationView extends DefaultView
                       </div>
                       <div class="col-md-2"></div>
                       <div class="col-md-4 container-content">
-                          <h class="category-main">Laptops in education</h><br /><br />
+                          <h class="category-main">';
 
-                          <h class="sub-category">Meanwhile its thin and powerful handy computer, the Laptop consider every detail
-                          to make your study exciting as well as pleasurable. </h><br /><br />
+        echo $this->model->Translate('Laptops in education');
+
+        echo              '</h><br /><br />
+
+                          <h class="sub-category">';
+
+        echo $this->model->Translate('Meanwhile its thin and powerful handy computer, the Laptop consider every detail to make your study exciting as well as pleasurable.');
+
+        echo              '</h><br /><br />
 
                           <a class="links" id="main-link" href="/';
 

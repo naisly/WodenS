@@ -32,27 +32,50 @@ class AccountOrderView extends ProfileView
         echo '<div class="col-md-9">
                 <div class="row">';
         $i = 0;
-        $k = 0;
         if($this->model->countCompleteOrder() == 0) {
             echo '<div style="margin-top: 30px; padding-bottom: 20px;">
-                      <h class="orders">Complete orders:</h>
+                      <h class="orders">';
+
+            echo $this->model->Translate('Complete orders:');
+
+            echo      '</h>
                   </div>
-                  <h class="no-orders">No complete orders found</h>';
+                  <h class="no-orders">';
+
+            echo $this->model->Translate('No complete orders found');
+
+            echo '</h>';
         }
         if($this->model->countDoneOrder() == 0){
             echo '<div style="margin-top: 30px; padding-bottom: 20px;">
-                      <h class="orders">Done orders:</h>
+                      <h class="orders">';
+
+            echo $this->model->Translate('Done orders:');
+
+            echo      '</h>
                   </div>
-                  <h class="no-orders">No done orders found</h>';
+                  <h class="no-orders">';
+
+            echo $this->model->Translate('No done orders found');
+
+            echo '</h>';
         }
         while ($i < $this->model->countCompleteOrder()) {
             if( $i == 0){
                 echo '<div style="margin-top: 30px; padding-bottom: 20px;">
-                              <h class="orders">Complete orders:</h>
+                              <h class="orders">';
+
+                echo $this->model->Translate('Complete orders:');
+
+                echo          '</h>
                           </div>';
             }
             echo      '<div class="col-md-12">';
-            echo      '<h class="order-id">#' . $this->model->getCompleteOrder( $i ) . ' </h><a style="color: #08b; text-decoration: none;" id="displayText' . $i . '" href="javascript:toggle' . $i . '();"> hide</a>
+            echo      '<h class="order-id">#' . $this->model->getCompleteOrder( $i ) . ' </h><a style="color: #08b; text-decoration: none;" id="displayText' . $i . '" href="javascript:toggle' . $i . '();"> ';
+
+            echo $this->model->Translate('hide');
+
+            echo      '</a>
                               <div id="toggleText' . $i . '" style="display: block;" class="bordered">
                                   <div class="row">
                                       <div class="col-md-12">';
@@ -72,7 +95,11 @@ class AccountOrderView extends ProfileView
                                                &amp;id=' . $this->model->getCompleteId($i, $j) . '&amp;product_name=' . $this->model->getCompleteProductTable($i, $j) . '
                                                ">' . $this->model->getCompleteProductName($i, $j) . '</a></h><br />
                                           <div class="divide"></div>
-                                          <h>Category: <em><span id="category-item">' . $this->model->getCompleteCategory($i, $j) . '</span></em></h><br />
+                                          <h>';
+
+                echo $this->model->Translate('Category:');
+
+                echo                     '<em><span id="category-item">' . $this->model->getCompleteCategory($i, $j) . '</span></em></h><br />
                                           <h>' . $this->model->getCompleteQuantity($i, $j) . ' items</h><br />
                                           <h class="cart-price">$' . $this->model->getCompletePrice($i, $j) . '</h>
                                       </div>
@@ -115,16 +142,23 @@ class AccountOrderView extends ProfileView
             $i++;
         }
         $i = 0;
-        $k = 0;
         $iterate =  $this->model->countCompleteOrder() + 1;
         while ($i < $this->model->countDoneOrder()) {
             if( $i == 0) {
                 echo '<div style="margin-top: 30px; padding-bottom: 20px;">
-                         <h style="margin-left: 25px;" class="orders">Done orders:</h><br />
+                         <h style="margin-left: 25px;" class="orders">';
+
+                echo $this->model->Translate('Done orders:');
+
+                echo     '</h><br />
                       </div>';
             }
             echo      '<div class="col-md-12">';
-            echo      '<h class="order-id">#' . $this->model->getDoneOrder( $i ) . ' </h><a id="displayText' . $iterate . '" href="javascript:toggle' . $iterate . '();"> hide</a>
+            echo      '<h class="order-id">#' . $this->model->getDoneOrder( $i ) . ' </h><a id="displayText' . $iterate . '" href="javascript:toggle' . $iterate . '();"> ';
+
+            echo $this->model->Translate('hide');
+
+            echo      '</a>
                               <div id="toggleText' . $iterate . '" style="display: block;">
                                   <div class="row">
                                       <div class="col-md-12 bordered">';
@@ -144,7 +178,11 @@ class AccountOrderView extends ProfileView
                                                &amp;id=' . $this->model->getDoneId($i, $j) . '&amp;product_name=' . $this->model->getDoneProductTable($i, $j) . '
                                                ">' . $this->model->getDoneProductName($i, $j) . '</a></h><br />
                                           <div class="divide"></div>
-                                          <h>Category: <em><span id="category-item">' . $this->model->getDoneCategory($i, $j) . '</span></em></h><br />
+                                          <h>';
+
+                echo $this->model->Translate('Category:');
+
+                echo                     '<em><span id="category-item">' . $this->model->getDoneCategory($i, $j) . '</span></em></h><br />
                                           <h>' . $this->model->getDoneQuantity($i, $j) . ' items</h><br />
                                           <h class="cart-price">$' . $this->model->getDonePrice($i, $j) . '</h>
                                       </div>

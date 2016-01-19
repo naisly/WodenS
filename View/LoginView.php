@@ -33,7 +33,7 @@ class LoginView extends DefaultView
 
         echo '<div class="register-bg">
                   <div class="text-center">
-                       <h1 style="padding-top: 20px; color: white;">Create Woden Sims Account</h1>
+                       <h1 style="padding-top: 20px; color: white;">' . $this->model->Translate('Create Woden Sims Account') . '</h1>
                   </div>
               </div>';
     }
@@ -55,8 +55,8 @@ class LoginView extends DefaultView
                   <div class="row">
                       <div class="col-md-3"></div>
                       <div class="col-md-6 text-center" style="margin-top: 40px;">
-                          <h1 class="one-account">Only one Account for all your needs.</h1>
-                          <h1 class="one-account">Already have Woden Sims Account? <a href="/';
+                          <h1 class="one-account">' . $this->model->Translate('Only one Account for all your needs.') . '</h1>
+                          <h1 class="one-account">' . $this->model->Translate('Already have Woden Sims Account?') . '<a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
@@ -68,17 +68,17 @@ class LoginView extends DefaultView
                               <input type="email" class="form-control" placeholder="email@example.com" id="email" name="email" required />
                           </div>
                           <div class="form-group">
-                              <input type="password" class="form-control" placeholder="password" id="password" name="password" required />
+                              <input type="password" class="form-control" placeholder="' . $this->model->Translate('password') . '" id="password" name="password" required />
                           </div>
                           <div class="form-group">
-                              <input type="password" class="form-control" placeholder="password again" id="password-again" name="password-again" required />
+                              <input type="password" class="form-control" placeholder="' . $this->model->Translate('password again') . '" id="password-again" name="password-again" required />
                           </div>
                           <div class="form-group" style="margin-top: 35px;">
-                              <input type="text" class="form-control" placeholder="First name" style="width: 49%; float: left;" id="first_name" name="first_name" required />
-                              <input type="text" class="form-control" placeholder="Last name" style="width: 49%; float: right;" id="last_name" name="last_name" required />
+                              <input type="text" class="form-control" placeholder="' . $this->model->Translate('First name') . '" style="width: 49%; float: left;" id="first_name" name="first_name" required />
+                              <input type="text" class="form-control" placeholder="' . $this->model->Translate('Last name') . '" style="width: 49%; float: right;" id="last_name" name="last_name" required />
                           </div>
                           <div class="form-group" style="position: relative; top: 15px;">
-                              <input type="date" class="form-control" placeholder="Birthday" id="day_of_birth" name="day_of_birth" required />
+                              <input type="date" class="form-control" placeholder="' . $this->model->Translate('Birthday') . '" id="day_of_birth" name="day_of_birth" required />
                           </div>
                       </div>
                       <div class="col-md-3"></div>
@@ -90,43 +90,42 @@ class LoginView extends DefaultView
                       <div class="col-md-3"></div>
                       <div class="col-md-6">
                         <select class="form-control" id="sc-q-1" name="sc-q-1" required>
-                            <option value="">Secret Question 1</option>
-                            <option value="What was your childhood nickname?">What was your childhood nickname?</option>
-                            <option value="What is your oldest sibling\'s birthday month and year?">What is your oldest sibling\'s birthday month and year?</option>
-                            <option value="What is your oldest cousin\'s first and last name?">What is your oldest cousin\'s first and last name?</option>
-                            <option value="What is your youngest brother\'s birthday?">What is your youngest brother\'s birthday?</option>
+                            <option value="">' . $this->model->Translate('Secret Question 1') . '</option>
+                            <option value="What was your childhood nickname?">' . $this->model->Translate('What was your childhood nickname?') . '</option>
+                            <option value="What is your oldest sibling\'s birthday month and year?">' . $this->model->Translate('What is your oldest sibling\'s birthday month and year?') . '</option>
+                            <option value="What is your oldest cousin\'s first and last name?">' . $this->model->Translate('What is your oldest cousin\'s first and last name?') . '</option>
+                            <option value="What is your youngest brother\'s birthday?">' . $this->model->Translate('What is your youngest brother\'s birthday?') . '</option>
                         </select>
                         <div class="form-group" style="position: relative; top: 15px;">
-                              <input type="text" class="form-control" placeholder="Secret Answer 1" id="sc-a-1" name="sc-a-1" required />
+                              <input type="text" class="form-control" placeholder="' . $this->model->Translate('Secret Answer 1') . '" id="sc-a-1" name="sc-a-1" required />
                         </div>
 
                         <select class="form-control" style="position: relative; top: 15px;" id="sc-q-2" name="sc-q-2" required>
-                            <option value="">Secret Question 2</option>
-                            <option value="What was the name of your elementary / primary school?">What was the name of your elementary / primary school?</option>
-                            <option value="What is the name of your grandmother\'s dog?">What is the name of your grandmother\'s dog?</option>
-                            <option value="What are the last 5 digits of your driver\'s license number?">What are the last 5 digits of your driver\'s license number?</option>
-                            <option value="On which wrist do you wear your watch?">On which wrist do you wear your watch?</option>
+                            <option value="">' . $this->model->Translate('Secret Question 2') . '</option>
+                            <option value="What was the name of your elementary / primary school?">' . $this->model->Translate('What was the name of your elementary / primary school?') . '</option>
+                            <option value="What is the name of your grandmother\'s dog?">' . $this->model->Translate('What is the name of your grandmother\'s dog?') . '</option>
+                            <option value="What are the last 5 digits of your driver\'s license number?">' . $this->model->Translate('What are the last 5 digits of your driver\'s license number?') . '</option>
+                            <option value="On which wrist do you wear your watch?">' . $this->model->Translate('On which wrist do you wear your watch?') . '</option>
                         </select>
                         <div class="form-group" style="position: relative; top: 30px;">
-                              <input type="text" class="form-control" placeholder="Secret Answer 2" id="sc-a-2" name="sc-a-2" required />
+                              <input type="text" class="form-control" placeholder="' . $this->model->Translate('Secret Answer 2') . '" id="sc-a-2" name="sc-a-2" required />
                         </div>
 
                         <select class="form-control" style="position: relative; top: 30px;" id="sc-q-3" name="sc-q-3" required>
-                            <option value="">Secret Question 3</option>
-                            <option value="What was the name of your first boss?">What was the name of your first boss?</option>
-                            <option value="What was the model of your first car?">What was the model of your first car?</option>
-                            <option value="Your mother\'s first name?">Your mother\'s first name?</option>
-                            <option value="What is the name of your first dog?">What is the name of your first dog?</option>
+                            <option value="">' . $this->model->Translate('Secret Question 3') . '</option>
+                            <option value="What was the name of your first boss?">' . $this->model->Translate('What was the name of your first boss?') . '</option>
+                            <option value="What was the model of your first car?">' . $this->model->Translate('What was the model of your first car?') . '</option>
+                            <option value="Your mother\'s first name?">' . $this->model->Translate('Your mother\'s first name?') . '</option>
+                            <option value="What is the name of your first dog?">' . $this->model->Translate('What is the name of your first dog?') . '</option>
                         </select>
                         <div class="form-group" style="position: relative; top: 45px;">
-                              <input type="text" class="form-control" placeholder="Secret Answer 3" id="sc-a-3" name="sc-a-3" required />
+                              <input type="text" class="form-control" placeholder="' . $this->model->Translate('Secret Answer 3') . '" id="sc-a-3" name="sc-a-3" required />
                         </div>
 
                         <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8">
-                                <h1 class="text-center questions-identity">These questions are developed to verify your identity and for the reason
-                                if you forget your valuable data.</h1>
+                                <h1 class="text-center questions-identity">' . $this->model->Translate('These questions are developed to verify your identity and for the reason if you forget your valuable data.') . '</h1>
                             </div>
                             <div class="col-md-2"></div>
                         </div>
@@ -140,7 +139,7 @@ class LoginView extends DefaultView
                       <div class="col-md-3"></div>
                       <div class="col-md-6">
                           <select class="form-control" name="country" required>
-                            <option value="">Select your country of residence</option>
+                            <option value="">' . $this->model->Translate('Select your country of residence') . '</option>
                             <option value="AFG">Afghanistan</option>
                             <option value="ALB">Albania</option>
                             <option value="DZA">Algeria</option>
@@ -378,17 +377,17 @@ class LoginView extends DefaultView
                         </select>
 
                         <div class="for-your-choice" style="border-bottom: 1px solid #e4e4e4;  margin-top: 50px;">
-                            <h1 class="choice">For your choice</h1>
+                            <h1 class="choice">' . $this->model->Translate('For your choice') . '</h1>
                         </div>
 
 
                         <div class="checkbox" style="margin-top: 15px;">
                           <label style="padding-left: 0 !important;">
                               <input type="checkbox" value="" id="advertisements" style="margin-left: 0px;" name="advertisements" checked>
-                              <span style="font-size: 22px; margin-left: 25px;">Advertisements</span><br />
+                              <span style="font-size: 22px; margin-left: 25px;">' . $this->model->Translate('Advertisements') . '</span><br />
                               <div class="row">
                                   <div class="col-md-8" style="margin-left: 25px;">
-                                      <span style="font-size: 13px;">Get announcements, news about interested for You items, recommendations and much more.</span>
+                                      <span style="font-size: 13px;">' . $this->model->Translate('Get announcements, news about interested for You items, recommendations and much more.') . '</span>
                                   </div>
                                   <div class="col-md-4"></div>
                               </div>
@@ -396,31 +395,30 @@ class LoginView extends DefaultView
                         </div>
 
                         <div class="for-your-choice" style="border-bottom: 1px solid #e4e4e4;  margin-top: 50px;">
-                            <h1 class="choice">Is a must</h1>
+                            <h1 class="choice">' . $this->model->Translate('Is a must') . '</h1>
                         </div>
 
                         <div class="checkbox" style="margin-top: 15px;">
                           <label style="padding-left: 0 !important;" class="checkbox control-label">
                               <input type="checkbox" id="privacy-policy" style="margin-left: 0px;" name="privacy-policy" checked required>
-                              <span style="font-size: 22px; margin-left: 25px;">You are accepting Woden Sims Privacy Policy</span><br />
+                              <span style="font-size: 22px; margin-left: 25px;">' . $this->model->Translate('You are accepting Woden Sims Privacy Policy') . '</span><br />
                               <div class="row">
                                   <div class="col-md-10" style="margin-left: 25px;">
-                                      <span style="font-size: 13px;">This <a href="/';
+                                      <span style="font-size: 13px;">' . $this->model->Translate('This') . '<a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'privacy-policy/" id="main-link-check">Privacy Policy</a> is meant to help you understand
-                                      what data we collect, why we collect it, and what we do with it. This is important;
-                                      we hope you will take time to read it carefully. And remember, you can find controls
-                                      to manage your information and protect your privacy and security at <a href="/';
+        echo 'privacy-policy/" id="main-link-check">' . $this->model->Translate('Privacy Policy') . '</a>' . $this->model->Translate('is meant to help you understand what data we collect, why we collect it, and what we do with it. This is important; we hope you will take time to read it carefully. And remember, you can find controls to manage your information and protect your privacy and security at');
+
+        echo '<a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'account/" id="main-link-check">My Account.</a></span>
+        echo 'account/" id="main-link-check">' . $this->model->Translate('My Account') . '.</a></span>
                                   </div>
                                   <div class="col-md-2"></div>
                               </div>
@@ -430,18 +428,17 @@ class LoginView extends DefaultView
                         <div class="checkbox" style="margin-top: 15px;">
                           <label style="padding-left: 0 !important;" class="checkbox control-label">
                               <input type="checkbox" value="some" id="site-terms" name="site-terms" style="margin-left: 0px;" checked required>
-                              <span style="font-size: 22px; margin-left: 25px;">You are accepting Woden Sims Site Terms of Use</span><br />
+                              <span style="font-size: 22px; margin-left: 25px;">' . $this->model->Translate('You are accepting Woden Sims Site Terms of Use') . '</span><br />
                               <div class="row">
                                   <div class="col-md-10" style="margin-left: 25px;">
-                                      <span style="font-size: 13px;">Woden Sims reserves the right, at its sole discretion,
-                                      to change, modify, add or remove portions of these <a href="/';
+                                      <span style="font-size: 13px;">' . $this->model->Translate('Woden Sims reserves the right, at its sole discretion, to change, modify, add or remove portions of these') .
+            '<a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'terms/" id="main-link-check">Terms of Use</a>, at any time. It
-                                      is your responsibility to check these Terms of Use periodically for changes.</span>
+        echo 'terms/" id="main-link-check">' . $this->model->Translate('Terms of Use') . '</a>, ' . $this->model->Translate('at any time. It is your responsibility to check these Terms of Use periodically for changes.') . '</span>
                                   </div>
                                   <div class="col-md-2"></div>
                               </div>
@@ -452,7 +449,7 @@ class LoginView extends DefaultView
                   </div>
 
                   <div class="text-center" style="margin-bottom: 40px; margin-top: 40px;">
-                      <button class="register">Register <img src="/images/arrow-blue.png" width="20" height="20"/></button>
+                      <button class="register">' . $this->model->Translate('Register') . '<img src="/images/arrow-blue.png" width="20" height="20"/></button>
                   </div>
               </div>
               </form>';
@@ -474,7 +471,7 @@ class LoginView extends DefaultView
         echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
-                Please write correct password or check the second one
+                ' . $this->model->Translate('Please write correct password or check the second one') . '
               </div>';
     }
 
@@ -486,7 +483,7 @@ class LoginView extends DefaultView
         echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
-                Password may contain at least 6 characters
+                ' . $this->model->Translate('Password may contain at least 6 characters') . '
               </div>';
     }
 
@@ -498,7 +495,7 @@ class LoginView extends DefaultView
         echo '<div class="alert alert-danger" role="alert" style="position: relative; top: -20px;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
-                Incorrert email or password! Please check again
+                ' . $this->model->Translate('Incorrert email or password! Please check again') . '
               </div>';
     }
 
@@ -510,7 +507,7 @@ class LoginView extends DefaultView
         echo '<div class="alert alert-danger" role="alert">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
-                This email is already in use! Try another one
+                ' . $this->model->Translate('This email is already in use! Try another one') . '
               </div>';
     }
 
@@ -520,7 +517,7 @@ class LoginView extends DefaultView
     private function successMessage() {
 
         echo '<div class="text-center thank-you">
-                  <h1>Thank you for the registration.</h1>
+                  <h1>' . $this->model->Translate('Thank you for the registration.') . '</h1>
                   <a class="links" id="main-link" href="/';
 
         if ($_SESSION['language'] !== 'us') {
@@ -545,14 +542,14 @@ class LoginView extends DefaultView
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 <img src="/' . $_SESSION['photo'] . '" width="50" height="50" />
-                Your selected item was Added to cart! Cart subtotal (' . $this->model->getAItems() . ' items) $' . $this->model->getAPrice() .'
+                ' . $this->model->Translate('Your selected item was Added to cart! Cart subtotal') . '(' . $this->model->getAItems() . $this->model->Translate('items') .  '$' . $this->model->getAPrice() .'
                     <div class="pull-right" style="margin-top: 8px;">
                         <button class="cart btn btn-default" style="margin-right: 20px;" onclick="location.href=';
                             echo "'/account/cart'";
-                            echo '">Cart</button>';
+                            echo '">' . $this->model->Translate('Cart') . '</button>';
         echo            '<button class="cart btn btn-primary" onclick="location.href=';
                             echo "'/account/placeorder'";
-                            echo '">Procceed to checkout (' . $this->model->getAItems() . ' items)</button>
+                            echo '">' . $this->model->Translate('Procceed to checkout') . '(' . $this->model->getAItems() . $this->model->Translate('items') . '</button>
                     </div>
                 </div>';
 
@@ -567,7 +564,7 @@ class LoginView extends DefaultView
         echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
-                Please, login to add items in your cart
+                ' . $this->model->Translate('Please, login to add items in your cart') . '
                 </div>';
     }
 
@@ -586,22 +583,22 @@ class LoginView extends DefaultView
             echo 'margin-top: 12%;';
         }
 
-        echo       '"><h1 class="sign">Sign in Account</h1>
-                      <h2 class="only-one">Only one Account for All your needs</h2>
-                      <h2 class="only-one" style="font-size: 20px;">Have no account? <a href="/';
+        echo       '"><h1 class="sign">' . $this->model->Translate('Sign in Account') . '</h1>
+                      <h2 class="only-one">' . $this->model->Translate('Only one Account for All your needs') . '</h2>
+                      <h2 class="only-one" style="font-size: 20px;">' . $this->model->Translate('Have no account?') . '<a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'register" class="links" id="link" style="text-decoration: none;">Create your Woden Sims ID <img style="margin-top: -5px;" src="/images/arrow-blue.png" width="15" height="15"/></a></h2>
+        echo 'register" class="links" id="link" style="text-decoration: none;">' . $this->model->Translate('Create your Woden Sims ID') . '<img style="margin-top: -5px;" src="/images/arrow-blue.png" width="15" height="15"/></a></h2>
                   </div>
                   <div class="margin-auto" style="margin-top: 5%;"><form action="/check" method="post">
                               <div class="input-group" style="width: 100%;">
                                   <input type="text" name="email" id="email" class="form-control woden-sims-email" placeholder="Woden Sims Email">
                               </div>
                               <div class="input-group">
-                                  <input type="password" name="password" id="password" class="form-control" placeholder="Password" style="height: 40px !important; border-right: none !important;">
+                                  <input type="password" name="password" id="password" class="form-control" placeholder="' . $this->model->Translate('Password') . '" style="height: 40px !important; border-right: none !important;">
                                   <span class="input-group-addon" id="basic-addon2"><button class="image-as-button"><span class="glyphicon glyphicon-arrow-right" style="color: #666;"></span></button></span>
                               </div>
                           </form>
@@ -613,7 +610,7 @@ class LoginView extends DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'forgot-password/?session_auth=' . $_SESSION["session_auth"] . '" class="forgot links" id="link">Forgot your password?</a>
+        echo 'forgot-password/?session_auth=' . $_SESSION["session_auth"] . '" class="forgot links" id="link">' . $this->model->Translate('Forgot your password?') . '</a>
                   </div>
                   <img style="margin-top: 40px;" src="/images/phones-category-white.png" class="full-image-cascade" />
                </div>';

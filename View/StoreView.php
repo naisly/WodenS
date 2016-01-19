@@ -67,10 +67,8 @@ class StoreView extends DefaultView
               <div class="container">
                   <div class="row">
                       <div class="col-md-4">
-                          <h1 class="store-h">Ask what you want</h1>
-                          <p class="text-left sub-store">Join us for free explains that covers all answers for your questions, like
-                          the basic tricks about the bought product up to professional skills. Come to our
-                          shop to use the product, see all the pros and cons as well as getting lots of advices.
+                          <h1 class="store-h">' . $this->model->Translate('Ask what you want') . '</h1>
+                          <p class="text-left sub-store">' . $this->model->Translate('Join us for free explains that covers all answers for your questions, like the basic tricks about the bought product up to professional skills. Come to our shop to use the product, see all the pros and cons as well as getting lots of advices.') . '
                           </p>
                       </div>
                       <div class="col-md-1"></div>
@@ -81,12 +79,11 @@ class StoreView extends DefaultView
                   <div class="margin-space"></div>
                   <div class="row">
                       <div class="col-md-4">
-                          <h1 class="store-h">Get the help you need</h1>
-                          <p class="text-left sub-store">Ask us about what you should do about repairing. In each of our stores we have
-                          some professionals that are experts in an area of software.
+                          <h1 class="store-h">' . $this->model->Translate('Get the help you need') . '</h1>
+                          <p class="text-left sub-store">' . $this->model->Translate('Ask us about what you should do about repairing. In each of our stores we have some professionals that are experts in an area of software.') . '
                           </p>
 
-                          <p class="text-left sub-store">In order to get help as fast as possible, contact us by phone</p>
+                          <p class="text-left sub-store">' . $this->model->Translate('In order to get help as fast as possible, contact us by phone') . '</p>
                       </div>
                       <div class="col-md-1"></div>
                       <div class="col-md-7">
@@ -105,10 +102,10 @@ class StoreView extends DefaultView
                           <div class="divider"></div>
                           <div class="margin-space"></div>
                           <div class="text-center">
-                              <h1 class="header-buy">Buy online. Then, pick up at our store</h1>
+                              <h1 class="header-buy">' . $this->model->Translate('Buy online. Then, pick up at our store') . '</h1>
 
-                              <p class="p-buy">Make up an online order using the internet-shop and pick <br />
-                              up in the store near you.
+                              <p class="p-buy">' . $this->model->Translate('Make up an online order using the internet-shop and pick') . '<br />
+                              ' . $this->model->Translate('up in the store near you.') . '
                               </p>
 
                               <div class="row" style="margin-top: 70px">

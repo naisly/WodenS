@@ -1,6 +1,7 @@
 /**
  * Created by Home on 11.12.2015.
  */
+
 function toggle(){
     $("#toggleTextFooter").toggle("slow");
     var x = document.getElementById("displayTextFooter");

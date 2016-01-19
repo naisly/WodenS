@@ -45,7 +45,7 @@ class SearchAnswersView extends SubdescriptionView
                         </ul>-->';
 
 
-        echo                       '<p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
+        echo                       '<p id="copyright"> &copy; ' . $this->model->Translate('Woden S Inc. All rights reserved.') . '</p>
                    </div>
                </div>
               </div>

@@ -39,7 +39,11 @@ class ContactUsView extends DefaultView
                    <div class="container">
                        <div class="row" style="margin-top: 20px;">
                            <div class="col-md-3">
-                                <h class="main-header">Contact Us</h>
+                                <h class="main-header">';
+
+        echo $this->model->Translate('Contact Us');
+
+        echo                   '</h>
                            </div>
                            <div class="col-md-5"></div>
                            <div class="col-md-4">
@@ -50,14 +54,22 @@ class ContactUsView extends DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'support/">Support</a></li>
+        echo 'support/">';
+
+        echo $this->model->Translate('Support');
+
+        echo                       '</a></li>
                                     <li><a id="nav-links" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'store/">Our offices</a></li>
+        echo 'store/">';
+
+        echo $this->model->Translate('Our offices');
+
+        echo                   '</a></li>
                                 </ul>
                            </div>
                        </div>
@@ -65,102 +77,220 @@ class ContactUsView extends DefaultView
               </div>
               <div class="text-center">
                   <div class="contacting-woden-sims">
-                       <h class="contact">Contacting Woden Sims</h>
+                       <h class="contact">';
+
+        echo $this->model->Translate('Contacting Woden Sims');
+
+        echo          '</h>
                   </div>
               </div>
               <div class="container">
                    <div class="row">
                        <div class="col-md-1"></div>
                        <div class="col-md-5">
-                            <h class="header-category">Sales category</h><br /><br />
+                            <h class="header-category">';
 
-                            <h class="sub-header-category">Woden Sims Online Store</h><br />
-                            <h class="content-header">The <a id="default-link" href="/';
+        echo $this->model->Translate('Sales category');
 
-        if ($_SESSION['language'] !== 'us') {
-            echo $_SESSION['language'] . '/';
-        }
+        echo               '</h><br /><br />
 
-        echo '">Woden Sims Online Store</a> is a quit place to
-                            purchase any quality or any product category from Apple, Samsung and other manufacturers. You can buy online
-                            or by call +38 (095) 094 82 68 or other phones as follows on this page 7 days a week from 10 a.m. to
-                            19 p.m. UTC <br /><br /> You can get information about an order placed on Woden Sims Store by <a id="default-link" href="/';
+                            <h class="sub-header-category">';
 
-        if ($_SESSION['language'] !== 'us') {
-            echo $_SESSION['language'] . '/';
-        }
+        echo $this->model->Translate('Woden Sims Online Store');
 
-        echo 'order-status/">
-                            Order Status</a> page. If you would prefer, you can also check the order status via Phone, <span style="color: #ac5050">all phones available
-                            for each country of our company is provided below.</span></h><br /><br />
+        echo               '</h><br />
+                            <h class="content-header">';
 
-                            <h class="sub-header-category">Get Financing for each of your device bought in our Store</h><br />
-                            <h class="content-header">Woden Sims Financial offers financing for every product you bought. It\'s
-                            available on categories: <a id="default-link" href="/';
+        echo $this->model->Translate('The');
+
+        echo '<a id="default-link" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'phones/">Phones</a>, <a id="default-link" href="/';
+        echo '">Woden Sims ';
+
+        echo $this->model->Translate('Online Store');
+
+        echo '</a>';
+
+        echo $this->model->Translate('is a quit place to purchase any quality or any product category from Apple, Samsung and other manufacturers. You can buy online or by call +38 (095) 094 82 68 or other phones as follows on this page 7 days a week from 10 a.m. to 19 p.m. UTC');
+
+        echo '<br /><br />';
+
+        echo $this->model->Translate('You can get information about an order placed on Woden Sims Store by');
+
+        echo '<a id="default-link" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'laptops/">Laptops</a>,
+        echo 'order-status/">';
+
+        echo $this->model->Translate('Order Status');
+
+        echo '</a>';
+
+        echo $this->model->Translate('page. If you would prefer, you can also check the order status via Phone,');
+
+        echo '<span style="color: #ac5050">';
+
+        echo $this->model->Translate('all phones available for each country of our company is provided below.');
+
+        echo '</span></h><br /><br />
+
+                            <h class="sub-header-category">';
+
+        echo $this->model->Translate('Get Financing for each of your device bought in our Store');
+
+        echo               '</h><br />
+                            <h class="content-header">';
+
+        echo $this->model->Translate('Woden Sims Financial offers financing for every product you bought. It\'s available on categories:');
+
+        echo '<a id="default-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'phones/">';
+
+        echo $this->model->Translate('Phones');
+
+        echo '</a>, <a id="default-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'laptops/">';
+
+        echo $this->model->Translate('Laptops');
+
+        echo '</a>,
                             <a id="default-link" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'tv/">TVs.</a> For each category, for <a id="default-link" href="/';
+        echo 'tv/">';
+
+        echo $this->model->Translate('TVs.');
+
+        echo '</a> For each category, for <a id="default-link" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'education/">Education</a>,
+        echo 'education/">';
+
+        echo $this->model->Translate('Education');
+
+        echo '</a>,
                             for <a id="default-link" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'business/">Business</a> you can find out hot deals for each Area of work.</h><br /><br />
+        echo 'business/">';
 
-                            <h class="sub-header-category">Consult using Online Support Service</h><br />
-                            <h class="content-header">Visit our <a id="default-link" href="/';
+        echo $this->model->Translate('Business');
+
+        echo '</a>';
+
+        echo $this->model->Translate('you can find out hot deals for each Area of work.');
+
+        echo '</h><br /><br />
+
+                            <h class="sub-header-category">';
+
+        echo $this->model->Translate('Consult using Online Support Service');
+
+        echo '</h><br />
+                            <h class="content-header">';
+
+        echo $this->model->Translate('Visit our');
+
+        echo ' <a id="default-link" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'support/">Support</a> page to ask any questions that you want. We will respond you as soon as possible</h>
+        echo 'support/">';
+
+        echo $this->model->Translate('Support');
+
+        echo '</a>';
+
+        echo $this->model->Translate('page to ask any questions that you want. We will respond you as soon as possible.');
+
+        echo '</h>
                        </div>
                        <div class="col-md-5" style="margin-top: 70px;">
-                            <h class="sub-header-category">Getting items for Business</h><br />
-                            <h class="content-header">If you want to get items for your <a id="default-link" href="/';
+                            <h class="sub-header-category">';
+
+        echo $this->model->Translate('Getting items for Business');
+
+        echo               '</h><br />
+                            <h class="content-header">';
+
+        echo $this->model->Translate('If you want to get items for your');
+
+        echo '<a id="default-link" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'business/">business</a>
-                            or be consulted in area of using it call +38 (095) 094 82 68 or other phones supported by Woden Sims.<span style="color: #ac5050">All phones available
-                            for each country of our company is provided below.</span></h><br /><br />
+        echo 'business/">';
 
-                            <h class="sub-header-category">Getting items for Education</h><br />
-                            <h class="content-header">If you want to get items for your <a id="default-link" href="/';
+        echo $this->model->Translate('business');
+
+        echo '</a>';
+
+        echo $this->model->Translate('or be consulted in area of using it call +38 (095) 094 82 68 or other phones supported by Woden Sims.');
+
+        echo '<span style="color: #ac5050">';
+
+        echo $this->model->Translate('All phones available for each country of our company is provided below.');
+
+        echo '</span></h><br /><br />
+
+                            <h class="sub-header-category">';
+
+        echo $this->model->Translate('Getting items for Education');
+
+        echo               '</h><br />
+                            <h class="content-header">';
+
+        echo $this->model->Translate('If you want to get items for your');
+
+        echo '<a id="default-link" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'education/">education</a>
-                            or be consulted in area of using it call +38 (095) 531 618 31 or other phones supported by Woden Sims.<span style="color: #ac5050">All phones available
-                            for each country of our company is provided below.</span></h><br /><br />
+        echo 'education/">';
+
+        echo $this->model->Translate('education');
+
+        echo '</a>';
+
+        echo $this->model->Translate('or be consulted in area of using it call +38 (095) 531 618 31 or other phones supported by Woden Sims.');
+
+        echo '<span style="color: #ac5050">';
+
+        echo $this->model->Translate('All phones available for each country of our company is provided below.');
+
+        echo '</span></h><br /><br />
                        </div>
                        <div class="col-md-1"></div>
                    </div>
@@ -177,10 +307,18 @@ class ContactUsView extends DefaultView
                         <div class="col-md-1"></div>
                         <div class="col-md-10">
                             <img src="/images/czech-republic-small.jpg" width="30" height="30" style="margin-bottom: 17px;"/>
-                            <h class="header-category">Praha, Czech Republic</h><br /><br />
+                            <h class="header-category">';
+
+        echo $this->model->Translate('Praha, Czech Republic');
+
+        echo '</h><br /><br />
 
                             <div class="area-name">
-                                <h class="area-header">Rosmarin Business Center</h>
+                                <h class="area-header">';
+
+        echo $this->model->Translate('Rosmarin Business Center');
+
+        echo                   '</h>
                             </div>
 
                             <div class="row">
@@ -189,9 +327,21 @@ class ContactUsView extends DefaultView
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="contact-data">
-                                        <li>Woden Sims Store <span id="default-link">+420 666 905 222</span></li>
-                                        <li>Support Service <span id="default-link">+420 666 905 333</span></li>
-                                        <li>Office <span id="default-link">+420 666 905 444</span></li>
+                                        <li>';
+
+        echo $this->model->Translate('Woden Sims Store');
+
+        echo '<span id="default-link">+420 666 905 222</span></li>
+                                        <li>';
+
+        echo $this->model->Translate('Support Service');
+
+        echo '<span id="default-link">+420 666 905 333</span></li>
+                                        <li>';
+
+        echo $this->model->Translate('Office');
+
+        echo '<span id="default-link">+420 666 905 444</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -211,21 +361,41 @@ class ContactUsView extends DefaultView
                         <div class="col-md-1"></div>
                         <div class="col-md-10">
                             <img src="/images/poland-small.jpg" width="30" height="30" style="margin-bottom: 17px;"/>
-                            <h class="header-category">Warsaw, Poland</h><br /><br />
+                            <h class="header-category">';
+
+        echo $this->model->Translate('Warsaw, Poland');
+
+        echo                '</h><br /><br />
 
                             <div class="area-name">
-                                <h class="area-header">International Business Center</h>
+                                <h class="area-header">';
+
+        echo $this->model->Translate('International Business Center');
+
+        echo                   '</h>
                             </div>
 
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img src="/images/poland-business-center.jpg" id="business-center" />
+                                    <img src="/images/poland-business-center.JPG" id="business-center" />
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="contact-data">
-                                        <li>Woden Sims Store <span id="default-link">+48 454 999 123</span></li>
-                                        <li>Support Service <span id="default-link">+48 454 888 123</span></li>
-                                        <li>Office <span id="default-link">+48 454 888 123</span></li>
+                                        <li>';
+
+        echo $this->model->Translate('Woden Sims Store');
+
+        echo '<span id="default-link">+48 454 999 123</span></li>
+                                        <li>';
+
+        echo $this->model->Translate('Support Service');
+
+        echo '<span id="default-link">+48 454 888 123</span></li>
+                                        <li>';
+
+        echo $this->model->Translate('Office');
+
+        echo '<span id="default-link">+48 454 888 123</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -245,10 +415,18 @@ class ContactUsView extends DefaultView
                         <div class="col-md-1"></div>
                         <div class="col-md-10">
                             <img src="/images/lithuania-small.jpg" width="30" height="30" style="margin-bottom: 17px;"/>
-                            <h class="header-category">Vilnius, Lithuania</h><br /><br />
+                            <h class="header-category">';
+
+        echo $this->model->Translate('Vilnius, Lithuania');
+
+        echo               '</h><br /><br />
 
                             <div class="area-name">
-                                <h class="area-header">Vilnius International Business Center</h>
+                                <h class="area-header">';
+
+        echo $this->model->Translate('Vilnius International Business Center');
+
+        echo                    '</h>
                             </div>
 
                             <div class="row">
@@ -257,9 +435,21 @@ class ContactUsView extends DefaultView
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="contact-data">
-                                        <li>Woden Sims Store <span id="default-link">+370 567 888 90</span></li>
-                                        <li>Support Service <span id="default-link">+370 678 888 90</span></li>
-                                        <li>Office <span id="default-link">+370 444 888 90</span></li>
+                                        <li>';
+
+        echo $this->model->Translate('Woden Sims Store');
+
+        echo '<span id="default-link">+370 567 888 90</span></li>
+                                        <li>';
+
+        echo $this->model->Translate('Support Service');
+
+        echo '<span id="default-link">+370 678 888 90</span></li>
+                                        <li>';
+
+        echo $this->model->Translate('Office');
+
+        echo '<span id="default-link">+370 444 888 90</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -279,10 +469,18 @@ class ContactUsView extends DefaultView
                         <div class="col-md-1"></div>
                         <div class="col-md-10">
                             <img src="/images/ukraine-small.png" width="30" height="30" style="margin-bottom: 17px;"/>
-                            <h class="header-category">Lviv, Ukraine</h><br /><br />
+                            <h class="header-category">';
+
+        echo $this->model->Translate('Lviv, Ukraine');
+
+        echo               '</h><br /><br />
 
                             <div class="area-name">
-                                <h class="area-header">King Cross Leopolis</h>
+                                <h class="area-header">';
+
+        echo $this->model->Translate('King Cross Leopolis');
+
+        echo                   '</h>
                             </div>
 
                             <div class="row">
@@ -291,9 +489,21 @@ class ContactUsView extends DefaultView
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="contact-data">
-                                        <li>Woden Sims Store <span id="default-link">+38 095 666 77 77</span></li>
-                                        <li>Support Service <span id="default-link">+38 066 666 77 77</span></li>
-                                        <li>Office <span id="default-link">+38 063 666 77 77</span></li>
+                                        <li>';
+
+        echo $this->model->Translate('Woden Sims Store');
+
+        echo '<span id="default-link">+38 095 666 77 77</span></li>
+                                        <li>';
+
+        echo $this->model->Translate('Support Service');
+
+        echo '<span id="default-link">+38 066 666 77 77</span></li>
+                                        <li>';
+
+        echo $this->model->Translate('Office');
+
+        echo '<span id="default-link">+38 063 666 77 77</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -313,10 +523,18 @@ class ContactUsView extends DefaultView
                         <div class="col-md-1"></div>
                         <div class="col-md-10">
                             <img src="/images/ukraine-small.png" width="30" height="30" style="margin-bottom: 17px;"/>
-                            <h class="header-category">Kiev, Ukraine</h><br /><br />
+                            <h class="header-category">';
+
+        echo $this->model->Translate('Kiev, Ukraine');
+
+        echo               '</h><br /><br />
 
                             <div class="area-name">
-                                <h class="area-header">Gulliver Business Center</h>
+                                <h class="area-header">';
+
+        echo $this->model->Translate('Gulliver Business Center');
+
+        echo                    '</h>
                             </div>
 
                             <div class="row">
@@ -325,9 +543,21 @@ class ContactUsView extends DefaultView
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="contact-data">
-                                        <li>Woden Sims Store <span id="default-link">+38 095 094 82 68</span></li>
-                                        <li>Support Service <span id="default-link">+38 095 094 82 86</span></li>
-                                        <li>Office <span id="default-link">+38 095 094 82 77</span></li>
+                                        <li>';
+
+        echo $this->model->Translate('Woden Sims Store');
+
+        echo '<span id="default-link">+38 095 094 82 68</span></li>
+                                        <li>';
+
+        echo $this->model->Translate('Support Service');
+
+        echo '<span id="default-link">+38 095 094 82 86</span></li>
+                                        <li>';
+
+        echo $this->model->Translate('Office');
+
+        echo '<span id="default-link">+38 095 094 82 77</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -347,15 +577,30 @@ class ContactUsView extends DefaultView
                         <div class="col-md-1"></div>
                         <div class="col-md-10">
                             <img src="/images/russia-small.jpg" width="30" height="30" style="margin-bottom: 17px;"/>
-                            <h class="header-category">Moscow, Russia</h><br /><br />
+                            <h class="header-category">';
+
+        echo $this->model->Translate('Moscow, Russia');
+
+        echo               '</h><br /><br />
 
                             <div class="area-name">
-                                <h class="area-header">Moscow International Business Center Facto</h>
+                                <h class="area-header">';
+
+        echo $this->model->Translate('Moscow International Business Center Facto');
+
+        echo                    '</h>
                             </div>
 
                             <div id="warning">
-                                <h class="warning">Important! Due to <b>political tensions</b> Communicational personal leaved <br />Moscow
-                                and unfortunately, the Open Line not working now!</h>
+                                <h class="warning">';
+
+        echo $this->model->Translate('Important! Due to political tensions Communicational personal leaved');
+
+        echo '<br />';
+
+        echo $this->model->Translate('Moscow and unfortunately, the Open Line not working now!');
+
+        echo                    '</h>
                             </div>
 
                             <div class="row">
@@ -364,9 +609,21 @@ class ContactUsView extends DefaultView
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="contact-data">
-                                        <li>Woden Sims Store <span id="default-link">+7 499 095 666 77</span></li>
-                                        <li>Support Service <span style="color: #ac5050;">Not Available</span></li>
-                                        <li>Office <span style="color: #ac5050;">Not Available</span></li>
+                                        <li>';
+
+        echo $this->model->Translate('Woden Sims Store');
+
+        echo '<span id="default-link">+7 499 095 666 77</span></li>
+                                        <li>';
+
+        echo $this->model->Translate('Support Service');
+
+        echo '<span style="color: #ac5050;">Not Available</span></li>
+                                        <li>';
+
+        echo $this->model->Translate('Office');
+
+        echo '<span style="color: #ac5050;">Not Available</span></li>
                                     </ul>
                                 </div>
                             </div>

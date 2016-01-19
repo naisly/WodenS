@@ -42,13 +42,19 @@ class BusinessView extends DefaultView
                        <div class="row text-center">
                            <div class="col-md-2"></div>
                                <div class="col-md-8 marger">
-                                  <h class="main-header-content">We believe that there\'re lots to transform your business in complex manner</h>
+                                  <h class="main-header-content">';
+
+        echo $this->model->Translate('We believe that there\'re lots to transform your business in complex manner');
+
+        echo                      '</h>
 
                                   <br /><br />
 
-                                  <h class="with-devices">With usability, free to use apps in Phones, easy to use, thin Devices,
-                                  powerful as well as practical Laptops, you have everything to transform your personal life, change your
-                                  way of thinking, not to mention even on business.</h>
+                                  <h class="with-devices">';
+
+        echo $this->model->Translate('With usability, free to use apps in Phones, easy to use, thin Devices, powerful as well as practical Laptops, you have everything to transform your personal life, change your way of thinking, not to mention even on business.');
+
+        echo                      '</h>
 
                                </div>
                            <div class="col-md-2"></div>
@@ -66,11 +72,17 @@ class BusinessView extends DefaultView
                            <div class="col-md-10">
                                <div class="row">
                                    <div class="col-md-4">
-                                       <h class="category-main">Laptops in business</h><br /><br />
+                                       <h class="category-main">';
 
-                                       <h class="sub-category">Being powerful and thin laptop, It gives you an advantage over opponents.
-                                       Whether your data can be stored in
-                                       one place, it also protected for unwanted eyes</h><br /><br />
+        echo $this->model->Translate('Laptops in business');
+
+        echo                          '</h><br /><br />
+
+                                       <h class="sub-category">';
+
+        echo $this->model->Translate('Being powerful and thin laptop, It gives you an advantage over opponents. Whether your data can be stored in one place, it also protected for unwanted eyes');
+
+        echo                          '</h><br /><br />
 
                                        <a class="links" id="main-link" href="/';
 
@@ -85,11 +97,17 @@ class BusinessView extends DefaultView
         echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></a>
                                    </div>
                                    <div class="col-md-4 spacer-for-small-devices">
-                                       <h class="category-main">Phones in business</h><br /><br />
+                                       <h class="category-main">';
 
-                                       <h class="sub-category">Phones have powerful battery to still be connected to worldwide
-                                       with complex and flex apps. Be always equipped with information about every area
-                                       of business</h><br /><br />
+        echo $this->model->Translate('Phones in business');
+
+        echo                          '</h><br /><br />
+
+                                       <h class="sub-category">';
+
+        echo $this->model->Translate('Phones have powerful battery to still be connected to worldwide with complex and flex apps. Be always equipped with information about every a of business');
+
+        echo                          '</h><br /><br />
 
                                        <a class="links" id="main-link" href="/';
 
@@ -104,10 +122,17 @@ class BusinessView extends DefaultView
         echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></a>
                                    </div>
                                    <div class="col-md-4 spacer-for-small-devices">
-                                       <h class="category-main">Devices in business</h><br /><br />
+                                       <h class="category-main">';
 
-                                       <h class="sub-category">Devices change the way of your work with yours partners by using
-                                       thousands of different apps for business, that makes your productivity non-catchable.</h><br /><br />
+        echo $this->model->Translate('Devices in business');
+
+        echo                          '</h><br /><br />
+
+                                       <h class="sub-category">';
+
+        echo $this->model->Translate('Devices change the way of your work with yours partners by using thousands of different apps for business, that makes your productivity non-catchable.');
+
+        echo                          '</h><br /><br />
 
                                        <a class="links" id="main-link" href="/';
 

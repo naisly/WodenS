@@ -375,23 +375,47 @@ class DefaultView
                           <input type="text" class="form-control" id="search-xs" placeholder="Search woden-sims@hol.es">
                           <div class="most-popular">
                               <div class="marger">
-                                  <h class="popular-matches">Most popular requests</h>
+                                  <h class="popular-matches">';
+
+        echo $this->model->Translate('Most popular requests');
+
+        echo                     '</h>
 
                                   <ul class="nav-popular">
                                       <a href="/phones/buy-phone/apple">
-                                          <li>Apple</li>
+                                          <li>';
+
+        echo $this->model->Translate('Apple');
+
+        echo                             '</li>
                                       </a>
                                       <a href="/account/">
-                                          <li>Account</li>
+                                          <li>';
+
+        echo $this->model->Translate('Account');
+
+        echo                             '</li>
                                       </a>
                                       <a href="/store/">
-                                          <li>Find a Store</li>
+                                          <li>';
+
+        echo $this->model->Translate('Find a Store');
+
+        echo                             '</li>
                                       </a>
                                       <a href="/financing/">
-                                          <li>Financing</li>
+                                          <li>';
+
+        echo $this->model->Translate('Financing');
+
+        echo                             '</li>
                                       </a>
                                       <a href="/business/">
-                                          <li>Business</li>
+                                          <li>';
+
+        echo $this->model->Translate('Business');
+
+        echo                              '</li>
                                       </a>
                                   </ul>
                               </div>
@@ -474,7 +498,11 @@ class DefaultView
                             <form action="" method="post" oninput="minValue.value=min.value; maxValue.value=max.value">
                             <div class="row">
                                 <div class="col-md-12 bg-item top-margin" style="margin-top: 0px;">
-                                    <h class="search-item">Store <br/></h>
+                                    <h class="search-item">';
+
+        echo $this->model->Translate('Store');
+
+        echo                       '<br/></h>
                                  </div>
                             </div>
                             <div class="spacer-for-small">';
@@ -495,10 +523,18 @@ class DefaultView
         echo '            </div>
                        <div class="row">
                             <div class="col-md-12 bg-item top-margin">
-                                <h class="search-item">Price: </h>
+                                <h class="search-item">';
+
+        echo $this->model->Translate('Price:');
+
+        echo                    '</h>
                              </div>
                        </div>
-                       <p class="min-and-max">Min: <output name="minValue" for="min" id="minValue">';
+                       <p class="min-and-max">';
+
+        echo $this->model->Translate('Min:');
+
+        echo '<output name="minValue" for="min" id="minValue">';
 
         if(isset($_POST['min'])){
             echo $_POST['min'];
@@ -516,7 +552,11 @@ class DefaultView
         }
         echo           '">
 
-                       <p class="min-and-max">Max: <output name="maxValue" for="max" id="maxValue">';
+                       <p class="min-and-max">';
+
+        echo $this->model->Translate('Max:');
+
+        echo '<output name="maxValue" for="max" id="maxValue">';
 
         if(isset($_POST['max'])){
             echo $_POST['max'];
@@ -533,38 +573,68 @@ class DefaultView
             echo '5000';
         }
         echo            '">
-                                <!--<input class="form-control" style="margin-top: 10px;" placeholder="Minimum" type="text" name="min" value="';
-        if (isset($_POST['min'])) echo $_POST['min'];
-        echo '"><br /><br />
-                                <input class="form-control" style="margin-top: -10px;" placeholder="Maximum" type="text" name="max" value="';
-        if (isset($_POST['max'])) echo $_POST['max'];
-        echo '"><br />-->
                        <div class="row">
                             <div class="col-md-12 bg-item top-margin">
-                                <h class="search-item">Sort by price: </h>
+                                <h class="search-item">';
+
+        echo $this->model->Translate('Sort by price:');
+
+        echo                    '</h>
                              </div>
                        </div>
                        <div class="spacer-for-small">
-                            <input type="radio" name="sort_by_price" value="price " /> By highest <br />
-                            <input type="radio" name="sort_by_price" value="price DESC" /> By lowest <br />
+                            <input type="radio" name="sort_by_price" value="price " />';
+
+        echo $this->model->Translate('By highest');
+
+        echo '<br />
+                            <input type="radio" name="sort_by_price" value="price DESC" />';
+
+        echo $this->model->Translate('By lowest');
+
+        echo '<br />
                        </div>
                        <div class="row">
                             <div class="col-md-12 bg-item top-margin">
-                                <h class="search-item">Sort by time of adding: </h>
+                                <h class="search-item">';
+
+        echo $this->model->Translate('Sort by time of adding:');
+
+        echo                    '</h>
                              </div>
                        </div>
                        <div class="spacer-for-small">
-                             <input type="radio" name="sort_by_time" value="time" /> By latest <br />
-                             <input type="radio" name="sort_by_time" value="time DESC" /> By oldest <br />
+                             <input type="radio" name="sort_by_time" value="time" />';
+
+        echo $this->model->Translate('By latest');
+
+        echo '<br />
+                             <input type="radio" name="sort_by_time" value="time DESC" />';
+
+        echo $this->model->Translate('By oldest');
+
+        echo '<br />
                        </div>
                        <div class="row">
                             <div class="col-md-12 bg-item top-margin">
-                                <h class="search-item">Shipping: </h>
+                                <h class="search-item">';
+
+        echo $this->model->Translate('Shipping:');
+
+        echo                    '</h>
                              </div>
                        </div>
                        <div class="spacer-for-small">
-                                    <input type="radio" name="sort_by_shipping" value="shipping" /> By fastest <br />
-                                    <input type="radio" name="sort_by_shipping" value="shipping DESC" /> By slowest <br />
+                                    <input type="radio" name="sort_by_shipping" value="shipping" />';
+
+        echo $this->model->Translate('By fastest');
+
+        echo '<br />
+                                    <input type="radio" name="sort_by_shipping" value="shipping DESC" />';
+
+        echo $this->model->Translate('By slowest');
+
+        echo '<br />
                                     <input class="btn btn-primary" id="submit" type="submit" style="margin-bottom: 20px;" value="Get items!">
                        </div>
                            </form>
@@ -619,10 +689,24 @@ class DefaultView
             }
 
             echo           '</span>
-                            <p id="price">' . $this->model->getPrice($i) . '$' . ' ' . '<span id="prev-price"><strike>' . $this->model->getPriviousPrice($i) . '$' . '</strike></span> (' . $this->model->getShipping($i) . ' ' . 'days shipping)</p>
-                            <p id="on-stock"> In stock on ' . $this->model->getTimeOfAdding($i) . '</p>
-                            <p id="average">Average price for this product: <span id="prev-price">' . $this->model->getAverage($i) . '$' . '</span></p>
-                            <p style="text-align: left;"><b style="font-size: 16px;">Short description: </b>' . $this->model->getDescription($i) . '</p>
+                            <p id="price">' . $this->model->getPrice($i) . '$' . ' ' . '<span id="prev-price"><strike>' . $this->model->getPriviousPrice($i) . '$' . '</strike></span> (' . $this->model->getShipping($i) . ' ' . '';
+
+            echo $this->model->Translate('days shipping') . ')</p>
+                            <p id="on-stock">';
+
+            echo $this->model->Translate('In stock on ');
+
+            echo $this->model->getTimeOfAdding($i) . '</p>
+                            <p id="average">';
+
+            echo $this->model->Translate('Average price for this product:');
+
+            echo '<span id="prev-price">' . $this->model->getAverage($i) . '$' . '</span></p>
+                            <p style="text-align: left;"><b style="font-size: 16px;">';
+
+            echo $this->model->Translate('Short description:');
+
+            echo '</b>' . $this->model->getDescription($i) . '</p>
                             <!--
                             <input type="hidden" name="original_name" value="' . $this->model->getOriginalName($i) . '"/>
                             <input type="hidden" name="table" value="phones" />
@@ -633,13 +717,23 @@ class DefaultView
                     </div>
                     <div class="col-md-4">
                         <p class="spacer"></p>
-                        <p class="align-left">Free shipping on orders greater than <span id="prev-price">$35</span></p>
-                        <p class="align-left"><b style="font-size: 16px;">Product features: </b></p>
+                        <p class="align-left">';
+
+            echo $this->model->Translate('Free shipping on orders greater than');
+
+            echo '<span id="prev-price">$35</span></p>
+                        <p class="align-left"><b style="font-size: 16px;">';
+
+            echo $this->model->Translate('Product features:');
+
+            echo '</b></p>
                         <p class="align-left">' . $this->model->getFeatures($i) . '</p>
                         <form action="/shop/add-item" method="post">
-                            <button class="btn btn-default">
-                                Add to cart
-                            </button>
+                            <button class="btn btn-default">';
+
+            echo $this->model->Translate('Add to cart');
+
+            echo           '</button>
                             <input type="hidden" name="id" value="' . $this->model->getId($i) . '"/>
                             <input type="hidden" name="product_name" value="' . $this->model->getProductName($i) . '"/>
                             <input type="hidden" name="category" value="' . $this->model->getCategory($i) . '"/>
@@ -725,38 +819,38 @@ class DefaultView
                 } else if ($this->model->getBreadcrumbs($i) == 'tv') {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">TV</h></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'privacy-policy') {
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Privacy Policy</h></a>';
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Privacy Policy') . '</h></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'order-status') {
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Order Status</h></a>';
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Order Status') . '</h></a>';
                 } else if (substr($this->model->getBreadcrumbs($i), 0, 5) == 'login') {
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Login</h></a>';
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Login') . '</h></a>';
                 } else if (substr($this->model->getBreadcrumbs($i), 0, 8) == 'register') {
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Register</h></a>';
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Register') . '</h></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'registration-completed') {
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Registration Completed</h></a>';
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Registration Completed') . '</h></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'forgot-password') {
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Recover your Woden Sims Account</h></a>';
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Recover your Woden Sims Account') . '</h></a>';
                 } else if (isset($_GET['session_auth']) && !isset($_GET['email']) && !isset($_GET['day_of_birth']) && !isset($_GET['sc-a-1']) && !isset($_GET['sc-a-2']) && !isset($_GET['sc-a-3'])) {
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Step 1</h></a>';
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Step 1') . '</h></a>';
                 } else if (isset($_GET['session_auth']) && isset($_GET['email']) && !isset($_GET['day_of_birth']) && !isset($_GET['sc-a-1']) && !isset($_GET['sc-a-2']) && !isset($_GET['sc-a-3'])) {
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Step 2</h></a>';
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Step 2') . '</h></a>';
                 } else if (isset($_GET['session_auth']) && isset($_GET['email']) && isset($_GET['day_of_birth']) && !isset($_GET['sc-a-1']) && !isset($_GET['sc-a-2']) && !isset($_GET['sc-a-3'])) {
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Step 3</h></a>';
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Step 3') . '</h></a>';
                 } else if (isset($_GET['session_auth']) && isset($_GET['email']) && isset($_GET['day_of_birth']) && isset($_GET['sc-a-1']) && isset($_GET['sc-a-2']) && isset($_GET['sc-a-3'])) {
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Last step</h></a>';
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Last step') . '</h></a>';
                 } else if (isset($_GET['success'])) {
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Success</h></a>';
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Success') . '</h></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'buy-phone'){
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Phones</h></a>';
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Phones') . '</h></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'buy-tv'){
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">TV</h></a>';
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('TV') . '</h></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'buy-device'){
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Devices</h></a>';
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Devices') . '</h></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'buy-laptop'){
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">Laptops</h></a>';
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Laptops') . '</h></a>';
                 }
                 else {
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . ucfirst($this->model->getBreadcrumbs($i)) . "</a>";
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . ucfirst($this->model->Translate($this->model->getBreadcrumbs($i))) . "</a>";
                 }
                 if ($i < $this->model->countBreadcrumbs() - 1) {
                     echo '<img style="margin-left: 4px; margin-right: 4px;" src="/images/breadcrumbs-next.png" />';
@@ -801,13 +895,7 @@ class DefaultView
                                         <li class="footer-menu"><b>';
         echo $this->model->Translate('Shop');
         echo '</b></li>
-                                        <li><a class="items" href="/';
-        if ($_SESSION['language'] !== 'us') {
-            echo $_SESSION['language'] . '/';
-        }
-        echo '">';
-        echo $this->model->Translate('Home');
-        echo '</a></li>
+
                                         <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';

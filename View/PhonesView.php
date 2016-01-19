@@ -179,7 +179,7 @@ class PhonesView extends IndexView
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'education/phones/" style="text-decoration: none" class="search-education">Search for business <img src="/images/arrow-blue-f1.png" width="20" height="20"/></a>
+        echo 'education/phones/" style="text-decoration: none" class="search-education">' . $this->model->Translate('Search for business') . '<img src="/images/arrow-blue-f1.png" width="20" height="20"/></a>
                       </div>
                       <div class="col-md-4"></div>
                   </div>

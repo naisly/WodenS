@@ -39,10 +39,10 @@ class PageNotFoundView extends DefaultView
                   <div class="row" style="margin-top: 15%; padding-bottom: 8%;">
                       <div class="col-md-3"></div>
                       <div class="col-md-6">
-                          <h class="not-found-h">The page that you are looking can not be found</h>
+                          <h class="not-found-h">' . $this->model->Translate('The page that you are looking can not be found') . '</h>
 
                           <div style="margin-top: 3%;">
-                              <h class="search-for-choice">Search items for your choice</h>
+                              <h class="search-for-choice">' . $this->model->Translate('Search items for your choice') . '</h>
                           </div>
 
                           <a onclick="toggle_categories();" style="cursor: pointer;"><img alt="not-found" src="/images/plus1.png" style="margin-top: 5%;" id="image-get-data-gl"/></a>

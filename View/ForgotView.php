@@ -23,7 +23,7 @@ class ForgotView extends DefaultView
         echo '<div class="gradient-bg">
                   <div class="text-center">
                       <div class="main-sign" style="padding-top: 80px;">
-                          <h1 class="any-problems">' . $text . '</h1>
+                          <h1 class="any-problems">' . $this->model->Translate($text) . '</h1>
                       </div>
                   </div>
               </div>';
@@ -33,9 +33,14 @@ class ForgotView extends DefaultView
 
         echo '<div class="main">
                     <div class="text-center">
-                          <h1 id="get-started">Enter your Email to get started</h1>
-                          <h1 id="sub-get-started">We can help you reset your password and security info. <br />
-                          Follow the instructions below.</h1>
+                          <h1 id="get-started">';
+
+        echo $this->model->Translate('Enter your Email to get started');
+
+        echo             '</h1>
+                          <h1 id="sub-get-started">';
+
+        echo $this->model->Translate('We can help you reset your password and security info.') . '<br />' . $this->model->Translate('Follow the instructions below.') . '</h1>
                     </div>
                     <form action="check-data" method="get">
 
@@ -72,14 +77,18 @@ class ForgotView extends DefaultView
 
         echo '<div class="alert alert-danger" role="alert">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                <span class="sr-only">Error:</span>' . $text . '</div>';
+                <span class="sr-only">Error:</span>' . $this->model->Translate($text) . '</div>';
     }
 
     public function getSecondStep() {
 
         echo '<div class="main">
                     <div class="text-center">
-                          <h1 id="get-started">Verify your birthday to continue.</h1>
+                          <h1 id="get-started">';
+
+        echo $this->model->Translate('Verify your birthday to continue.');
+
+        echo              '</h1>
                     </div>
                     <form action="check-data" method="get">
                         <input type="hidden" value="' . $_GET["email"] . '" name="email" id="email" />
@@ -98,7 +107,11 @@ class ForgotView extends DefaultView
                                     </div>
 
                                     <div class="text-center" style="margin-top: 50px;">
-                                        <button class="btn_as_link links" id="link">Next <img src="/images/arrow-blue.png" width="20" height="20"/></button>
+                                        <button class="btn_as_link links" id="link">';
+
+        echo $this->model->Translate('Next');
+
+        echo '<img src="/images/arrow-blue.png" width="20" height="20"/></button>
                                     </div>
                                 </div>
                                 <div class="col-md-4"></div>
@@ -112,7 +125,11 @@ class ForgotView extends DefaultView
 
         echo '<div class="main">
                     <div class="text-center">
-                          <h1 id="get-started">Answer security questions</h1>
+                          <h1 id="get-started">';
+
+        echo $this->model->Translate('Answer security questions');
+
+        echo              '</h1>
                     </div>
                     <form action="check-data" method="get">
                         <input type="hidden" value="' . $_GET["email"] . '" name="email" id="email" />
@@ -127,23 +144,39 @@ class ForgotView extends DefaultView
             $this->getErrorMessage( 'Your information doesn\'t match the security information.' );
         }
 
-        echo '<h1 class="question">' . $this->model->getQuestion1() . '</h1>';
+        echo '<h1 class="question">' . $this->model->Translate($this->model->getQuestion1()) . '</h1>';
         echo '<div class="form-group" style="margin-top: 15px;">
-                  <input type="text" class="form-control" placeholder="Answer for Question 1" id="sc-a-1" name="sc-a-1" required />
+                  <input type="text" class="form-control" placeholder="';
+
+        echo $this->model->Translate('Answer for Question 1');
+
+        echo '" id="sc-a-1" name="sc-a-1" required />
              </div>';
 
-        echo '<h1 class="question">' . $this->model->getQuestion2() . '</h1>';
+        echo '<h1 class="question">' . $this->model->Translate($this->model->getQuestion2()) . '</h1>';
         echo '<div class="form-group" style="margin-top: 15px;">
-                  <input type="text" class="form-control" placeholder="Answer for Question 2" id="sc-a-2" name="sc-a-2" required />
+                  <input type="text" class="form-control" placeholder="';
+
+        echo $this->model->Translate('Answer for Question 2');
+
+        echo '" id="sc-a-2" name="sc-a-2" required />
              </div>';
 
-        echo '<h1 class="question">' . $this->model->getQuestion3() . '</h1>';
+        echo '<h1 class="question">' . $this->model->Translate($this->model->getQuestion3()) . '</h1>';
         echo '<div class="form-group" style="margin-top: 15px;">
-                  <input type="text" class="form-control" placeholder="Answer for Question 3" id="sc-a-3" name="sc-a-3" required />
+                  <input type="text" class="form-control" placeholder="';
+
+        echo $this->model->Translate('Answer for Question 3');
+
+        echo '" id="sc-a-3" name="sc-a-3" required />
              </div>';
 
         echo                       '<div class="text-center" style="margin-top: 50px;">
-                                        <button class="btn_as_link links" id="link">Next <img src="/images/arrow-blue.png" width="20" height="20"/></button>
+                                        <button class="btn_as_link links" id="link">';
+
+        echo $this->model->Translate('Next');
+
+        echo '<img src="/images/arrow-blue.png" width="20" height="20"/></button>
                                     </div>
                                 </div>
                                 <div class="col-md-3"></div>
@@ -157,8 +190,16 @@ class ForgotView extends DefaultView
 
         echo '<div class="main">
                     <div class="text-center">
-                          <h1 id="get-started">Please, complete the last step in your Recovering process.</h1>
-                          <h1 id="sub-get-started">Enter the new password and make sure that they are the same.</h1>
+                          <h1 id="get-started">';
+
+        echo $this->model->Translate('Please, complete the last step in your Recovering process.');
+
+        echo             '</h1>
+                          <h1 id="sub-get-started">';
+
+        echo $this->model->Translate('Enter the new password and make sure that they are the same.');
+
+        echo             '</h1>
                     </div>
                     <form action="check-data" method="post">
                         <input type="hidden" value="' . $_GET["email"] . '" name="email" id="email" />
@@ -179,15 +220,27 @@ class ForgotView extends DefaultView
         }
 
         echo                       '<div class="form-group" style="margin-top: 15px;">
-                                        <input type="password" class="form-control" placeholder="New password" id="password" name="password" required />
+                                        <input type="password" class="form-control" placeholder="';
+
+        echo $this->model->Translate('New password');
+
+        echo '" id="password" name="password" required />
                                     </div>
 
                                     <div class="form-group" style="margin-top: 15px;">
-                                        <input type="password" class="form-control" placeholder="New password again" id="repeat_password" name="repeat_password" required />
+                                        <input type="password" class="form-control" placeholder="';
+
+        echo $this->model->Translate('New password again');
+
+        echo '" id="repeat_password" name="repeat_password" required />
                                     </div>
 
                                     <div class="text-center" style="margin-top: 50px;">
-                                        <button class="btn_as_link links" id="link">Complete</button>
+                                        <button class="btn_as_link links" id="link">';
+
+        echo $this->model->Translate('Complete');
+
+        echo                            '</button>
                                     </div>
                                 </div>
                                 <div class="col-md-4"></div>
@@ -205,15 +258,27 @@ class ForgotView extends DefaultView
                   }
               </style>';
         echo '<div class="text-center" style="margin-top: 200px;">
-                  <h1 class="success">You have successfully changed your password.</h1>
-                  <h1 class="sub-success">Now you can use your Account</h1>
+                  <h1 class="success">';
+
+        echo $this->model->Translate('You have successfully changed your password.');
+
+        echo     '</h1>
+                  <h1 class="sub-success">';
+
+        echo $this->model->Translate('Now you can use your Account');
+
+        echo     '</h1>
                   <a id="main-link" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'login" style="text-decoration: none; margin-left: 0 !important; font-size: 30px;">Login<img src="/images/arrow-blue-f1.png" width="25" height="25"/></a>
+        echo 'login" style="text-decoration: none; margin-left: 0 !important; font-size: 30px;">';
+
+        echo $this->model->Translate('Login');
+
+        echo '<img src="/images/arrow-blue-f1.png" width="25" height="25"/></a>
               </div>
 
               <img src="/images/phones-bg.png" class="full-image-cascade" />';

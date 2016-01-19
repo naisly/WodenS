@@ -62,7 +62,7 @@ class CheckoutView extends DefaultView
                         <td class="text-right">' . $this->model->getPrice($i) . ' $</td>
                         <td class="text-right">';
             if($view == 'latest') {
-                echo '<form action="done-admin.php" method="post">
+                echo '<form action="done-admin" method="post">
                             <input type="checkbox" name="order" value="' . $this->model->getOrderId($i) . '" />
                         </td>
                         <td>
@@ -71,7 +71,7 @@ class CheckoutView extends DefaultView
                         </td>
                     </tr>';
             } else {
-                echo '<form action="pull-back-admin.php" method="post">
+                echo '<form action="pull-back-admin" method="post">
                            <input type="checkbox" name="order" value="' . $this->model->getOrderId($i) . '" />
                       </td>
                       <td>

@@ -42,44 +42,88 @@ class AccountBillingView extends AccountOrderView
                      <div class="col-md-6 form-bordered">
                          <form role="form" action="/account/account-edit-billing" method="post">
 
-                             <h class="main-page">Ship to</h>
+                             <h class="main-page">';
+
+        echo $this->model->Translate('Ship To');
+
+        echo                '</h>
 
                              <div class="form-group form-spacer">
-                                 <label for="name">Primary Name</label>
+                                 <label for="name">';
+
+        echo $this->model->Translate('Primary Name');
+
+        echo                    '</label>
                                  <input type="text" class="form-control" name="name" id="name" />
                              </div>
 
-                             <h class="main-page">Address</h>
+                             <h class="main-page">';
+
+        echo $this->model->Translate('Address');
+
+        echo                '</h>
 
                              <div class="form-group form-spacer">
-                                 <label for="street">Default Street Address</label>
+                                 <label for="street">';
+
+        echo $this->model->Translate('Default Street Address');
+
+        echo                    '</label>
                                  <input type="text" class="form-control" name="street" id="street" />
                              </div>
                              <div class="form-group">
-                                 <label for="name">Default City</label>
+                                 <label for="name">';
+
+        echo $this->model->Translate('Default City');
+
+        echo                    '</label>
                                  <input type="text" class="form-control" name="city" id="city" />
                              </div>
                              <div class="form-group">
-                                 <label for="name">Default State</label>
+                                 <label for="name">';
+
+        echo $this->model->Translate('Default State');
+
+        echo                    '</label>
                                  <input type="text" class="form-control" name="state" id="state" />
                              </div>
                              <div class="form-group">
-                                 <label for="name">Default Zip</label>
+                                 <label for="name">';
+
+        echo $this->model->Translate('Default Zip');
+
+        echo                    '</label>
                                  <input type="text" class="form-control" name="zip" id="zip" />
                              </div>
                              <div class="form-group">
-                                 <label for="name">Default Country</label>
+                                 <label for="name">';
+
+        echo $this->model->Translate('Default Country');
+
+        echo                    '</label>
                                  <input type="text" class="form-control" name="country" id="country" />
                              </div>
 
-                             <h class="main-page">Default Options</h>
+                             <h class="main-page">';
+
+        echo $this->model->Translate('Default Options');
+
+        echo                '</h>
 
                              <div class="form-group form-spacer">
                                 <input name="giftwrap" id="giftwrap" type="checkbox" value="1" />
-                                <span id="gift">Gift wrap All items</span>
+                                <span id="gift">';
+
+        echo $this->model->Translate('Gift wrap All items');
+
+        echo                    '</span>
                              </div>
 
-                             <button class="btn btn-primary form-control">Update Info</button>
+                             <button class="btn btn-primary form-control">';
+
+        echo $this->model->Translate('Update Info');
+
+        echo                '</button>
 
                          </form>
                      </div>

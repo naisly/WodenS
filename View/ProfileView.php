@@ -41,7 +41,7 @@ class ProfileView extends DefaultView
         echo '<div class="container">
               <div class="row">
                   <div class="col-md-3" style="border-right: 1px solid #e4e4e4 !important; padding-right: 20px;">
-                      <h class="hello">Hello, ' . $this->model->getName() . '</h><br />
+                      <h class="hello">' . $this->model->Translate('Hello') . ',' . $this->model->getName() . '</h><br />
 
                       <div class="cart-divider"></div>
 
@@ -51,45 +51,45 @@ class ProfileView extends DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'account/cart" id="link" style="color: #08b;"> Cart</a></h><br />
+        echo 'account/cart" id="link" style="color: #08b;"> ' . $this->model->Translate('Cart') . '</a></h><br />
                       <h class="cart"><a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'account/orders" id="link" style="color: #08b;">Your Orders</a></h><br />
+        echo 'account/orders" id="link" style="color: #08b;">' . $this->model->Translate('Your Orders') . '</a></h><br />
                       <h class="cart"><a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'account/" id="link" style="color: #08b;">Change account info</a></h><br />
+        echo 'account/" id="link" style="color: #08b;">' . $this->model->Translate('Change account info') . '</a></h><br />
                       <h class="cart"><a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'account/billing" id="link" style="color: #08b;">Billing info</a></h><br />
+        echo 'account/billing" id="link" style="color: #08b;">' . $this->model->Translate('Billing info') . '</a></h><br />
 
                       <div class="cart-divider"></div>
 
-                      <h class="hello">Your cart:</h><br />
+                      <h class="hello">' . $this->model->Translate('Your cart') . ':</h><br />
 
                       <h class="cart cart-price">' . $this->model->getAPrice() . '$</h><br />
                       <h class="cart">' . $this->model->getAItems() . '';
 
         if ( $this->model->getAItems() == 1){
-                  echo ' item </h>';
+            echo $this->model->Translate('item') . '</h>';
         } else {
-                  echo ' items </h>';
+            echo $this->model->Translate('items') . '</h>';
         }
 
         echo         '<div class="cart-divider"></div>
 
-                      <h class="hello">Last order:</h><br />';
+                      <h class="hello">' . $this->model->Translate('Last order') . ':</h><br />';
 
         if($this->model->getOrderId() !== 'None') {
 
@@ -97,26 +97,26 @@ class ProfileView extends DefaultView
                       <h class="cart">' . $this->model->getLastOrderItems() . '';
 
             if ($this->model->getLastOrderItems() == 1) {
-                echo ' item </h>';
+                echo $this->model->Translate('item') . '</h>';
             } else {
-                echo ' items </h>';
+                echo $this->model->Translate('items') . '</h>';
             }
 
             echo '<h class="cart cart-price"> $' . $this->model->getLastOrderSum() . '</h>';
 
         } else {
-            echo '<h class="cart not-found">No orders found</h>';
+            echo '<h class="cart not-found">' . $this->model->Translate('No orders found') . '</h>';
         }
 
         echo         '<div class="cart-divider"></div>
 
-                      <h class="hello">Account Info</h><br />
-                      <h class="cart"><b>Active email: </b><br />' . $_SESSION['login_user'] . '</h><br />
-                      <h class="cart"><b>Your name: </b>' . $this->model->getName() . '</h>
+                      <h class="hello">' . $this->model->Translate('Account Info') . '</h><br />
+                      <h class="cart"><b>' . $this->model->Translate('Active email') . ': </b><br />' . $_SESSION['login_user'] . '</h><br />
+                      <h class="cart"><b>' . $this->model->Translate('Your name') . ': </b>' . $this->model->getName() . '</h>
 
                       <div class="cart-divider"></div>
 
-                      <h class="hello">Last Billing info:</h><br />';
+                      <h class="hello">' . $this->model->Translate('Last Billing info') . ':</h><br />';
 
         if($this->model->getBillingNotFound() !== 0) {
 
@@ -126,25 +126,25 @@ class ProfileView extends DefaultView
                 echo $_SESSION['language'] . '/';
             }
 
-            echo 'account/billing">Add billing info</a></h>';
+            echo 'account/billing">' . $this->model->Translate('Add billing info') . '</a></h>';
         } else {
-            echo     '<h class="cart"><b>Name:</b> ' . $this->model->getBillingName() . '</h><br />
-                      <h class="cart"><b>Street:</b> ' . $this->model->getBillingStreet() . '</h><br />
-                      <h class="cart"><b>City:</b> ' . $this->model->getBillingCity() . '</h><br />
-                      <h class="cart"><b>State:</b> ' . $this->model->getBillingState() . '</h><br />
-                      <h class="cart"><b>Zip:</b> ' . $this->model->getBillingZip() . '</h><br />
-                      <h class="cart"><b>Country:</b> ' . $this->model->getBillingCountry() . '</h><br />';
+            echo     '<h class="cart"><b>' . $this->model->Translate('Name') . ':</b> ' . $this->model->getBillingName() . '</h><br />
+                      <h class="cart"><b>' . $this->model->Translate('Street') . ':</b> ' . $this->model->getBillingStreet() . '</h><br />
+                      <h class="cart"><b>' . $this->model->Translate('City') . ':</b> ' . $this->model->getBillingCity() . '</h><br />
+                      <h class="cart"><b>' . $this->model->Translate('State') . ':</b> ' . $this->model->getBillingState() . '</h><br />
+                      <h class="cart"><b>' . $this->model->Translate('Zip') . ':</b> ' . $this->model->getBillingZip() . '</h><br />
+                      <h class="cart"><b>' . $this->model->Translate('Country') . ':</b> ' . $this->model->getBillingCountry() . '</h><br />';
 
             if($this->model->getBillingWrap() == 1) {
-                echo '<h class="cart"><b>Giftwrap All items <span style="text-decoration: underline">by default</span></b></h>';
+                echo '<h class="cart"><b>' . $this->model->Translate('Giftwrap All items') . '<span style="text-decoration: underline">' . $this->model->Translate('by default') . '</span></b></h>';
             } else {
-                echo '<h class="cart">No use of <b>Giftwrap</b> for Items</h>';
+                echo '<h class="cart">' . $this->model->Translate('No use of') . '<b>' . $this->model->Translate('Giftwrap') . '</b>' . $this->model->Translate('for Items') . '</h>';
             }
         }
 
         echo         '<div class="cart-divider"></div>
 
-                      <h class="hello">Last added item:</h><br />';
+                      <h class="hello">' . $this->model->Translate('Last added item') . ':</h><br />';
 
         if($this->model->getNoProduct() == 'none'){
             echo '<h class="cart not-found">No products found</h>';
@@ -152,12 +152,12 @@ class ProfileView extends DefaultView
             echo     '<img src="/' . $this->model->getPhoto() . '" width="120" height="120" style="margin-top: 15px; margin-bottom: 15px;" /><br />
                       <h class="cart cart-header">' . $this->model->getOriginalName() . '</h><br />
                       <h class="cart cart-price">$' . $this->model->getItemPrice() . '</h><br />
-                      <h class="cart"><span class="underline">' . $this->model->getItemShipping() . ' days</span> shipping</h>';
+                      <h class="cart"><span class="underline">' . $this->model->getItemShipping() . $this->model->Translate('days') . '</span>' . $this->model->Translate('shipping') . '</h>';
         }
 
         echo         '<div class="cart-divider"></div>
 
-                      <h class="cart">Not ' . $this->model->getName() . ' ? <a href="/logout" class="link">Sign out</a></h>
+                      <h class="cart">' . $this->model->Translate('Not') . ' '  . $this->model->getName() . ' ? <a href="/logout" class="link">' . $this->model->Translate('Sign out') . '</a></h>
                   </div>';
     }
 
@@ -177,10 +177,10 @@ class ProfileView extends DefaultView
                     <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Product name</th>
-                            <th>Quantity</th>
-                            <th class="text-right">Category</th>
-                            <th class="text-right">Price</th>
+                            <th>' . $this->model->Translate('Product name') . '</th>
+                            <th>' . $this->model->Translate('Quantity') . '</th>
+                            <th class="text-right">' . $this->model->Translate('Category') . '</th>
+                            <th class="text-right">' . $this->model->Translate('Price') . '</th>
                         </tr>
                     </thead>
                     <tbody>';
@@ -197,7 +197,7 @@ class ProfileView extends DefaultView
                                 <form action="remove" method="post">
                                     <input type="hidden" name="id" value="' . $this->model->getIdArray($i) . '"/>
                                     <input type="hidden" name="name" value="' . $this->model->getProductNameArray($i) . '"/>
-                                    <button class="btn btn-sm btn-warning">Remove</button>
+                                    <button class="btn btn-sm btn-warning">' . $this->model->Translate('Remove') . '</button>
                                 </form>
                             </td>
                         </tr>';
@@ -206,7 +206,7 @@ class ProfileView extends DefaultView
             echo '   </tbody>
                     <tfoot>
                         <tr>
-                            <td colspan="4" class="text-right">Total:</td>
+                            <td colspan="4" class="text-right">' . $this->model->Translate('Total') . ':</td>
                             <td class="text-right">' .
                             $this->model->getAPrice() . ' $'
                             . '</td>
@@ -214,8 +214,8 @@ class ProfileView extends DefaultView
                     </tfoot>
                 </table>
                 <div class="text-center">
-                    <a class="btn btn-primary" onclick="goBack();">Continue shopping</a>
-                    <a class="btn btn-primary" href="placeorder" style="color: white;">Place order now</a>
+                    <a class="btn btn-primary" onclick="goBack();">' . $this->model->Translate('Continue shopping') . '</a>
+                    <a class="btn btn-primary" href="placeorder" style="color: white;">' . $this->model->Translate('Place order now') . '</a>
                 </div>
             </div>
         </div>
@@ -230,7 +230,7 @@ class ProfileView extends DefaultView
         } else if ($this->model->getNotFound() == 1){
 
             echo '<div class="margin-for-small-sm">
-                      <h class="no-items">No products found in your cart</h><br />
+                      <h class="no-items">' . $this->model->Translate('No products found in your cart') . '</h><br />
                   </div>
 
                   <div class="row">
@@ -248,7 +248,7 @@ class ProfileView extends DefaultView
             echo $this->model->Translate('Describe new <nobr> possibilities');
 
             echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></nobr></a><br />
-                              <h>From <span class="cart-price">$' . $this->model->getMinPhones() . '</span></h>
+                              <h>' . $this->model->Translate('From') . '<span class="cart-price">$' . $this->model->getMinPhones() . '</span></h>
                           </div>
                       </div>
                       <div class="col-md-3">
@@ -272,7 +272,7 @@ class ProfileView extends DefaultView
             echo $this->model->Translate('Fully equipped for a <nobr>world');
 
             echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></nobr></a><br />
-                              <h>From <span class="cart-price">$' . $this->model->getMinNotebooks() . '</span></h>
+                              <h>' . $this->model->Translate('From') . '<span class="cart-price">$' . $this->model->getMinNotebooks() . '</span></h>
                           </div>
                       </div>
                       <div class="col-md-3">
@@ -296,7 +296,7 @@ class ProfileView extends DefaultView
             echo $this->model->Translate('Smart. Mighty. <nobr> Heavyweight.');
 
             echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></nobr></a><br />
-                              <h>From <span class="cart-price">$' . $this->model->getMinGadgets() . '</span></h>
+                              <h>' . $this->model->Translate('From') . '<span class="cart-price">$' . $this->model->getMinGadgets() . '</span></h>
                           </div>
                       </div>
                       <div class="col-md-3">
@@ -320,7 +320,7 @@ class ProfileView extends DefaultView
             echo $this->model->Translate('The future of television is <nobr> here');
 
             echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20" /></nobr></a><br />
-                              <h>From <span class="cart-price">$' . $this->model->getMinTV() . '</span></h>
+                              <h>' . $this->model->Translate('From') . '<span class="cart-price">$' . $this->model->getMinTV() . '</span></h>
                           </div>
                       </div>
                       <div class="col-md-3">
@@ -333,13 +333,13 @@ class ProfileView extends DefaultView
                   <div class="row">
                       <div class="col-md-12">
                           <div class="page-spacer">
-                              <h id="page">Any questions? <a class="page" href="/';
+                              <h id="page">' . $this->model->Translate('Any questions?') . '<a class="page" href="/';
 
             if ($_SESSION['language'] !== 'us') {
                 echo $_SESSION['language'] . '/';
             }
 
-            echo 'support/" style="color: #08b;">Go to our support page <img src="/images/arrow-blue.png" width="18" height="18"/></a></h>
+            echo 'support/" style="color: #08b;">' . $this->model->Translate('Go to our support page') . '<img src="/images/arrow-blue.png" width="18" height="18"/></a></h>
                           </div>
                       </div>
                   </div>

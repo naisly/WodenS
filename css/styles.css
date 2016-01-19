@@ -336,6 +336,15 @@ ul {
 	white-space:nowrap;
 	padding-bottom: 2px;
 	margin-left: -40px;
+	color: #666 !important;
+	transition: color 0.5s linear; /* vendorless fallback */
+	-o-transition: color 0.5s linear; /* opera */
+	-ms-transition: color 0.5s linear; /* IE 10 */
+	-moz-transition: color 0.5s linear; /* Firefox */
+	-webkit-transition: color 0.5s linear; /*safari and chrome */
+}
+.footer-menu:hover, {
+	color: #666 !important;
 }
 .items {
 	font-size: 0.9em;

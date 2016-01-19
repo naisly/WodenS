@@ -35,9 +35,9 @@ class OrderStatusView extends DefaultView
                       <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                       <span class="sr-only">Error:</span>
                       <form action="/support/" method="post">
-                          Order <span class="order_id">#' . $this->model->getOrderId() . '</span> not found or incorrect email you<br />
-                          have been entered: <span class="order_email">' . $this->model->getOrderEmail() . '</span>. Please check the provided info.<br />
-                          If you think that it was our mistake, please <button id="link_as_button" class="contact-us">contact us</button>
+                          ' . $this->model->Translate('Order') . '<span class="order_id">#' . $this->model->getOrderId() . '</span>' . $this->model->Translate('not found or incorrect email you') . '<br />
+                          ' . $this->model->Translate('have been entered') . ': <span class="order_email">' . $this->model->getOrderEmail() . '</span>' . $this->model->Translate('Please check the provided info.') . '<br />
+                          ' . $this->model->Translate('If you think that it was our mistake, please') . '<button id="link_as_button" class="contact-us">' . $this->model->Translate('contact us') . '</button>
 
                           <input type="hidden" value="1" name="shopping_help" />
                       </form>
@@ -49,17 +49,17 @@ class OrderStatusView extends DefaultView
                                            <div class="col-md-8">
                                               <div class="account">
                                                   <form action="/order-status/single" method="get">
-                                                      <h class="h-account">Look up for order</h>
-                                                      <input type="text" class="form-control margin-20" name="order_number" id="order_number" placeholder="Order Number" />
-                                                      <input type="text" class="form-control margin-20" name="order_email" id="order_email" placeholder="Your email" />
+                                                      <h class="h-account">' . $this->model->Translate('Look up for order') . '</h>
+                                                      <input type="text" class="form-control margin-20" name="order_number" id="order_number" placeholder="' . $this->model->Translate('Order Number') . '" />
+                                                      <input type="text" class="form-control margin-20" name="order_email" id="order_email" placeholder="' . $this->model->Translate('Your email') . '" />
 
                                                       <div class="forgot">
-                                                          <a href="#" class="text-left link where-order" style="color: #08b;">Where is order number?</a>
-                                                          <button class="btn btn-primary pull-right button-continue">Continue</button>
+                                                          <a href="#" class="text-left link where-order" style="color: #08b;">' . $this->model->Translate('Where is order number?') . '</a>
+                                                          <button class="btn btn-primary pull-right button-continue">' . $this->model->Translate('Continue') . '</button>
                                                           <div class="something">
                                                               <div class="find-number">
-                                                                  <h class="h-find">Find your order number</h><br />
-                                                                  <h class="sub-find">Number is located with thanks message or in your account</h>
+                                                                  <h class="h-find">' . $this->model->Translate('Find your order number') . '</h><br />
+                                                                  <h class="sub-find">' . $this->model->Translate('Number is located with thanks message or in your account') . '</h>
                                                                   <img class="order-support" src="/images/order-support.png" width="400"/>
                                                               </div>
                                                           </div>
@@ -93,31 +93,31 @@ class OrderStatusView extends DefaultView
                       <span class="sr-only">Error:</span>';
 
             if($this->model->getStatus() == 'done') {
-                echo     'Hello, ' . $this->model->getName() . '<br />
-                          Your order #' . $this->model->getOrderId() . ' was accepted by Woden Sims <br />
-                          You will get items in time, that was assigned on your product.';
+                echo      $this->model->Translate('Hello') . ',' . $this->model->getName() . '<br />
+                          ' . $this->model->Translate('Your order') . '#' . $this->model->getOrderId() . $this->model->Translate('was accepted by Woden Sims') . '<br />
+                          ' . $this->model->Translate('You will get items in time, that was assigned on your product.');
             } else {
-                echo     'Hello, ' . $this->model->getName() . '<br />
-                          Your order #' . $this->model->getOrderId() . ' is in an queue<br />
-                          If order will be accepted, you will get items in<br />
-                          time, that was assigned on your product. Approximately approval varies about 2 up to 3<br />
-                          working days, if you think that it is out mistake, please <button id="link_as_button" class="contact-us">contact us</button>
+                echo      $this->model->Translate('Hello') . ',' . $this->model->getName() . '<br />
+                          ' . $this->model->Translate('Your order') . '#' . $this->model->getOrderId() . $this->model->Translate('is in an queue') . '<br />
+                          ' . $this->model->Translate('If order will be accepted, you will get items in') . '<br />
+                          ' . $this->model->Translate('time, that was assigned on your product. Approximately approval varies about 2 up to 3') . '<br />
+                          ' . $this->model->Translate('working days, if you think that it is out mistake, please') . '<button id="link_as_button" class="contact-us">' . $this->model->Translate('contact us') . '</button>
 
                           <input type="hidden" value="1" name="shopping_help" />
                       </form>';
             }
             echo '</div>
                   <div class="items" style="padding-bottom: 30px;">
-                      <h1 class="header-lead" style="font-size: 30px;">Items that you have bought:</h1>
+                      <h1 class="header-lead" style="font-size: 30px;">' . $this->model->Translate('Items that you have bought:') . '</h1>
                       <h1 class="header-lead" style="margin-top: 0;"><span style="color: #08b;">' . $this->model->getCountItems() . ' ';
 
             if($this->model->getCountItems() == 1){
-                echo 'item';
+                echo $this->model->Translate('item');
             } else {
-                echo 'items';
+                echo $this->model->Translate('items');
             }
-            echo '</span> in order</h1>
-                      <h1 class="header-lead" style="margin-top: 0;">For <span class="item-price" style="font-size: 22px;">$' . $this->model->getCountPrice() . '</span></h1>
+            echo '</span>' . $this->model->Translate('in order') . '</h1>
+                      <h1 class="header-lead" style="margin-top: 0;">' . $this->model->Translate('For') . '<span class="item-price" style="font-size: 22px;">$' . $this->model->getCountPrice() . '</span></h1>
 
                       ';
 
@@ -156,9 +156,9 @@ class OrderStatusView extends DefaultView
 
                 echo 'shop/subdescription?original_name=' . $this->model->getOriginalName($i) . '&table=' . $this->model->getTable($i) . '&id_num=' . $this->model->getPrice($i) . '&id=' . $this->model->getId($i) . '&product_name=' . $this->model->getProductName($i) . '">' . $this->model->getOriginalName($i) . '</a><br />
                       <img src="/' . $this->model->getPhoto($i) . '" width="150" height="150" style="margin-top: 7px; margin-bottom: 7px;" />
-                      <h class="category">by <a class="default-link" href="http://' . $this->model->getCategory($i) . '.com">' . $this->model->getCategory($i) . '</a></h><br />
+                      <h class="category">' . $this->model->Translate('by') . '<a class="default-link" href="http://' . $this->model->getCategory($i) . '.com">' . $this->model->getCategory($i) . '</a></h><br />
                       <h class="item-price">$' . $this->model->getPrice($i) . '</h><br />
-                      <h id="ordered">Ordered shipping: <span id="underline">' . $this->model->getShipping($i) . ' days</span></h>' .
+                      <h id="ordered">' . $this->model->Translate('Ordered shipping:') . '<span id="underline">' . $this->model->getShipping($i) . ' days</span></h>' .
                     '</div>';
                 $i++;
             }
