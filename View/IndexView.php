@@ -34,10 +34,33 @@ class IndexView extends DefaultView
         echo '<div class="overlay-main-page">
                   <div id="slider" style="margin-top: -44px;">
                       <ul class="bxslider">
-                          <li><a href="/phones/"><img src="/images/laptops-main-page.jpg" class="full-image-main-content"></a></li>
-                          <li><a href="/tv/"><img src="/images/tv-main-page.jpg" class="full-image-main-content"></a></li>
-                          <li><a href="/laptops/"><img src="/images/laptops-main.jpg" class="full-image-main-content"></a></li>
-                          <li><a href="/devices/"><img src="/images/devices-main-img.jpg" class="full-image-main-content"></a></li>
+                          <li><a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'phones/"><img src="/images/laptops-main-page.jpg" class="full-image-main-content"></a></li>
+                          <li><a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'tv/"><img src="/images/tv-main-page.jpg" class="full-image-main-content"></a></li>
+                          <li><a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+        echo 'laptops/"><img src="/images/laptops-main.jpg" class="full-image-main-content"></a></li>
+                          <li><a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'devices/"><img src="/images/devices-main-img.jpg" class="full-image-main-content"></a></li>
                       </ul>
                   </div>';
     }
@@ -62,7 +85,13 @@ class IndexView extends DefaultView
         echo      '<div class="container-fluid">
                       <div class="row">
                           <div class="col-md-6 no-division-for-category">
-                              <a href="/phones/" style="text-decoration: none">
+                              <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'phones/" style="text-decoration: none">
                                   <div class="bg-phones">
                                       <div style="margin-top: -10px;">
                                           <h1 class="sub-decision-for-xs">';
@@ -74,7 +103,13 @@ class IndexView extends DefaultView
                                   </div>
                               </a>
 
-                              <a href="/devices/" style="text-decoration: none">
+                              <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'devices/" style="text-decoration: none">
                                   <div class="bg-ipad">
                                       <h1 class="sub-decision-for-xs">';
 
@@ -86,7 +121,13 @@ class IndexView extends DefaultView
                               </a>
                           </div>
                           <div class="col-md-6 no-division-for-category">
-                              <a href="/laptops/" style="text-decoration: none">
+                              <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'laptops/" style="text-decoration: none">
                                   <div class="bg-laptops">
                                       <h1 class="sub-decision-for-xs">';
 
@@ -97,7 +138,13 @@ class IndexView extends DefaultView
                                   </div>
                               </a>
 
-                              <a href="/tv/" style="text-decoration: none">
+                              <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'tv/" style="text-decoration: none">
                                   <div class="bg-tv">
                                       <h1 class="sub-decision-for-xs">';
 
@@ -127,11 +174,23 @@ class IndexView extends DefaultView
         echo      '<div class="container-fluid">
                       <div class="row">
                           <div class="col-md-6 no-division-for-category">
-                              <a href="/education/"><img src="/images/main-education-category.jpg" class="full-image-cascade border-left" /></a>
+                              <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'education/"><img src="/images/main-education-category.jpg" class="full-image-cascade border-left" /></a>
 
                           </div>
                           <div class="col-md-6 no-division-for-category">
-                              <a href="/business/"><img src="/images/main-business-category.jpg" class="full-image-cascade border-bottom" /></a>
+                              <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'business/"><img src="/images/main-business-category.jpg" class="full-image-cascade border-bottom" /></a>
 
                           </div>
                       </div>
@@ -164,7 +223,13 @@ class IndexView extends DefaultView
 
         echo                 '</h>
 
-                              <a href="/phones/buy-phone/"><img src="/images/logo-phones-small.png" id="full-logo" /></a>
+                              <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'phones/buy-phone/"><img src="/images/logo-phones-small.png" id="full-logo" /></a>
                           </div>
                           <div class="col-md-2">
                               <h class="category-small-for-store">';
@@ -173,7 +238,13 @@ class IndexView extends DefaultView
 
         echo                 '</h>
 
-                              <a href="/laptops/buy-laptop/"><img src="/images/logo-laptops-small.png" id="full-logo" /></a>
+                              <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'laptops/buy-laptop/"><img src="/images/logo-laptops-small.png" id="full-logo" /></a>
                           </div>
                           <div class="col-md-2">
                               <h class="category-small-for-store">';
@@ -182,7 +253,13 @@ class IndexView extends DefaultView
 
         echo                 '</h>
 
-                              <a href="/devices/buy-device/"><img src="/images/logo-devices-small.png" id="full-logo" /></a>
+                              <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'devices/buy-device/"><img src="/images/logo-devices-small.png" id="full-logo" /></a>
                           </div>
                           <div class="col-md-2">
                               <h class="category-small-for-store margin-tv-for-small tv-gl-xs-container">';
@@ -191,7 +268,13 @@ class IndexView extends DefaultView
 
         echo                 '</h>
 
-                              <a href="/tv/buy-tv/"><img src="/images/logo-tv-small.png" id="full-logo" /></a>
+                              <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'tv/buy-tv/"><img src="/images/logo-tv-small.png" id="full-logo" /></a>
                           </div>
                           <div class="col-md-2"></div>
                       </div>

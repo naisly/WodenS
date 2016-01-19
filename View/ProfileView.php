@@ -45,10 +45,34 @@ class ProfileView extends DefaultView
 
                       <div class="cart-divider"></div>
 
-                      <h class="cart"><a href="/account/cart" id="link" style="color: #08b;"> Cart</a></h><br />
-                      <h class="cart"><a href="/account/orders" id="link" style="color: #08b;">Your Orders</a></h><br />
-                      <h class="cart"><a href="/account/" id="link" style="color: #08b;">Change account info</a></h><br />
-                      <h class="cart"><a href="/account/billing" id="link" style="color: #08b;">Billing info</a></h><br />
+                      <h class="cart"><a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'account/cart" id="link" style="color: #08b;"> Cart</a></h><br />
+                      <h class="cart"><a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'account/orders" id="link" style="color: #08b;">Your Orders</a></h><br />
+                      <h class="cart"><a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'account/" id="link" style="color: #08b;">Change account info</a></h><br />
+                      <h class="cart"><a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'account/billing" id="link" style="color: #08b;">Billing info</a></h><br />
 
                       <div class="cart-divider"></div>
 
@@ -96,7 +120,13 @@ class ProfileView extends DefaultView
 
         if($this->model->getBillingNotFound() !== 0) {
 
-            echo     '<h class="cart"><a style="text-decoration: none" href="account-billing.php">Add billing info</a></h>';
+            echo     '<h class="cart"><a style="text-decoration: none" href="/';
+
+            if ($_SESSION['language'] !== 'us') {
+                echo $_SESSION['language'] . '/';
+            }
+
+            echo 'account/billing">Add billing info</a></h>';
         } else {
             echo     '<h class="cart"><b>Name:</b> ' . $this->model->getBillingName() . '</h><br />
                       <h class="cart"><b>Street:</b> ' . $this->model->getBillingStreet() . '</h><br />
@@ -207,7 +237,13 @@ class ProfileView extends DefaultView
                       <div class="col-md-9">
                           <div class="page-spacer border-margin-for-md">
                               <div class="margin-for-small-sm"></div>
-                              <a class="links" id="main-link" href="/phones/buy-phone/" style="text-decoration: none; white-space: normal;">';
+                              <a class="links" id="main-link" href="/';
+
+            if ($_SESSION['language'] !== 'us') {
+                echo $_SESSION['language'] . '/';
+            }
+
+            echo 'phones/buy-phone/" style="text-decoration: none; white-space: normal;">';
 
             echo $this->model->Translate('Describe new <nobr> possibilities');
 
@@ -225,7 +261,13 @@ class ProfileView extends DefaultView
                   <div class="row">
                       <div class="col-md-9">
                           <div class="page-spacer">
-                              <a class="links" id="main-link" href="/laptops/buy-laptop/" style="text-decoration: none; white-space: normal;">';
+                              <a class="links" id="main-link" href="/';
+
+            if ($_SESSION['language'] !== 'us') {
+                echo $_SESSION['language'] . '/';
+            }
+
+            echo 'laptops/buy-laptop/" style="text-decoration: none; white-space: normal;">';
 
             echo $this->model->Translate('Fully equipped for a <nobr>world');
 
@@ -243,7 +285,13 @@ class ProfileView extends DefaultView
                   <div class="row">
                       <div class="col-md-9">
                           <div class="page-spacer">
-                              <a class="links" id="main-link" href="/devices/buy-device/" style="text-decoration: none; white-space: normal;">';
+                              <a class="links" id="main-link" href="/';
+
+            if ($_SESSION['language'] !== 'us') {
+                echo $_SESSION['language'] . '/';
+            }
+
+            echo 'devices/buy-device/" style="text-decoration: none; white-space: normal;">';
 
             echo $this->model->Translate('Smart. Mighty. <nobr> Heavyweight.');
 
@@ -261,7 +309,13 @@ class ProfileView extends DefaultView
                   <div class="row">
                       <div class="col-md-9">
                           <div class="page-spacer">
-                              <a class="links" id="main-link" href="/tv/buy-tv/" style="text-decoration: none; white-space: normal;">';
+                              <a class="links" id="main-link" href="/';
+
+            if ($_SESSION['language'] !== 'us') {
+                echo $_SESSION['language'] . '/';
+            }
+
+            echo 'tv/buy-tv/" style="text-decoration: none; white-space: normal;">';
 
             echo $this->model->Translate('The future of television is <nobr> here');
 
@@ -279,7 +333,13 @@ class ProfileView extends DefaultView
                   <div class="row">
                       <div class="col-md-12">
                           <div class="page-spacer">
-                              <h id="page">Any questions? <a class="page" href="support.php" style="color: #08b;">Go to our support page <img src="/images/arrow-blue.png" width="18" height="18"/></a></h>
+                              <h id="page">Any questions? <a class="page" href="/';
+
+            if ($_SESSION['language'] !== 'us') {
+                echo $_SESSION['language'] . '/';
+            }
+
+            echo 'support/" style="color: #08b;">Go to our support page <img src="/images/arrow-blue.png" width="18" height="18"/></a></h>
                           </div>
                       </div>
                   </div>

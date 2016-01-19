@@ -34,7 +34,7 @@ class ProfileController extends DefaultController
         session_start();
 
         if(!isset($_SESSION['login_user'])){
-            header('Location: /login');
+            header('Location: /' . $_SESSION['language'] . 'login');
         }
 
         session_write_close();
@@ -115,7 +115,10 @@ class ProfileController extends DefaultController
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
-        session_start();
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+
         $user = $_SESSION['login_user'];
 
         if(isset($_POST['id'])){
@@ -125,13 +128,11 @@ class ProfileController extends DefaultController
             $name = $_POST['name'];
         }
 
-        session_write_close();
-
         $sql_query = $mysqli->prepare("DELETE FROM orderedItems WHERE user='$user' AND id=$id AND product_name='$name'");
 
         $sql_query->execute();
 
-        header('Location: cart.php');
+        header('Location: /' . $_SESSION['language'] . '/account/cart');
     }
 
     protected function actionGetUser() {

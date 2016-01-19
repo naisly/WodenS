@@ -58,7 +58,13 @@ class CheckOrderView extends DefaultView
                                                       <input type="password" class="form-control margin-20" name="password" id="password" placeholder="Password" />
 
                                                       <div class="forgot">
-                                                          <a href="/forgot-password/" class="text-left link">Forgot your Username <br />or Password?</a>
+                                                          <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'forgot-password/" class="text-left link">Forgot your Username <br />or Password?</a>
                                                           <button class="btn btn-primary pull-right button-sign">Sign In</button>
                                                       </div>
                                                   </form>

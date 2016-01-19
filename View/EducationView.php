@@ -71,7 +71,13 @@ class EducationView extends DefaultView
                           <h class="sub-category">Phones have powerful, reusable, complex apps and features to make your schedule
                           flexible as well as precise, lightly usable together with many devices.</h><br /><br />
 
-                          <a class="links" id="main-link" href="/education/phones/" style="text-decoration: none">';
+                          <a class="links" id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'education/phones/" style="text-decoration: none">';
 
         echo $this->model->Translate('Learn more');
 
@@ -84,7 +90,13 @@ class EducationView extends DefaultView
                           <h class="sub-category">Meanwhile its thin and powerful handy computer, the Laptop consider every detail
                           to make your study exciting as well as pleasurable. </h><br /><br />
 
-                          <a class="links" id="main-link" href="/education/laptops/" style="text-decoration: none">';
+                          <a class="links" id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'education/laptops/" style="text-decoration: none">';
 
         echo $this->model->Translate('Learn more');
 

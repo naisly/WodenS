@@ -154,7 +154,13 @@ class BusinessLaptopsView extends DefaultView
 
               <div class="text-center">
                   <div class="search-for">
-                      <a href="../../notebooks.php" id="search">Search laptop for business ></a>
+                      <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'laptops/buy-laptop/" id="search">Search laptop for business ></a>
                   </div>
               </div>';
     }

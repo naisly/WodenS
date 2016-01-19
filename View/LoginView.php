@@ -50,13 +50,19 @@ class LoginView extends DefaultView
             }
         }
 
-        echo '<form action="register" method="post" id="registation">
+        echo '<form action="/register" method="post" id="registation">
               <div class="container">
                   <div class="row">
                       <div class="col-md-3"></div>
                       <div class="col-md-6 text-center" style="margin-top: 40px;">
                           <h1 class="one-account">Only one Account for all your needs.</h1>
-                          <h1 class="one-account">Already have Woden Sims Account? <a href="/login">Find it here<img style="margin-left: 3px;" src="/images/arrow-blue.png" width="13" height="13"/></a></h1>
+                          <h1 class="one-account">Already have Woden Sims Account? <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'login">Find it here<img style="margin-left: 3px;" src="/images/arrow-blue.png" width="13" height="13"/></a></h1>
 
                           <div class="form-group" style="margin-top: 30px;">
                               <input type="email" class="form-control" placeholder="email@example.com" id="email" name="email" required />
@@ -399,10 +405,22 @@ class LoginView extends DefaultView
                               <span style="font-size: 22px; margin-left: 25px;">You are accepting Woden Sims Privacy Policy</span><br />
                               <div class="row">
                                   <div class="col-md-10" style="margin-left: 25px;">
-                                      <span style="font-size: 13px;">This <a href="/privacy-policy/" id="main-link-check">Privacy Policy</a> is meant to help you understand
+                                      <span style="font-size: 13px;">This <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'privacy-policy/" id="main-link-check">Privacy Policy</a> is meant to help you understand
                                       what data we collect, why we collect it, and what we do with it. This is important;
                                       we hope you will take time to read it carefully. And remember, you can find controls
-                                      to manage your information and protect your privacy and security at <a href="/account/" id="main-link-check">My Account.</a></span>
+                                      to manage your information and protect your privacy and security at <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'account/" id="main-link-check">My Account.</a></span>
                                   </div>
                                   <div class="col-md-2"></div>
                               </div>
@@ -416,7 +434,13 @@ class LoginView extends DefaultView
                               <div class="row">
                                   <div class="col-md-10" style="margin-left: 25px;">
                                       <span style="font-size: 13px;">Woden Sims reserves the right, at its sole discretion,
-                                      to change, modify, add or remove portions of these <a href="/terms/" id="main-link-check">Terms of Use</a>, at any time. It
+                                      to change, modify, add or remove portions of these <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'terms/" id="main-link-check">Terms of Use</a>, at any time. It
                                       is your responsibility to check these Terms of Use periodically for changes.</span>
                                   </div>
                                   <div class="col-md-2"></div>
@@ -497,7 +521,13 @@ class LoginView extends DefaultView
 
         echo '<div class="text-center thank-you">
                   <h1>Thank you for the registration.</h1>
-                  <a class="links" id="main-link" href="login" style="text-decoration: none; margin: 0 !important;">';
+                  <a class="links" id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'login" style="text-decoration: none; margin: 0 !important;">';
 
         echo $this->model->Translate('Login');
 
@@ -558,9 +588,15 @@ class LoginView extends DefaultView
 
         echo       '"><h1 class="sign">Sign in Account</h1>
                       <h2 class="only-one">Only one Account for All your needs</h2>
-                      <h2 class="only-one" style="font-size: 20px;">Have no account? <a href="/register" class="links" id="link" style="text-decoration: none;">Create your Woden Sims ID <img style="margin-top: -5px;" src="/images/arrow-blue.png" width="15" height="15"/></a></h2>
+                      <h2 class="only-one" style="font-size: 20px;">Have no account? <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'register" class="links" id="link" style="text-decoration: none;">Create your Woden Sims ID <img style="margin-top: -5px;" src="/images/arrow-blue.png" width="15" height="15"/></a></h2>
                   </div>
-                  <div class="margin-auto" style="margin-top: 5%;"><form action="check" method="post">
+                  <div class="margin-auto" style="margin-top: 5%;"><form action="/check" method="post">
                               <div class="input-group" style="width: 100%;">
                                   <input type="text" name="email" id="email" class="form-control woden-sims-email" placeholder="Woden Sims Email">
                               </div>
@@ -571,7 +607,13 @@ class LoginView extends DefaultView
                           </form>
                   </div>
                   <div class="text-center" style="margin-top: 15px;">
-                      <a href="/forgot-password/?session_auth=' . $_SESSION["session_auth"] . '" class="forgot links" id="link">Forgot your password?</a>
+                      <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'forgot-password/?session_auth=' . $_SESSION["session_auth"] . '" class="forgot links" id="link">Forgot your password?</a>
                   </div>
                   <img style="margin-top: 40px;" src="/images/phones-category-white.png" class="full-image-cascade" />
                </div>';

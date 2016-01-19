@@ -80,7 +80,13 @@ class SupView extends IndexView
                   <div class="row">
                       <div class="col-md-6">
                           <div class="text-center">
-                              <a class="main-nav" href="/contact/"><img src="/images/contact.png" style="width: 300px;" class="img-contact" />
+                              <a class="main-nav" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'contact/"><img src="/images/contact.png" style="width: 300px;" class="img-contact" />
                               <h1 style="color: #444;">Contact us</h1></a>
                               <p class="contact-p">We are going to help you with any issues with products, shipping details, orders and much more!
                               You could get support by Phone, email, contact form or just in our product
@@ -90,7 +96,13 @@ class SupView extends IndexView
                       </div>
                       <div class="col-md-6">
                           <div class="text-center">
-                              <a class="main-nav" href="/order-status/"><img src="/images/order.png" style="width: 80px;" class="img-contact" />
+                              <a class="main-nav" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'order-status/"><img src="/images/order.png" style="width: 80px;" class="img-contact" />
                               <h1 style="color: #444;">Find your order</h1></a>
                               <p class="contact-p">Check the status of your Order<br />
                               See if the product approved and<br />

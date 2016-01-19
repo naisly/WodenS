@@ -1,3 +1,5 @@
+if ($_SESSION['language'] !== 'us') {
+echo $_SESSION['language'] . '/';
 <?php
 
 /**
@@ -70,7 +72,13 @@ class BusinessView extends DefaultView
                                        Whether your data can be stored in
                                        one place, it also protected for unwanted eyes</h><br /><br />
 
-                                       <a class="links" id="main-link" href="/business/laptops/" style="text-decoration: none">';
+                                       <a class="links" id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'business/laptops/" style="text-decoration: none">';
 
         echo $this->model->Translate('Learn more');
 
@@ -83,7 +91,13 @@ class BusinessView extends DefaultView
                                        with complex and flex apps. Be always equipped with information about every area
                                        of business</h><br /><br />
 
-                                       <a class="links" id="main-link" href="/business/phones/" style="text-decoration: none">';
+                                       <a class="links" id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'business/phones/" style="text-decoration: none">';
 
         echo $this->model->Translate('Learn more');
 
@@ -95,7 +109,13 @@ class BusinessView extends DefaultView
                                        <h class="sub-category">Devices change the way of your work with yours partners by using
                                        thousands of different apps for business, that makes your productivity non-catchable.</h><br /><br />
 
-                                       <a class="links" id="main-link" href="/business/devices/" style="text-decoration: none">';
+                                       <a class="links" id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'business/devices/" style="text-decoration: none">';
 
         echo $this->model->Translate('Learn more');
 

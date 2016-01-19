@@ -187,6 +187,10 @@ class LoginController extends DefaultController
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+
         if(isset($_POST['email'])){
             $email = $_POST['email'];
         }
@@ -196,7 +200,7 @@ class LoginController extends DefaultController
         $result = $mysqli->query($sql_stmt);
 
         if ($result->num_rows >= 1){
-            header('Location: register?email_error=1');
+            header('Location: /' . $_SESSION['language'] . 'register?email_error=1');
         }
     }
 
@@ -242,10 +246,10 @@ class LoginController extends DefaultController
             $_SESSION['login_user'] = $email;
             $_SESSION['admin'] = $email;
             $_SESSION['add_item'] = '0';
-            header("Location: account/");
+            header("Location: /" . $_SESSION['language'] . "/account/");
             $_SESSION['login_try'] = 1;
         } else {
-            header("Location: login?auth=false&try=" . $_SESSION['login_try']++);
+            header("Location: /" . $_SESSION['language'] . "login?auth=false&try=" . $_SESSION['login_try']++);
         }
 
         session_write_close();
@@ -352,16 +356,16 @@ class LoginController extends DefaultController
 
         session_start();
         if(!$_SESSION['login_user']){
-            header('Location: login.php');
+            header('Location: /' . $_SESSION['language'] . 'login');
             $_SESSION['add_item'] = '1';
         } else {
             $_SESSION['add_item'] = '0';
 
             $this->actionAddItems();
             if(isset($_POST['one-click-order'])){
-                header('Location: placeorder');
+                header('Location: /' . $_SESSION['language'] . '/account/placeorder');
             } else {
-                header('Location: thanks-order');
+                header('Location: /' . $_SESSION['language'] . '/shop/thanks-order');
             }
         }
     }

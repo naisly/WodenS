@@ -114,16 +114,40 @@ class StoreView extends DefaultView
                               <div class="row" style="margin-top: 70px">
                                   <div class="col-md-2"></div>
                                   <div class="col-md-2">
-                                      <a href="/phones/buy-phone/"><img style="margin-right: 40px" src="/images/icon-phones.png" width="150" height="150" /></a>
+                                      <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'phones/buy-phone/"><img style="margin-right: 40px" src="/images/icon-phones.png" width="150" height="150" /></a>
                                   </div>
                                   <div class="col-md-2">
-                                      <a href="/laptops/buy-laptop/"><img style="margin-right: 40px" src="/images/icon-laptop.png" width="150" height="150" /></a>
+                                      <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'laptops/buy-laptop/"><img style="margin-right: 40px" src="/images/icon-laptop.png" width="150" height="150" /></a>
                                   </div>
                                   <div class="col-md-2">
-                                      <a href="/devices/buy-device/"><img style="margin-right: 40px" src="/images/icon-devices.png" width="150" height="150" /></a>
+                                      <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'devices/buy-device/"><img style="margin-right: 40px" src="/images/icon-devices.png" width="150" height="150" /></a>
                                   </div>
                                   <div class="col-md-2">
-                                      <a href="/tv/buy-tv/"><img style="margin-right: 40px" src="/images/icon-tv.png" width="150" height="150" /></a>
+                                      <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'tv/buy-tv/"><img style="margin-right: 40px" src="/images/icon-tv.png" width="150" height="150" /></a>
                                   </div>
                                   <div class="col-md-2"></div>
                               </div>

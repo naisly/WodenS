@@ -57,11 +57,17 @@ class SupportController extends DefaultController
             $message = $_POST['message'];
         }
 
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+
         $mysql_query = $mysqli->prepare("INSERT INTO support VALUES ( '', '$name', '$email', '$subject', '$message')");
 
         $mysql_query->execute();
 
-        header('Location: thanks-support');
+        header('Location: /' . $_SESSION['language'] . 'thanks-support');
+
+        session_write_close();
 
 
     }

@@ -98,6 +98,24 @@ class AdminView extends DefaultView
 
     public function getLoginForm() {
 
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if(isset($_SESSION['admin'])) {
+            if ($_SESSION['admin'] == 'admin') {
+                header('Location: admin.php');
+            }
+        }
+
+        if(isset($_SESSION['error'])){
+            if($_SESSION['error'] == 1) {
+                $this->errorLoginMessage();
+            }
+        }
+
+        session_write_close();
+
         echo  '<!--<div class="login-bg-for-xs">-->
                   <div class="text-center" style="';
 
@@ -109,7 +127,13 @@ class AdminView extends DefaultView
 
         echo       '"><h1 class="sign">Sign in as Admin</h1>
                       <h2 class="only-one">Only one Account for All control</h2>
-                      <h2 class="only-one" style="font-size: 20px;">Have no account? <a href="/register" class="links" id="link" style="text-decoration: none;">Create your Woden Sims ID <img style="margin-top: -5px;" src="/images/arrow-blue.png" width="15" height="15"/></a></h2>
+                      <h2 class="only-one" style="font-size: 20px;">Have no account? <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'register" class="links" id="link" style="text-decoration: none;">Create your Woden Sims ID <img style="margin-top: -5px;" src="/images/arrow-blue.png" width="15" height="15"/></a></h2>
                   </div>
                   <div class="margin-auto" style="margin-top: 5%;"><form action="check" method="post">
                               <div class="input-group" style="width: 100%;">
@@ -122,7 +146,13 @@ class AdminView extends DefaultView
                           </form>
                   </div>
                   <div class="text-center" style="margin-top: 15px;">
-                      <a href="/forgot-password/?session_auth=' . $_SESSION["session_auth"] . '" class="forgot links" id="link">Forgot your password?</a>
+                      <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'forgot-password/?session_auth=' . $_SESSION["session_auth"] . '" class="forgot links" id="link">Forgot your password?</a>
                   </div>
                   <img style="margin-top: 40px;" src="/images/phones-category-white.png" class="full-image-cascade" />
                </div>';
@@ -150,13 +180,13 @@ class AdminView extends DefaultView
         echo '<h1>The Main Admin Page</h1>
               <div class="panel panel-default row">
                 <div class="col-xs-3 panel-body">
-                <a class="btn btn-block btn-default" href="admin-products.php">
+                <a class="btn btn-block btn-default" href="admin-products">
                     Products
                 </a>
-                <a class="btn btn-block btn-primary" href="admin-orders.php">
+                <a class="btn btn-block btn-primary" href="admin-orders">
                     Orders
                 </a>
-                <a class="btn btn-block btn-success" href="admin-support.php">
+                <a class="btn btn-block btn-success" href="admin-support">
                     Support
                 </a>
                     </div>

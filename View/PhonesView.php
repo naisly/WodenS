@@ -47,17 +47,35 @@ class PhonesView extends IndexView
 
         echo     '</h><br />
 			      <div style="margin-top: 15px; margin-bottom: 30px;">
-                      <a class="links" id="main-link" href="/education/phones/" style="text-decoration: none">';
+                      <a class="links" id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'education/phones/" style="text-decoration: none">';
 
         echo $this->model->Translate('For education');
 
         echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></a>
-                      <a class="links" id="main-link" href="/business/phones/" style="text-decoration: none">';
+                      <a class="links" id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'business/phones/" style="text-decoration: none">';
 
         echo $this->model->Translate('For business');
 
         echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></a>
-                      <a id="main-link" href="/phones/buy-phone/" style="text-decoration: none;">';
+                      <a id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'phones/buy-phone/" style="text-decoration: none;">';
 
         echo $this->model->Translate('Buy');
 
@@ -104,7 +122,13 @@ class PhonesView extends IndexView
 
         echo             '</h><br /><br />
 
-                          <a id="main-link" href="/education/phones/" style="text-decoration: none" class="search-education">';
+                          <a id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'education/phones/" style="text-decoration: none" class="search-education">';
 
         echo $this->model->Translate('Search for education');
 
@@ -149,7 +173,13 @@ class PhonesView extends IndexView
 
         echo              '</h><br /><br />
 
-                          <a id="main-link" href="/education/phones/" style="text-decoration: none" class="search-education">Search for business <img src="/images/arrow-blue-f1.png" width="20" height="20"/></a>
+                          <a id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'education/phones/" style="text-decoration: none" class="search-education">Search for business <img src="/images/arrow-blue-f1.png" width="20" height="20"/></a>
                       </div>
                       <div class="col-md-4"></div>
                   </div>

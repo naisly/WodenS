@@ -207,7 +207,13 @@ class ForgotView extends DefaultView
         echo '<div class="text-center" style="margin-top: 200px;">
                   <h1 class="success">You have successfully changed your password.</h1>
                   <h1 class="sub-success">Now you can use your Account</h1>
-                  <a id="main-link" href="/login" style="text-decoration: none; margin-left: 0 !important; font-size: 30px;">Login<img src="/images/arrow-blue-f1.png" width="25" height="25"/></a>
+                  <a id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'login" style="text-decoration: none; margin-left: 0 !important; font-size: 30px;">Login<img src="/images/arrow-blue-f1.png" width="25" height="25"/></a>
               </div>
 
               <img src="/images/phones-bg.png" class="full-image-cascade" />';

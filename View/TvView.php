@@ -51,7 +51,13 @@ class TvView extends IndexView
                           <h class="main-header">iMac</h><br />
                           <h class="sub-main-header">Thin, powerful.</h>
                           <h class="sub-main-header">Retina <br />development is vaste</h><br />
-                          <a id="main-link" href="/tv/buy-tv/Imac" style="text-decoration: none; margin-right: 0px;">Buy <img src="/images/arrow-blue.png" width="20" height="20"/></a>
+                          <a id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'tv/buy-tv/Imac" style="text-decoration: none; margin-right: 0px;">Buy <img src="/images/arrow-blue.png" width="20" height="20"/></a>
                       </div>
                       <div class="col-md-6"></div>
                   </div>
@@ -62,7 +68,13 @@ class TvView extends IndexView
               <div class="text-center">
                   <h1 class="future-main">Apple TV</h1>
                   <h1 class="future-main" style="margin-top: 0px; font-size: 32px;">Moving in lockstep with future</h1>
-                  <a id="main-link" href="/tv/buy-tv/AppleTV" style="text-decoration: none; margin-right: 0px;">Buy <img src="/images/arrow-blue.png" width="20" height="20"/></a>
+                  <a id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'tv/buy-tv/AppleTV" style="text-decoration: none; margin-right: 0px;">Buy <img src="/images/arrow-blue.png" width="20" height="20"/></a>
                   <div class="container">
                       <div class="row">
                           <div class="col-md-6" style="margin-top: 50px;">
@@ -103,7 +115,13 @@ class TvView extends IndexView
                           <p class="text-left" style="font-size: 22px;">Lets look at big, high resolution games that makes you feel excited, thrilled. Apps
                           can absolutely flip your life from routine, dreary to entire, outright way of being.</p>
 
-                          <a id="main-link" href="/tv/buy-tv/ShowTop" style="text-decoration: none; margin-right: 0px;">Also, you might be interested in ShowTop <img src="/images/arrow-blue.png" width="20" height="20"/></a>
+                          <a id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'tv/buy-tv/ShowTop" style="text-decoration: none; margin-right: 0px;">Also, you might be interested in ShowTop <img src="/images/arrow-blue.png" width="20" height="20"/></a>
                           <div style="margin-bottom: 100px;"></div>
                       </div>
                       <div class="col-md-2"></div>
@@ -120,7 +138,13 @@ class TvView extends IndexView
     private function getOrder() {
 
         echo '<div class="text-center" style="margin-top: 40px;">
-                  <a id="main-link" href="/tv/buy-tv/" style="text-decoration: none; margin-right: 0px;">Buy <img src="/images/arrow-blue.png" width="20" height="20"/></a>
+                  <a id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'tv/buy-tv/" style="text-decoration: none; margin-right: 0px;">Buy <img src="/images/arrow-blue.png" width="20" height="20"/></a>
                   <p class="sub-future">Free shipping available!</p>
               </div>';
     }

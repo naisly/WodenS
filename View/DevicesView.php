@@ -42,8 +42,19 @@ class DevicesView extends IndexView
                           <p class="main-p-lead">Thin, capable that you have never ever seen before</p>
                           <p class="sub-main-lead">Never worry about where to place this incredible thing.</p>
 
-                          <a class="links" id="main-link" href="/business/devices/" style="text-decoration: none;">For business <img src="/images/arrow-blue.png" width="20" height="20"/></a>
-                          <a id="main-link" href="/devices/buy-device/" style="text-decoration: none;">Buy <img src="/images/arrow-blue.png" width="20" height="20"/></a>
+                          <a class="links" id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+        echo 'business/devices/" style="text-decoration: none;">For business <img src="/images/arrow-blue.png" width="20" height="20"/></a>
+                          <a id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'devices/buy-device/" style="text-decoration: none;">Buy <img src="/images/arrow-blue.png" width="20" height="20"/></a>
                       </div>
                   </div>
               </div>';
@@ -62,7 +73,13 @@ class DevicesView extends IndexView
                       <h1 class="main-h">Powerful, minimalistic form</h1>
                       <p class="main-p">Lots of Ipads have 64-bit arhitecture that makes performance</p>
                       <p class="main-p">to be the perfect in a comparison with others.</p>
-                      <a id="main-link" href="/devices/buy-device/" style="text-decoration: none;">Buy <img src="/images/arrow-blue.png" width="20" height="20"/></a>
+                      <a id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'devices/buy-device/" style="text-decoration: none;">Buy <img src="/images/arrow-blue.png" width="20" height="20"/></a>
                   </div>
 
                   <div class="row">
@@ -93,7 +110,13 @@ class DevicesView extends IndexView
                           <h1 class="main-h">Awesome thin, best performance</h1>
                           <p class="main-p">There is lots to meet your eye.
                           Developing the most user common interface, thin, productive</p>
-                          <a class="links" id="main-link" href="/business/devices/" style="text-decoration: none">For business <img src="/images/arrow-blue.png" width="20" height="20"/></a>
+                          <a class="links" id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'business/devices/" style="text-decoration: none">For business <img src="/images/arrow-blue.png" width="20" height="20"/></a>
                       </div>
                       <div class="col-md-2"></div>
                   </div>
@@ -178,13 +201,25 @@ class DevicesView extends IndexView
 
               <div class="container-fluid">
                   <div class="row">md-6 no-division-for-category">
-                          <a href="/devices/buy-device/" style="text-decoration: none;"><div class="ipad-usage">
+                          <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'devices/buy-device/" style="text-decoration: none;"><div class="ipad-usage">
                               <h1 class="main-ipad">Thin. Productive. Practical.</h1>
                               <h1 class="sub-ipad"">Order it now</h1>
                           </div>
                       </div>
                       <div class="col-md-6 no-division-for-category">
-                          <a href="/business/devices/" style="text-decoration: none;"><div class="ipad-usage-next">
+                          <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'business/devices/" style="text-decoration: none;"><div class="ipad-usage-next">
                               <h1 class="reimagine-main">Reimagine your life with new technology</h1>
                               <h1 class="reimagine-sub" style="color: black;">Discover for business</h1>
                           </div></a>
@@ -192,23 +227,47 @@ class DevicesView extends IndexView
 
                       <div class="container invisible-for-xs" style="padding-left: 0 !important; padding-right: 0 !important;">
                           <h1 class="header-ipad">Thin. Productive. Practical.</h1>
-                          <a class="links" id="main-link" href="/education/phones/" style="text-decoration: none;">';
+                          <a class="links" id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'education/phones/" style="text-decoration: none;">';
 
         echo $this->model->Translate('Order it now');
 
         echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></a>
                           <div class="col-md-6 no-division-for-category" style="border-right: 1px solid white; border-bottom: 2px solid white;">
-                              <a href="/devices/buy-device/"><img src="/images/ipad-usage1.jpg" class="full-image-cascade" style="margin-top: 15px;" /></a>
+                              <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'devices/buy-device/"><img src="/images/ipad-usage1.jpg" class="full-image-cascade" style="margin-top: 15px;" /></a>
                           </div>
 
                           <h1 class="header-ipad">Reimagine your life with new technology</h1>
-                          <a class="links" id="main-link" href="/business/devices/" style="text-decoration: none;">';
+                          <a class="links" id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'business/devices/" style="text-decoration: none;">';
 
         echo $this->model->Translate('Discover for business');
 
         echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></a>
                           <div class="col-md-6 no-division-for-category" style="border-bottom: 2px solid white;">
-                              <a href="/business/devices/"><img src="/images/ipad-usage2.jpg" class="full-image-cascade" style="margin-top: 15px;" /></a>
+                              <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'business/devices/"><img src="/images/ipad-usage2.jpg" class="full-image-cascade" style="margin-top: 15px;" /></a>
                           </div>
                       </div>
                   </div>

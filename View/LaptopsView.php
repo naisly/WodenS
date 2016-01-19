@@ -36,15 +36,33 @@ class LaptopsView extends IndexView
                   <p class="macbook-p">Thin, stunning display makes your heart beat faster.</p>
                   <p class="macbook-p" style="font-size: 28px;">All the power you want. All day long.</p>
                   <div style="margin-top: 15px; margin-bottom: 30px;">
-                      <a class="links" id="main-link" href="/education/laptops/" style="text-decoration: none">For education <img src="/images/arrow-blue.png" width="20" height="20"/></a>
-                      <a class="links" id="main-link" href="/business/laptops/" style="text-decoration: none">For business <img src="/images/arrow-blue.png" width="20" height="20"/></a>
-                      <a id="main-link" href="/laptops/buy-laptop/" style="text-decoration: none;">Buy <img src="/images/arrow-blue.png" width="20" height="20"/></a>
+                      <a class="links" id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'education/laptops/" style="text-decoration: none">For education <img src="/images/arrow-blue.png" width="20" height="20"/></a>
+                      <a class="links" id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'business/laptops/" style="text-decoration: none">For business <img src="/images/arrow-blue.png" width="20" height="20"/></a>
+                      <a id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'laptops/buy-laptop/" style="text-decoration: none;">Buy <img src="/images/arrow-blue.png" width="20" height="20"/></a>
                   </div>
 
               </div>
 
               <div class="container">
-                  <img src="../images/macbook-pro.png" class="full-image" />
+                  <img src="/images/macbook-pro.png" class="full-image" />
               </div>
 
               <div class="container">
@@ -57,7 +75,13 @@ class LaptopsView extends IndexView
         echo '<div class="text-center">
                    <h1 class="header-laptops">Build your life as easy as it could be</h1>
                    <h2 class="macbook-p" style="font-size: 28px;">Powerful apps included</h2>
-                   <a class="links" id="default-link" href="/education/laptops/" style="text-decoration: none">For education <img src="/images/arrow-blue.png" width="20" height="20"/></a>
+                   <a class="links" id="default-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'education/laptops/" style="text-decoration: none">For education <img src="/images/arrow-blue.png" width="20" height="20"/></a>
               </div>
 
               <div class="container" style="margin-top: 60px;">
@@ -110,7 +134,13 @@ class LaptopsView extends IndexView
               <div class="text-center" style="padding-bottom: 40px;">
                   <h1 class="header-laptops">The best design. For the best performance</h1>
                   <h2 class="macbook-p" style="font-size: 28px;">Special All-day battery life</h2>
-                  <a class="links" id="default-link" href="/business/laptops/" style="text-decoration: none">For business <img src="/images/arrow-blue.png" width="20" height="20"/></a>
+                  <a class="links" id="default-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'business/laptops/" style="text-decoration: none">For business <img src="/images/arrow-blue.png" width="20" height="20"/></a>
               </div>
 
               <div class="container">
@@ -144,7 +174,7 @@ class LaptopsView extends IndexView
               </div>
 
               <div class="text-center" style="margin-top: 40px;">
-                  <img src="../images/macbook-air.jpg" class="part-image" />
+                  <img src="/images/macbook-air.jpg" class="part-image" />
               </div>
 
               <!--<div class="text-center">
@@ -158,7 +188,13 @@ class LaptopsView extends IndexView
               <div class="text-center">
                    <h1 class="header-laptops">Stunning display</h1>
                    <h2 class="macbook-p" style="font-size: 28px;">Best quality for your performance</h2>
-                   <a id="default-link" href="/laptops/buy-laptop/" style="text-decoration: none;">Buy <img src="/images/arrow-blue.png" width="20" height="20"/></a>
+                   <a id="default-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'laptops/buy-laptop/" style="text-decoration: none;">Buy <img src="/images/arrow-blue.png" width="20" height="20"/></a>
               </div>
 
               <div class="container" style="margin-top: 40px;">
@@ -194,7 +230,7 @@ class LaptopsView extends IndexView
                    <div class="header-footer" style="padding-top: 15px; padding-bottom: 15px; margin-top: 50px;">
                        <h1>Powerful. Thin. Awesome.</h1>
                    </div>
-                   <img src="../images/macbook-different.jpg" class="full-image-cascade"/>
+                   <img src="/images/macbook-different.jpg" class="full-image-cascade"/>
               </div>
               <div class="footer-bg-xs">
                   <h1 class="powerful">Powerful</h1>

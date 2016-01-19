@@ -27,7 +27,9 @@ class AccountOrderController extends ProfileController
         session_start();
 
         if(!isset($_SESSION['login_user'])){
-            header('Location: /login');
+            if(isset($_SESSION['language'])) {
+                header('Location: /' . $_SESSION['language'] . '/login');
+            }
         }
 
         session_write_close();

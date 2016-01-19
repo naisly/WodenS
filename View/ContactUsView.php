@@ -44,8 +44,20 @@ class ContactUsView extends DefaultView
                            <div class="col-md-5"></div>
                            <div class="col-md-4">
                                 <ul class="sub-navigation" style="margin-left: -13px;">
-                                    <li><a id="nav-links" href="/support/">Support</a></li>
-                                    <li><a id="nav-links" href="/store/">Our offices</a></li>
+                                    <li><a id="nav-links" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'support/">Support</a></li>
+                                    <li><a id="nav-links" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'store/">Our offices</a></li>
                                 </ul>
                            </div>
                        </div>
@@ -63,30 +75,90 @@ class ContactUsView extends DefaultView
                             <h class="header-category">Sales category</h><br /><br />
 
                             <h class="sub-header-category">Woden Sims Online Store</h><br />
-                            <h class="content-header">The <a id="default-link" href="/">Woden Sims Online Store</a> is a quit place to
+                            <h class="content-header">The <a id="default-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo '">Woden Sims Online Store</a> is a quit place to
                             purchase any quality or any product category from Apple, Samsung and other manufacturers. You can buy online
                             or by call +38 (095) 094 82 68 or other phones as follows on this page 7 days a week from 10 a.m. to
-                            19 p.m. UTC <br /><br /> You can get information about an order placed on Woden Sims Store by <a id="default-link" href="/order-status/">
+                            19 p.m. UTC <br /><br /> You can get information about an order placed on Woden Sims Store by <a id="default-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'order-status/">
                             Order Status</a> page. If you would prefer, you can also check the order status via Phone, <span style="color: #ac5050">all phones available
                             for each country of our company is provided below.</span></h><br /><br />
 
                             <h class="sub-header-category">Get Financing for each of your device bought in our Store</h><br />
                             <h class="content-header">Woden Sims Financial offers financing for every product you bought. It\'s
-                            available on categories: <a id="default-link" href="/phones/">Phones</a>, <a id="default-link" href="/laptops/">Laptops</a>,
-                            <a id="default-link" href="/tv/">TVs.</a> For each category, for <a id="default-link" href="/education/">Education</a>,
-                            for <a id="default-link" href="/business/">Business</a> you can find out hot deals for each Area of work.</h><br /><br />
+                            available on categories: <a id="default-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'phones/">Phones</a>, <a id="default-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'laptops/">Laptops</a>,
+                            <a id="default-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'tv/">TVs.</a> For each category, for <a id="default-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'education/">Education</a>,
+                            for <a id="default-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'business/">Business</a> you can find out hot deals for each Area of work.</h><br /><br />
 
                             <h class="sub-header-category">Consult using Online Support Service</h><br />
-                            <h class="content-header">Visit our <a id="default-link" href="/support/">Support</a> page to ask any questions that you want. We will respond you as soon as possible</h>
+                            <h class="content-header">Visit our <a id="default-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'support/">Support</a> page to ask any questions that you want. We will respond you as soon as possible</h>
                        </div>
                        <div class="col-md-5" style="margin-top: 70px;">
                             <h class="sub-header-category">Getting items for Business</h><br />
-                            <h class="content-header">If you want to get items for your <a id="default-link" href="/business/">business</a>
+                            <h class="content-header">If you want to get items for your <a id="default-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'business/">business</a>
                             or be consulted in area of using it call +38 (095) 094 82 68 or other phones supported by Woden Sims.<span style="color: #ac5050">All phones available
                             for each country of our company is provided below.</span></h><br /><br />
 
                             <h class="sub-header-category">Getting items for Education</h><br />
-                            <h class="content-header">If you want to get items for your <a id="default-link" href="/education/">education</a>
+                            <h class="content-header">If you want to get items for your <a id="default-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'education/">education</a>
                             or be consulted in area of using it call +38 (095) 531 618 31 or other phones supported by Woden Sims.<span style="color: #ac5050">All phones available
                             for each country of our company is provided below.</span></h><br /><br />
                        </div>
@@ -104,7 +176,7 @@ class ContactUsView extends DefaultView
                    <div class="row">
                         <div class="col-md-1"></div>
                         <div class="col-md-10">
-                            <img src="../images/czech-republic-small.jpg" width="30" height="30" style="margin-bottom: 17px;"/>
+                            <img src="/images/czech-republic-small.jpg" width="30" height="30" style="margin-bottom: 17px;"/>
                             <h class="header-category">Praha, Czech Republic</h><br /><br />
 
                             <div class="area-name">
@@ -113,7 +185,7 @@ class ContactUsView extends DefaultView
 
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img src="../images/rosmarin-business-center.jpg" id="business-center" />
+                                    <img src="/images/rosmarin-business-center.jpg" id="business-center" />
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="contact-data">
@@ -138,7 +210,7 @@ class ContactUsView extends DefaultView
                    <div class="row">
                         <div class="col-md-1"></div>
                         <div class="col-md-10">
-                            <img src="../images/poland-small.jpg" width="30" height="30" style="margin-bottom: 17px;"/>
+                            <img src="/images/poland-small.jpg" width="30" height="30" style="margin-bottom: 17px;"/>
                             <h class="header-category">Warsaw, Poland</h><br /><br />
 
                             <div class="area-name">
@@ -147,7 +219,7 @@ class ContactUsView extends DefaultView
 
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img src="../images/poland-business-center.jpg" id="business-center" />
+                                    <img src="/images/poland-business-center.jpg" id="business-center" />
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="contact-data">
@@ -172,7 +244,7 @@ class ContactUsView extends DefaultView
                    <div class="row">
                         <div class="col-md-1"></div>
                         <div class="col-md-10">
-                            <img src="../images/lithuania-small.jpg" width="30" height="30" style="margin-bottom: 17px;"/>
+                            <img src="/images/lithuania-small.jpg" width="30" height="30" style="margin-bottom: 17px;"/>
                             <h class="header-category">Vilnius, Lithuania</h><br /><br />
 
                             <div class="area-name">
@@ -181,7 +253,7 @@ class ContactUsView extends DefaultView
 
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img src="../images/vilnius-business-center.jpg" id="business-center" />
+                                    <img src="/images/vilnius-business-center.jpg" id="business-center" />
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="contact-data">
@@ -206,7 +278,7 @@ class ContactUsView extends DefaultView
                    <div class="row">
                         <div class="col-md-1"></div>
                         <div class="col-md-10">
-                            <img src="../images/ukraine-small.png" width="30" height="30" style="margin-bottom: 17px;"/>
+                            <img src="/images/ukraine-small.png" width="30" height="30" style="margin-bottom: 17px;"/>
                             <h class="header-category">Lviv, Ukraine</h><br /><br />
 
                             <div class="area-name">
@@ -215,7 +287,7 @@ class ContactUsView extends DefaultView
 
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img src="../images/lviv-king-cross-leopolis.jpg" id="business-center" />
+                                    <img src="/images/lviv-king-cross-leopolis.jpg" id="business-center" />
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="contact-data">
@@ -240,7 +312,7 @@ class ContactUsView extends DefaultView
                    <div class="row">
                         <div class="col-md-1"></div>
                         <div class="col-md-10">
-                            <img src="../images/ukraine-small.png" width="30" height="30" style="margin-bottom: 17px;"/>
+                            <img src="/images/ukraine-small.png" width="30" height="30" style="margin-bottom: 17px;"/>
                             <h class="header-category">Kiev, Ukraine</h><br /><br />
 
                             <div class="area-name">
@@ -249,7 +321,7 @@ class ContactUsView extends DefaultView
 
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img src="../images/kiev-gulliver.jpg" id="business-center" />
+                                    <img src="/images/kiev-gulliver.jpg" id="business-center" />
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="contact-data">
@@ -274,7 +346,7 @@ class ContactUsView extends DefaultView
                    <div class="row">
                         <div class="col-md-1"></div>
                         <div class="col-md-10">
-                            <img src="../images/russia-small.jpg" width="30" height="30" style="margin-bottom: 17px;"/>
+                            <img src="/images/russia-small.jpg" width="30" height="30" style="margin-bottom: 17px;"/>
                             <h class="header-category">Moscow, Russia</h><br /><br />
 
                             <div class="area-name">
@@ -288,7 +360,7 @@ class ContactUsView extends DefaultView
 
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img src="../images/kharkiv-sun-mall.jpg" id="business-center" />
+                                    <img src="/images/kharkiv-sun-mall.jpg" id="business-center" />
                                 </div>
                                 <div class="col-md-6">
                                     <ul class="contact-data">

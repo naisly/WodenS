@@ -55,7 +55,13 @@ class PageNotFoundView extends DefaultView
                       <div class="container-fluid">
                       <div class="row">
                           <div class="col-md-6 no-division-for-category">
-                              <a href="/phones/" style="text-decoration: none">
+                              <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'phones/" style="text-decoration: none">
                                   <div class="bg-phones">
                                       <div style="margin-top: -10px;">
                                           <h1 class="sub-decision-for-xs">';
@@ -67,7 +73,13 @@ class PageNotFoundView extends DefaultView
                                   </div>
                               </a>
 
-                              <a href="/devices/" style="text-decoration: none">
+                              <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'devices/" style="text-decoration: none">
                                   <div class="bg-ipad">
                                       <h1 class="sub-decision-for-xs">';
 
@@ -80,7 +92,13 @@ class PageNotFoundView extends DefaultView
                           </div>
                           <div class="col-md-6 no-division-for-category">
 
-                              <a href="/laptops/" style="text-decoration: none">
+                              <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'laptops/" style="text-decoration: none">
                                   <div class="bg-laptops">
                                       <h1 class="sub-decision-for-xs">';
 
@@ -91,7 +109,13 @@ class PageNotFoundView extends DefaultView
                                   </div>
                               </a>
 
-                              <a href="/tv/" style="text-decoration: none">
+                              <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'tv/" style="text-decoration: none">
                                   <div class="bg-tv">
                                       <h1 class="sub-decision-for-xs">';
 

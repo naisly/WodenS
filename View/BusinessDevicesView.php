@@ -154,7 +154,13 @@ class BusinessDevicesView extends DefaultView
 
               <div class="text-center">
                   <div class="search-for">
-                      <a href="../../gadgets.php" id="search">Search device for business ></a>
+                      <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'devices/buy-device/" id="search">Search device for business ></a>
                   </div>
               </div>';
     }

@@ -148,7 +148,13 @@ class OrderStatusView extends DefaultView
                 }
 
                 echo '">' .
-                     '<a class="original" style="height: 50px;" href="/shop/subdescription?original_name=' . $this->model->getOriginalName($i) . '&table=' . $this->model->getTable($i) . '&id_num=' . $this->model->getPrice($i) . '&id=' . $this->model->getId($i) . '&product_name=' . $this->model->getProductName($i) . '">' . $this->model->getOriginalName($i) . '</a><br />
+                     '<a class="original" style="height: 50px;" href="/';
+
+                if ($_SESSION['language'] !== 'us') {
+                    echo $_SESSION['language'] . '/';
+                }
+
+                echo 'shop/subdescription?original_name=' . $this->model->getOriginalName($i) . '&table=' . $this->model->getTable($i) . '&id_num=' . $this->model->getPrice($i) . '&id=' . $this->model->getId($i) . '&product_name=' . $this->model->getProductName($i) . '">' . $this->model->getOriginalName($i) . '</a><br />
                       <img src="/' . $this->model->getPhoto($i) . '" width="150" height="150" style="margin-top: 7px; margin-bottom: 7px;" />
                       <h class="category">by <a class="default-link" href="http://' . $this->model->getCategory($i) . '.com">' . $this->model->getCategory($i) . '</a></h><br />
                       <h class="item-price">$' . $this->model->getPrice($i) . '</h><br />

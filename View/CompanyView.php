@@ -64,7 +64,13 @@ class CompanyView extends DefaultView
               <div class="container text-center" style="margin-top: 4%;">
                   <h1 class="career">Career opportunities</h1>
                   <h2 id="sub-career" style="padding-bottom: 1%;">Make your routine day as diverse as it could be.</h2>
-                  <a class="links" id="main-link" href="/jobs/" style="text-decoration: none; margin-right: 0;">';
+                  <a class="links" id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'jobs/" style="text-decoration: none; margin-right: 0;">';
 
         echo $this->model->Translate('Join our team');
 
@@ -119,7 +125,13 @@ class CompanyView extends DefaultView
                       <div class="col-md-1"></div>
                       <div class="col-md-10">
                           <h1 class="header-ws-md">On the one hand, Woden Sims is a store located at more than
-                          seven countries <a href="/store/" style="text-decoration: none; color: #08b;">primary in Europe</a>. On the other hand, our Company
+                          seven countries <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'store/" style="text-decoration: none; color: #08b;">primary in Europe</a>. On the other hand, our Company
                           provides software in the industry of IT. We are developing Apps for Android as well as IOS, web-sites.</h1>
                       </div>
                       <div class="col-md-1"></div>
