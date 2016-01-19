@@ -33,9 +33,11 @@ class AdminView extends DefaultView
      * Login form for entrance
      * in Admin account
      */
-    public function getLoginForm() {
+    /*public function getLoginForm() {
 
-        session_start();
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
 
         if(isset($_SESSION['admin'])) {
             if ($_SESSION['admin'] == 'admin') {
@@ -50,7 +52,7 @@ class AdminView extends DefaultView
         }
 
         echo '<div class="text-center">
-                 <img id="main" src="images/default.png" />
+                 <img id="main" src="/images/default.png" />
                </div>
                <div class="container">
                   <div class="row">
@@ -58,14 +60,12 @@ class AdminView extends DefaultView
                      <div class="col-md-4 margin-auto">
                               <fieldset class="field_set">
                                   <h1>Admin Page</h1>
-                                  <form action="admin_action_login.php" method="post">
+                                  <form action="/admin/admin_action_login" method="post">
                                      <div class="form-group">
-                                        <label for="text">Admin</label>
-                                        <input type="text" class="form-control" name="username" id="username" required/>
+                                        <input type="text" placeholder="Admin Username" class="form-control" name="username" id="username" required/>
                                      </div>
                                      <div class="form-group">
-                                        <label for="password">Password</label>
-                                        <input type="password" class="form-control" name="password" id="password" placeholder="at least 6 characters" required/>
+                                        <input type="password" class="form-control" name="password" id="password" placeholder="Password" required/>
                                      </div>
                                      <div class="form-group text-center">
                                         <button class="form-control btn btn-default" id="submit">Sign In as Admin</button>
@@ -79,10 +79,7 @@ class AdminView extends DefaultView
                                       <div class="col-md-2"></div>
                                   </div>
 
-                                  <p class="already-registered">Forgot your password?</p>
-                                  <form action="#" method="post">
-                                     <button class="form-control btn btn-primary" id="redirect">Get it Now</button>
-                                  </form>
+                                  <a href="/forgot-password/" class="already-registered">Forgot your password?</a>
                               </fieldset>
                      </div>
                      <div class="col-md-4"></div>
@@ -93,20 +90,42 @@ class AdminView extends DefaultView
                        <div class="line"></div>
                    </div>
                </div>
-               <div class="min-spacer"></div>
-               <div class="row">
-                   <div class="col-md-12 text-center">
-                        <ul class="hor_nav">
-                            <li><a class="items" href="/privacy-policy">Privacy</a></li>
-                            <li><a class="items" href="/refunds">Refunds</a></li>
-                            <li><a class="items" href="/sales">Sales</a></li>
-                            <li><a class="items" href="site-map">Site map</a></li>
-                        </ul>
-                            <p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
-                   </div>
-               </div>
-               <script src="js/jquery-min.js"></script>
-               <script src="js/bootstrap.min.js"></script>';
+               <div class="min-spacer"></div>';
+
+        $this->getFooter();
+
+    }*/
+
+    public function getLoginForm() {
+
+        echo  '<!--<div class="login-bg-for-xs">-->
+                  <div class="text-center" style="';
+
+        if(isset($_GET['auth'])){
+            echo 'margin-top: 5%;';
+        } else {
+            echo 'margin-top: 12%;';
+        }
+
+        echo       '"><h1 class="sign">Sign in as Admin</h1>
+                      <h2 class="only-one">Only one Account for All control</h2>
+                      <h2 class="only-one" style="font-size: 20px;">Have no account? <a href="/register" class="links" id="link" style="text-decoration: none;">Create your Woden Sims ID <img style="margin-top: -5px;" src="/images/arrow-blue.png" width="15" height="15"/></a></h2>
+                  </div>
+                  <div class="margin-auto" style="margin-top: 5%;"><form action="check" method="post">
+                              <div class="input-group" style="width: 100%;">
+                                  <input type="text" name="username" id="username" class="form-control woden-sims-email" placeholder="Admin Username">
+                              </div>
+                              <div class="input-group">
+                                  <input type="password" name="password" id="password" class="form-control" placeholder="Password" style="height: 40px !important; border-right: none !important;">
+                                  <span class="input-group-addon" id="basic-addon2"><button class="image-as-button"><span class="glyphicon glyphicon-arrow-right" style="color: #666;"></span></button></span>
+                              </div>
+                          </form>
+                  </div>
+                  <div class="text-center" style="margin-top: 15px;">
+                      <a href="/forgot-password/?session_auth=' . $_SESSION["session_auth"] . '" class="forgot links" id="link">Forgot your password?</a>
+                  </div>
+                  <img style="margin-top: 40px;" src="/images/phones-category-white.png" class="full-image-cascade" />
+               </div>';
 
     }
 

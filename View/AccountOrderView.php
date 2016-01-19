@@ -61,7 +61,13 @@ class AccountOrderView extends ProfileView
                 echo '        <div class="col-md-5 table-for-small">
                                     <div class="row">
                                       <div class="col-md-6" style="margin-top: 20px;">
-                                          <h class="product"><a style="color: #08b !important;" href="subdescription?original_name=' . $this->model->getCompleteOriginalName($i, $j) . '
+                                          <h class="product"><a style="color: #08b !important;" href="/';
+
+                if ($_SESSION['language'] !== 'us') {
+                    echo $_SESSION['language'] . '/';
+                }
+
+                echo 'shop/subdescription?original_name=' . $this->model->getCompleteOriginalName($i, $j) . '
                                                &amp;table=' . $this->model->getCompleteProductTable($i, $j) . '&amp;id_num=' . $this->model->getCompletePrice($i, $j) . '
                                                &amp;id=' . $this->model->getCompleteId($i, $j) . '&amp;product_name=' . $this->model->getCompleteProductTable($i, $j) . '
                                                ">' . $this->model->getCompleteProductName($i, $j) . '</a></h><br />
@@ -127,7 +133,13 @@ class AccountOrderView extends ProfileView
                 echo '        <div class="col-md-4">
                                     <div class="row">
                                       <div class="col-md-6" style="margin-top: 20px;">
-                                          <h class="product"><a href="subdescription.php?original_name=' . $this->model->getDoneOriginalName($i, $j) . '
+                                          <h class="product"><a href="/';
+
+                if ($_SESSION['language'] !== 'us') {
+                    echo $_SESSION['language'] . '/';
+                }
+
+                echo 'shop/subdescription.php?original_name=' . $this->model->getDoneOriginalName($i, $j) . '
                                                &amp;table=' . $this->model->getDoneProductTable($i, $j) . '&amp;id_num=' . $this->model->getDonePrice($i, $j) . '
                                                &amp;id=' . $this->model->getDoneId($i, $j) . '&amp;product_name=' . $this->model->getDoneProductTable($i, $j) . '
                                                ">' . $this->model->getDoneProductName($i, $j) . '</a></h><br />

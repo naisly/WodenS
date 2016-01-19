@@ -290,6 +290,10 @@ class DefaultModel
 
     public function Translate( $text ){
 
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+
         if($_SESSION['language'] !== 'us') {
             return $this->language[$text];
         } else {

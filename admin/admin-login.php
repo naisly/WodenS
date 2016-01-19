@@ -18,6 +18,6 @@ $controller = new AdminController($model);
 
 $view = new AdminView($model);
 
-$view->DoctypeView( 'admin' );
+$view->DoctypeView( 'Login' );
 
 $view->getLoginForm();

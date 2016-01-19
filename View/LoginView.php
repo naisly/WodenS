@@ -558,7 +558,7 @@ class LoginView extends DefaultView
 
         echo       '"><h1 class="sign">Sign in Account</h1>
                       <h2 class="only-one">Only one Account for All your needs</h2>
-                      <h2 class="only-one" style="font-size: 20px;">Have no account? <a href="/register" class="links" id="link" style="text-decoration: none;">Create your Woden Sims ID <img style="margin-top: -5px;" src="/shop/images/arrow-blue.png" width="15" height="15"/></a></h2>
+                      <h2 class="only-one" style="font-size: 20px;">Have no account? <a href="/register" class="links" id="link" style="text-decoration: none;">Create your Woden Sims ID <img style="margin-top: -5px;" src="/images/arrow-blue.png" width="15" height="15"/></a></h2>
                   </div>
                   <div class="margin-auto" style="margin-top: 5%;"><form action="check" method="post">
                               <div class="input-group" style="width: 100%;">

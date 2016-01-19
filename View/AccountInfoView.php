@@ -197,7 +197,13 @@ class AccountInfoView extends AccountOrderView
                         </div>
                         <div class="col-md-4" id="no-border">
                             <h class="change">Change Your Password</h>
-                            <h1 class="make-sure">If you forgot your password, please follow those instructions for <a href="/forgot-password/" class="link-forgot">recovering your password.</a></h1>
+                            <h1 class="make-sure">If you forgot your password, please follow those instructions for <a href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo                'forgot-password/" class="link-forgot">recovering your password.</a></h1>
                             <form role="form" action="change-data" method="post">
                                 <div class="form-group change-spacer">
                                     <input type="password" class="form-control" name="new_password" id="new_password" placeholder="New Password" required />
@@ -254,7 +260,17 @@ class AccountInfoView extends AccountOrderView
             echo '
 
                           <div class="edit">
-                              <h id="edit"><a style="text-decoration: none;" href="account-billing.php">Edit your Billing Info >></a></h>
+                              <h id="edit"><a class="links" id="main-link" href="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'education/phones/" style="text-decoration: none">';
+
+        echo $this->model->Translate('Edit your Billing');
+
+        echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></a></h>
                           </div>
                       </div>';
 
