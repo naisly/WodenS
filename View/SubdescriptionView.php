@@ -579,14 +579,19 @@ class SubdescriptionView extends DefaultView
                       </div><!-- /.row -->
 
                </form>';
+
+        if($this->model->getNoItems() !== '0' && $this->model->getNoItems() !== '1') {
+            $this->getPopularRequets();
+        }
     }
 
     public function getQuestions() {
 
-        $i = 0;
-        while ($i < $this->model->countAskPerson()) {
+        if($this->model->getNoItems() == '0') {
+            $i = 0;
+            while ($i < $this->model->countAskPerson()) {
 
-            echo '<div class="row" style="margin-top: 60px;">
+                echo '<div class="row" style="margin-top: 60px;">
                       <div class="col-md-1" id="test">
                           <h class="question">Question:</h><br />
                           <h class="answer">Answer:</h>
@@ -598,14 +603,39 @@ class SubdescriptionView extends DefaultView
                           </div>
                  </div>';
 
-            $i++;
+                $i++;
+            }
         }
+
+        //echo $this->model->getNoItems();
+        if($this->model->getNoItems() == '1'){
+
+            echo '<div class="row" style="margin-top: 10px; margin-left: 20px;">
+                      <div class="col-md-5">
+                          <h1 class="no-q-a">No Questions & Answers Found</h1>';
+
+            $this->getPopularRequets();
+
+            echo      '</div>
+                  </div>';
+        }
+
         echo '</div>
               <script>
                 function goBack() {
                     window.history.back();
                 }
               </script>';
+    }
 
+    private function getPopularRequets(){
+
+        echo '<h1 class="popular">Most popular requests</h1>
+                   <ul class="popular-nav">
+                          <li class="p-links"><a href="/FAQ/?q=Does this will work in Ukraine?">Does this will work in Ukraine?</a></li>
+                          <li class="p-links"><a href="/FAQ/?q=Can i use this Phone in Trinidad & Tobago">Can i use this Phone in Trinidad & Tobago</a></li>
+                          <li class="p-links"><a href="/FAQ/?q=Will this phone work in Israel ? With an Israeli carrier">Will this phone work in Israel ? With an Israeli carrier</a></li>
+                          <li class="p-links"><a href="/FAQ/?q=Can I use this phone in Russia?">Can I use this phone in Russia?</a></li>
+                   </ul>';
     }
 }

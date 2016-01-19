@@ -20,6 +20,8 @@ class SubdescriptionModel extends AssocModel
 
     private $date;
 
+    private $no_items;
+
     public function setAskPerson( $ask_person ) {
 
         $this->ask_person = $ask_person;
@@ -75,5 +77,15 @@ class SubdescriptionModel extends AssocModel
         $this->date = new DateTime();
         $this->date->setTimestamp( $this->answer_time[$i]);
         return $this->date->format("F d, Y");
+    }
+
+    public function setNoItems( $no_items ) {
+
+        $this->no_items = $no_items;
+    }
+
+    public function getNoItems() {
+
+        return $this->no_items;
     }
 }

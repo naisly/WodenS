@@ -426,185 +426,183 @@ class SubdescriptionController extends DefaultController
         $unique_result_items = array_unique($result_items);
         //print_r($unique_result_items);
 
-        sort($unique_result_items);
-        //print_r($unique_result_items);
-        /*
-         * FROM ID
-         * GETTING DATA
-         */
-        $products_array = array();
-        $ask_person_array = array();
-        $question_array = array();
-        $answer_array = array();
-        $answer_person_array = array();
-        $created_array = array();
-        $i = 0;
-
-        $count_of_result_items = count($unique_result_items);
-        //echo $count_of_result_items;
-        while($i < $count_of_result_items){
-            $sql_query = "SELECT product, ask_person, question, answer, answer_person, unix_timestamp(created) as created FROM questions WHERE id=$unique_result_items[$i]";
-            $result_query = $mysqli->query( $sql_query );
-            //echo $sql_query;
-            if ($result_query->num_rows > 0) {
-                // output data of each row
-                while ($row = $result_query->fetch_assoc()) {
-                    array_push($products_array, $row['product']);
-                    array_push($ask_person_array, $row['ask_person']);
-                    array_push($question_array, $row['question']);
-                    array_push($answer_array, $row['answer']);
-                    array_push($answer_person_array, $row['answer_person']);
-                    array_push($created_array, $row['created']);
-                }
-            }
-            $i++;
+        if(count($unique_result_items) == 0){
+            $this->model->setNoItems( '1' );
+            //echo '1';
+        } else {
+            $this->model->setNoItems( '0' );
         }
 
-        /*
-         * items - array()
-         * question - array()
-         */
+        if(count($unique_result_items) !== 0) {
+            sort($unique_result_items);
+            //print_r($unique_result_items);
+            /*
+             * FROM ID
+             * GETTING DATA
+             */
+            $products_array = array();
+            $ask_person_array = array();
+            $question_array = array();
+            $answer_array = array();
+            $answer_person_array = array();
+            $created_array = array();
+            $i = 0;
 
-        $found_question_array_non = array();
-
-        $i = 0;
-        while( $i < count($question_array)){
-
-            $u = 0;
-
-            $k = 0;
-            while($k < count($question_array)){
-                $item[$k] = strtolower($question_array[$k]);
-
-                $k++;
+            $count_of_result_items = count($unique_result_items);
+            //echo $count_of_result_items;
+            while ($i < $count_of_result_items) {
+                $sql_query = "SELECT product, ask_person, question, answer, answer_person, unix_timestamp(created) as created FROM questions WHERE id=$unique_result_items[$i]";
+                $result_query = $mysqli->query($sql_query);
+                //echo $sql_query;
+                if ($result_query->num_rows > 0) {
+                    // output data of each row
+                    while ($row = $result_query->fetch_assoc()) {
+                        array_push($products_array, $row['product']);
+                        array_push($ask_person_array, $row['ask_person']);
+                        array_push($question_array, $row['question']);
+                        array_push($answer_array, $row['answer']);
+                        array_push($answer_person_array, $row['answer_person']);
+                        array_push($created_array, $row['created']);
+                    }
+                }
+                $i++;
             }
 
+            /*
+             * items - array()
+             * question - array()
+             */
 
-            while($u < count($items)){
+            $found_question_array_non = array();
 
-                $j = 0;
-                while($j < count($items)){
-                    $items[$j] = strtolower($items[$j]);
+            $i = 0;
+            while ($i < count($question_array)) {
 
-                    $j++;
-                }
-                $item = str_replace("$items[$u]", "<span id='found'>$items[$u]</span>", $item, $count);
+                $u = 0;
 
-                $s = 0;
-                while($s < count($items)){
-                    $items_lc[$s] = ucfirst($items[$s]);
+                $k = 0;
+                while ($k < count($question_array)) {
+                    $item[$k] = strtolower($question_array[$k]);
 
-                    $s++;
-                }
-                $item = str_replace("<span id='found'>$items[$u]</span>", "<span id='found'>$items_lc[$u]</span>", $item, $count);
-
-                $m = 0;
-                while($m < count($item)){
-                    $item[$m] = ucfirst($item[$m]);
-
-
-                    $m++;
+                    $k++;
                 }
 
 
+                while ($u < count($items)) {
 
-                $u++;
+                    $j = 0;
+                    while ($j < count($items)) {
+                        $items[$j] = strtolower($items[$j]);
+
+                        $j++;
+                    }
+                    $item = str_replace("$items[$u]", "<span id='found'>$items[$u]</span>", $item, $count);
+
+                    $s = 0;
+                    while ($s < count($items)) {
+                        $items_lc[$s] = ucfirst($items[$s]);
+
+                        $s++;
+                    }
+                    $item = str_replace("<span id='found'>$items[$u]</span>", "<span id='found'>$items_lc[$u]</span>", $item, $count);
+
+                    $m = 0;
+                    while ($m < count($item)) {
+                        $item[$m] = ucfirst($item[$m]);
+
+
+                        $m++;
+                    }
+
+
+                    $u++;
+                }
+
+                array_push($found_question_array_non, $item);
+                $i++;
             }
 
-            array_push($found_question_array_non, $item);
-            $i++;
-        }
 
+            $found_question_array = $found_question_array_non[0];
 
-        $found_question_array = $found_question_array_non[0];
+            $count_question_array = array();
 
-        $count_question_array = array();
+            $i = 0;
+            while ($i < count($question_array)) {
+                $string = str_replace("<span id='found'>", "", $found_question_array[$i], $count);
 
-        $i = 0;
-        while($i < count($question_array)){
-            $string = str_replace("<span id='found'>", "", $found_question_array[$i], $count);
+                array_push($count_question_array, $count);
 
-            array_push($count_question_array, $count);
-
-            $i++;
-        }
-
-
-
-
-
-        $found_answer_array_non = array();
-
-        $i = 0;
-        while( $i < count($answer_array)){
-
-            $u = 0;
-            $item = $answer_array;
-            while($u < count($items)){
-                $item = str_replace("$items[$u]", "<span id='found'>$items[$u]</span>", $item, $count);
-                $u++;
+                $i++;
             }
 
-            array_push($found_answer_array_non, $item);
-            $i++;
+
+            $found_answer_array_non = array();
+
+            $i = 0;
+            while ($i < count($answer_array)) {
+
+                $u = 0;
+                $item = $answer_array;
+                while ($u < count($items)) {
+                    $item = str_replace("$items[$u]", "<span id='found'>$items[$u]</span>", $item, $count);
+                    $u++;
+                }
+
+                array_push($found_answer_array_non, $item);
+                $i++;
+            }
+
+            $found_answer_array = $found_answer_array_non[0];
+
+            $count_answer_array = array();
+
+            $i = 0;
+            while ($i < count($answer_array)) {
+                $string = str_replace("<span id='found'>", "", $found_answer_array[$i], $count);
+
+                array_push($count_answer_array, $count);
+
+                $i++;
+            }
+
+            $result_q_and_a = array();
+
+            $i = 0;
+            while ($i < count($count_question_array)) {
+
+                $result_q_and_a[$i] = $count_question_array[$i] + $count_answer_array[$i];
+
+                $i++;
+            }
+
+            //print_r($result_q_and_a);
+            //print_r($result_q_and_a);
+
+            $last_question_array = array();
+            $last_answer_array = array();
+
+            $i = 0;
+            $count_q_and_a = count($result_q_and_a);
+            while ($i < $count_q_and_a) {
+                $max = max($result_q_and_a);
+
+                $key = array_search($max, $result_q_and_a);
+
+                array_push($last_question_array, $found_question_array[$key]);
+                array_push($last_answer_array, $found_answer_array[$key]);
+
+                unset($result_q_and_a[$key]);
+
+                $i++;
+            }
+
+
+            $this->model->setAskPerson($ask_person_array);
+            $this->model->setQuestion($last_question_array);
+            $this->model->setAnswer($last_answer_array);
+            $this->model->setAnswerPerson($answer_person_array);
+            $this->model->setAnswerTime($created_array);
         }
-
-        $found_answer_array = $found_answer_array_non[0];
-
-        $count_answer_array = array();
-
-        $i = 0;
-        while($i < count($answer_array)){
-            $string = str_replace("<span id='found'>", "", $found_answer_array[$i], $count);
-
-            array_push($count_answer_array, $count);
-
-            $i++;
-        }
-
-        $result_q_and_a = array();
-
-        $i = 0;
-        while($i < count($count_question_array)){
-
-            $result_q_and_a[$i] = $count_question_array[$i] + $count_answer_array[$i];
-
-            $i++;
-        }
-
-        //print_r($result_q_and_a);
-        //print_r($result_q_and_a);
-
-        $last_question_array = array();
-        $last_answer_array = array();
-
-        $i = 0;
-        $count_q_and_a = count($result_q_and_a);
-        while($i < $count_q_and_a){
-            $max = max($result_q_and_a);
-
-            $key = array_search($max, $result_q_and_a);
-
-            array_push($last_question_array, $found_question_array[$key]);
-            array_push($last_answer_array, $found_answer_array[$key]);
-
-            unset($result_q_and_a[$key]);
-
-            $i++;
-        }
-
-
-
-
-
-
-
-
-
-        $this->model->setAskPerson( $ask_person_array );
-        $this->model->setQuestion( $last_question_array );
-        $this->model->setAnswer( $last_answer_array );
-        $this->model->setAnswerPerson( $answer_person_array );
-        $this->model->setAnswerTime( $created_array );
     }
 }
