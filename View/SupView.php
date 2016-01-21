@@ -38,7 +38,7 @@ class SupView extends IndexView
                           <div class="col-md-1"></div>
                           <div class="com-md-4">
                               <div class="text-center">
-                                  <h1 class="lead-h">' . $this->model->Translate('Welcome to our support service') . '!</h1>
+                                  <h1 class="lead-h">' . $this->model->Translate('Welcome to Woden Sims Support') . '</h1>
                                   <p class="sub-h">' . $this->model->Translate('We are here to help you') . '</p>
                               </div>
                           </div>
@@ -63,7 +63,7 @@ class SupView extends IndexView
 
                               <div class="divider" style="width: 100%;"></div>
 
-                              <p class="lead-p"><b>' . $this->model->Translate('Email') . ':</b> serdiuk-it@gmail.com</p><br />
+                              <p class="lead-p"><b>' . $this->model->Translate('Email') . ':</b> serdiuk.oleksandr@gmail.com</p><br />
                               <p class="sub-p"><b>' . $this->model->Translate('Phone') . ':</b> (095) 094 82 68</p><br />
                               <p class="sub-p"><b>' . $this->model->Translate('Address') . ':</b> 5 Knyajiy zaton, Kyiv, Ukraine 02095</p>
                           </div>
@@ -87,8 +87,8 @@ class SupView extends IndexView
         }
 
         echo 'contact/"><img src="/images/contact.png" style="width: 300px;" class="img-contact" />
-                              <h1 style="color: #444;">' . $this->model->Translate('Contact us') . '</h1></a>
-                              <p class="contact-p">' . $this->model->Translate('We are going to help you with any issues with products, shipping details, orders and much more! You could get support by Phone, email, contact form or just in our product center with our costumers') . '
+                              <h1 style="color: #444;">' . $this->model->Translate('Contact Us') . '</h1></a>
+                              <p class="contact-p">' . $this->model->Translate('We are going to help you with any issues with products, shipping details, orders and much more! You could get support by Phone, email, contact form or just in our product center with our customers') . '
                               </p>
                           </div>
                       </div>

@@ -67,7 +67,7 @@ class SubdescriptionView extends DefaultView
             echo      '<h class="no-stock">' . $this->model->Translate('Out of Stock') . '</h>';
         }
 
-        echo         '<h class="sold-by" style="float: left">' . $this->model->Translate('Sold by') . '<a href="http://' . $category . '.com" class="link-default">' . $category . '</a>' . $this->model->Translate('company. Gift-wrap available') . '</h><br />
+        echo         '<h class="sold-by" style="float: left">' . $this->model->Translate('Sold by') . ' <a href="http://' . $category . '.com" class="link-default">' . $category . '</a> ' . $this->model->Translate('company. Gift-wrap available') . '</h><br />
 
                           <div id="spacer"></div>
 
@@ -83,7 +83,7 @@ class SubdescriptionView extends DefaultView
 
         echo         '</ul>
                           <div class="spacer">
-                              <h class="quantity" style="padding-bottom: 30px;"><a style="cursor: pointer;text-decoration: none" onclick="goBack();">' . $this->model->getQuantity(0) . ' ' . $this->model->Translate('new') . '</a>' . $this->model->Translate('from') . '$' . $this->model->getMinimum() . '</h>
+                              <h class="quantity" style="padding-bottom: 30px;"><a style="cursor: pointer;text-decoration: none" onclick="goBack();">' . $this->model->getQuantity(0) . ' ' . $this->model->Translate('new') . '</a> ' . $this->model->Translate('from') . ' $' . $this->model->getMinimum() . '</h>
                           </div>
                       </div>
 
@@ -100,7 +100,7 @@ class SubdescriptionView extends DefaultView
                           <div style="height: 90px;; margin-top: 10px;">
                               <h><a href="#" class="assoc-original-name">' . $this->model->getAssocProducts($m) . '</a></h><br />
                               <h id="you-save"">$' . $this->model->getAssocPrice($m) . '<span class="striked"><strike> $' . $this->model->getAssocPreviousPrice($m) . '</strike></span></h><br />
-                              <h><span class="shipping-assoc"><em>' . $this->model->getAssocShipping($m) . ' ' . $this->model->Translate('days') . '</em></span>' . $this->model->Translate('of shipping') . '</h><br />
+                              <h><span class="shipping-assoc"><em>' . $this->model->getAssocShipping($m) . ' ' . $this->model->Translate('days') . '</em></span> ' . $this->model->Translate('of shipping') . '</h><br />
                           </div>
                       </div>
                      ';
@@ -126,7 +126,7 @@ class SubdescriptionView extends DefaultView
 
     private function getDescription() {
 
-        echo '<h class="tech-details">' . $this->model->getTechnicalDetails(0) . '</h>
+        echo '<h class="tech-details">' . $this->model->Translate($this->model->getTechnicalDetails(0)) . '</h>
                       <ul class="list-style-items-gl" style="margin-top: 35px; margin-left: 30px;">';
 
         $k = 1;
@@ -139,7 +139,7 @@ class SubdescriptionView extends DefaultView
 
         echo '</ul>
               <div class="divider"></div>
-              <h class="tech-details">' . $this->model->getTechnicalDetails1(0) . '</h>
+              <h class="tech-details">' . $this->model->Translate($this->model->getTechnicalDetails1(0)) . '</h>
               <ul class="list-style-items-gl" style="margin-top: 35px; margin-left: 30px;">
               <h class="header-details" style="margin-left: -25px">' . $this->model->getTechnicalDetails1(1) . '</h>
 
@@ -227,8 +227,8 @@ class SubdescriptionView extends DefaultView
                               <h class="price-new">$' . sprintf("%0.2f", $this->model->getPrice()) . '</h>
                           </div>
                           <div class="nova-poshta">
-                              <h style="font-family: Arial;"><input type="checkbox" name="free-shipping" value="1" />' . $this->model->Translate('Yes, I want ') . '<em>' . $this->model->Translate('Shipping') . '</em>' . $this->model->Translate('that varies from') . '
-                              <b>' . $this->model->Translate('two weeks') . '</b>' . $this->model->Translate('up to') . '<b>' . $this->model->Translate('one month') . '</b>' . $this->model->Translate('with') . '<a class="link-default" href="https://novaposhta.ua/en">' . $this->model->Translate('Nova Poshta') . '</a></h>
+                              <h style="font-family: Arial;"><input type="checkbox" name="free-shipping" value="1" />' . $this->model->Translate('Yes, I want') . ' <em>' . $this->model->Translate('Shipping') . '</em> ' . $this->model->Translate('that varies from') . '
+                               <b>' . $this->model->Translate('two weeks') . '</b> ' . $this->model->Translate('up to') . ' <b> ' . $this->model->Translate('one month') . ' </b> ' . $this->model->Translate('with') . ' <a class="link-default" href="https://novaposhta.ua/en">' . $this->model->Translate('Nova Poshta') . '</a></h>
                           </div>
                       <form action="/shop/add-item" method="post">
                           <div class="qty">
@@ -305,7 +305,7 @@ class SubdescriptionView extends DefaultView
                                <div class="pull-right">
                                     <form action="add-item" method="post">
                                           <button class="btn btn-warning button-small">
-                                               ' . $this->model->Translate('Add to cart') . '
+                                               ' . $this->model->Translate('Add') . '
                                           </button>
                                           <input type="hidden" name="id" value="' . $this->model->getSortId($i) . '"/>
                                           <input type="hidden" name="original_name" value="' . $this->model->getOriginalName() . '"/>
@@ -599,7 +599,7 @@ class SubdescriptionView extends DefaultView
                       <div class="col-md-4">
                                <h class="answer"><span id="question">' . $this->model->getQuestion($i) . '</span></h><br /></h>
                                <h class="answer"><span id="answer">' . $this->model->getAnswer($i) . '</span></h><br />
-                               <h class="by-answer">' . $this->model->Translate('By') . $this->model->getAnswerPerson($i) . $this->model->Translate('on') . $this->model->getAnswerTime($i) . '</h>
+                               <h class="by-answer">' . $this->model->Translate('By') . ' ' . $this->model->getAnswerPerson($i) . ' ' . $this->model->Translate('on') . ' ' . $this->model->getAnswerTime($i) . '</h>
                           </div>
                  </div>';
 

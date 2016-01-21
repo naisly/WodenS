@@ -831,10 +831,8 @@ class DefaultView
                     echo '<h id="breadcrumbs">';
                     echo $this->model->Translate('Home');
                     echo '</h>';
-                } else if (substr($this->model->getBreadcrumbs($i), 0, 14) == 'subdescription') {
+                } else if (substr($this->model->getBreadcrumbs($i), 0, 14) == 'Subdescription') {
                     echo '<h id="breadcrumbs">' . $this->model->getOriginalName(0) . '</h>';
-                } else if ($this->model->getBreadcrumbs($i) == 'tv') {
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">TV</h></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'privacy-policy') {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Privacy Policy') . '</h></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'order-status') {

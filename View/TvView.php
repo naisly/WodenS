@@ -36,8 +36,8 @@ class TvView extends IndexView
                       <div class="col-md-1"></div>
                       <div class="col-md-5">
                           <h class="main-header">iMac</h><br />
-                          <h class="sub-main-header">' . $this->model->Translate('Thin, powerful.') . '</h>
-                          <h class="sub-main-header">' . $this->model->Translate('Retina') . '<br />' . $this->model->Translate('development is vaste') . '</h><br />
+                          <h class="sub-main-header">' . $this->model->Translate('Thin. Powerful.') . '</h>
+                          <h class="sub-main-header">' . $this->model->Translate('Retina') . '<br />' . $this->model->Translate('development is amazing') . '</h><br />
                           <a id="main-link" href="/';
 
         if ($_SESSION['language'] !== 'us') {
@@ -87,16 +87,7 @@ class TvView extends IndexView
     private function getDescription() {
 
         echo '<div class="container">
-                  <!--<p class="future-main">Apple TV and awesome</p>
-                  <p class="sub-future" style="font-size: 32px;">Games and Apps on TV gonna be excited</p>
-                  <div class="row">
-                      <div class="col-md-2"></div>
-                      <div class="col-md-8">
-                          <p style="font-size: 22px;">Lets look at big, high resolution games that makes you feel excited, thrilled. Apps
-                          can absolutely flip your life from routine, dreary to entire, outright way of being.</p>
-                      </div>
-                      <div class="col-md-2"></div>
-                  </div>-->
+
                   <div class="row" style="margin-top: 50px;">
                       <div class="col-md-5 border-box">
                           <p class="future-main text-left" style="font-size: 26px;">' . $this->model->Translate('Apple TV and awesome') . '</p>
@@ -133,7 +124,7 @@ class TvView extends IndexView
         }
 
         echo 'tv/buy-tv/" style="text-decoration: none; margin-right: 0px;">' . $this->model->Translate('Buy') . '<img src="/images/arrow-blue.png" width="20" height="20"/></a>
-                  <p class="sub-future">' . $this->model->Translate('Free shipping available!') . '</p>
+                  <p class="sub-future">' . $this->model->Translate('Free shipping available') . '</p>
               </div>';
     }
 }

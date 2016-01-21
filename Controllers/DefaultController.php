@@ -765,9 +765,6 @@ class DefaultController
                 $count = count($links_array) - 1;
             }*/
 
-            //print_r($breadcrumbs_links);
-            //print_r($breadcrumbs_links);
-
             $this->model->setBreadcrumbs( $array );
             $this->model->setBreadcrumbsLink( $breadcrumbs_links );
         }
