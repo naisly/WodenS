@@ -63,18 +63,18 @@ class BusinessLaptopsView extends DefaultView
                                   <div class="text-left">
                                       <h class="better-than-imagine">';
 
-        echo $this->model->Translate('Better than you can');
-
-        echo '<br />';
-
-        echo $this->model->Translate('just imagine');
+        echo $this->model->Translate('Better than you can just imagine');
 
         echo '</h><br />
 
                                       <div style="margin-top: 30px">
                                           <h class="sub-better">';
 
-        echo $this->model->Translate('With new tools for IT in IOS, great security you can hold any data in your Laptop. Powerful productivity features are pretty useful for your users needs and to make your workday more productive.<br /><br /> With Iphone, you are not going to miss any note for your business and stay up-to-date everywhere');
+        echo $this->model->Translate('With new tools for IT in IOS, great security you can hold any data in your Laptop. Powerful productivity features are pretty useful for your users needs and to make your workday more productive.') .
+
+            '<br /><br />' .
+
+            $this->model->Translate('With Macbook, you are not going to miss any note for your business and stay up-to-date everywhere');
 
         echo                                 '</h>
                                       </div>
@@ -108,7 +108,7 @@ class BusinessLaptopsView extends DefaultView
 
         echo                             '<br /><br />';
 
-        echo $this->model->Translate('Everything from billing and scheduling to project management may be moved to Cloud-based apps, allowingsmall businesses with small budgets to compete against much larger companies.');
+        echo $this->model->Translate('Everything from billing and scheduling to project management may be moved to Cloud-based apps, allowing small businesses with small budgets to compete against much larger companies.');
 
         echo                              '</h>
                                       </div>
@@ -145,7 +145,7 @@ class BusinessLaptopsView extends DefaultView
 
         echo '<a id="apps-link" href="http://skyp.com">Viber</a>';
 
-        echo $this->model->Translate('for free calls. In addition, social networks are available withfast 3G like');
+        echo $this->model->Translate('for free calls. In addition, social networks are available with fast 3G like');
 
         echo '<a id="apps-link" href="http://twitter.com">Twitter</a>, <a id="apps-link" href="http://facebook.com">Facebook</a>, <a id="apps-link" href="http://vk.com">VK</a>.
                                           </h><br /><br />

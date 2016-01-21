@@ -35,7 +35,7 @@ class OrderView extends DefaultView
 
         echo '
             <h2>' . $this->model->Translate('Check out now') . '</h2>
-            <p class="text-left">' . $this->model->Translate('Please enter your details, and well ship your goods right away!') .'</p>
+            <p class="text-left">' . $this->model->Translate('Please enter your details, and we will ship your goods right away!') .'</p>
             <form name="shippingForm" action="/account/complete-order" method="post">
                 <div class="well">
                     <h3>' . $this->model->Translate('Ship to') . '</h3>
@@ -91,8 +91,7 @@ class OrderView extends DefaultView
 
         echo '<div class="well" style="margin-top: -20px;">
                   <h2>' . $this->model->Translate('Thanks!') . '</h2>
-                  ' . $this->model->Translate('Thanks for placing your order. Well ship your goods as soon as possible.
-                  If you need to contact us, use reference') . '#' . $this->model->getOrderId() . '.
+                  ' . $this->model->Translate('Thanks for placing your order. Well ship your goods as soon as possible. If you need to contact us, use reference') . '#' . $this->model->getOrderId() . '.
               </div>
               <script src="js/jquery-min.js"></script>
               <script src="js/bootstrap.min.js"></script>';

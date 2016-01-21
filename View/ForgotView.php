@@ -58,7 +58,11 @@ class ForgotView extends DefaultView
                                     </div>
 
                                     <div class="text-center" style="margin-top: 50px;">
-                                        <button class="btn_as_link links" id="link">Next <img src="/images/arrow-blue.png" width="20" height="20"/></button>
+                                        <button class="btn_as_link links" id="link">';
+
+        $this->model->Translate('Next');
+
+        echo                            '<img src="/images/arrow-blue.png" width="20" height="20"/></button>
                                     </div>
                                 </div>
                                 <div class="col-md-4"></div>

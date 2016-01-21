@@ -45,7 +45,7 @@ class DevicesView extends IndexView
         echo             '</h1>
                           <p class="main-p-lead">';
 
-        echo $this->model->Translate('Thin, capable that you have never ever seen before');
+        echo $this->model->Translate('Thin, capable that you have never ever seen before.');
 
         echo             '</p>
                           <p class="sub-main-lead">';

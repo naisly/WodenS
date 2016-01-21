@@ -62,7 +62,7 @@ class PrivacyView extends DefaultView
               <div class="paddings-terms-content">
 
                    <h1 class="sub-header-terms">
-                        <a href="http://woden-sims.hol.es">' . $this->model->Translate('Woden-sims.hol.es') . '</a>' . $this->model->Translate('(called a "Site") is electronic commerce platform are predominantly used by business entities to facilitate electronic commerce and such business use does not generally involve the collection of personal information of individuals.') . '
+                        <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a>' . $this->model->Translate('(called a "Site") is electronic commerce platform are predominantly used by business entities to facilitate electronic commerce and such business use does not generally involve the collection of personal information of individuals.') . '
                         <a href="http://woden-sims.hol.es">Woden Sims</a>' . $this->model->Translate('recognizes the importance of privacy as well as the importance of maintaining the confidentiality of personal information. This Privacy Policy applies to all products and services provided by us and sets out how we may collect, use and disclose information in relation to users of the Sites.') . '
                    </h1>
 
@@ -72,13 +72,13 @@ class PrivacyView extends DefaultView
 
                    <div id="collection-of-information"></div>
 
-                   <h1 class="main-header-terms">' . $this->model->Translate('Collection of Information') . '</h1>
+                   <h1 class="main-header-terms">' . $this->model->Translate('Collection Of Information') . '</h1>
 
                    <h1 class="sub-header-terms">
                        ' . $this->model->Translate('Your privacy is important to us and we have taken steps to ensure that we do not collect more information from you than is necessary for us to provide you with our services and to protect your account.') . '
                    </h1>
                    <h1 class="sub-header-terms">
-                        ' . $this->model->Translate('Information including, but not limited to, user name, address, phone number, fax number, email address, gender, date and/or year of birth and user preferences ("RegistrationInformation") may be collected at the time of user registration on the Sites.') . '
+                        ' . $this->model->Translate('Information including, but not limited to, user name, address, phone number, fax number, email address, gender, date and/or year of birth and user preferences ("Registration Information") may be collected at the time of user registration on the Sites.') . '
                    </h1>
                    <h1 class="sub-header-terms">
                        ' . $this->model->Translate('In connection with any transaction and payment services or services under our buyer protection schemes we provide on the Sites, information, including but not limited to, bank account numbers, billing and delivery information, credit/debit card numbers and expiration dates and tracking information from cheques or money orders ("Account Information") may be collected to, among other things, facilitate the sale and purchase as well as the settlement of purchase price of the products or services transacted on or procured through the Sites.') . '
@@ -113,12 +113,12 @@ class PrivacyView extends DefaultView
 
                    <h1 class="sub-header-terms">
                        ' . $this->model->Translate('You further agree that we may disclose and transfer (whether within or outside the jurisdiction of the') . '
-                       <a href="http://woden-sims.hol.es">Woden Sims</a>' . $this->model->Translate(' entity that you are contracting with) your Personal Data to service providers engaged by us to assist us with providing you with our services (including but not limited to data entry, database management, promotions, products and services alerts, delivery services, payment extension services, and membership authentication and verification services) ("Service Providers"). These Service Providers are under a duty of confidentiality to us and are only permitted to use your Personal Data in connection with the purposes specified at') . '
+                       <a href="http://woden-sims.hol.es">Woden Sims</a> ' . $this->model->Translate('entity that you are contracting with) your Personal Data to service providers engaged by us to assist us with providing you with our services (including but not limited to data entry, database management, promotions, products and services alerts, delivery services, payment extension services, and membership authentication and verification services) ("Service Providers"). These Service Providers are under a duty of confidentiality to us and are only permitted to use your Personal Data in connection with the purposes specified at') . '
                        <a class="use-of-personal-data" href="#">' . $this->model->Translate('Section 2') . '</a>' . $this->model->Translate('above, and not for their own purposes (including direct marketing)') . '
                    </h1>
                    <h1 class="sub-header-terms">
                        ' . $this->model->Translate('When necessary we may also disclose and transfer (whether within or outside the jurisdiction of the') . '
-                       <a href="http://woden-sims.hol.es">Woden Sims</a>' . $this->model->Translate(' entity that you are contracting with) your Personal Data to our professional advisers, law enforcement agencies, insurers, government and regulatory and other organizations for the purposes specified at') . '
+                       <a href="http://woden-sims.hol.es">Woden Sims</a> ' . $this->model->Translate('entity that you are contracting with) your Personal Data to our professional advisers, law enforcement agencies, insurers, government and regulatory and other organizations for the purposes specified at') . '
                        <a class="use-of-personal-data" href="#">' . $this->model->Translate('Section 2') . '</a>' . $this->model->Translate('above') . '
                    </h1>
                    <h1 class="sub-header-terms">
@@ -147,7 +147,7 @@ class PrivacyView extends DefaultView
 
                    <div id="cookies"></div>
 
-                   <h1 class="main-header-terms">Cookies</h1>
+                   <h1 class="main-header-terms">' . $this->model->Translate('Cookies') . '</h1>
 
                    <h1 class="sub-header-terms">
                        ' . $this->model->Translate('We use "cookies" to store specific information about you and track your visits to the Sites. It is not uncommon for websites to use cookies to enhance identification of their users.') . '

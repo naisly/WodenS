@@ -67,7 +67,7 @@ class CheckOrderView extends DefaultView
 
         echo                                         '</h>
                                                       <input type="text" class="form-control margin-20" name="email" id="email" placeholder="Woden Sims Email" style="background-color: white;" />
-                                                      <input type="password" class="form-control margin-20" name="password" id="password" placeholder="Password" />
+                                                      <input type="password" class="form-control margin-20" name="password" id="password" placeholder="' . $this->model->Translate('Password') . '" />
 
                                                       <div class="forgot">
                                                           <a href="/';
@@ -78,11 +78,7 @@ class CheckOrderView extends DefaultView
 
         echo 'forgot-password/" class="text-left link">';
 
-        echo $this->model->Translate('Forgot your Username');
-
-        echo '<br />';
-
-        echo $this->model->Translate('or Password?');
+        echo $this->model->Translate('Forgot your password?');
 
         echo                                             '</a>
                                                           <button class="btn btn-primary pull-right button-sign">';
@@ -117,7 +113,7 @@ class CheckOrderView extends DefaultView
         echo '" />
                                                       <input type="text" class="form-control margin-20" name="order_email" id="order_email" placeholder="';
 
-        echo $this->model->Translate('Your email');
+        echo $this->model->Translate('Your Email');
 
         echo '" />
 
@@ -178,7 +174,7 @@ class CheckOrderView extends DefaultView
                                       <div class="pull-right media-padding">
                                           <h class="contact-customers">';
 
-        echo $this->model->Translate('For any questions contact our costumers +390 153 16 183');
+        echo $this->model->Translate('For any questions contact our lead customers') . ' +390 153 16 183';
 
         echo                              '</h>
                                       </div>

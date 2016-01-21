@@ -96,7 +96,7 @@ class DefaultController
         //echo $_SESSION['status'];
         $timer = 0;
         $array = array();
-        while($timer < 10) {
+        while($timer < 11) {
             if (isset($_POST['array' . $timer])) {
                 array_push($array, $_POST['array' . $timer]);
             }
@@ -118,6 +118,8 @@ class DefaultController
         if (isset($_POST['sort_by_shipping'])) {
             $sort_by_shipping = $_POST["sort_by_shipping"];
         }
+
+        //print_r($array);
         /*if (isset($min) || isset($max)) {
             $sql_query .= ' WHERE';
             if (isset($array) || $min !== '' || $max !== '') {
@@ -689,10 +691,14 @@ class DefaultController
             array_shift($array);
             array_shift($array);
 
+            //print_r($links_array);
+
             $i = 0;
             while($i < count($array)){
                 if(strlen($array[$i]) < 2){
                     unset($array[$i]);
+                } else {
+                    $array[$i] = ucfirst($array[$i]);
                 }
                 $i++;
             }
@@ -701,7 +707,9 @@ class DefaultController
 
             $breadcrumbs_links = array();
 
-            session_start();
+            if (session_status() == PHP_SESSION_NONE) {
+                session_start();
+            }
 
             if(in_array($languages, $language_check)) {
                 $breadcrumbs_links[0] = 'http://localhost:8080';
@@ -729,30 +737,36 @@ class DefaultController
                 $i++;
             }
 
+            //print_r($links_array);
+
             $i = 0;
-            if(count($links_array) > 1){
-                $count = count($links_array) - 1;
-            } else {
+            if(count($links_array) >= 1){
                 $count = count($links_array);
-            }
-            while ($i < $count){
 
-                $link = $breadcrumbs_links[$i];
+                while ($i < $count){
 
-                if($i % 2 == 0){
-                    $link .= '/';
+                    $link = $breadcrumbs_links[$i];
+
+                    if($i % 2 == 0){
+                        $link .= '/';
+                    }
+
+                    $link .= $links_array[$i];
+
+                    if (end($links_array) == '' && $i == $count - 1) {
+                        $link .= '/';
+                    }
+
+                    array_push($breadcrumbs_links, $link);
+
+                    $i++;
                 }
+            } /*else {
+                $count = count($links_array) - 1;
+            }*/
 
-                $link .= $links_array[$i];
-
-                if (end($links_array) == '' && $i == $count - 1) {
-                    $link .= '/';
-                }
-
-                array_push($breadcrumbs_links, $link);
-
-                $i++;
-            }
+            //print_r($breadcrumbs_links);
+            //print_r($breadcrumbs_links);
 
             $this->model->setBreadcrumbs( $array );
             $this->model->setBreadcrumbsLink( $breadcrumbs_links );

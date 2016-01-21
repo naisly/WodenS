@@ -106,7 +106,7 @@ class EducationView extends DefaultView
 
                           <h class="sub-category">';
 
-        echo $this->model->Translate('Meanwhile its thin and powerful handy computer, the Laptop consider every detail to make your study exciting as well as pleasurable.');
+        echo $this->model->Translate('Meanwhile its thin and powerful handy computer, the Laptop consider every detail to make your study exciting as well as pleasurable. Describe new possibilities.');
 
         echo              '</h><br /><br />
 

@@ -27,8 +27,10 @@ class AccountOrderController extends ProfileController
         session_start();
 
         if(!isset($_SESSION['login_user'])){
-            if(isset($_SESSION['language'])) {
+            if(isset($_SESSION['language']) && $_SESSION['language'] !== 'us') {
                 header('Location: /' . $_SESSION['language'] . '/login');
+            } else {
+                header('Location: /login');
             }
         }
 
@@ -138,7 +140,10 @@ class AccountOrderController extends ProfileController
                 $sql_stmt = "SELECT photo, product_name FROM $complete_product_table[$k] WHERE id='$complete_id[$k]'";
                 $sql_result = $mysqli->query($sql_stmt);
 
+                //echo $k . '-' . $sql_stmt . '<br />';
+
                 if ($sql_result->num_rows > 0) {
+                    //echo $k;
                     // output data of each row
                     while ($row = $sql_result->fetch_assoc()) {
                         array_push($complete_photo, $row['photo']);

@@ -65,7 +65,11 @@ class SupportController extends DefaultController
 
         $mysql_query->execute();
 
-        header('Location: /' . $_SESSION['language'] . 'thanks-support');
+        if($_SESSION['language'] !== 'us') {
+            header('Location: /' . $_SESSION['language'] . '/support/thanks-support');
+        } else {
+            header('Location: /support/thanks-support');
+        }
 
         session_write_close();
 

@@ -73,7 +73,7 @@ class AccountInfoView extends AccountOrderView
                 while ($i < $this->model->countAccountComplete()) {
                     echo '<tr>
                       <td>#' . $this->model->getAccountComplete($i) . '</td>
-                      <td>Completed</td>
+                      <td>' . $this->model->Translate('Completed') . '</td>
                       <td>
                           <form action="account-cancel-order" method="post">
                               <button id="button-as-link">';
@@ -93,7 +93,7 @@ class AccountInfoView extends AccountOrderView
                 while ($i < $this->model->countAccountDone()) {
                     echo '<tr>
                       <td>#' . $this->model->getAccountDone($i) . '</td>
-                      <td>Done</td>
+                      <td>' . $this->model->Translate('Done') . '</td>
                       <td>
                           <form action="account-cancel-order" method="post">
                               <button id="button-as-link">';
@@ -235,7 +235,7 @@ class AccountInfoView extends AccountOrderView
         echo               '</h>
                             <h1 class="make-sure">';
 
-        echo $this->model->Translate('Please, fill the correct data in order to have no problems with shipping.');
+        echo $this->model->Translate('Please, fill the real data in order to have no problems with shipping.');
 
         echo               '</h1>
                             <form role="form" action="change-data" method="post">
@@ -377,7 +377,7 @@ class AccountInfoView extends AccountOrderView
                           <div class="default-options">
                               <h class="billing-h">';
 
-            echo $this->model->Translate('Default options:');
+            echo $this->model->Translate('Default Options:');
 
             echo              '</h><br />';
 
@@ -511,10 +511,10 @@ class AccountInfoView extends AccountOrderView
                          var text = document.getElementById("displayText' . $i . '");
                              if(ele.style.display == "block") {
                                  ele.style.display = "none";
-                                 text.innerHTML = "show";
+                                 text.innerHTML = "' . $this->model->Translate('show') . '";
                              } else {
                                  ele.style.display = "block";
-                                 text.innerHTML = "hide";
+                                 text.innerHTML = "' . $this->model->Translate('hide') . '";
                              }
                      }
                  </script>';

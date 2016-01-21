@@ -1,5 +1,3 @@
-if ($_SESSION['language'] !== 'us') {
-echo $_SESSION['language'] . '/';
 <?php
 
 /**
@@ -44,7 +42,7 @@ class BusinessView extends DefaultView
                                <div class="col-md-8 marger">
                                   <h class="main-header-content">';
 
-        echo $this->model->Translate('We believe that there\'re lots to transform your business in complex manner');
+        echo $this->model->Translate('We believe that there are lots to transform your business in gentle manner');
 
         echo                      '</h>
 
@@ -62,7 +60,7 @@ class BusinessView extends DefaultView
                        <div class="row">
                            <div class="col-md-1"></div>
                            <div class="col-md-10">
-                               <img src="../images/laptops.jpg" class="full-image" />
+                               <img src="/images/laptops.jpg" class="full-image" />
                            </div>
                            <div class="col-md-1"></div>
                        </div>

@@ -100,7 +100,15 @@ class AccountOrderView extends ProfileView
                 echo $this->model->Translate('Category:');
 
                 echo                     '<em><span id="category-item">' . $this->model->getCompleteCategory($i, $j) . '</span></em></h><br />
-                                          <h>' . $this->model->getCompleteQuantity($i, $j) . ' items</h><br />
+                                          <h>' . $this->model->getCompleteQuantity($i, $j) . ' ';
+
+                if($this->model->getCompleteQuantity($i, $j) == '1'){
+                    echo $this->model->Translate('item');
+                } else {
+                    echo $this->model->Translate('items');
+                }
+
+                echo '</h><br />
                                           <h class="cart-price">$' . $this->model->getCompletePrice($i, $j) . '</h>
                                       </div>
                                       <div class="col-md-5';
@@ -132,10 +140,10 @@ class AccountOrderView extends ProfileView
                                        var text = document.getElementById("displayText' . $i . '");
                                        if(ele.style.display !== "block") {
                                            ele.style.display = "block";
-                                           text.innerHTML = "hide";
+                                           text.innerHTML = "' . $this->model->Translate('hide') . '";
                                        } else {
                                            ele.style.display = "none";
-                                           text.innerHTML = "show";
+                                           text.innerHTML = "' . $this->model->Translate('show') . '";
                                        }
                                    }
                               </script>';
@@ -209,10 +217,10 @@ class AccountOrderView extends ProfileView
                                        var text = document.getElementById("displayText' . $iterate . '");
                                        if(ele.style.display !== "block") {
                                            ele.style.display = "block";
-                                           text.innerHTML = "hide";
+                                           text.innerHTML = "' . $this->model->Translate('hide') . '";
                                        } else {
                                            ele.style.display = "none";
-                                           text.innerHTML = "show";
+                                           text.innerHTML = "' . $this->model->Translate('show') . '";
                                        }
                                    }
                               </script>';

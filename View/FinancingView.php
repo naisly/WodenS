@@ -93,7 +93,7 @@ class FinancingView extends DefaultView
 
                                           <h class="sub-header">';
 
-        echo $this->model->Translate('Every 1$ of check you are going toaccumulate dollars in your Woden Sims card. While this sum is greater than 5, 000$ you are going to get discount amount of 7%.');
+        echo $this->model->Translate('Every 1$ of check you are going to accumulate dollars in your Woden Sims card. While this sum is greater than 5, 000$ you are going to get discount amount of 7%.');
 
         echo                              '</h>
 

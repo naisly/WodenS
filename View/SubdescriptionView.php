@@ -44,7 +44,7 @@ class SubdescriptionView extends DefaultView
      * @param $category
      * @param $table
      */
-    private function getMain( $category, $table) {
+    private function getMain( $category ) {
 
         echo '<div class="image-margin">
                   <div class="col-md-9">
@@ -54,7 +54,7 @@ class SubdescriptionView extends DefaultView
                       </div>
                       <div class="col-md-7">
                            <h class="main-header">' . $this->model->getOriginalName(0) . '</h><br />
-                           <h class="p-header">by ' . $this->model->getCategory(0) . '</a></h>
+                           <h class="p-header">' . $this->model->Translate('by') . ' ' . $this->model->getCategory(0) . '</a></h>
 
                            <div class="divider-main"></div>
 

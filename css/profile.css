@@ -90,3 +90,25 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+.last-added-img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: auto;
+    width: 50%;
+}
+.bordered-container {
+    border-right: 1px solid #e4e4e4 !important;
+    padding-right: 20px;
+}
+
+@media (max-width: 996px) {
+    .img-for-sm {
+        width: 200px !important;
+    }
+    .last-added-img {
+        width: 150px !important;
+    }
+    .bordered-container {
+        border: none !important;
+    }
+}

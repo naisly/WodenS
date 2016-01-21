@@ -34,7 +34,11 @@ class ProfileController extends DefaultController
         session_start();
 
         if(!isset($_SESSION['login_user'])){
-            header('Location: /' . $_SESSION['language'] . 'login');
+            if(isset($_SESSION['language']) && $_SESSION['language'] !== 'us') {
+                header('Location: /' . $_SESSION['language'] . '/login');
+            } else {
+                header('Location: /login');
+            }
         }
 
         session_write_close();
@@ -132,7 +136,11 @@ class ProfileController extends DefaultController
 
         $sql_query->execute();
 
-        header('Location: /' . $_SESSION['language'] . '/account/cart');
+        if($_SESSION['language'] !== 'us') {
+            header('Location: /' . $_SESSION['language'] . '/account/cart');
+        } else {
+            header('Location: /account/cart');
+        }
     }
 
     protected function actionGetUser() {
@@ -224,9 +232,13 @@ class ProfileController extends DefaultController
         $sql_table = "SELECT product_table, id FROM orderedItems WHERE user='$user' ORDER BY 'sort_id' DESC LIMIT 1";
         $result_table = $mysqli->query( $sql_table );
 
+        //echo $sql_table;
+
         if($result_table->num_rows == 0){
             $sql_another = "SELECT product_table, id FROM completeOrders WHERE user='$user' ORDER BY sort_id DESC LIMIT 1";
             $result_another = $mysqli->query( $sql_another );
+
+            //echo $sql_another;
 
             if($result_another->num_rows > 0){
                 while ($row = $result_another->fetch_assoc()){
@@ -259,6 +271,8 @@ class ProfileController extends DefaultController
 
             $sql_item = "SELECT original_name, price, shipping, photo
                      FROM $table WHERE $table.id='$id' LIMIT 1";
+
+            //echo $sql_item;
 
             $result_item = $mysqli->query($sql_item);
 

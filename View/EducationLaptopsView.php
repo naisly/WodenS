@@ -106,11 +106,13 @@ class EducationLaptopsView extends DefaultView
                                     <div class="row">
                                         <div class="delivering">
                                             <div class="col-md-4">
-                                                <h class=main-sub-every" style="font-size: 20px;">';
+                                                <div class="h-height-every">
+                                                    <h class=main-sub-every" style="font-size: 20px;">';
 
         echo $this->model->Translate('All data in one place');
 
-        echo                                   '</h><br />
+        echo                                   '</h>
+                                            </div><br />
 
                                                 <div id="education-divider"></div>
 
@@ -121,11 +123,13 @@ class EducationLaptopsView extends DefaultView
         echo                                    '</h>
                                             </div>
                                             <div class="col-md-4 margin-for-small-devices">
-                                                <h class=main-sub-every" style="font-size: 20px;">';
+                                                <div class="h-height-every">
+                                                    <h class=main-sub-every" style="font-size: 20px;">';
 
         echo $this->model->Translate('Collect / Compare all projects');
 
-        echo                                   '</h><br />
+        echo                                   '</h>
+                                            </div><br />
 
                                                 <div id="education-divider"></div>
 
@@ -136,11 +140,13 @@ class EducationLaptopsView extends DefaultView
         echo                                    '</h>
                                             </div>
                                             <div class="col-md-4 margin-for-small-devices">
-                                                <h class=main-sub-every" style="font-size: 20px;">';
+                                                <div class="h-height-every">
+                                                    <h class=main-sub-every" style="font-size: 20px;">';
 
         echo $this->model->Translate('Edit / Change everywhere');
 
-        echo                                   '</h><br />
+        echo                                   '</h>
+                                            </div><br />
 
                                                 <div id="education-divider"></div>
 
@@ -167,11 +173,13 @@ class EducationLaptopsView extends DefaultView
                                     <div class="row">
                                         <div class="delivering">
                                             <div class="col-md-4">
-                                                <h class=main-sub-every" style="font-size: 20px;">';
+                                                <div class="h-height-every">
+                                                    <h class=main-sub-every" style="font-size: 20px;">';
 
         echo $this->model->Translate('Usability with collection and sorting');
 
-        echo                                   '</h><br />
+        echo                                   '</h>
+                                            </div><br />
 
                                                 <div id="education-divider"></div>
 
@@ -182,11 +190,13 @@ class EducationLaptopsView extends DefaultView
         echo                                    '</h>
                                             </div>
                                             <div class="col-md-4 margin-for-small-devices">
-                                                <h class=main-sub-every" style="font-size: 20px;">';
+                                                <div class="h-height-every">
+                                                    <h class=main-sub-every" style="font-size: 20px;">';
 
         echo $this->model->Translate('Work remotely, increasing productivity');
 
-        echo                                   '</h><br />
+        echo                                   '</h>
+                                            </div><br />
 
                                                 <div id="education-divider"></div>
 
@@ -197,11 +207,13 @@ class EducationLaptopsView extends DefaultView
         echo                                   '</h>
                                             </div>
                                             <div class="col-md-4 margin-for-small-devices">
-                                                <h class=main-sub-every" style="font-size: 20px;">';
+                                                <div class="h-height-every">
+                                                    <h class=main-sub-every" style="font-size: 20px;">';
 
         echo $this->model->Translate('The best result for the same time');
 
-        echo                                   '</h><br />
+        echo                                   '</h>
+                                            </div><br />
 
                                                 <div id="education-divider"></div>
 

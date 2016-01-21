@@ -28,8 +28,10 @@ class AccountBillingController extends AccountOrderController
         session_start();
 
         if(!isset($_SESSION['login_user'])){
-            if(isset($_SESSION['language'])) {
+            if(isset($_SESSION['language']) && $_SESSION['language'] !== 'us') {
                 header('Location: /' . $_SESSION['language'] . '/login');
+            } else {
+                header('Location: /login');
             }
         }
 
@@ -80,7 +82,11 @@ class AccountBillingController extends AccountOrderController
                                           $giftwrap)");
             $sql_query->execute();
 
-            header('Location: /' . $_SESSION['language'] . '/account/');
+            if($_SESSION['language'] !== 'us') {
+                header('Location: /' . $_SESSION['language'] . '/account/');
+            } else {
+                header('Location: /account/');
+            }
         } else {
             header('HTTP/1.0 403 Forbidden');
         }

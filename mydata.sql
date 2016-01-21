@@ -593,7 +593,7 @@ INSERT INTO gadgets(id, product_name, original_name, photo, description, categor
 
 INSERT INTO gadgets(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
             ('', 'Samsung Galaxy Tab 2', 'Samsung Galaxy Tab 2 (10.1-Inch Wi-Fi) 2012 Model', 'images/galaxytabshop.jpg', 'Android 4.2 Jelly Bean
-            Wireless N Wi-Fi (802.11b/g/n); Bluetooth 3.0,GPS Enabled with Latitude, Google Maps', 'Samsung', '323', '406', '26th December', '55$ shipping and coupon for 35$ as free',
+            Wireless N Wi-Fi (802.11b/g/n); Bluetooth 3.0 GPS Enabled with Latitude, Google Maps', 'Samsung', '323', '406', '26th December', '55$ shipping and coupon for 35$ as free',
             3, 8);
 INSERT INTO gadgets(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
             ('', 'Samsung Galaxy Tab 2', 'Samsung Galaxy Tab 2', 'images/galaxyshop1.jpg', '10.1-inch Multitouch 720p HD Screen (1280 x 800)

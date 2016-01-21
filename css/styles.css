@@ -157,14 +157,14 @@ li.active {
 }
 @media (min-width: 766px) and (max-width: 1066px){
 	.nav > li > a {
-		padding-left: 2.9vw !important;
-		padding-right: 2.9vw !important;
+		padding-left: 2.2vw !important;
+		padding-right: 2.2vw !important;
 	}
 }
 .nav > li > a {
 	text-align: center;
-	padding-left: 4.1vw;
-	padding-right: 4.1vw;
+	padding-left: 3.6vw;
+	padding-right: 3.6vw;
 }
 .navbar-nav {
 	margin: 0 auto;
@@ -346,6 +346,10 @@ ul {
 .footer-menu:hover, {
 	color: #666 !important;
 }
+.img-shop {
+	width: 100%;
+	height: auto;
+}
 .items {
 	font-size: 0.9em;
 	color: #666;
@@ -428,8 +432,8 @@ a:hover {
 	font-size: 20px !important;
 }
 .subdescription:hover {
-	color: #c45500;
-	text-decoration: none !important;
+	text-decoration: underline !important;
+	color: #08b;
 }
 #prev-price {
 	color: #b12704 !important;
@@ -737,6 +741,9 @@ output {
 #symb-for-output-xs {
 	font-size: 22px;
 	color: #b12704;
+}
+#min, #max {
+	width: 100%;
 }
 @media(max-width: 1002px){
 	.bg-item {

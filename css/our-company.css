@@ -9,6 +9,10 @@ h2 {
     margin-top: 0;
     margin-bottom: 0;
 }
+.main-h-xs {
+    margin-top: 60px;
+    font-size: 31px;
+}
 #divider-e4 {
     width: 100%;
     height: 1px;
@@ -19,13 +23,13 @@ h2 {
     margin-bottom: 40px;
 }
 .header-ws-xl {
-    font-size: 30px;
+    font-size: 27px;
 }
 .header-ws-md {
     font-size: 30px;
 }
-.border-right-row {
-    border-right: 1px solid #e4e4e4;
+.border-left-row {
+    border-left: 1px solid #e4e4e4;
 }
 
 @media (max-width: 766px){
@@ -38,7 +42,7 @@ h2 {
     .header-ws-md {
         font-size: 25px;
     }
-    .border-right-row {
+    .border-left-row {
         border: none;
     }
 }
@@ -53,10 +57,11 @@ h2 {
     font-family: RobotoLight;
 }
 .main-row {
-    font-size: 34px;
+    font-size: 32px;
     font-family: MyriadProSemiBold;
+    height: 100px;
 }
 .desc-row {
-    font-size: 25px;
+    font-size: 22px;
     font-family: RobotoLight;
 }

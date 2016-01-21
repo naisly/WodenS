@@ -36,12 +36,8 @@ class CompanyView extends DefaultView
     private function getPage() {
 
         echo '<div class="container text-center woden-sims-xl">
-                  <h1>';
-
-        echo $this->model->Translate('Woden Sims');
-
-        echo     '</h1>
-                  <h2>';
+                  <h1>Woden Sims</h1>
+                  <h2 class="main-h-xs">';
 
         echo $this->model->Translate('Reliable personal tested by time. Award-store.');
 
@@ -61,7 +57,7 @@ class CompanyView extends DefaultView
 
                           <h1 class="header-ws-xl">';
 
-        echo $this->model->Translate('Since 1984, world has seen a great many changes in its business, its products, its services. Change always comes with opportunity. And Deere has always been ready and willing to embrace it. By the time, Woden Sims never forgotten core values thanks to which the Store became real, such as lightweight prices, high quality of provided items.');
+        echo $this->model->Translate('Since 1984, world has seen a great many changes in its business, its products, its services. Change always comes with opportunity. And Serdiuk has always been ready and willing to embrace it. By the time, Woden Sims never forgotten core values thanks to which the Store became real, such as lightweight prices, high quality of provided items.');
 
         echo             '</h1>
 
@@ -113,7 +109,7 @@ class CompanyView extends DefaultView
         echo             '</h1>
 
                           <div class="row" style="margin-top: 5%;">
-                              <div class="col-md-6 border-right-row">
+                              <div class="col-md-6">
                                   <h1 class="main-row text-left">';
 
         echo $this->model->Translate('What we offer');
@@ -132,7 +128,7 @@ class CompanyView extends DefaultView
 
         echo                     '</h1>
                               </div>
-                              <div class="col-md-6">
+                              <div class="col-md-6 border-left-row">
                                   <h1 class="main-row text-left">';
 
         echo $this->model->Translate('What you can expect');
@@ -175,11 +171,11 @@ class CompanyView extends DefaultView
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'store/" style="text-decoration: none; color: #08b;">';
+        echo 'store/" style="text-decoration: none; color: #08b;"> ';
 
         echo $this->model->Translate('primary in Europe.');
 
-        echo '</a>';
+        echo '. </a>';
 
         echo $this->model->Translate('On the other hand, our Company provides software in the industry of IT. We are developing Apps for Android as well as IOS, web-sites.');
 

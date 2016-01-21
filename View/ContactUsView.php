@@ -79,7 +79,7 @@ class ContactUsView extends DefaultView
                   <div class="contacting-woden-sims">
                        <h class="contact">';
 
-        echo $this->model->Translate('Contacting Woden Sims');
+        echo $this->model->Translate('Contacting') . ' Woden Sims';
 
         echo          '</h>
                   </div>
@@ -96,7 +96,7 @@ class ContactUsView extends DefaultView
 
                             <h class="sub-header-category">';
 
-        echo $this->model->Translate('Woden Sims Online Store');
+        echo 'Woden Sims ' . $this->model->Translate('Online Store');
 
         echo               '</h><br />
                             <h class="content-header">';
@@ -113,7 +113,7 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('Online Store');
 
-        echo '</a>';
+        echo '</a> ';
 
         echo $this->model->Translate('is a quit place to purchase any quality or any product category from Apple, Samsung and other manufacturers. You can buy online or by call +38 (095) 094 82 68 or other phones as follows on this page 7 days a week from 10 a.m. to 19 p.m. UTC');
 
@@ -121,7 +121,7 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('You can get information about an order placed on Woden Sims Store by');
 
-        echo '<a id="default-link" href="/';
+        echo ' <a id="default-link" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
@@ -131,11 +131,11 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('Order Status');
 
-        echo '</a>';
+        echo '</a> ';
 
-        echo $this->model->Translate('page. If you would prefer, you can also check the order status via Phone,');
+        echo $this->model->Translate('page. If you would prefer, you can also check the order status via Phone') . ',';
 
-        echo '<span style="color: #ac5050">';
+        echo '<span style="color: #ac5050"> ';
 
         echo $this->model->Translate('all phones available for each country of our company is provided below.');
 
@@ -150,7 +150,7 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('Woden Sims Financial offers financing for every product you bought. It\'s available on categories:');
 
-        echo '<a id="default-link" href="/';
+        echo ' <a id="default-link" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
@@ -181,7 +181,7 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('TVs.');
 
-        echo '</a> For each category, for <a id="default-link" href="/';
+        echo '</a>'. $this->model->Translate('For each category') . ', <a id="default-link" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
@@ -192,7 +192,7 @@ class ContactUsView extends DefaultView
         echo $this->model->Translate('Education');
 
         echo '</a>,
-                            for <a id="default-link" href="/';
+                             <a id="default-link" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
@@ -202,7 +202,7 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('Business');
 
-        echo '</a>';
+        echo '</a> ';
 
         echo $this->model->Translate('you can find out hot deals for each Area of work.');
 
@@ -227,7 +227,7 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('Support');
 
-        echo '</a>';
+        echo '</a> ';
 
         echo $this->model->Translate('page to ask any questions that you want. We will respond you as soon as possible.');
 
@@ -243,7 +243,7 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('If you want to get items for your');
 
-        echo '<a id="default-link" href="/';
+        echo ' <a id="default-link" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
@@ -253,11 +253,11 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('business');
 
-        echo '</a>';
+        echo '</a> ';
 
         echo $this->model->Translate('or be consulted in area of using it call +38 (095) 094 82 68 or other phones supported by Woden Sims.');
 
-        echo '<span style="color: #ac5050">';
+        echo '<span style="color: #ac5050"> ';
 
         echo $this->model->Translate('All phones available for each country of our company is provided below.');
 
@@ -272,7 +272,7 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('If you want to get items for your');
 
-        echo '<a id="default-link" href="/';
+        echo ' <a id="default-link" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
@@ -282,11 +282,11 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('education');
 
-        echo '</a>';
+        echo ' </a>';
 
         echo $this->model->Translate('or be consulted in area of using it call +38 (095) 531 618 31 or other phones supported by Woden Sims.');
 
-        echo '<span style="color: #ac5050">';
+        echo '<span style="color: #ac5050"> ';
 
         echo $this->model->Translate('All phones available for each country of our company is provided below.');
 
@@ -476,9 +476,8 @@ class ContactUsView extends DefaultView
         echo               '</h><br /><br />
 
                             <div class="area-name">
-                                <h class="area-header">';
+                                <h class="area-header">King Cross Leopolis';
 
-        echo $this->model->Translate('King Cross Leopolis');
 
         echo                   '</h>
                             </div>
@@ -594,7 +593,7 @@ class ContactUsView extends DefaultView
                             <div id="warning">
                                 <h class="warning">';
 
-        echo $this->model->Translate('Important! Due to political tensions Communicational personal leaved');
+        echo $this->model->Translate('Important! Due to political tensions personal leaved');
 
         echo '<br />';
 
@@ -618,12 +617,20 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('Support Service');
 
-        echo '<span style="color: #ac5050;">Not Available</span></li>
+        echo '<span style="color: #ac5050;">';
+
+        echo $this->model->Translate('Not Available');
+
+        echo '</span></li>
                                         <li>';
 
         echo $this->model->Translate('Office');
 
-        echo '<span style="color: #ac5050;">Not Available</span></li>
+        echo '<span style="color: #ac5050;">';
+
+        echo $this->model->Translate('Not Available');
+
+        echo '</span></li>
                                     </ul>
                                 </div>
                             </div>

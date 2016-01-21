@@ -112,3 +112,7 @@
         display: none;
     }
 }
+
+.default-height-for-header {
+    height: 60px;
+}

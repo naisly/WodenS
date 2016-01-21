@@ -1,7 +1,7 @@
 # Turn on the rewrite engine
 RewriteEngine  on
 
-ErrorDocument 404 /shop/PageNotFound.php
+ErrorDocument 404 /PageNotFound.php
 AddDefaultCharset windows-1251
 
 # If the request doesn't end in .php (Case insensitive) continue processing rules

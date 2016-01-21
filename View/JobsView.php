@@ -150,8 +150,7 @@ class JobsView extends DefaultView
                               <li>' . $this->model->Translate('Comfortable working with members of the public.') . '</li>
                               <li>' . $this->model->Translate('Should have a confident manner.') . '</li>
                               <li>' . $this->model->Translate('Must be helpful and polite.') . '</li>
-                              <li>' . $this->model->Translate('Assistants should be physically fit as they will be on their feet for most of the
-                              day and may be required to lift large amounts of stock.') . '</li>
+                              <li>' . $this->model->Translate('Assistants should be physically fit as they will be on their feet for most of the day and may be required to lift large amounts of stock.') . '</li>
                           </ul>
                       </div>
                   </div>
@@ -269,7 +268,7 @@ class JobsView extends DefaultView
 
                           <ul class="listed-group-sm-gl">
                               <li>' . $this->model->Translate('Responsible for all aspects of the store\'s operation including its financial results.') . '</li>
-                              <li>' . $this->model->Translate('Director must plan, organize, direct, and control all store activities and operations plus make effective and objective decisions regarding operational choices in work procedures, inventory allocations, ordering, scheduling and other situations wheremultiple factors must be considered and weighed to maximize operating results.') . '</li>
+                              <li>' . $this->model->Translate('Director must plan, organize, direct, and control all store activities and operations plus make effective and objective decisions regarding operational choices in work procedures, inventory allocations, ordering, scheduling and other situations where multiple factors must be considered and weighed to maximize operating results.') . '</li>
                               <li>' . $this->model->Translate('The Store Director must observe and enforce all store rules and company policies and ensure all employees adhere to company procedures.') . '</li>
                               <li>' . $this->model->Translate('They emphasize and role model company customer service standards and maintain a neat, well-groomed personal appearance, observing company dress code.') . '</li>
                               <li>' . $this->model->Translate('This position must prepare store projections and store operating budgets and is responsible for employee schedules and controlling labor and other overhead costs.') . '</li>

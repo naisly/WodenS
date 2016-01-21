@@ -200,7 +200,11 @@ class LoginController extends DefaultController
         $result = $mysqli->query($sql_stmt);
 
         if ($result->num_rows >= 1){
-            header('Location: /' . $_SESSION['language'] . 'register?email_error=1');
+            if($_SESSION['language'] !== 'us') {
+                header('Location: /' . $_SESSION['language'] . '/register?email_error=1');
+            } else {
+                header('Location: /register?email_error=1');
+            }
         }
     }
 
@@ -246,10 +250,20 @@ class LoginController extends DefaultController
             $_SESSION['login_user'] = $email;
             $_SESSION['admin'] = $email;
             $_SESSION['add_item'] = '0';
-            header("Location: /" . $_SESSION['language'] . "/account/");
+
+            if($_SESSION['language'] !== 'us') {
+                header("Location: /" . $_SESSION['language'] . "/account/");
+            } else {
+                header('Location: /account/');
+            }
+
             $_SESSION['login_try'] = 1;
         } else {
-            header("Location: /" . $_SESSION['language'] . "login?auth=false&try=" . $_SESSION['login_try']++);
+            if($_SESSION['language'] !== 'us') {
+                header("Location: /" . $_SESSION['language'] . "/login?auth=false&try=" . $_SESSION['login_try']++);
+            } else {
+                header("Location: /login?auth=false&try=" . $_SESSION['login_try']++);
+            }
         }
 
         session_write_close();
@@ -356,16 +370,32 @@ class LoginController extends DefaultController
 
         session_start();
         if(!$_SESSION['login_user']){
-            header('Location: /' . $_SESSION['language'] . 'login');
+
+            if($_SESSION['language'] !== 'us') {
+                header('Location: /' . $_SESSION['language'] . '/login');
+            } else {
+                header('Location: /login');
+            }
+
             $_SESSION['add_item'] = '1';
         } else {
             $_SESSION['add_item'] = '0';
 
             $this->actionAddItems();
             if(isset($_POST['one-click-order'])){
-                header('Location: /' . $_SESSION['language'] . '/account/placeorder');
+
+                if($_SESSION['language'] !== 'us') {
+                    header('Location: /' . $_SESSION['language'] . '/account/placeorder');
+                } else {
+                    header('Location: /account/placeorder');
+                }
+
             } else {
-                header('Location: /' . $_SESSION['language'] . '/shop/thanks-order');
+                if($_SESSION['language'] !== 'us') {
+                    header('Location: /' . $_SESSION['language'] . '/shop/thanks-order');
+                } else {
+                    header('Location: /shop/thanks-order');
+                }
             }
         }
     }

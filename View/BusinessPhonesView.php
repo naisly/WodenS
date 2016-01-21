@@ -148,7 +148,7 @@ class BusinessPhonesView extends DefaultView
 
         echo '<a id="apps-link" href="http://skyp.com">Viber</a>';
 
-        echo $this->model->Translate('for free calls. In addition, social networks are available withfast 3G like');
+        echo $this->model->Translate('for free calls. In addition, social networks are available with fast 3G like');
 
         echo '<a id="apps-link" href="http://twitter.com">Twitter</a>, <a id="apps-link" href="http://facebook.com">Facebook</a>, <a id="apps-link" href="http://vk.com">VK</a>.
                                           </h><br /><br />
@@ -172,7 +172,6 @@ class BusinessPhonesView extends DefaultView
                                       </div>
                                   </div>
                               </div>
-                          </div>
                           <div class="col-md-6">
                               <img src="/images/business-phones5.png" id="business-phone-full" />
                           </div>

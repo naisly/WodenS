@@ -55,23 +55,27 @@ class LoginView extends DefaultView
                   <div class="row">
                       <div class="col-md-3"></div>
                       <div class="col-md-6 text-center" style="margin-top: 40px;">
-                          <h1 class="one-account">' . $this->model->Translate('Only one Account for all your needs.') . '</h1>
-                          <h1 class="one-account">' . $this->model->Translate('Already have Woden Sims Account?') . '<a href="/';
+                          <h1 class="one-account">' . $this->model->Translate('Only one Account for All your needs.') . '</h1>
+                          <h1 class="one-account">' . $this->model->Translate('Already have Woden Sims Account?') . ' <a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'login">Find it here<img style="margin-left: 3px;" src="/images/arrow-blue.png" width="13" height="13"/></a></h1>
+        echo 'login">';
+
+        echo $this->model->Translate('Find it here');
+
+        echo        '<img style="margin-left: 3px;" src="/images/arrow-blue.png" width="13" height="13"/></a></h1>
 
                           <div class="form-group" style="margin-top: 30px;">
-                              <input type="email" class="form-control" placeholder="email@example.com" id="email" name="email" required />
+                              <input type="email" style="background-color: #fff !important;" class="form-control" placeholder="email@example.com" id="email" name="email" required />
                           </div>
                           <div class="form-group">
-                              <input type="password" class="form-control" placeholder="' . $this->model->Translate('password') . '" id="password" name="password" required />
+                              <input type="password" class="form-control" placeholder="' . $this->model->Translate('Password') . '" id="password" name="password" required />
                           </div>
                           <div class="form-group">
-                              <input type="password" class="form-control" placeholder="' . $this->model->Translate('password again') . '" id="password-again" name="password-again" required />
+                              <input type="password" class="form-control" placeholder="' . $this->model->Translate('Password again') . '" id="password-again" name="password-again" required />
                           </div>
                           <div class="form-group" style="margin-top: 35px;">
                               <input type="text" class="form-control" placeholder="' . $this->model->Translate('First name') . '" style="width: 49%; float: left;" id="first_name" name="first_name" required />
@@ -432,7 +436,7 @@ class LoginView extends DefaultView
                               <div class="row">
                                   <div class="col-md-10" style="margin-left: 25px;">
                                       <span style="font-size: 13px;">' . $this->model->Translate('Woden Sims reserves the right, at its sole discretion, to change, modify, add or remove portions of these') .
-            '<a href="/';
+            ' <a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
@@ -471,7 +475,7 @@ class LoginView extends DefaultView
         echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
-                ' . $this->model->Translate('Please write correct password or check the second one') . '
+                ' . $this->model->Translate('Please write correct password or check that them match') . '
               </div>';
     }
 
@@ -495,7 +499,7 @@ class LoginView extends DefaultView
         echo '<div class="alert alert-danger" role="alert" style="position: relative; top: -20px;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
-                ' . $this->model->Translate('Incorrert email or password! Please check again') . '
+                ' . $this->model->Translate('Incorrert email or password! Please check again input data') . '
               </div>';
     }
 
@@ -542,14 +546,30 @@ class LoginView extends DefaultView
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 <img src="/' . $_SESSION['photo'] . '" width="50" height="50" />
-                ' . $this->model->Translate('Your selected item was Added to cart! Cart subtotal') . '(' . $this->model->getAItems() . $this->model->Translate('items') .  '$' . $this->model->getAPrice() .'
+                ' . $this->model->Translate('Your selected item was Added to cart! Cart subtotal') . ' (' . $this->model->getAItems() . ' ';
+
+        if($this->model->getAItems() == 1){
+            echo $this->model->Translate('item');
+        } else {
+            echo $this->model->Translate('items');
+        }
+
+        echo ') $' . $this->model->getAPrice() .'
                     <div class="pull-right" style="margin-top: 8px;">
                         <button class="cart btn btn-default" style="margin-right: 20px;" onclick="location.href=';
                             echo "'/account/cart'";
                             echo '">' . $this->model->Translate('Cart') . '</button>';
         echo            '<button class="cart btn btn-primary" onclick="location.href=';
                             echo "'/account/placeorder'";
-                            echo '">' . $this->model->Translate('Procceed to checkout') . '(' . $this->model->getAItems() . $this->model->Translate('items') . '</button>
+                            echo '">' . $this->model->Translate('Proceed to checkout') . ' (' . $this->model->getAItems() . ' ';
+
+        if($this->model->getAItems() == 1){
+            echo $this->model->Translate('item');
+        } else {
+            echo $this->model->Translate('items');
+        }
+
+        echo ')</button>
                     </div>
                 </div>';
 
@@ -584,8 +604,8 @@ class LoginView extends DefaultView
         }
 
         echo       '"><h1 class="sign">' . $this->model->Translate('Sign in Account') . '</h1>
-                      <h2 class="only-one">' . $this->model->Translate('Only one Account for All your needs') . '</h2>
-                      <h2 class="only-one" style="font-size: 20px;">' . $this->model->Translate('Have no account?') . '<a href="/';
+                      <h2 class="only-one">' . $this->model->Translate('Only one Account for All your needs.') . '</h2>
+                      <h2 class="only-one" style="font-size: 20px;">' . $this->model->Translate('Have no account?') . ' <a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';

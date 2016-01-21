@@ -333,7 +333,7 @@ class DefaultView
                                         <span class="input-group-btn">
                                             <img src="/images/search-icon.png" width="30" height="30" style="float: left;" />
                                         </span>
-                                        <input type="text" class="form-control" id="search" placeholder="Search woden-sims.hol.es">
+                                        <input type="text" class="form-control" id="search" placeholder="' . $this->model->Translate('Search') . ' woden-sims.hol.es">
                                     </div>';
 
         echo '</a></li>
@@ -372,7 +372,7 @@ class DefaultView
         echo '<div id="invisible">
                   <div class="search-form">
                       <div class="form-group">
-                          <input type="text" class="form-control" id="search-xs" placeholder="Search woden-sims@hol.es">
+                          <input type="text" class="form-control" id="search-xs" placeholder="' . $this->model->Translate('Search') . ' woden-sims@hol.es">
                           <div class="most-popular">
                               <div class="marger">
                                   <h class="popular-matches">';
@@ -457,9 +457,19 @@ class DefaultView
                             <ul class='text-align'>";
 
 
-        echo "<a class='categories-list' href='";
+        echo "<a class='categories-list' href='/";
 
-        echo $category . '/buy-' . substr($category, 0, -1) . '/';
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo $category;
+
+        if($category !== 'tv') {
+            echo 's';
+        }
+
+        echo '/buy-' . $category;
 
         echo "'>All</a>";
 
@@ -635,7 +645,7 @@ class DefaultView
         echo $this->model->Translate('By slowest');
 
         echo '<br />
-                                    <input class="btn btn-primary" id="submit" type="submit" style="margin-bottom: 20px;" value="Get items!">
+                                    <input class="btn btn-primary" id="submit" type="submit" style="margin-bottom: 20px;" value="' . $this->model->Translate('Get items!') . '">
                        </div>
                            </form>
                         </div>';/* col-md-3 END */
@@ -673,12 +683,19 @@ class DefaultView
                 echo 'style="margin-top: 30px"';
             }
             echo ' style="padding-left: 0 !important;">
-                        <img src="/' . $this->model->getPhoto($i) . '" style="margin-top: 21px;" />
+                        <img src="/' . $this->model->getPhoto($i) . '" style="margin-top: 21px;" class="img-shop" />
                     </div>
                     <div class="col-md-5">
                             <p class="spacer"></p>
-                            <a class="subdescription" href="/shop/subdescription?name=' . $this->model->getOriginalName($i) . '&category=' . $page . '&product_price=' . $this->model->getPrice($i) . '&id=' . $this->model->getId($i) . '&product_name=' . $this->model->getProductName($i) . '">' . $this->model->getOriginalName($i) . '</a>
-                            <span><br />by ';
+                            <a class="subdescription" href="/';
+
+            if($_SESSION['language'] !== 'us'){
+                echo $_SESSION['language'] . '/';
+            }
+
+            echo 'shop/subdescription?name=' . $this->model->getOriginalName($i) . '&category=' . $page . '&product_price=' . $this->model->getPrice($i) . '&id=' . $this->model->getId($i) . '&product_name=' . $this->model->getProductName($i) . '">' . $this->model->getOriginalName($i) . '</a>
+
+                            <span><br />' . $this->model->Translate('by') . ' ';
 
             if($this->model->getCategory($i) == 'IMac' || $this->model->getCategory($i) == 'AppleTV' ) {
                 echo 'Apple';
@@ -694,7 +711,7 @@ class DefaultView
             echo $this->model->Translate('days shipping') . ')</p>
                             <p id="on-stock">';
 
-            echo $this->model->Translate('In stock on ');
+            echo $this->model->Translate('In stock on') . ' ';
 
             echo $this->model->getTimeOfAdding($i) . '</p>
                             <p id="average">';
@@ -706,7 +723,7 @@ class DefaultView
 
             echo $this->model->Translate('Short description:');
 
-            echo '</b>' . $this->model->getDescription($i) . '</p>
+            echo ' </b>' . $this->model->getDescription($i) . '</p>
                             <!--
                             <input type="hidden" name="original_name" value="' . $this->model->getOriginalName($i) . '"/>
                             <input type="hidden" name="table" value="phones" />
@@ -721,7 +738,7 @@ class DefaultView
 
             echo $this->model->Translate('Free shipping on orders greater than');
 
-            echo '<span id="prev-price">$35</span></p>
+            echo ' <span id="prev-price">$35</span></p>
                         <p class="align-left"><b style="font-size: 16px;">';
 
             echo $this->model->Translate('Product features:');
@@ -840,14 +857,14 @@ class DefaultView
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Last step') . '</h></a>';
                 } else if (isset($_GET['success'])) {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Success') . '</h></a>';
-                } else if ($this->model->getBreadcrumbs($i) == 'buy-phone'){
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Phones') . '</h></a>';
-                } else if ($this->model->getBreadcrumbs($i) == 'buy-tv'){
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('TV') . '</h></a>';
-                } else if ($this->model->getBreadcrumbs($i) == 'buy-device'){
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Devices') . '</h></a>';
-                } else if ($this->model->getBreadcrumbs($i) == 'buy-laptop'){
-                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Laptops') . '</h></a>';
+                } else if ($this->model->getBreadcrumbs($i) == 'Buy-phone'){
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Buy') . '</h></a>';
+                } else if ($this->model->getBreadcrumbs($i) == 'Buy-tv'){
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Buy') . '</h></a>';
+                } else if ($this->model->getBreadcrumbs($i) == 'Buy-device'){
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Buy') . '</h></a>';
+                } else if ($this->model->getBreadcrumbs($i) == 'Buy-laptop'){
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Buy') . '</h></a>';
                 }
                 else {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . ucfirst($this->model->Translate($this->model->getBreadcrumbs($i))) . "</a>";
@@ -1312,7 +1329,7 @@ class DefaultView
 
         echo '<div class="bg-divider">
                   <div class="text-center">
-                       <h1 style="padding-top: 20px; color: white;">' . $text . '</h1>
+                       <h1 style="padding-top: 20px; color: white;">' . $this->model->Translate($text) . '</h1>
                   </div>
               </div>';
     }
@@ -1326,7 +1343,7 @@ class DefaultView
                             <li><a class="items" href="/sales">Sales</a></li>
                             <li><a class="items" href="site-map">Site map</a></li>
                         </ul>-->
-                            <p id="copyright"> &copy; Woden S Inc. All rights reserved.</p>
+                            <p id="copyright"> &copy; Woden S Inc . $this->model->Translate("All rights reserved.") . </p>
                    </div>
               </div>
               <script src="js/jquery-min.js"></script>

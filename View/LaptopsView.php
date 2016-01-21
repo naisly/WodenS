@@ -89,18 +89,6 @@ class LaptopsView extends IndexView
                        <div class="col-md-1"></div>
                        <div class="col-md-10">
                            <div class="row">
-                               <!--<div class="col-md-4">
-                                   <h class="header-for-category">' . $this->model->Translate('Apps') . '</h><br /><br />
-                                   <p class="sub-h" style="text-align: left;">' . $this->model->Translate('Really useful apps for Windows 10 like Live Table Calendar, Mail with build-in system sign up. Every new Mac comes with Photos, iMovie, GarageBand, Pages, Numbers, and Keynote.') . '</p>
-                               </div>
-                               <div class="col-md-4" style="border-right: 1px solid #e4e4e4; border-left: 1px solid #e4e4e4;">
-                                   <h class="header-for-category">' . $this->model->Translate('Anywhere you want') . '</h><br /><br />
-                                   <p class="sub-h" style="text-align: left;">' . $this->model->Translate('So you can be creative and productive right from the start. You also get great apps for email, sending texts, and making FaceTime calls, there even an app for new apps. Be connected to the social networks.') . '</p>
-                               </div>
-                               <div class="col-md-4">
-                                   <h class="header-for-category">' . $this->model->Translate('Share data for free') . '</h><br /><br />
-                                   <p class="sub-h" style="text-align: left;">' . $this->model->Translate('Be connected worldwide with new apps like Skype, Viber for free. Share for free of charge your documents, photos, tasks and get instant messages by online chat.') . '</p>
-                               </div>-->
                                <div class="col-md-4" style="margin-top: 8%;">
                                    <h class="header-for-category">' . $this->model->Translate('Apps') . '</h><br /><br />
                                    <p class="sub-h" style="text-align: left;">' . $this->model->Translate('Really useful apps for Windows 10 like Live Table Calendar, Mail with build-in system sign up. Every new Mac comes with Photos, iMovie, GarageBand, Pages, Numbers, and Keynote.') . '</p>
@@ -143,15 +131,21 @@ class LaptopsView extends IndexView
                        <div class="col-md-10">
                            <div class="row">
                                <div class="col-md-4">
-                                   <h class="header-for-category">' . $this->model->Translate('Usability') . '</h><br /><br />
+                                   <div class="default-height-for-header">
+                                       <h class="header-for-category">' . $this->model->Translate('Usability') . '</h>
+                                   </div><br /><br />
                                    <p class="sub-h" style="text-align: left;">' . $this->model->Translate('With the usability and high performance of each newly developed Laptop, you\'re going to change your mind as well as fundamental principals at all.') . '</p>
                                </div>
                                <div class="col-md-4" style="border-right: 1px solid #e4e4e4; border-left: 1px solid #e4e4e4;">
-                                   <h class="header-for-category">' . $this->model->Translate('Be connected') . '</h><br /><br />
+                                   <div class="default-height-for-header">
+                                       <h class="header-for-category">' . $this->model->Translate('Be connected') . '</h>
+                                   </div><br /><br />
                                    <p class="sub-h" style="text-align: left;">' . $this->model->Translate('Nowadays, despite all most casual situations, every person from Kid up to Businessman must be connected to the world. With newly developed 24 hours battery you\'re going to forget about lack of power in general.') . '</p>
                                </div>
                                <div class="col-md-4">
-                                   <h class="header-for-category">' . $this->model->Translate('High Performance') . '</h><br /><br />
+                                   <div class="default-height-for-header">
+                                       <h class="header-for-category">' . $this->model->Translate('High Performance') . '</h>
+                                   </div><br /><br />
                                    <p class="sub-h" style="text-align: left;">' . $this->model->Translate('The entire internal structure was built to keep the very best high-performance components: all-flash storage, the latest processors powerful discrete graphics, massive amounts of memory, autonomy.') . '</p>
                                </div>
                            </div>
@@ -190,15 +184,21 @@ class LaptopsView extends IndexView
                        <div class="col-md-10">
                            <div class="row">
                                <div class="col-md-4">
-                                   <h class="header-for-category">' . $this->model->Translate('Latest developments') . '</h><br /><br />
+                                   <div class="default-height-for-header">
+                                       <h class="header-for-category">' . $this->model->Translate('Latest developments') . '</h>
+                                   </div><br /><br />
                                    <p class="sub-h" style="text-align: left;">' . $this->model->Translate('Latest technologies give you a wide, 178-degree view of everything on the screen, so you\'ll see the difference at practically any angle.') . '</p>
                                </div>
                                <div class="col-md-4" style="border-right: 1px solid #e4e4e4; border-left: 1px solid #e4e4e4;">
-                                   <h class="header-for-category">' . $this->model->Translate('Retina display') . '</h><br /><br />
+                                   <div class="default-height-for-header">
+                                        <h class="header-for-category">' . $this->model->Translate('Retina display') . '</h>
+                                   </div><br /><br />
                                    <p class="sub-h" style="text-align: left;">' . $this->model->Translate('The Retina display also reduces glare while maintaining incredible color and quality. In fact,it has a 29 percent higher contrast ratio than a standard laptop from Apple display.') . '</p>
                                </div>
                                <div class="col-md-4">
-                                   <h class="header-for-category">' . $this->model->Translate('Graphics elaboration') . '</h><br /><br />
+                                   <div class="default-height-for-header">
+                                       <h class="header-for-category">' . $this->model->Translate('Graphics elaboration') . '</h>
+                                   </div><br /><br />
                                    <p class="sub-h" style="text-align: left;">' . $this->model->Translate('With new graphics cards from NVIDIA or Intel you can not look away from the screen at maximum resolution, not to mention the 5K video.') . '</p>
                                </div>
                            </div>
