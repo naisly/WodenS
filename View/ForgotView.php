@@ -42,7 +42,13 @@ class ForgotView extends DefaultView
 
         echo $this->model->Translate('We can help you reset your password and security info.') . '<br />' . $this->model->Translate('Follow the instructions below.') . '</h1>
                     </div>
-                    <form action="check-data" method="get">
+                    <form action="';
+
+        if($_SESSION['language'] !== 'us'){
+            echo '/' . $_SESSION['language'] . '/forgot-password/';
+        }
+
+        echo 'check-data" method="get">
 
                         <div class="container">
                             <div class="row">
@@ -54,13 +60,13 @@ class ForgotView extends DefaultView
         }
 
         echo                       '<div class="form-group" style="margin-top: 15px;">
-                                        <input type="email" class="form-control" placeholder="email@example.com" id="email" name="email" required />
+                                        <input type="email" style="background-color: white;" class="form-control" placeholder="email@example.com" id="email" name="email" required />
                                     </div>
 
                                     <div class="text-center" style="margin-top: 50px;">
                                         <button class="btn_as_link links" id="link">';
 
-        $this->model->Translate('Next');
+        echo $this->model->Translate('Next');
 
         echo                            '<img src="/images/arrow-blue.png" width="20" height="20"/></button>
                                     </div>
@@ -94,7 +100,13 @@ class ForgotView extends DefaultView
 
         echo              '</h1>
                     </div>
-                    <form action="check-data" method="get">
+                    <form action="';
+
+        if($_SESSION['language'] !== 'us'){
+            echo '/' . $_SESSION['language'] . '/forgot-password/';
+        }
+
+        echo 'check-data" method="get">
                         <input type="hidden" value="' . $_GET["email"] . '" name="email" id="email" />
 
                         <div class="container">
@@ -135,7 +147,13 @@ class ForgotView extends DefaultView
 
         echo              '</h1>
                     </div>
-                    <form action="check-data" method="get">
+                    <form action="';
+
+        if($_SESSION['language'] !== 'us'){
+            echo '/' . $_SESSION['language'] . '/forgot-password/';
+        }
+
+        echo 'check-data" method="get">
                         <input type="hidden" value="' . $_GET["email"] . '" name="email" id="email" />
                         <input type="hidden" value="' . $_GET["day_of_birth"] . '" name="day_of_birth" id="day_of_birth" />
 
@@ -205,7 +223,13 @@ class ForgotView extends DefaultView
 
         echo             '</h1>
                     </div>
-                    <form action="check-data" method="post">
+                    <form action="';
+
+        if($_SESSION['language'] !== 'us'){
+            echo '/' . $_SESSION['language'] . '/forgot-password/';
+        }
+
+        echo 'check-data" method="post">
                         <input type="hidden" value="' . $_GET["email"] . '" name="email" id="email" />
                         <input type="hidden" value="' . $_GET["day_of_birth"] . '" name="day_of_birth" id="day_of_birth" />
                         <input type="hidden" value="' . $_GET["sc-a-1"] . '" name="sc-a-1" id="sc-a-1" />

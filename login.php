@@ -22,7 +22,11 @@ $view = new LoginView($model);
 session_start();
 
 if(isset($_SESSION['login_user'])){
-    header('Location: /shop/account/');
+    if($_SESSION['language'] !== 'us') {
+        header('Location: /' . $_SESSION['language'] . '/account/');
+    } else {
+        header('Location: /account/');
+    }
 }
 
 $controller->actionGenerateSessionAuth();

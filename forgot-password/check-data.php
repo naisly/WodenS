@@ -13,6 +13,8 @@ $model = new ForgotModel();
 
 $controller = new ForgotController( $model );
 
+#$controller->actionGetHeaderCart();
+
 if(isset($_GET['email']) && !isset($_GET['day_of_birth'])){
     $controller->actionCheckEmail();
 } else if(isset($_GET['day_of_birth']) && !isset($_GET['sc-a-1'])){

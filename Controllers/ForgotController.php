@@ -26,6 +26,8 @@ class ForgotController extends DefaultController
 
     public function actionCheckEmail() {
 
+        $this->actionGetHeaderCart();
+
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
@@ -48,8 +50,6 @@ class ForgotController extends DefaultController
             }
         } else {
 
-            session_start();
-
             $this->actionGenerateSessionAuth();
             $_SESSION['session_auth'] = $this->model->getSessionAuth();
 
@@ -65,6 +65,7 @@ class ForgotController extends DefaultController
 
     public function actionCheckBirthday() {
 
+        $this->actionGetHeaderCart();
 
         include_once('/../Storage.php');
         $db = Storage::getInstance();
@@ -113,6 +114,8 @@ class ForgotController extends DefaultController
 
     public function actionGetQuestion() {
 
+        $this->actionGetHeaderCart();
+
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
@@ -139,6 +142,8 @@ class ForgotController extends DefaultController
     }
 
     public function actionCheckSecurityQuestions() {
+
+        $this->actionGetHeaderCart();
 
         include_once('/../Storage.php');
         $db = Storage::getInstance();
@@ -193,6 +198,8 @@ class ForgotController extends DefaultController
 
     public function actionChangePassword() {
 
+        $this->actionGetHeaderCart();
+
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
@@ -244,6 +251,8 @@ class ForgotController extends DefaultController
     }
 
     public function actionSaveDataFromInjection() {
+
+        $this->actionGetHeaderCart();
 
         include_once('/../Storage.php');
         $db = Storage::getInstance();

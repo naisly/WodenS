@@ -67,7 +67,7 @@ $lang = array(
     'My Orders' => 'Мои заказы',
     'Billing Info' => 'Доставка',
     'Most Valuable' => 'Важное',
-    'Site Terms' => 'Условия использывания',
+    'Site Terms' => 'Условия использования',
     'Privacy' => 'Приватность',
     'About Us' => 'Про Нас',
     'About' => 'Про Нас',
@@ -75,7 +75,7 @@ $lang = array(
     'Manage your ID' => 'Управление ID',
     'Privacy Policy' => 'Конфиденциальность',
     'Job possibilities' => 'Работа',
-    'About Us and Values' => 'Компания и обязаности',
+    'About Us and Values' => 'Компания и обязанности',
     'Contact Us' => 'Свяжитесь с нами',
     'For education & Business' => 'Для Образования & Бизнеса',
     'For Education' => 'Для Образования',
@@ -110,6 +110,7 @@ $lang = array(
     'One can receive and send emails, browse websites, download games and videos, book flight tickets, and even chat with friends.' => 'Кто-либо может получать и отправлять електонные письма, листать веб-сайты, скачивать игры и видео, иметь книгу авиаполетов, и списываться друг с другом.',
     'Be productive, move forward.' => 'Будьте продуктивны, двигайтесь вперед',
     'Reimagine work and tasks with next-generation Apps. Transform your business strategy. Be mobile as much as possible. Go in lockstep with future.' => 'Преосмотрите работу и задания с новыми приложениями. Трансформируйте вашу бизнес стратегию. Будьте мобильными настолько на сколько возможно. Двигайтесь нога в ногу с будущим.',
+
     /*
      * End Phones
      */
@@ -285,11 +286,11 @@ $lang = array(
      * Orders
      */
 
-    'Complete orders:' => '',
-    'No complete orders found' => '',
-    'Done orders:' => '',
-    'No done orders found' => '',
-    'Category:' => '',
+    'Complete orders:' => 'Запрошенные заказы',
+    'No complete orders found' => 'Не найдено запрошенных заказов',
+    'Done orders:' => 'Готовые заказы',
+    'No done orders found' => 'Не найдено готовых заказов',
+    'Category:' => 'Категория:',
     'Orders - Account' => 'Заказы - Аккаунт',
     'Orders' => 'Заказы',
     /*
@@ -348,7 +349,7 @@ $lang = array(
      */
 
     'Phones - Business' => 'Телефоны - Бизнес',
-    'When you use IOS or Android technology as one of the main business skills, newpossibilities are available. As many people that have phone, they love their work, productivity is increasing in a simple working day. Phones enable your mind with skills that never ever thought about before and operate with them in random tasks.' => 'При использовании IOS или Android технологии, одной из главных деловых навыков, новые возможности имеются. Как и многие люди, которые имеют телефон, они любят свою работу, производительность растет в простой рабочий день. Телефоны позволяют ваш разум с навыками, которые никогда не думали о до и работать с ними в случайных задач.',
+    'When you use IOS or Android technology as one of the main business skills, new possibilities are available. As many people that have phone, they love their work, productivity is increasing in a simple working day. Phones enable your mind with skills that never ever thought about before and operate with them in random tasks.' => 'При использовании IOS или Android технологии, одной из главных деловых навыков, новые возможности имеются. Как и многие люди, которые имеют телефон, они любят свою работу, производительность растет в простой рабочий день. Телефоны позволяют ваш разум с навыками, которые никогда не думали о до и работать с ними в случайных задач.',
     'With new tools for IT in IOS, great security you can hold any data in your Iphone.Powerful productivity features are pretty useful for your users needs and to make your workday mo productive.' => 'С новыми инструментами для ИТ в IOS, большой безопасности вы можете держать какие-либо данные в ваших Iphone.Powerful особенностей производительности довольно полезно для ваших нужд пользователей и сделать ваш рабочий день пн продуктивным.',
     'With Iphone, you are not going to miss any note for your business and stay up-to-date everywhere' => 'С Iphone, вы не собираетесь пропустить любую ноту для вашего бизнеса и оставаться актуальной во всем мире',
     'Reimagine your life with Iphone and Apps' => 'Переопределите Вашу жизнь с Iphone и приложениями',
@@ -597,6 +598,7 @@ $lang = array(
     'Many direct and indirect taxes exist in Germany; income tax and VAT are the most significant. The German word for tax is die Steuer which originates from the Old High German word stiura meaning help. The Financial Secrecy Index ranks Germany as the 8th safest tax haven in the world, ahead of Jersey but behind Lebanon.' => 'Существует множество прямых и косвенных налогов в Германии; налог на прибыль и НДС являются наиболее значимыми. Немецкое слово для налога умереть Стюер который происходит из Старого Высокого немецкого слова stiura смысл помощи. Индекс финансовой секретности занимает Германию 8 безопасным убежищем в налогового мире, опередив-Джерси, но за Ливане.',
     'According to the NKY 167.5.1 NDS was delivered as 20%. Plus, according to the military tax 1.5% of each sale is going as objective tax. Thus, 21.5% is the main tax The amount of tax calculated from the amount of interest accrued on the account and debited on a monthly basis.' => 'Согласно NKY 167.5.1 НДС был определен налог в 20%. Кроме того, в соответствии с военной налога 1,5% от каждой продажи идет как объективную налог. Таким образом, 21,5% является основным налог Сумма налога рассчитывается от суммы процентов, начисленных на счет и списания на ежемесячной основе.',
     'Apply for financing with Card usage by getting an Woden Sims shopping card' => 'Применить для финансирования с использованием карты на получение торговые карты Woden Sims',
+
     /*
      * End Financing page
      */
@@ -604,11 +606,22 @@ $lang = array(
     /*
      * Forgot password page
      */
+    'Any problems with Sign In?' => 'Какие-то проблемы с входом?',
+    'Recover your Woden Sims Account' => 'Востановление Аккаунта Woden Sims',
+    'Step 1' => 'Шаг 1',
+    'Step 2' => 'Шаг 2',
+    'Step 3' => 'Шаг 3',
+    'Next' => 'Далее',
+    'Reset Password' => 'Сбросить пароль',
+    'Forgot-password' => 'Воcстановление пароля',
+    'Secret Questions' => 'Секретные вопросы',
+    'Enter the new password and make sure that they are the same.' => 'Введите новый пароль и удостоверьтесь что они совпадают',
+    'Last step' => 'Последний шаг',
+    'Change your password' => 'Измените Ваш пароль',
     'Enter your Email to get started' => 'Введите e-mail, чтобы начать',
     'We can help you reset your password and security info.' => 'Мы можем помочь вам сбросить пароль и данные безопасности.',
     'Follow the instructions below.' => 'Следуйте инстурциям ниже.',
     'Email that you have written not found in our database! Please, check another one.' => 'Email, который вы написали не найден в нашей базе данных! Пожалуйста, проверьте его.',
-    'Next' => 'Далее',
     'Verify your birthday to continue.' => 'Проверьте свой день рождения, чтобы продолжить.',
     'Your information doesn\'t match the security information.' => 'Ваша информация не соответствует информации безопасности.',
     'Answer security questions' => 'Ответьте на секретные вопросы',
@@ -664,8 +677,8 @@ $lang = array(
     'Devise new sales or marketing strategies' => 'Разработать новые продажи или маркетинговых стратегий',
     'Work with other departments' => 'Работа с другими ведомствами',
     'Schedule appointments, calls, and meetings' => 'Расписание встреч, звонки и встречи',
-    'Be self motivated' => '',
-    'Be professional' => '',
+    'Be self motivated' => 'Будьте самомотивированными',
+    'Be professional' => 'Будьте професионалом',
     'Be passionate about the sales industry' => 'Будьте увлечены промышленности продаж',
     'Have superior expertise in sales' => 'Есть превосходные знания в области продаж',
     'Have quality customer service expertise' => 'Есть экспертиза качества обслуживания клиентов',
@@ -832,7 +845,7 @@ $lang = array(
     'Items that you have bought:' => 'Предметы которые Вы купили:',
     'in order' => 'в заказе',
     'For' => 'За',
-    'Ordered shipping:' => 'Зазначенная доставка:',
+    'Ordered shipping:' => 'Указанная доставка:',
     /*
      * End Order Status
      */
@@ -1032,7 +1045,7 @@ $lang = array(
     'Services' => 'Сервисов',
     'services, software and products (collectively the as the' => 'услуги, программное обеспечение и продукты (в совокупности, как',
     'hereinafter) is subject to the terms and conditions contained in this document as well as the' => 'далее) является предметом условий, содержащихся в этом документе, а также',
-    'the Product Listing Policy  and any other rules and policies of the Sites that' => '',
+    'the Product Listing Policy  and any other rules and policies of the Sites that' => 'список продуктов политики и любые другие правила и политики из сайтов, которые',
     'By accessing the Sites or using the Services, you agree to accept and be bound by the Terms.  Please do not use the Services or the Sites if you do not accept all of the Terms.' => 'Заходя на сайты или с помощью услуги, вы соглашаетесь принять и соблюдать Условия. Пожалуйста, не используйте Услуги или Сайтов, если вы не принимаете все Правила.',
     'may publish from time to time.  This document and such other rules and policies of the Sites are collectively referred to below as the' => 'может публиковать время от времени. Этот документ и другие подобные правила и политика Сайтов вместе именуются ниже как',
     'You may not use the Services and may not accept the Terms if (a) you are not of legal age to form a binding contract with' => 'Вы не вправе пользоваться Услугами и не можете принять Условия, если (а) вы не достигли установленного законом возраста для связывания контракт с',

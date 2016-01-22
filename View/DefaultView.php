@@ -777,6 +777,8 @@ class DefaultView
      */
     public function actionGetFooter($page)
     {
+        //session_start();
+
         echo '</div>
                 <footer>';
         if ($page !== 'financing' && $page !== 'Index' && $page !== 'Phones' && $page !== 'Devices' && $page !== 'Page Not Found' && $page !== 'Our Company' && $page !== 'Login' && $page !== 'Registration' && $page !== 'Phones - Business') {
@@ -1171,14 +1173,14 @@ class DefaultView
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
-        echo 'education/phones">';
+        echo 'education/phones/">';
         echo $this->model->Translate('Phones and Education');
         echo '</a></li>
                                         <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
-        echo 'education/laptops">';
+        echo 'education/laptops/">';
         echo $this->model->Translate('Laptops and Education');
         echo '</a></li>';
         echo '</ul>

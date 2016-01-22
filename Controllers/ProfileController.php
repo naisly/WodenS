@@ -32,9 +32,10 @@ class ProfileController extends DefaultController
     public function actionGetUserData() {
 
         session_start();
+        $this->actionGetHeaderCart();
 
         if(!isset($_SESSION['login_user'])){
-            if(isset($_SESSION['language']) && $_SESSION['language'] !== 'us') {
+            if($_SESSION['language'] !== 'us') {
                 header('Location: /' . $_SESSION['language'] . '/login');
             } else {
                 header('Location: /login');

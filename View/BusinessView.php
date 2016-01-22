@@ -70,17 +70,21 @@ class BusinessView extends DefaultView
                            <div class="col-md-10">
                                <div class="row">
                                    <div class="col-md-4">
-                                       <h class="category-main">';
+                                       <div class="height-for-h">
+                                           <h class="category-main">';
 
         echo $this->model->Translate('Laptops in business');
 
-        echo                          '</h><br /><br />
+        echo                          '</div>
+                                    </h><br /><br />
 
+                                    <div class="height-for-sm-h">
                                        <h class="sub-category">';
 
         echo $this->model->Translate('Being powerful and thin laptop, It gives you an advantage over opponents. Whether your data can be stored in one place, it also protected for unwanted eyes');
 
-        echo                          '</h><br /><br />
+        echo                          '</h>
+                                    </div><br /><br />
 
                                        <a class="links" id="main-link" href="/';
 
@@ -95,17 +99,21 @@ class BusinessView extends DefaultView
         echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></a>
                                    </div>
                                    <div class="col-md-4 spacer-for-small-devices">
-                                       <h class="category-main">';
+                                       <div class="height-for-h">
+                                            <h class="category-main">';
 
         echo $this->model->Translate('Phones in business');
 
-        echo                          '</h><br /><br />
+        echo                          '</div>
+                                    </h><br /><br />
 
+                                    <div class="height-for-sm-h">
                                        <h class="sub-category">';
 
         echo $this->model->Translate('Phones have powerful battery to still be connected to worldwide with complex and flex apps. Be always equipped with information about every a of business');
 
-        echo                          '</h><br /><br />
+        echo                          '</h>
+                                    </div><br /><br />
 
                                        <a class="links" id="main-link" href="/';
 
@@ -120,17 +128,21 @@ class BusinessView extends DefaultView
         echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></a>
                                    </div>
                                    <div class="col-md-4 spacer-for-small-devices">
-                                       <h class="category-main">';
+                                       <div class="height-for-h">
+                                           <h class="category-main">';
 
         echo $this->model->Translate('Devices in business');
 
-        echo                          '</h><br /><br />
+        echo                          '</div>
+                                    </h><br /><br />
 
+                                    <div class="height-for-sm-h">
                                        <h class="sub-category">';
 
         echo $this->model->Translate('Devices change the way of your work with yours partners by using thousands of different apps for business, that makes your productivity non-catchable.');
 
-        echo                          '</h><br /><br />
+        echo                          '</h>
+                                    </div><br /><br />
 
                                        <a class="links" id="main-link" href="/';
 

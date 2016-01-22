@@ -460,28 +460,22 @@ class DefaultController
     }
 
     private function actionGetLanguage() {
-
         //echo $_SESSION['language'];
         header("Content-Type: text/html; charset=utf-8");
         session_start();
-
         $language_array = ['ru', 'us', 'fr', 'de'];
-
         /*
          * Change for language
          */
         $pageURL = 'http';
-
         $pageURL .= "://";
         if ($_SERVER["SERVER_PORT"] != "80") {
             $pageURL .= $_SERVER["SERVER_NAME"] . ":" . $_SERVER["SERVER_PORT"] . $_SERVER["REQUEST_URI"];
         } else {
             $pageURL .= $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
         }
-
         $links_array = explode("/", $pageURL);
         $array = explode("/", $pageURL);
-
         if(in_array($array[3], $language_array)){
             $_SESSION['language'] = $array[3];
         } else {
@@ -490,7 +484,6 @@ class DefaultController
         /*
          * End
          */
-
         /*if(!isset($_SESSION['language'])){
             $_SESSION['language'] = 'us';
         }*/
@@ -498,14 +491,11 @@ class DefaultController
         //echo $_SESSION['language'];
         if($_SESSION['language'] !== 'us') {
             include_once('C:/xampp/htdocs/shop/Languages/lang.' . $_SESSION['language'] . '.php');
-
             if(isset($lang)) {
                 $this->model->setLanguage($lang);
             }
         }
-
         $language = $_SESSION['language'];
-
         switch ($language) {
             case 'ru': $name_of_country =  'Россия';
                 break;
@@ -516,14 +506,12 @@ class DefaultController
             case 'de': $name_of_country = 'Deutschland';
                 break;
         }
-
         foreach($language_array as $val => $assoc){
             if($assoc == $language){
                 unset($language_array[$val]);
             }
         }
         sort($language_array);
-
         $name_of_country_array = array();
         $i = 0;
         $k = count($language_array);
@@ -538,10 +526,8 @@ class DefaultController
                 case 'de': array_push($name_of_country_array, 'Deutschland');
                     break;
             }
-
             $i++;
         }
-
         /*
          * Setting Model
          */
@@ -578,7 +564,7 @@ class DefaultController
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
-        session_start();
+        //session_start();
         if(isset($_SESSION['login_user'])) {
             $user = $_SESSION['login_user'];
 
@@ -625,7 +611,7 @@ class DefaultController
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
-        session_start();
+        //session_start();
 
         if(isset($_SESSION['login_user'])) {
             $user = $_SESSION['login_user'];
@@ -707,9 +693,9 @@ class DefaultController
 
             $breadcrumbs_links = array();
 
-            if (session_status() == PHP_SESSION_NONE) {
+            /*if (session_status() == PHP_SESSION_NONE) {
                 session_start();
-            }
+            }*/
 
             if(in_array($languages, $language_check)) {
                 $breadcrumbs_links[0] = 'http://localhost:8080';
@@ -764,6 +750,17 @@ class DefaultController
             } /*else {
                 $count = count($links_array) - 1;
             }*/
+
+            //print_r($array);
+            $i = 0;
+            while($i < count($array)){
+                if(substr($array[$i], 0, 1) == '?'){
+                    array_pop($array);
+                    array_pop($breadcrumbs_links);
+                }
+
+                $i++;
+            }
 
             $this->model->setBreadcrumbs( $array );
             $this->model->setBreadcrumbsLink( $breadcrumbs_links );

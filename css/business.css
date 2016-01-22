@@ -30,6 +30,12 @@
     font-family: RobotoLight;
     text-decoration: none !important;
 }
+.height-for-h {
+    height: 100px;
+}
+.height-for-sm-h {
+    height: 170px;
+}
 
 
 @media (max-width: 766px){

@@ -32,7 +32,7 @@ class SupView extends IndexView
 
     private function getMain() {
 
-        echo '<div class="support-bg">
+        echo '<div class="support-bg" style="margin-top: -80px;">
                   <div class="container">
                       <div class="row">
                           <div class="col-md-1"></div>

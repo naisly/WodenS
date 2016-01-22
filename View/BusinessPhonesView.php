@@ -49,7 +49,7 @@ class BusinessPhonesView extends DefaultView
                           <div class="col-md-8">
                               <h class="sub-main-header">';
 
-        echo $this->model->Translate('When you use IOS or Android technology as one of the main business skills, newpossibilities are available. As many people that have phone, they love their work, productivity is increasing in a simple working day. Phones enable your mind with skills that never ever thought about before and operate with them in random tasks.');
+        echo $this->model->Translate('When you use IOS or Android technology as one of the main business skills, new possibilities are available. As many people that have phone, they love their work, productivity is increasing in a simple working day. Phones enable your mind with skills that never ever thought about before and operate with them in random tasks.');
 
         echo                 '</h>
                           </div>
