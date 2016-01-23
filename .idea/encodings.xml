@@ -7,10 +7,5 @@
     <file url="file://$PROJECT_DIR$/Languages/lang.ru.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Model/DefaultModel.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/View/DefaultView.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ru/Controllers/DefaultController.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ru/Languages/lang.fr.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ru/Languages/lang.ru.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ru/Model/DefaultModel.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ru/View/DefaultView.php" charset="UTF-8" />
   </component>
 </project>

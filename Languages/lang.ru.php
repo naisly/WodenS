@@ -87,7 +87,7 @@ $lang = array(
     'Phones in Business' => 'Телефоны для Бизнеса',
     'Devices in Business' => 'Девайсы для Бизнеса',
     'For more info about return items and shopping & delivery' => 'Для большей информации об возвращении предметов и сроках доставки & доставке',
-    'Copyright &copy; Woden S Inc. All rights reserved.' => 'Авторские права. Woden S Inc. Все права защищены',
+    'Copyright &copy; Woden S Inc. All rights reserved.' => 'Авторские права. &copy; Woden S Inc. Все права защищены',
     /*
      * End Footer
      */
