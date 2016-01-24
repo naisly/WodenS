@@ -113,7 +113,7 @@ class TermsView extends DefaultView
                        <a href="http://woden-sims.hol.es">Woden-sims.hol.es </a>' . $this->model->Translate('may launch, change, upgrade, impose conditions to, suspend, or stop any Services (or any features within the Services) without prior notice except that in case of a fee-based Service, such changes will not substantially adversely affect the paying Users in enjoying that Service.') . '
                    </h1>
                    <h1 class="sub-header-terms">
-                       ' . $this->model->Translate('Some Services may be provided by') . ' <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a> ' . $this->model->Translate('affiliates on behalf of') . '<a href="http://woden-sims.hol.es">Woden-sims.hol.es</a>.
+                       ' . $this->model->Translate('Some Services may be provided by') . ' <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a> ' . $this->model->Translate('affiliates on behalf of') . ' <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a>.
                    </h1>
 
                    <div id="users-generally"></div>
@@ -125,18 +125,18 @@ class TermsView extends DefaultView
                    </h1>
                    <h1 class="sub-header-terms">
                        ' . $this->model->Translate('You agree to use the Sites or Services solely for your own private and internal purposes. You agree that (a) you will not copy, reproduce, download, re-publish, sell, distribute or resell any Services or any information, text, images, graphics, video clips, sound, directories, files, databases or listings, etc available on or through the Sites (the "Site Content"), and (b) you will not copy, reproduce, download, compile or otherwise use any Site Content for the purposes of operating a business that competes with') . '
-                       <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a>,' . $this->model->Translate('or otherwise commercially exploiting the Site Content. Systematic retrieval of Site Content from the Sites to create or compile, directly or indirectly, a collection, compilation, database or directory (whether through robots, spiders, automatic devices or manual processes) without written permission from') . '
+                       <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a>, ' . $this->model->Translate('or otherwise commercially exploiting the Site Content. Systematic retrieval of Site Content from the Sites to create or compile, directly or indirectly, a collection, compilation, database or directory (whether through robots, spiders, automatic devices or manual processes) without written permission from') . '
                        <a href="http://woden-sims.hol.es">Woden-sims.hol.es </a>' . $this->model->Translate('is prohibited. Use of any content or materials on the Sites for any purpose not expressly permitted in the Terms is prohibited.') . '
                    </h1>
                    <h1 class="sub-header-terms">
-                       ' . $this->model->Translate('You must read') . '<a href="http://woden-sims.hol.es">Woden-sims.hol.es</a> <a href="/';
+                       ' . $this->model->Translate('You must read') . ' <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a> <a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
         echo 'privacy-policy/">' . $this->model->Translate('Privacy Policy') . ' </a>' . $this->model->Translate('which governs the protection and use of personal information about Users in the possession of') . '
-        <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a>' . $this->model->Translate('and our affiliates. You accept the terms of the') . '
+        <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a> ' . $this->model->Translate('and our affiliates. You accept the terms of the') . '
         <a href="/';
 
         if ($_SESSION['language'] !== 'us') {
@@ -153,8 +153,8 @@ class TermsView extends DefaultView
         echo 'privacy-policy/">' . $this->model->Translate('Privacy Policy') . '</a>.
                    </h1>
                    <h1 class="sub-header-terms">
-                       <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a>' . $this->model->Translate('may allow Users to access to content, products or services offered by third parties through hyperlinks (in the form of word link, banners, channels or otherwise), API or otherwise to such third parties\' web sites. You are cautioned to read such web sites\' terms and conditions and/or privacy policies before using the Sites. You acknowledge that') . '
-                       <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a>' . $this->model->Translate('has no control over such third parties\' web sites, does not monitor such web sites, and shall not be responsible or liable to anyone for such web sites, or any content, products or services made available on such web sites.') . '
+                       <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a> ' . $this->model->Translate('may allow Users to access to content, products or services offered by third parties through hyperlinks (in the form of word link, banners, channels or otherwise), API or otherwise to such third parties\' web sites. You are cautioned to read such web sites\' terms and conditions and/or privacy policies before using the Sites. You acknowledge that') . '
+                       <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a> ' . $this->model->Translate('has no control over such third parties\' web sites, does not monitor such web sites, and shall not be responsible or liable to anyone for such web sites, or any content, products or services made available on such web sites.') . '
                    </h1>
 
                    <div id="member-accounts"></div>

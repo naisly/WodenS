@@ -139,29 +139,29 @@ class BusinessLaptopsView extends DefaultView
 
         echo $this->model->Translate('Be in touch with others by using laptop. For non-resident calls laptops have');
 
-        echo '<a id="apps-link" href="http://skype.com">Skype</a>';
+        echo ' <a id="apps-link" href="http://skype.com">Skype</a> ';
 
         echo $this->model->Translate('or');
 
-        echo '<a id="apps-link" href="http://skyp.com">Viber</a>';
+        echo ' <a id="apps-link" href="http://skyp.com">Viber</a> ';
 
         echo $this->model->Translate('for free calls. In addition, social networks are available with fast 3G like');
 
-        echo '<a id="apps-link" href="http://twitter.com">Twitter</a>, <a id="apps-link" href="http://facebook.com">Facebook</a>, <a id="apps-link" href="http://vk.com">VK</a>.
+        echo ' <a id="apps-link" href="http://twitter.com">Twitter</a>, <a id="apps-link" href="http://facebook.com">Facebook</a>, <a id="apps-link" href="http://vk.com">VK</a>.
                                           </h><br /><br />
                                           <h class="sub-better">';
 
         echo $this->model->Translate('Make your photos available for everyone for likes or dislikes, like');
 
-        echo '<a id="apps-link" href="http://instagram.com">Instagram</a>.';
+        echo ' <a id="apps-link" href="http://instagram.com">Instagram</a>.';
 
         echo $this->model->Translate('For each photo, available');
 
-        echo '<a href="www.appstore.com" id="apps-link">Apple Store</a>';
+        echo ' <a href="www.appstore.com" id="apps-link">Apple Store</a> ';
 
         echo $this->model->Translate('App called');
 
-        echo '<a id="apps-link" href="www.instaphoto.ru">Instaphoto</a>';
+        echo ' <a id="apps-link" href="www.instaphoto.ru">Instaphoto</a> ';
 
         echo $this->model->Translate('to share your photos instantly.');
 

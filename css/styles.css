@@ -453,7 +453,7 @@ a:hover {
 	font: inherit;
 	/*border is optional*/
 	cursor: pointer;
-	font-size: 12px;
+	font-size: 0.9em;
 	font-family: RobotoLight;
 }
 #link_as_button:hover {

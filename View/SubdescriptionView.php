@@ -630,7 +630,7 @@ class SubdescriptionView extends DefaultView
 
     private function getPopularRequets(){
 
-        echo '<h1 class="popular">Most popular requests</h1>
+        echo '<h1 class="popular">' . $this->model->Translate('Most popular requests') . '</h1>
                    <ul class="popular-nav">
                           <li class="p-links"><a href="/FAQ/?q=Does this will work in Ukraine?">Does this will work in Ukraine?</a></li>
                           <li class="p-links"><a href="/FAQ/?q=Can i use this Phone in Trinidad & Tobago">Can i use this Phone in Trinidad & Tobago</a></li>

@@ -62,8 +62,8 @@ class PrivacyView extends DefaultView
               <div class="paddings-terms-content">
 
                    <h1 class="sub-header-terms">
-                        <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a>' . $this->model->Translate('(called a "Site") is electronic commerce platform are predominantly used by business entities to facilitate electronic commerce and such business use does not generally involve the collection of personal information of individuals.') . '
-                        <a href="http://woden-sims.hol.es">Woden Sims</a>' . $this->model->Translate('recognizes the importance of privacy as well as the importance of maintaining the confidentiality of personal information. This Privacy Policy applies to all products and services provided by us and sets out how we may collect, use and disclose information in relation to users of the Sites.') . '
+                        <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a> ' . $this->model->Translate('(called a "Site") is electronic commerce platform are predominantly used by business entities to facilitate electronic commerce and such business use does not generally involve the collection of personal information of individuals.') . '
+                        <a href="http://woden-sims.hol.es">Woden Sims</a> ' . $this->model->Translate('recognizes the importance of privacy as well as the importance of maintaining the confidentiality of personal information. This Privacy Policy applies to all products and services provided by us and sets out how we may collect, use and disclose information in relation to users of the Sites.') . '
                    </h1>
 
                    <h1 class="sub-header-terms">

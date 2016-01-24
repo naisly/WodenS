@@ -12,9 +12,9 @@ $lang = array(
     /*
      * Index View
      */
-    'Thin, powerful devices are developing to make your life as complex as possible. Productive, easy-to-use desktop computers going to flip absolutely your way of thinking at all.' => 'Тонкие, мощные устройства развиваются, чтобы ваша жизнь так сложно, как это возможно. Производительный, простой в использовании Настольные компьютеры собираются абсолютно перевернуть мышление вообще.',
+    'Thin, powerful devices are developing to make your life as complex as possible. Productive, easy-to-use desktop computers going to flip absolutely your way of thinking at all.' => 'Тонкие, мощные устройства развиваются, чтобы ваша жизнь стала такой легкой, как только это возможно. Производительный, простой в использовании. Ноутбуки собираются перевернуть образ мышления абсолютно.',
     'There\'s nothing quite like this.' => 'Нет ничего, похожего на это',
-    'Devices.' => 'Девайсы.',
+    'Devices.' => 'Планшеты.',
     'Thin. Lightweight. Epic.' => 'Тонкий. Легкий. Эпический.',
     'Laptops. Change your way of thinking.' => 'Ноутбуки. Измените манеру размышления.',
     'Powerful as never before.' => 'Сильный как никак раньше.',
@@ -23,7 +23,7 @@ $lang = array(
     'Visit our online store. Place orders, then wait for shipping or pick up at any store.' => 'Посетите наш интернет мазагин. Оставляйте заказы, потом ждите доставку или заберите в ближайшем магазине',
     'Phones' => 'Телефоны',
     'Laptops' => 'Ноутбуки',
-    'Devices' => 'Девайсы',
+    'Devices' => 'Планшеты',
     'TV' => 'TV',
     /*
      * End Index View
@@ -85,9 +85,10 @@ $lang = array(
     'Search for Business' => 'Искать для Бизнеса',
     'Laptops in Business' => 'Ноутбуки для Бизнеса',
     'Phones in Business' => 'Телефоны для Бизнеса',
-    'Devices in Business' => 'Девайсы для Бизнеса',
+    'Devices in Business' => 'Планшеты для Бизнеса',
     'For more info about return items and shopping & delivery' => 'Для большей информации об возвращении предметов и сроках доставки & доставке',
-    'Copyright &copy; Woden S Inc. All rights reserved.' => 'Авторские права. &copy; Woden S Inc. Все права защищены',
+    'Copyright &copy; Woden Sims Inc. All rights reserved.' => 'Авторские права. &copy; Woden Sims Inc. Все права защищены',
+    'Woden Sims Inc. All rights reserved.' => 'Woden Sims Inc. Все права защищены.',
     /*
      * End Footer
      */
@@ -120,8 +121,8 @@ $lang = array(
      */
     'Reliable personal tested by time. Award-store.' => 'Надежный персонал проверенный временем. Удостоенный магазин.',
     'Walking in lockstep with new technologies' => 'Двигаемся нога в ногу с новыми технологиями',
-    'Since 1984, world has seen a great many changes in its business, its products, its services. Change always comes with opportunity. And Serdiuk has always been ready and willing to embrace it. By the time, Woden Sims never forgotten core values thanks to which the Store became real, such as lightweight prices, high quality of provided items.' => 'С 1984 года мир увидел очень много изменений в своем бизнесе, своей продукции, своих услуг. Изменить всегда приходит с возможностью. И Deere всегда готовы и готовы принять его. К этому времени Woden Sims никогда не забыли основные ценности, благодаря которым магазин стал реальным, например, легких цены, высокое качество предоставляемых пунктов.',
-    'Those values determine the way we work, the quality we offer, and the unsurpassed treatment you get as a customer, investor, employee.' => 'Эти значения определяют, как мы работаем, качество, мы предлагаем, и непревзойденный лечение вы получаете в качестве клиента, инвестора, работника.',
+    'Since 1984, world has seen a great many changes in its business, its products, its services. Change always comes with opportunity. And Serdiuk has always been ready and willing to embrace it. By the time, Woden Sims never forgotten core values thanks to which the Store became real, such as lightweight prices, high quality of provided items.' => 'С 1984 года мир увидел очень много изменений в своем бизнесе, своей продукции, своих услуг. Изменения всегда приходят с возможностью. И Deere всегда готов и готовы принять его. К этому времени Woden Sims никогда не забыли основные ценности, благодаря которым магазин стал реальным, например, легких цены, высокое качество предоставляемых пунктов.',
+    'Those values determine the way we work, the quality we offer, and the unsurpassed treatment you get as a customer, investor, employee.' => 'Эти значения определяют, как мы работаем, качество, которые мы предлагаем, и непревзойденные желания которые вы получаете в качестве клиента, инвестора, работника.',
     'Career opportunities' => 'Карьерные возможности',
     'Make your routine day as diverse as it could be.' => 'Сделайте ваш режим дня, на столько разнообразным, как это может быть.',
     'Join our team' => 'Присоединяйтесь к нашей команде',
@@ -301,7 +302,7 @@ $lang = array(
      * Business devices
      */
 
-    'Devices - Business' => 'Девайсы - Бизнес',
+    'Devices - Business' => 'Планшеты - Бизнес',
     'Moving in lockstep with business' => 'Двигаясь нога в ногу с бизнесом',
     'When you use MAC OS X or Windows technology as one of the main business skills, new possibilities are available. As many people that have laptop, they love their work, productivity is increasing in a simple working day. Devices enable your mind with skills that never ever thought about before and operate with them in random tasks.' => 'При использовании Mac OS X или Windows, а технологии одной из главных деловых навыков, новые возможности имеются. Как и многие люди, которые имеют ноутбук, они любят свою работу, производительность растет в простой рабочий день. Устройства позволяют ваш разум с навыками, которые никогда не думали о до и работать с ними в случайных задач.',
     'Better than you can just imagine' => 'Лучше чем вы можете даже представить',
@@ -311,7 +312,7 @@ $lang = array(
     'The suite of electronic tools a business needs to conduct daily operations is shifting. At one time, a business owner needed an Office suite, e-mail, and industry-specific software to open for business.' => 'В суете электронных средств бизнес должен вести ежедневные операции смещается. В свое время, владелец бизнеса нужен офисный пакет, электронной почты, и отраслевые программы, чтобы открыть для бизнеса.',
     'Everything from billing and scheduling to project management may be moved to Cloud-based apps, allowing small businesses with small budgets to compete against much larger companies.' => 'Все, начиная от биллинга и планирования в управлении проектами могут быть перемещены в приложениях облачных, что позволяет малым предприятиям с небольшими бюджетами, чтобы конкурировать с более крупными компаниями.',
     'Reimagine your life with Ipad and Apps' => 'Пересмотрите Вашу жизнь с Ipad и приложениями',
-    'Be in touch with others by using Ipad. For non-resident calls devices have' => 'Будьте связаны с другими используя Ipad. Для международних звонков девайсы имеют',
+    'Be in touch with others by using Ipad. For non-resident calls devices have' => 'Будьте связаны с другими используя Ipad. Для международних звонков планшеты имеют',
     'or' => 'или',
     'for free calls. In addition, social networks are available with fast 3G like' => 'для бесплатных звонков. В дополнение, социальные сети доступны всегда с быстрым 3G такие как',
     'Make your photos available for everyone for likes or dislikes, like' => 'Сделайте ваши фотографии доступными для всех, для лайков и дизлайков, такие как',
@@ -321,7 +322,7 @@ $lang = array(
     'A lot of Cloud Apps' => 'Много Облачных приложений',
     'Cloud providers who provide connectivity from any approved device will be at an advantage as businesses begin to troubleshoot ways they can continue to do business in a mobile-preferred workplace.' => 'Облако провайдеров, которые предоставляют подключение от проверенного устройства будет преимущество, как предприятия начинают устранять, как они могут продолжать делать бизнес в мобильном-Удобнее рабочем месте.',
     'When a new solution is needed, businesses will be able to immediately find and download that solution without having to pay a team of software developers to create one.' => 'Когда новое решение необходимо, предприятия смогут сразу найти и скачать это решение без того, чтобы платить команду разработчиков программного обеспечения, чтобы создать одну.',
-    'Search device for business' => 'Искать девайс для бизнеса',
+    'Search device for business' => 'Искать планшет для бизнеса',
 
     /*
      * End Business devices
@@ -370,7 +371,7 @@ $lang = array(
     'Learn more' => 'Узнать больше',
     'Phones have powerful battery to still be connected to worldwide with complex and flex apps. Be always equipped with information about every a of business' => 'Телефоны имеют мощный аккумулятор по-прежнему быть подключены к всемирно со сложными и гибких приложений. Будьте всегда оснащены с информацией о каждом а бизнес',
     'Laptops in business' => 'Ноутбуки для бизнеса',
-    'Devices in business' => 'Девайсы для бизнеса',
+    'Devices in business' => 'Планшеты для бизнеса',
     'Phones in business' => 'Телефоны для бизнеса',
     'Devices change the way of your work with yours partners by using thousands of different apps for business, that makes your productivity non-catchable.' => 'Устройства изменить способ вашей работы с вашим партнерам с помощью тысячи различных приложений для бизнеса, что делает вашу производительность неуловимой',
 
@@ -393,6 +394,8 @@ $lang = array(
     'Number is located with thanks message or in your account' => 'Номер располагаеться в Вашем аккаунте или в сообщении',
     'For any questions contact our lead customers' => 'По любым вопросам обращайтесь к нашим главным сотрудникам',
     'Order-status' => 'Статус заказа',
+
+    'Thanks message' => 'Спасибо',
     /*
      * End Check Order
      */
@@ -485,7 +488,7 @@ $lang = array(
     'Buy Laptop' => 'Купить Ноутбук',
     'Buy Ipad' => 'Купить Ipad',
     'Buy Galaxy Tab' => 'Купить Galaxy Tab',
-    'Buy Device' => 'Купить Девайс',
+    'Buy Device' => 'Купить Планшет',
     /*
      * End Shop
      */
@@ -506,15 +509,17 @@ $lang = array(
     'Family Entertainment' => 'Семейное развлечение',
     'When you combine Apple\'s rigorous inspection of each app with the parental controls found in their iOS devices and the thousands of great games and apps on the iPad, you get the perfect family entertainment system.' => 'Если вы объедините строгую проверку от Apple каждого приложения с родительского контроля, обнаруженных в их IOS устройств и тысячи великих игр и приложений на Ipad, вы получите совершенную систему развлечения для всей семьи.',
     'Interactive performance with other devices' => 'Интерактивный перформанс с другими устройствами',
-    'Now, using of Icloud as well as OneDrive is actual much' => 'еперь, используя в ICloud а также OneDrive актуальна много',
+    'Now, using of Icloud as well as OneDrive is actual much' => 'Теперь, используя в ICloud а также OneDrive актуальна много',
     'Icloud. Connect with Apple TV. Share Data.' => 'ICloud. Связаться с Apple TV. Распространение данных.',
-    'Using of Icloud you can share Photos, Videos, apps with another devices such as Iphones, Imac, Macbook that is really useful. You can send an request for your Apple TV to see the Full HD video on your TV. The same works for all devices that are compatible and uses Windows' => 'Использование ICloud вы можете обмениваться фотографиями, видео, приложения с еще устройств, таких как Iphones, Imac, Macbook, что действительно полезно. Вы можете отправить запрос для вашего Apple TV, чтобы увидеть видео Full HD на телевизоре. Те же работы для всех устройств, которые совместимы и использует Windows,',
+    'Using of Icloud you can share Photos, Videos, apps with another devices such as Iphones, Imac, Macbook that is really useful. You can send an request for your Apple TV to see the Full HD video on your TV. The same works for all devices that are compatible and uses Windows' => 'Использование ICloud вы можете обмениваться фотографиями, видео, приложения с еще устройств, таких как Iphones, Imac, Macbook, что действительно полезно. Вы можете отправить запрос для вашего Apple TV, чтобы увидеть видео Full HD на телевизоре. Те же работы для всех устройств, которые совместимы и использует Windows',
     'Thin. Incredible. Useful for day-to-day life.' => 'Тонкий. Невероятный. Полезно для жизни изо дня в день.',
     'Apple designed and made 6.1 mm thin device for your needs. Now, you will never be worry about where to place this incredible thing. Newly, developed Ipad weight only 1 pound that is really useful for teenth, day-to-day life.' => 'Apple, разработаны и изготовлены 6.1 мм тонкий устройство для ваших нужд. Теперь вы никогда не будет беспокоиться о том, где разместить эту невероятную вещь. Недавно, разработаны Ipad вес только 1 фунт, что на самом деле полезно для надцатого, жизнь изо дня в день.',
     'Thin. Productive. Practical.' => 'Тонкий. Продуктивный. Практический.',
     'Order it now' => 'Заказать сейчас',
     'Reimagine your life with new technology' => 'Переопредилите Вашу жизнь с новыми технологиями',
     'Discover for business' => 'Откройте для бизнеса',
+
+    'Frequently Asked Questions' => 'Часто задаваемые вопросы',
 
     /*
      * End Devices
@@ -596,7 +601,7 @@ $lang = array(
     'Taxes in Poland are levied by both the federal and regional governments. Tax revenue in Poland is 31.7% of the country\'s GDP in 2009. The most important revenue sources include the income tax, Social Security, corporate tax and the value added tax, which are all applied on the national level. Income earned is generally subject to a progressive income tax, which apply to all who are in the workforce. For the year 2014, two different tax rates on income apply.' => 'Налоги в Польше взимаются на федеральном и региональных органов власти. Налоговые поступления в Польше составляет 31,7% территории страны ВВП в 2009 году наиболее важные источники доходов включают подоходный налог, социальное обеспечение, корпоративный налог и налог на добавленную стоимость, которые все применяются на национальном уровне. Доход, как правило, подлежат прогрессивного подоходного налога, которые применяются ко всем, кто находится в рабочей силе. Для 2014 года, два различные налоговые ставки на доходы применяется.',
     'The Code is designed as a complete national system for federal, regional and local taxes but excludes customs tariffs. Rules and rates of regional and local taxation must conform to the framework established by the Code. Taxes or levies not listed explicitly by the Code or enacted in violation of its specific provisions are deemed illegal and void.' => 'Кодекс разработан в качестве полной национальной системы федеральных, региональных и местных налогов, но исключает таможенных тарифов. Правила и нормы регионального и местного налогообложения должны соответствовать рамках, установленных настоящим Кодексом. Налогов или сборов, не перечисленные в явном виде кодекса или принятые в нарушение своих конкретных положений считаются незаконными и недействительными.',
     'Many direct and indirect taxes exist in Germany; income tax and VAT are the most significant. The German word for tax is die Steuer which originates from the Old High German word stiura meaning help. The Financial Secrecy Index ranks Germany as the 8th safest tax haven in the world, ahead of Jersey but behind Lebanon.' => 'Существует множество прямых и косвенных налогов в Германии; налог на прибыль и НДС являются наиболее значимыми. Немецкое слово для налога умереть Стюер который происходит из Старого Высокого немецкого слова stiura смысл помощи. Индекс финансовой секретности занимает Германию 8 безопасным убежищем в налогового мире, опередив-Джерси, но за Ливане.',
-    'According to the NKY 167.5.1 NDS was delivered as 20%. Plus, according to the military tax 1.5% of each sale is going as objective tax. Thus, 21.5% is the main tax The amount of tax calculated from the amount of interest accrued on the account and debited on a monthly basis.' => 'Согласно NKY 167.5.1 НДС был определен налог в 20%. Кроме того, в соответствии с военной налога 1,5% от каждой продажи идет как объективную налог. Таким образом, 21,5% является основным налог Сумма налога рассчитывается от суммы процентов, начисленных на счет и списания на ежемесячной основе.',
+    'According to the NKY 167.5.1 NDS was delivered as 20%. Plus, according to the military tax 1.5% of each sale is going as objective tax. Thus, 21.5% is the main tax The amount of tax calculated from the amount of interest accrued on the account and debited on a monthly basis.' => 'Согласно НБУ 167.5.1 НДС был определен налог в 20%. Кроме того, в соответствии с военной налога 1,5% от каждой продажи идет как объективную налог. Таким образом, 21,5% является основным налог Сумма налога рассчитывается от суммы процентов, начисленных на счет и списания на ежемесячной основе.',
     'Apply for financing with Card usage by getting an Woden Sims shopping card' => 'Применить для финансирования с использованием карты на получение торговые карты Woden Sims',
 
     /*

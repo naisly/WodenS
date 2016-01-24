@@ -65,7 +65,7 @@ class EducationPhonesView extends DefaultView
         echo                           '</h><br />
 
                                         <div class="content-phones">
-                                            <h id="sub-every-phones"><a style="color: #1b6d85; text-decoration: none" href="http://dropbox.com">Dropbox</a>:';
+                                            <h id="sub-every-phones"><a style="color: #1b6d85; text-decoration: none" href="http://dropbox.com">Dropbox</a>: ';
 
         echo $this->model->Translate('One of my most beloved apps is dropbox. Dropbox allows all my computers and my phone to interact together. So the photo I take on my cell phone can be put in my Dropbox app and now it is available on all my devices, love it!');
 
@@ -76,7 +76,7 @@ class EducationPhonesView extends DefaultView
                                     <img src="/images/dropbox.png" width="170" height="170" id="dropbox" />
 
                                     <div class="content-phones">
-                                        <h id="sub-every-phones"><a style="color: #1b6d85; text-decoration: none" href="http://www.adobe.com/ru/products/photoshop.html">Photoshop</a>:';
+                                        <h id="sub-every-phones"><a style="color: #1b6d85; text-decoration: none" href="http://www.adobe.com/ru/products/photoshop.html">Photoshop</a>: ';
 
         echo $this->model->Translate('Next, in line is going app is photoshop. Photoshop allows you to improve photos and interact lots of items together. Its now available on phones based on Windows OS');
 
@@ -97,7 +97,7 @@ class EducationPhonesView extends DefaultView
 
         echo $this->model->Translate('As more curriculum materials are delivered digitally creative teachers are delivering materials directly to students on their personal cell phones. One such platform is');
 
-        echo '<a href="http://schooltown.net">School Town</a>.';
+        echo ' <a href="http://schooltown.net">School Town</a>.';
 
         echo $this->model->Translate('This learning platform makes it possible for teachers and students to collaborate in discussion areas and chat with each other making blended learning a real possibility.');
 

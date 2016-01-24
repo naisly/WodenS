@@ -74,10 +74,13 @@ $lang = array(
     'For more info about return items and shopping & delivery' => 'Pour une information majeure de un retour un objets et un limites une livraison & une livraison',
     'Copyright &copy; Woden S Inc. All rights reserved.' => 'Copyrights. &copy; Woden S Inc. Un droits entiers infraudable',
 
+    'Frequently Asked Questions' => 'Questions fréquemment posées',
+    'Woden Sims Inc. All rights reserved.' => 'Autorenrechte. &copy; Woden Sims Inc. All Anrechte ist geschützt',
+
     'The only thing that can change your life absolutely.' => 'Seul eux, peuvent contrefaire votre vie absolument.',
     'Describe new possibilities.' => 'Essaient un débouchés\' nouveaux',
-    'For education' => 'Pour un enseignement',
-    'For business' => 'Pour un business',
+    'For education' => 'Pour un Enseignement',
+    'For business' => 'Pour un Business',
     'Buy' => 'Acheter',
     'Most people have at least a simple, if not sophisticated, mobile phone. These devices are convenient to carry around and you can use them on the go as long as there is network coverage wherever you are. Mobile phones have clearly made it easier to communicate.' =>
     'beaucoup de gens ont comme min un téléphone accoutumé, si un téléphone non abrupt, mobile. Ces agencements fait que vous ressentirent soi calmement et utiliser eux on peut dans une ne importe quel zone un revêtement un filet. Un téléphones mobiles firent une possibilité contact aisé que nulle part.',
@@ -243,7 +246,7 @@ $lang = array(
     'Orders - Account' => 'Commandes - sont Account',
     'Orders' => 'Commandes',
 
-    'Devices - Business' => 'Plaques - un business',
+    'Devices - Business' => 'Plaques - un Business',
     'Moving in lockstep with business' => 'Avance un pied un pied avec un business',
     'When you use MAC OS X or Windows technology as one of the main business skills, new possibilities are available. As many people that have laptop, they love their work, productivity is increasing in a simple working day. Devices enable your mind with skills that never ever thought about before and operate with them in random tasks.' => 'Sous un recours Mac OS X ou Windows, et un technologies seul de un un affaires habitudes capitales, un débouchés nouveaux se ont. Comme et un beaucoup de gens, dont ont notebook, eux aiment leur travail, une efficacité un croît un ouvrable jour frugal. Un agencements permettent votre raison avec un habitudes, dont jamais non crurent de avant et exercer avec eux dans un problèmes accidentels.',
     'Better than you can just imagine' => 'Mieux que vous peuvent même déposer',
@@ -265,7 +268,7 @@ $lang = array(
     'When a new solution is needed, businesses will be able to immediately find and download that solution without having to pay a team of software developers to create one.' => 'Lorsque une un nouveau décision indispensable, un entreprises peuvent immédiatement retrouver et télécharger cette décision sans celui, pour payer un commandement un concepteurs un logiciel, pour constituer seul.',
     'Search device for business' => 'Chercher un objet pour un business',
 
-    'Laptops - Business' => 'Notebooks - est un business',
+    'Laptops - Business' => 'Notebooks - est un Business',
     'When you use MAC OS X or Windows technology as one of the main business skills, new possibilities are available. As many people that have laptop, they love their work, productivity is increasin in a simple working day. Laptops enable your mind with skills that never ever thought about before and operate with them in random tasks.' => 'Sous un recours Mac OS X ou Windows, et un technologies seul de un un affaires habitudes capitales, un débouchés nouveaux se ont. Comme et un beaucoup de gens, dont ont notebook, eux aiment leur travail, une efficacité un croît un ouvrable jour frugal. Notebooks brancher leur esprit avec un habitudes, dont jamais non crurent de avant et exercer avec eux dans un problèmes accidentels.',
     'With new tools for IT in IOS, great security you can hold any data in your Laptop. Powerful productivity features are pretty useful for your users needs and to make your workday more productive.' => 'Avec un instruments nouveaux pour dans IOS, une sécurité grande vous peuvent réaliser toute ONU données dans votre notebooks. Un fonctions une efficacité puissantes assez utile pour vos besoins un usagers et faire votre jour ouvrable plus productif.',
     'With Macbook, you are not going to miss any note for your business and stay up-to-date everywhere' => 'Avec Macbook, vous non assemblent se manquer une ne importe quel note pour votre business et demeurer actuel dans tout le un monde',
@@ -273,7 +276,7 @@ $lang = array(
     'Be in touch with others by using laptop. For non-resident calls laptops have' => 'Sont dans un contact avec autre, utilise notebook. Pour non-résident notebooks ont',
     'Search laptop for business' => 'Chercher notebook pour un business',
 
-    'Phones - Business' => 'Téléphones - sont un business',
+    'Phones - Business' => 'Téléphones - sont un Business',
     'When you use IOS or Android technology as one of the main business skills, new possibilities are available. As many people that have phone, they love their work, productivity is increasing in a simple working day. Phones enable your mind with skills that never ever thought about before and operate with them in random tasks.' => 'Sous un recours IOS ou Android une technologie, seul de un un affaires habitudes capitales, un débouchés nouveaux se ont. Comme et un beaucoup de gens, dont ont un téléphone, eux aiment leur travail, une efficacité un croît un ouvrable jour frugal. Un téléphones permettent votre raison avec un habitudes, dont jamais non crurent de avant et exercer avec eux dans un problèmes accidentels.',
     'With new tools for IT in IOS, great security you can hold any data in your Iphone.Powerful productivity features are pretty useful for your users needs and to make your workday mo productive.' => 'Avec un instruments nouveaux pour un technologies informationneles dans IOS, une sécurité grande vous peuvent détenir un tout données dans votre Iphone.Powerful un particularités une efficacité assez utile pour vos besoins un usagers et faire votre jour ouvrable plus productif.',
     'With Iphone, you are not going to miss any note for your business and stay up-to-date everywhere' => 'Avec Iphone, vous non assemblent se manquer une ne importe quel note pour votre business et demeurer actuel dans tout le un monde',
@@ -323,7 +326,7 @@ $lang = array(
     'If you want to get items for your' => 'Si vous veulent, pour empocher un objets pour votre',
     'or be consulted in area of using it call +38 (095) 094 82 68 or other phones supported by Woden Sims.' => 'ou on peut disponible dans un domaine un recours il téléphoniquement 38 (095) 094 82 68 ou autres téléphones, appuient Woden Sims.',
     'All phones available for each country of our company is provided below.' => 'Téléphones, abordable pour un pays notre compagnie chaque déposé au-dessous \'entiers.',
-    'Getting items for Education' => 'Empocher un objets pour un enseignement',
+    'Getting items for Education' => 'Empocher un objets pour un Enseignement',
     'education' => 'Enseignement',
     'or be consulted in area of using it call +38 (095) 531 618 31 or other phones supported by Woden Sims.' => 'ou on peut disponible dans un domaine un recours il téléphoniquement 38 (095) 531 618 31 ou autres téléphones, appuient Woden Sims.',
     'Praha, Czech Republic' => 'Prague, une république République tchèque',
@@ -399,7 +402,7 @@ $lang = array(
     'Interactive performance with other devices' => 'Interactif un accomplissement avec autres agencements',
     'Now, using of Icloud as well as OneDrive is actual much' => 'Maintenant, utilise dans ICloud et aussi OneDrive actuel beaucoup',
     'Icloud. Connect with Apple TV. Share Data.' => 'ICloud. Embarrasser se avec Apple TV. Une diffusion un données.',
-    'Using of Icloud you can share Photos, Videos, apps with another devices such as Iphones, Imac, Macbook that is really useful. You can send an request for your Apple TV to see the Full HD video on your TV. The same works for all devices that are compatible and uses Windows' => 'Recours ICloud vous peuvent échanger un photographies, une vidéo, un annexes dès un encore agencements, pareil comme Iphones, Imac, Macbook, que réellement utile. Vous peuvent députer une demande pour votre Apple TV, pour apercevoir une vidéo Full HD sur un poste. Mêmes travaux pour un agencements, dont compatible et utilise Windows entiers,',
+    'Using of Icloud you can share Photos, Videos, apps with another devices such as Iphones, Imac, Macbook that is really useful. You can send an request for your Apple TV to see the Full HD video on your TV. The same works for all devices that are compatible and uses Windows' => 'Recours ICloud vous peuvent échanger un photographies, une vidéo, un annexes dès un encore agencements, pareil comme Iphones, Imac, Macbook, que réellement utile. Vous peuvent députer une demande pour votre Apple TV, pour apercevoir une vidéo Full HD sur un poste. Mêmes travaux pour un agencements, dont compatible et utilise Windows entiers',
     'Thin. Incredible. Useful for day-to-day life.' => 'Délicat. Fabuleux. Utile pour une vie un jour un jour.',
     'Apple designed and made 6.1 mm thin device for your needs. Now, you will never be worry about where to place this incredible thing. Newly, developed Ipad weight only 1 pound that is really useful for teenth, day-to-day life.' => 'Apple, exploité et fabriqué 6.1 mm délicat un agencement pour vos besoins. Maintenant vous jamais non est déranger se de celui, où arranger cette chose fabuleuse. Depuis peu, exploité Ipad un poids seul une 1 livre, que sur même affaire utile pour un enfants, une vie un jour un jour.',
     'Thin. Productive. Practical.' => 'Délicat. Productif. Pragmatique.',
@@ -428,7 +431,7 @@ $lang = array(
     'Whats more, digital assignments allow students that have to miss school to turn in work remotely, reducing the inequity of allowing students extensions on assignments for missing class.' => 'Que davantage, un tâches digitales permettent un étudiants, dont doivent manquer une école, pour convertir dans un travail éloigné, abaisse une injustice permet un étudiants un agrandissement un concessions pour une classe disparue.',
     'The best result for the same time' => 'Un résultat meilleur seul et aussi un temps',
     'Additionally, typewritten assignments are much easier to read than those written by hand. Thats why, this will decrease spending time of students and teachers either' => 'Sauf celui, un tâches dactylographiques beaucoup aisé lire, que celui, dont écrit de un bras. Voici pourquoi, ce abaisse conduite un temps un étudiants et un enseignants ou',
-    'Laptops - Education' => 'Notebooks - est un enseignement',
+    'Laptops - Education' => 'Notebooks - est un Enseignement',
 
     'Useful cells in education to increase quality of received knowledge' => 'Un cages profitables dans une région un enseignement pour une augmentation une qualité un savoirs empochés',
     'Every phone is packed and designed for usability with software, built-in applications that makes you greater productive. And in this era of technological development, increased compound between laptops and TVs. With easy up-to-day tasks, it makes your life absolutely complete and plain' => 'Un téléphone chaque emballé et un design pour une commodité un recours avec un logiciel, un annexes encastrées, que fait vous productif. Et cette époque un développement technologique, une augmentation un accouplement entre notebooks et un postes. Avec aisé un jour un problèmes, ce fait votre vie absolument complet et un plaines',
@@ -828,6 +831,8 @@ $lang = array(
     'Also, you might be interested in ShowTop' => 'Vous de la sorte doit être intéressant ShowTop',
     'Free shipping available' => 'Abordable une livraison gracieuse',
     'Tv' => 'TV',
+
+    'Thanks message' => 'Message de grâce',
 
     'Application and Acceptance of the Terms' => 'Une application et une acceptation un conditions',
     'Provision of Services' => 'Prestation un bienfaits',

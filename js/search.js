@@ -45,10 +45,10 @@ function getSearchBox() {
     var src = $('img[alt="search"]').attr('src');
     var newSrc;
 
-    if(src === "/shop/images/search-icon.png"){
-        newSrc = "/shop/images/close-icon-md.png";
-    } else if(src === "/shop/images/close-icon-md.png"){
-        newSrc = "/shop/images/search-icon.png";
+    if(src === "/images/search-icon.png"){
+        newSrc = "/images/close-icon-md.png";
+    } else if(src === "/images/close-icon-md.png"){
+        newSrc = "/images/search-icon.png";
     }
 
     setTimeout(function() {

@@ -103,7 +103,7 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('The');
 
-        echo '<a id="default-link" href="/';
+        echo ' <a id="default-link" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
@@ -331,17 +331,17 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('Woden Sims Store');
 
-        echo '<span id="default-link">+420 666 905 222</span></li>
+        echo '<span id="default-link"> +420 666 905 222</span></li>
                                         <li>';
 
         echo $this->model->Translate('Support Service');
 
-        echo '<span id="default-link">+420 666 905 333</span></li>
+        echo '<span id="default-link"> +420 666 905 333</span></li>
                                         <li>';
 
         echo $this->model->Translate('Office');
 
-        echo '<span id="default-link">+420 666 905 444</span></li>
+        echo '<span id="default-link"> +420 666 905 444</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -385,17 +385,17 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('Woden Sims Store');
 
-        echo '<span id="default-link">+48 454 999 123</span></li>
+        echo '<span id="default-link"> +48 454 999 123</span></li>
                                         <li>';
 
         echo $this->model->Translate('Support Service');
 
-        echo '<span id="default-link">+48 454 888 123</span></li>
+        echo '<span id="default-link"> +48 454 888 123</span></li>
                                         <li>';
 
         echo $this->model->Translate('Office');
 
-        echo '<span id="default-link">+48 454 888 123</span></li>
+        echo '<span id="default-link"> +48 454 888 123</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -439,17 +439,17 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('Woden Sims Store');
 
-        echo '<span id="default-link">+370 567 888 90</span></li>
+        echo '<span id="default-link"> +370 567 888 90</span></li>
                                         <li>';
 
         echo $this->model->Translate('Support Service');
 
-        echo '<span id="default-link">+370 678 888 90</span></li>
+        echo '<span id="default-link"> +370 678 888 90</span></li>
                                         <li>';
 
         echo $this->model->Translate('Office');
 
-        echo '<span id="default-link">+370 444 888 90</span></li>
+        echo '<span id="default-link"> +370 444 888 90</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -492,17 +492,17 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('Woden Sims Store');
 
-        echo '<span id="default-link">+38 095 666 77 77</span></li>
+        echo '<span id="default-link"> +38 095 666 77 77</span></li>
                                         <li>';
 
         echo $this->model->Translate('Support Service');
 
-        echo '<span id="default-link">+38 066 666 77 77</span></li>
+        echo '<span id="default-link"> +38 066 666 77 77</span></li>
                                         <li>';
 
         echo $this->model->Translate('Office');
 
-        echo '<span id="default-link">+38 063 666 77 77</span></li>
+        echo '<span id="default-link"> +38 063 666 77 77</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -546,17 +546,17 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('Woden Sims Store');
 
-        echo '<span id="default-link">+38 095 094 82 68</span></li>
+        echo '<span id="default-link"> +38 095 094 82 68</span></li>
                                         <li>';
 
         echo $this->model->Translate('Support Service');
 
-        echo '<span id="default-link">+38 095 094 82 86</span></li>
+        echo '<span id="default-link"> +38 095 094 82 86</span></li>
                                         <li>';
 
         echo $this->model->Translate('Office');
 
-        echo '<span id="default-link">+38 095 094 82 77</span></li>
+        echo '<span id="default-link"> +38 095 094 82 77</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -612,12 +612,12 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('Woden Sims Store');
 
-        echo '<span id="default-link">+7 499 095 666 77</span></li>
+        echo ' <span id="default-link">+7 499 095 666 77</span></li>
                                         <li>';
 
         echo $this->model->Translate('Support Service');
 
-        echo '<span style="color: #ac5050;">';
+        echo ' <span style="color: #ac5050;">';
 
         echo $this->model->Translate('Not Available');
 
@@ -626,7 +626,7 @@ class ContactUsView extends DefaultView
 
         echo $this->model->Translate('Office');
 
-        echo '<span style="color: #ac5050;">';
+        echo ' <span style="color: #ac5050;">';
 
         echo $this->model->Translate('Not Available');
 

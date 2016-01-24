@@ -48,9 +48,9 @@ class DefaultView
             }
         } else {
             if ($this->model->getCurrentLanguage() !== 'us') {
-                echo '<title>' . $this->model->Translate($page) . ' - Woden S (' . strtoupper($this->model->getCurrentLanguage()) . ')</title>';
+                echo '<title>' . $this->model->Translate($page) . ' - Woden Sims (' . strtoupper($this->model->getCurrentLanguage()) . ')</title>';
             } else {
-                echo '<title>' . $this->model->Translate($page) . ' - Woden S </title>';
+                echo '<title>' . $this->model->Translate($page) . ' - Woden Sims </title>';
             }
         }
         echo '<!-- HTML 5 markup and encoding utf-8 -->
@@ -99,7 +99,7 @@ class DefaultView
                    <!-- bxSlider Javascript file -->
                   <script src="/js/jquery.bxslider.min.js"></script>
                   <link href="/css/subdescription.css" rel="stylesheet" type="text/css">';
-        } else if ($page == 'Search') {
+        } else if ($page == 'Frequently Asked Questions') {
             echo '<link href="/css/login.css" rel="stylesheet" type="text/css">
                   <link href="/css/subdescription.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Store') {
@@ -845,7 +845,7 @@ class DefaultView
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Register') . '</h></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'registration-completed') {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Registration Completed') . '</h></a>';
-                } else if ($this->model->getBreadcrumbs($i) == 'forgot-password') {
+                } else if ($this->model->getBreadcrumbs($i) == 'Forgot-password') {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Recover your Woden Sims Account') . '</h></a>';
                 } else if (isset($_GET['session_auth']) && !isset($_GET['email']) && !isset($_GET['day_of_birth']) && !isset($_GET['sc-a-1']) && !isset($_GET['sc-a-2']) && !isset($_GET['sc-a-3'])) {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Step 1') . '</h></a>';
@@ -865,6 +865,8 @@ class DefaultView
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Buy') . '</h></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'Buy-laptop'){
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Buy') . '</h></a>';
+                } else if ($this->model->getBreadcrumbs($i) == 'Privacy-policy'){
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Privacy Policy') . '</h></a>';
                 }
                 else {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . ucfirst($this->model->Translate($this->model->getBreadcrumbs($i))) . "</a>";
@@ -1247,7 +1249,7 @@ class DefaultView
                             <div class="col-sm-1 no-width-for-sm"></div>
                             <div class="col-sm-5 width-80-for-md margin-copy">
                                 <p class="more-info pull-left">';
-        echo $this->model->Translate('Copyright &copy; Woden S Inc. All rights reserved.');
+        echo $this->model->Translate('Copyright &copy; Woden Sims Inc. All rights reserved.');
         echo '</div>
                             <div class="col-sm-5 half-width-for-sm-md language" style="margin-top: -5px;">
                                 <div class="dropup dropup-menu-for-sm dropup-for-small">
@@ -1343,7 +1345,7 @@ class DefaultView
                             <li><a class="items" href="/sales">Sales</a></li>
                             <li><a class="items" href="site-map">Site map</a></li>
                         </ul>-->
-                            <p id="copyright"> &copy; Woden S Inc . $this->model->Translate("All rights reserved.") . </p>
+                            <p id="copyright"> &copy; Woden Sims Inc . ' . $this->model->Translate("All rights reserved.") . '</p>
                    </div>
               </div>
               <script src="js/jquery-min.js"></script>

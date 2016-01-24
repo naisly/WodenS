@@ -75,7 +75,8 @@ $lang = array(
     'Phones in Business' => 'Fernsprecher für Busineß',
     'Devices in Business' => 'Soup für Busineß',
     'For more info about return items and shopping & delivery' => 'Für größere Information über Rückgang der Gegenstände und Fachausdrücke der Zustellung & Zustellung',
-    'Copyright &copy; Woden S Inc. All rights reserved.' => 'Autorenrechte. &copy; Woden S Inc. All Anrechte ist geschützt',
+    'Copyright &copy; Woden Sims Inc. All rights reserved.' => 'Autorenrechte. &copy; Woden Sims Inc. All Anrechte ist geschützt',
+    'Woden Sims Inc. All rights reserved.' => 'Woden Sims Inc. All Anrechte ist geschützt',
 
     'The only thing that can change your life absolutely.' => 'Allein sie, können verraten Euer Leben absolut.',
     'Describe new possibilities.' => 'Versuchen Sie, neue Möglichkeiten',
@@ -402,13 +403,15 @@ $lang = array(
     'Interactive performance with other devices' => 'Online Aufbrechen mit anderen Einrichtungen',
     'Now, using of Icloud as well as OneDrive is actual much' => 'gegenwärtig, ausnutzt in ICloud sowie OneDrive aktuell viel',
     'Icloud. Connect with Apple TV. Share Data.' => 'ICloud. Apple TV zu einlassen sich mit. Ausbreitung der Angaben.',
-    'Using of Icloud you can share Photos, Videos, apps with another devices such as Iphones, Imac, Macbook that is really useful. You can send an request for your Apple TV to see the Full HD video on your TV. The same works for all devices that are compatible and uses Windows' => 'Ausnutzung ICloud ihr können austauschen Lichtbilder, video, Anbiegungen aus noch Einrichtungen, derart als Iphones, Imac, Macbook, daß gültig behilflich. Ihr können abfertigen Anfrage für euer Apple TV, auf daß zu sehen video Full HD an Fernsehapparat. Selbes Arbeiten für all Einrichtungen, die und ausnutzt Windows vereinbar ist,',
-    'Thin. Incredible. Useful for day-to-day life.' => 'Dünner. Unwahrscheinlicher. Behilflich für Leben Tag in Tag.',
+    'Using of Icloud you can share Photos, Videos, apps with another devices such as Iphones, Imac, Macbook that is really useful. You can send an request for your Apple TV to see the Full HD video on your TV. The same works for all devices that are compatible and uses Windows' => 'Ausnutzung ICloud ihr können austauschen Lichtbilder, video, Anbiegungen aus noch Einrichtungen, derart als Iphones, Imac, Macbook, daß gültig behilflich. Ihr können abfertigen Anfrage für euer Apple TV, auf daß zu sehen video Full HD an Fernsehapparat. Selbes Arbeiten für all Einrichtungen, die und ausnutzt Windows vereinbar ist',
+    'Thin. Incredible. Useful for day-to-day life.' => 'Dünner. Unwahrscheinlicher. Behilflich für Leben.',
     'Apple designed and made 6.1 mm thin device for your needs. Now, you will never be worry about where to place this incredible thing. Newly, developed Ipad weight only 1 pound that is really useful for teenth, day-to-day life.' => 'Apple, ist ausgearbeitet und fabrizierter 6.1 mm dünner Einrichtung für euere Drangsale. Gegenwärtig ihr keinmal nicht ist Sorgen macht sich über das, wo zu plazieren dieses unwahrscheinliches Ding. Jüngst, ist ausgearbeitet Ipad Gewicht allein 1 Pfund, daß an selbst Angelegenheit behilflich für Kinder, Leben Tag in Tag.',
     'Thin. Productive. Practical.' => 'Dünner. Produktiver. Praktischer.',
     'Order it now' => 'Augenblicklich zu bestellen',
     'Reimagine your life with new technology' => 'Euer Leben mit neuen Technologien',
     'Discover for business' => 'Öffne für Busineß',
+
+    'Frequently Asked Questions' => 'Häufig gestellte Fragen',
 
     'Expand your skills of usage Laptops to improve your knowledge in area of education' => 'Ausbreite ihrige Fertigkeiten der Ausnutzung Notizbuch, auf daß zu bessern ihriges Wissen in Gebiet der Ausbildung',
     'Laptop computers are becoming increasingly prevalent in education. Great part of skills required to maintain the device became readily to know all the special. While laptops may present opportunities for distraction, utilizing portable computers in classrooms can yield several significant benefits.' => 'Portabel Computer hinstellen immer mehr ausgebreitete in Ausbildung. Großer Anteil der Fertigkeiten, die für Unterhaltung der Einrichtung wurde, all besonderer erforderlich leicht zu kennen ist. Während Notizbuch können vorstellen sich Möglichkeiten für Ablenkung der Aufmerksamkeit, ausnutzt portabel Computer in Klassen kann geben respektierliche Bevorzugungen.',
@@ -465,7 +468,7 @@ $lang = array(
     'According to the NKY 167.5.1 NDS was delivered as 20%. Plus, according to the military tax 1.5% of each sale is going as objective tax. Thus, 21.5% is the main tax The amount of tax calculated from the amount of interest accrued on the account and debited on a monthly basis.' => 'Nach NKY 167.5.1 NDS war bestimmt Steuer in 20 auch das, entsprechend militarischer Steuer 1,5% jedes Verkaufs geht als objektiver Steuer. Also, 21.5 ist hauptsächlicher Steuer Betrag der Steuer abrechnet ab Betrag der Zinse, die auf Abzählung und Abhauungen an allmonatlichen Anfangsgründe angerechnet ist.',
     'Apply for financing with Card usage by getting an Woden Sims shopping card' => 'Für Finanzierung mit Ausnutzung der Karte auf Empfang Handel Karten Woden Sims zu anwenden',
 
-    'Enter your Email to get started' => 'Einführe e - mail, auf daß zu anfangen',
+    'Enter your Email to get started' => 'Einführe e-mail, auf daß zu anfangen',
     'We can help you reset your password and security info.' => 'Wir können aufhelfen euch zu abschütteln Kennwort und Angaben der Sicherheit.',
     'Follow the instructions below.' => 'Komm Instruktionen niedriger.',
     'Email that you have written not found in our database! Please, check another one.' => 'Email, das ihr aufschrieben nicht gefundener in unserer Basis der Angaben! Bitte, durchsuche ihn.',
@@ -855,6 +858,8 @@ $lang = array(
     'You may be required to enter into a separate agreement, whether online or offline, with' => 'Euch es kann abfordern zu einführen in abgesondertem Abfindungsvertrag, sei es online oder in autonomem Regime, mit',
     'or our affiliate for any Service' => 'oder unser partnerschaftlicher für beliebiger Gefallen',
     'Additional Agreements' => 'Zusatzabkommen',
+
+    'Thanks message' => 'dank Nachricht',
 
     'If there is any conflict or inconsistency between the Terms and an Additional Agreement, the Additional Agreement shall take precedence over the Terms only in relation to that Service concerned.' => 'Falls ist irgendeiner Konflikt oder Unstimmigkeit zwischen Regeln und Zusatzabkommen, Ergänzungs Vertrag beitritt Priorität über Regel allein gegenüber diesem Dienst interessierter.',
     'The Terms may not otherwise be modified except in writing by an authorized officer of' => 'Kreis nicht kann anderenfalls sein verratener allein in brieflicher Ausgestaltung ermächtigter amtlicher',

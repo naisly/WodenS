@@ -175,7 +175,7 @@ class CompanyView extends DefaultView
 
         echo $this->model->Translate('primary in Europe.');
 
-        echo '. </a>';
+        echo ' </a>';
 
         echo $this->model->Translate('On the other hand, our Company provides software in the industry of IT. We are developing Apps for Android as well as IOS, web-sites.');
 

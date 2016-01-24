@@ -273,7 +273,7 @@ class AccountInfoView extends AccountOrderView
 
         echo $this->model->Translate('If you forgot your password, please follow those instructions for');
 
-        echo                '<a href="/';
+        echo                ' <a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
