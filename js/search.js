@@ -10,10 +10,10 @@ function disableOverflow(){
         $("html")
             .css("overflow-y", "hidden");
     } else {
-        $("body")
-            .css("overflow-y", "visible");
         $("html")
             .css("overflow-y", "visible");
+        $("navbar")
+            .css("height", "auto");
     }
 }
 function changeCss(){

@@ -40,6 +40,15 @@ li.active {
 		float: left;
 		padding: 0;
 	}
+	/*body {
+		overflow: hidden;
+	}*/
+	.navbar {
+		overflow: auto;
+	}
+	.spacer-for-search {
+		height: 30px !important;
+	}
 	.navbar-nav {
 		margin: 0 !important;
 		display: block;
@@ -453,7 +462,7 @@ a:hover {
 	font: inherit;
 	/*border is optional*/
 	cursor: pointer;
-	font-size: 0.9em;
+	font-size: 15px;
 	font-family: RobotoLight;
 }
 #link_as_button:hover {

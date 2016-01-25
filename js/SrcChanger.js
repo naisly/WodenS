@@ -15,10 +15,10 @@ function toggle(){
     var src = $('img[alt="arrow"]').attr('src');
     var newSrc;
 
-    if(src === "/shop/images/arrow-down.png"){
-        newSrc = "/shop/images/arrow-top.png";
-    } else if(src === "/shop/images/arrow-top.png"){
-        newSrc = "/shop/images/arrow-down.png";
+    if(src === "/images/arrow-down.png"){
+        newSrc = "/images/arrow-top.png";
+    } else if(src === "/images/arrow-top.png"){
+        newSrc = "/images/arrow-down.png";
     }
 
     $('img[alt="arrow"]').attr("src", newSrc);
@@ -36,10 +36,10 @@ function toggle1(){
     var src = $('img[alt="arrow1"]').attr('src');
     var newSrc;
 
-    if(src === "/shop/images/arrow-down.png"){
-        newSrc = "/shop/images/arrow-top.png";
-    } else if(src === "/shop/images/arrow-top.png"){
-        newSrc = "/shop/images/arrow-down.png";
+    if(src === "/images/arrow-down.png"){
+        newSrc = "/images/arrow-top.png";
+    } else if(src === "/images/arrow-top.png"){
+        newSrc = "/images/arrow-down.png";
     }
 
     $('img[alt="arrow1"]').attr("src", newSrc);
@@ -57,10 +57,10 @@ function toggle2(){
     var src = $('img[alt="arrow2"]').attr('src');
     var newSrc;
 
-    if(src === "/shop/images/arrow-down.png"){
-        newSrc = "/shop/images/arrow-top.png";
-    } else if(src === "/shop/images/arrow-top.png"){
-        newSrc = "/shop/images/arrow-down.png";
+    if(src === "/images/arrow-down.png"){
+        newSrc = "/images/arrow-top.png";
+    } else if(src === "/images/arrow-top.png"){
+        newSrc = "/images/arrow-down.png";
     }
 
     $('img[alt="arrow2"]').attr("src", newSrc);
@@ -78,10 +78,10 @@ function toggle3(){
     var src = $('img[alt="arrow3"]').attr('src');
     var newSrc;
 
-    if(src === "/shop/images/arrow-down.png"){
-        newSrc = "/shop/images/arrow-top.png";
-    } else if(src === "/shop/images/arrow-top.png"){
-        newSrc = "/shop/images/arrow-down.png";
+    if(src === "/images/arrow-down.png"){
+        newSrc = "/images/arrow-top.png";
+    } else if(src === "/images/arrow-top.png"){
+        newSrc = "/images/arrow-down.png";
     }
 
     $('img[alt="arrow3"]').attr("src", newSrc);
@@ -99,10 +99,10 @@ function toggle4(){
     var src = $('img[alt="arrow4"]').attr('src');
     var newSrc;
 
-    if(src === "/shop/images/arrow-down.png"){
-        newSrc = "/shop/images/arrow-top.png";
-    } else if(src === "/shop/images/arrow-top.png"){
-        newSrc = "/shop/images/arrow-down.png";
+    if(src === "/images/arrow-down.png"){
+        newSrc = "/images/arrow-top.png";
+    } else if(src === "/images/arrow-top.png"){
+        newSrc = "/images/arrow-down.png";
     }
 
     $('img[alt="arrow4"]').attr("src", newSrc);

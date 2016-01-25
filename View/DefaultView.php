@@ -36,15 +36,15 @@ class DefaultView
                 <head>';
         if ($page == 'subdescription') {
             if ($this->model->getCurrentLanguage() !== 'us') {
-                echo '<title>Woden S (' . strtoupper($this->model->getCurrentLanguage()) . ') : ' . $this->model->getOriginalName(0) . '</title>';
+                echo '<title>Woden Sims (' . strtoupper($this->model->getCurrentLanguage()) . ') : ' . $this->model->getOriginalName(0) . '</title>';
             } else {
-                echo '<title>Woden S : ' . $this->model->getOriginalName(0) . '</title>';
+                echo '<title>Woden Sims : ' . $this->model->getOriginalName(0) . '</title>';
             }
         } else if ($page == 'Index') {
             if ($this->model->getCurrentLanguage() !== 'us') {
-                echo '<title>Woden S (' . $this->model->getCurrentCountry() . ')</title>';
+                echo '<title>Woden Sims (' . $this->model->getCurrentCountry() . ')</title>';
             } else {
-                echo '<title>Woden S</title>';
+                echo '<title>Woden Sims</title>';
             }
         } else {
             if ($this->model->getCurrentLanguage() !== 'us') {
@@ -350,6 +350,8 @@ class DefaultView
 
               <li class="non-for-large"><a href="/business/" class="white-link element-divider" style="display: none;">Business</a></li>
 
+              <li class="non-for-large"><a class="white-link element-divider" style="display: none; height: 40px;"></a></li>
+
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -416,6 +418,7 @@ class DefaultView
         echo $this->model->Translate('Business');
 
         echo                              '</li>
+
                                       </a>
                                   </ul>
                               </div>
