@@ -555,7 +555,7 @@ $lang = array(
     'Key responsibilities include identifying and meeting customer needs within their allotted sales territory, maintaining good after-sales relationships, keeping records of customer appointments and completed sales, and providing detailed information on the products they are selling.' => 'Hauptsächliche Pflichten einschließen in sich beweist und Bedarfsdeckung Kunden in abgeschiedener ihnen Territorien der Verkäufe, Unterhaltung bekömmlicher After Sales Beziehungen, Aufzeichnungen der Aussetzungen der Kunden und abschloß Abmachungen Verkauf, sowie Eingabe der ausführlichen Information über Produkten, die sie verkaufen.',
     'Store Director' => 'Direktor des Kaufladens',
     'Take control in your hands.' => 'Nimm Kontrolle unter ihrige Arme.',
-    'Show your leave - taking business. Be persistent.' => 'Aufweis ihriger Zurückgaben des Busineß. Sei andringlich.',
+    'Show your leave-taking business. Be persistent.' => 'Aufweis ihriger Zurückgaben des Busineß. Sei andringlich.',
     'Qualification' => 'Qualifikation',
     'Must be at least 21 years of age.' => 'Es muß sein nicht weniger 21 Jahre.',
     'High school education with some college background preferred or equivalent combination of education and experience.' => 'Mittelschulbildung mit irgendeiner College Grund präferentieller oder Gegenwert der Kombination der Ausbildung und Erfahrung.',
@@ -595,8 +595,8 @@ $lang = array(
     'Best quality for your performance' => 'Bessere Qualität für euer Arbeiten',
     'Latest developments' => 'Allerletzte Erfindungen',
     'Latest technologies give you a wide, 178-degree view of everything on the screen, so you\'ll see the difference at practically any angle.' => 'Neueste Technologien geben euch breites, 178-Grad Äußere auf all an Bildschirm, dermaßen daß ihr sehen Differenz praktisch auf beliebigen Winkel.',
-    'Retina display' => 'selbstständig Bildschirm',
-    'The Retina display also reduces glare while maintaining incredible color and quality. In fact,it has a 29 percent higher contrast ratio than a standard laptop from Apple display.' => 'selbstständig Netzhaut gleichfalls abmindert Lichtstellen bei Aufbewahrung unwahrscheinlicher Farben und Eigenschaften. In selbst Angelegenheit, er hat 29 Zinse mehr hocher Koeffizient gegensätzlicher, was Standard Notizbuch aus Apfel Anzeige.',
+    'Retina display' => 'Selbstständig Bildschirm',
+    'The Retina display also reduces glare while maintaining incredible color and quality. In fact,it has a 29 percent higher contrast ratio than a standard laptop from Apple display.' => 'Selbstständig Netzhaut gleichfalls abmindert Lichtstellen bei Aufbewahrung unwahrscheinlicher Farben und Eigenschaften. In selbst Angelegenheit, er hat 29 Zinse mehr hocher Koeffizient gegensätzlicher, was Standard Notizbuch aus Apfel Anzeige.',
     'Graphics elaboration' => 'Graphische Ausarbeitung',
     'With new graphics cards from NVIDIA or Intel you can not look away from the screen at maximum resolution, not to mention the 5K video.' => 'Mit neuer Grafikkarten ab NVIDIA oder Intel ihr nicht können anblicken ab Bildschirm bei maximaler Erlaubnis, nicht bespricht bereits video 5k.',
     'Powerful. Thin. Awesome.' => 'Kraftvoll. Dünner. Terrific.',
@@ -948,6 +948,8 @@ $lang = array(
     'Terms' => 'Bedingungen der Ausnutzung',
     'approval, one User may only register one member account on the Sites.' => 'Behauptung, eins Benutzer kann registrieren allein eins Benutzer Aufschreiben des Mitgliedes auf websites.',
     'If' => 'Falls',
+
+    'Woden Sims Order Status' => 'Woden Sims Bestell-Status',
 
 
 

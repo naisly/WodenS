@@ -12,6 +12,8 @@ function disableOverflow(){
     } else {
         $("html")
             .css("overflow-y", "visible");
+        $("body")
+            .css("overflow-y", "visible");
         $("navbar")
             .css("height", "auto");
     }

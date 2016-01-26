@@ -1146,4 +1146,6 @@ $lang = array(
     /*
      * End Terms page
      */
+
+    'Woden Sims Order Status' => 'Статус Заказа Woden Sims',
 );

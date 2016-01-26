@@ -111,7 +111,7 @@ class DefaultView
                   <script src="/js/bootstrap.min.js"></script>
                   <!-- bxSlider Javascript file -->
                   <script src="/js/jquery.bxslider.min.js"></script>';
-        } else if ($page == 'Orders') {
+        } else if ($page == 'Woden Sims Order Status') {
             echo '<link href="/css/checkorder.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Order - Status') {
             echo '<link href="/css/status-order.css" rel="stylesheet" type="text/css">

@@ -239,9 +239,9 @@ class JobsView extends DefaultView
                   <img src="/images/sales-assistant.jpg" class="full-image-cascade" style="margin-top: 50px;"/>';
 
         echo '<div class="text-center" id="director">
-                  <h1 class="main-job-main">Store Director</h1>
-                  <p class="sub-job-main">Take control in your hands.</p>
-                  <p class="sub-job-main" style="font-size: 22px; padding-bottom: 30px;">Show your leave-taking business. Be persistent.</p>
+                  <h1 class="main-job-main">' . $this->model->Translate('Store Director') . '</h1>
+                  <p class="sub-job-main">' . $this->model->Translate('Take control in your hands.') . '</p>
+                  <p class="sub-job-main" style="font-size: 22px; padding-bottom: 30px;">' . $this->model->Translate('Show your leave-taking business. Be persistent.') . '</p>
               </div>
 
               <div class="container">

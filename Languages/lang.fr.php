@@ -72,7 +72,7 @@ $lang = array(
     'Phones in Business' => 'Téléphones pour un business',
     'Devices in Business' => 'Plaques pour un business',
     'For more info about return items and shopping & delivery' => 'Pour une information majeure de un retour un objets et un limites une livraison & une livraison',
-    'Copyright &copy; Woden S Inc. All rights reserved.' => 'Copyrights. &copy; Woden S Inc. Un droits entiers infraudable',
+    'Copyright &copy; Woden Sims Inc. All rights reserved.' => 'Copyrights. &copy; Woden S Inc. Un droits entiers infraudable',
 
     'Frequently Asked Questions' => 'Questions fréquemment posées',
     'Woden Sims Inc. All rights reserved.' => 'Autorenrechte. &copy; Woden Sims Inc. All Anrechte ist geschützt',
@@ -83,13 +83,13 @@ $lang = array(
     'For business' => 'Pour un Business',
     'Buy' => 'Acheter',
     'Most people have at least a simple, if not sophisticated, mobile phone. These devices are convenient to carry around and you can use them on the go as long as there is network coverage wherever you are. Mobile phones have clearly made it easier to communicate.' =>
-    'beaucoup de gens ont comme min un téléphone accoutumé, si un téléphone non abrupt, mobile. Ces agencements fait que vous ressentirent soi calmement et utiliser eux on peut dans une ne importe quel zone un revêtement un filet. Un téléphones mobiles firent une possibilité contact aisé que nulle part.',
+    'Beaucoup de gens ont comme min un téléphone accoutumé, si un téléphone non abrupt, mobile. Ces agencements fait que vous ressentirent soi calmement et utiliser eux on peut dans une ne importe quel zone un revêtement un filet. Un téléphones mobiles firent une possibilité contact aisé que nulle part.',
     "Although the mobile phone doesn't guarantee safety, you can use it to make calls whenever there is an emergency." => 'En un dépit de ce, un téléphones mobiles non gagent une sécurité, mais vous peuvent eux utiliser eux dans ne importe quel un cas un danger.',
     'Thin, powerful and awesome.' => 'Délicat, puissant et lequel ou.',
     'Change your way of thinking. Interact with each other. Awesome Apps for your needs.' => 'Contrefont votre facture une mentalité. Embarrassent se un ami avec un ami. Un annexes différentes pour vos besoins.',
     'Search for education' => 'Chercher pour un enseignement',
     'With the upgrades made year in, year out, mobile phones are becoming more like computers with the added benefit of portability.' => 'Dans une connexion avec un rajeunissements nouveaux fait ce an, un an autre, un téléphones mobiles sont à peu près comme un ordinateurs avec un avantage leur compacité.',
-    'One can receive and send emails, browse websites, download games and videos, book flight tickets, and even chat with friends.' => 'quelqu\' un peut encaisser et députer un lettres électroniques, feuilleter sites, télécharger un jeux et une vidéo, avoir un livre par avion un vols, et se copier un ami avec un ami.',
+    'One can receive and send emails, browse websites, download games and videos, book flight tickets, and even chat with friends.' => 'Quelqu\' un peut encaisser et députer un lettres électroniques, feuilleter sites, télécharger un jeux et une vidéo, avoir un livre par avion un vols, et se copier un ami avec un ami.',
     'Be productive, move forward.' => 'Sont productif, se avancent',
     'Reimagine work and tasks with next-generation Apps. Transform your business strategy. Be mobile as much as possible. Go in lockstep with future.' => 'Surveillent un travail et un tâches avec un annexes nouvelles. Transformer votre un business une stratégie. Sont mobile tant sur combien éventuellement. Avancent un pied un pied avec un avenir.',
 
@@ -660,7 +660,7 @@ $lang = array(
     'Secret Answer 1' => 'Une réponse \'secrète 1',
     'Secret Answer 2' => 'Une réponse \'secrète 2',
     'Secret Answer 3' => 'Une réponse \'secrète 3',
-    'Terms of Use' => 'Un \'conditions un recours',
+    'Terms of Use' => 'Un conditions un recours',
 
     'Order' => 'Une \'commande',
     'not found or incorrect email you' => 'non retrouvé ou défectueux email fut',
@@ -951,6 +951,8 @@ $lang = array(
     'Terms' => 'Un conditions un recours',
     'approval, one User may only register one member account on the Sites.' => 'Une affirmation, un usager seul peut immatriculer seul un une comptabilité enregistrement un membre seul un sites.',
     'If' => 'Si',
+
+    'Woden Sims Order Status' => 'Statut Woden Sims Ordre',
 
 
 

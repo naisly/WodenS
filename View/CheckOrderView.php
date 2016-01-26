@@ -26,10 +26,10 @@ class CheckOrderView extends DefaultView
 
     public function getOrderPage() {
 
-        $this->DoctypeView( 'Orders' );
-        $this->headerView( 'order' );
+        $this->DoctypeView( 'Woden Sims Order Status' );
+        $this->headerView( 'Woden Sims Order Status' );
         $this->getSignInBar();
-        $this->actionGetFooter( 'Order' );
+        $this->actionGetFooter( 'Woden Sims Order Status' );
     }
 
     private function getSignInBar() {

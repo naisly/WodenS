@@ -94,7 +94,7 @@ class TermsView extends DefaultView
                    <h1 class="main-header-terms">' . $this->model->Translate('Provision of Services') . '</h1>
 
                    <h1 class="sub-header-terms">
-                       ' . $this->model->Translate('The') . '<a href="http://woden-sims.hol.es">Woden-sims.hol.es </a>' . $this->model->Translate('contracting entity that you are contracting with is') . '<a href="http://woden-sims.hol.es"> Woden-sims.hol.es</a>
+                       ' . $this->model->Translate('The') . ' <a href="http://woden-sims.hol.es">Woden-sims.hol.es </a>' . $this->model->Translate('contracting entity that you are contracting with is') . '<a href="http://woden-sims.hol.es"> Woden-sims.hol.es</a>
                        ' . $this->model->Translate('Kyiv Limited if you are a registered member of the Sites and registered or resident in Kyiv.  If you registered in a jurisdiction outside Kyiv, you are contracting with') . '
                        <a href="http://woden-sims.hol.es">Woden-sims.hol.es </a>' . $this->model->Translate('Ukraine E-Commerce Private Limited (incorporated in Ukraine).  If you registered in or are a resident of mainland Ukraine, you are contracting with Woden Sims OOO, Ltd. As some or part of the Services may be supported and provided by affiliates of') . '
                        <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a>, <a href="http://woden-sims.hol.es">Woden-sims.hol.es </a>' . $this->model->Translate('may delegate some of the Services to its affiliates, particularly') . '
@@ -163,11 +163,11 @@ class TermsView extends DefaultView
 
                    <h1 class="sub-header-terms">
                        ' . $this->model->Translate('User must be registered on the Sites to access or use some Services (a registered User is also referred to as a') . '"<b>' . $this->model->Translate('Member') . '</b>"' . $this->model->Translate('below') . ')' . $this->model->Translate('Except with') . '
-                       <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a>
+                        <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a>
                        ' . $this->model->Translate('approval, one User may only register one member account on the Sites.') . '
-                       <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a>' . $this->model->Translate('may cancel or terminate a User\'s member account if') . '
-                       <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a>' . $this->model->Translate('has reasons to suspect that the User has concurrently registered or controlled two or more member accounts. Further') . ',' . '
-                       <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a>' . $this->model->Translate('may reject Use\'s application for registration for any reason.') . '
+                        <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a> ' . $this->model->Translate('may cancel or terminate a User\'s member account if') . '
+                        <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a> ' . $this->model->Translate('has reasons to suspect that the User has concurrently registered or controlled two or more member accounts. Further') . ',' . '
+                        <a href="http://woden-sims.hol.es">Woden-sims.hol.es</a> ' . $this->model->Translate('may reject Use\'s application for registration for any reason.') . '
                    </h1>
                    <h1 class="sub-header-terms">
                        ' . $this->model->Translate('Upon registration on the Sites') . ',' . '

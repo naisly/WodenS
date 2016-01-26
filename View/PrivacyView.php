@@ -114,12 +114,12 @@ class PrivacyView extends DefaultView
                    <h1 class="sub-header-terms">
                        ' . $this->model->Translate('You further agree that we may disclose and transfer (whether within or outside the jurisdiction of the') . '
                        <a href="http://woden-sims.hol.es">Woden Sims</a> ' . $this->model->Translate('entity that you are contracting with) your Personal Data to service providers engaged by us to assist us with providing you with our services (including but not limited to data entry, database management, promotions, products and services alerts, delivery services, payment extension services, and membership authentication and verification services) ("Service Providers"). These Service Providers are under a duty of confidentiality to us and are only permitted to use your Personal Data in connection with the purposes specified at') . '
-                       <a class="use-of-personal-data" href="#">' . $this->model->Translate('Section 2') . '</a>' . $this->model->Translate('above, and not for their own purposes (including direct marketing)') . '
+                       <a class="use-of-personal-data" href="#">' . $this->model->Translate('Section 2') . '</a> ' . $this->model->Translate('above, and not for their own purposes (including direct marketing)') . '
                    </h1>
                    <h1 class="sub-header-terms">
                        ' . $this->model->Translate('When necessary we may also disclose and transfer (whether within or outside the jurisdiction of the') . '
                        <a href="http://woden-sims.hol.es">Woden Sims</a> ' . $this->model->Translate('entity that you are contracting with) your Personal Data to our professional advisers, law enforcement agencies, insurers, government and regulatory and other organizations for the purposes specified at') . '
-                       <a class="use-of-personal-data" href="#">' . $this->model->Translate('Section 2') . '</a>' . $this->model->Translate('above') . '
+                       <a class="use-of-personal-data" href="#">' . $this->model->Translate('Section 2') . '</a> ' . $this->model->Translate('above') . '
                    </h1>
                    <h1 class="sub-header-terms">
                        ' . $this->model->Translate('All Voluntary Information may be made publicly available on the Sites and therefore accessible by any internet user. Any Voluntary Information that you disclose to us becomes public information and you relinquish any proprietary rights (including but not limited to the rights of confidentiality and copyright) in such information. You should exercise caution when deciding to include personal or proprietary information in the Voluntary Information that you submit to us.') . '
