@@ -63,6 +63,12 @@ class SearchController extends DefaultController
             $this->model->setUrl($url_array);
             $this->model->setDescription($description_array);
             $this->model->setCountResults($result->num_rows);
+
+            if(isset($_GET['page'])){
+                if($_GET['page'] > $this->model->getCountPages()){
+                    header("Location: /search/result?generalnav=" . $_GET['generalnav'] . "&page=" . $this->model->getCountPages());
+                }
+            }
         }
 
     }

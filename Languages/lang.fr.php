@@ -953,6 +953,9 @@ $lang = array(
     'If' => 'Si',
 
     'Woden Sims Order Status' => 'Statut Woden Sims Ordre',
+    'results found' => 'résultats trouvés',
+    'Sorry, no results found.' => 'Désolé, aucun résultat trouvé.',
+    'Please, make sure all words are spelled correctly or try different keywords.' => 'Sil vous plaît, assurez-vous que tous les mots sont correctement orthographiés ou essayer des mots-clés.',
 
 
 

@@ -373,6 +373,6 @@ class DefaultModel
 
     public function getCountPages() {
 
-        return intval($this->getCountResults() / 13);
+        return ceil($this->getCountResults() / 13);
     }
 }

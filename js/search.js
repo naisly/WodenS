@@ -2,6 +2,18 @@
  * Created by Home on 14.01.2016.
  */
 
+$(function() {
+    $("form").each(function() {
+        $(this).find("input").keypress(function(e) {
+            // Enter pressed?
+            if(e.which == 10 || e.which == 13) {
+                this.form.submit();
+            }
+        });
+
+        $(this).find("input[type=submit]").hide();
+    });
+});
 $(document).ready(function() {
     $("#txtboxToFilter").keydown(function (e) {
         // Allow: backspace, delete, tab, escape, enter and .

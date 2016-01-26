@@ -950,6 +950,9 @@ $lang = array(
     'If' => 'Falls',
 
     'Woden Sims Order Status' => 'Woden Sims Bestell-Status',
+    'results found' => 'ergebnisse',
+    'Sorry, no results found.' => 'Sorry, keine Ergebnisse.',
+    'Please, make sure all words are spelled correctly or try different keywords.' => 'Bitte stellen Sie sicher, dass alle Wörter richtig geschrieben sind oder versuchen Sie andere Suchbegriffe.',
 
 
 

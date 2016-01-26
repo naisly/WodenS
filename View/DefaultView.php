@@ -338,12 +338,16 @@ class DefaultView
         echo '              </a></li>
                             <li class="spacer-for-small-nav"></li>
                             <li class="search-nav"><a class="white-link" style="width: 80%; padding-right: 0 !important;">
-
+                            <form action="/search/result" method="get">
                                     <div class="input-group" style="margin-top: 7px;">
-                                        <span class="input-group-btn">
-                                            <img src="/images/search-icon.png" width="30" height="30" style="float: left;" />
-                                        </span>
-                                        <input type="text" class="form-control" id="search" placeholder="' . $this->model->Translate('Search') . ' woden-sims.hol.es">
+
+                                            <span class="input-group-btn">
+                                                <img src="/images/search-icon.png" width="30" height="30" style="float: left;" />
+                                            </span>
+                                            <input type="text" name="generalnav" class="form-control" id="search" placeholder="' . $this->model->Translate('Search') . ' woden-sims.hol.es">
+                                            <input type="hidden" value="1" name="page" />
+                                            <input type="submit" style="display: none;" />
+                                        </form>
                                     </div>';
 
         echo '</a></li>
@@ -384,7 +388,11 @@ class DefaultView
         echo '<div id="invisible">
                   <div class="search-form">
                       <div class="form-group">
-                          <input type="text" class="form-control" id="search-xs" placeholder="' . $this->model->Translate('Search') . ' woden-sims@hol.es">
+                          <form action="/search/result" method="get">
+                              <input type="text" class="form-control" name="generalnav" id="search-xs" placeholder="' . $this->model->Translate('Search') . ' woden-sims@hol.es">
+                              <input type="hidden" value="1" name="page" />
+                              <input type="submit" />
+                          </form>
                           <div class="most-popular">
                               <div class="marger">
                                   <h class="popular-matches">';
@@ -881,8 +889,10 @@ class DefaultView
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Buy') . '</h></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'Privacy-policy'){
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Privacy Policy') . '</h></a>';
-                } else if (substr($this->model->getBreadcrumbs($i), 0, 6) == 'Result'){
+                } else if (substr($this->model->getBreadcrumbs($i), 0, 7) == 'Result?'){
                     echo '<a id="breadcrumbs" href="' . substr($this->model->getBreadcrumbsLink($i), 0, -1) . '"><h id="breadcrumbs">' . $this->model->getCountResults() . ' ' . $this->model->Translate('results found') . '</h></a>';
+                } else if (substr($this->model->getBreadcrumbs($i), 0, 6) == 'Result'){
+                    echo '<a id="breadcrumbs" href="' . substr($this->model->getBreadcrumbsLink($i), 0, -1) . '"><h id="breadcrumbs">0 ' . $this->model->Translate('results found') . '</h></a>';
                 }
                 else {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . ucfirst($this->model->Translate($this->model->getBreadcrumbs($i))) . "</a>";
