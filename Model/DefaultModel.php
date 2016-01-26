@@ -42,6 +42,7 @@ class DefaultModel
     private $name_of_languages_array;
 
     private $session_auth;
+    private $count_results;
 
 
 
@@ -358,5 +359,20 @@ class DefaultModel
     public function getSessionAuth() {
 
         return $this->session_auth;
+    }
+
+    public function setCountResults( $count_results ) {
+
+        $this->count_results = $count_results;
+    }
+
+    public function getCountResults() {
+
+        return $this->count_results;
+    }
+
+    public function getCountPages() {
+
+        return intval($this->getCountResults() / 13);
     }
 }

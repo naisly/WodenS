@@ -46,7 +46,14 @@ class DefaultView
             } else {
                 echo '<title>Woden Sims</title>';
             }
-        } else {
+        } else if(isset($_GET['generalnav'])){
+            if ($this->model->getCurrentLanguage() !== 'us') {
+                echo '<title>' . $_GET['generalnav'] . ' - Woden Sims (' . $this->model->getCurrentCountry() . ')</title>';
+            } else {
+                echo '<title>' . $_GET['generalnav'] . ' - Woden Sims</title>';
+            }
+        }
+        else {
             if ($this->model->getCurrentLanguage() !== 'us') {
                 echo '<title>' . $this->model->Translate($page) . ' - Woden Sims (' . strtoupper($this->model->getCurrentLanguage()) . ')</title>';
             } else {
@@ -174,7 +181,10 @@ class DefaultView
             echo '<link href="/css/our-company.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Recover your Woden Sims Account') {
             echo '<link href="/css/forgot.css" rel="stylesheet" type="text/css">';
-        } else {
+        } else if ($page == 'Search') {
+            echo '<link href="/css/search.css" rel="stylesheet" type="text/css">';
+        }
+        else {
             echo '<link rel="stylesheet" href="/css/default.css" />' .
                 '<link rel="stylesheet" href="/css/animate.css" />';
         }
@@ -426,7 +436,8 @@ class DefaultView
                           </div>
                       </div>
                   </div>
-              </div>';
+              </div>
+              <div class="tester-item"></div>';
 
     }
 
@@ -870,6 +881,8 @@ class DefaultView
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Buy') . '</h></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'Privacy-policy'){
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Privacy Policy') . '</h></a>';
+                } else if (substr($this->model->getBreadcrumbs($i), 0, 6) == 'Result'){
+                    echo '<a id="breadcrumbs" href="' . substr($this->model->getBreadcrumbsLink($i), 0, -1) . '"><h id="breadcrumbs">' . $this->model->getCountResults() . ' ' . $this->model->Translate('results found') . '</h></a>';
                 }
                 else {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . ucfirst($this->model->Translate($this->model->getBreadcrumbs($i))) . "</a>";
