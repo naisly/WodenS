@@ -32,6 +32,17 @@ class DefaultController
         $this->actionGetItemNames( $category, $table );
         $this->actionGetCategories( $category, $table, $sort );
 
+        if(isset($_GET['page'])){
+            $uri_parts = explode('?', $_SERVER['REQUEST_URI'], 2);
+
+            if($_GET['page'] > $this->model->getPages()){
+
+                header('Location: ' . $uri_parts[0] . '?page=' . $this->model->getPages());
+            } elseif($_GET['page'] < 1){
+                header('Location: ' . $uri_parts[0] . '?page=1');
+            }
+        }
+
     }
 
     public function actionGenerateSessionAuth($length = 25) {
@@ -310,6 +321,7 @@ class DefaultController
             //print_r($result_products);
 
             //print_r($id_array);
+            //print_r($original_name_array);
             $this->model->setProductName($product_name_array);
             $this->model->setOriginalName($original_name_array);
             $this->model->setPhoto($photo_array);

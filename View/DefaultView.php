@@ -338,7 +338,13 @@ class DefaultView
         echo '              </a></li>
                             <li class="spacer-for-small-nav"></li>
                             <li class="search-nav"><a class="white-link" style="width: 80%; padding-right: 0 !important;">
-                            <form action="/search/result" method="get">
+                            <form action="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'search/result" method="get">
                                     <div class="input-group" style="margin-top: 7px;">
 
                                             <span class="input-group-btn">
@@ -388,7 +394,13 @@ class DefaultView
         echo '<div id="invisible">
                   <div class="search-form">
                       <div class="form-group">
-                          <form action="/search/result" method="get">
+                          <form action="/';
+
+        if ($_SESSION['language'] !== 'us') {
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'search/result" method="get">
                               <input type="text" class="form-control" name="generalnav" id="search-xs" placeholder="' . $this->model->Translate('Search') . ' woden-sims@hol.es">
                               <input type="hidden" value="1" name="page" />
                               <input type="submit" />
@@ -510,20 +522,6 @@ class DefaultView
      */
     private function getFilterMenu()
     {
-        #$i = 0;
-        #$n = 0;
-        /*echo '<div class="row">
-                  <div class="col-md-3">
-                      <form action="apple-index.php" method="post">
-                           <h class="search-item">Items: <br/></h>';
-        $k = 0;
-        while ($k < count($this->model->distinct_product_names)) {
-            echo '<input type="checkbox" name="array' . $k . '" id="array' . $k . '" value="' . $this->model->getDistinctProductNames($k) . '"';
-            if (isset($_POST['array' . $k])) echo "checked='checked'";
-            echo "/>";
-            echo '<em> ' . $this->model->getDistinctProductNames($k) . '</em><br />';
-            $k++;
-        }*/
         echo '<div class="container">
                   <div class="row">
                        <div class="col-md-3 search-box">
@@ -679,7 +677,25 @@ class DefaultView
      */
     private function getItems($page)
     {
-        $i = 0;
+
+        if(isset($_GET['page'])){
+            $page = $_GET['page'];
+
+            $i = ($page - 1)*13;
+        } else {
+            $i = 0;
+        }
+
+        if(count($this->model->id) > 13) {
+            if(($i + 13) < $this->model->countId()) {
+                $k = $i + 13;
+            } else {
+                $k = $this->model->countId();
+            }
+        } else {
+            $k = $this->model->countId();
+        }
+
         echo '<div id="floatingCirclesG">
                 <div class="f_circleG" id="frotateG_01"></div>
                 <div class="f_circleG" id="frotateG_02"></div>
@@ -692,10 +708,11 @@ class DefaultView
             </div>';
         echo '<div class="col-md-9" id="total" style="margin-top: 40px;">';
 
-        while ($i < count($this->model->id)) {
+        //echo $i;
+        while ($i < $k) {
             echo '<div class="row" style="margin-left: 5px;';
 
-            if($i < count($this->model->id) - 1){
+            if($i < ($k - 1)){
                 echo 'border-bottom: 1px solid #e4e4e4;';
             }
 
@@ -746,13 +763,6 @@ class DefaultView
             echo $this->model->Translate('Short description:');
 
             echo ' </b>' . $this->model->getDescription($i) . '</p>
-                            <!--
-                            <input type="hidden" name="original_name" value="' . $this->model->getOriginalName($i) . '"/>
-                            <input type="hidden" name="table" value="phones" />
-                            <input type="hidden" name="id_num" value="' . $this->model->getPrice($i) . '"/>
-                            <input type="hidden" name="id" value="' . $this->model->getId($i) . '"/>
-                            <input type="hidden" name="product_name" value="' . $this->model->getProductName($i) . '"/>
-                        </form>-->
                     </div>
                     <div class="col-md-4">
                         <p class="spacer"></p>
@@ -767,7 +777,13 @@ class DefaultView
 
             echo '</b></p>
                         <p class="align-left">' . $this->model->getFeatures($i) . '</p>
-                        <form action="/shop/add-item" method="post">
+                        <form action="/';
+
+            if($_SESSION['language'] !== 'us'){
+                echo $_SESSION['language'] . '/';
+            }
+
+            echo 'shop/add-item" method="post">
                             <button class="btn btn-default">';
 
             echo $this->model->Translate('Add to cart');
@@ -792,6 +808,78 @@ class DefaultView
         }
         echo ' </div>
                 </div>';
+
+
+        if(/*$this->model->getCountResults() > 13*/ 2>1){
+            echo '<div class="search-divider" style="margin-top: 40px;"></div>';
+
+            echo '<div class="row" style="margin-top: 40px;">
+                              <div class="col-md-3"></div>
+                              <div class="col-md-6">
+                                  <div class="pull-left">';
+
+            if(isset($_GET['page']) && $_GET['page'] !== '1') {
+                echo '<a href="';
+
+                if (isset($_GET['page']) && $_GET['page'] > 1) {
+                    echo '?page=' . ($_GET['page'] - 1);
+                }
+
+                echo '">';
+            }
+
+            echo '<img src="/images/arrow-right-pages.png" width="15" height="30" class="nav-image" />';
+
+            if(isset($_GET['page']) && $_GET['page'] !== '1') {
+                echo '</a>';
+            }
+
+            echo              '</div>
+                                  <div style="margin-left: 42%;">
+                                      <form action="" method="get">
+                                          <input type="text" name="page" id="page" class="form-control" style="padding-top: 20px !important; padding-bottom: 20px !important;" onkeypress="return event.charCode >= 48 && event.charCode <= 57" value="';
+
+            if(isset($_GET['page'])){
+                echo $_GET['page'];
+            } else {
+                echo '1';
+            }
+
+            echo '" />
+                          <input type="submit" />
+                               </form>
+                               <h1 class="pages"> of ' . $this->model->getPages() . '</h1>
+                                  </div>
+                                  <div class="pull-right">';
+
+
+            if(!isset($_GET['page']) || $_GET['page'] != $this->model->getPages()) {
+
+
+                echo '<a href="';
+
+                if (isset($_GET['page']) && $_GET['page'] < $this->model->getPages()) {
+                    echo '?page=' . ($_GET['page'] + 1);
+                } else {
+                    echo '?page=2';
+                }
+
+                echo '">';
+            }
+
+
+            echo '<img src="/images/arrow-left-pages.png" width="15" height="30" class="nav-image" />';
+
+            if(!isset($_GET['page']) || $_GET['page'] !== $this->model->getPages()) {
+                echo '</a>';
+            }
+
+            echo '                </div>
+                              </div>
+                              <div class="col-md-3"></div>
+                          </div>';
+
+        }
     }
 
     /*
@@ -996,11 +1084,11 @@ class DefaultView
                                     </div>
                                     <div class="divider-for-small-devices"></div>
                                 </div>
-                                <form action="/support/';
+                                <form action="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
-        echo '" method="post">
+        echo 'support/" method="post">
                                     <div id="toggleTextFooter1">
                                         <ul>
                                             <li class="footer-menu"><b>';

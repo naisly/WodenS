@@ -375,4 +375,14 @@ class DefaultModel
 
         return ceil($this->getCountResults() / 13);
     }
+
+    public function countId() {
+
+        return count($this->id);
+    }
+
+    public function getPages() {
+
+        return ceil(count($this->id) / 13);
+    }
 }

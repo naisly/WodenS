@@ -1141,6 +1141,49 @@ input[type='range']::-moz-range-thumb {
 }
 
 
+.search {
+	font-size: 20px;
+}
+.search-divider {
+	margin-top: 5px;
+	width: 100%;
+	height: 1px;
+	background-color: #e4e4e4;
+}
+#page {
+	width: 43px;
+	float: left;
+}
+.pages {
+	float: left;
+	font-size: 16px;
+	margin-top: 12px;
+	padding-left: 4px;
+}
+.nav-image {
+	margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

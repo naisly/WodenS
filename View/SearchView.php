@@ -97,19 +97,28 @@ class SearchView extends DefaultView
                     echo '<div class="row" style="margin-top: 40px;">
                               <div class="col-md-3"></div>
                               <div class="col-md-6">
-                                  <div class="pull-left">
-                                      <a href="';
+                                  <div class="pull-left">';
 
-                    if(isset($_GET['page']) && $_GET['page'] > 1){
-                        echo '/search/result?generalnav=' . $_GET['generalnav'] . '&page=' . ($_GET['page']-1);
+                    if(isset($_GET['page']) && $_GET['page'] !== '1') {
+                        echo '<a href="';
+
+                        if (isset($_GET['page']) && $_GET['page'] > 1) {
+                            echo '/search/result?generalnav=' . $_GET['generalnav'] . '&page=' . ($_GET['page']-1);
+                        }
+
+                        echo '">';
                     }
 
-                    echo '"><img src="/images/arrow-right-pages.png" width="15" height="30" class="nav-image" /></a>
-                                  </div>
+                    echo '<img src="/images/arrow-right-pages.png" width="15" height="30" class="nav-image" />';
+
+                    if(isset($_GET['page']) && $_GET['page'] !== '1') {
+                        echo '</a>';
+                    }
+
+                    echo              '</div>
                                   <div style="margin-left: 42%;">
-                                      <form action="/search/result" method="get">
-                                          <input type="hidden" name="generalnav" value="' . $_GET['generalnav'] . '" />
-                                          <input type="text" name="page" id="page" class="form-control" onkeypress="return event.charCode >= 48 && event.charCode <= 57" value="';
+                                      <form action="" method="get">
+                                          <input type="text" name="page" id="page" class="form-control" style="padding-top: 20px !important; padding-bottom: 20px !important;" onkeypress="return event.charCode >= 48 && event.charCode <= 57" value="';
 
                     if(isset($_GET['page'])){
                         echo $_GET['page'];
@@ -122,21 +131,34 @@ class SearchView extends DefaultView
                                </form>
                                <h1 class="pages"> of ' . $this->model->getCountPages() . '</h1>
                                   </div>
-                                  <div class="pull-right">
-                                      <a href="';
+                                  <div class="pull-right">';
 
-                    if(isset($_GET['page']) && $_GET['page'] < $this->model->getCountPages()){
-                        echo '/search/result?generalnav=' . $_GET['generalnav'] . '&page=' . ($_GET['page']+1);
-                    } else {
-                        echo '/search/result?generalnav=' . $_GET['generalnav'] . '&page=2';
+
+                    if(!isset($_GET['page']) || $_GET['page'] != $this->model->getCountPages()) {
+
+
+                        echo '<a href="';
+
+                        if(isset($_GET['page']) && $_GET['page'] < $this->model->getCountPages()){
+                            echo '/search/result?generalnav=' . $_GET['generalnav'] . '&page=' . ($_GET['page']+1);
+                        } else {
+                            echo '/search/result?generalnav=' . $_GET['generalnav'] . '&page=2';
+                        }
+
+                        echo '">';
                     }
 
-                    echo '"><img src="/images/arrow-left-pages.png" width="15" height="30" class="nav-image" /></a>
-                                  </div>
+
+                    echo '<img src="/images/arrow-left-pages.png" width="15" height="30" class="nav-image" />';
+
+                    if(!isset($_GET['page']) || $_GET['page'] !== $this->model->getCountPages()) {
+                        echo '</a>';
+                    }
+
+                    echo '                </div>
                               </div>
                               <div class="col-md-3"></div>
-                          </div>
-                           ';
+                          </div>';
                 }
             } else {
                 $this->noDataFound();
