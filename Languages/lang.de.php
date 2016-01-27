@@ -954,7 +954,16 @@ $lang = array(
     'Sorry, no results found.' => 'Sorry, keine Ergebnisse.',
     'Please, make sure all words are spelled correctly or try different keywords.' => 'Bitte stellen Sie sicher, dass alle Wörter richtig geschrieben sind oder versuchen Sie andere Suchbegriffe.',
 
-
+    'All' => 'Alle',
+    'phones' => 'Telefone',
+    'laptops' => 'Notizbuch',
+    'devices' => 'Geräte',
+    'tv' => 'tv',
+    'Samsung' => 'Samsung',
+    'ASUS' => 'ASUS',
+    'IMac' => 'IMac',
+    'AppleTV' => 'AppleTV',
+    'ShowTop' => 'ShowTop',
 
 
 

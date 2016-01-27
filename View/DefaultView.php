@@ -481,9 +481,9 @@ class DefaultView
                                 <h1 class='nav-category'>";
 
         if($category !== 'tv'){
-            echo ucfirst($category) . 's';
+            echo ucfirst($this->model->Translate("$category" . 's'));
         } else {
-            echo strtoupper($category);
+            echo strtoupper($this->model->Translate("$category"));
         }
 
         echo                    "</h1>
@@ -505,7 +505,7 @@ class DefaultView
 
         echo '/buy-' . $category;
 
-        echo "'>All</a>";
+        echo "'>" . $this->model->Translate('All') . "</a>";
 
         foreach ($this->model->distinct_categories as $value => $key) {
             echo "<a class='categories-list' href='{$this->model->distinct_categories[$value]}'>" . $this->model->distinct_categories[$value] . "</a>";
@@ -810,7 +810,7 @@ class DefaultView
                 </div>';
 
 
-        if(/*$this->model->getCountResults() > 13*/ 2>1){
+        if($this->model->countId() > 13){
             echo '<div class="search-divider" style="margin-top: 40px;"></div>';
 
             echo '<div class="row" style="margin-top: 40px;">
@@ -854,24 +854,28 @@ class DefaultView
 
 
             if(!isset($_GET['page']) || $_GET['page'] != $this->model->getPages()) {
+                if($this->model->getPages() != 1) {
 
 
-                echo '<a href="';
+                    echo '<a href="';
 
-                if (isset($_GET['page']) && $_GET['page'] < $this->model->getPages()) {
-                    echo '?page=' . ($_GET['page'] + 1);
-                } else {
-                    echo '?page=2';
+                    if (isset($_GET['page']) && $_GET['page'] < $this->model->getPages()) {
+                        echo '?page=' . ($_GET['page'] + 1);
+                    } else {
+                        echo '?page=2';
+                    }
+
+                    echo '">';
                 }
-
-                echo '">';
             }
 
 
             echo '<img src="/images/arrow-left-pages.png" width="15" height="30" class="nav-image" />';
 
             if(!isset($_GET['page']) || $_GET['page'] !== $this->model->getPages()) {
-                echo '</a>';
+                if($this->model->getPages() != 1) {
+                    echo '</a>';
+                }
             }
 
             echo '                </div>
@@ -981,6 +985,8 @@ class DefaultView
                     echo '<a id="breadcrumbs" href="' . substr($this->model->getBreadcrumbsLink($i), 0, -1) . '"><h id="breadcrumbs">' . $this->model->getCountResults() . ' ' . $this->model->Translate('results found') . '</h></a>';
                 } else if (substr($this->model->getBreadcrumbs($i), 0, 6) == 'Result'){
                     echo '<a id="breadcrumbs" href="' . substr($this->model->getBreadcrumbsLink($i), 0, -1) . '"><h id="breadcrumbs">0 ' . $this->model->Translate('results found') . '</h></a>';
+                }else if ($this->model->getBreadcrumbs($i) == 'Imac'){
+                    echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('IMac') . '</h></a>';
                 }
                 else {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '">' . ucfirst($this->model->Translate($this->model->getBreadcrumbs($i))) . "</a>";

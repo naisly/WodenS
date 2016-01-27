@@ -1152,5 +1152,14 @@ $lang = array(
     'Sorry, no results found.' => 'Извините, совпадений не найдено.',
     'Please, make sure all words are spelled correctly or try different keywords.' => 'Пожалуйста, удостоверьтесь что все слова написаны правильно или попробуйте другие ключевые слова.',
 
-
+    'All' => 'Все',
+    'phones' => 'Телефоны',
+    'laptops' => 'Ноутбуки',
+    'devices' => 'Планшеты',
+    'tv' => 'tv',
+    'Samsung' => 'Samsung',
+    'ASUS' => 'ASUS',
+    'IMac' => 'IMac',
+    'AppleTV' => 'AppleTV',
+    'ShowTop' => 'ShowTop',
 );
