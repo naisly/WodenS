@@ -667,7 +667,7 @@ class DefaultView
         echo $this->model->Translate('By slowest');
 
         echo '<br />
-                                    <input class="btn btn-primary" id="submit" type="submit" style="margin-bottom: 20px;" value="' . $this->model->Translate('Get items!') . '">
+                                    <button class="btn btn-primary" id="submit" type="submit" style="margin-bottom: 20px;">' . $this->model->Translate('Get items!') . '</button>
                        </div>
                            </form>
                         </div>';/* col-md-3 END */

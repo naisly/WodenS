@@ -50,7 +50,7 @@ INSERT INTO phones VALUES (1, 'Iphone 6S', 'Iphone 6S White 32GB Neverlock','ima
                           802.11a/b/g/n/ac with technology of MIMO with Bluetooth 4.2 and NFC as well as Camera: 12 MPX. 1.22 (3840 on 2160 dots)', 'Apple',
                            1455 , 1999, '31th October', 'With old headphones and markers and USB', 3, 12, 1, '2015-10-31 21:21:00');
 
-INSERT INTO phones VALUES (2, 'Iphone 6', 'Iphone 6 Black/White 8GB Neverlock','images/iphone6.png', 'Screen: 4.7 IPS LCD (1334x750 dots) with LED-backlight / 16 mil. colors /
+INSERT INTO phones VALUES (2, 'Iphone 6', 'Iphone 6 Black or White 8GB Neverlock','images/iphone6.png', 'Screen: 4.7 IPS LCD (1334x750 dots) with LED-backlight / 16 mil. colors /
                            touch capacitive / scratch-resistant glass Ion-X Glass with oleophobic coating. Internal memory: 32 GB',
                            'Apple', 1200, 1599, '1st November', 'With earpods and USB', 5, 11, 1, '2015-11-01 19:34:40');
 
@@ -58,7 +58,7 @@ INSERT INTO phones VALUES (3, 'Iphone 5S', 'Iphone 5S White 16GB Unlocked', 'ima
                           touch capacitive / scratch-resistant glass Gorilla Glass with oleophobic coating. Internal memory: 8 GB',
                            'Apple', 1221, 1985, '1st November', 'With earpodes and USB', 5, 22, 1, '2015-11-01 21:01:15');
 
-INSERT INTO phones VALUES (4, 'Iphone 6', 'Iphone 6 Black/White 8GB Neverlock','images/iphone6.png', 'Screen: 4.7" IPS LCD (1334x750 dots) with LED-backlight / 16 mil. colors /
+INSERT INTO phones VALUES (4, 'Iphone 6', 'Iphone 6 Black or White 8GB Neverlock','images/iphone6.png', 'Screen: 4.7" IPS LCD (1334x750 dots) with LED-backlight / 16 mil. colors /
                            touch capacitive / scratch-resistant glass Ion-X Glass with oleophobic coating. Internal memory: 64 GB', 'Apple',
                            1211 , 1677, '2nd November', 'With new earpods and USB with markers', 3, 11, 1, '2015-11-02 11:11:11');
 
@@ -70,7 +70,7 @@ INSERT INTO phones VALUES (6, 'Iphone 4', 'Iphone 4 Black 64 GB Neverlock','imag
                           Internal memory: 8 GB. Wireless communications: Wi-Fi (802.11b/g) Bluetooth 2.1 + EDR FaceTime', 'Apple',
                            100 , 221, '3rd November', 'With old headphones and markers', 3, 3, 1, '2015-11-03 12:04:15');
 
-INSERT INTO phones VALUES (7, 'Iphone 6', 'Iphone 6 Black/White 8GB Neverlock','images/iphone6.png', 'Screen: 4.7" IPS LCD (1334x750 dots) with LED-backlight / 16 mil. colors /
+INSERT INTO phones VALUES (7, 'Iphone 6', 'Iphone 6 Black or White 8GB Neverlock','images/iphone6.png', 'Screen: 4.7" IPS LCD (1334x750 dots) with LED-backlight / 16 mil. colors /
                            touch capacitive / scratch-resistant glass Ion-X Glass with oleophobic coating. Internal memory: 64 GB',
                            'Apple', 1111, 1555, '3rd November', 'With earpods and USB', 5, 15, 1, '2015-11-02 21:23:40');
 
@@ -82,7 +82,7 @@ INSERT INTO phones VALUES (9, 'Iphone 6S', 'Iphone 6S White 32GB Neverlock','ima
                           802.11a/b/g/n/ac with technology of MIMO with Bluetooth 4.2 and NFC as well as Camera: 12 MPX. 1.22 (3840 on 2160 dots)', 'Apple',
                            1600 , 2015, '12st November', 'With old headphones as well as markers and USB', 3, 13, 1, '2015-11-12 11:11:11');
 
-INSERT INTO phones VALUES (10, 'Iphone 6', 'Iphone 6 Black/White 8GB Neverlock','images/iphone6.png', 'Screen: 4.7" IPS LCD (1334x750 dots) with LED-backlight / 16 mil. colors /
+INSERT INTO phones VALUES (10, 'Iphone 6', 'Iphone 6 Black or White 8GB Neverlock','images/iphone6.png', 'Screen: 4.7" IPS LCD (1334x750 dots) with LED-backlight / 16 mil. colors /
                            touch capacitive / scratch-resistant glass Ion-X Glass with oleophobic coating. Internal memory: 32 GB',
                            'Apple', 1000, 1200, '13th November', 'With earpods and USB', 5, 16, 1, '2015-11-13 21:54:30');
 
@@ -134,11 +134,11 @@ INSERT INTO phones VALUES (22, 'Iphone 5S', 'Iphone 5S White 16GB Unlocked','ima
                           touch capacitive / scratch-resistant glass Gorilla Glass with oleophobic coating. Internal memory: 32 GB',
                            'Apple', 899, 1310, '30th November', 'With earpodes and USB', 5, 12, 1, '2015-11-30 14:01:05');
 
-INSERT INTO phones VALUES (23, 'Iphone 6', 'Iphone 6 Black/White 8GB Neverlock','images/iphone6.png', 'Screen: 4.7" IPS LCD (1334x750 dots) with LED-backlight / 16 mil. colors /
+INSERT INTO phones VALUES (23, 'Iphone 6', 'Iphone 6 Black or White 8GB Neverlock','images/iphone6.png', 'Screen: 4.7" IPS LCD (1334x750 dots) with LED-backlight / 16 mil. colors /
                            touch capacitive / scratch-resistant glass Ion-X Glass with oleophobic coating. Internal memory: 32 GB',
                            'Apple', 1234, 1567, '1st December', 'With earpods and USB', 5, 15, 1, '2015-12-01 12:54:07');
 /* SASMUNG */
-INSERT INTO phones VALUES (24, 'Samsung Galaxy S6','Samsung Galaxy S6 SM-G920F 32GB (Factory Unlocked) 5.1"' ,'Samsung Galaxy ','images/samsungs6.jpg', 'Front-end and Back-end cameras have F1.9 diafragm. Fast charging
+INSERT INTO phones VALUES (24, 'Samsung Galaxy S6','Samsung Galaxy S6 SM-G920F 32GB (Factory Unlocked) 5.1 inches' , 'images/samsungs6.jpg', 'Front-end and Back-end cameras have F1.9 diafragm. Fast charging
                           only 10mins for 4hours of work. 5.1" Quad HD (2560 on 1440). Good security as well as mobile payment methods',
                           'Samsung', 901, 1244, '1st December', 'With headphones', 7, 15, 1, '2015-12-01 17:41:04');
 
@@ -146,7 +146,7 @@ INSERT INTO phones VALUES (25, 'Samsung Galaxy S5', 'Samsung Galaxy S5 SM-G900H 
                            rhythm. Processor: 1.9 + 1.3 GGz and 8 cores. 5.1" as equal to 129.4 mm makes with 1920 on 1080 HD makes you
                            feed the best', 'Samsung', 788, 1111, '2nd December', 'With USB and headphones', 8, 21, 1, '2015-12-02 22:21:14');
 
-INSERT INTO phones VALUES (26, 'Samsung Galaxy S4', 'Samsung Galaxy S4 i9500 Factory Unlocked cellphone, International Version, 16GB, White','images/samsungS4.jpg', 'CPU: 8 cores processor with 1.6 GGz (4cores) and 1.2 GGz
+INSERT INTO phones VALUES (26, 'Samsung Galaxy S4', 'Samsung Galaxy S4 i9500 Factory Unlocked cellphone 16 GB White','images/samsungS4.jpg', 'CPU: 8 cores processor with 1.6 GGz (4cores) and 1.2 GGz
                            another 4 cores. Screen: FHD sAMOLED with 1920 on 1080 pixels. Pleasurable move control system', 'Samsung',
                            666, 1000, '3nd December', 'With USB', 1, 12, 1, '2015-12-03 01:12:12');
 
@@ -160,7 +160,7 @@ INSERT INTO phones VALUES (28, 'Samsung Note', 'Samsung Note i6901 Unlocked Cell
 
 /* END MAIN */
 
-INSERT INTO phones VALUES (29, 'Samsung Galaxy S6', 'Samsung Galaxy S6 SM-G920F 32GB (Factory Unlocked) 5.1"' ,'images/samsungS6.jpg', 'Front-end and Back-end cameras have F1.9 diafragm. Fast charging
+INSERT INTO phones VALUES (29, 'Samsung Galaxy S6', 'Samsung Galaxy S6 SM-G920F 32GB (Factory Unlocked) 5.1 inches' ,'images/samsungS6.jpg', 'Front-end and Back-end cameras have F1.9 diafragm. Fast charging
                           only 10mins for 4hours of work. 5.1" Quad HD (2560 on 1440). Good security as well as mobile payment methods',
                            'Samsung', 888, 1044, '5st December', 'With headphones', 3, 18, 1, '2015-12-05 17:41:04');
 
@@ -172,11 +172,11 @@ INSERT INTO phones VALUES (31, 'Samsung Galaxy S3', 'Samsung Galaxy S3 i9300 Unl
                            (HD). New smart stay that knows what you want. New function SBeam for fast-forward messages and emails',
                            'Samsung', 699, 1022, '4th December', 'With USB and headphones', 5, 12, 1, '2015-12-04 19:22:22');
 
-INSERT INTO phones VALUES (32, 'Samsung Galaxy S6', 'images/samsungS6.jpg', 'Front-end and Back-end cameras have F1.9 diafragm. Fast charging
+INSERT INTO phones VALUES (32, 'Samsung Galaxy S6', 'Samsung Galaxy S6 SM-G920F 32GB (Factory Unlocked) 5.1 inches', 'images/samsungS6.jpg', 'Front-end and Back-end cameras have F1.9 diafragm. Fast charging
                           only 10mins for 4hours of work. 5.1" Quad HD (2560 on 1440). Good security as well as mobile payment methods',
                            'Samsung', 1777, 1599, '1st December', 'With headphones', 5, 18, 1, '2015-12-01 12:41:04');
 
-INSERT INTO phones VALUES (33, 'Samsung Galaxy S4', 'Samsung Galaxy S4 i9500 Factory Unlocked cellphone, International Version, 16GB, White','images/samsungS4.jpg', 'CPU: 8 cores processor with 1.6 GGz (4cores) and 1.2 GGz
+INSERT INTO phones VALUES (33, 'Samsung Galaxy S4', 'Samsung Galaxy S4 i9500 Factory Unlocked cellphone 16 GB White','images/samsungS4.jpg', 'CPU: 8 cores processor with 1.6 GGz (4cores) and 1.2 GGz
                            another 4 cores. Screen: FHD sAMOLED with 1920 on 1080 pixels. Pleasurable move control system', 'Samsung',
                            599, 1210, '3nd December', 'With USB', 1, 14, 1, '2015-12-03 11:12:12');
 
@@ -192,11 +192,11 @@ INSERT INTO phones VALUES (36, 'Samsung Galaxy S3', 'Samsung Galaxy S3 i9300 Unl
                            (HD). New smart stay that knows what you want. New function SBeam for fast-forward messages and emails',
                            'Samsung', 888, 1022, '10th December', 'With USB and headphones', 3, 10, 1, '2015-12-10 18:22:22');
 
-INSERT INTO phones VALUES (37, 'Samsung Galaxy S6', 'Samsung Galaxy S6 SM-G920F 32GB (Factory Unlocked) 5.1"' , 'images/samsungS6.jpg', 'Front-end and Back-end cameras have F1.9 diafragm. Fast charging
+INSERT INTO phones VALUES (37, 'Samsung Galaxy S6', 'Samsung Galaxy S6 SM-G920F 32GB (Factory Unlocked) 5.1 inches' , 'images/samsungS6.jpg', 'Front-end and Back-end cameras have F1.9 diafragm. Fast charging
                           only 10mins for 4hours of work. 5.1" Quad HD (2560 on 1440). Good security as well as mobile payment methods',
                            'Samsung', 788, 1044, '11st December', 'With headphones', 6, 12, 1, '2015-12-11 16:41:04');
 
-INSERT INTO phones VALUES (38, 'Samsung Galaxy S4', 'Samsung Galaxy S4 i9500 Factory Unlocked cellphone, International Version, 16GB, White','images/samsungS4.jpg', 'CPU: 8 cores processor with 1.6 GGz (4cores) and 1.2 GGz
+INSERT INTO phones VALUES (38, 'Samsung Galaxy S4', 'Samsung Galaxy S4 i9500 Factory Unlocked cellphone 16 GB White','images/samsungS4.jpg', 'CPU: 8 cores processor with 1.6 GGz (4cores) and 1.2 GGz
                            another 4 cores. Screen: FHD sAMOLED with 1920 on 1080 pixels. Pleasurable move control system', 'Samsung',
                            599, 1211, '6nd December', 'With USB', 2, 14, 1, '2015-12-06 01:12:12');
 
@@ -208,15 +208,11 @@ INSERT INTO phones VALUES (40, 'Samsung Galaxy S5', 'Samsung Galaxy S5 SM-G900H 
                            rhythm. Processor: 1.9 + 1.3 GGz and 8 cores. 5.1" as equal to 129.4 mm makes with 1920 on 1080 HD makes you
                            feed the best', 'Samsung', 901, 1211, '15nd December', 'With USB and headphones', 5, 1, 1, '2015-12-15 22:21:14');
 
-INSERT INTO phones VALUES (41, 'Samsung Galaxy S4', 'Samsung Galaxy S4 i9500 Factory Unlocked cellphone, International Version, 16GB, White','images/samsungS4.jpg', 'CPU: 8 cores processor with 1.6 GGz (4cores) and 1.2 GGz
-                           another 4 cores. Screen: FHD sAMOLED with 1920 on 1080 pixels. Pleasurable move control system', 'Samsung',
-                           877, 1200, '3nd December', 'With USB', 4, 15, 1, '2015-12-03 10:12:12');
-
 INSERT INTO phones VALUES (42, 'Samsung Galaxy S3', 'Samsung Galaxy S3 i9300 Unlocked Cellphone International Version 16GB White','images/samsungS3.jpg', 'Internal memory: 16 GB. Screen : sAMOLED 720 on 1280 pixels
                            (HD). New smart stay that knows what you want. New function SBeam for fast-forward messages and emails',
                            'Samsung', 877, 1099, '10th December', 'With USB and headphones', 3, 10, 1, '2015-12-10 20:22:22');
 
-INSERT INTO phones VALUES (43, 'Samsung Galaxy S6', 'Samsung Galaxy S6 SM-G920F 32GB (Factory Unlocked) 5.1"' , 'images/samsungS6.jpg', 'Front-end and Back-end cameras have F1.9 diafragm. Fast charging
+INSERT INTO phones VALUES (43, 'Samsung Galaxy S6', 'Samsung Galaxy S6 SM-G920F 32GB (Factory Unlocked) 5.1 inches' , 'images/samsungS6.jpg', 'Front-end and Back-end cameras have F1.9 diafragm. Fast charging
                           only 10mins for 4hours of work. 5.1" Quad HD (2560 on 1440). Good security as well as mobile payment methods',
                            'Samsung', 1022, 1444, '1st December', 'With headphones', 5, 25, 1, '2015-12-01 12:41:04');
 
@@ -336,59 +332,59 @@ CREATE TABLE notebooks (
 
 
 INSERT INTO notebooks(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
-                      ('', 'Macbook Pro', 'Apple Macbook Pro MD101LL/A 13.3-Inch Laptop', 'images/macbookpro.png', '2.7 GHz dual-core Intel Core i5 processor
+                      ('', 'Macbook Pro', 'Apple Macbook Pro MD101LLA 13.3-Inch Laptop', 'images/macbookpro.png', '2.7 GHz dual-core Intel Core i5 processor
                       Turbo Boost up to 3.1GHz with 3MB shared L3 cache 13.3-inch IPS Retina Display 2560-by-1600
                       resolution', 'Apple', 1299, 1765, '19th November', 'With selling gift card for up to $625.00',
                       14, 12);
 
 INSERT INTO notebooks(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
-                      ('', 'Macbook Pro', 'Apple MF839LL/A MacBook Pro 13.3-Inch Laptop with Retina Display','images/macbookpro.png', '2.7 GHz dual-core Intel Core i5 processor
+                      ('', 'Macbook Pro', 'Apple MF839LLA MacBook Pro 13.3-Inch Laptop with Retina Display','images/macbookpro.png', '2.7 GHz dual-core Intel Core i5 processor
                       Turbo Boost up to 3.1GHz with 3MB shared L3 cache 13.3-inch IPS Retina Display 2560-by-1600
                       resolution', 'Apple', 1354, 1899, '19th November', 'With selling gift card for up to $625.00',
                       14, 12);
 
 INSERT INTO notebooks(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
-                     ('', 'Macbook Air', 'Apple MacBook Air MJVE2LL/A 13.3-Inch Laptop (128 GB)','images/macbookair.png', '1.6 GHz dual-core Intel Core i5 (Turbo Boost
+                     ('', 'Macbook Air', 'Apple MacBook Air MJVE2LLA 13.3-Inch Laptop (128 GB)','images/macbookair.png', '1.6 GHz dual-core Intel Core i5 (Turbo Boost
                      up to 2.7 GHz) with 3 MB shared L3 cache. 13.3-Inch (diagonal) LED-backlit Glossy Widescreen
                      Display 1440 x 900 resolution', 'Apple', 994, 1022, '20th November', 'With selling gift cart
                      for up to $100.00', 13, 11);
 INSERT INTO notebooks(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
-                     ('', 'Macbook Air', 'Apple MacBook Air MJVE2LL/A 13-inch Laptop ','images/macbookair.png', '1.6 GHz dual-core Intel Core i5 (Turbo Boost
+                     ('', 'Macbook Air', 'Apple MacBook Air MJVE2LLA 13-inch Laptop ','images/macbookair.png', '1.6 GHz dual-core Intel Core i5 (Turbo Boost
                      up to 2.7 GHz) with 3 MB shared L3 cache. 13.3-Inch (diagonal) LED-backlit Glossy Widescreen
                      Display 1440 x 900 resolution', 'Apple', 854, 999, '20th November', 'With selling gift cart
                      for up to $100.00', 15, 8);
 
 INSERT INTO notebooks(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
-                      ('', 'Macbook Pro', 'Apple MacBook Pro MJLQ2LL/A 15.4-Inch Laptop with Retina Display','images/macbookpro.png', '2.7 GHz dual-core Intel Core i5 processor
+                      ('', 'Macbook Pro', 'Apple MacBook Pro MJLQ2LLA 15.4-Inch Laptop with Retina Display','images/macbookpro.png', '2.7 GHz dual-core Intel Core i5 processor
                       Turbo Boost up to 3.1GHz with 3MB shared L3 cache 13.3-inch IPS Retina Display 2560-by-1600
                       resolution', 'Apple', 1258, 1301, '20th November', 'With selling gift card for up to $625.00',
                       11, 10);
 
 INSERT INTO notebooks(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
-                     ('', 'Macbook Air', 'Apple MacBook Air MC503LL/A 13.3-Inch Laptop (OLD VERSION)','images/macbookair.png', '1.6 GHz dual-core Intel Core i5 (Turbo Boost
+                     ('', 'Macbook Air', 'Apple MacBook Air MC503LLA 13.3-Inch Laptop (OLD VERSION)','images/macbookair.png', '1.6 GHz dual-core Intel Core i5 (Turbo Boost
                      up to 2.7 GHz) with 3 MB shared L3 cache. 13.3-Inch (diagonal) LED-backlit Glossy Widescreen
                      Display 1440 x 900 resolution', 'Apple', 811, 1094, '21th November', 'With selling gift cart
                      for up to $100.00', 13, 10);
 INSERT INTO notebooks(id, product_name, photo, original_name, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
-                     ('', 'Macbook Air', 'Apple MacBook Air MC965LL/A 13.3-Inch Laptop (OLD VERSION)','images/macbookair.png', '1.6 GHz dual-core Intel Core i5 (Turbo Boost
+                     ('', 'Macbook Air', 'Apple MacBook Air MC965LLA 13.3-Inch Laptop (OLD VERSION)','images/macbookair.png', '1.6 GHz dual-core Intel Core i5 (Turbo Boost
                      up to 2.7 GHz) with 3 MB shared L3 cache. 13.3-Inch (diagonal) LED-backlit Glossy Widescreen
                      Display 1440 x 900 resolution', 'Apple', 678, 1022, '22th November', 'With selling gift cart
                      for up to $100.00', 1, 12);
 
 INSERT INTO notebooks(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
-                      ('', 'Macbook Pro', 'Apple MacBook Pro 15.4" Laptop - 500 GB HARDRIVE - i7 QUAD-CORE - MC721LL/A','images/macbookpro.png', '2.7 GHz dual-core Intel Core i5 processor
+                      ('', 'Macbook Pro', 'Apple MacBook Pro 15.4" Laptop - 500 GB HARDRIVE - i7 QUAD-CORE - MC721LLA','images/macbookpro.png', '2.7 GHz dual-core Intel Core i5 processor
                       Turbo Boost up to 3.1GHz with 3MB shared L3 cache 13.3-inch IPS Retina Display 2560-by-1600
                       resolution', 'Apple', 1459, 1601, '23th November', 'With selling gift card for up to $625.00',
                       12, 16);
 
 INSERT INTO notebooks(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
-                     ('', 'Macbook Air', 'Apple MacBook Air MD760LL/B 13.3-Inch Laptop','images/macbookair.png', '1.6 GHz dual-core Intel Core i5 (Turbo Boost
+                     ('', 'Macbook Air', 'Apple MacBook Air MD760LLB 13.3-Inch Laptop','images/macbookair.png', '1.6 GHz dual-core Intel Core i5 (Turbo Boost
                      up to 2.7 GHz) with 3 MB shared L3 cache. 13.3-Inch (diagonal) LED-backlit Glossy Widescreen
                      Display 1440 x 900 resolution', 'Apple', 800, 1000, '24th November', 'With selling gift cart
                      for up to $100.00', 14, 15);
 
 INSERT INTO notebooks(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
-                      ('', 'Macbook Pro', 'Apple MacBook Pro MF840LL/A 13.3-Inch Laptop with Retina Display (256 GB)','images/macbookpro.png', '2.7 GHz dual-core Intel Core i5 processor
+                      ('', 'Macbook Pro', 'Apple MacBook Pro MF840LLA 13.3-Inch Laptop with Retina Display (256 GB)','images/macbookpro.png', '2.7 GHz dual-core Intel Core i5 processor
                       Turbo Boost up to 3.1GHz with 3MB shared L3 cache 13.3-inch IPS Retina Display 2560-by-1600
                       resolution', 'Apple', 1234, 1456, '20th November', 'With selling gift card for up to $625.00',
                       4, 6);
@@ -593,7 +589,7 @@ INSERT INTO gadgets(id, product_name, original_name, photo, description, categor
 
 INSERT INTO gadgets(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
             ('', 'Samsung Galaxy Tab 2', 'Samsung Galaxy Tab 2 (10.1-Inch Wi-Fi) 2012 Model', 'images/galaxytabshop.jpg', 'Android 4.2 Jelly Bean
-            Wireless N Wi-Fi (802.11b/g/n); Bluetooth 3.0 GPS Enabled with Latitude, Google Maps', 'Samsung', '323', '406', '26th December', '55$ shipping and coupon for 35$ as free',
+            Wireless N Wi-Fi (802.11b/g/n); Bluetooth 3.0 GPS Enabled with Latitude and Google Maps', 'Samsung', '323', '406', '26th December', '55$ shipping and coupon for 35$ as free',
             3, 8);
 INSERT INTO gadgets(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
             ('', 'Samsung Galaxy Tab 2', 'Samsung Galaxy Tab 2', 'images/galaxyshop1.jpg', '10.1-inch Multitouch 720p HD Screen (1280 x 800)
@@ -904,6 +900,469 @@ INSERT INTO subdescription VALUES('', 'ASUS K501UX 15-inch Gaming Laptop ', 'ima
           'All-new Force Touch trackpad, Force sensors allow you to click anywhere with a uniform feel, Customizable click sensitivity, Taptic Engine delivers click sensations through haptic feedback, Use Force click for easier access to helpful tools and information, Fast-forward or zoom by gradually applying pressure to the trackpad',
           'Thunderbolt 2 ports, Two ports deliver up to 20Gbps of bandwidth for each external device—so you can move data up to 4 times faster than with USB 3, Daisy-chain multiple displays and high-performance devices while maintaining maximum throughput',
           'Stunning Retina display, With over 5 million pixels, everything is visible down to the finest detail in images and text, High contrast ratio results in deeper blacks and brighter whites, and colors are more vivid and images take on a new level of realism');
+
+/*
+ * Devices
+ */
+
+INSERT INTO subdescription VALUES('', 'Apple iPad mini MD531LLA (16GB Wi-fi only White or Silver) ', 'images/ipadairdesc.jpg', 'This Certified Refurbished product is factory refurbished, shows limited or no wear, and includes all original accessories plus a 90 day warranty, Android 5.0 Lollipop, 9.7-inch Display, Samsung Quad Core Processor, 1.2 GHz, 16 GB Flash Memory, 1.5 GB RAM Memory, microSD Card Slot (Up to 128GB) Display Resolution: 1024 x 768 XGA, SM-T Model Does NOT Include S Pen',
+          'Apple IPad with Retina Display MD510LLA 4th Generation, Apple IPad MH0W2LLA 10-inch Retina Display, Apple IPad 4 with Retina Display 16GB Wi-fi only Black, Apple IPad Air MD788LLA (16GB Wi-fi Silver), Apple IPad Air FD788LLA (Certified Refurbished)',
+          'This Item is Certified Refurbished, This Certified Refurbished product is tested and certified by the manufacturer or by a third-party refurbisher to look and work like new, with limited to no signs of wear., The refurbishing process includes functionality testing (inspection) or reconditioning and repackaging., The product ships with all relevant accessories a minimum 90-day warranty, Only select sellers who maintain a high performance bar may offer Certified Refurbished products on Amazon.',
+          'Product Description, Designed to enhance your mobile life the Samsung Galaxy Tab A keeps you immersed in what matters most every day.,Enjoy your favorite content on any screen you own when you connect your Samsung devices with SideSync, Work and create right from your tablet with Microsoft Office., And switch to Kids Mode when you want to entertain the kids while keeping all of your personal content secure., The new Galaxy Tab A connects you to the people and things you love., Multi Window does not support all applications',
+          'Product Information, Screen Size	9.7 inches, Screen Resolution	1024 x 768, Hard Drive	16 GB, Wireless Type	802.11bgn, Average Battery Life (in hours)	10 hours',
+          'Other Technical Details, Brand Name	Samsung, Series	Galaxy Tab A, Item model number	SM-T550NZWAXAR, Item Weight	11 ounces, Color	White, Flash Memory Size	16 GB, Power Source	Battery',
+          'Additional Information, ASIN	B016N03S36, Date First Available	July 13, 2015',
+          'Share Your Tablet with Multi-User Mode, Great for sharing your tablet with family members, multi-user mode lets you add up to eight profiles., This allows up to eight different users to log in separately',
+          'Lightweight, Portable Design, At only 0.35 inches thick and weighing .61 pounds, is comfortable to hold and convenient to take with you wherever you go., The tablet offers 8 GB of onboard memory and includes a microSD card slot that allows you to add up to 32 GB of additional memory,  making it easy to store more songs, videos, photos, and games.',
+          'High-Resolution Display for Exceptional Detail, Ideal for reading, playing games, browsing the web, the tablet features a 7.0-inch, so you experience rich graphics, bright colors, and crisp text.');
+
+INSERT INTO subdescription VALUES('', 'Apple IPad with Retina Display MD510LLA 4th Generation', 'images/ipadprodesc.jpg', 'This Certified Refurbished product is factory refurbished, shows limited or no wear, and includes all original accessories plus a 90 day warranty, Android 5.0 Lollipop, 9.7-inch Display, Samsung Quad Core Processor, 1.2 GHz, 16 GB Flash Memory, 1.5 GB RAM Memory, microSD Card Slot (Up to 128GB) Display Resolution: 1024 x 768 XGA, SM-T Model Does NOT Include S Pen',
+          'Apple IPad with Retina Display MD510LLA 4th Generation, Apple IPad MH0W2LLA 10-inch Retina Display, Apple IPad 4 with Retina Display 16GB Wi-fi only Black, Apple IPad Air MD788LLA (16GB Wi-fi Silver), Apple IPad Air FD788LLA (Certified Refurbished)',
+          'This Item is Certified Refurbished, This Certified Refurbished product is tested and certified by the manufacturer or by a third-party refurbisher to look and work like new, with limited to no signs of wear., The refurbishing process includes functionality testing (inspection) or reconditioning and repackaging., The product ships with all relevant accessories a minimum 90-day warranty, Only select sellers who maintain a high performance bar may offer Certified Refurbished products on Amazon.',
+          'Product Description, Designed to enhance your mobile life the Samsung Galaxy Tab A keeps you immersed in what matters most every day.,Enjoy your favorite content on any screen you own when you connect your Samsung devices with SideSync, Work and create right from your tablet with Microsoft Office., And switch to Kids Mode when you want to entertain the kids while keeping all of your personal content secure., The new Galaxy Tab A connects you to the people and things you love., Multi Window does not support all applications',
+          'Product Information, Screen Size	9.7 inches, Screen Resolution	1024 x 768, Hard Drive	16 GB, Wireless Type	802.11bgn, Average Battery Life (in hours)	10 hours',
+          'Other Technical Details, Brand Name	Samsung, Series	Galaxy Tab A, Item model number	SM-T550NZWAXAR, Item Weight	11 ounces, Color	White, Flash Memory Size	16 GB, Power Source	Battery',
+          'Additional Information, ASIN	B016N03S36, Date First Available	July 13, 2015',
+          'Share Your Tablet with Multi-User Mode, Great for sharing your tablet with family members, multi-user mode lets you add up to eight profiles., This allows up to eight different users to log in separately',
+          'Lightweight, Portable Design, At only 0.35 inches thick and weighing .61 pounds, is comfortable to hold and convenient to take with you wherever you go., The tablet offers 8 GB of onboard memory and includes a microSD card slot that allows you to add up to 32 GB of additional memory,  making it easy to store more songs, videos, photos, and games.',
+          'High-Resolution Display for Exceptional Detail, Ideal for reading, playing games, browsing the web, the tablet features a 7.0-inch, so you experience rich graphics, bright colors, and crisp text.');
+
+INSERT INTO subdescription VALUES('', 'Apple IPad MH0W2LLA 10-inch Retina Display', 'images/ipadairdesc.jpg', 'This Certified Refurbished product is factory refurbished, shows limited or no wear, and includes all original accessories plus a 90 day warranty, Android 5.0 Lollipop, 9.7-inch Display, Samsung Quad Core Processor, 1.2 GHz, 16 GB Flash Memory, 1.5 GB RAM Memory, microSD Card Slot (Up to 128GB) Display Resolution: 1024 x 768 XGA, SM-T Model Does NOT Include S Pen',
+          'Apple IPad with Retina Display MD510LLA 4th Generation, Apple IPad MH0W2LLA 10-inch Retina Display, Apple IPad 4 with Retina Display 16GB Wi-fi only Black, Apple IPad Air MD788LLA (16GB Wi-fi Silver), Apple IPad Air FD788LLA (Certified Refurbished)',
+          'This Item is Certified Refurbished, This Certified Refurbished product is tested and certified by the manufacturer or by a third-party refurbisher to look and work like new, with limited to no signs of wear., The refurbishing process includes functionality testing (inspection) or reconditioning and repackaging., The product ships with all relevant accessories a minimum 90-day warranty, Only select sellers who maintain a high performance bar may offer Certified Refurbished products on Amazon.',
+          'Product Description, Designed to enhance your mobile life the Samsung Galaxy Tab A keeps you immersed in what matters most every day.,Enjoy your favorite content on any screen you own when you connect your Samsung devices with SideSync, Work and create right from your tablet with Microsoft Office., And switch to Kids Mode when you want to entertain the kids while keeping all of your personal content secure., The new Galaxy Tab A connects you to the people and things you love., Multi Window does not support all applications',
+          'Product Information, Screen Size	9.7 inches, Screen Resolution	1024 x 768, Hard Drive	16 GB, Wireless Type	802.11bgn, Average Battery Life (in hours)	10 hours',
+          'Other Technical Details, Brand Name	Samsung, Series	Galaxy Tab A, Item model number	SM-T550NZWAXAR, Item Weight	11 ounces, Color	White, Flash Memory Size	16 GB, Power Source	Battery',
+          'Additional Information, ASIN	B016N03S36, Date First Available	July 13, 2015',
+          'Share Your Tablet with Multi-User Mode, Great for sharing your tablet with family members, multi-user mode lets you add up to eight profiles., This allows up to eight different users to log in separately',
+          'Lightweight, Portable Design, At only 0.35 inches thick and weighing .61 pounds, is comfortable to hold and convenient to take with you wherever you go., The tablet offers 8 GB of onboard memory and includes a microSD card slot that allows you to add up to 32 GB of additional memory,  making it easy to store more songs, videos, photos, and games.',
+          'High-Resolution Display for Exceptional Detail, Ideal for reading, playing games, browsing the web, the tablet features a 7.0-inch, so you experience rich graphics, bright colors, and crisp text.');
+
+INSERT INTO subdescription VALUES('', 'Apple IPad 4 with Retina Display 16GB Wi-fi only Black ', 'images/ipadprodesc.jpg', 'This Certified Refurbished product is factory refurbished, shows limited or no wear, and includes all original accessories plus a 90 day warranty, Android 5.0 Lollipop, 9.7-inch Display, Samsung Quad Core Processor, 1.2 GHz, 16 GB Flash Memory, 1.5 GB RAM Memory, microSD Card Slot (Up to 128GB) Display Resolution: 1024 x 768 XGA, SM-T Model Does NOT Include S Pen',
+          'Apple IPad with Retina Display MD510LLA 4th Generation, Apple IPad MH0W2LLA 10-inch Retina Display, Apple IPad 4 with Retina Display 16GB Wi-fi only Black, Apple IPad Air MD788LLA (16GB Wi-fi Silver), Apple IPad Air FD788LLA (Certified Refurbished)',
+          'This Item is Certified Refurbished, This Certified Refurbished product is tested and certified by the manufacturer or by a third-party refurbisher to look and work like new, with limited to no signs of wear., The refurbishing process includes functionality testing (inspection) or reconditioning and repackaging., The product ships with all relevant accessories a minimum 90-day warranty, Only select sellers who maintain a high performance bar may offer Certified Refurbished products on Amazon.',
+          'Product Description, Designed to enhance your mobile life the Samsung Galaxy Tab A keeps you immersed in what matters most every day.,Enjoy your favorite content on any screen you own when you connect your Samsung devices with SideSync, Work and create right from your tablet with Microsoft Office., And switch to Kids Mode when you want to entertain the kids while keeping all of your personal content secure., The new Galaxy Tab A connects you to the people and things you love., Multi Window does not support all applications',
+          'Product Information, Screen Size	9.7 inches, Screen Resolution	1024 x 768, Hard Drive	16 GB, Wireless Type	802.11bgn, Average Battery Life (in hours)	10 hours',
+          'Other Technical Details, Brand Name	Samsung, Series	Galaxy Tab A, Item model number	SM-T550NZWAXAR, Item Weight	11 ounces, Color	White, Flash Memory Size	16 GB, Power Source	Battery',
+          'Additional Information, ASIN	B016N03S36, Date First Available	July 13, 2015',
+          'Share Your Tablet with Multi-User Mode, Great for sharing your tablet with family members, multi-user mode lets you add up to eight profiles., This allows up to eight different users to log in separately',
+          'Lightweight, Portable Design, At only 0.35 inches thick and weighing .61 pounds, is comfortable to hold and convenient to take with you wherever you go., The tablet offers 8 GB of onboard memory and includes a microSD card slot that allows you to add up to 32 GB of additional memory,  making it easy to store more songs, videos, photos, and games.',
+          'High-Resolution Display for Exceptional Detail, Ideal for reading, playing games, browsing the web, the tablet features a 7.0-inch, so you experience rich graphics, bright colors, and crisp text.');
+
+INSERT INTO subdescription VALUES('', 'Apple IPad (32GB Wi-fi Space Gray) - 12.9 Display', 'images/ipadairdesc.jpg', 'This Certified Refurbished product is factory refurbished, shows limited or no wear, and includes all original accessories plus a 90 day warranty, Android 5.0 Lollipop, 9.7-inch Display, Samsung Quad Core Processor, 1.2 GHz, 16 GB Flash Memory, 1.5 GB RAM Memory, microSD Card Slot (Up to 128GB) Display Resolution: 1024 x 768 XGA, SM-T Model Does NOT Include S Pen',
+          'Apple IPad with Retina Display MD510LLA 4th Generation, Apple IPad MH0W2LLA 10-inch Retina Display, Apple IPad 4 with Retina Display 16GB Wi-fi only Black, Apple IPad Air MD788LLA (16GB Wi-fi Silver), Apple IPad Air FD788LLA (Certified Refurbished)',
+          'This Item is Certified Refurbished, This Certified Refurbished product is tested and certified by the manufacturer or by a third-party refurbisher to look and work like new, with limited to no signs of wear., The refurbishing process includes functionality testing (inspection) or reconditioning and repackaging., The product ships with all relevant accessories a minimum 90-day warranty, Only select sellers who maintain a high performance bar may offer Certified Refurbished products on Amazon.',
+          'Product Description, Designed to enhance your mobile life the Samsung Galaxy Tab A keeps you immersed in what matters most every day.,Enjoy your favorite content on any screen you own when you connect your Samsung devices with SideSync, Work and create right from your tablet with Microsoft Office., And switch to Kids Mode when you want to entertain the kids while keeping all of your personal content secure., The new Galaxy Tab A connects you to the people and things you love., Multi Window does not support all applications',
+          'Product Information, Screen Size	9.7 inches, Screen Resolution	1024 x 768, Hard Drive	16 GB, Wireless Type	802.11bgn, Average Battery Life (in hours)	10 hours',
+          'Other Technical Details, Brand Name	Samsung, Series	Galaxy Tab A, Item model number	SM-T550NZWAXAR, Item Weight	11 ounces, Color	White, Flash Memory Size	16 GB, Power Source	Battery',
+          'Additional Information, ASIN	B016N03S36, Date First Available	July 13, 2015',
+          'Share Your Tablet with Multi-User Mode, Great for sharing your tablet with family members, multi-user mode lets you add up to eight profiles., This allows up to eight different users to log in separately',
+          'Lightweight, Portable Design, At only 0.35 inches thick and weighing .61 pounds, is comfortable to hold and convenient to take with you wherever you go., The tablet offers 8 GB of onboard memory and includes a microSD card slot that allows you to add up to 32 GB of additional memory,  making it easy to store more songs, videos, photos, and games.',
+          'High-Resolution Display for Exceptional Detail, Ideal for reading, playing games, browsing the web, the tablet features a 7.0-inch, so you experience rich graphics, bright colors, and crisp text.');
+
+INSERT INTO subdescription VALUES('', 'Apple IPad Air MD788LLA (16GB Wi-fi Silver)', 'images/ipadairdesc.jpg', 'This Certified Refurbished product is factory refurbished, shows limited or no wear, and includes all original accessories plus a 90 day warranty, Android 5.0 Lollipop, 9.7-inch Display, Samsung Quad Core Processor, 1.2 GHz, 16 GB Flash Memory, 1.5 GB RAM Memory, microSD Card Slot (Up to 128GB) Display Resolution: 1024 x 768 XGA, SM-T Model Does NOT Include S Pen',
+          'Apple IPad with Retina Display MD510LLA 4th Generation, Apple IPad MH0W2LLA 10-inch Retina Display, Apple IPad 4 with Retina Display 16GB Wi-fi only Black, Apple IPad Air MD788LLA (16GB Wi-fi Silver), Apple IPad Air FD788LLA (Certified Refurbished)',
+          'This Item is Certified Refurbished, This Certified Refurbished product is tested and certified by the manufacturer or by a third-party refurbisher to look and work like new, with limited to no signs of wear., The refurbishing process includes functionality testing (inspection) or reconditioning and repackaging., The product ships with all relevant accessories a minimum 90-day warranty, Only select sellers who maintain a high performance bar may offer Certified Refurbished products on Amazon.',
+          'Product Description, Designed to enhance your mobile life the Samsung Galaxy Tab A keeps you immersed in what matters most every day.,Enjoy your favorite content on any screen you own when you connect your Samsung devices with SideSync, Work and create right from your tablet with Microsoft Office., And switch to Kids Mode when you want to entertain the kids while keeping all of your personal content secure., The new Galaxy Tab A connects you to the people and things you love., Multi Window does not support all applications',
+          'Product Information, Screen Size	9.7 inches, Screen Resolution	1024 x 768, Hard Drive	16 GB, Wireless Type	802.11bgn, Average Battery Life (in hours)	10 hours',
+          'Other Technical Details, Brand Name	Samsung, Series	Galaxy Tab A, Item model number	SM-T550NZWAXAR, Item Weight	11 ounces, Color	White, Flash Memory Size	16 GB, Power Source	Battery',
+          'Additional Information, ASIN	B016N03S36, Date First Available	July 13, 2015',
+          'Share Your Tablet with Multi-User Mode, Great for sharing your tablet with family members, multi-user mode lets you add up to eight profiles., This allows up to eight different users to log in separately',
+          'Lightweight, Portable Design, At only 0.35 inches thick and weighing .61 pounds, is comfortable to hold and convenient to take with you wherever you go., The tablet offers 8 GB of onboard memory and includes a microSD card slot that allows you to add up to 32 GB of additional memory,  making it easy to store more songs, videos, photos, and games.',
+          'High-Resolution Display for Exceptional Detail, Ideal for reading, playing games, browsing the web, the tablet features a 7.0-inch, so you experience rich graphics, bright colors, and crisp text.');
+
+INSERT INTO subdescription VALUES('', 'Apple IPad Air FD788LLA (Certified Refurbished)', 'images/ipadprodesc.jpg', 'This Certified Refurbished product is factory refurbished, shows limited or no wear, and includes all original accessories plus a 90 day warranty, Android 5.0 Lollipop, 9.7-inch Display, Samsung Quad Core Processor, 1.2 GHz, 16 GB Flash Memory, 1.5 GB RAM Memory, microSD Card Slot (Up to 128GB) Display Resolution: 1024 x 768 XGA, SM-T Model Does NOT Include S Pen',
+          'Apple IPad with Retina Display MD510LLA 4th Generation, Apple IPad MH0W2LLA 10-inch Retina Display, Apple IPad 4 with Retina Display 16GB Wi-fi only Black, Apple IPad Air MD788LLA (16GB Wi-fi Silver), Apple IPad Air FD788LLA (Certified Refurbished)',
+          'This Item is Certified Refurbished, This Certified Refurbished product is tested and certified by the manufacturer or by a third-party refurbisher to look and work like new, with limited to no signs of wear., The refurbishing process includes functionality testing (inspection) or reconditioning and repackaging., The product ships with all relevant accessories a minimum 90-day warranty, Only select sellers who maintain a high performance bar may offer Certified Refurbished products on Amazon.',
+          'Product Description, Designed to enhance your mobile life the Samsung Galaxy Tab A keeps you immersed in what matters most every day.,Enjoy your favorite content on any screen you own when you connect your Samsung devices with SideSync, Work and create right from your tablet with Microsoft Office., And switch to Kids Mode when you want to entertain the kids while keeping all of your personal content secure., The new Galaxy Tab A connects you to the people and things you love., Multi Window does not support all applications',
+          'Product Information, Screen Size	9.7 inches, Screen Resolution	1024 x 768, Hard Drive	16 GB, Wireless Type	802.11bgn, Average Battery Life (in hours)	10 hours',
+          'Other Technical Details, Brand Name	Samsung, Series	Galaxy Tab A, Item model number	SM-T550NZWAXAR, Item Weight	11 ounces, Color	White, Flash Memory Size	16 GB, Power Source	Battery',
+          'Additional Information, ASIN	B016N03S36, Date First Available	July 13, 2015',
+          'Share Your Tablet with Multi-User Mode, Great for sharing your tablet with family members, multi-user mode lets you add up to eight profiles., This allows up to eight different users to log in separately',
+          'Lightweight, Portable Design, At only 0.35 inches thick and weighing .61 pounds, is comfortable to hold and convenient to take with you wherever you go., The tablet offers 8 GB of onboard memory and includes a microSD card slot that allows you to add up to 32 GB of additional memory,  making it easy to store more songs, videos, photos, and games.',
+          'High-Resolution Display for Exceptional Detail, Ideal for reading, playing games, browsing the web, the tablet features a 7.0-inch, so you experience rich graphics, bright colors, and crisp text.');
+
+INSERT INTO subdescription VALUES('', 'Apple IPad Air MD786LLA 9.7-inch 32 GB Tablet (Black or Space Gray)', 'images/ipadprodesc.jpg', 'This Certified Refurbished product is factory refurbished, shows limited or no wear, and includes all original accessories plus a 90 day warranty, Android 5.0 Lollipop, 9.7-inch Display, Samsung Quad Core Processor, 1.2 GHz, 16 GB Flash Memory, 1.5 GB RAM Memory, microSD Card Slot (Up to 128GB) Display Resolution: 1024 x 768 XGA, SM-T Model Does NOT Include S Pen',
+          'Apple IPad with Retina Display MD510LLA 4th Generation, Apple IPad MH0W2LLA 10-inch Retina Display, Apple IPad 4 with Retina Display 16GB Wi-fi only Black, Apple IPad Air MD788LLA (16GB Wi-fi Silver), Apple IPad Air FD788LLA (Certified Refurbished)',
+          'This Item is Certified Refurbished, This Certified Refurbished product is tested and certified by the manufacturer or by a third-party refurbisher to look and work like new, with limited to no signs of wear., The refurbishing process includes functionality testing (inspection) or reconditioning and repackaging., The product ships with all relevant accessories a minimum 90-day warranty, Only select sellers who maintain a high performance bar may offer Certified Refurbished products on Amazon.',
+          'Product Description, Designed to enhance your mobile life the Samsung Galaxy Tab A keeps you immersed in what matters most every day.,Enjoy your favorite content on any screen you own when you connect your Samsung devices with SideSync, Work and create right from your tablet with Microsoft Office., And switch to Kids Mode when you want to entertain the kids while keeping all of your personal content secure., The new Galaxy Tab A connects you to the people and things you love., Multi Window does not support all applications',
+          'Product Information, Screen Size	9.7 inches, Screen Resolution	1024 x 768, Hard Drive	16 GB, Wireless Type	802.11bgn, Average Battery Life (in hours)	10 hours',
+          'Other Technical Details, Brand Name	Samsung, Series	Galaxy Tab A, Item model number	SM-T550NZWAXAR, Item Weight	11 ounces, Color	White, Flash Memory Size	16 GB, Power Source	Battery',
+          'Additional Information, ASIN	B016N03S36, Date First Available	July 13, 2015',
+          'Share Your Tablet with Multi-User Mode, Great for sharing your tablet with family members, multi-user mode lets you add up to eight profiles., This allows up to eight different users to log in separately',
+          'Lightweight, Portable Design, At only 0.35 inches thick and weighing .61 pounds, is comfortable to hold and convenient to take with you wherever you go., The tablet offers 8 GB of onboard memory and includes a microSD card slot that allows you to add up to 32 GB of additional memory,  making it easy to store more songs, videos, photos, and games.',
+          'High-Resolution Display for Exceptional Detail, Ideal for reading, playing games, browsing the web, the tablet features a 7.0-inch, so you experience rich graphics, bright colors, and crisp text.');
+
+INSERT INTO subdescription VALUES('', 'Samsung Galaxy Tab 4 10.1 SM-T530 Android 4.4 16GB WiFi Tablet (WHITE)', 'images/galaxytab4desc.jpg', 'This Certified Refurbished product is factory refurbished, shows limited or no wear, and includes all original accessories plus a 90 day warranty, Android 5.0 Lollipop, 9.7-inch Display, Samsung Quad Core Processor, 1.2 GHz, 16 GB Flash Memory, 1.5 GB RAM Memory, microSD Card Slot (Up to 128GB) Display Resolution: 1024 x 768 XGA, SM-T Model Does NOT Include S Pen',
+          'Apple IPad with Retina Display MD510LLA 4th Generation, Apple IPad MH0W2LLA 10-inch Retina Display, Apple IPad 4 with Retina Display 16GB Wi-fi only Black, Apple IPad Air MD788LLA (16GB Wi-fi Silver), Apple IPad Air FD788LLA (Certified Refurbished)',
+          'This Item is Certified Refurbished, This Certified Refurbished product is tested and certified by the manufacturer or by a third-party refurbisher to look and work like new, with limited to no signs of wear., The refurbishing process includes functionality testing (inspection) or reconditioning and repackaging., The product ships with all relevant accessories a minimum 90-day warranty, Only select sellers who maintain a high performance bar may offer Certified Refurbished products on Amazon.',
+          'Product Description, Designed to enhance your mobile life the Samsung Galaxy Tab A keeps you immersed in what matters most every day.,Enjoy your favorite content on any screen you own when you connect your Samsung devices with SideSync, Work and create right from your tablet with Microsoft Office., And switch to Kids Mode when you want to entertain the kids while keeping all of your personal content secure., The new Galaxy Tab A connects you to the people and things you love., Multi Window does not support all applications',
+          'Product Information, Screen Size	9.7 inches, Screen Resolution	1024 x 768, Hard Drive	16 GB, Wireless Type	802.11bgn, Average Battery Life (in hours)	10 hours',
+          'Other Technical Details, Brand Name	Samsung, Series	Galaxy Tab A, Item model number	SM-T550NZWAXAR, Item Weight	11 ounces, Color	White, Flash Memory Size	16 GB, Power Source	Battery',
+          'Additional Information, ASIN	B016N03S36, Date First Available	July 13, 2015',
+          'Share Your Tablet with Multi-User Mode, Great for sharing your tablet with family members, multi-user mode lets you add up to eight profiles., This allows up to eight different users to log in separately',
+          'Lightweight, Portable Design, At only 0.35 inches thick and weighing .61 pounds, is comfortable to hold and convenient to take with you wherever you go., The tablet offers 8 GB of onboard memory and includes a microSD card slot that allows you to add up to 32 GB of additional memory,  making it easy to store more songs, videos, photos, and games.',
+          'High-Resolution Display for Exceptional Detail, Ideal for reading, playing games, browsing the web, the tablet features a 7.0-inch, so you experience rich graphics, bright colors, and crisp text.');
+
+INSERT INTO subdescription VALUES('', 'Samsung Galaxy Tab 4 10.1 SM', 'images/galaxytab4desc.jpg', 'This Certified Refurbished product is factory refurbished, shows limited or no wear, and includes all original accessories plus a 90 day warranty, Android 5.0 Lollipop, 9.7-inch Display, Samsung Quad Core Processor, 1.2 GHz, 16 GB Flash Memory, 1.5 GB RAM Memory, microSD Card Slot (Up to 128GB) Display Resolution: 1024 x 768 XGA, SM-T Model Does NOT Include S Pen',
+          'Apple IPad with Retina Display MD510LLA 4th Generation, Apple IPad MH0W2LLA 10-inch Retina Display, Apple IPad 4 with Retina Display 16GB Wi-fi only Black, Apple IPad Air MD788LLA (16GB Wi-fi Silver), Apple IPad Air FD788LLA (Certified Refurbished)',
+          'This Item is Certified Refurbished, This Certified Refurbished product is tested and certified by the manufacturer or by a third-party refurbisher to look and work like new, with limited to no signs of wear., The refurbishing process includes functionality testing (inspection) or reconditioning and repackaging., The product ships with all relevant accessories a minimum 90-day warranty, Only select sellers who maintain a high performance bar may offer Certified Refurbished products on Amazon.',
+          'Product Description, Designed to enhance your mobile life the Samsung Galaxy Tab A keeps you immersed in what matters most every day.,Enjoy your favorite content on any screen you own when you connect your Samsung devices with SideSync, Work and create right from your tablet with Microsoft Office., And switch to Kids Mode when you want to entertain the kids while keeping all of your personal content secure., The new Galaxy Tab A connects you to the people and things you love., Multi Window does not support all applications',
+          'Product Information, Screen Size	9.7 inches, Screen Resolution	1024 x 768, Hard Drive	16 GB, Wireless Type	802.11bgn, Average Battery Life (in hours)	10 hours',
+          'Other Technical Details, Brand Name	Samsung, Series	Galaxy Tab A, Item model number	SM-T550NZWAXAR, Item Weight	11 ounces, Color	White, Flash Memory Size	16 GB, Power Source	Battery',
+          'Additional Information, ASIN	B016N03S36, Date First Available	July 13, 2015',
+          'Share Your Tablet with Multi-User Mode, Great for sharing your tablet with family members, multi-user mode lets you add up to eight profiles., This allows up to eight different users to log in separately',
+          'Lightweight, Portable Design, At only 0.35 inches thick and weighing .61 pounds, is comfortable to hold and convenient to take with you wherever you go., The tablet offers 8 GB of onboard memory and includes a microSD card slot that allows you to add up to 32 GB of additional memory,  making it easy to store more songs, videos, photos, and games.',
+          'High-Resolution Display for Exceptional Detail, Ideal for reading, playing games, browsing the web, the tablet features a 7.0-inch, so you experience rich graphics, bright colors, and crisp text.');
+
+INSERT INTO subdescription VALUES('', 'Samsung Galaxy Tab (10.1-Inch 16GB Wi-Fi)', 'images/galaxytab5desc.jpg', 'This Certified Refurbished product is factory refurbished, shows limited or no wear, and includes all original accessories plus a 90 day warranty, Android 5.0 Lollipop, 9.7-inch Display, Samsung Quad Core Processor, 1.2 GHz, 16 GB Flash Memory, 1.5 GB RAM Memory, microSD Card Slot (Up to 128GB) Display Resolution: 1024 x 768 XGA, SM-T Model Does NOT Include S Pen',
+          'Apple IPad with Retina Display MD510LLA 4th Generation, Apple IPad MH0W2LLA 10-inch Retina Display, Apple IPad 4 with Retina Display 16GB Wi-fi only Black, Apple IPad Air MD788LLA (16GB Wi-fi Silver), Apple IPad Air FD788LLA (Certified Refurbished)',
+          'This Item is Certified Refurbished, This Certified Refurbished product is tested and certified by the manufacturer or by a third-party refurbisher to look and work like new, with limited to no signs of wear., The refurbishing process includes functionality testing (inspection) or reconditioning and repackaging., The product ships with all relevant accessories a minimum 90-day warranty, Only select sellers who maintain a high performance bar may offer Certified Refurbished products on Amazon.',
+          'Product Description, Designed to enhance your mobile life the Samsung Galaxy Tab A keeps you immersed in what matters most every day.,Enjoy your favorite content on any screen you own when you connect your Samsung devices with SideSync, Work and create right from your tablet with Microsoft Office., And switch to Kids Mode when you want to entertain the kids while keeping all of your personal content secure., The new Galaxy Tab A connects you to the people and things you love., Multi Window does not support all applications',
+          'Product Information, Screen Size	9.7 inches, Screen Resolution	1024 x 768, Hard Drive	16 GB, Wireless Type	802.11bgn, Average Battery Life (in hours)	10 hours',
+          'Other Technical Details, Brand Name	Samsung, Series	Galaxy Tab A, Item model number	SM-T550NZWAXAR, Item Weight	11 ounces, Color	White, Flash Memory Size	16 GB, Power Source	Battery',
+          'Additional Information, ASIN	B016N03S36, Date First Available	July 13, 2015',
+          'Share Your Tablet with Multi-User Mode, Great for sharing your tablet with family members, multi-user mode lets you add up to eight profiles., This allows up to eight different users to log in separately',
+          'Lightweight, Portable Design, At only 0.35 inches thick and weighing .61 pounds, is comfortable to hold and convenient to take with you wherever you go., The tablet offers 8 GB of onboard memory and includes a microSD card slot that allows you to add up to 32 GB of additional memory,  making it easy to store more songs, videos, photos, and games.',
+          'High-Resolution Display for Exceptional Detail, Ideal for reading, playing games, browsing the web, the tablet features a 7.0-inch, so you experience rich graphics, bright colors, and crisp text.');
+
+INSERT INTO subdescription VALUES('', 'Samsung Galaxy Tab 2 (10.1-Inch Wi-Fi) 2012 Model', 'images/galaxytab5desc.jpg', 'This Certified Refurbished product is factory refurbished, shows limited or no wear, and includes all original accessories plus a 90 day warranty, Android 5.0 Lollipop, 9.7-inch Display, Samsung Quad Core Processor, 1.2 GHz, 16 GB Flash Memory, 1.5 GB RAM Memory, microSD Card Slot (Up to 128GB) Display Resolution: 1024 x 768 XGA, SM-T Model Does NOT Include S Pen',
+          'Apple IPad with Retina Display MD510LLA 4th Generation, Apple IPad MH0W2LLA 10-inch Retina Display, Apple IPad 4 with Retina Display 16GB Wi-fi only Black, Apple IPad Air MD788LLA (16GB Wi-fi Silver), Apple IPad Air FD788LLA (Certified Refurbished)',
+          'This Item is Certified Refurbished, This Certified Refurbished product is tested and certified by the manufacturer or by a third-party refurbisher to look and work like new, with limited to no signs of wear., The refurbishing process includes functionality testing (inspection) or reconditioning and repackaging., The product ships with all relevant accessories a minimum 90-day warranty, Only select sellers who maintain a high performance bar may offer Certified Refurbished products on Amazon.',
+          'Product Description, Designed to enhance your mobile life the Samsung Galaxy Tab A keeps you immersed in what matters most every day.,Enjoy your favorite content on any screen you own when you connect your Samsung devices with SideSync, Work and create right from your tablet with Microsoft Office., And switch to Kids Mode when you want to entertain the kids while keeping all of your personal content secure., The new Galaxy Tab A connects you to the people and things you love., Multi Window does not support all applications',
+          'Product Information, Screen Size	9.7 inches, Screen Resolution	1024 x 768, Hard Drive	16 GB, Wireless Type	802.11bgn, Average Battery Life (in hours)	10 hours',
+          'Other Technical Details, Brand Name	Samsung, Series	Galaxy Tab A, Item model number	SM-T550NZWAXAR, Item Weight	11 ounces, Color	White, Flash Memory Size	16 GB, Power Source	Battery',
+          'Additional Information, ASIN	B016N03S36, Date First Available	July 13, 2015',
+          'Share Your Tablet with Multi-User Mode, Great for sharing your tablet with family members, multi-user mode lets you add up to eight profiles., This allows up to eight different users to log in separately',
+          'Lightweight, Portable Design, At only 0.35 inches thick and weighing .61 pounds, is comfortable to hold and convenient to take with you wherever you go., The tablet offers 8 GB of onboard memory and includes a microSD card slot that allows you to add up to 32 GB of additional memory,  making it easy to store more songs, videos, photos, and games.',
+          'High-Resolution Display for Exceptional Detail, Ideal for reading, playing games, browsing the web, the tablet features a 7.0-inch, so you experience rich graphics, bright colors, and crisp text.');
+
+INSERT INTO subdescription VALUES('', 'Samsung Galaxy Tab 2', 'images/galaxytab4desc.jpg', 'This Certified Refurbished product is factory refurbished, shows limited or no wear, and includes all original accessories plus a 90 day warranty, Android 5.0 Lollipop, 9.7-inch Display, Samsung Quad Core Processor, 1.2 GHz, 16 GB Flash Memory, 1.5 GB RAM Memory, microSD Card Slot (Up to 128GB) Display Resolution: 1024 x 768 XGA, SM-T Model Does NOT Include S Pen',
+          'Apple IPad with Retina Display MD510LLA 4th Generation, Apple IPad MH0W2LLA 10-inch Retina Display, Apple IPad 4 with Retina Display 16GB Wi-fi only Black, Apple IPad Air MD788LLA (16GB Wi-fi Silver), Apple IPad Air FD788LLA (Certified Refurbished)',
+          'This Item is Certified Refurbished, This Certified Refurbished product is tested and certified by the manufacturer or by a third-party refurbisher to look and work like new, with limited to no signs of wear., The refurbishing process includes functionality testing (inspection) or reconditioning and repackaging., The product ships with all relevant accessories a minimum 90-day warranty, Only select sellers who maintain a high performance bar may offer Certified Refurbished products on Amazon.',
+          'Product Description, Designed to enhance your mobile life the Samsung Galaxy Tab A keeps you immersed in what matters most every day.,Enjoy your favorite content on any screen you own when you connect your Samsung devices with SideSync, Work and create right from your tablet with Microsoft Office., And switch to Kids Mode when you want to entertain the kids while keeping all of your personal content secure., The new Galaxy Tab A connects you to the people and things you love., Multi Window does not support all applications',
+          'Product Information, Screen Size	9.7 inches, Screen Resolution	1024 x 768, Hard Drive	16 GB, Wireless Type	802.11bgn, Average Battery Life (in hours)	10 hours',
+          'Other Technical Details, Brand Name	Samsung, Series	Galaxy Tab A, Item model number	SM-T550NZWAXAR, Item Weight	11 ounces, Color	White, Flash Memory Size	16 GB, Power Source	Battery',
+          'Additional Information, ASIN	B016N03S36, Date First Available	July 13, 2015',
+          'Share Your Tablet with Multi-User Mode, Great for sharing your tablet with family members, multi-user mode lets you add up to eight profiles., This allows up to eight different users to log in separately',
+          'Lightweight, Portable Design, At only 0.35 inches thick and weighing .61 pounds, is comfortable to hold and convenient to take with you wherever you go., The tablet offers 8 GB of onboard memory and includes a microSD card slot that allows you to add up to 32 GB of additional memory,  making it easy to store more songs, videos, photos, and games.',
+          'High-Resolution Display for Exceptional Detail, Ideal for reading, playing games, browsing the web, the tablet features a 7.0-inch, so you experience rich graphics, bright colors, and crisp text.');
+
+/*
+ * TV
+ */
+INSERT INTO subdescription VALUES('', 'Apple iMac with Retina 5K display (NEWEST VERSION)', 'images/imacnewdesc.jpg', '3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, Mac OS X 10.11 El Capitan',
+          'Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac with Retina 5K display (OLDEST VERSION), Apple iMac with Retina 5K display (NEWEST VERSION), Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver',
+          'Product Description, The idea behind iMac has never wavered: to craft the ultimate desktop experience., And that commitment continues with the all-new 21.5-inch iMac with Retina 4K display., it delivers such spectacular image quality that everything else around you seems to disappear., Adding up to the most immersive iMac experience yet - and another big step forward',
+          'All in All, 27 d Retina 5K IPS Display, 5120 x 2880 Screen Resolution, 3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, AMD Radeon R9 M380 GPU (2GB GDDR5), Thunderbolt 2 + USB 3.0',
+          'Technical Details, Brand Name	Apple, Series	Apple iMac, Item model number	MK462LLA, Operating System	Mac OS X, Item Weight	22 pounds, Product Dimensions	30 x 24 x 10 inches, Voltage	120 volts',
+          'Additional Information, ASIN	B016OVL4PI, Customer Reviews 5/5, Shipping Weight	22 pounds, Date First Available	October 15, 2015',
+          'Moreover, Color	Silver, Processor Brand	Intel, Processor Count	4, Computer Memory Type	DDR3 SDRAM, Hard Drive Rotational Speed	7200 RPM',
+          'Protection, Strong, Stable. Cold-rolled heavy-gauge Steel. Black matte powder coat protects component from scratches., Innovative Design = Perfect Fit. Full access to ports and connectors., Quick and easy to install. Includes drywall screws and anchors rated for 25 lbs each., Compatible with Apple TV 4th Generation',
+          'WHY CHOOSE HIDEit MOUNTS?, HIDEit is a total solution to vertically wall mount your electronic components, We''ve been trusted by thousands of customers since 2009., Family owned and operated., HIDEit Mounts are manufactured in the USA using modern metal manufacturing techniques in an ISO Certified shop., We only use the highest-quality materials and recycled materials if possible',
+          'INNOVATIVE DESIGN GIVES YOU THE CHOICE., Design allows you to mount in any direction, We provide drywall screws and anchors., No measuring,  No templates. Mount to the wall in minutes!');
+
+INSERT INTO subdescription VALUES('', 'Apple iMac with Retina 5K display (OLDEST VERSION)', 'images/imacolddesc.jpg', '3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, Mac OS X 10.11 El Capitan',
+          'Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac with Retina 5K display (OLDEST VERSION), Apple iMac with Retina 5K display (NEWEST VERSION), Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver',
+          'Product Description, The idea behind iMac has never wavered: to craft the ultimate desktop experience., And that commitment continues with the all-new 21.5-inch iMac with Retina 4K display., it delivers such spectacular image quality that everything else around you seems to disappear., Adding up to the most immersive iMac experience yet - and another big step forward',
+          'All in All, 27 d Retina 5K IPS Display, 5120 x 2880 Screen Resolution, 3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, AMD Radeon R9 M380 GPU (2GB GDDR5), Thunderbolt 2 + USB 3.0',
+          'Technical Details, Brand Name	Apple, Series	Apple iMac, Item model number	MK462LLA, Operating System	Mac OS X, Item Weight	22 pounds, Product Dimensions	30 x 24 x 10 inches, Voltage	120 volts',
+          'Additional Information, ASIN	B016OVL4PI, Customer Reviews 5/5, Shipping Weight	22 pounds, Date First Available	October 15, 2015',
+          'Moreover, Color	Silver, Processor Brand	Intel, Processor Count	4, Computer Memory Type	DDR3 SDRAM, Hard Drive Rotational Speed	7200 RPM',
+          'Protection, Strong, Stable. Cold-rolled heavy-gauge Steel. Black matte powder coat protects component from scratches., Innovative Design = Perfect Fit. Full access to ports and connectors., Quick and easy to install. Includes drywall screws and anchors rated for 25 lbs each., Compatible with Apple TV 4th Generation',
+          'WHY CHOOSE HIDEit MOUNTS?, HIDEit is a total solution to vertically wall mount your electronic components, We''ve been trusted by thousands of customers since 2009., Family owned and operated., HIDEit Mounts are manufactured in the USA using modern metal manufacturing techniques in an ISO Certified shop., We only use the highest-quality materials and recycled materials if possible',
+          'INNOVATIVE DESIGN GIVES YOU THE CHOICE., Design allows you to mount in any direction, We provide drywall screws and anchors., No measuring,  No templates. Mount to the wall in minutes!');
+
+INSERT INTO subdescription VALUES('', 'Apple iMac with Retina 5K display (NEWEST VERSION)', 'images/imacnewdesc.jpg', '3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, Mac OS X 10.11 El Capitan',
+          'Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac with Retina 5K display (OLDEST VERSION), Apple iMac with Retina 5K display (NEWEST VERSION), Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver',
+          'Product Description, The idea behind iMac has never wavered: to craft the ultimate desktop experience., And that commitment continues with the all-new 21.5-inch iMac with Retina 4K display., it delivers such spectacular image quality that everything else around you seems to disappear., Adding up to the most immersive iMac experience yet - and another big step forward',
+          'All in All, 27 d Retina 5K IPS Display, 5120 x 2880 Screen Resolution, 3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, AMD Radeon R9 M380 GPU (2GB GDDR5), Thunderbolt 2 + USB 3.0',
+          'Technical Details, Brand Name	Apple, Series	Apple iMac, Item model number	MK462LLA, Operating System	Mac OS X, Item Weight	22 pounds, Product Dimensions	30 x 24 x 10 inches, Voltage	120 volts',
+          'Additional Information, ASIN	B016OVL4PI, Customer Reviews 5/5, Shipping Weight	22 pounds, Date First Available	October 15, 2015',
+          'Moreover, Color	Silver, Processor Brand	Intel, Processor Count	4, Computer Memory Type	DDR3 SDRAM, Hard Drive Rotational Speed	7200 RPM',
+          'Protection, Strong, Stable. Cold-rolled heavy-gauge Steel. Black matte powder coat protects component from scratches., Innovative Design = Perfect Fit. Full access to ports and connectors., Quick and easy to install. Includes drywall screws and anchors rated for 25 lbs each., Compatible with Apple TV 4th Generation',
+          'WHY CHOOSE HIDEit MOUNTS?, HIDEit is a total solution to vertically wall mount your electronic components, We''ve been trusted by thousands of customers since 2009., Family owned and operated., HIDEit Mounts are manufactured in the USA using modern metal manufacturing techniques in an ISO Certified shop., We only use the highest-quality materials and recycled materials if possible',
+          'INNOVATIVE DESIGN GIVES YOU THE CHOICE., Design allows you to mount in any direction, We provide drywall screws and anchors., No measuring,  No templates. Mount to the wall in minutes!');
+
+INSERT INTO subdescription VALUES('', 'Apple iMac with Retina 5K display (OLDEST VERSION)', 'images/imacolddesc.jpg', '3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, Mac OS X 10.11 El Capitan',
+          'Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac with Retina 5K display (OLDEST VERSION), Apple iMac with Retina 5K display (NEWEST VERSION), Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver',
+          'Product Description, The idea behind iMac has never wavered: to craft the ultimate desktop experience., And that commitment continues with the all-new 21.5-inch iMac with Retina 4K display., it delivers such spectacular image quality that everything else around you seems to disappear., Adding up to the most immersive iMac experience yet - and another big step forward',
+          'All in All, 27 d Retina 5K IPS Display, 5120 x 2880 Screen Resolution, 3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, AMD Radeon R9 M380 GPU (2GB GDDR5), Thunderbolt 2 + USB 3.0',
+          'Technical Details, Brand Name	Apple, Series	Apple iMac, Item model number	MK462LLA, Operating System	Mac OS X, Item Weight	22 pounds, Product Dimensions	30 x 24 x 10 inches, Voltage	120 volts',
+          'Additional Information, ASIN	B016OVL4PI, Customer Reviews 5/5, Shipping Weight	22 pounds, Date First Available	October 15, 2015',
+          'Moreover, Color	Silver, Processor Brand	Intel, Processor Count	4, Computer Memory Type	DDR3 SDRAM, Hard Drive Rotational Speed	7200 RPM',
+          'Protection, Strong, Stable. Cold-rolled heavy-gauge Steel. Black matte powder coat protects component from scratches., Innovative Design = Perfect Fit. Full access to ports and connectors., Quick and easy to install. Includes drywall screws and anchors rated for 25 lbs each., Compatible with Apple TV 4th Generation',
+          'WHY CHOOSE HIDEit MOUNTS?, HIDEit is a total solution to vertically wall mount your electronic components, We''ve been trusted by thousands of customers since 2009., Family owned and operated., HIDEit Mounts are manufactured in the USA using modern metal manufacturing techniques in an ISO Certified shop., We only use the highest-quality materials and recycled materials if possible',
+          'INNOVATIVE DESIGN GIVES YOU THE CHOICE., Design allows you to mount in any direction, We provide drywall screws and anchors., No measuring,  No templates. Mount to the wall in minutes!');
+
+INSERT INTO subdescription VALUES('', 'Apple IMac MK462LLA 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8 GB DDR3 and 1 TB Mac OS X) Silver', 'images/imacdesc.jpg', '3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, Mac OS X 10.11 El Capitan',
+          'Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac with Retina 5K display (OLDEST VERSION), Apple iMac with Retina 5K display (NEWEST VERSION), Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver',
+          'Product Description, The idea behind iMac has never wavered: to craft the ultimate desktop experience., And that commitment continues with the all-new 21.5-inch iMac with Retina 4K display., it delivers such spectacular image quality that everything else around you seems to disappear., Adding up to the most immersive iMac experience yet - and another big step forward',
+          'All in All, 27 d Retina 5K IPS Display, 5120 x 2880 Screen Resolution, 3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, AMD Radeon R9 M380 GPU (2GB GDDR5), Thunderbolt 2 + USB 3.0',
+          'Technical Details, Brand Name	Apple, Series	Apple iMac, Item model number	MK462LLA, Operating System	Mac OS X, Item Weight	22 pounds, Product Dimensions	30 x 24 x 10 inches, Voltage	120 volts',
+          'Additional Information, ASIN	B016OVL4PI, Customer Reviews 5/5, Shipping Weight	22 pounds, Date First Available	October 15, 2015',
+          'Moreover, Color	Silver, Processor Brand	Intel, Processor Count	4, Computer Memory Type	DDR3 SDRAM, Hard Drive Rotational Speed	7200 RPM',
+          'Protection, Strong, Stable. Cold-rolled heavy-gauge Steel. Black matte powder coat protects component from scratches., Innovative Design = Perfect Fit. Full access to ports and connectors., Quick and easy to install. Includes drywall screws and anchors rated for 25 lbs each., Compatible with Apple TV 4th Generation',
+          'WHY CHOOSE HIDEit MOUNTS?, HIDEit is a total solution to vertically wall mount your electronic components, We''ve been trusted by thousands of customers since 2009., Family owned and operated., HIDEit Mounts are manufactured in the USA using modern metal manufacturing techniques in an ISO Certified shop., We only use the highest-quality materials and recycled materials if possible',
+          'INNOVATIVE DESIGN GIVES YOU THE CHOICE., Design allows you to mount in any direction, We provide drywall screws and anchors., No measuring,  No templates. Mount to the wall in minutes!');
+
+INSERT INTO subdescription VALUES('', 'TotalMount - Apple TV Mount (Compatible with the New Apple TV)', 'images/tvdesc.jpg', '3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, Mac OS X 10.11 El Capitan',
+          'Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac with Retina 5K display (OLDEST VERSION), Apple iMac with Retina 5K display (NEWEST VERSION), Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver',
+          'Product Description, The idea behind iMac has never wavered: to craft the ultimate desktop experience., And that commitment continues with the all-new 21.5-inch iMac with Retina 4K display., it delivers such spectacular image quality that everything else around you seems to disappear., Adding up to the most immersive iMac experience yet - and another big step forward',
+          'All in All, 27 d Retina 5K IPS Display, 5120 x 2880 Screen Resolution, 3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, AMD Radeon R9 M380 GPU (2GB GDDR5), Thunderbolt 2 + USB 3.0',
+          'Technical Details, Brand Name	Apple, Series	Apple iMac, Item model number	MK462LLA, Operating System	Mac OS X, Item Weight	22 pounds, Product Dimensions	30 x 24 x 10 inches, Voltage	120 volts',
+          'Additional Information, ASIN	B016OVL4PI, Customer Reviews 5/5, Shipping Weight	22 pounds, Date First Available	October 15, 2015',
+          'Moreover, Color	Silver, Processor Brand	Intel, Processor Count	4, Computer Memory Type	DDR3 SDRAM, Hard Drive Rotational Speed	7200 RPM',
+          'Protection, Strong, Stable. Cold-rolled heavy-gauge Steel. Black matte powder coat protects component from scratches., Innovative Design = Perfect Fit. Full access to ports and connectors., Quick and easy to install. Includes drywall screws and anchors rated for 25 lbs each., Compatible with Apple TV 4th Generation',
+          'WHY CHOOSE HIDEit MOUNTS?, HIDEit is a total solution to vertically wall mount your electronic components, We''ve been trusted by thousands of customers since 2009., Family owned and operated., HIDEit Mounts are manufactured in the USA using modern metal manufacturing techniques in an ISO Certified shop., We only use the highest-quality materials and recycled materials if possible',
+          'INNOVATIVE DESIGN GIVES YOU THE CHOICE., Design allows you to mount in any direction, We provide drywall screws and anchors., No measuring,  No templates. Mount to the wall in minutes!');
+
+INSERT INTO subdescription VALUES('', 'Apple TV Mount ', 'images/tvdesc.jpg', '3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, Mac OS X 10.11 El Capitan',
+          'Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac with Retina 5K display (OLDEST VERSION), Apple iMac with Retina 5K display (NEWEST VERSION), Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver',
+          'Product Description, The idea behind iMac has never wavered: to craft the ultimate desktop experience., And that commitment continues with the all-new 21.5-inch iMac with Retina 4K display., it delivers such spectacular image quality that everything else around you seems to disappear., Adding up to the most immersive iMac experience yet - and another big step forward',
+          'All in All, 27 d Retina 5K IPS Display, 5120 x 2880 Screen Resolution, 3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, AMD Radeon R9 M380 GPU (2GB GDDR5), Thunderbolt 2 + USB 3.0',
+          'Technical Details, Brand Name	Apple, Series	Apple iMac, Item model number	MK462LLA, Operating System	Mac OS X, Item Weight	22 pounds, Product Dimensions	30 x 24 x 10 inches, Voltage	120 volts',
+          'Additional Information, ASIN	B016OVL4PI, Customer Reviews 5/5, Shipping Weight	22 pounds, Date First Available	October 15, 2015',
+          'Moreover, Color	Silver, Processor Brand	Intel, Processor Count	4, Computer Memory Type	DDR3 SDRAM, Hard Drive Rotational Speed	7200 RPM',
+          'Protection, Strong, Stable. Cold-rolled heavy-gauge Steel. Black matte powder coat protects component from scratches., Innovative Design = Perfect Fit. Full access to ports and connectors., Quick and easy to install. Includes drywall screws and anchors rated for 25 lbs each., Compatible with Apple TV 4th Generation',
+          'WHY CHOOSE HIDEit MOUNTS?, HIDEit is a total solution to vertically wall mount your electronic components, We''ve been trusted by thousands of customers since 2009., Family owned and operated., HIDEit Mounts are manufactured in the USA using modern metal manufacturing techniques in an ISO Certified shop., We only use the highest-quality materials and recycled materials if possible',
+          'INNOVATIVE DESIGN GIVES YOU THE CHOICE., Design allows you to mount in any direction, We provide drywall screws and anchors., No measuring,  No templates. Mount to the wall in minutes!');
+
+INSERT INTO subdescription VALUES('', 'Apple TV (Compatible)', 'images/tvdesc.jpg', '3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, Mac OS X 10.11 El Capitan',
+          'Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac with Retina 5K display (OLDEST VERSION), Apple iMac with Retina 5K display (NEWEST VERSION), Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver',
+          'Product Description, The idea behind iMac has never wavered: to craft the ultimate desktop experience., And that commitment continues with the all-new 21.5-inch iMac with Retina 4K display., it delivers such spectacular image quality that everything else around you seems to disappear., Adding up to the most immersive iMac experience yet - and another big step forward',
+          'All in All, 27 d Retina 5K IPS Display, 5120 x 2880 Screen Resolution, 3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, AMD Radeon R9 M380 GPU (2GB GDDR5), Thunderbolt 2 + USB 3.0',
+          'Technical Details, Brand Name	Apple, Series	Apple iMac, Item model number	MK462LLA, Operating System	Mac OS X, Item Weight	22 pounds, Product Dimensions	30 x 24 x 10 inches, Voltage	120 volts',
+          'Additional Information, ASIN	B016OVL4PI, Customer Reviews 5/5, Shipping Weight	22 pounds, Date First Available	October 15, 2015',
+          'Moreover, Color	Silver, Processor Brand	Intel, Processor Count	4, Computer Memory Type	DDR3 SDRAM, Hard Drive Rotational Speed	7200 RPM',
+          'Protection, Strong, Stable. Cold-rolled heavy-gauge Steel. Black matte powder coat protects component from scratches., Innovative Design = Perfect Fit. Full access to ports and connectors., Quick and easy to install. Includes drywall screws and anchors rated for 25 lbs each., Compatible with Apple TV 4th Generation',
+          'WHY CHOOSE HIDEit MOUNTS?, HIDEit is a total solution to vertically wall mount your electronic components, We''ve been trusted by thousands of customers since 2009., Family owned and operated., HIDEit Mounts are manufactured in the USA using modern metal manufacturing techniques in an ISO Certified shop., We only use the highest-quality materials and recycled materials if possible',
+          'INNOVATIVE DESIGN GIVES YOU THE CHOICE., Design allows you to mount in any direction, We provide drywall screws and anchors., No measuring,  No templates. Mount to the wall in minutes!');
+
+INSERT INTO subdescription VALUES('', 'Apple TV (Compatible)', 'images/tvdesc.jpg', '3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, Mac OS X 10.11 El Capitan',
+          'Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac with Retina 5K display (OLDEST VERSION), Apple iMac with Retina 5K display (NEWEST VERSION), Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver',
+          'Product Description, The idea behind iMac has never wavered: to craft the ultimate desktop experience., And that commitment continues with the all-new 21.5-inch iMac with Retina 4K display., it delivers such spectacular image quality that everything else around you seems to disappear., Adding up to the most immersive iMac experience yet - and another big step forward',
+          'All in All, 27 d Retina 5K IPS Display, 5120 x 2880 Screen Resolution, 3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, AMD Radeon R9 M380 GPU (2GB GDDR5), Thunderbolt 2 + USB 3.0',
+          'Technical Details, Brand Name	Apple, Series	Apple iMac, Item model number	MK462LLA, Operating System	Mac OS X, Item Weight	22 pounds, Product Dimensions	30 x 24 x 10 inches, Voltage	120 volts',
+          'Additional Information, ASIN	B016OVL4PI, Customer Reviews 5/5, Shipping Weight	22 pounds, Date First Available	October 15, 2015',
+          'Moreover, Color	Silver, Processor Brand	Intel, Processor Count	4, Computer Memory Type	DDR3 SDRAM, Hard Drive Rotational Speed	7200 RPM',
+          'Protection, Strong, Stable. Cold-rolled heavy-gauge Steel. Black matte powder coat protects component from scratches., Innovative Design = Perfect Fit. Full access to ports and connectors., Quick and easy to install. Includes drywall screws and anchors rated for 25 lbs each., Compatible with Apple TV 4th Generation',
+          'WHY CHOOSE HIDEit MOUNTS?, HIDEit is a total solution to vertically wall mount your electronic components, We''ve been trusted by thousands of customers since 2009., Family owned and operated., HIDEit Mounts are manufactured in the USA using modern metal manufacturing techniques in an ISO Certified shop., We only use the highest-quality materials and recycled materials if possible',
+          'INNOVATIVE DESIGN GIVES YOU THE CHOICE., Design allows you to mount in any direction, We provide drywall screws and anchors., No measuring,  No templates. Mount to the wall in minutes!');
+
+INSERT INTO subdescription VALUES('', 'ShowTop 4K Quad Core Android Tv Box Fully Loaded', 'images/showtopdesc.jpg', '3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, Mac OS X 10.11 El Capitan',
+          'Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac with Retina 5K display (OLDEST VERSION), Apple iMac with Retina 5K display (NEWEST VERSION), Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver',
+          'Product Description, The idea behind iMac has never wavered: to craft the ultimate desktop experience., And that commitment continues with the all-new 21.5-inch iMac with Retina 4K display., it delivers such spectacular image quality that everything else around you seems to disappear., Adding up to the most immersive iMac experience yet - and another big step forward',
+          'All in All, 27 d Retina 5K IPS Display, 5120 x 2880 Screen Resolution, 3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, AMD Radeon R9 M380 GPU (2GB GDDR5), Thunderbolt 2 + USB 3.0',
+          'Technical Details, Brand Name	Apple, Series	Apple iMac, Item model number	MK462LLA, Operating System	Mac OS X, Item Weight	22 pounds, Product Dimensions	30 x 24 x 10 inches, Voltage	120 volts',
+          'Additional Information, ASIN	B016OVL4PI, Customer Reviews 5/5, Shipping Weight	22 pounds, Date First Available	October 15, 2015',
+          'Moreover, Color	Silver, Processor Brand	Intel, Processor Count	4, Computer Memory Type	DDR3 SDRAM, Hard Drive Rotational Speed	7200 RPM',
+          'Protection, Strong, Stable. Cold-rolled heavy-gauge Steel. Black matte powder coat protects component from scratches., Innovative Design = Perfect Fit. Full access to ports and connectors., Quick and easy to install. Includes drywall screws and anchors rated for 25 lbs each., Compatible with Apple TV 4th Generation',
+          'WHY CHOOSE HIDEit MOUNTS?, HIDEit is a total solution to vertically wall mount your electronic components, We''ve been trusted by thousands of customers since 2009., Family owned and operated., HIDEit Mounts are manufactured in the USA using modern metal manufacturing techniques in an ISO Certified shop., We only use the highest-quality materials and recycled materials if possible',
+          'INNOVATIVE DESIGN GIVES YOU THE CHOICE., Design allows you to mount in any direction, We provide drywall screws and anchors., No measuring,  No templates. Mount to the wall in minutes!');
+
+INSERT INTO subdescription VALUES('', 'ShowTop 4K Quad Core', 'images/showtopdesc.jpg', '3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, Mac OS X 10.11 El Capitan',
+          'Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac with Retina 5K display (OLDEST VERSION), Apple iMac with Retina 5K display (NEWEST VERSION), Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver',
+          'Product Description, The idea behind iMac has never wavered: to craft the ultimate desktop experience., And that commitment continues with the all-new 21.5-inch iMac with Retina 4K display., it delivers such spectacular image quality that everything else around you seems to disappear., Adding up to the most immersive iMac experience yet - and another big step forward',
+          'All in All, 27 d Retina 5K IPS Display, 5120 x 2880 Screen Resolution, 3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, AMD Radeon R9 M380 GPU (2GB GDDR5), Thunderbolt 2 + USB 3.0',
+          'Technical Details, Brand Name	Apple, Series	Apple iMac, Item model number	MK462LLA, Operating System	Mac OS X, Item Weight	22 pounds, Product Dimensions	30 x 24 x 10 inches, Voltage	120 volts',
+          'Additional Information, ASIN	B016OVL4PI, Customer Reviews 5/5, Shipping Weight	22 pounds, Date First Available	October 15, 2015',
+          'Moreover, Color	Silver, Processor Brand	Intel, Processor Count	4, Computer Memory Type	DDR3 SDRAM, Hard Drive Rotational Speed	7200 RPM',
+          'Protection, Strong, Stable. Cold-rolled heavy-gauge Steel. Black matte powder coat protects component from scratches., Innovative Design = Perfect Fit. Full access to ports and connectors., Quick and easy to install. Includes drywall screws and anchors rated for 25 lbs each., Compatible with Apple TV 4th Generation',
+          'WHY CHOOSE HIDEit MOUNTS?, HIDEit is a total solution to vertically wall mount your electronic components, We''ve been trusted by thousands of customers since 2009., Family owned and operated., HIDEit Mounts are manufactured in the USA using modern metal manufacturing techniques in an ISO Certified shop., We only use the highest-quality materials and recycled materials if possible',
+          'INNOVATIVE DESIGN GIVES YOU THE CHOICE., Design allows you to mount in any direction, We provide drywall screws and anchors., No measuring,  No templates. Mount to the wall in minutes!');
+
+INSERT INTO subdescription VALUES('', 'AirPort Extreme 802.11n (5th Generation)', 'images/tvdesc.jpg', '3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, Mac OS X 10.11 El Capitan',
+          'Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac with Retina 5K display (OLDEST VERSION), Apple iMac with Retina 5K display (NEWEST VERSION), Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver',
+          'Product Description, The idea behind iMac has never wavered: to craft the ultimate desktop experience., And that commitment continues with the all-new 21.5-inch iMac with Retina 4K display., it delivers such spectacular image quality that everything else around you seems to disappear., Adding up to the most immersive iMac experience yet - and another big step forward',
+          'All in All, 27 d Retina 5K IPS Display, 5120 x 2880 Screen Resolution, 3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, AMD Radeon R9 M380 GPU (2GB GDDR5), Thunderbolt 2 + USB 3.0',
+          'Technical Details, Brand Name	Apple, Series	Apple iMac, Item model number	MK462LLA, Operating System	Mac OS X, Item Weight	22 pounds, Product Dimensions	30 x 24 x 10 inches, Voltage	120 volts',
+          'Additional Information, ASIN	B016OVL4PI, Customer Reviews 5/5, Shipping Weight	22 pounds, Date First Available	October 15, 2015',
+          'Moreover, Color	Silver, Processor Brand	Intel, Processor Count	4, Computer Memory Type	DDR3 SDRAM, Hard Drive Rotational Speed	7200 RPM',
+          'Protection, Strong, Stable. Cold-rolled heavy-gauge Steel. Black matte powder coat protects component from scratches., Innovative Design = Perfect Fit. Full access to ports and connectors., Quick and easy to install. Includes drywall screws and anchors rated for 25 lbs each., Compatible with Apple TV 4th Generation',
+          'WHY CHOOSE HIDEit MOUNTS?, HIDEit is a total solution to vertically wall mount your electronic components, We''ve been trusted by thousands of customers since 2009., Family owned and operated., HIDEit Mounts are manufactured in the USA using modern metal manufacturing techniques in an ISO Certified shop., We only use the highest-quality materials and recycled materials if possible',
+          'INNOVATIVE DESIGN GIVES YOU THE CHOICE., Design allows you to mount in any direction, We provide drywall screws and anchors., No measuring,  No templates. Mount to the wall in minutes!');
+
+INSERT INTO subdescription VALUES('', 'AirPort normal', 'images/tvdesc.jpg', '3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, Mac OS X 10.11 El Capitan',
+          'Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac with Retina 5K display (OLDEST VERSION), Apple iMac with Retina 5K display (NEWEST VERSION), Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver, Apple iMac MK462LL/A 27-Inch Retina 5K Desktop (3.2 GHz Intel Core i5 with 8GB DDR3 & 1TB Mac OS X) Silver',
+          'Product Description, The idea behind iMac has never wavered: to craft the ultimate desktop experience., And that commitment continues with the all-new 21.5-inch iMac with Retina 4K display., it delivers such spectacular image quality that everything else around you seems to disappear., Adding up to the most immersive iMac experience yet - and another big step forward',
+          'All in All, 27 d Retina 5K IPS Display, 5120 x 2880 Screen Resolution, 3.2 GHz Intel Core i5 (Skylake), 8GB of 1867 MHz DDR3 RAM, 1TB 7200 rpm HDD, AMD Radeon R9 M380 GPU (2GB GDDR5), Thunderbolt 2 + USB 3.0',
+          'Technical Details, Brand Name	Apple, Series	Apple iMac, Item model number	MK462LLA, Operating System	Mac OS X, Item Weight	22 pounds, Product Dimensions	30 x 24 x 10 inches, Voltage	120 volts',
+          'Additional Information, ASIN	B016OVL4PI, Customer Reviews 5/5, Shipping Weight	22 pounds, Date First Available	October 15, 2015',
+          'Moreover, Color	Silver, Processor Brand	Intel, Processor Count	4, Computer Memory Type	DDR3 SDRAM, Hard Drive Rotational Speed	7200 RPM',
+          'Protection, Strong, Stable. Cold-rolled heavy-gauge Steel. Black matte powder coat protects component from scratches., Innovative Design = Perfect Fit. Full access to ports and connectors., Quick and easy to install. Includes drywall screws and anchors rated for 25 lbs each., Compatible with Apple TV 4th Generation',
+          'WHY CHOOSE HIDEit MOUNTS?, HIDEit is a total solution to vertically wall mount your electronic components, We''ve been trusted by thousands of customers since 2009., Family owned and operated., HIDEit Mounts are manufactured in the USA using modern metal manufacturing techniques in an ISO Certified shop., We only use the highest-quality materials and recycled materials if possible',
+          'INNOVATIVE DESIGN GIVES YOU THE CHOICE., Design allows you to mount in any direction, We provide drywall screws and anchors., No measuring,  No templates. Mount to the wall in minutes!');
+
+INSERT INTO subdescription VALUES('', 'Iphone 6 Black or White 8GB Neverlock', 'images/iphone6Sdesc.jpg' ,'4.7-inch (diagonal) LED-backlit widescreen Multi-Touch display with IPS technology, New 8-megapixel iSight camera with 1.5 pixels,
+            A8 chip with 64-bit architecture. M8 motion coprocessor, 1080p HD video recording (30 fps or 60 fps), Unlocked cell phones are compatible with GSM carriers like AT&T and T-Mobile as well as
+            with GSM SIM cards (e.g. H20 and select prepaid carriers). Unlocked cell phones will not work with CDMA Carriers like Sprint; Verizon; Boost or Virgin.', 'Iphone 6 Black or White 8GB Neverlock,
+            Iphone 5S White 16GB Unlocked, Iphone 6S White 32GB Neverlock, Iphone 4 Black 64 GB Neverlock, Iphone 5 White 16GB Unlocked', 'Technical Details, Size (LWH): 5.44 inches; 2.64 inches; 0.27 inches,
+            Weight: 4.48 ounces, Minimum Rated Talk Time: 14 hours, Minimum Rated Standby Time: 250 hours', 'Product Description, Display, Retina HD display, 1334-by-750-pixel resolution at 326 ppi, 1400:1 contrast ratio (typical),
+            500 cd/m2 max brightness (typical), Full sRGB standard, Dual-domain pixels for wider viewing angles, Fingerprint-resistant oleophobic coating on front, Support for display of multiple languages and characters simultaneously,
+            Display Zoom', 'iSight Camera, Autofocus with Focus Pixels, f/2.2 aperture, True Tone flash, Hybrid IR filter, Backside illumination sensor,Sapphire crystal lens cover,
+            Auto image stabilization, Auto HDR for photos, Improved face detection, Exposure control, Panorama (upto 43 megapixels), Burst mode,Tap to focus, Photo geotagging, Timer mode',
+            'Video Recording, 1080p HD video recording (30 fps or 60 fps), True Tone flash, Slo-mo video (120 fps or 240 fps),Time-lapse video,Cinematic video stabilization,Continuous autofocus video,Take still photos while recording video,
+            Improved face detection,3x zoom, Video geotagging', 'Cellular and Wireless, UMTS/HSPA+/DC-HSDPA (850; 900; 1700/2100; 1900; 2100 MHz), 802.11a/b/g/n/ac WiFi, Bluetooth 4.0 wireless technology NFC',
+            'SIM card, Nano-SIM, iPhone 6 is not compatible with existing micro SIM cards', 'In the Box, iPhone with iOS 8, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation',
+            'Product Details, Product Dimensions: 5.4 x 2.6 x 0.3 inches ; 4.5 ounces, Shipping Weight: 13.6 ounces, ASIN: B00NQGP3L6');
+
+INSERT INTO subdescription VALUES('', 'Iphone 5S White 16GB Unlocked', 'images/iphone5desc.jpg' ,'4.7-inch (diagonal) LED-backlit widescreen Multi-Touch display with IPS technology, New 8-megapixel iSight camera with 1.5 pixels,
+            A8 chip with 64-bit architecture. M8 motion coprocessor, 1080p HD video recording (30 fps or 60 fps), Unlocked cell phones are compatible with GSM carriers like AT&T and T-Mobile as well as
+            with GSM SIM cards (e.g. H20 and select prepaid carriers). Unlocked cell phones will not work with CDMA Carriers like Sprint; Verizon; Boost or Virgin.', 'Iphone 6 Black or White 8GB Neverlock,
+            Iphone 5S White 16GB Unlocked, Iphone 6S White 32GB Neverlock, Iphone 4 Black 64 GB Neverlock, Iphone 5 White 16GB Unlocked', 'Technical Details, Size (LWH): 5.44 inches; 2.64 inches; 0.27 inches,
+            Weight: 4.48 ounces, Minimum Rated Talk Time: 14 hours, Minimum Rated Standby Time: 250 hours', 'Product Description, Display, Retina HD display, 1334-by-750-pixel resolution at 326 ppi, 1400:1 contrast ratio (typical),
+            500 cd/m2 max brightness (typical), Full sRGB standard, Dual-domain pixels for wider viewing angles, Fingerprint-resistant oleophobic coating on front, Support for display of multiple languages and characters simultaneously,
+            Display Zoom', 'iSight Camera, Autofocus with Focus Pixels, f/2.2 aperture, True Tone flash, Hybrid IR filter, Backside illumination sensor,Sapphire crystal lens cover,
+            Auto image stabilization, Auto HDR for photos, Improved face detection, Exposure control, Panorama (upto 43 megapixels), Burst mode,Tap to focus, Photo geotagging, Timer mode',
+            'Video Recording, 1080p HD video recording (30 fps or 60 fps), True Tone flash, Slo-mo video (120 fps or 240 fps),Time-lapse video,Cinematic video stabilization,Continuous autofocus video,Take still photos while recording video,
+            Improved face detection,3x zoom, Video geotagging', 'Cellular and Wireless, UMTS/HSPA+/DC-HSDPA (850; 900; 1700/2100; 1900; 2100 MHz), 802.11a/b/g/n/ac WiFi, Bluetooth 4.0 wireless technology NFC',
+            'SIM card, Nano-SIM, iPhone 6 is not compatible with existing micro SIM cards', 'In the Box, iPhone with iOS 8, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation',
+            'Product Details, Product Dimensions: 5.4 x 2.6 x 0.3 inches ; 4.5 ounces, Shipping Weight: 13.6 ounces, ASIN: B00NQGP3L6');
+
+INSERT INTO subdescription VALUES('', 'Iphone 5 White 16GB Unlocked', 'images/iphone5desc.jpg' ,'4.7-inch (diagonal) LED-backlit widescreen Multi-Touch display with IPS technology, New 8-megapixel iSight camera with 1.5 pixels,
+            A8 chip with 64-bit architecture. M8 motion coprocessor, 1080p HD video recording (30 fps or 60 fps), Unlocked cell phones are compatible with GSM carriers like AT&T and T-Mobile as well as
+            with GSM SIM cards (e.g. H20 and select prepaid carriers). Unlocked cell phones will not work with CDMA Carriers like Sprint; Verizon; Boost or Virgin.', 'Iphone 6 Black or White 8GB Neverlock,
+            Iphone 5S White 16GB Unlocked, Iphone 6S White 32GB Neverlock, Iphone 4 Black 64 GB Neverlock, Iphone 5 White 16GB Unlocked', 'Technical Details, Size (LWH): 5.44 inches; 2.64 inches; 0.27 inches,
+            Weight: 4.48 ounces, Minimum Rated Talk Time: 14 hours, Minimum Rated Standby Time: 250 hours', 'Product Description, Display, Retina HD display, 1334-by-750-pixel resolution at 326 ppi, 1400:1 contrast ratio (typical),
+            500 cd/m2 max brightness (typical), Full sRGB standard, Dual-domain pixels for wider viewing angles, Fingerprint-resistant oleophobic coating on front, Support for display of multiple languages and characters simultaneously,
+            Display Zoom', 'iSight Camera, Autofocus with Focus Pixels, f/2.2 aperture, True Tone flash, Hybrid IR filter, Backside illumination sensor,Sapphire crystal lens cover,
+            Auto image stabilization, Auto HDR for photos, Improved face detection, Exposure control, Panorama (upto 43 megapixels), Burst mode,Tap to focus, Photo geotagging, Timer mode',
+            'Video Recording, 1080p HD video recording (30 fps or 60 fps), True Tone flash, Slo-mo video (120 fps or 240 fps),Time-lapse video,Cinematic video stabilization,Continuous autofocus video,Take still photos while recording video,
+            Improved face detection,3x zoom, Video geotagging', 'Cellular and Wireless, UMTS/HSPA+/DC-HSDPA (850; 900; 1700/2100; 1900; 2100 MHz), 802.11a/b/g/n/ac WiFi, Bluetooth 4.0 wireless technology NFC',
+            'SIM card, Nano-SIM, iPhone 6 is not compatible with existing micro SIM cards', 'In the Box, iPhone with iOS 8, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation',
+            'Product Details, Product Dimensions: 5.4 x 2.6 x 0.3 inches ; 4.5 ounces, Shipping Weight: 13.6 ounces, ASIN: B00NQGP3L6');
+
+INSERT INTO subdescription VALUES('', 'Iphone 5S White 16GB Unlocked', 'images/iphone5desc.jpg' ,'4.7-inch (diagonal) LED-backlit widescreen Multi-Touch display with IPS technology, New 8-megapixel iSight camera with 1.5 pixels,
+            A8 chip with 64-bit architecture. M8 motion coprocessor, 1080p HD video recording (30 fps or 60 fps), Unlocked cell phones are compatible with GSM carriers like AT&T and T-Mobile as well as
+            with GSM SIM cards (e.g. H20 and select prepaid carriers). Unlocked cell phones will not work with CDMA Carriers like Sprint; Verizon; Boost or Virgin.', 'Iphone 6 Black or White 8GB Neverlock,
+            Iphone 5S White 16GB Unlocked, Iphone 6S White 32GB Neverlock, Iphone 4 Black 64 GB Neverlock, Iphone 5 White 16GB Unlocked', 'Technical Details, Size (LWH): 5.44 inches; 2.64 inches; 0.27 inches,
+            Weight: 4.48 ounces, Minimum Rated Talk Time: 14 hours, Minimum Rated Standby Time: 250 hours', 'Product Description, Display, Retina HD display, 1334-by-750-pixel resolution at 326 ppi, 1400:1 contrast ratio (typical),
+            500 cd/m2 max brightness (typical), Full sRGB standard, Dual-domain pixels for wider viewing angles, Fingerprint-resistant oleophobic coating on front, Support for display of multiple languages and characters simultaneously,
+            Display Zoom', 'iSight Camera, Autofocus with Focus Pixels, f/2.2 aperture, True Tone flash, Hybrid IR filter, Backside illumination sensor,Sapphire crystal lens cover,
+            Auto image stabilization, Auto HDR for photos, Improved face detection, Exposure control, Panorama (upto 43 megapixels), Burst mode,Tap to focus, Photo geotagging, Timer mode',
+            'Video Recording, 1080p HD video recording (30 fps or 60 fps), True Tone flash, Slo-mo video (120 fps or 240 fps),Time-lapse video,Cinematic video stabilization,Continuous autofocus video,Take still photos while recording video,
+            Improved face detection,3x zoom, Video geotagging', 'Cellular and Wireless, UMTS/HSPA+/DC-HSDPA (850; 900; 1700/2100; 1900; 2100 MHz), 802.11a/b/g/n/ac WiFi, Bluetooth 4.0 wireless technology NFC',
+            'SIM card, Nano-SIM, iPhone 6 is not compatible with existing micro SIM cards', 'In the Box, iPhone with iOS 8, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation',
+            'Product Details, Product Dimensions: 5.4 x 2.6 x 0.3 inches ; 4.5 ounces, Shipping Weight: 13.6 ounces, ASIN: B00NQGP3L6');
+
+INSERT INTO subdescription VALUES('', 'Iphone 4 Black 64 GB Neverlock', 'images/iphone4desc.jpg' ,'4.7-inch (diagonal) LED-backlit widescreen Multi-Touch display with IPS technology, New 8-megapixel iSight camera with 1.5 pixels,
+            A8 chip with 64-bit architecture. M8 motion coprocessor, 1080p HD video recording (30 fps or 60 fps), Unlocked cell phones are compatible with GSM carriers like AT&T and T-Mobile as well as
+            with GSM SIM cards (e.g. H20 and select prepaid carriers). Unlocked cell phones will not work with CDMA Carriers like Sprint; Verizon; Boost or Virgin.', 'Iphone 6 Black or White 8GB Neverlock,
+            Iphone 5S White 16GB Unlocked, Iphone 6S White 32GB Neverlock, Iphone 4 Black 64 GB Neverlock, Iphone 5 White 16GB Unlocked', 'Technical Details, Size (LWH): 5.44 inches; 2.64 inches; 0.27 inches,
+            Weight: 4.48 ounces, Minimum Rated Talk Time: 14 hours, Minimum Rated Standby Time: 250 hours', 'Product Description, Display, Retina HD display, 1334-by-750-pixel resolution at 326 ppi, 1400:1 contrast ratio (typical),
+            500 cd/m2 max brightness (typical), Full sRGB standard, Dual-domain pixels for wider viewing angles, Fingerprint-resistant oleophobic coating on front, Support for display of multiple languages and characters simultaneously,
+            Display Zoom', 'iSight Camera, Autofocus with Focus Pixels, f/2.2 aperture, True Tone flash, Hybrid IR filter, Backside illumination sensor,Sapphire crystal lens cover,
+            Auto image stabilization, Auto HDR for photos, Improved face detection, Exposure control, Panorama (upto 43 megapixels), Burst mode,Tap to focus, Photo geotagging, Timer mode',
+            'Video Recording, 1080p HD video recording (30 fps or 60 fps), True Tone flash, Slo-mo video (120 fps or 240 fps),Time-lapse video,Cinematic video stabilization,Continuous autofocus video,Take still photos while recording video,
+            Improved face detection,3x zoom, Video geotagging', 'Cellular and Wireless, UMTS/HSPA+/DC-HSDPA (850; 900; 1700/2100; 1900; 2100 MHz), 802.11a/b/g/n/ac WiFi, Bluetooth 4.0 wireless technology NFC',
+            'SIM card, Nano-SIM, iPhone 6 is not compatible with existing micro SIM cards', 'In the Box, iPhone with iOS 8, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation',
+            'Product Details, Product Dimensions: 5.4 x 2.6 x 0.3 inches ; 4.5 ounces, Shipping Weight: 13.6 ounces, ASIN: B00NQGP3L6');
+
+INSERT INTO subdescription VALUES('', 'Iphone 4S Black 32 GB Neverlock', 'images/iphone4desc.jpg' ,'4.7-inch (diagonal) LED-backlit widescreen Multi-Touch display with IPS technology, New 8-megapixel iSight camera with 1.5 pixels,
+            A8 chip with 64-bit architecture. M8 motion coprocessor, 1080p HD video recording (30 fps or 60 fps), Unlocked cell phones are compatible with GSM carriers like AT&T and T-Mobile as well as
+            with GSM SIM cards (e.g. H20 and select prepaid carriers). Unlocked cell phones will not work with CDMA Carriers like Sprint; Verizon; Boost or Virgin.', 'Iphone 6 Black or White 8GB Neverlock,
+            Iphone 5S White 16GB Unlocked, Iphone 6S White 32GB Neverlock, Iphone 4 Black 64 GB Neverlock, Iphone 5 White 16GB Unlocked', 'Technical Details, Size (LWH): 5.44 inches; 2.64 inches; 0.27 inches,
+            Weight: 4.48 ounces, Minimum Rated Talk Time: 14 hours, Minimum Rated Standby Time: 250 hours', 'Product Description, Display, Retina HD display, 1334-by-750-pixel resolution at 326 ppi, 1400:1 contrast ratio (typical),
+            500 cd/m2 max brightness (typical), Full sRGB standard, Dual-domain pixels for wider viewing angles, Fingerprint-resistant oleophobic coating on front, Support for display of multiple languages and characters simultaneously,
+            Display Zoom', 'iSight Camera, Autofocus with Focus Pixels, f/2.2 aperture, True Tone flash, Hybrid IR filter, Backside illumination sensor,Sapphire crystal lens cover,
+            Auto image stabilization, Auto HDR for photos, Improved face detection, Exposure control, Panorama (upto 43 megapixels), Burst mode,Tap to focus, Photo geotagging, Timer mode',
+            'Video Recording, 1080p HD video recording (30 fps or 60 fps), True Tone flash, Slo-mo video (120 fps or 240 fps),Time-lapse video,Cinematic video stabilization,Continuous autofocus video,Take still photos while recording video,
+            Improved face detection,3x zoom, Video geotagging', 'Cellular and Wireless, UMTS/HSPA+/DC-HSDPA (850; 900; 1700/2100; 1900; 2100 MHz), 802.11a/b/g/n/ac WiFi, Bluetooth 4.0 wireless technology NFC',
+            'SIM card, Nano-SIM, iPhone 6 is not compatible with existing micro SIM cards', 'In the Box, iPhone with iOS 8, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation',
+            'Product Details, Product Dimensions: 5.4 x 2.6 x 0.3 inches ; 4.5 ounces, Shipping Weight: 13.6 ounces, ASIN: B00NQGP3L6');
+
+INSERT INTO subdescription VALUES('', 'Iphone 6 White 64GB', 'images/iphone6Sdesc.jpg' ,'4.7-inch (diagonal) LED-backlit widescreen Multi-Touch display with IPS technology, New 8-megapixel iSight camera with 1.5 pixels,
+            A8 chip with 64-bit architecture. M8 motion coprocessor, 1080p HD video recording (30 fps or 60 fps), Unlocked cell phones are compatible with GSM carriers like AT&T and T-Mobile as well as
+            with GSM SIM cards (e.g. H20 and select prepaid carriers). Unlocked cell phones will not work with CDMA Carriers like Sprint; Verizon; Boost or Virgin.', 'Iphone 6 Black or White 8GB Neverlock,
+            Iphone 5S White 16GB Unlocked, Iphone 6S White 32GB Neverlock, Iphone 4 Black 64 GB Neverlock, Iphone 5 White 16GB Unlocked', 'Technical Details, Size (LWH): 5.44 inches; 2.64 inches; 0.27 inches,
+            Weight: 4.48 ounces, Minimum Rated Talk Time: 14 hours, Minimum Rated Standby Time: 250 hours', 'Product Description, Display, Retina HD display, 1334-by-750-pixel resolution at 326 ppi, 1400:1 contrast ratio (typical),
+            500 cd/m2 max brightness (typical), Full sRGB standard, Dual-domain pixels for wider viewing angles, Fingerprint-resistant oleophobic coating on front, Support for display of multiple languages and characters simultaneously,
+            Display Zoom', 'iSight Camera, Autofocus with Focus Pixels, f/2.2 aperture, True Tone flash, Hybrid IR filter, Backside illumination sensor,Sapphire crystal lens cover,
+            Auto image stabilization, Auto HDR for photos, Improved face detection, Exposure control, Panorama (upto 43 megapixels), Burst mode,Tap to focus, Photo geotagging, Timer mode',
+            'Video Recording, 1080p HD video recording (30 fps or 60 fps), True Tone flash, Slo-mo video (120 fps or 240 fps),Time-lapse video,Cinematic video stabilization,Continuous autofocus video,Take still photos while recording video,
+            Improved face detection,3x zoom, Video geotagging', 'Cellular and Wireless, UMTS/HSPA+/DC-HSDPA (850; 900; 1700/2100; 1900; 2100 MHz), 802.11a/b/g/n/ac WiFi, Bluetooth 4.0 wireless technology NFC',
+            'SIM card, Nano-SIM, iPhone 6 is not compatible with existing micro SIM cards', 'In the Box, iPhone with iOS 8, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation',
+            'Product Details, Product Dimensions: 5.4 x 2.6 x 0.3 inches ; 4.5 ounces, Shipping Weight: 13.6 ounces, ASIN: B00NQGP3L6');
+
+INSERT INTO subdescription VALUES('', 'Samsung Galaxy S5 SM-G900H Factory Unlocked Cellphone International Version Black', 'images/galaxys5desc.jpg' ,'4.7-inch (diagonal) LED-backlit widescreen Multi-Touch display with IPS technology, New 8-megapixel iSight camera with 1.5 pixels,
+            A8 chip with 64-bit architecture. M8 motion coprocessor, 1080p HD video recording (30 fps or 60 fps), Unlocked cell phones are compatible with GSM carriers like AT&T and T-Mobile as well as
+            with GSM SIM cards (e.g. H20 and select prepaid carriers). Unlocked cell phones will not work with CDMA Carriers like Sprint; Verizon; Boost or Virgin.', 'Iphone 6 Black or White 8GB Neverlock,
+            Iphone 5S White 16GB Unlocked, Iphone 6S White 32GB Neverlock, Iphone 4 Black 64 GB Neverlock, Iphone 5 White 16GB Unlocked', 'Technical Details, Size (LWH): 5.44 inches; 2.64 inches; 0.27 inches,
+            Weight: 4.48 ounces, Minimum Rated Talk Time: 14 hours, Minimum Rated Standby Time: 250 hours', 'Product Description, Display, Retina HD display, 1334-by-750-pixel resolution at 326 ppi, 1400:1 contrast ratio (typical),
+            500 cd/m2 max brightness (typical), Full sRGB standard, Dual-domain pixels for wider viewing angles, Fingerprint-resistant oleophobic coating on front, Support for display of multiple languages and characters simultaneously,
+            Display Zoom', 'iSight Camera, Autofocus with Focus Pixels, f/2.2 aperture, True Tone flash, Hybrid IR filter, Backside illumination sensor,Sapphire crystal lens cover,
+            Auto image stabilization, Auto HDR for photos, Improved face detection, Exposure control, Panorama (upto 43 megapixels), Burst mode,Tap to focus, Photo geotagging, Timer mode',
+            'Video Recording, 1080p HD video recording (30 fps or 60 fps), True Tone flash, Slo-mo video (120 fps or 240 fps),Time-lapse video,Cinematic video stabilization,Continuous autofocus video,Take still photos while recording video,
+            Improved face detection,3x zoom, Video geotagging', 'Cellular and Wireless, UMTS/HSPA+/DC-HSDPA (850; 900; 1700/2100; 1900; 2100 MHz), 802.11a/b/g/n/ac WiFi, Bluetooth 4.0 wireless technology NFC',
+            'SIM card, Nano-SIM, iPhone 6 is not compatible with existing micro SIM cards', 'In the Box, iPhone with iOS 8, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation',
+            'Product Details, Product Dimensions: 5.4 x 2.6 x 0.3 inches ; 4.5 ounces, Shipping Weight: 13.6 ounces, ASIN: B00NQGP3L6');
+
+INSERT INTO subdescription VALUES('', 'Samsung Galaxy S4 i9500 Factory Unlocked cellphone 16 GB White', 'images/galaxys4desc.jpg' ,'4.7-inch (diagonal) LED-backlit widescreen Multi-Touch display with IPS technology, New 8-megapixel iSight camera with 1.5 pixels,
+            A8 chip with 64-bit architecture. M8 motion coprocessor, 1080p HD video recording (30 fps or 60 fps), Unlocked cell phones are compatible with GSM carriers like AT&T and T-Mobile as well as
+            with GSM SIM cards (e.g. H20 and select prepaid carriers). Unlocked cell phones will not work with CDMA Carriers like Sprint; Verizon; Boost or Virgin.', 'Iphone 6 Black or White 8GB Neverlock,
+            Iphone 5S White 16GB Unlocked, Iphone 6S White 32GB Neverlock, Iphone 4 Black 64 GB Neverlock, Iphone 5 White 16GB Unlocked', 'Technical Details, Size (LWH): 5.44 inches; 2.64 inches; 0.27 inches,
+            Weight: 4.48 ounces, Minimum Rated Talk Time: 14 hours, Minimum Rated Standby Time: 250 hours', 'Product Description, Display, Retina HD display, 1334-by-750-pixel resolution at 326 ppi, 1400:1 contrast ratio (typical),
+            500 cd/m2 max brightness (typical), Full sRGB standard, Dual-domain pixels for wider viewing angles, Fingerprint-resistant oleophobic coating on front, Support for display of multiple languages and characters simultaneously,
+            Display Zoom', 'iSight Camera, Autofocus with Focus Pixels, f/2.2 aperture, True Tone flash, Hybrid IR filter, Backside illumination sensor,Sapphire crystal lens cover,
+            Auto image stabilization, Auto HDR for photos, Improved face detection, Exposure control, Panorama (upto 43 megapixels), Burst mode,Tap to focus, Photo geotagging, Timer mode',
+            'Video Recording, 1080p HD video recording (30 fps or 60 fps), True Tone flash, Slo-mo video (120 fps or 240 fps),Time-lapse video,Cinematic video stabilization,Continuous autofocus video,Take still photos while recording video,
+            Improved face detection,3x zoom, Video geotagging', 'Cellular and Wireless, UMTS/HSPA+/DC-HSDPA (850; 900; 1700/2100; 1900; 2100 MHz), 802.11a/b/g/n/ac WiFi, Bluetooth 4.0 wireless technology NFC',
+            'SIM card, Nano-SIM, iPhone 6 is not compatible with existing micro SIM cards', 'In the Box, iPhone with iOS 8, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation',
+            'Product Details, Product Dimensions: 5.4 x 2.6 x 0.3 inches ; 4.5 ounces, Shipping Weight: 13.6 ounces, ASIN: B00NQGP3L6');
+
+INSERT INTO subdescription VALUES('', 'Samsung Note i6901 Unlocked Cellphone International Version 16GB White', 'images/samsungnotedesc.jpg' ,'4.7-inch (diagonal) LED-backlit widescreen Multi-Touch display with IPS technology, New 8-megapixel iSight camera with 1.5 pixels,
+            A8 chip with 64-bit architecture. M8 motion coprocessor, 1080p HD video recording (30 fps or 60 fps), Unlocked cell phones are compatible with GSM carriers like AT&T and T-Mobile as well as
+            with GSM SIM cards (e.g. H20 and select prepaid carriers). Unlocked cell phones will not work with CDMA Carriers like Sprint; Verizon; Boost or Virgin.', 'Iphone 6 Black or White 8GB Neverlock,
+            Iphone 5S White 16GB Unlocked, Iphone 6S White 32GB Neverlock, Iphone 4 Black 64 GB Neverlock, Iphone 5 White 16GB Unlocked', 'Technical Details, Size (LWH): 5.44 inches; 2.64 inches; 0.27 inches,
+            Weight: 4.48 ounces, Minimum Rated Talk Time: 14 hours, Minimum Rated Standby Time: 250 hours', 'Product Description, Display, Retina HD display, 1334-by-750-pixel resolution at 326 ppi, 1400:1 contrast ratio (typical),
+            500 cd/m2 max brightness (typical), Full sRGB standard, Dual-domain pixels for wider viewing angles, Fingerprint-resistant oleophobic coating on front, Support for display of multiple languages and characters simultaneously,
+            Display Zoom', 'iSight Camera, Autofocus with Focus Pixels, f/2.2 aperture, True Tone flash, Hybrid IR filter, Backside illumination sensor,Sapphire crystal lens cover,
+            Auto image stabilization, Auto HDR for photos, Improved face detection, Exposure control, Panorama (upto 43 megapixels), Burst mode,Tap to focus, Photo geotagging, Timer mode',
+            'Video Recording, 1080p HD video recording (30 fps or 60 fps), True Tone flash, Slo-mo video (120 fps or 240 fps),Time-lapse video,Cinematic video stabilization,Continuous autofocus video,Take still photos while recording video,
+            Improved face detection,3x zoom, Video geotagging', 'Cellular and Wireless, UMTS/HSPA+/DC-HSDPA (850; 900; 1700/2100; 1900; 2100 MHz), 802.11a/b/g/n/ac WiFi, Bluetooth 4.0 wireless technology NFC',
+            'SIM card, Nano-SIM, iPhone 6 is not compatible with existing micro SIM cards', 'In the Box, iPhone with iOS 8, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation',
+            'Product Details, Product Dimensions: 5.4 x 2.6 x 0.3 inches ; 4.5 ounces, Shipping Weight: 13.6 ounces, ASIN: B00NQGP3L6');
+
+INSERT INTO subdescription VALUES('', 'Samsung Galaxy Note Charcoal Black 32GB (Verizon Wireless)', 'images/samsungnotedesc.jpg' ,'4.7-inch (diagonal) LED-backlit widescreen Multi-Touch display with IPS technology, New 8-megapixel iSight camera with 1.5 pixels,
+            A8 chip with 64-bit architecture. M8 motion coprocessor, 1080p HD video recording (30 fps or 60 fps), Unlocked cell phones are compatible with GSM carriers like AT&T and T-Mobile as well as
+            with GSM SIM cards (e.g. H20 and select prepaid carriers). Unlocked cell phones will not work with CDMA Carriers like Sprint; Verizon; Boost or Virgin.', 'Iphone 6 Black or White 8GB Neverlock,
+            Iphone 5S White 16GB Unlocked, Iphone 6S White 32GB Neverlock, Iphone 4 Black 64 GB Neverlock, Iphone 5 White 16GB Unlocked', 'Technical Details, Size (LWH): 5.44 inches; 2.64 inches; 0.27 inches,
+            Weight: 4.48 ounces, Minimum Rated Talk Time: 14 hours, Minimum Rated Standby Time: 250 hours', 'Product Description, Display, Retina HD display, 1334-by-750-pixel resolution at 326 ppi, 1400:1 contrast ratio (typical),
+            500 cd/m2 max brightness (typical), Full sRGB standard, Dual-domain pixels for wider viewing angles, Fingerprint-resistant oleophobic coating on front, Support for display of multiple languages and characters simultaneously,
+            Display Zoom', 'iSight Camera, Autofocus with Focus Pixels, f/2.2 aperture, True Tone flash, Hybrid IR filter, Backside illumination sensor,Sapphire crystal lens cover,
+            Auto image stabilization, Auto HDR for photos, Improved face detection, Exposure control, Panorama (upto 43 megapixels), Burst mode,Tap to focus, Photo geotagging, Timer mode',
+            'Video Recording, 1080p HD video recording (30 fps or 60 fps), True Tone flash, Slo-mo video (120 fps or 240 fps),Time-lapse video,Cinematic video stabilization,Continuous autofocus video,Take still photos while recording video,
+            Improved face detection,3x zoom, Video geotagging', 'Cellular and Wireless, UMTS/HSPA+/DC-HSDPA (850; 900; 1700/2100; 1900; 2100 MHz), 802.11a/b/g/n/ac WiFi, Bluetooth 4.0 wireless technology NFC',
+            'SIM card, Nano-SIM, iPhone 6 is not compatible with existing micro SIM cards', 'In the Box, iPhone with iOS 8, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation',
+            'Product Details, Product Dimensions: 5.4 x 2.6 x 0.3 inches ; 4.5 ounces, Shipping Weight: 13.6 ounces, ASIN: B00NQGP3L6');
+
+
+INSERT INTO subdescription VALUES('', 'Samsung Galaxy S3 i9300 Unlocked Cellphone International Version 16GB White', 'images/galaxys3desc.jpg' ,'4.7-inch (diagonal) LED-backlit widescreen Multi-Touch display with IPS technology, New 8-megapixel iSight camera with 1.5 pixels,
+            A8 chip with 64-bit architecture. M8 motion coprocessor, 1080p HD video recording (30 fps or 60 fps), Unlocked cell phones are compatible with GSM carriers like AT&T and T-Mobile as well as
+            with GSM SIM cards (e.g. H20 and select prepaid carriers). Unlocked cell phones will not work with CDMA Carriers like Sprint; Verizon; Boost or Virgin.', 'Iphone 6 Black or White 8GB Neverlock,
+            Iphone 5S White 16GB Unlocked, Iphone 6S White 32GB Neverlock, Iphone 4 Black 64 GB Neverlock, Iphone 5 White 16GB Unlocked', 'Technical Details, Size (LWH): 5.44 inches; 2.64 inches; 0.27 inches,
+            Weight: 4.48 ounces, Minimum Rated Talk Time: 14 hours, Minimum Rated Standby Time: 250 hours', 'Product Description, Display, Retina HD display, 1334-by-750-pixel resolution at 326 ppi, 1400:1 contrast ratio (typical),
+            500 cd/m2 max brightness (typical), Full sRGB standard, Dual-domain pixels for wider viewing angles, Fingerprint-resistant oleophobic coating on front, Support for display of multiple languages and characters simultaneously,
+            Display Zoom', 'iSight Camera, Autofocus with Focus Pixels, f/2.2 aperture, True Tone flash, Hybrid IR filter, Backside illumination sensor,Sapphire crystal lens cover,
+            Auto image stabilization, Auto HDR for photos, Improved face detection, Exposure control, Panorama (upto 43 megapixels), Burst mode,Tap to focus, Photo geotagging, Timer mode',
+            'Video Recording, 1080p HD video recording (30 fps or 60 fps), True Tone flash, Slo-mo video (120 fps or 240 fps),Time-lapse video,Cinematic video stabilization,Continuous autofocus video,Take still photos while recording video,
+            Improved face detection,3x zoom, Video geotagging', 'Cellular and Wireless, UMTS/HSPA+/DC-HSDPA (850; 900; 1700/2100; 1900; 2100 MHz), 802.11a/b/g/n/ac WiFi, Bluetooth 4.0 wireless technology NFC',
+            'SIM card, Nano-SIM, iPhone 6 is not compatible with existing micro SIM cards', 'In the Box, iPhone with iOS 8, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation',
+            'Product Details, Product Dimensions: 5.4 x 2.6 x 0.3 inches ; 4.5 ounces, Shipping Weight: 13.6 ounces, ASIN: B00NQGP3L6');
+
+INSERT INTO subdescription VALUES('', 'Samsung Galaxy S6 SM-G920F 32GB (Factory Unlocked) 5.1 inches', 'images/galaxys6desc.jpg' ,'4.7-inch (diagonal) LED-backlit widescreen Multi-Touch display with IPS technology, New 8-megapixel iSight camera with 1.5 pixels,
+            A8 chip with 64-bit architecture. M8 motion coprocessor, 1080p HD video recording (30 fps or 60 fps), Unlocked cell phones are compatible with GSM carriers like AT&T and T-Mobile as well as
+            with GSM SIM cards (e.g. H20 and select prepaid carriers). Unlocked cell phones will not work with CDMA Carriers like Sprint; Verizon; Boost or Virgin.', 'Iphone 6 Black or White 8GB Neverlock,
+            Iphone 5S White 16GB Unlocked, Iphone 6S White 32GB Neverlock, Iphone 4 Black 64 GB Neverlock, Iphone 5 White 16GB Unlocked', 'Technical Details, Size (LWH): 5.44 inches; 2.64 inches; 0.27 inches,
+            Weight: 4.48 ounces, Minimum Rated Talk Time: 14 hours, Minimum Rated Standby Time: 250 hours', 'Product Description, Display, Retina HD display, 1334-by-750-pixel resolution at 326 ppi, 1400:1 contrast ratio (typical),
+            500 cd/m2 max brightness (typical), Full sRGB standard, Dual-domain pixels for wider viewing angles, Fingerprint-resistant oleophobic coating on front, Support for display of multiple languages and characters simultaneously,
+            Display Zoom', 'iSight Camera, Autofocus with Focus Pixels, f/2.2 aperture, True Tone flash, Hybrid IR filter, Backside illumination sensor,Sapphire crystal lens cover,
+            Auto image stabilization, Auto HDR for photos, Improved face detection, Exposure control, Panorama (upto 43 megapixels), Burst mode,Tap to focus, Photo geotagging, Timer mode',
+            'Video Recording, 1080p HD video recording (30 fps or 60 fps), True Tone flash, Slo-mo video (120 fps or 240 fps),Time-lapse video,Cinematic video stabilization,Continuous autofocus video,Take still photos while recording video,
+            Improved face detection,3x zoom, Video geotagging', 'Cellular and Wireless, UMTS/HSPA+/DC-HSDPA (850; 900; 1700/2100; 1900; 2100 MHz), 802.11a/b/g/n/ac WiFi, Bluetooth 4.0 wireless technology NFC',
+            'SIM card, Nano-SIM, iPhone 6 is not compatible with existing micro SIM cards', 'In the Box, iPhone with iOS 8, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation',
+            'Product Details, Product Dimensions: 5.4 x 2.6 x 0.3 inches ; 4.5 ounces, Shipping Weight: 13.6 ounces, ASIN: B00NQGP3L6');
 
 
 
