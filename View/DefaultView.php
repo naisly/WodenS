@@ -708,87 +708,89 @@ class DefaultView
             </div>';
         echo '<div class="col-md-9" id="total" style="margin-top: 40px;">';
 
-        //echo $i;
-        while ($i < $k) {
-            echo '<div class="row" style="margin-left: 5px;';
 
-            if($i < ($k - 1)){
-                echo 'border-bottom: 1px solid #e4e4e4;';
-            }
+        if($this->model->getNoDataFound() !== 1) {
+            //echo $i;
+            while ($i < $k) {
+                echo '<div class="row" style="margin-left: 5px;';
 
-            echo 'padding-bottom: 20px; margin-right: 5px;">
+                if ($i < ($k - 1)) {
+                    echo 'border-bottom: 1px solid #e4e4e4;';
+                }
+
+                echo 'padding-bottom: 20px; margin-right: 5px;">
                     <div class="col-md-3"';
-            if ($page === 'notebooks' || $page === 'television') {
-                echo 'style="margin-top: 30px"';
-            }
-            echo ' style="padding-left: 0 !important;">
+                if ($page === 'notebooks' || $page === 'television') {
+                    echo 'style="margin-top: 30px"';
+                }
+                echo ' style="padding-left: 0 !important;">
                         <img src="/' . $this->model->getPhoto($i) . '" style="margin-top: 21px;" class="img-shop" />
                     </div>
                     <div class="col-md-5">
                             <p class="spacer"></p>
                             <a class="subdescription" href="/';
 
-            if($_SESSION['language'] !== 'us'){
-                echo $_SESSION['language'] . '/';
-            }
+                if ($_SESSION['language'] !== 'us') {
+                    echo $_SESSION['language'] . '/';
+                }
 
-            echo 'shop/subdescription?name=' . $this->model->getOriginalName($i) . '&category=' . $page . '&product_price=' . $this->model->getPrice($i) . '&id=' . $this->model->getId($i) . '&product_name=' . $this->model->getProductName($i) . '">' . $this->model->getOriginalName($i) . '</a>
+                echo 'shop/subdescription?name=' . $this->model->getOriginalName($i) . '&category=' . $page . '&product_price=' . $this->model->getPrice($i) . '&id=' . $this->model->getId($i) . '&product_name=' . $this->model->getProductName($i) . '">' . $this->model->getOriginalName($i) . '</a>
 
                             <span><br />' . $this->model->Translate('by') . ' ';
 
-            if($this->model->getCategory($i) == 'IMac' || $this->model->getCategory($i) == 'AppleTV' ) {
-                echo 'Apple';
-            } else if($this->model->getCategory($i) == 'ShowTop'){
-                echo 'Amazon';
-            } else {
-                echo $this->model->getCategory($i);
-            }
+                if ($this->model->getCategory($i) == 'IMac' || $this->model->getCategory($i) == 'AppleTV') {
+                    echo 'Apple';
+                } else if ($this->model->getCategory($i) == 'ShowTop') {
+                    echo 'Amazon';
+                } else {
+                    echo $this->model->getCategory($i);
+                }
 
-            echo           '</span>
+                echo '</span>
                             <p id="price">' . $this->model->getPrice($i) . '$' . ' ' . '<span id="prev-price"><strike>' . $this->model->getPriviousPrice($i) . '$' . '</strike></span> (' . $this->model->getShipping($i) . ' ' . '';
 
-            echo $this->model->Translate('days shipping') . ')</p>
+                echo $this->model->Translate('days shipping') . ')</p>
                             <p id="on-stock">';
 
-            echo $this->model->Translate('In stock on') . ' ';
+                echo $this->model->Translate('In stock on') . ' ';
 
-            echo $this->model->getTimeOfAdding($i) . '</p>
+                echo $this->model->getTimeOfAdding($i) . '</p>
                             <p id="average">';
 
-            echo $this->model->Translate('Average price for this product:');
+                echo $this->model->Translate('Average price for this product:');
 
-            echo '<span id="prev-price">' . $this->model->getAverage($i) . '$' . '</span></p>
+                echo '<span id="prev-price">' . $this->model->getAverage($i) . '$' . '</span></p>
                             <p style="text-align: left;"><b style="font-size: 16px;">';
 
-            echo $this->model->Translate('Short description:');
+                echo $this->model->Translate('Short description:');
 
-            echo ' </b>' . $this->model->getDescription($i) . '</p>
+                echo ' </b>' . $this->model->getDescription($i) . '</p>
                     </div>
                     <div class="col-md-4">
                         <p class="spacer"></p>
                         <p class="align-left">';
 
-            echo $this->model->Translate('Free shipping on orders greater than');
+                echo $this->model->Translate('Free shipping on orders greater than');
 
-            echo ' <span id="prev-price">$35</span></p>
+                echo ' <span id="prev-price">$35</span></p>
                         <p class="align-left"><b style="font-size: 16px;">';
 
-            echo $this->model->Translate('Product features:');
+                echo $this->model->Translate('Product features:');
 
-            echo '</b></p>
+                echo '</b></p>
                         <p class="align-left">' . $this->model->getFeatures($i) . '</p>
                         <form action="/';
 
-            if($_SESSION['language'] !== 'us'){
-                echo $_SESSION['language'] . '/';
-            }
+                if ($_SESSION['language'] !== 'us') {
+                    echo $_SESSION['language'] . '/';
+                }
 
-            echo 'shop/add-item" method="post">
+                echo 'shop/add-item" method="post">
                             <button class="btn btn-default">';
 
-            echo $this->model->Translate('Add to cart');
+                echo $this->model->Translate('Add to cart');
 
-            echo           '</button>
+                echo '</button>
                             <input type="hidden" name="id" value="' . $this->model->getId($i) . '"/>
                             <input type="hidden" name="product_name" value="' . $this->model->getProductName($i) . '"/>
                             <input type="hidden" name="category" value="' . $this->model->getCategory($i) . '"/>
@@ -800,52 +802,48 @@ class DefaultView
                     </div>
                 </div>';
 
-            /*if ($i < count($this->model->id) - 1) {
-                echo '<div class="divider-items wow fadeInUp"></div>';
-            }*/
-
-            $i++;
-        }
-        echo ' </div>
+                $i++;
+            }
+            echo ' </div>
                 </div>';
 
 
-        if($this->model->countId() > 13){
-            echo '<div class="search-divider" style="margin-top: 40px;"></div>';
+            if ($this->model->countId() > 13) {
+                echo '<div class="search-divider" style="margin-top: 40px;"></div>';
 
-            echo '<div class="row" style="margin-top: 40px;">
+                echo '<div class="row" style="margin-top: 40px;">
                               <div class="col-md-3"></div>
                               <div class="col-md-6">
                                   <div class="pull-left">';
 
-            if(isset($_GET['page']) && $_GET['page'] !== '1') {
-                echo '<a href="';
+                if (isset($_GET['page']) && $_GET['page'] !== '1') {
+                    echo '<a href="';
 
-                if (isset($_GET['page']) && $_GET['page'] > 1) {
-                    echo '?page=' . ($_GET['page'] - 1);
+                    if (isset($_GET['page']) && $_GET['page'] > 1) {
+                        echo '?page=' . ($_GET['page'] - 1);
+                    }
+
+                    echo '">';
                 }
 
-                echo '">';
-            }
+                echo '<img src="/images/arrow-right-pages.png" width="15" height="30" class="nav-image" />';
 
-            echo '<img src="/images/arrow-right-pages.png" width="15" height="30" class="nav-image" />';
+                if (isset($_GET['page']) && $_GET['page'] !== '1') {
+                    echo '</a>';
+                }
 
-            if(isset($_GET['page']) && $_GET['page'] !== '1') {
-                echo '</a>';
-            }
-
-            echo              '</div>
+                echo '</div>
                                   <div style="margin-left: 42%;">
                                       <form action="" method="get">
                                           <input type="text" name="page" id="page" class="form-control" style="padding-top: 20px !important; padding-bottom: 20px !important;" onkeypress="return event.charCode >= 48 && event.charCode <= 57" value="';
 
-            if(isset($_GET['page'])){
-                echo $_GET['page'];
-            } else {
-                echo '1';
-            }
+                if (isset($_GET['page'])) {
+                    echo $_GET['page'];
+                } else {
+                    echo '1';
+                }
 
-            echo '" />
+                echo '" />
                           <input type="submit" />
                                </form>
                                <h1 class="pages"> of ' . $this->model->getPages() . '</h1>
@@ -853,37 +851,49 @@ class DefaultView
                                   <div class="pull-right">';
 
 
-            if(!isset($_GET['page']) || $_GET['page'] != $this->model->getPages()) {
-                if($this->model->getPages() != 1) {
+                if (!isset($_GET['page']) || $_GET['page'] != $this->model->getPages()) {
+                    if ($this->model->getPages() != 1) {
 
 
-                    echo '<a href="';
+                        echo '<a href="';
 
-                    if (isset($_GET['page']) && $_GET['page'] < $this->model->getPages()) {
-                        echo '?page=' . ($_GET['page'] + 1);
-                    } else {
-                        echo '?page=2';
+                        if (isset($_GET['page']) && $_GET['page'] < $this->model->getPages()) {
+                            echo '?page=' . ($_GET['page'] + 1);
+                        } else {
+                            echo '?page=2';
+                        }
+
+                        echo '">';
                     }
+                }
 
-                    echo '">';
+
+                echo '<img src="/images/arrow-left-pages.png" width="15" height="30" class="nav-image" />';
+
+                if (!isset($_GET['page']) || $_GET['page'] !== $this->model->getPages()) {
+                    if ($this->model->getPages() != 1) {
+                        echo '</a>';
+                    }
                 }
             }
+        } else {
+            echo '<h1 class="search">Woden Sims ' . $this->model->Translate('Online Store') . '</h1>
 
+                  <div class="search-divider"></div>
 
-            echo '<img src="/images/arrow-left-pages.png" width="15" height="30" class="nav-image" />';
+                  <h1 class="results">0 ' . $this->model->Translate('results found') . '</h1>
 
-            if(!isset($_GET['page']) || $_GET['page'] !== $this->model->getPages()) {
-                if($this->model->getPages() != 1) {
-                    echo '</a>';
-                }
-            }
+                  <div class="no-data-found">
+                      <h1 class="no-results"><b>' . $this->model->Translate('Sorry, no results found.') . '</b></h1>
+                      <h1 class="check">' . $this->model->Translate('Please, change search parameters to get any matches.') . '</h1>
+                  </div>';
+        }
 
             echo '                </div>
                               </div>
                               <div class="col-md-3"></div>
                           </div>';
 
-        }
     }
 
     /*

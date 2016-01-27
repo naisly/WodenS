@@ -1164,6 +1164,26 @@ input[type='range']::-moz-range-thumb {
 	margin-top: 5px;
 }
 
+.results {
+	font-size: 14px;
+	line-height: 2;
+	font-weight: 400;
+	letter-spacing: normal;
+	color: #999;
+	margin-top: 5px;
+}
+.no-data-found {
+	margin-top: 10%;
+	padding-bottom: 20%;
+}
+.no-results {
+	font-size: 20px;
+}
+.check {
+	font-size: 17px;
+	margin-top: 0 !important;
+}
+
 
 
 

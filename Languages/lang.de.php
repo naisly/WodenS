@@ -965,6 +965,8 @@ $lang = array(
     'AppleTV' => 'AppleTV',
     'ShowTop' => 'ShowTop',
 
+    'Please, change search parameters to get any matches.' => 'Bitte, ändern Suchparameter, um alle Übereinstimmungen zu erhalten.',
+
 
 
 

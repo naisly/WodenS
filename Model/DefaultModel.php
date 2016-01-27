@@ -43,6 +43,7 @@ class DefaultModel
 
     private $session_auth;
     private $count_results;
+    private $no_data_found;
 
 
 
@@ -384,5 +385,15 @@ class DefaultModel
     public function getPages() {
 
         return ceil(count($this->id) / 13);
+    }
+
+    public function setNoDataFound( $no_data_found ) {
+
+        $this->no_data_found = $no_data_found;
+    }
+
+    public function getNoDataFound() {
+
+        return $this->no_data_found;
     }
 }

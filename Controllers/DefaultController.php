@@ -320,6 +320,7 @@ class DefaultController
             }
             //print_r($result_products);
 
+            $this->model->setNoDataFound( 0 );
             //print_r($id_array);
             //print_r($original_name_array);
             $this->model->setProductName($product_name_array);
@@ -336,6 +337,8 @@ class DefaultController
             $this->model->setShipping($shipping_array);
             $this->model->setAverage($average_price_array);
             $this->model->setQuantityOfItems($result_products);
+        } else {
+            $this->model->setNoDataFound( 1 );
         }
     }
 

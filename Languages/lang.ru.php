@@ -1162,4 +1162,6 @@ $lang = array(
     'IMac' => 'IMac',
     'AppleTV' => 'AppleTV',
     'ShowTop' => 'ShowTop',
+
+    'Please, change search parameters to get any matches.' => 'Пожалуйта, измените параметры поиска что бы получить результаты.',
 );
