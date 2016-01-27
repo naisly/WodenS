@@ -19,6 +19,7 @@
 	margin: 0 auto 60px;
 	padding: 0;
 	*zoom: 1;
+	max-width: 950px !important;
 }
 
 .bx-wrapper img {
@@ -119,7 +120,7 @@
 }
 
 .bx-wrapper .bx-next {
-	right: 10px;*
+	right: 10px;
 	background: url(images/controls.png) no-repeat -43px -32px;
 }
 

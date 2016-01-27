@@ -829,7 +829,7 @@ class DefaultView
                      <div class="container full-container">
                           <div class="row">
                               <div class="col-sm-1 no-width-for-sm"></div>
-                              <div class="col-sm-6 margin-for-small-devices">';
+                              <div class="col-sm-8 margin-for-small-devices">';
         if ($page !== 'Page Not Found') {
             $i = 0;
             while ($i < $this->model->countBreadcrumbs()) {

@@ -107,6 +107,9 @@
 .spacer-35 {
     margin-top: 35px;
 }
+.bx-next {
+    z-index: 12000 !important;
+}
 .social {
     margin-top: 30px;
     margin-left: 40px;
@@ -308,7 +311,8 @@
     background: #ffcc7f;
 }
 .img-store {
-    width: 80%;
+    margin-left: -20%;
+    width: 120%;
     height: auto;
 }
 .assoc-original-name {

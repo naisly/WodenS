@@ -23,7 +23,7 @@ class SubdescriptionView extends DefaultView
         $this->DoctypeView( 'subdescription' );
         $this->headerView( 'subdescription' );
 
-        $this->getMain( $category , $table );
+        $this->getMain( $category );
         $this->getSlider();
         $this->getDescription();
 
@@ -95,8 +95,8 @@ class SubdescriptionView extends DefaultView
         echo '<div class="slider1" style="margin-left: 35px;">';
         $m = 0;
         while($m < $this->model->countAssocProducts()){
-            echo '<div class="slide">
-                          <img src="/' . $this->model->getAssocPhoto($m) . '" width="120" height="120" />
+            echo '<div class="slide" style="height: 250px;">
+                          <img src="/' . $this->model->getAssocPhoto($m) . '" height="120" />
                           <div style="height: 90px;; margin-top: 10px;">
                               <h><a href="#" class="assoc-original-name">' . $this->model->getAssocProducts($m) . '</a></h><br />
                               <h id="you-save"">$' . $this->model->getAssocPrice($m) . '<span class="striked"><strike> $' . $this->model->getAssocPreviousPrice($m) . '</strike></span></h><br />
@@ -115,7 +115,7 @@ class SubdescriptionView extends DefaultView
                              $(".slider1" ).bxSlider({
                                  slideWidth: 200,
                                  minSlides: 1,
-                                 maxSlides: 4,
+                                 maxSlides: 3,
                                  slideMargin: 30,
                                  pager: false
                              });

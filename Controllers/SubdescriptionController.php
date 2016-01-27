@@ -120,6 +120,9 @@ class SubdescriptionController extends DefaultController
             }
         }
         $sql_min = "SELECT price FROM $table WHERE original_name='$original_name'";
+
+        //echo $sql_min;
+        //print_r($original_name);
         $result_min = $mysqli->query( $sql_min );
         $min_array = array();
         if ($result_min->num_rows > 0) {
@@ -371,6 +374,8 @@ class SubdescriptionController extends DefaultController
         $i = 0;
         while( $i < count($products_array)){
             $sql_row = "SELECT photo, price, previous_price, shipping FROM $table WHERE original_name='$products_array[$i]' LIMIT 1";
+
+            //echo $sql_row . '<br />';
             $sql_res = $mysqli->query( $sql_row );
             if ($sql_res->num_rows > 0) {
                 // output data of each row
@@ -383,6 +388,8 @@ class SubdescriptionController extends DefaultController
             }
             $i++;
         }
+
+        //print_r($products_array);
         $this->model->setAssocProducts( $products_array );
         $this->model->setAssocPhoto( $photo_array );
         $this->model->setAssocPrice( $price_array );

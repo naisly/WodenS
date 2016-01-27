@@ -1148,7 +1148,7 @@ $lang = array(
      */
 
     'Woden Sims Order Status' => 'Статус Заказа Woden Sims',
-    'results found' => 'найдено совпадений',
+    'results found' => 'совпадений найдено',
     'Sorry, no results found.' => 'Извините, совпадений не найдено.',
     'Please, make sure all words are spelled correctly or try different keywords.' => 'Пожалуйста, удостоверьтесь что все слова написаны правильно или попробуйте другие ключевые слова.',
 
