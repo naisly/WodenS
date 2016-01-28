@@ -18,6 +18,10 @@ class AssocModel extends ComparisonModel
     private $assoc_shipping;
     private $differential_assoc_price;
 
+    private $assoc_table;
+    private $assoc_id;
+    private $assoc_name;
+
     public function setAssocPhoto( $assoc_photo ) {
 
         $this->assoc_photo = $assoc_photo;
@@ -67,5 +71,35 @@ class AssocModel extends ComparisonModel
 
         $this->setAssocDifferentialPrice($i);
         return $this->differential_assoc_price;
+    }
+
+    public function setAssocTable( $assoc_table ) {
+
+        $this->assoc_table = $assoc_table;
+    }
+
+    public function getAssocTable() {
+
+        return $this->assoc_table;
+    }
+
+    public function setAssocId( $assoc_id ) {
+
+        $this->assoc_id = $assoc_id;
+    }
+
+    public function getAssocId( $i ) {
+
+        return $this->assoc_id[$i];
+    }
+
+    public function setAssocName( $assoc_name ) {
+
+        $this->assoc_name = $assoc_name;
+    }
+
+    public function getAssocName( $i ) {
+
+        return $this->assoc_name[$i];
     }
 }

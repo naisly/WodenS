@@ -239,7 +239,7 @@ class SubdescriptionController extends DefaultController
             $table = 'television';
         }
         $search_num = $sequence_number - 1;
-        $query = "SELECT id, original_name, price, previous_price, quantity, photo FROM $table WHERE original_name='$product_array[$search_num]'";
+        $query = "SELECT id, original_name, price, previous_price, quantity, photo, product_name FROM $table WHERE original_name='$product_array[$search_num]'";
         //echo $query;
         $result = $mysqli->query( $query );
         $sequence_id = array();
@@ -248,6 +248,7 @@ class SubdescriptionController extends DefaultController
         $sequence_previous_price = array();
         $sequence_quantity = array();
         $sequence_photo = array();
+        $sequence_product_name = array();
         if ($result->num_rows > 0) {
             // output data of each row
             while ($row = $result->fetch_assoc()) {
@@ -257,18 +258,20 @@ class SubdescriptionController extends DefaultController
                 $sequence_previous_price = array_merge($sequence_previous_price, array_map('trim', explode(",", $row['previous_price'])));
                 $sequence_quantity = array_merge($sequence_quantity, array_map('trim', explode(",", $row['quantity'])));
                 $sequence_photo = array_merge($sequence_photo, array_map('trim', explode(",", $row['photo'])));
+                $sequence_product_name = array_merge($sequence_product_name, array_map('trim', explode(",", $row['product_name'])));
             }
         }
-        if( strlen($sequence_original_name[0]) > 30 ){
-            $sequence_original_name[0] = substr($sequence_original_name[0], 0, 30);
-            $sequence_original_name[0] .= ' ...';
-        }
+
+
         $this->model->setSequenceId( $sequence_id[0] );
         $this->model->setSequenceOriginalName( $sequence_original_name[0] );
         $this->model->setSequencePrice( $sequence_price[0] );
         $this->model->setSequencePreviousPrice( $sequence_previous_price[0] );
         $this->model->setSequenceQuantity( $sequence_quantity[0] );
         $this->model->setSequencePhoto( $sequence_photo[0] );
+        $this->model->setSequenceProductName( $sequence_product_name[0] );
+
+        $this->model->setSequenceTable( $table );
     }
 
     /**
@@ -367,19 +370,23 @@ class SubdescriptionController extends DefaultController
                 $products_array = array_merge($products_array, array_map('trim', explode(",", $row['assoc_products'])));
             }
         }
+        $id_array = array();
+        $name_array = array();
         $photo_array = array();
         $price_array = array();
         $previous_price_array = array();
         $shipping_array = array();
         $i = 0;
         while( $i < count($products_array)){
-            $sql_row = "SELECT photo, price, previous_price, shipping FROM $table WHERE original_name='$products_array[$i]' LIMIT 1";
+            $sql_row = "SELECT id, photo, price, previous_price, shipping, product_name FROM $table WHERE original_name='$products_array[$i]' LIMIT 1";
 
             //echo $sql_row . '<br />';
             $sql_res = $mysqli->query( $sql_row );
             if ($sql_res->num_rows > 0) {
                 // output data of each row
                 while ($row = $sql_res->fetch_assoc()) {
+                    array_push($id_array, $row['id']);
+                    array_push($name_array, $row['product_name']);
                     array_push($photo_array, $row['photo']);
                     array_push($price_array, $row['price']);
                     array_push($previous_price_array, $row['previous_price']);
@@ -395,6 +402,10 @@ class SubdescriptionController extends DefaultController
         $this->model->setAssocPrice( $price_array );
         $this->model->setAssocPreviousPrice( $previous_price_array );
         $this->model->setAssocShipping( $shipping_array );
+
+        $this->model->setAssocTable( $table );
+        $this->model->setAssocId( $id_array );
+        $this->model->setAssocName( $name_array );
     }
 
     /**

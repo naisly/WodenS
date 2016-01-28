@@ -828,7 +828,7 @@ $lang = array(
     'Apple TV and awesome' => 'Apple TV et rien',
     'Games and Apps on TV gonna be excited' => 'Un jeux et un annexes sur TV détient vous enchanté',
     'Lets look at big, high resolution games that makes you feel excited, thrilled. Apps can absolutely flip your life from routine, dreary to entire, outright way of being.' => 'LET regardons un jeux grands, aigu une autorisation, que fait vous porter. Un annexes peuvent absolument retourner votre vie de une routine, ennuyeusement, pour entier, une façon un être directe.',
-    'Also, you might be interested in ShowTop' => 'Vous de la sorte doit être intéressant ShowTop',
+    'Also, you might be interested in ShowTop' => 'Vous de la sorte doit être intéressant',
     'Free shipping available' => 'Abordable une livraison gracieuse',
     'Tv' => 'TV',
 
@@ -969,7 +969,7 @@ $lang = array(
     'ShowTop' => 'ShowTop',
 
     'Please, change search parameters to get any matches.' => 'Sil vous plaît, de modifier les paramètres de recherche pour obtenir des matchs.',
-
+    'No Questions & Answers Found' => 'Pas de Questions & Réponses trouvés',
 
 
 

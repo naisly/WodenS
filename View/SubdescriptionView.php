@@ -98,7 +98,7 @@ class SubdescriptionView extends DefaultView
             echo '<div class="slide" style="height: 250px;">
                           <img src="/' . $this->model->getAssocPhoto($m) . '" height="120" />
                           <div style="height: 90px;; margin-top: 10px;">
-                              <h><a href="#" class="assoc-original-name">' . $this->model->getAssocProducts($m) . '</a></h><br />
+                              <h><a href="/shop/subdescription?name=' . $this->model->getAssocProducts($m) . '&category=' . $this->model->getAssocTable() . '&product_price=' . $this->model->getAssocPrice($m) . '&id=' . $this->model->getAssocId($m) . '&product_name=' . $this->model->getAssocName($m) . '" class="assoc-original-name">' . $this->model->getAssocProducts($m) . '</a></h><br />
                               <h id="you-save"">$' . $this->model->getAssocPrice($m) . '<span class="striked"><strike> $' . $this->model->getAssocPreviousPrice($m) . '</strike></span></h><br />
                               <h><span class="shipping-assoc"><em>' . $this->model->getAssocShipping($m) . ' ' . $this->model->Translate('days') . '</em></span> ' . $this->model->Translate('of shipping') . '</h><br />
                           </div>
@@ -115,7 +115,7 @@ class SubdescriptionView extends DefaultView
                              $(".slider1" ).bxSlider({
                                  slideWidth: 200,
                                  minSlides: 1,
-                                 maxSlides: 3,
+                                 maxSlides: 4,
                                  slideMargin: 30,
                                  pager: false
                              });
@@ -216,9 +216,9 @@ class SubdescriptionView extends DefaultView
                   <div class="col-md-3">
                       <div class="social">
                           <a title="contact via VK" href="http://vk.com/naisly" class="contact">' . $this->model->Translate('Contact') . '</a>
-                          <a href="http://vk.com/naisly"><img src="/images/vk.png" width="30" height="30" /></a>
+                          <nobr><a href="http://vk.com/naisly"><img src="/images/vk.png" width="30" height="30" /></a>
                           <a href="https://www.facebook.com/alexandr.serduk.7"><img src="/images/facebook.png" width="30" height="30" /></a>
-                          <a href="https://twitter.com/naislygg"><img src="/images/twitter.png" width="30" height="30" /></a>
+                          <a href="https://twitter.com/naislygg"><img src="/images/twitter.png" width="30" height="30" /></a></nobr>
                       </div>
                       <div class="aside" style="margin-top: 5px;">
                           <div class="shopping-cart">
@@ -226,11 +226,14 @@ class SubdescriptionView extends DefaultView
                               <h class="buy-new">' . $this->model->Translate('Buy new') . ':</h>
                               <h class="price-new">$' . sprintf("%0.2f", $this->model->getPrice()) . '</h>
                           </div>
-                          <div class="nova-poshta">
-                              <h style="font-family: Arial;"><input type="checkbox" name="free-shipping" value="1" />' . $this->model->Translate('Yes, I want') . ' <em>' . $this->model->Translate('Shipping') . '</em> ' . $this->model->Translate('that varies from') . '
+                          <div class="checkbox" style="margin-top: 30px;">
+                              <label>
+                                  <input type="checkbox" value="" checked="checked">
+                                  <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>' . $this->model->Translate('Yes, I want') . ' <em>' . $this->model->Translate('Shipping') . '</em> ' . $this->model->Translate('that varies from') . '
                                <b>' . $this->model->Translate('two weeks') . '</b> ' . $this->model->Translate('up to') . ' <b> ' . $this->model->Translate('one month') . ' </b> ' . $this->model->Translate('with') . ' <a class="link-default" href="https://novaposhta.ua/en">' . $this->model->Translate('Nova Poshta') . '</a></h>
+                              </label>
                           </div>
-                      <form action="/shop/add-item" method="post">
+                      <form action="add-item" method="post">
                           <div class="qty">
                               <h id="qty">' . $this->model->Translate('Quantity') . '</h>
                               <select name="item_quantity" id="item_quantity" required>';
@@ -300,7 +303,7 @@ class SubdescriptionView extends DefaultView
                                <div class="pull-left">
                                     <h class="price-new" style="float: left">$' . sprintf("%0.2f", $this->model->getSortPrice($i)) . '</h><br />
                                     <p class="shipping-small" style="float: left">&' . $this->model->Translate('FREE SHIPPING') . '</p><br />
-                                    <h><span class="sold-by">' . $this->model->Translate('Sold by') . ':</span> WodenS Inc.</h>
+                                    <h style="float: left;"><span class="sold-by">' . $this->model->Translate('Sold by') . ':</span> WodenS Inc.</h>
                                </div>
                                <div class="pull-right">
                                     <form action="add-item" method="post">
@@ -330,16 +333,22 @@ class SubdescriptionView extends DefaultView
                         </div>
                         <div class="row">
                             <div class="col-md-4">
-                                <img src="/'. $this->model->getSequencePhoto() . '" width="85" height="86" class="random-photo" />
+                                <img src="/'. $this->model->getSequencePhoto() . '" class="random-photo" />
 
                             </div>
                             <div class="col-md-1"></div>
-                            <div class="col-md-7">
-                                <form action="subdescription" method="post">
-                                    <button class="random-name text-left">' . $this->model->getSequenceOriginalName() . '</button><br />
+                            <div class="col-md-7" style="margin-top: 12px; padding-bottom: 6px;">
+                                    <a href="/shop/subdescription?name=' . $this->model->getSequenceOriginalName() . '&category=' . $this->model->getSequenceTable() . '&product_price=' . $this->model->getSequencePrice() . '&id=' . $this->model->getSequenceId() . '&product_name=' . $this->model->getSequenceProductName() . '" class="random-name text-left">';
+
+        if( strlen($this->model->getSequenceOriginalName()) > 30 ){
+            echo substr($this->model->getSequenceOriginalName(), 0, 30) . ' ...';
+        } else {
+            echo $this->model->getSequenceOriginalName();
+        }
+
+        echo '</a><br />
                                     <input type="hidden" name="id" value="' . $this->model->getSequenceId() . '" />
-                                </form>
-                                <h class="random-quantity">' . $this->model->getSequenceQuantity() . $this->model->Translate('items') . '</h><br />
+                                <h class="random-quantity">' . $this->model->getSequenceQuantity() . ' ' . $this->model->Translate('items') . '</h><br />
                                 <h class="random-price">$' . $this->model->getSequencePrice() . ' <span class="random-prev-price"><strike>$' . $this->model->getSequencePreviousPrice() . '</strike></span></h>
                             </div>
                         </div>
@@ -428,7 +437,7 @@ class SubdescriptionView extends DefaultView
 
         echo '<th>
                   <div class="comparison">
-                      <h class="shipping-comparison">' . $this->model->Translate('FREE SHIPPING') . '( <span id="emph"><em>' . $this->model->getComparisonShipping($k) . ' ' . $this->model->Translate('days') . '</em></span> )</h>
+                      <h class="shipping-comparison">' . $this->model->Translate('FREE SHIPPING') . ' ( <span id="emph">' . $this->model->getComparisonShipping($k) . ' ' . $this->model->Translate('days') . '</span> )</h>
                   </div>
               </th>';
 
@@ -444,7 +453,7 @@ class SubdescriptionView extends DefaultView
 
         echo '<th>
                   <div class="comparison">
-                      <h class="shipping-comparison"><a href="http://vk.com/naisly" style="text-decoration: none">Woden S</a></h>
+                      <h class="shipping-comparison"><a href="http://vk.com/naisly" class="link">Woden S</a></h>
                   </div>
               </th>';
 
@@ -476,7 +485,7 @@ class SubdescriptionView extends DefaultView
 
         echo '<th>
                   <div class="comparison">
-                      <h class="shipping-comparison">' . $this->model->Translate('by') . '<a style="text-decoration: none" href="http://' . $this->model->getComparisonCategory($k) . '.com">' . $this->model->getComparisonCategory($k) . '</a></h>
+                      <h class="shipping-comparison">' . $this->model->Translate('by') . ' <a class="link" href="http://' . $this->model->getComparisonCategory($k) . '.com">' . $this->model->getComparisonCategory($k) . '</a></h>
                   </div>
               </th>';
 
@@ -592,11 +601,11 @@ class SubdescriptionView extends DefaultView
             while ($i < $this->model->countAskPerson()) {
 
                 echo '<div class="row" style="margin-top: 60px;">
-                      <div class="col-md-1" id="test">
+                      <div class="col-xs-1" id="test">
                           <h class="question">' . $this->model->Translate('Question') . ':</h><br />
                           <h class="answer">' . $this->model->Translate('Answer') . ':</h>
                       </div>
-                      <div class="col-md-4">
+                      <div class="col-xs-6">
                                <h class="answer"><span id="question">' . $this->model->getQuestion($i) . '</span></h><br /></h>
                                <h class="answer"><span id="answer">' . $this->model->getAnswer($i) . '</span></h><br />
                                <h class="by-answer">' . $this->model->Translate('By') . ' ' . $this->model->getAnswerPerson($i) . ' ' . $this->model->Translate('on') . ' ' . $this->model->getAnswerTime($i) . '</h>

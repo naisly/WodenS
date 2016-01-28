@@ -472,7 +472,7 @@ class LoginView extends DefaultView
      */
     private function errorPasswordMessage() {
 
-        echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px">
+        echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px; border-radius: 0;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 ' . $this->model->Translate('Please write correct password or check that them match') . '
@@ -484,7 +484,7 @@ class LoginView extends DefaultView
      */
     private function errorMinCountMessage() {
 
-        echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px;">
+        echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px; border-radius: 0;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 ' . $this->model->Translate('Password may contain at least 6 characters') . '
@@ -496,7 +496,7 @@ class LoginView extends DefaultView
      */
     private function errorLoginMessage() {
 
-        echo '<div class="alert alert-danger" role="alert" style="position: relative; top: -20px;">
+        echo '<div class="alert alert-danger" role="alert" style="position: relative; top: -20px; border-radius: 0;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 ' . $this->model->Translate('Incorrert email or password! Please check again input data') . '
@@ -508,7 +508,7 @@ class LoginView extends DefaultView
      */
     private function errorRegisteredEmailMessage() {
 
-        echo '<div class="alert alert-danger" role="alert">
+        echo '<div class="alert alert-danger" role="alert" style="position: relative; top: -20px; border-radius: 0;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 ' . $this->model->Translate('This email is already in use! Try another one') . '
@@ -542,7 +542,7 @@ class LoginView extends DefaultView
      */
     public function addedItemMessage() {
 
-        echo '<div class="alert alert-success" role="alert" style="margin-top: -20px;">
+        echo '<div class="alert alert-success" role="alert" style="margin-top: -20px; border-radius: 0;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 <img src="/' . $_SESSION['photo'] . '" width="50" height="50" />
@@ -556,12 +556,20 @@ class LoginView extends DefaultView
 
         echo ') $' . $this->model->getAPrice() .'
                     <div class="pull-right" style="margin-top: 8px;">
-                        <button class="cart btn btn-default" style="margin-right: 20px;" onclick="location.href=';
-                            echo "'/account/cart'";
-                            echo '">' . $this->model->Translate('Cart') . '</button>';
-        echo            '<button class="cart btn btn-primary" onclick="location.href=';
-                            echo "'/account/placeorder'";
-                            echo '">' . $this->model->Translate('Proceed to checkout') . ' (' . $this->model->getAItems() . ' ';
+                        <a class="cart btn btn-default" style="margin-right: 20px;" href="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'account/cart">' . $this->model->Translate('Cart') . '</a>';
+        echo            '<a class="cart btn btn-primary" href="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'account/placeorder">' . $this->model->Translate('Proceed to checkout') . ' (' . $this->model->getAItems() . ' ';
 
         if($this->model->getAItems() == 1){
             echo $this->model->Translate('item');
@@ -569,7 +577,7 @@ class LoginView extends DefaultView
             echo $this->model->Translate('items');
         }
 
-        echo ')</button>
+        echo ')</a>
                     </div>
                 </div>';
 
@@ -581,7 +589,7 @@ class LoginView extends DefaultView
      */
     private function errorAddItemMessage() {
 
-        echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px;">
+        echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px; border-radius: 0;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
                 ' . $this->model->Translate('Please, login to add items in your cart') . '
@@ -651,8 +659,8 @@ class LoginView extends DefaultView
             }
         }
 
-        if(isset($_SESSION['add_item'])){
-            if($_SESSION['add_item'] == 1) {
+        if(isset($_GET['error_add_item'])){
+            if($_GET['error_add_item'] == 1) {
                 $this->errorAddItemMessage();
             }
         }

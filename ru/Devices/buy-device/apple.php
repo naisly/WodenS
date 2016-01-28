@@ -6,17 +6,17 @@
  * Time: 1:04
  */
 
-include_once('..\..\..\Controllers\DefaultController.php');
+include_once('..\..\..\Controllers\ShopController.php');
 include_once('..\..\..\Model\DefaultModel.php');
-include_once('..\..\..\View\DefaultView.php');
+include_once('..\..\..\View\ShopView.php');
 
 $model = new DefaultModel();
 
 //It is important that the controller and the view share the model
 
-$controller = new DefaultController($model);
+$controller = new ShopController($model);
 
-$view = new DefaultView($model);
+$view = new ShopView($model);
 
 $controller->actionGetData( 'Apple', 'Gadgets', 'Apple' );
 

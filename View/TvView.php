@@ -100,7 +100,7 @@ class TvView extends IndexView
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'tv/buy-tv/ShowTop" style="text-decoration: none; margin-right: 0px;">' . $this->model->Translate('Also, you might be interested in ShowTop') . '<img src="/images/arrow-blue.png" width="20" height="20"/></a>
+        echo 'tv/buy-tv/ShowTop" style="text-decoration: none; margin-right: 0px;">' . $this->model->Translate('Also, you might be interested in') . ' <nobr>ShowTop <img src="/images/arrow-blue.png" width="20" height="20"/></nobr></a>
                           <div style="margin-bottom: 100px;"></div>
                       </div>
                       <div class="col-md-2"></div>

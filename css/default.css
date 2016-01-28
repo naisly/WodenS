@@ -27,7 +27,7 @@
     }
 }
 .categories-list:hover {
-    color: black;
+    color: rgb(236, 0, 140);
     text-decoration: none !important;
 }
 .checkbox-font {

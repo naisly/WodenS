@@ -954,7 +954,7 @@ $lang = array(
     'Out of Stock' => 'Нет в наличии',
     'Technical Details' => 'Техническая информация',
     'Product Description' => 'Описание предмета',
-    'Buy new' => 'Купить новый',
+    'Buy new' => 'Купить',
     'Yes, I want' => 'Да, я хочу',
     'Shipping' => 'доставку',
     'that varies from' => 'которая варируеться от',
@@ -1025,7 +1025,7 @@ $lang = array(
     'Apple TV and awesome' => 'Apple TV и что-либо',
     'Games and Apps on TV gonna be excited' => 'Игры и Приложения на TV держит Вас в восторге',
     'Lets look at big, high resolution games that makes you feel excited, thrilled. Apps can absolutely flip your life from routine, dreary to entire, outright way of being.' => 'Давайте посмотрим на больших, высоких игр разрешением, что делает вас чувствовать себя рады, рады. Приложения могут абсолютно перевернуть вашу жизнь от рутины, скучно, чтобы весь, прямой способ бытия.',
-    'Also, you might be interested in ShowTop' => 'Вам так же должен быть интересен ShowTop',
+    'Also, you might be interested in ShowTop' => 'Вам так же должен быть интересен',
     'Free shipping available' => 'Доступна бессплатная доставка',
     'Tv' => 'TV',
 
@@ -1164,4 +1164,5 @@ $lang = array(
     'ShowTop' => 'ShowTop',
 
     'Please, change search parameters to get any matches.' => 'Пожалуйта, измените параметры поиска что бы получить результаты.',
+    'No Questions & Answers Found' => 'Никаких вопров или ответов не найдено',
 );

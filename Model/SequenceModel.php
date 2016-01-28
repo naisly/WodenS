@@ -18,6 +18,9 @@ class SequenceModel extends SortModel
     private $sequence_previous_price;
     private $sequence_quantity;
     private $sequence_photo;
+    private $sequence_product_name;
+
+    private $sequence_table;
 
     public function setSequenceId ( $sequence_id ) {
 
@@ -77,5 +80,25 @@ class SequenceModel extends SortModel
     public function getSequencePhoto() {
 
         return $this->sequence_photo;
+    }
+
+    public function setSequenceProductName( $sequence_product_name ) {
+
+        $this->sequence_product_name = $sequence_product_name;
+    }
+
+    public function getSequenceProductName() {
+
+        return $this->sequence_product_name;
+    }
+
+    public function setSequenceTable( $sequence_table ) {
+
+        $this->sequence_table = $sequence_table;
+    }
+
+    public function getSequenceTable() {
+
+        return $this->sequence_table;
     }
 }

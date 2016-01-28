@@ -372,14 +372,12 @@ class LoginController extends DefaultController
         if(!$_SESSION['login_user']){
 
             if($_SESSION['language'] !== 'us') {
-                header('Location: /' . $_SESSION['language'] . '/login');
+                header('Location: /' . $_SESSION['language'] . '/login?error_add_item=1');
             } else {
-                header('Location: /login');
+                header('Location: /login?error_add_item=1');
             }
 
-            $_SESSION['add_item'] = '1';
         } else {
-            $_SESSION['add_item'] = '0';
 
             $this->actionAddItems();
             if(isset($_POST['one-click-order'])){

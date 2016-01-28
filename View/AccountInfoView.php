@@ -400,7 +400,7 @@ class AccountInfoView extends AccountOrderView
 
                 echo $this->model->Translate('Giftwrap All Items');
 
-                echo '<span style="text-decoration: underline">';
+                echo ' <span style="text-decoration: underline">';
 
                 echo $this->model->Translate('by default');
 

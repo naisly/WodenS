@@ -115,9 +115,12 @@
     margin-left: 40px;
 }
 .contact {
-    margin-left: 30px;
     text-decoration: none !important;
     font-family: MyriadProSemiBold;
+}
+.contact:hover {
+    text-decoration: underline !important;
+    color: #08c;
 }
 .aside {
     width: 80%;
@@ -145,7 +148,7 @@
 }
 .qty {
     margin-top: 30px;
-    margin-left: 27%;
+    margin-left: 26%;
 }
 #qty {
     font-size: 17px;
@@ -178,7 +181,7 @@
     margin-top: 8px;
     padding-left: 10px;
     padding-right: 10px;
-    height: 85px;
+    height: 105px;
     border-bottom: 1px solid #e4e4e4;
 }
 .shipping-small {
@@ -197,23 +200,25 @@
     margin-top: 15px;
     margin-left: 3px;
     padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 5px;
+    width: 86px;
+    height: auto;
 }
 .random-name {
-    margin-top: 10px;
-    margin-left: 3px;
-    font-size: 12px;
-    background-color: white;
-    border: none;
+    font-size: 14px;
     color: #1b6d85;
+}
+.random-name:hover {
+    color: rgb(236, 0, 140) !important;
+    text-decoration: none !important;
 }
 .random-quantity {
     text-decoration: underline;
-    margin-left: 10px;
 }
 .random-price {
     color: #ac5050;
     font-size: 17px;
-    margin-left: 10px;
 }
 .random-prev-price {
     color: black;
@@ -247,8 +252,12 @@
     font-family: RobotoLight;
 }
 #striked {
-    color: #666;
+    color: #333;
     font-size: 12px;
+}
+.link:hover {
+    color: #08c;
+    text-decoration: underline !important;
 }
 #emph {
     font-size: 12px;
@@ -317,12 +326,82 @@
 }
 .assoc-original-name {
     text-decoration: none !important;
-    color: black;
+    color: black !important;
     font-family: MyriadProSemiBold;
+}
+.assoc-original-name:hover {
+    color: rgb(236, 0, 140) !important;
 }
 
 @font-face {
     font-family: 'Glyphicons Halflings';
     src: url('../fonts/glyphicons-halflings-regular.eot');
     src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+.checkbox label:after,
+.radio label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox .cr,
+.radio .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+.radio .cr {
+    border-radius: 50%;
+}
+
+.checkbox .cr .cr-icon,
+.radio .cr .cr-icon {
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+
+.radio .cr .cr-icon {
+    margin-left: 0.04em;
+}
+
+.checkbox label input[type="checkbox"],
+.radio label input[type="radio"] {
+    display: none;
+}
+
+.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+.radio label input[type="radio"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+.radio label input[type="radio"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled + .cr,
+.radio label input[type="radio"]:disabled + .cr {
+    opacity: .5;
+}
+
+@media (max-width: 1002px){
+    .img-store {
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+    }
 }
