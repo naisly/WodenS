@@ -65,10 +65,12 @@ class SearchController extends DefaultController
             $this->model->setCountResults($result->num_rows);
 
             if(isset($_GET['page'])){
-                if($_GET['page'] > $this->model->getCountPages()){
-                    header("Location: /search/result?generalnav=" . $_GET['generalnav'] . "&page=" . $this->model->getCountPages());
-                } elseif ($_GET['page'] < 1){
-                    header("Location: /search/result?generalnav=" . $_GET['generalnav'] . "&page=1");
+                if($this->model->getCountPages() != 0) {
+                    if ($_GET['page'] > $this->model->getCountPages()) {
+                        header("Location: /search/result?generalnav=" . $_GET['generalnav'] . "&page=" . $this->model->getCountPages());
+                    } elseif ($_GET['page'] < 1) {
+                        header("Location: /search/result?generalnav=" . $_GET['generalnav'] . "&page=1");
+                    }
                 }
             }
         }

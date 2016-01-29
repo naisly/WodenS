@@ -31,17 +31,6 @@ class ShopController extends DefaultController
         $this->actionGetItemNames( $category, $table );
         $this->actionGetCategories( $category, $table, $sort );
 
-        if(isset($_GET['page'])){
-            $uri_parts = explode('?', $_SERVER['REQUEST_URI'], 2);
-
-            if($_GET['page'] > $this->model->getPages()){
-
-                header('Location: ' . $uri_parts[0] . '?page=' . $this->model->getPages());
-            } elseif($_GET['page'] < 1){
-                header('Location: ' . $uri_parts[0] . '?page=1');
-            }
-        }
-
     }
 
     /*
@@ -220,8 +209,8 @@ class ShopController extends DefaultController
         $timer = 0;
         $array = array();
         while($timer < 11) {
-            if (isset($_GET['array' . $timer])) {
-                array_push($array, $_GET['array' . $timer]);
+            if (isset($_GET['selected_item_' . $timer])) {
+                array_push($array, $_GET['selected_item_' . $timer]);
             }
             $timer++;
         }
@@ -429,6 +418,19 @@ class ShopController extends DefaultController
             $this->model->setQuantityOfItems($result_products);
         } else {
             $this->model->setNoDataFound( 1 );
+        }
+
+        if(isset($_GET['page'])){
+            $uri_parts = explode('?', $_SERVER['REQUEST_URI'], 2);
+
+            if($this->model->getPages() != 0) {
+                if ($_GET['page'] > $this->model->getPages()) {
+
+                    header('Location: ' . $uri_parts[0] . '?page=' . $this->model->getPages());
+                } elseif ($_GET['page'] < 1) {
+                    header('Location: ' . $uri_parts[0] . '?page=1');
+                }
+            }
         }
     }
 }

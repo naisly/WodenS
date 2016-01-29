@@ -1165,4 +1165,8 @@ $lang = array(
 
     'Please, change search parameters to get any matches.' => 'Пожалуйта, измените параметры поиска что бы получить результаты.',
     'No Questions & Answers Found' => 'Никаких вопров или ответов не найдено',
+
+    'This Item is Certified Refurbished' => 'Этот элемент обновленнно сертифицирован',
+    'result found' => 'совпадение найдено',
+    'FAQ' => 'Часто задаваемые вопросы',
 );

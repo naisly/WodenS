@@ -96,13 +96,11 @@ class ShopView extends DefaultView
 
         $k = 0;
         while ($k < count($this->model->distinct_product_names)) {
-            /*echo '<input style="margin-right: 6px;" type="checkbox" name="array' . $k . '" id="array' . $k . '" value="' . $this->model->getDistinctProductNames($k) . '"';
-            if (isset($_POST['array' . $k])) echo "checked='checked'";
-            echo "/>";*/
+
             echo '<div class="checkbox" style="margin-top: 4px;">
                               <label>
-                                  <input type="checkbox" name="array' . $k . '" id="array' . $k . '" value="' . $this->model->getDistinctProductNames($k) . '"';
-            if (isset($_GET['array' . $k])) echo "checked='checked'";
+                                  <input type="checkbox" name="selected_item_' . $k . '" id="selected_item_' . $k . '" value="' . $this->model->getDistinctProductNames($k) . '"';
+            if (isset($_GET['selected_item_' . $k])) echo "checked='checked'";
             echo "/>";
 
             echo                  '<span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>' . $this->model->getDistinctProductNames($k);

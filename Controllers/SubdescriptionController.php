@@ -33,7 +33,7 @@ class SubdescriptionController extends DefaultController
         $this->actionSelectRandomProduct();
         $this->actionMakeComparison( $table );
         $this->actionGetAssocProducts( $table, $original_name );
-        $this->actionGetQuestionsAndAnswers( $original_name, $search);
+        $this->actionGetQuestionsAndAnswers( $original_name );
 
         $this->actionGetHeaderCart();
     }
@@ -412,7 +412,7 @@ class SubdescriptionController extends DefaultController
      * @param $original_name
      * @param $search
      */
-    public function actionGetQuestionsAndAnswers( $original_name, $search ) {
+    public function actionGetQuestionsAndAnswers( $original_name ) {
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
@@ -441,6 +441,7 @@ class SubdescriptionController extends DefaultController
             }
             $i++;
         }
+
         $unique_result_items = array_unique($result_items);
         //print_r($unique_result_items);
 
@@ -621,6 +622,20 @@ class SubdescriptionController extends DefaultController
             $this->model->setAnswer($last_answer_array);
             $this->model->setAnswerPerson($answer_person_array);
             $this->model->setAnswerTime($created_array);
+
+            if(isset($_GET['page'])){
+                if($this->model->countPages() != 0) {
+                    if ($_GET['page'] > $this->model->countPages()) {
+                        if (isset($_GET['q'])) {
+                            header('Location: /FAQ/?q=' . $_GET['q'] . '&page=' . $this->model->countPages());
+                        }
+                    } else if ($_GET['page'] < 1) {
+                        if (isset($_GET['q'])) {
+                            header('Location: /FAQ/?q=' . $_GET['q'] . '&page=1');
+                        }
+                    }
+                }
+            }
         }
     }
 }

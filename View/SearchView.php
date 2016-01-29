@@ -33,7 +33,7 @@ class SearchView extends DefaultView
                       <div class="col-md-1"></div>
                       <div class="col-md-5">
                           <form action="" method="get">
-                              <div class="right-inner-addon ">
+                              <div class="right-inner-addon">
                                   <i class="glyphicon glyphicon-search"></i>
                                   <input type="search" class="form-control" name="generalnav" placeholder="' . $this->model->Translate('Search') . '" value="';
 
@@ -118,6 +118,7 @@ class SearchView extends DefaultView
                     echo              '</div>
                                   <div style="margin-left: 42%;">
                                       <form action="" method="get">
+                                          <input type="hidden" name="generalnav" id="generalnav" value="' . $_GET['generalnav'] . '" />
                                           <input type="text" name="page" id="page" class="form-control" style="padding-top: 20px !important; padding-bottom: 20px !important;" onkeypress="return event.charCode >= 48 && event.charCode <= 57" value="';
 
                     if(isset($_GET['page'])){

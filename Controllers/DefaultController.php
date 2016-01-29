@@ -35,8 +35,7 @@ class DefaultController
     }
 
     private function actionGetLanguage() {
-        //echo $_SESSION['language'];
-        header("Content-Type: text/html; charset=utf-8");
+
         if (session_status() == PHP_SESSION_NONE) {
                 session_start();
         }

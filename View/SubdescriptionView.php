@@ -251,7 +251,7 @@ class SubdescriptionView extends DefaultView
                             </div>
                             <div class="form-group">
                                     <div class="paddings">
-                                        <button class="btn btn-default form-control">
+                                        <button class="btn btn-default form-control" style="padding-top: 0 !important; padding-bottom: 0 !important;">
                                             ' . $this->model->Translate('Add to cart') . '
                                         </button>
                                     </div>
@@ -575,17 +575,40 @@ class SubdescriptionView extends DefaultView
     {
 
         echo '<form action="/FAQ/?" method="get">
-                 <div class="container-fluid">
+                 <div class="container">
                       <div class="row">
-                          <div class="col-lg-8">
-                            <div class="input-group">
-                                <div class="input-group-btn">
-                                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                                </div>
-                                <input type="text" class="form-control" placeholder="' . $this->model->Translate('Have a question? Search for answers') . '" id="q" name="q">
-                            </div>
+                          <div class="col-md-1"></div>
+                          <div class="col-md-5">
+                                <div class="right-inner-addon">
+                                  <i class="glyphicon glyphicon-search" style="z-index: 1000;"></i>
+                                  <input type="search" class="form-control" name="q" placeholder="' . $this->model->Translate('Search') . '" value="';
+
+        if(isset($_GET['q'])){
+            echo $_GET['q'];
+        }
+
+        echo '" />
+                              </div>
                           </div><!-- /.col-lg-6 -->
                       </div><!-- /.row -->
+
+                      <div class="row" style="margin-top: 15px;">
+                          <div class="col-md-1"></div>
+                          <div class="col-md-10">
+                              <h1 class="search">' . $this->model->Translate('Frequently Asked Questions') . ' woden-sims.hol.es</h1>
+                              <div class="search-divider"></div>
+                              <h1 class="results">' . $this->model->countAskPerson() . ' ';
+
+        if($this->model->countAskPerson() == 1){
+            echo $this->model->Translate('result found');
+        } else {
+            echo $this->model->Translate('results found');
+        }
+
+        echo '</h1>
+                          </div>
+                          <div class="col-md-1"></div>
+                      </div>
 
                </form>';
 
@@ -597,29 +620,152 @@ class SubdescriptionView extends DefaultView
     public function getQuestions() {
 
         if($this->model->getNoItems() == '0') {
-            $i = 0;
-            while ($i < $this->model->countAskPerson()) {
 
-                echo '<div class="row" style="margin-top: 60px;">
-                      <div class="col-xs-1" id="test">
-                          <h class="question">' . $this->model->Translate('Question') . ':</h><br />
-                          <h class="answer">' . $this->model->Translate('Answer') . ':</h>
+            if(isset($_GET['page'])){
+                $page = $_GET['page'];
+
+                $i = ($page - 1)*9;
+            } else {
+                $i = 0;
+            }
+
+            if($this->model->countAskPerson() > 9) {
+                if(($i + 9) < $this->model->countAskPerson()) {
+                    $k = $i + 9;
+                } else {
+                    $k = $this->model->countAskPerson();
+                }
+            } else {
+                $k = $this->model->countAskPerson();
+            }
+
+            while ($i < $k) {
+
+                echo '<div class="row" style="margin-top: 20px;">
+                      <div class="col-md-1"></div>
+                      <div class="col-xs-8">
+                          <table class="table table-main">
+                              <tr>
+                                  <td style="border-top: none; width: 100px;"><h class="question">' . $this->model->Translate('Question') . '</td>
+                                  <td style="border-top: none;"><h class="answer"><span id="question">' . $this->model->getQuestion($i) . '</span></h></td>
+                              </tr>
+                              <tr>
+                                  <td style="border-top: none; width: 100px;"><h class="answer">' . $this->model->Translate('Answer') . '</td>
+                                  <td style="border-top: none;"><h class="answer"><span id="answer">' . $this->model->getAnswer($i) . '</span></h>
+                                      <br /><h class="by-answer">' . $this->model->Translate('By') . ' ' . $this->model->getAnswerPerson($i) . ' ' . $this->model->Translate('on') . ' ' . $this->model->getAnswerTime($i) . '</h>
+                                  </td>
+                              </tr>
+                          </table>
                       </div>
-                      <div class="col-xs-6">
-                               <h class="answer"><span id="question">' . $this->model->getQuestion($i) . '</span></h><br /></h>
-                               <h class="answer"><span id="answer">' . $this->model->getAnswer($i) . '</span></h><br />
-                               <h class="by-answer">' . $this->model->Translate('By') . ' ' . $this->model->getAnswerPerson($i) . ' ' . $this->model->Translate('on') . ' ' . $this->model->getAnswerTime($i) . '</h>
-                          </div>
                  </div>';
 
                 $i++;
+            }
+
+            if($this->model->countAskPerson() > 9){
+                echo '<div class="search-divider"></div>';
+
+                echo '<div class="row" style="margin-top: 40px;">
+                              <div class="col-md-3"></div>
+                              <div class="col-md-6">
+                                  <div class="pull-left">';
+
+                if(isset($_GET['page']) && $_GET['page'] !== '1') {
+                    echo '<a href="/';
+
+                    if($_SESSION['language'] !== 'us'){
+                        echo $_SESSION['language'];
+                    }
+
+                    if (isset($_GET['page']) && $_GET['page'] > 1) {
+                        if(isset($_GET['q'])) {
+                            echo '/FAQ/?q=' . $_GET['q'] . '&page=' . ($_GET['page'] - 1);
+                        } else if(isset($_GET['name'])){
+                            echo '/FAQ/?q=' . $_GET['name'] . '&page=' . ($_GET['page'] - 1);
+                        }
+                    }
+
+                    echo '">';
+                }
+
+                echo '<img src="/images/arrow-right-pages.png" width="15" height="30" class="nav-image" />';
+
+                if(isset($_GET['page']) && $_GET['page'] !== '1') {
+                    echo '</a>';
+                }
+
+                echo              '</div>
+                                  <div style="margin-left: 42%;">
+                                      <form action="" method="get">
+                                          <input type="hidden" name="q" id="q" value="';
+
+                if(isset($_GET['q'])){
+                    echo $_GET['q'];
+                } else if(isset($_GET['name'])){
+                    echo $_GET['name'];
+                }
+
+                echo '" />
+                                          <input type="text" name="page" id="page" class="form-control" style="padding-top: 20px !important; padding-bottom: 20px !important;" onkeypress="return event.charCode >= 48 && event.charCode <= 57" value="';
+
+                if(isset($_GET['page'])){
+                    echo $_GET['page'];
+                } else {
+                    echo '1';
+                }
+
+                echo '" />
+                          <input type="submit" />
+                               </form>
+                               <h1 class="pages"> of ' . $this->model->countPages() . '</h1>
+                                  </div>
+                                  <div class="pull-right">';
+
+
+                if(!isset($_GET['page']) || $_GET['page'] != $this->model->countAskPerson()) {
+
+
+                    echo '<a href="/';
+
+                    if($_SESSION['language'] !== 'us'){
+                        echo $_SESSION['language'];
+                    }
+
+                    if(isset($_GET['page']) && $_GET['page'] < $this->model->countAskPerson()){
+                        if(isset($_GET['q'])) {
+                            echo '/FAQ/?q=' . $_GET['q'] . '&page=' . ($_GET['page'] + 1);
+                        } else if(isset($_GET['name'])){
+                            echo '/FAQ/?q=' . $_GET['name'] . '&page=' . ($_GET['page'] + 1);
+                        }
+                    } else {
+                        if(isset($_GET['q'])) {
+                            echo '/FAQ/?q=' . $_GET['q'] . '&page=2';
+                        } else if(isset($_GET['name'])){
+                            echo '/FAQ/?q=' . $_GET['name'] . '&page=2';
+                        }
+                    }
+
+                    echo '">';
+                }
+
+
+                echo '<img src="/images/arrow-left-pages.png" width="15" height="30" class="nav-image" />';
+
+                if(!isset($_GET['page']) || $_GET['page'] !== $this->model->countAskPerson()) {
+                    echo '</a>';
+                }
+
+                echo '                </div>
+                              </div>
+                              <div class="col-md-3"></div>
+                          </div>';
             }
         }
 
         //echo $this->model->getNoItems();
         if($this->model->getNoItems() == '1'){
 
-            echo '<div class="row" style="margin-top: 10px; margin-left: 20px;">
+            echo '<div class="row">
                       <div class="col-md-5">
                           <h1 class="no-q-a">' . $this->model->Translate('No Questions & Answers Found') . '</h1>';
 
@@ -639,12 +785,18 @@ class SubdescriptionView extends DefaultView
 
     private function getPopularRequets(){
 
-        echo '<h1 class="popular">' . $this->model->Translate('Most popular requests') . '</h1>
-                   <ul class="popular-nav">
-                          <li class="p-links"><a href="/FAQ/?q=Does this will work in Ukraine?">Does this will work in Ukraine?</a></li>
-                          <li class="p-links"><a href="/FAQ/?q=Can i use this Phone in Trinidad & Tobago">Can i use this Phone in Trinidad & Tobago</a></li>
-                          <li class="p-links"><a href="/FAQ/?q=Will this phone work in Israel ? With an Israeli carrier">Will this phone work in Israel ? With an Israeli carrier</a></li>
-                          <li class="p-links"><a href="/FAQ/?q=Can I use this phone in Russia?">Can I use this phone in Russia?</a></li>
-                   </ul>';
+        echo '<div class="row">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8">
+                      <h1 class="popular">' . $this->model->Translate('Most popular requests') . '</h1>
+                           <ul class="popular-nav">
+                                  <li class="p-links"><a href="/FAQ/?q=Does this will work in Ukraine?">Does this will work in Ukraine?</a></li>
+                                  <li class="p-links"><a href="/FAQ/?q=Can i use this Phone in Trinidad & Tobago">Can i use this Phone in Trinidad & Tobago</a></li>
+                                  <li class="p-links"><a href="/FAQ/?q=Will this phone work in Israel ? With an Israeli carrier">Will this phone work in Israel ? With an Israeli carrier</a></li>
+                                  <li class="p-links"><a href="/FAQ/?q=Can I use this phone in Russia?">Can I use this phone in Russia?</a></li>
+                           </ul>
+                  </div>
+              </div>
+              ';
     }
 }

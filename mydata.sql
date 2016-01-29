@@ -1384,6 +1384,58 @@ INSERT INTO questions(product, ask_person, question, answer, answer_person) VALU
 INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 6S White 32GB Neverlock', 'Jenya Kalujin', 'Will this phone work in Israel ? With an Israeli carrier', 'Yes it should work in Israel', 'Professional Seller');
 INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 6S White 32GB Neverlock', 'Anton Vovnenko', 'Can I use this phone in Russia ?', 'Yes', 'Oleksandr Serdiuk(Woden S)');
 
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 6 Black or White 8GB Neverlock', 'Serdiuk Oleksandr', 'the phone work in Argentina', 'Yes it will work.', 'Dmitry Medvedev');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 6 Black or White 8GB Neverlock', 'Ivan Sakhan', 'This phone is unlocked and work in Venezuela with Movistar? Thanks', 'yes will do', 'PRIME ELECTRONICS');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 6 Black or White 8GB Neverlock', 'Jenya Kalujin', 'When I place in my Straight talk sim card, do I have to program the network settings to start the service?', 'no not required. It should work as it is.', 'Professional Seller');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 6 Black or White 8GB Neverlock', 'Anton Vovnenko', 'This phone work in costa rica with ice???', 'Yes.', 'Oleksandr Serdiuk(Woden S)');
+
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 5S White 16GB Unlocked', 'Serdiuk Oleksandr', 'Is Apple iPhone 6 can be fitted with nano sim?', 'All iPhones, iPhone 5 and up, have a nano SIM card slot.', 'Dmitry Medvedev');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 5S White 16GB Unlocked', 'Ivan Sakhan', 'The iPhone have warranty?', 'Yes ours has apple care warranty on it.', 'PRIME ELECTRONICS');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 5S White 16GB Unlocked', 'Jenya Kalujin', 'This iphone have international warranty?', 'yes it does', 'Professional Seller');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 5S White 16GB Unlocked', 'Anton Vovnenko', 'will the phone work in Trinidad and tobago', 'Yes it works in the Caribbean .I used mine in Barbados', 'Oleksandr Serdiuk(Woden S)');
+
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 4 Black 64 GB Neverlock', 'Serdiuk Oleksandr', 'Will this phone work in jamaica?', 'Yes,it should work make sure it''s unlocked phone.', 'Dmitry Medvedev');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 4 Black 64 GB Neverlock', 'Ivan Sakhan', 'The phone work in Panama?', 'Yes', 'PRIME ELECTRONICS');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 4 Black 64 GB Neverlock', 'Jenya Kalujin', 'is it 4g? the phone comes with its certificate? is it Refurbished? is it used or new?', ' you need to check with seller.', 'Professional Seller');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 4 Black 64 GB Neverlock', 'Anton Vovnenko', 'does it support 3G and 4G networks ?', 'It always shows LTE.', 'Oleksandr Serdiuk(Woden S)');
+
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 5 White 16GB Unlocked', 'Serdiuk Oleksandr', 'this phone work in india too?', 'Yes, this phone will work with all GSM providers in India..', 'Dmitry Medvedev');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 5 White 16GB Unlocked', 'Ivan Sakhan', 'does the phone come with earbuds?', 'Yes', 'PRIME ELECTRONICS');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 5 White 16GB Unlocked', 'Jenya Kalujin', 'will the phone work with metro pcs ?', 'If it works with gsm unlocked. ', 'Professional Seller');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 5 White 16GB Unlocked', 'Anton Vovnenko', 'Can this phone work with cricket?', 'Cricket uses AT&T network. this phone will work with cricket.', 'Oleksandr Serdiuk(Woden S)');
+
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 4S Black 32 GB Neverlock', 'Serdiuk Oleksandr', 'I have an iphone 5c do they use the same nano card?', 'Yes. Just pop your sim into this one and it works.', 'Dmitry Medvedev');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 4S Black 32 GB Neverlock', 'Ivan Sakhan', 'does this work for metro pcs?', 'MetroPCS uses T-mobile network, the unlocked/tmobile phones will work metroc PCS.', 'PRIME ELECTRONICS');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 4S Black 32 GB Neverlock', 'Jenya Kalujin', 'Is it both works in China and America? I travel between theses countries frequently', 'Yes, definitely. The iPhone is programmed to work in up to over 200 countries', 'Professional Seller');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Iphone 4S Black 32 GB Neverlock', 'Anton Vovnenko', 'the Iphone can work in Guatemala??', 'yes it is unlocked for any gsm carrier worldwide', 'Oleksandr Serdiuk(Woden S)');
+
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Galaxy S6 SM-G920F 32GB (Factory Unlocked) 5.1 inches', 'Serdiuk Oleksandr', 'Hi, how much time it takes to deliver to a miami adress?', 'Less than 7 days...', 'Dmitry Medvedev');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Galaxy S6 SM-G920F 32GB (Factory Unlocked) 5.1 inches', 'Ivan Sakhan', 'does this phone work with net10?', 'If the carrier has GSM NETWORK..', 'PRIME ELECTRONICS');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Galaxy S6 SM-G920F 32GB (Factory Unlocked) 5.1 inches', 'Jenya Kalujin', 'the phone work in italy with vodafon?', 'Yes', 'Professional Seller');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Galaxy S6 SM-G920F 32GB (Factory Unlocked) 5.1 inches', 'Anton Vovnenko', 'Does this phone have insurance', 'Yes still under warranty. thanks', 'Oleksandr Serdiuk(Woden S)');
+
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Galaxy S5 SM-G900H Factory Unlocked Cellphone International Version Black', 'Serdiuk Oleksandr', 'can I buy the phone, and use it without a sim card or service?', 'Requires SIM card from carrier you use.', 'Dmitry Medvedev');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Galaxy S5 SM-G900H Factory Unlocked Cellphone International Version Black', 'Ivan Sakhan', 'where is it shipping from', 'Michigan', 'PRIME ELECTRONICS');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Galaxy S5 SM-G900H Factory Unlocked Cellphone International Version Black', 'Jenya Kalujin', 'what''s in the box? does it have warranty?', 'No warranty', 'Professional Seller');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Galaxy S5 SM-G900H Factory Unlocked Cellphone International Version Black', 'Anton Vovnenko', 'There is shipping to Mexico?', 'No.', 'Oleksandr Serdiuk(Woden S)');
+
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Galaxy S4 i9500 Factory Unlocked cellphone 16 GB White', 'Serdiuk Oleksandr', 'does the front camera work', 'yes it works perfectly, everything about the phone works well for me. No complaints', 'Dmitry Medvedev');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Galaxy S4 i9500 Factory Unlocked cellphone 16 GB White', 'Ivan Sakhan', 'can i get this switched to metropcs', 'I''m not sure if metro pcs has micro sim card, if they do then yes.', 'PRIME ELECTRONICS');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Galaxy S4 i9500 Factory Unlocked cellphone 16 GB White', 'Jenya Kalujin', 'can i use this phone for boost mobile or metropcd', 'Yes', 'Professional Seller');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Galaxy S4 i9500 Factory Unlocked cellphone 16 GB White', 'Anton Vovnenko', 'So this will not work with Verizon?', 'No unless they have SIM card an I don''t think Verizon have that', 'Oleksandr Serdiuk(Woden S)');
+
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Galaxy S3 i9300 Unlocked Cellphone International Version 16GB White', 'Serdiuk Oleksandr', 'Can I use this phone with sprint', 'Yes.', 'Dmitry Medvedev');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Galaxy S3 i9300 Unlocked Cellphone International Version 16GB White', 'Ivan Sakhan', 'what does unlocked mean?', 'Can be used with any gsm carrier', 'PRIME ELECTRONICS');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Galaxy S3 i9300 Unlocked Cellphone International Version 16GB White', 'Jenya Kalujin', 'Is this a contract phone?', 'This is factory unlocked', 'Professional Seller');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Galaxy S3 i9300 Unlocked Cellphone International Version 16GB White', 'Anton Vovnenko', 'why are iphones so Expensive?', 'Because they are your portable computer and they are reliable', 'Oleksandr Serdiuk(Woden S)');
+
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Note i6901 Unlocked Cellphone International Version 16GB White', 'Serdiuk Oleksandr', 'Could it be posible to be shipped before the next thursday? thanks', 'We have ship either today or Monday', 'Dmitry Medvedev');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Note i6901 Unlocked Cellphone International Version 16GB White', 'Ivan Sakhan', 'Does it work with china telecom,3g or 4g?', 'I use an iPhone bought from an Apple Store in the USA and it works fine with China Unicom.', 'PRIME ELECTRONICS');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Note i6901 Unlocked Cellphone International Version 16GB White', 'Jenya Kalujin', 'can this phone be used with boost mobil', 'Yes ', 'Professional Seller');
+INSERT INTO questions(product, ask_person, question, answer, answer_person) VALUES ('Samsung Note i6901 Unlocked Cellphone International Version 16GB White', 'Anton Vovnenko', 'works in korea', 'Yes', 'Oleksandr Serdiuk(Woden S)');
+
+
+
 /*
  * ENCODING DATA
  */

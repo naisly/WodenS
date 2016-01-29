@@ -21,6 +21,7 @@ class SubdescriptionModel extends AssocModel
     private $date;
 
     private $no_items;
+    private $count_pages;
 
     public function setAskPerson( $ask_person ) {
 
@@ -87,5 +88,10 @@ class SubdescriptionModel extends AssocModel
     public function getNoItems() {
 
         return $this->no_items;
+    }
+
+    public function countPages() {
+
+        return ceil($this->countAskPerson() / 9);
     }
 }

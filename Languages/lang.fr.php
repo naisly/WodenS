@@ -971,6 +971,10 @@ $lang = array(
     'Please, change search parameters to get any matches.' => 'Sil vous plaît, de modifier les paramètres de recherche pour obtenir des matchs.',
     'No Questions & Answers Found' => 'Pas de Questions & Réponses trouvés',
 
+    'This Item is Certified Refurbished' => 'son objet est reconditionné certifié',
+    'result found' => 'correspondance est trouvée',
+    'FAQ' => 'Questions fréquemment posées',
+
 
 
 

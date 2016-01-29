@@ -968,6 +968,10 @@ $lang = array(
     'Please, change search parameters to get any matches.' => 'Bitte, ändern Suchparameter, um alle Übereinstimmungen zu erhalten.',
     'No Questions & Answers Found' => 'Keine Fragen & Antworten gefunden',
 
+    'This Item is Certified Refurbished' => 'seine Artikel ist zertifiziert Refurbished',
+    'result found' => 'Übereinstimmung gefunden wird',
+    'FAQ' => 'Häufig gestellte Fragen',
+
 
 
 

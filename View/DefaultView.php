@@ -64,6 +64,12 @@ class DefaultView
             } else {
                 echo '<title>' . $_GET['generalnav'] . ' - Woden Sims</title>';
             }
+        } else if(isset($_GET['q'])){
+            if ($this->model->getCurrentLanguage() !== 'us') {
+                echo '<title>' . $_GET['q'] . ' - Woden Sims (' . $this->model->getCurrentCountry() . ')</title>';
+            } else {
+                echo '<title>' . $_GET['q'] . ' - Woden Sims</title>';
+            }
         }
         else {
             if ($this->model->getCurrentLanguage() !== 'us') {
@@ -107,6 +113,7 @@ class DefaultView
             echo '<link href="/css/login.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'subdescription') {
             echo '<link href="/css/jquery.bxslider.css" rel="stylesheet">
+                  <link href="/css/search.css" rel="stylesheet">
                    <script src="/js/jquery-min.js"></script>
                    <!-- bxSlider Javascript file -->
                    <script src="/js/bootstrap.min.js"></script>
