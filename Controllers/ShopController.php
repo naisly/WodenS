@@ -220,26 +220,26 @@ class ShopController extends DefaultController
         $timer = 0;
         $array = array();
         while($timer < 11) {
-            if (isset($_POST['array' . $timer])) {
-                array_push($array, $_POST['array' . $timer]);
+            if (isset($_GET['array' . $timer])) {
+                array_push($array, $_GET['array' . $timer]);
             }
             $timer++;
         }
-        if (isset($_POST['min'])) {
-            $min = $_POST['min'];
+        if (isset($_GET['min'])) {
+            $min = $_GET['min'];
         }
         //echo $min;
-        if (isset($_POST['max'])) {
-            $max = $_POST["max"];
+        if (isset($_GET['max'])) {
+            $max = $_GET["max"];
         }
-        if (isset($_POST['sort_by_price'])) {
-            $sort_by_price = $_POST["sort_by_price"];
+        if (isset($_GET['sort_by_price'])) {
+            $sort_by_price = $_GET["sort_by_price"];
         }
-        if (isset($_POST['sort_by_time'])) {
-            $sort_by_time = $_POST["sort_by_time"];
+        if (isset($_GET['sort_by_time'])) {
+            $sort_by_time = $_GET["sort_by_time"];
         }
-        if (isset($_POST['sort_by_shipping'])) {
-            $sort_by_shipping = $_POST["sort_by_shipping"];
+        if (isset($_GET['sort_by_shipping'])) {
+            $sort_by_shipping = $_GET["sort_by_shipping"];
         }
 
         if((isset($min) || isset($max)) && (count($array) === 0)) {

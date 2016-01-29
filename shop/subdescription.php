@@ -20,4 +20,4 @@ $view = new SubdescriptionView($model);
 
 $controller->actionGetData( $_GET['name'], $_GET['category'], $_GET['product_price'], $_GET['id'], $_GET['product_name'], 0);
 
-$view->getSubdescriptionPage( 'Apple', 'Phones' );
+$view->getSubdescriptionPage( 'Apple' );

@@ -121,8 +121,8 @@ class DefaultController
     public function actionGetHeaderCart() {
 
         $this->actionGetLanguage();
-        $this->actionGetSumOfItems();
-        $this->actionGetQuantityOfItems();
+        #$this->actionGetSumOfItems();
+        #$this->actionGetQuantityOfItems();
         $this->actionGetBreadcrumbs();
     }
 
@@ -135,7 +135,7 @@ class DefaultController
      *
      * @var $sum
      */
-    private function actionGetSumOfItems() {
+    protected function actionGetSumOfItems() {
 
         include_once('/../Storage.php');
         $db = Storage::getInstance();
@@ -182,7 +182,7 @@ class DefaultController
      * @var $quantity_array
      * @var $quantity
      */
-    private function actionGetQuantityOfItems() {
+    protected function actionGetQuantityOfItems() {
 
         include_once('/../Storage.php');
         $db = Storage::getInstance();

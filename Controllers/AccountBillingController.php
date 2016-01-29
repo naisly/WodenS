@@ -27,6 +27,8 @@ class AccountBillingController extends AccountOrderController
 
         session_start();
         $this->actionGetHeaderCart();
+        $this->actionGetQuantityOfItems();
+        $this->actionGetSumOfItems();
 
         if(!isset($_SESSION['login_user'])){
             if($_SESSION['language'] !== 'us') {

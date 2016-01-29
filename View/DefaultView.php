@@ -190,10 +190,13 @@ class DefaultView
             echo '<link href="/css/forgot.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Search') {
             echo '<link href="/css/search.css" rel="stylesheet" type="text/css">';
+        } else if (substr($page, 0, 3) == 'Buy'){
+            echo '<link href="/css/shop.css" rel="stylesheet" type="text/css">';
+            echo '<link rel="stylesheet" href="/css/default.css" type="text/css" />';
         }
         else {
-            echo '<link rel="stylesheet" href="/css/default.css" />' .
-                '<link rel="stylesheet" href="/css/animate.css" />';
+            echo '<link rel="stylesheet" href="/css/default.css" type="text/css" />' .
+                '<link rel="stylesheet" href="/css/animate.css" type="text/css" />';
         }
 
         echo '</head>

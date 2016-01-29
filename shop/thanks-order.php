@@ -20,6 +20,7 @@ $controller = new LoginController($model);
 $view = new LoginView($model);
 
 $controller->actionGetHeaderCart();
+$controller->actionGetTotalAndSum();
 
 $view->DoctypeView( 'Thanks message' );
 $view->headerView( 'thanks-order' );

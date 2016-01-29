@@ -45,6 +45,10 @@ class ProfileController extends DefaultController
         session_write_close();
 
         $this->actionGetHeaderCart();
+
+        $this->actionGetQuantityOfItems();
+        $this->actionGetSumOfItems();
+
         $this->actionGetOrderedItems();
         $this->actionGetUser();
         $this->actionGetMinPrice();

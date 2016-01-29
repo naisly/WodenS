@@ -243,7 +243,7 @@ class DefaultModel
         return count($this->id);
     }
     public function getPages() {
-        return ceil(count($this->id) / 13);
+        return ceil(count($this->id) / 6);
     }
     public function setNoDataFound( $no_data_found ) {
         $this->no_data_found = $no_data_found;

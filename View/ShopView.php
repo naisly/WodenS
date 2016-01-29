@@ -82,7 +82,7 @@ class ShopView extends DefaultView
         echo '<div class="container">
                   <div class="row">
                        <div class="col-md-3 search-box">
-                            <form action="" method="post" oninput="minValue.value=min.value; maxValue.value=max.value">
+                            <form action="" method="get" oninput="minValue.value=min.value; maxValue.value=max.value">
                             <div class="row">
                                 <div class="col-md-12 bg-item top-margin" style="margin-top: 0px;">
                                     <h class="search-item">';
@@ -96,15 +96,27 @@ class ShopView extends DefaultView
 
         $k = 0;
         while ($k < count($this->model->distinct_product_names)) {
-            echo '<input style="margin-right: 6px;" type="checkbox" name="array' . $k . '" id="array' . $k . '" value="' . $this->model->getDistinctProductNames($k) . '"';
+            /*echo '<input style="margin-right: 6px;" type="checkbox" name="array' . $k . '" id="array' . $k . '" value="' . $this->model->getDistinctProductNames($k) . '"';
             if (isset($_POST['array' . $k])) echo "checked='checked'";
+            echo "/>";*/
+            echo '<div class="checkbox" style="margin-top: 4px;">
+                              <label>
+                                  <input type="checkbox" name="array' . $k . '" id="array' . $k . '" value="' . $this->model->getDistinctProductNames($k) . '"';
+            if (isset($_GET['array' . $k])) echo "checked='checked'";
             echo "/>";
-            echo $this->model->getDistinctProductNames($k);
+
+            echo                  '<span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>' . $this->model->getDistinctProductNames($k);
+
+
             if ($this->model->getQuantityOfItems($k) == 0) {
                 echo '<br />';
             } else {
                 echo '(' . $this->model->getQuantityOfItems($k) . ')<br />';
             }
+
+            echo '    </label>
+                  </div>';
+
             $k++;
         }
         echo '            </div>
@@ -316,7 +328,7 @@ class ShopView extends DefaultView
 
                 echo $this->model->Translate('Average price for this product:');
 
-                echo '<span id="prev-price">' . $this->model->getAverage($i) . '$' . '</span></p>
+                echo ' <span id="prev-price">' . $this->model->getAverage($i) . '$' . '</span></p>
                             <p style="text-align: left;"><b style="font-size: 16px;">';
 
                 echo $this->model->Translate('Short description:');
@@ -364,6 +376,14 @@ class ShopView extends DefaultView
             echo ' </div>
                 </div>';
 
+            $no_page = explode("&page=", $_SERVER['REQUEST_URI']);
+            if($no_page[0] == $_SERVER['REQUEST_URI']){
+                $next_page = explode("?page=", $_SERVER['REQUEST_URI']);
+                $url = $next_page[0];
+            } else {
+                $url = $no_page[0];
+            }
+            $find_start = strpos($_SERVER['REQUEST_URI'], '&');
 
             if ($this->model->countId() > 6) {
                 echo '<div class="search-divider" style="margin-top: 40px;"></div>';
@@ -377,7 +397,11 @@ class ShopView extends DefaultView
                     echo '<a href="';
 
                     if (isset($_GET['page']) && $_GET['page'] > 1) {
-                        echo '?page=' . ($_GET['page'] - 1);
+                        if($find_start > 0) {
+                            echo $url . '&page=' . ($_GET['page'] - 1);
+                        } else {
+                            echo $url . '?page=' . ($_GET['page'] - 1);
+                        }
                     }
 
                     echo '">';
@@ -415,9 +439,17 @@ class ShopView extends DefaultView
                         echo '<a href="';
 
                         if (isset($_GET['page']) && $_GET['page'] < $this->model->getPages()) {
-                            echo '?page=' . ($_GET['page'] + 1);
+                            if($find_start > 0) {
+                                echo $url . '&page=' . ($_GET['page'] + 1);
+                            } else {
+                                echo $url . '?page=' . ($_GET['page'] + 1);
+                            }
                         } else {
-                            echo '?page=2';
+                            if($find_start > 0) {
+                                echo $url . '&page=2';
+                            } else {
+                                echo $url . '?page=2';
+                            }
                         }
 
                         echo '">';

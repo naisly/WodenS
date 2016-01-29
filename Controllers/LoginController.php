@@ -30,6 +30,12 @@ class LoginController extends DefaultController
 
     }
 
+    public function actionGetTotalAndSum() {
+
+        $this->actionGetSumOfItems();
+        $this->actionGetQuantityOfItems();
+    }
+
     /*
      * Getting data from the
      * Register page
