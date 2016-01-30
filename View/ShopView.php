@@ -242,7 +242,7 @@ class ShopView extends DefaultView
      * Getting items to
      * the product page
      */
-    private function getItems($page)
+    private function getItems( $current_page )
     {
 
         if(isset($_GET['page'])){
@@ -287,7 +287,7 @@ class ShopView extends DefaultView
 
                 echo 'padding-bottom: 20px; margin-right: 5px;">
                     <div class="col-md-3"';
-                if ($page === 'notebooks' || $page === 'television') {
+                if ($current_page === 'notebooks' || $current_page === 'television') {
                     echo 'style="margin-top: 30px"';
                 }
                 echo ' style="padding-left: 0 !important;">
@@ -301,7 +301,7 @@ class ShopView extends DefaultView
                     echo $_SESSION['language'] . '/';
                 }
 
-                echo 'shop/subdescription?name=' . $this->model->getOriginalName($i) . '&category=' . $page . '&product_price=' . $this->model->getPrice($i) . '&id=' . $this->model->getId($i) . '&product_name=' . $this->model->getProductName($i) . '">' . $this->model->getOriginalName($i) . '</a>
+                echo 'shop/subdescription?name=' . $this->model->getOriginalName($i) . '&category=' . $current_page . '&product_price=' . $this->model->getPrice($i) . '&id=' . $this->model->getId($i) . '&product_name=' . $this->model->getProductName($i) . '">' . $this->model->getOriginalName($i) . '</a>
 
                             <span><br />' . $this->model->Translate('by') . ' ';
 
@@ -363,7 +363,7 @@ class ShopView extends DefaultView
                             <input type="hidden" name="category" value="' . $this->model->getCategory($i) . '"/>
                             <input type="hidden" name="photo" value="' . $this->model->getPhoto($i) . '"/>
                             <input type="hidden" name="price" value="' . $this->model->getPrice($i) . '"/>
-                            <input type="hidden" name="table" value="' . $page . '"/>
+                            <input type="hidden" name="table" value="' . $current_page . '"/>
                             <input type="hidden" name="original_name" value="' . $this->model->getOriginalName($i) . '"/>
                         </form>
                     </div>
