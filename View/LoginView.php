@@ -621,16 +621,18 @@ class LoginView extends DefaultView
 
         echo 'register" class="links" id="link" style="text-decoration: none;">' . $this->model->Translate('Create your Woden Sims ID') . '<img style="margin-top: -5px;" src="/images/arrow-blue.png" width="15" height="15"/></a></h2>
                   </div>
-                  <div class="margin-auto" style="margin-top: 5%;"><form action="/check" method="post">
+                  <div class="margin-auto" style="margin-top: 5%;"><form action="/check" method="post" id="login_form">
                               <div class="input-group" style="width: 100%;">
                                   <input type="text" name="email" id="email" class="form-control woden-sims-email" placeholder="Woden Sims Email">
                               </div>
-                              <div class="input-group">
-                                  <input type="password" name="password" id="password" class="form-control" placeholder="' . $this->model->Translate('Password') . '" style="height: 40px !important; border-right: none !important;">
-                                  <span class="input-group-addon" id="basic-addon2"><button class="image-as-button"><span class="glyphicon glyphicon-arrow-right" style="color: #666;"></span></button></span>
+                              <div class="right-inner-addon-1">
+                                  <input type="password" class="form-control" name="password" id="password" placeholder="' . $this->model->Translate('Password') . '" />
+                                  <i id="submit-main" class="glyphicon glyphicon-arrow-right" style="z-index: 10000 !important;"></i>
                               </div>
-                          </form>
+
                   </div>
+              </form>
+              </div>
                   <div class="text-center" style="margin-top: 15px;">
                       <a href="/';
 
@@ -642,6 +644,14 @@ class LoginView extends DefaultView
                   </div>
                   <img style="margin-top: 40px;" src="/images/phones-category-white.png" class="full-image-cascade" />
                </div>';
+
+        echo '<script>
+                    var form = document.getElementById("login_form");
+
+                    document.getElementById("submit-main").addEventListener("click", function () {
+                      form.submit();
+                    });
+              </script>';
 
         $this->actionGetFooter( 'Login' );
     }

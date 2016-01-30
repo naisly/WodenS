@@ -30,7 +30,7 @@ class TermsView extends DefaultView
     private function getMain() {
 
         echo '<div class="container">
-                  <div class="row" style="border-bottom: 1px solid #e4e4e4; margin-top: -15px;">
+                  <div class="row bordered-bottom" style="margin-top: -15px;">
                       <div class="col-md-3" style="margin-top: 15px;">
                           <h1 class="sub-h-terms">' . $this->model->Translate('Terms of Use') . '</h1>
                       </div>

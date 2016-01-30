@@ -25,6 +25,26 @@
 .glyphicon {
     color: #666;
 }
+
+/*
+new
+*/
+.right-inner-addon-1 {
+    position: relative;
+}
+.right-inner-addon-1 input {
+    padding-right: 45px;
+}
+.right-inner-addon-1 i {
+    position: absolute;
+    right: 0;
+    padding: 13px 20px;
+    cursor: pointer;
+}
+/*
+end new
+
+*/
 .form-control {
     padding-top: 20px !important;
     padding-bottom: 20px !important;

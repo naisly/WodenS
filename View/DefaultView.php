@@ -70,6 +70,8 @@ class DefaultView
             } else {
                 echo '<title>' . $_GET['q'] . ' - Woden Sims</title>';
             }
+        } else if($page == 'Admin'){
+            echo '<title>Admin - Woden Sims</title>';
         }
         else {
             if ($this->model->getCurrentLanguage() !== 'us') {
@@ -111,6 +113,9 @@ class DefaultView
             echo '<link href="/css/tv.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Login' || $page == 'Admin' || $page == 'Thanks - Support' || $page == 'Registration' || $page == 'Registration Completed') {
             echo '<link href="/css/login.css" rel="stylesheet" type="text/css">';
+            if($page == 'Login' || $page == 'Admin'){
+                echo '<link href="/css/search.css" rel="stylesheet" type="text/css">';
+            }
         } else if ($page == 'subdescription') {
             echo '<link href="/css/jquery.bxslider.css" rel="stylesheet">
                   <link href="/css/search.css" rel="stylesheet">
@@ -541,15 +546,15 @@ class DefaultView
                     echo '</h>';
                 } else if (substr($this->model->getBreadcrumbs($i), 0, 14) == 'Subdescription') {
                     echo '<h id="breadcrumbs">' . $this->model->getOriginalName(0) . '</h>';
-                } else if ($this->model->getBreadcrumbs($i) == 'privacy-policy') {
+                } else if ($this->model->getBreadcrumbs($i) == 'Privacy-policy') {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Privacy Policy') . '</h></a>';
-                } else if ($this->model->getBreadcrumbs($i) == 'order-status') {
+                } else if ($this->model->getBreadcrumbs($i) == 'Order-status') {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Order Status') . '</h></a>';
-                } else if (substr($this->model->getBreadcrumbs($i), 0, 5) == 'login') {
+                } else if (substr($this->model->getBreadcrumbs($i), 0, 5) == 'Login') {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Login') . '</h></a>';
-                } else if (substr($this->model->getBreadcrumbs($i), 0, 8) == 'register') {
+                } else if (substr($this->model->getBreadcrumbs($i), 0, 8) == 'Register') {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Register') . '</h></a>';
-                } else if ($this->model->getBreadcrumbs($i) == 'registration-completed') {
+                } else if ($this->model->getBreadcrumbs($i) == 'Registration-completed') {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Registration Completed') . '</h></a>';
                 } else if ($this->model->getBreadcrumbs($i) == 'Forgot-password') {
                     echo '<a id="breadcrumbs" href="' . $this->model->getBreadcrumbsLink($i) . '"><h id="breadcrumbs">' . $this->model->Translate('Recover your Woden Sims Account') . '</h></a>';

@@ -37,7 +37,7 @@ class PrivacyView extends DefaultView
     private function getMain() {
 
         echo '<div class="container">
-                  <div class="row" style="border-bottom: 1px solid #e4e4e4;">
+                  <div class="row bordered-bottom">
                       <div class="col-md-3">
                           <h1 class="sub-h-terms">' . $this->model->Translate('Privacy') . '</h1>
                       </div>

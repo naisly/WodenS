@@ -185,6 +185,7 @@ class DefaultModel
         $this->language = $language;
     }
     public function Translate( $text ){
+
         if($_SESSION['language'] !== 'us') {
             return $this->language[$text];
         } else {
