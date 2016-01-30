@@ -14,7 +14,7 @@
  */
 class AdminController
 {
-    /*
+    /**
      * MVC constructor
      * with AdminModel
      *
@@ -25,7 +25,7 @@ class AdminController
         $this->model = $model;
     }
 
-    /*
+    /**
      * Method for validation Admin
      * data from entrance
      *
@@ -64,7 +64,7 @@ class AdminController
         session_write_close();
     }
 
-    /*
+    /**
      * Getting data products
      * for the Admin page
      *
@@ -145,7 +145,7 @@ class AdminController
         }
     }
 
-    /*
+    /**
      * Saving data from Products table
      * Inserting to the next page
      * for edit one
@@ -213,7 +213,7 @@ class AdminController
         $this->model->setShipping($shipping);
     }
 
-    /*
+    /**
      * Updating data
      * from the admin page
      * for the products
@@ -279,7 +279,7 @@ class AdminController
         header('Location: admin-products.php');
     }
 
-    /*
+    /**
      * Unsetting session for
      * the Admin Login Page
      *
@@ -296,7 +296,7 @@ class AdminController
         header('Location: admin-login.php');
     }
 
-    /*
+    /**
      * Method for deleting data from
      * Products page
      *

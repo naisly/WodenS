@@ -228,7 +228,7 @@ $lang = array(
     /*
      * Info
      */
-    'Main Account Page' => 'Главная страница упраления',
+    'Main Account Page' => 'Главная страница управления',
     'Change your order status:' => 'Изменить статус заказа:',
     'Status' => 'Статус',
     'Cancel' => 'Отменить',

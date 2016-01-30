@@ -4,29 +4,47 @@
  * User: Home
  * Date: 22.11.2015
  * Time: 16:06
+ *
+ * ===================
+ * Getting Subdescription data,
+ * Distinct prices for related items,
+ * Getting Random item,
+ * Making Comparisons for related items,
+ * Getting Associated products for slider
+ * Getting FAQ
+ * ===================
  */
 include_once('DefaultController.php');
 class SubdescriptionController extends DefaultController
 {
-    public $model;
-
     /**
-     * @param SubdescriptionModel $model
+     * MVC constructor
+     * with DefaultModel
+     *
+     * @global $model
      */
+    public $model;
     public function __construct(SubdescriptionModel $model) {
         parent::__construct($model);
         $this->model = $model;
     }
 
     /**
+     * Getting Subdescription data,
+     * Distinct prices for related items,
+     * Getting Random item,
+     * Making Comparisons for related items,
+     * Getting Associated products for slider
+     * Getting FAQ
+     *
+     *
      * @param $original_name
      * @param $table
      * @param $id_num
      * @param $id
      * @param $product_name
-     * @param $search
      */
-    public function actionGetData( $original_name, $table, $id_num, $id, $product_name, $search) {
+    public function actionGetData( $original_name, $table, $id_num, $id, $product_name ) {
 
         $this->actionGetSubdescription( $original_name, $table, $id_num, $id );
         $this->actionSetDistinctProductsPrice( $table, $product_name );
@@ -39,6 +57,8 @@ class SubdescriptionController extends DefaultController
     }
 
     /**
+     * Getting Data for Subdescription Page
+     *
      * @param $product_name
      * @param $table
      * @param $id
@@ -57,11 +77,9 @@ class SubdescriptionController extends DefaultController
                       FROM subdescription INNER JOIN $table WHERE $table.original_name='$product_name' AND
                       subdescription.product_name='$product_name' AND $table.price = $id";
         $result = $mysqli->query( $sql_query );
-        //echo $sql_query;
-        $id = array();
+
         $original_name = array();
         $photo = array();
-        $description = array();
         $category = array();
         $price = array();
         $previous_price = array();
@@ -93,7 +111,6 @@ class SubdescriptionController extends DefaultController
                  */
                 $original_name = $row['original_name'];
                 $photo = $row['photo'];
-                $description = $row['description'];
                 $category = $row['category'];
                 $price = $row['price'];
                 $previous_price = $row['previous_price'];
@@ -121,8 +138,6 @@ class SubdescriptionController extends DefaultController
         }
         $sql_min = "SELECT price FROM $table WHERE original_name='$original_name'";
 
-        //echo $sql_min;
-        //print_r($original_name);
         $result_min = $mysqli->query( $sql_min );
         $min_array = array();
         if ($result_min->num_rows > 0) {
@@ -131,15 +146,12 @@ class SubdescriptionController extends DefaultController
                 $min_array = array_merge($min_array, array_map('trim', explode(",", $row['price'])));
             }
         }
-        //print_r($min_array);
+
         $min = min($min_array);
-        //print_r($product_name);
-        //print_r ($order_id);
         $this->model->setId( $order_id );
         $this->model->setOriginalName( $original_name );
         $this->model->setPhoto( $photo );
         $this->model->setProductName( $product_name );
-        //$this->model->setDescription( $description );
         $this->model->setCategory( $category );
         $this->model->setPrice( $price );
         $this->model->setPreviousPrice( $previous_price );
@@ -161,22 +173,19 @@ class SubdescriptionController extends DefaultController
         $this->model->setProductDetails( $product_details );
         $this->model->setProductPhoto( $assoc_photo );
         $this->model->setMinimum( $min );
-        /*$id = $row['id'];
-        $product_name = $row['product_name'];
-        $assoc_products = explode(',', $row['assoc_products']);
-        $technical_details = explode(',', $row['technical_details']);
-        $technical_details1 = explode(',', $row['technical_details1']);
-        $technical_details2 = explode(',', $row['technical_details2']);
-        $technical_details3 = explode(',', $row['technical_details3']);
-        $technical_details4 = explode(',', $row['technical_details4']);
-        $technical_details5 = explode(',', $row['technical_details5']);
-        $technical_details6 = explode(',', $row['technical_details6']);
-        $product_details = explode(',', $row['product_details']);
-        echo $assoc_products;*/
-        //print_r( $technical_details );
+
     }
 
     /**
+     * Getting distinct products with same name
+     * but different prices
+     *
+     * @var $id_array
+     * @var $price_array
+     * @var $product_name_array
+     * @var $category_array
+     * @var $photo_array
+     *
      * @param $table
      * @param $product_name
      */
@@ -186,7 +195,7 @@ class SubdescriptionController extends DefaultController
         $mysqli = $db->getConnection();
         $sql_query = "SELECT id, product_name, category, photo, price FROM $table WHERE (product_name='$product_name' AND price != {$this->model->getPrice()}) ORDER BY price ASC LIMIT 3";
         $result_query = $mysqli->query( $sql_query );
-        //echo $sql_query;
+
         $id_array = array();
         $price_array = array();
         $product_name_array = array();
@@ -202,13 +211,28 @@ class SubdescriptionController extends DefaultController
                 $photo_array = array_merge($photo_array, array_map('trim', explode(",", $row['photo'])));
             }
         }
-        //print_r($product_name_array);
+
         $this->model->setSortId( $id_array );
         $this->model->setSortPrice( $price_array );
         $this->model->setSortProductNames( $product_name_array );
         $this->model->setSortCategory( $category_array );
         $this->model->setSortPhoto( $photo_array );
     }
+
+    /**
+     * Getting Random product data
+     *
+     * @var $sequence_id
+     * @var $sequence_original_name
+     * @var $sequence_price
+     * @var $sequence_previous_price
+     * @var $sequence_quantity
+     * @var $sequence_product_name
+     *
+     * @var $sequence_photo
+     *
+     * @var $table
+     */
     private function actionSelectRandomProduct() {
         include_once('/../Storage.php');
         $db = Storage::getInstance();
@@ -226,21 +250,28 @@ class SubdescriptionController extends DefaultController
                 array_push($product_array, $row['television']);
             }
         }
-        //print_r($product_array);
+
         $sequence_number = rand(1,4);
         $table = '';
-        if( $sequence_number == 1){
-            $table = 'phones';
-        } else if ( $sequence_number == 2){
-            $table = 'notebooks';
-        } else if ( $sequence_number == 3){
-            $table = 'gadgets';
-        } else if ( $sequence_number == 4){
-            $table = 'television';
+
+        switch( $sequence_number ){
+            case 1:
+                $table = 'phones';
+                break;
+            case 2:
+                $table = 'notebooks';
+                break;
+            case 3:
+                $table = 'gadgets';
+                break;
+            case 4:
+                $table = 'television';
+                break;
         }
+
         $search_num = $sequence_number - 1;
         $query = "SELECT id, original_name, price, previous_price, quantity, photo, product_name FROM $table WHERE original_name='$product_array[$search_num]'";
-        //echo $query;
+
         $result = $mysqli->query( $query );
         $sequence_id = array();
         $sequence_original_name = array();
@@ -275,6 +306,26 @@ class SubdescriptionController extends DefaultController
     }
 
     /**
+     * Making comparison between products
+     * from one category ( Table )
+     * LIMIT up to 4
+     *
+     * @var $product_name_array
+     * @var $original_name_array
+     * @var $photo_array
+     * @var $description_array
+     * @var $category_array
+     * @var $price_array
+     * @var $previous_price_array
+     * @var $time_of_adding_array
+     * @var $features_array
+     * @var $id_array
+     * @var $quantity_array
+     * @var $shipping_array
+     * @var $average_price_array
+     *
+     * @var $timestamp_array
+     *
      * @param $table
      */
     private function actionMakeComparison( $table ) {
@@ -335,7 +386,7 @@ class SubdescriptionController extends DefaultController
         $this->model->setComparisonCategory( $category_array );
         $this->model->setComparisonPrice( $price_array );
         $this->model->setComparisonPreviousPrice( $previous_price_array );
-        //$this->model->setComparisonTimeOfAdding( $time_of_adding_array );
+
         $this->model->setComparisonFeatures( $features_array );
         $this->model->setComparisonQuantity( $quantity_array );
         $this->model->setComparisonShipping( $shipping_array );
@@ -353,8 +404,19 @@ class SubdescriptionController extends DefaultController
     }
 
     /**
+     * Getting Associated products for Item
+     *
+     * @var $id_array
+     * @var $name_array
+     * @var $photo_array
+     * @var $price_array
+     * @var $previous_price_array
+     * @var $shipping_array
+     *
      * @param $table
      * @param $product_name
+     *
+     * Setting the model
      */
     private function actionGetAssocProducts( $table, $product_name ) {
         include_once('/../Storage.php');
@@ -362,7 +424,7 @@ class SubdescriptionController extends DefaultController
         $mysqli = $db->getConnection();
         $sql_query = "SELECT assoc_products FROM subdescription WHERE product_name='$product_name'";
         $result = $mysqli->query( $sql_query );
-        //echo $sql_query;
+
         $products_array = array();
         if ($result->num_rows > 0) {
             // output data of each row
@@ -380,7 +442,7 @@ class SubdescriptionController extends DefaultController
         while( $i < count($products_array)){
             $sql_row = "SELECT id, photo, price, previous_price, shipping, product_name FROM $table WHERE original_name='$products_array[$i]' LIMIT 1";
 
-            //echo $sql_row . '<br />';
+
             $sql_res = $mysqli->query( $sql_row );
             if ($sql_res->num_rows > 0) {
                 // output data of each row
@@ -396,7 +458,6 @@ class SubdescriptionController extends DefaultController
             $i++;
         }
 
-        //print_r($products_array);
         $this->model->setAssocProducts( $products_array );
         $this->model->setAssocPhoto( $photo_array );
         $this->model->setAssocPrice( $price_array );
@@ -409,8 +470,23 @@ class SubdescriptionController extends DefaultController
     }
 
     /**
+     * Getting Questions and Answers
+     * associated to the related product
+     *
+     * Finding any matches up.
+     *
+     * Any word that length bigger than 2
+     *
+     * @var $ask_person_array
+     * @var $last_question_array
+     * @var $last_answer_array
+     * @var $answer_person_array
+     * @var $created_array
+     *
      * @param $original_name
-     * @param $search
+     *
+     * ! REDIRECT
+     *
      */
     public function actionGetQuestionsAndAnswers( $original_name ) {
         include_once('/../Storage.php');
@@ -426,13 +502,13 @@ class SubdescriptionController extends DefaultController
             $u++;
         }
         sort($items);
-        //print_r($items);
+
         $result_items = array();
         $i = 0;
         while ($i < count($items)){
             $sql_id = "SELECT id FROM questions WHERE product LIKE '%$items[$i]%' OR question LIKE '%$items[$i]%' OR answer LIKE '%$items[$i]%'";
             $res_id = $mysqli->query( $sql_id );
-            //echo $sql_id;
+
             if ($res_id->num_rows > 0) {
                 // output data of each row
                 while ($row = $res_id->fetch_assoc()) {
@@ -443,7 +519,6 @@ class SubdescriptionController extends DefaultController
         }
 
         $unique_result_items = array_unique($result_items);
-        //print_r($unique_result_items);
 
         if(count($unique_result_items) == 0){
             $this->model->setNoItems( '1' );
@@ -454,7 +529,6 @@ class SubdescriptionController extends DefaultController
 
         if(count($unique_result_items) !== 0) {
             sort($unique_result_items);
-            //print_r($unique_result_items);
             /*
              * FROM ID
              * GETTING DATA
@@ -468,11 +542,11 @@ class SubdescriptionController extends DefaultController
             $i = 0;
 
             $count_of_result_items = count($unique_result_items);
-            //echo $count_of_result_items;
+
             while ($i < $count_of_result_items) {
                 $sql_query = "SELECT product, ask_person, question, answer, answer_person, unix_timestamp(created) as created FROM questions WHERE id=$unique_result_items[$i]";
                 $result_query = $mysqli->query($sql_query);
-                //echo $sql_query;
+
                 if ($result_query->num_rows > 0) {
                     // output data of each row
                     while ($row = $result_query->fetch_assoc()) {
@@ -594,9 +668,6 @@ class SubdescriptionController extends DefaultController
 
                 $i++;
             }
-
-            //print_r($result_q_and_a);
-            //print_r($result_q_and_a);
 
             $last_question_array = array();
             $last_answer_array = array();

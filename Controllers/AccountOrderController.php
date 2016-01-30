@@ -4,13 +4,23 @@
  * User: Home
  * Date: 29.11.2015
  * Time: 19:00
+ *
+ * ==================
+ * Language changer
+ * Getting quantity of items in basket
+ * Getting sum of items in basket
+ * Getting Account Data
+ * Done & Complete orders data
+ * Min & Max price for each category of Woden-sims.hol.es
+ * Billing Account Data
+ * ==================
  */
 include_once('ProfileController.php');
 class AccountOrderController extends ProfileController
 {
-    /*
+    /**
      * MVC constructor
-     * with AdminModel
+     * with AccountOrderModel
      *
      * @global $model
      */
@@ -22,9 +32,19 @@ class AccountOrderController extends ProfileController
         $this->model = $model;
     }
 
+    /**
+     * Language changer
+     * Getting quantity of items in basket
+     * Getting sum of items in basket
+     * Getting Account Data
+     * Done & Complete orders data
+     * Min & Max price for each category of Woden-sims.hol.es
+     * Billing Account Data
+     */
     public function actionGetData()
     {
         session_start();
+
         $this->actionGetHeaderCart();
         $this->actionGetQuantityOfItems();
         $this->actionGetSumOfItems();
@@ -39,7 +59,6 @@ class AccountOrderController extends ProfileController
 
         session_write_close();
 
-        $this->actionGetHeaderCart();
         $this->actionGetUser();
 
         $this->getAllOrders();
@@ -50,6 +69,12 @@ class AccountOrderController extends ProfileController
         $this->actionGetBilling();
     }
 
+    /**
+     * Getting Complete and Done Orders
+     *
+     * @var $complete_order_id_array
+     * @var $done_order_id_array
+     */
     protected function getAllOrders() {
 
         include_once('/../Storage.php');
@@ -84,11 +109,19 @@ class AccountOrderController extends ProfileController
             }
 
         }
-        //print_r($complete_order_id_array);
+
         $this->model->setCompleteOrderIds( $complete_order_id_array );
         $this->model->setDoneOrderIds( $done_order_id_array );
     }
 
+    /**
+     * Getting Data from Complete Orders
+     * id, original_name, category, price, quantity, table
+     *
+     * Photo from Product Table
+     * Doing multi-array with associations like a[1][n] has k items in row
+     * print them all -> go next
+     */
     private function getCompleteOrders()
     {
 
@@ -129,7 +162,7 @@ class AccountOrderController extends ProfileController
 
                 $i++;
             }
-            //print_r($complete_product_table);
+
             /*
              * GETTING PHOTOS FOR EACH
              * PRODUCT FOR THE ORDER
@@ -143,10 +176,7 @@ class AccountOrderController extends ProfileController
                 $sql_stmt = "SELECT photo, product_name FROM $complete_product_table[$k] WHERE id='$complete_id[$k]'";
                 $sql_result = $mysqli->query($sql_stmt);
 
-                //echo $k . '-' . $sql_stmt . '<br />';
-
                 if ($sql_result->num_rows > 0) {
-                    //echo $k;
                     // output data of each row
                     while ($row = $sql_result->fetch_assoc()) {
                         array_push($complete_photo, $row['photo']);
@@ -218,8 +248,6 @@ class AccountOrderController extends ProfileController
                 $i++;
             }
 
-            //print_r($final_complete_product_name);
-            //print_r($complete_count);
             $this->model->setCompleteId( $final_complete_id );
             $this->model->setCompleteProductTable( $final_complete_product_tables );
             $this->model->setCompleteOriginalName( $final_complete_original_name );
@@ -230,12 +258,18 @@ class AccountOrderController extends ProfileController
             $this->model->setCompletePhoto( $final_complete_photo );
             $this->model->setCompleteProductName( $final_complete_product_name );
 
-            //print_r($final_complete_product_name);
-
         }
 
     }
 
+    /**
+     * Getting Data from Done Orders
+     * id, original_name, category, price, quantity, table
+     *
+     * Photo from Product Table
+     * Doing multi-array with associations like a[1][n] has k items in row
+     * print them all -> go next
+     */
     private function getDoneOrders()
     {
 
@@ -258,7 +292,6 @@ class AccountOrderController extends ProfileController
 
             $i = 0;
 
-            //print_r($this->model->getDoneOrderIdsIteration(0));
             while($i < count($this->model->getDoneOrderIds())) {
                 $sql_stmt = "SELECT id, product_name, category, price, quantity, product_table FROM doneorders WHERE order_id='{$this->model->getDoneOrderIdsIteration($i)}'";
                 $sql_result = $mysqli->query( $sql_stmt );
@@ -279,8 +312,7 @@ class AccountOrderController extends ProfileController
                 $i++;
             }
 
-            //print_r($complete_original_name);
-            /*
+            /**
              * GETTING PHOTOS FOR EACH
              * PRODUCT FOR THE ORDER
              * ******* COMPLETE ORDERS TABLE *****
@@ -365,7 +397,6 @@ class AccountOrderController extends ProfileController
                 $i++;
             }
 
-            //print_r($final_complete_product_name);
             $this->model->setDoneId( $final_complete_id );
             $this->model->setDoneProductTable( $final_complete_product_tables );
             $this->model->setDoneOriginalName( $final_complete_original_name );

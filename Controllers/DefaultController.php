@@ -13,7 +13,7 @@
  */
 class DefaultController
 {
-    /*
+    /**
      * MVC constructor
      * with DefaultModel
      *
@@ -24,6 +24,11 @@ class DefaultController
         $this->model = $model;
     }
 
+    /**
+     * Generate random @data { String } for Session
+     *
+     * @var $randomString
+     */
     public function actionGenerateSessionAuth($length = 25) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
@@ -34,6 +39,14 @@ class DefaultController
         $this->model->setSessionAuth($randomString);
     }
 
+    /**
+     * Getting Language from the URL
+     *
+     * @var $language <- Current
+     * @var $name_of_country <- Current
+     * @var $language_array <- Remain array
+     * @var $name_of_country_array <- Remain array
+     */
     private function actionGetLanguage() {
 
         if (session_status() == PHP_SESSION_NONE) {
@@ -60,11 +73,9 @@ class DefaultController
         /*
          * End
          */
-        /*if(!isset($_SESSION['language'])){
-            $_SESSION['language'] = 'us';
-        }*/
+
         session_write_close();
-        //echo $_SESSION['language'];
+
         if($_SESSION['language'] !== 'us') {
             include_once('C:/xampp/htdocs/shop/Languages/lang.' . $_SESSION['language'] . '.php');
             if(isset($lang)) {
@@ -104,6 +115,7 @@ class DefaultController
             }
             $i++;
         }
+
         /*
          * Setting Model
          */
@@ -112,20 +124,18 @@ class DefaultController
         $this->model->setNameOfLanguages( $language_array );
         $this->model->setNameOfCountries( $name_of_country_array );
     }
-    /*
-     * Incapsulation for
-     * header area
-     * Cart menu
+
+    /**
+     * Getting Language via URL
+     * Getting Breadcrumbs
      */
     public function actionGetHeaderCart() {
 
         $this->actionGetLanguage();
-        #$this->actionGetSumOfItems();
-        #$this->actionGetQuantityOfItems();
         $this->actionGetBreadcrumbs();
     }
 
-    /*
+    /**
      * Method for summing all amount
      * of Items in User's cart Interface
      *
@@ -140,7 +150,6 @@ class DefaultController
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
-        //session_start();
         if(isset($_SESSION['login_user'])) {
             $user = $_SESSION['login_user'];
 
@@ -174,7 +183,7 @@ class DefaultController
         }
     }
 
-    /*
+    /**
      * Method for summing quantity of items
      * of each Person's cart
      *
@@ -220,6 +229,12 @@ class DefaultController
 
     }
 
+    /**
+     * Getting Breadcrumbs for the Footer Area
+     *
+     * @var $array <- Breadcrumbs array
+     * @var $breadcrumbs_link <- Link Array for each level of breadcrumbs
+     */
     protected function actionGetBreadcrumbs() {
 
         $pageURL = 'http';
@@ -269,10 +284,6 @@ class DefaultController
 
             $breadcrumbs_links = array();
 
-            /*if (session_status() == PHP_SESSION_NONE) {
-                session_start();
-            }*/
-
             if(in_array($languages, $language_check)) {
                 $breadcrumbs_links[0] = 'http://localhost:8080';
             } else {
@@ -299,8 +310,6 @@ class DefaultController
                 $i++;
             }
 
-            //print_r($links_array);
-
             $i = 0;
             if(count($links_array) >= 1){
                 $count = count($links_array);
@@ -323,11 +332,8 @@ class DefaultController
 
                     $i++;
                 }
-            } /*else {
-                $count = count($links_array) - 1;
-            }*/
+            }
 
-            //print_r($array);
             $i = 0;
             while($i < count($array)){
                 if(substr($array[$i], 0, 1) == '?'){

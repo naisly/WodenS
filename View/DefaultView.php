@@ -509,11 +509,15 @@ class DefaultView
                       </div>
                   </div>';
         }
-        if ($page == 'Thank You') {
+
+        /*if ($page == 'Thank You') {
             echo '<div class="footer footer-bottom">';
         } else {
             echo '<div class="footer">';
-        }
+        }*/
+
+        echo '<div class="footer">';
+
         echo '<div class="divider-white-for-classes"></div>
                      <div class="container full-container">
                           <div class="row">

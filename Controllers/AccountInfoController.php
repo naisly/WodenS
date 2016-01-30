@@ -5,15 +5,25 @@
  * User: Home
  * Date: 01.12.2015
  * Time: 18:35
+ *
+ * ===================
+ * Getting Data for Left Bar in Account Page
+ * Language changer
+ * Quantity of items in basket
+ * Sum of items in basket
+ * Getting current User
+ * Getting Order ( Done as well as Completed )
+ * Default Billing
+ * ===================
  */
 
 include_once('AccountOrderController.php');
 
 class AccountInfoController extends AccountOrderController
 {
-    /*
+    /**
      * MVC constructor
-     * with AdminModel
+     * with AccountInfoModel
      *
      * @global $model
      */
@@ -23,6 +33,15 @@ class AccountInfoController extends AccountOrderController
         $this->model = $model;
     }
 
+    /**
+     * Getting Data for Left Bar in Account Page
+     * Language changer
+     * Quantity of items in basket
+     * Sum of items in basket
+     * Getting current User
+     * Getting Order ( Done as well as Completed )
+     * Default Billing
+     */
     public function getAccount() {
 
         session_start();
@@ -40,13 +59,20 @@ class AccountInfoController extends AccountOrderController
 
         session_write_close();
 
-        $this->actionGetHeaderCart();
         $this->actionGetUser();
         $this->getAllOrders();
         $this->getBillingData();
         $this->actionGetBilling();
     }
 
+    /**
+     * Cancel order in Account Page
+     *
+     * @var $order_id
+     * Checking whether is order ( Done or Completed )
+     * Deleting and redirecting
+     * @redirect '$lang/account'
+     */
     public function actionCancelOrder() {
 
         include_once('/../Storage.php');
@@ -101,6 +127,11 @@ class AccountInfoController extends AccountOrderController
         }
     }
 
+    /**
+     * Getting Billing Data of current user Orders'
+     * @var $user
+     *
+     */
     public function getBillingData() {
 
         include_once('/../Storage.php');
@@ -108,10 +139,6 @@ class AccountInfoController extends AccountOrderController
         $mysqli = $db->getConnection();
 
         $this->model->setAllOrders();
-
-        if(isset($_SESSION['login_user'])){
-            $user = $_SESSION['login_user'];
-        }
 
         $name_array = array();
         $street_array = array();
@@ -151,6 +178,10 @@ class AccountInfoController extends AccountOrderController
         $this->model->setAccountGift( $wrap_array );
     }
 
+    /**
+     * Solver for
+     * Change data in Account
+     */
     public function actionChangeData() {
 
         if(isset($_POST['email']) && isset($_POST['email_again']) && isset($_POST['password'])) {
@@ -162,6 +193,13 @@ class AccountInfoController extends AccountOrderController
         }
     }
 
+    /**
+     * Change current Email in Account
+     *
+     * @var $email
+     * @var $email_again
+     * @var $password ( Checking from DataBase )
+     */
     private function actionChangeEmail(){
 
         include_once('/../Storage.php');
@@ -197,7 +235,7 @@ class AccountInfoController extends AccountOrderController
             $password = $_POST['password'];
         }
 
-        if($_POST['email'] !== $_POST['email_again']){
+        if($email !== $email_again){
             if($_SESSION['language'] !== 'us') {
                 header('Location: /' . $_SESSION['language'] . '/account/?emails_not_match=1');
             }  else {
@@ -234,6 +272,13 @@ class AccountInfoController extends AccountOrderController
 
     }
 
+    /**
+     * Change Username in Account
+     *
+     * @var $first_name
+     * @var $last_name
+     * @var $password ( Checking from DataBase )
+     */
     private function actionChangeUsername() {
 
         include_once('/../Storage.php');
@@ -280,6 +325,13 @@ class AccountInfoController extends AccountOrderController
         session_write_close();
     }
 
+    /**
+     * Changing active password in Account
+     *
+     * @var $new_password
+     * @var $confirm_new_password
+     * @var $password ( Checking from DataBase )
+     */
     private function actionChangePassword(){
 
         include_once('/../Storage.php');

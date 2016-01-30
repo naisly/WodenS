@@ -534,6 +534,8 @@ class LoginView extends DefaultView
 
         echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></a>
               </div>';
+
+        echo '<img style="margin-top: 40px;" src="/images/phones-category-white.png" class="full-image-cascade" />';
     }
 
     /*

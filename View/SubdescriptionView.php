@@ -18,12 +18,12 @@ class SubdescriptionView extends DefaultView
         $this->model = $model;
     }
 
-    public function getSubdescriptionPage( $category ) {
+    public function getSubdescriptionPage() {
 
         $this->DoctypeView( 'subdescription' );
         $this->headerView( 'subdescription' );
 
-        $this->getMain( $category );
+        $this->getMain();
         $this->getSlider();
         $this->getDescription();
 
@@ -41,10 +41,9 @@ class SubdescriptionView extends DefaultView
     }
 
     /**
-     * @param $category
      * @param $table
      */
-    private function getMain( $category ) {
+    private function getMain() {
 
         echo '<div class="image-margin">
                   <div class="col-md-9">
@@ -67,7 +66,7 @@ class SubdescriptionView extends DefaultView
             echo      '<h class="no-stock">' . $this->model->Translate('Out of Stock') . '</h>';
         }
 
-        echo         '<h class="sold-by" style="float: left">' . $this->model->Translate('Sold by') . ' <a href="http://' . $category . '.com" class="link-default">' . $category . '</a> ' . $this->model->Translate('company. Gift-wrap available') . '</h><br />
+        echo         '<h class="sold-by" style="float: left">' . $this->model->Translate('Sold by') . ' <a href="http://' . $this->model->getCategory(0) . '.com" class="link-default">' . $this->model->getCategory(0) . '</a> ' . $this->model->Translate('company. Gift-wrap available') . '</h><br />
 
                           <div id="spacer"></div>
 

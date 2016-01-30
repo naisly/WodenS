@@ -5,15 +5,20 @@
  * User: Home
  * Date: 18.01.2016
  * Time: 20:30
+ *
+ * ==================
+ * Default Search method
+ * for general Navigation bar
+ * ==================
  */
 
 include_once('DefaultController.php');
 
 class SearchController extends DefaultController
 {
-    /*
+    /**
      * MVC constructor
-     * with ProfileModel
+     * with SearchModel
      *
      * @global $model
      */
@@ -24,6 +29,10 @@ class SearchController extends DefaultController
 
     }
 
+    /**
+     * Default Search method
+     *
+     */
     public function actionGetResults() {
 
         $this->actionGetHeaderCart();
@@ -31,6 +40,15 @@ class SearchController extends DefaultController
         $this->actionSearch();
     }
 
+    /**
+     * Do Search
+     *
+     * @var $title_array
+     * @var $url_array
+     * @var $description_array
+     *
+     * ! REDIRECT
+     */
     private function actionSearch() {
 
         include_once('/../Storage.php');

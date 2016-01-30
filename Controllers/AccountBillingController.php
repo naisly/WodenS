@@ -5,15 +5,24 @@
  * User: Home
  * Date: 03.12.2015
  * Time: 0:08
+ *
+ * ===================
+ * Billing - Account Page
+ * Getting Quantity of items in basket
+ * Getting Sum of items in basket
+ * @var $_SESSION['language']
+ * Getting Account Data
+ * Getting default Billing Data
+ * ===================
  */
 
 include_once('AccountOrderController.php');
 
 class AccountBillingController extends AccountOrderController
 {
-    /*
+    /**
      * MVC constructor
-     * with AdminModel
+     * with AccountBillingModel
      *
      * @global $model
      */
@@ -23,6 +32,14 @@ class AccountBillingController extends AccountOrderController
         $this->model = $model;
     }
 
+    /**
+     * Billing - Account Page
+     * Getting Quantity of items in basket
+     * Getting Sum of items in basket
+     * @var $_SESSION['language']
+     * Getting Account Data
+     * Getting default Billing Data
+     */
     public function getBilling() {
 
         session_start();
@@ -40,11 +57,14 @@ class AccountBillingController extends AccountOrderController
 
         session_write_close();
 
-        $this->actionGetHeaderCart();
         $this->actionGetUser();
         $this->actionGetBilling();
     }
 
+    /**
+     * Adding Billing Data to the DB
+     * @var $table : billing
+     */
     public function actionInsertBillingData() {
 
         include_once('/../Storage.php');

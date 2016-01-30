@@ -9,6 +9,7 @@
  * ==================
  * Generalize random Id for order, making order to the Database,
  * Inserting billing info into the Database
+ * Getting default billing
  * ==================
  */
 
@@ -16,7 +17,7 @@ include_once('DefaultController.php');
 
 class OrderController extends DefaultController
 {
-    /*
+    /**
      * MVC constructor
      * with OrderModel
      *
@@ -36,7 +37,7 @@ class OrderController extends DefaultController
         $this->actionInsertIntoOrders();
     }
 
-    /*
+    /**
      * Set new Id
      * with Randomize method
      */
@@ -45,7 +46,7 @@ class OrderController extends DefaultController
         $this->model->setOrderId();
     }
 
-    /*
+    /**
      * Inserting product's data to the
      * Order table
      * And deleting from products table
@@ -110,7 +111,7 @@ class OrderController extends DefaultController
 
     }
 
-    /*
+    /**
      * Inserting Billing info from user's
      * details
      *
@@ -160,6 +161,10 @@ class OrderController extends DefaultController
         $sql->execute();
     }
 
+    /**
+     * Getting Default Billing Data
+     * for  @page place order page
+     */
     public function getDefaultBilling(){
 
         include_once('/../Storage.php');
@@ -174,8 +179,6 @@ class OrderController extends DefaultController
 
         $sql_query = "SELECT * FROM billing WHERE user='$user'";
         $result = $mysqli->query( $sql_query );
-
-        //echo $sql_query;
 
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {

@@ -351,27 +351,27 @@ class AccountInfoView extends AccountOrderView
 
             echo $this->model->Translate('Street Address:');
 
-            echo             '</b>' . $this->model->getBillingStreet() . '</h><br />
+            echo             '</b> ' . $this->model->getBillingStreet() . '</h><br />
                               <h class="billing-data"><b>';
 
             echo $this->model->Translate('City:');
 
-            echo             '</b>' . $this->model->getBillingCity() . '</h><br />
+            echo             '</b> ' . $this->model->getBillingCity() . '</h><br />
                               <h class="billing-data"><b>';
 
             echo $this->model->Translate('State:');
 
-            echo             '</b>' . $this->model->getBillingState() . '</h><br />
+            echo             '</b> ' . $this->model->getBillingState() . '</h><br />
                               <h class="billing-data"><b>';
 
             echo $this->model->Translate('Zip:');
 
-            echo             '</b>' . $this->model->getBillingZip() . '</h><br />
+            echo             '</b> ' . $this->model->getBillingZip() . '</h><br />
                               <h class="billing-data"><b>';
 
             echo $this->model->Translate('Country:');
 
-            echo              '</b>' . $this->model->getBillingCountry() . '</h>
+            echo              '</b> ' . $this->model->getBillingCountry() . '</h>
                           </div>
 
                           <div class="default-options">

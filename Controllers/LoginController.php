@@ -17,7 +17,7 @@ include_once('DefaultController.php');
 
 class LoginController extends DefaultController
 {
-    /*
+    /**
      * MVC constructor
      * with LoginModel
      *
@@ -30,76 +30,37 @@ class LoginController extends DefaultController
 
     }
 
+    /**
+     * Getting Quantity of items in basket
+     * Getting Sum of items in basket
+     */
     public function actionGetTotalAndSum() {
 
         $this->actionGetSumOfItems();
         $this->actionGetQuantityOfItems();
     }
 
-    /*
-     * Getting data from the
-     * Register page
-     */
-    /*public function actionGetData() {
-        if(isset($_POST['email'])){
-            $this->model->setEmail($_POST['email']);
-        }
-        if(isset($_POST['password'])){
-            $this->model->setPassword($_POST['password']);
-            //echo $_POST['password'];
-        }
-        if(isset($_POST['password-again'])){
-            $this->model->setPasswordAgain($_POST['password-again']);
-            //echo $_POST['password-again'];
-        }
-        if(isset($_POST['first_name'])){
-            $this->model->setPasswordAgain($_POST['first_name']);
-        }
-        if(isset($_POST['last_name'])){
-            $this->model->setName($_POST['last_name']);
-        }
-        if(isset($_POST['day_of_birth'])){
-            $this->model->setName($_POST['day_of_birth']);
-        }
-        if(isset($_POST['sc-q-1'])){
-            $this->model->setName($_POST['sc-q-1']);
-        }
-        if(isset($_POST['sc-q-2'])){
-            $this->model->setName($_POST['sc-q-2']);
-        }
-        if(isset($_POST['sc-q-3'])){
-            $this->model->setName($_POST['sc-q-3']);
-        }
-        if(isset($_POST['sc-a-1'])){
-            $this->model->setName($_POST['sc-a-1']);
-        }
-        if(isset($_POST['sc-a-2'])){
-            $this->model->setName($_POST['sc-a-2']);
-        }
-        if(isset($_POST['sc-a-3'])){
-            $this->model->setName($_POST['sc-a-3']);
-        }
-        if(isset($_POST['country'])){
-            $this->model->setName($_POST['country']);
-        }
-        if(isset($_POST['advertisements'])){
-            $this->model->setName($_POST['advertisements']);
-        }
-        if(isset($_POST['privacy-policy'])){
-            $this->model->setName($_POST['privacy-policy']);
-        }
-        if(isset($_POST['site-terms'])){
-            $this->model->setName($_POST['site-terms']);
-        }
-    }*/
-
-    /*
+    /**
      * Inserting into the Database
      * data of the Register Page
      *
-     * @var $name
      * @var $email
      * @var $password
+     *
+     * @var $first_name
+     * @var $last_name
+     * @var $day_of_birth
+     *
+     * @var $sc_q_1
+     * @var $sc_q_2
+     * @var $sc_q_3
+     *
+     * @var $sc_a_1
+     * @var $sc_a_2
+     * @var $sc_a_3
+     *
+     * @var $country
+     * @var $advertisements
      */
     private function actionInsertData() {
 
@@ -152,16 +113,19 @@ class LoginController extends DefaultController
         $sql_stmt = "INSERT INTO users VALUES ('', '$email', '$password', '$first_name', '$last_name', '$day_of_birth', '$sc_q_1', '$sc_q_2',
                     '$sc_q_3', '$sc_a_1', '$sc_a_2', '$sc_a_3', '$country', 'advertisements')";
 
-        //echo $sql_stmt;
         $stmt = $mysqli->prepare($sql_stmt);
-        //echo $email;
+
         $stmt->execute();
     }
 
-    /*
-     * Incapsulation for inserting
+    /**
+     * Checking params for Inserting into the DB
      * into the DB data from
      * register view
+     *
+     * @var $password
+     * @var $password-again
+     *
      */
     public function actionDoInsertion()
     {
@@ -180,7 +144,7 @@ class LoginController extends DefaultController
             }
     }
 
-    /*
+    /**
      * Checking provided Email
      * from the Register Page
      *
@@ -214,7 +178,7 @@ class LoginController extends DefaultController
         }
     }
 
-    /*
+    /**
      * Checking data from the Login Page
      * If exists redirecting to the account page
      * otherwise display error
@@ -275,7 +239,7 @@ class LoginController extends DefaultController
         session_write_close();
     }
 
-    /*
+    /**
      * Method for adding data to the Cart
      * If exists product in the User's Cart
      * add Quantity plus one
@@ -333,11 +297,6 @@ class LoginController extends DefaultController
                 $idQ = $row['id'];
             }
         }
-        //echo $post_quantity;
-        //echo $_POST['item_quantity'];
-        //echo $_GET['id'];
-        //echo $id;
-        //echo $original_name;
 
         if(isset($post_quantity) && !isset($idQ)){
             $sql_query = "INSERT INTO orderedItems VALUES ('$id', '$original_name', '$category', '$price', '$user', '$post_quantity', '$table', '')";
@@ -372,6 +331,13 @@ class LoginController extends DefaultController
         session_write_close();
     }
 
+    /**
+     * Add item to the Basket
+     * @check if user exists
+     * @check for one click order
+     *
+     * ! MANY REDIRECTS
+     */
     public function actionAddItem() {
 
         session_start();

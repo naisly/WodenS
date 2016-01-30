@@ -5,13 +5,19 @@
  * User: Home
  * Date: 29.01.2016
  * Time: 0:23
+ *
+ * ==================
+ * getting categories, search method, setting average price for each product,
+ * getting distinct item names, setting sum of Each users cart,
+ * setting sum of all items
+ * =================
  */
 
 include_once('DefaultController.php');
 
 class ShopController extends DefaultController
 {
-    /*
+    /**
      * MVC constructor
      * with DefaultModel
      *
@@ -33,7 +39,7 @@ class ShopController extends DefaultController
 
     }
 
-    /*
+    /**
      * Method for setting Average Price
      * for each product in the Database
      * and in the view
@@ -100,7 +106,7 @@ class ShopController extends DefaultController
         }
     }
 
-    /*
+    /**
      * Getting Distinct categories
      * for the product page
      */
@@ -121,7 +127,7 @@ class ShopController extends DefaultController
         }
     }
 
-    /*
+    /**
      * Method for getting distinct product
      * names for the Product cart
      *
@@ -156,7 +162,7 @@ class ShopController extends DefaultController
         $this->model->setDistinctProductNames($product_names_array);
     }
 
-    /*
+    /**
      * Search method for Selling
      * page for adding items in your Cart
      * Products page
@@ -168,7 +174,7 @@ class ShopController extends DefaultController
      * @var $max
      * @var $sort_by_price
      * @var $sort_by_time
-     * @var sort_by_shipping
+     * @var $sort_by_shipping
      *
      * Getting DATA
      *
@@ -185,6 +191,8 @@ class ShopController extends DefaultController
      * @var $quantity_array
      * @var $shipping_array
      * @var $average_price_array
+     *
+     * ! REDIRECT
      */
     private function actionGetCategories( $category, $table, $sort ) {
         include_once('/../Storage.php');
@@ -205,7 +213,7 @@ class ShopController extends DefaultController
             $sql_query = "SELECT * FROM $table WHERE category='$category'";
             $_SESSION['status'] = 1;
         }
-        //echo $_SESSION['status'];
+
         $timer = 0;
         $array = array();
         while($timer < 11) {
@@ -217,7 +225,6 @@ class ShopController extends DefaultController
         if (isset($_GET['min'])) {
             $min = $_GET['min'];
         }
-        //echo $min;
         if (isset($_GET['max'])) {
             $max = $_GET["max"];
         }

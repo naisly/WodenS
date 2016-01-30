@@ -9,6 +9,10 @@
  * ==================
  * Getting data from orders for each User,
  * deleting from the order -> done, otherwise rollback
+ *
+ * Getting Minimum for @each Category
+ * Getting Data for @page Account
+ * Getting Default Billing Data
  * =================
  */
 
@@ -16,7 +20,7 @@ include_once('DefaultController.php');
 
 class ProfileController extends DefaultController
 {
-    /*
+    /**
      * MVC constructor
      * with ProfileModel
      *
@@ -29,6 +33,15 @@ class ProfileController extends DefaultController
 
     }
 
+    /**
+     * Getting Quantity of items in basket
+     * Getting Sum of items in basket
+     *
+     * Getting Ordered items
+     * Getting user Data for left bar
+     * Getting Min price for @page Cart
+     * Default Billing Data
+     */
     public function actionGetUserData() {
 
         session_start();
@@ -55,7 +68,7 @@ class ProfileController extends DefaultController
         $this->actionGetBilling();
     }
 
-    /*
+    /**
      * Getting data from orders for
      * each user
      *
@@ -111,7 +124,7 @@ class ProfileController extends DefaultController
 
     }
 
-    /*
+    /**
      * Deleting the row from the OrderedItems
      * while clicking on the button
      * in the Admin Page
@@ -148,6 +161,28 @@ class ProfileController extends DefaultController
         }
     }
 
+    /**
+     * Getting data for Left Bar
+     * Name, Basket ( quantity, sum ), Last order
+     * ( number, quantity, sum of items),
+     * Email, Username,
+     * Billing Info, Last Added Item
+     *
+     * @var $f_name
+     * @var $l_name
+     * @var $order_id
+     *
+     * @var $full_name
+     * @var $order_id
+     *
+     * @var $items
+     * @var $price
+     *
+     * @var $original_name
+     * @var $price
+     * @var $shipping
+     * @var $photo
+     */
     protected function actionGetUser() {
 
         include_once('/../Storage.php');
@@ -159,8 +194,6 @@ class ProfileController extends DefaultController
 
         $sql_query = "SELECT users.first_name, users.last_name, completeorders.order_id  FROM users INNER JOIN completeorders
                       WHERE users.email='$user' AND completeorders.user='$user' ORDER BY completeorders.sort_id DESC LIMIT 1";
-
-        //echo $sql_query;
 
         $result = $mysqli->query( $sql_query );
 
@@ -237,13 +270,9 @@ class ProfileController extends DefaultController
         $sql_table = "SELECT product_table, id FROM orderedItems WHERE user='$user' ORDER BY sort_id DESC LIMIT 1";
         $result_table = $mysqli->query( $sql_table );
 
-        //echo $sql_table;
-
         if($result_table->num_rows == 0){
             $sql_another = "SELECT product_table, id FROM completeOrders WHERE user='$user' ORDER BY sort_id DESC LIMIT 1";
             $result_another = $mysqli->query( $sql_another );
-
-            //echo $sql_another;
 
             if($result_another->num_rows > 0){
                 while ($row = $result_another->fetch_assoc()){
@@ -277,8 +306,6 @@ class ProfileController extends DefaultController
             $sql_item = "SELECT original_name, price, shipping, photo
                      FROM $table WHERE $table.id='$id' LIMIT 1";
 
-            //echo $sql_item;
-
             $result_item = $mysqli->query($sql_item);
 
             if ($result_item->num_rows > 0) {
@@ -302,6 +329,15 @@ class ProfileController extends DefaultController
 
     }
 
+    /**
+     * Getting the Minimum for each category
+     * Phones, Notebooks, Gadgets, TV
+     *
+     * @min_phones
+     * @min_notebooks
+     * @min_gadgets
+     * @min_tv
+     */
     protected function actionGetMinPrice() {
 
         include_once('/../Storage.php');
@@ -331,13 +367,24 @@ class ProfileController extends DefaultController
 
     }
 
+    /**
+     * Get Default Billing Data
+     * for Account
+     *
+     * @var $name
+     * @var $street
+     * @var $city
+     * @var $state
+     * @var $zip
+     * @var $country
+     * @var $wrap
+     */
     protected function actionGetBilling() {
 
         include_once('/../Storage.php');
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
-        //session_start();
         if(isset($_SESSION['login_user'])){
             $user = $_SESSION['login_user'];
         }
@@ -345,7 +392,6 @@ class ProfileController extends DefaultController
         $sql_query = "SELECT name, street, city, state, zip, country, wrap FROM billing WHERE user='$user'";
         $result = $mysqli->query( $sql_query );
 
-        //echo $sql_query;
 
         if($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {

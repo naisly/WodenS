@@ -17,7 +17,7 @@ include_once('DefaultController.php');
 
 class SupportController extends DefaultController
 {
-    /*
+    /**
      * MVC constructor
      * with SupportModel
      *
@@ -29,7 +29,7 @@ class SupportController extends DefaultController
         $this->model = $model;
     }
 
-    /*
+    /**
      * Inserting data to the Support table
      * from the support Page
      *
@@ -76,7 +76,7 @@ class SupportController extends DefaultController
 
     }
 
-    /*
+    /**
      * Getting support messages to the
      * Admin Page
      *
@@ -119,7 +119,8 @@ class SupportController extends DefaultController
         $this->model->setMessage( $message_array );
     }
 
-    /*
+    /**
+     *
      * Solving message while clicking
      * on the button on
      * Admin page (Deleting from table)

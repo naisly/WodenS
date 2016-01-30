@@ -14,7 +14,7 @@
  */
 class CheckoutController
 {
-    /*
+    /**
      * MVC constructor
      * with CheckoutModel
      *
@@ -25,7 +25,7 @@ class CheckoutController
         $this->model = $model;
     }
 
-    /*
+    /**
      * Getting data table
      * for Admin page
      *
@@ -99,7 +99,7 @@ class CheckoutController
 
     }
 
-    /*
+    /**
      * Admin page
      * Button for dropping data
      * for the orders page
@@ -109,7 +109,7 @@ class CheckoutController
      * @var $product_name_array
      * @var $category_array
      * @var $price_array
-     * @var user_array
+     * @var $user_array
      * @var $quantity_array
      * @var $order_id_array
      *
@@ -119,7 +119,7 @@ class CheckoutController
      */
     public function actionDone( $complete_table, $done_table ) {
 
-        /*
+        /**
          * Connection to the Database
          */
         include_once('/../Storage.php');

@@ -5,15 +5,27 @@
  * User: Home
  * Date: 10.01.2016
  * Time: 22:17
+ *
+ * ==================
+ * Four steps in process of recovering Account Password
+ * 1) Email
+ * 2) Day of Birth
+ * 3) Security Questions
+ * 4) Change Passwords
+ *
+ * Save data from injection from the site of URL
+ * Fixed manipulation of $_GET data
+ * No SQL Injection
+ * ==================
  */
 
 include_once('DefaultController.php');
 
 class ForgotController extends DefaultController
 {
-    /*
+    /**
      * MVC constructor
-     * with LoginModel
+     * with ForgotModel
      *
      * @global $model
      */
@@ -24,6 +36,15 @@ class ForgotController extends DefaultController
 
     }
 
+    /**
+     * First step in recovering Account Password process
+     * Checking $_GET email data
+     * if exists in DataBase
+     *
+     * @var $email
+     *
+     * ! Redirect
+     */
     public function actionCheckEmail() {
 
         $this->actionGetHeaderCart();
@@ -63,6 +84,16 @@ class ForgotController extends DefaultController
         session_write_close();
     }
 
+    /**
+     * Second step in recovering Account Password process
+     *
+     * Checking Date of Birth
+     *
+     * Getting @data { UNIX } @var $unix_day_of_birth
+     * comparing with @var $day_of_birth
+     *
+     * ! REDIRECT
+     */
     public function actionCheckBirthday() {
 
         $this->actionGetHeaderCart();
@@ -79,8 +110,6 @@ class ForgotController extends DefaultController
         }
 
         $sql_query = "SELECT day_of_birth FROM users WHERE email='$email'";
-
-        //echo $sql_query;
 
         $result = $mysqli->query($sql_query);
 
@@ -112,6 +141,14 @@ class ForgotController extends DefaultController
 
     }
 
+    /**
+     * Third step in recovering Account Password process
+     * Getting security questions from the DataBase
+     *
+     * @var $question1
+     * @var $question2
+     * @var $question3
+     */
     public function actionGetQuestion() {
 
         $this->actionGetHeaderCart();
@@ -141,6 +178,17 @@ class ForgotController extends DefaultController
         $this->model->setQuestion3($question3);
     }
 
+    /**
+     * Checking the correctness of answers for the Security Account Questions
+     *
+     * @var $email
+     * @var $day_of_birth
+     * @var $sc_a_1 == @var $answer1
+     * @var $sc_a_2 == @var $answer2
+     * @var $sc_a_3 == @var $answer3
+     *
+     * ! REDIRECT
+     */
     public function actionCheckSecurityQuestions() {
 
         $this->actionGetHeaderCart();
@@ -196,6 +244,22 @@ class ForgotController extends DefaultController
         session_write_close();
     }
 
+    /**
+     * Last step in recovering Account Password process
+     * Change Account Password
+     *
+     * @var $email
+     * @var $day_of_birth
+     * @var $sc_a_1
+     * @var $sc_a_2
+     * @var $sc_a_3
+     *
+     * @var $password
+     * @var $repeat_password
+     *
+     * ! REDIRECT
+     *
+     */
     public function actionChangePassword() {
 
         $this->actionGetHeaderCart();
@@ -250,6 +314,18 @@ class ForgotController extends DefaultController
 
     }
 
+    /**
+     * Save data from injection from the site of URL
+     * Fixed manipulation of $_GET data
+     * No SQL Injection
+     *
+     * @var $day_of_birth
+     * @var $sc_a_1
+     * @var $sc_a_2
+     * @var $sc_a_3
+     *
+     * ! MANY REDIRECTS
+     */
     public function actionSaveDataFromInjection() {
 
         $this->actionGetHeaderCart();
