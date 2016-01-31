@@ -21,7 +21,7 @@ class TvView extends IndexView
     public function getTVPage() {
 
         $this->DoctypeView( 'TV' );
-        $this->headerView( 'TV' );
+        $this->headerView();
         $this->getMain();
         $this->getDescription();
         $this->getOrder();
@@ -51,8 +51,7 @@ class TvView extends IndexView
               </div>
               <img src="/images/imac-tv2.png" class="full-image-cs" />';
 
-        echo '<!--<img src="/images/apple-tv-concept.jpg" class="full-image-cascade" style="margin-top: 30px;"/>-->
-              <div class="tv-tim">
+        echo '<div class="tv-tim">
                    <h1 class="tv">' . $this->model->Translate('Move ahead. Get some') . '<br />' . $this->model->Translate('technology love') . '</h1>
               </div>
               <div class="text-center">

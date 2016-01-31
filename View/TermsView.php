@@ -21,7 +21,7 @@ class TermsView extends DefaultView
     public function getTermsPage() {
 
         $this->DoctypeView( 'Terms of Use' );
-        $this->headerView( 'Terms of Use' );
+        $this->headerView();
         $this->getMain();
         $this->actionGetFooter( 'Terms of Use' );
         $this->endHTML();

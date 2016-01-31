@@ -26,7 +26,6 @@ if(!isset($_POST['email'])) {
     $view->getRegisterHeader();
     $view->RegisterView();
 } else {
-    #$controller->actionGetData();
     $controller->actionCheckProvidedEmail();
 
     $view->DoctypeView( 'Registration' );

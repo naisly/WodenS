@@ -43,7 +43,7 @@ class LoginView extends DefaultView
      */
     public function RegisterView() {
 
-        $this->headerView( 'register' );
+        $this->headerView();
         if(isset($_GET['email_error'])){
             if($_GET['email_error'] == 1){
                 $this->errorRegisteredEmailMessage();
@@ -604,8 +604,7 @@ class LoginView extends DefaultView
 
     public function getLoginForm() {
 
-        echo  '<!--<div class="login-bg-for-xs">-->
-                  <div class="text-center" style="';
+        echo  '<div class="text-center" style="';
 
         if(isset($_GET['auth'])){
             echo 'margin-top: 5%;';
@@ -692,7 +691,7 @@ class LoginView extends DefaultView
                 $this->RegisterView();
             }
         } else {
-            $this->headerView( 'login' );
+            $this->headerView();
             $this->successMessage();
 
             $this->actionGetFooter( 'Thank You' );

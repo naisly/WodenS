@@ -27,7 +27,7 @@ class CompanyView extends DefaultView
     public function getCompanyPage() {
 
         $this->DoctypeView( 'Our Company' );
-        $this->headerView( 'Our Company' );
+        $this->headerView();
 
         $this->getPage();
         $this->actionGetFooter( 'Our Company' );

@@ -27,7 +27,7 @@ class EducationLaptopsView extends DefaultView
     public function getEducationLaptops() {
 
         $this->DoctypeView( 'Laptops - Education' );
-        $this->headerView( 'education' );
+        $this->headerView();
 
         $this->getMain();
         $this->actionGetFooter( 'sub-daughter' );

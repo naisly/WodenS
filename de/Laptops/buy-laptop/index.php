@@ -23,6 +23,6 @@ $controller->actionGetData( 'Notebooks', 'Notebooks', 'All' );
 
 $view->DoctypeView( 'Buy Laptop' );
 
-$view->headerView( 'notebooks' );
+$view->headerView();
 
 $view->GetUI( 'laptop', 'notebooks' );

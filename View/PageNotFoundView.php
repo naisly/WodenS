@@ -27,7 +27,7 @@ class PageNotFoundView extends DefaultView
     public function getNotFoundPage() {
 
         $this->DoctypeView( 'Page Not Found' );
-        $this->headerView( 'Page Not Found' );
+        $this->headerView();
         $this->getMainHeader();
         $this->actionGetFooter( 'Page Not Found' );
     }

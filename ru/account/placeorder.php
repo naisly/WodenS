@@ -22,6 +22,6 @@ $controller->actionGetHeaderCart();
 $controller->getDefaultBilling();
 
 $view->DoctypeView( 'order' );
-$view->headerView( 'placeorder' );
+$view->headerView();
 
 $view->getPlaceOrder();

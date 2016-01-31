@@ -21,7 +21,7 @@ class JobsView extends DefaultView
     public function getJobsPage() {
 
         $this->DoctypeView( 'Jobs' );
-        $this->headerView( 'Jobs' );
+        $this->headerView();
         $this->getMain();
         $this->actionGetFooter( 'Jobs' );
         $this->endHTML();
@@ -281,7 +281,6 @@ class JobsView extends DefaultView
                       <div class="col-md-1"></div>
                       <div class="col-md-10">
                           <div class="text-center">
-                              <!--<h1>If you think that it is You that we are looking for, please Contact Us</h1>-->
                               <h1 style="font-size: 27px;">' . $this->model->Translate('Stock up strong leadership, interpersonal and multitasking skills.') . '</h1>
 
                               <div id="white-divider-md" style="width: 80%;"></div>

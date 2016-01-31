@@ -21,12 +21,11 @@ class SupView extends IndexView
     public function getSupportPage() {
 
         $this->DoctypeView( 'Support' );
-        $this->headerView( 'support' );
+        $this->headerView();
         $this->getMain();
         $this->getContactInfo();
         $this->getContactForm();
         $this->actionGetFooter( 'Support' );
-        $this->getGoogleMapsScript();
         $this->endHTML();
     }
 
@@ -151,35 +150,6 @@ class SupView extends IndexView
                       </div>
                   </div>
               </div>';
-    }
-
-    private function getGoogleMapsScript() {
-
-        echo  '<script type="text/javascript">
-
-               var map;
-               function initMap() {
-                     var myLatLng = {lat: 50.4018575010069, lng: 30.6265022835628};
-
-                     // Create a map object and specify the DOM element for display.
-                     var map = new google.maps.Map(document.getElementById("map"), {
-                        center: myLatLng,
-                        scrollwheel: false,
-                        zoom: 14
-                     });
-
-                     // Create a marker and set its position.
-                     var marker = new google.maps.Marker({
-                        map: map,
-                        position: {lat: 50.4018575010069, lng: 30.6265022835628},
-                        title: "Hello World!"
-                     });
-               }
-
-            </script>
-            <script async defer
-                  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYh1m89QdvogaeeaJyNuLBsX0ljdxmuK4&callback=initMap">
-            </script>';
 
         if(isset($_POST['shopping_help'])){
             echo '<script>
@@ -187,4 +157,5 @@ class SupView extends IndexView
                   </script>';
         }
     }
+
 }

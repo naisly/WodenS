@@ -19,6 +19,6 @@ $view = new SupportView( $model );
 $controller->actionGetHeaderCart();
 
 $view->DoctypeView( 'support-thanks' );
-$view->headerView( 'thanks-support' );
+$view->headerView();
 
 $view->thanksMessage();

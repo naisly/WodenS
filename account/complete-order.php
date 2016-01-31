@@ -21,6 +21,6 @@ $view = new OrderView($model);
 $controller->actionCompleteOrder();
 
 $view->DoctypeView( 'order' );
-$view->headerView( 'complete-order' );
+$view->headerView();
 
 $view->thanksMessage();

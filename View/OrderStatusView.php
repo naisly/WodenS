@@ -22,9 +22,8 @@ class OrderStatusView extends DefaultView
     public function getCheckOrderPage() {
 
         $this->DoctypeView( 'Single Order Lookup' );
-        $this->headerView( 'Single Order Lookup' );
+        $this->headerView();
         $this->getContent();
-        #$this->getFooter();
     }
 
     private function getContent() {
@@ -120,18 +119,6 @@ class OrderStatusView extends DefaultView
                       <h1 class="header-lead" style="margin-top: 0;">' . $this->model->Translate('For') . '<span class="item-price" style="font-size: 22px;">$' . $this->model->getCountPrice() . '</span></h1>
 
                       ';
-
-            /*
-            $k = 0;
-            while ($k < 4){
-                echo '<h class="category" style="margin-left: 50px;">' . $this->model->getCategory($k) . ': ' . $this->model->getCountCategories($k);
-                if ($this->model->getCountCategories($k) == 1){
-                    echo ' item</p><br />';
-                } else {
-                    echo ' items</p><br />';
-                }
-                $k++;
-            }*/
 
             echo      '</div>
                        <div class="data">

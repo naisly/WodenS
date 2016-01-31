@@ -23,6 +23,6 @@ $controller->actionGetData( 'ShowTop', 'Television', 'ShowTop' );
 
 $view->DoctypeView( 'Buy ShowTop' );
 
-$view->headerView( 'ShowTop-television' );
+$view->headerView();
 
 $view->GetUI( 'tv', 'television' );

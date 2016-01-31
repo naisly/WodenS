@@ -33,69 +33,6 @@ class AdminView extends DefaultView
      * Login form for entrance
      * in Admin account
      */
-    /*public function getLoginForm() {
-
-        if (session_status() == PHP_SESSION_NONE) {
-            session_start();
-        }
-
-        if(isset($_SESSION['admin'])) {
-            if ($_SESSION['admin'] == 'admin') {
-                header('Location: admin.php');
-            }
-        }
-
-        if(isset($_SESSION['error'])){
-            if($_SESSION['error'] == 1) {
-                $this->errorLoginMessage();
-            }
-        }
-
-        echo '<div class="text-center">
-                 <img id="main" src="/images/default.png" />
-               </div>
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-4"></div>
-                     <div class="col-md-4 margin-auto">
-                              <fieldset class="field_set">
-                                  <h1>Admin Page</h1>
-                                  <form action="/admin/admin_action_login" method="post">
-                                     <div class="form-group">
-                                        <input type="text" placeholder="Admin Username" class="form-control" name="username" id="username" required/>
-                                     </div>
-                                     <div class="form-group">
-                                        <input type="password" class="form-control" name="password" id="password" placeholder="Password" required/>
-                                     </div>
-                                     <div class="form-group text-center">
-                                        <button class="form-control btn btn-default" id="submit">Sign In as Admin</button>
-                                     </div>
-                                  </form>
-                                  <div class="row">
-                                      <div class="col-md-2"></div>
-                                      <div class="col-md-8">
-                                          <div class="line"></div>
-                                      </div>
-                                      <div class="col-md-2"></div>
-                                  </div>
-
-                                  <a href="/forgot-password/" class="already-registered">Forgot your password?</a>
-                              </fieldset>
-                     </div>
-                     <div class="col-md-4"></div>
-                  </div>
-               </div>
-               <div class="container">
-                   <div class="col-md-12">
-                       <div class="line"></div>
-                   </div>
-               </div>
-               <div class="min-spacer"></div>';
-
-        $this->getFooter();
-
-    }*/
-
     public function getLoginForm() {
 
         if (session_status() == PHP_SESSION_NONE) {
@@ -116,8 +53,7 @@ class AdminView extends DefaultView
 
         session_write_close();
 
-        echo  '<!--<div class="login-bg-for-xs">-->
-                  <div class="text-center" style="';
+        echo  '<div class="text-center" style="';
 
         if(isset($_GET['auth'])){
             echo 'margin-top: 5%;';

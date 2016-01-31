@@ -22,7 +22,7 @@ class AccountOrderView extends ProfileView
     }
     public function getAccountOrderPage() {
         $this->DoctypeView( 'Orders - Account' );
-        $this->headerView( 'Orders - Account' );
+        $this->headerView();
         $this->getHeader( 'Your Orders' );
         $this->getAccountBar();
         $this->getOrders();
@@ -112,16 +112,7 @@ class AccountOrderView extends ProfileView
                                           <h class="cart-price">$' . $this->model->getCompletePrice($i, $j) . '</h>
                                       </div>
                                       <div class="col-md-5';
-                /*if($j < 3 && ($j % 2 !== 0 || $j == 0)){
-                    echo ' border-right';
-                } else if ($j > 3 && $j % 3 !== 0){
-                    echo ' border-right';
-                }*/
-                /*if($j == 0){
-                    echo ' border-right';
-                } else if($j == 1 || $j == 2){
-                    echo ' border-right';
-                }*/
+
                 echo                '">
                                         <img style="margin-top: 20px;" src="/' . $this->model->getCompletePhoto($i, $j) . '" width="120" height="120" /><br />
                                       </div>
@@ -195,11 +186,7 @@ class AccountOrderView extends ProfileView
                                           <h class="cart-price">$' . $this->model->getDonePrice($i, $j) . '</h>
                                       </div>
                                       <div class="col-md-6';
-                /*if($j < 3 && ($j % 2 !== 0 || $j == 0)){
-                    echo ' border-right';
-                } else if ($j > 3 && $j % 3 !== 0){
-                    echo ' border-right';
-                }*/
+
                 echo                '">
                                         <img style="margin-top: 20px;" src="/' . $this->model->getDonePhoto($i, $j) . '" width="120" height="120" /><br />
                                       </div>

@@ -21,7 +21,7 @@ class SubdescriptionView extends DefaultView
     public function getSubdescriptionPage() {
 
         $this->DoctypeView( 'subdescription' );
-        $this->headerView( 'subdescription' );
+        $this->headerView();
 
         $this->getMain();
         $this->getSlider();
@@ -53,7 +53,17 @@ class SubdescriptionView extends DefaultView
                       </div>
                       <div class="col-md-7">
                            <h class="main-header">' . $this->model->getOriginalName(0) . '</h><br />
-                           <h class="p-header">' . $this->model->Translate('by') . ' ' . $this->model->getCategory(0) . '</a></h>
+                           <h class="p-header">' . $this->model->Translate('by') . ' ';
+
+        if($this->model->getCategory(0) == 'IMac' || $this->model->getCategory(0) == 'AppleTV') {
+            echo 'Apple';
+        } elseif($this->model->getCategory(0) == 'ShowTop'){
+            echo 'Amazon';
+        } else {
+            echo $this->model->getCategory(0);
+        }
+
+        echo '</a></h>
 
                            <div class="divider-main"></div>
 
@@ -66,7 +76,27 @@ class SubdescriptionView extends DefaultView
             echo      '<h class="no-stock">' . $this->model->Translate('Out of Stock') . '</h>';
         }
 
-        echo         '<h class="sold-by" style="float: left">' . $this->model->Translate('Sold by') . ' <a href="http://' . $this->model->getCategory(0) . '.com" class="link-default">' . $this->model->getCategory(0) . '</a> ' . $this->model->Translate('company. Gift-wrap available') . '</h><br />
+        echo         '<h class="sold-by" style="float: left">' . $this->model->Translate('Sold by') . ' <a href="http://';
+
+        if($this->model->getCategory(0) == 'IMac' || $this->model->getCategory(0) == 'AppleTV') {
+            echo 'Apple';
+        } elseif($this->model->getCategory(0) == 'ShowTop'){
+            echo 'Amazon';
+        } else {
+            echo $this->model->getCategory(0);
+        }
+
+        echo '.com" class="link-default">';
+
+        if($this->model->getCategory(0) == 'IMac' || $this->model->getCategory(0) == 'AppleTV') {
+            echo 'Apple';
+        } elseif($this->model->getCategory(0) == 'ShowTop'){
+            echo 'Amazon';
+        } else {
+            echo $this->model->getCategory(0);
+        }
+
+        echo '</a> ' . $this->model->Translate('company. Gift-wrap available') . '</h><br />
 
                           <div id="spacer"></div>
 

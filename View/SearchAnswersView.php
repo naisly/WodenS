@@ -21,7 +21,7 @@ class SearchAnswersView extends SubdescriptionView
     public function getSearchAnswersPage() {
 
         $this->DoctypeView( 'Frequently Asked Questions' );
-        $this->headerView( 'search' );
+        $this->headerView();
         $this->getAnswers();
         $this->getQuestions();
 
@@ -36,16 +36,10 @@ class SearchAnswersView extends SubdescriptionView
 
         echo '<div class="container-fluid bottom-spacer">
                <div class="row">
-                   <div class="col-md-12 text-center">
-                        <!--<ul class="hor_nav">
-                            <li><a class="items" href="/privacy-policy">Privacy</a></li>
-                            <li><a class="items" href="/refunds">Refunds</a></li>
-                            <li><a class="items" href="/sales">Sales</a></li>
-                            <li><a class="items" href="site-map">Site map</a></li>
-                        </ul>-->';
+                   <div class="col-md-12 text-center">';
 
 
-        echo                       '<p id="copyright"> &copy; ' . $this->model->Translate('Woden Sims Inc. All rights reserved.') . '</p>
+        echo           '<p id="copyright"> &copy; ' . $this->model->Translate('Woden Sims Inc. All rights reserved.') . '</p>
                    </div>
                </div>
               </div>

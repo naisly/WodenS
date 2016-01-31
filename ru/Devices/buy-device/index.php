@@ -23,6 +23,6 @@ $controller->actionGetData( 'Gadgets', 'Gadgets', 'All' );
 
 $view->DoctypeView( 'Buy Device' );
 
-$view->headerView( 'gadgets' );
+$view->headerView();
 
 $view->GetUI( 'device', 'gadgets' );

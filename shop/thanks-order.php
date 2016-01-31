@@ -23,6 +23,6 @@ $controller->actionGetHeaderCart();
 $controller->actionGetTotalAndSum();
 
 $view->DoctypeView( 'Thanks message' );
-$view->headerView( 'thanks-order' );
+$view->headerView();
 
 $view->addedItemMessage();

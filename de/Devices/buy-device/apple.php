@@ -22,6 +22,6 @@ $controller->actionGetData( 'Apple', 'Gadgets', 'Apple' );
 
 $view->DoctypeView( 'Buy Ipad' );
 
-$view->headerView( 'apple-gadgets' );
+$view->headerView();
 
 $view->GetUI( 'device', 'gadgets' );

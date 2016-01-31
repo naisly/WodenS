@@ -20,7 +20,7 @@ class SearchView extends DefaultView
 
     public function getResults() {
         $this->DoctypeView( 'Search' );
-        $this->headerView( 'Search' );
+        $this->headerView();
 
         $this->getSearch();
         $this->actionGetFooter( 'Search' );
@@ -80,8 +80,6 @@ class SearchView extends DefaultView
                 } else {
                     $k = $this->model->getCountResults();
                 }
-
-                //echo $k;
 
                 while ($i < $k) {
                     echo '<h1 class="title"><a class="title-link" href="' . $this->model->getUrl($i) . '">' . $this->model->getTitle($i) . '</a></h1>

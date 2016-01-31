@@ -27,7 +27,7 @@ class AccountInfoView extends AccountOrderView
     public function getAccountPage() {
 
         $this->DoctypeView( 'Account' );
-        $this->headerView( 'Account' );
+        $this->headerView();
         $this->getHeader( 'Main Account Page' );
         $this->getAccountBar();
         $this->getOrderTable();
@@ -66,10 +66,9 @@ class AccountInfoView extends AccountOrderView
                             </thead>
                             <tbody>';
 
-            //echo $this->model->getAccountComplete(0);
             if (($this->model->countAccountComplete() !== 0) || ($this->model->countAccountDone() !== 0)) {
                 $i = 0;
-                //echo $this->model->getCompleteOrder(0);
+
                 while ($i < $this->model->countAccountComplete()) {
                     echo '<tr>
                       <td>#' . $this->model->getAccountComplete($i) . '</td>

@@ -27,7 +27,7 @@ class BusinessLaptopsView extends DefaultView
     public function getBusinessLaptopsPage() {
 
         $this->DoctypeView( 'Laptops - Business' );
-        $this->headerView( 'business' );
+        $this->headerView();
 
         $this->getMain();
         $this->actionGetFooter( 'sub-daughter' );

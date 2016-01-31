@@ -231,7 +231,7 @@ class DefaultView
      * Main navbar Menu for all
      * pages
      */
-    final public function headerView($page)
+    final public function headerView()
     {
 
         if (session_status() == PHP_SESSION_NONE) {
@@ -401,13 +401,11 @@ class DefaultView
 
         echo '<script>
                   $("#search").focus(function(){
-                      /*$(".element-divider, .requests").css("visibility", "visible");*/
-                      /*$(".element-divider, .requests").css("display", "block")*/
+
                       $(".element-divider, .requests").fadeIn("slow");
                   })
                   .blur(function() {
-                      /*$(".element-divider, .requests").css("visibility", "hidden");*/
-                      /*$(".element-divider, .requests").css("display", "none");*/
+
                       $(".element-divider, .requests").fadeOut("slow");
                   })
               </script>';
@@ -488,13 +486,12 @@ class DefaultView
      */
     public function actionGetFooter($page)
     {
-        //session_start();
 
         echo '</div>
                 <footer>';
         if ($page !== 'financing' && $page !== 'Index' && $page !== 'Phones' && $page !== 'Devices' && $page !== 'Page Not Found' && $page !== 'Our Company' && $page !== 'Login' && $page !== 'Registration' && $page !== 'Phones - Business') {
             echo '<div class="container">
-                         <!--<div class="divider"></div>-->
+
                   </div>
                   <div class="footer-spacer"></div>';
         } else if ($page == 'Index') {
@@ -509,12 +506,6 @@ class DefaultView
                       </div>
                   </div>';
         }
-
-        /*if ($page == 'Thank You') {
-            echo '<div class="footer footer-bottom">';
-        } else {
-            echo '<div class="footer">';
-        }*/
 
         echo '<div class="footer">';
 
@@ -1059,15 +1050,9 @@ class DefaultView
 
     public function getFooter() {
         echo '<div class="bottom-spacer" style="position: absolute; bottom: 0; width: 100%;">
-               <div class="text-center">
-                        <!--<ul class="hor_nav">
-                            <li><a class="items" href="/privacy-policy">Privacy</a></li>
-                            <li><a class="items" href="/refunds">Refunds</a></li>
-                            <li><a class="items" href="/sales">Sales</a></li>
-                            <li><a class="items" href="site-map">Site map</a></li>
-                        </ul>-->
-                            <p id="copyright"> &copy; Woden Sims Inc . ' . $this->model->Translate("All rights reserved.") . '</p>
-                   </div>
+                   <div class="text-center">
+                        <p id="copyright"> &copy; Woden Sims Inc . ' . $this->model->Translate("All rights reserved.") . '</p>
+                  </div>
               </div>
               <script src="js/jquery-min.js"></script>
               <script src="js/bootstrap.min.js"></script>';

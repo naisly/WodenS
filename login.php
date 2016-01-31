@@ -38,7 +38,7 @@ session_write_close();
 $controller->actionGetHeaderCart();
 
 $view->DoctypeView( 'Login' );
-$view->headerView( 'login' );
+$view->headerView();
 
 $view->displayLoginErrors();
 

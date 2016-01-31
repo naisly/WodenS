@@ -23,6 +23,6 @@ $controller->actionGetData( 'Apple', 'Phones', 'Apple' );
 
 $view->DoctypeView( 'Buy Iphone' );
 
-$view->headerView( 'apple-phones' );
+$view->headerView();
 
 $view->GetUI( 'phone', 'phones' );

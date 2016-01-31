@@ -23,6 +23,6 @@ $controller->actionGetData( 'Samsung', 'Gadgets', 'Samsung' );
 
 $view->DoctypeView( 'Buy Galaxy Tab' );
 
-$view->headerView( 'samsung-gadgets' );
+$view->headerView();
 
 $view->GetUI( 'device', 'gadgets' );

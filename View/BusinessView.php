@@ -27,7 +27,7 @@ class BusinessView extends DefaultView
     public function getBusinessPage() {
 
         $this->DoctypeView( 'Business' );
-        $this->headerView( 'business' );
+        $this->headerView();
 
         $this->getMain();
         $this->actionGetFooter( 'sub-daughter' );

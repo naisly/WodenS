@@ -23,6 +23,6 @@ $controller->actionGetData( 'Asus', 'Notebooks', 'Asus' );
 
 $view->DoctypeView( 'Buy Asus Laptop' );
 
-$view->headerView( 'asus-notebooks' );
+$view->headerView();
 
 $view->GetUI( 'laptop', 'notebooks' );

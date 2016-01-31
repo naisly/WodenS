@@ -26,7 +26,7 @@ class FinancingView extends DefaultView
 
     public function getFinancingPage() {
         $this->DoctypeView( 'Financing' );
-        $this->headerView( 'Financing' );
+        $this->headerView();
         $this->getMenu();
         $this->actionGetFooter( 'Financing' );
     }

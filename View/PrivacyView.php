@@ -21,7 +21,7 @@ class PrivacyView extends DefaultView
     public function getPrivacyPage() {
 
         $this->DoctypeView( 'Privacy Policy' );
-        $this->headerView( 'Privacy Policy' );
+        $this->headerView();
         $this->getMain();
         $this->actionGetFooter( 'Privacy Policy' );
         $this->endHTML();

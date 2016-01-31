@@ -27,7 +27,7 @@ class EducationView extends DefaultView
     public function getEducationPage() {
 
         $this->DoctypeView( 'Education' );
-        $this->headerView( 'education' );
+        $this->headerView();
 
         $this->getMain();
         $this->actionGetFooter( 'sub-daughter' );

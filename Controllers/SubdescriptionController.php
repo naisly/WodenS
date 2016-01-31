@@ -496,7 +496,7 @@ class SubdescriptionController extends DefaultController
         $items = explode(" ", $original_name);
         $u = 0;
         while($u < count($items)){
-            if(strlen($items[$u]) < 2){
+            if(strlen($items[$u]) < 3 || strtolower($items[$u]) == 'with'){
                 unset($items[$u]);
             }
             $u++;
