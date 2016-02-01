@@ -6,9 +6,9 @@
  * Time: 20:08
  */
 
-include_once('../Controllers/CheckoutController.php');
-include_once('../Model/CheckoutModel.php');
-include_once('../View/CheckoutView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/CheckoutController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/CheckoutModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/CheckoutView.php';
 
 $model = new CheckoutModel();
 

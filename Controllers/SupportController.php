@@ -40,7 +40,7 @@ class SupportController extends DefaultController
      */
     public function actionGetData() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -88,7 +88,7 @@ class SupportController extends DefaultController
      */
     public function actionGetSupportMessages() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -129,7 +129,7 @@ class SupportController extends DefaultController
      */
     public function actionGetSolved() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 

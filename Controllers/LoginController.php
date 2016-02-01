@@ -64,7 +64,7 @@ class LoginController extends DefaultController
      */
     private function actionInsertData() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -153,7 +153,7 @@ class LoginController extends DefaultController
      */
     public function actionCheckProvidedEmail() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -192,7 +192,7 @@ class LoginController extends DefaultController
      */
     public function actionLogin() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -256,7 +256,7 @@ class LoginController extends DefaultController
      */
     private function actionAddItems() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 

@@ -6,9 +6,9 @@
  * Time: 22:06
  */
 
-include_once('../Model/CheckOrderModel.php');
-include_once('../Controllers/CheckOrderController.php');
-include_once('../View/OrderStatusView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/CheckOrderModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/CheckOrderController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/OrderStatusView.php';
 
 $model = new CheckOrderModel();
 

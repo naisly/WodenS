@@ -6,9 +6,9 @@
  * Time: 22:32
  */
 
-include_once('..\Controllers\LoginController.php');
-include_once('..\Model\LoginModel.php');
-include_once('..\View\LoginView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/LoginController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/LoginModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/LoginView.php';
 //initiate the triad
 
 $model = new LoginModel();
@@ -22,7 +22,11 @@ $view = new LoginView($model);
 session_start();
 
 if(isset($_SESSION['login_user'])){
-    header('Location: /shop/account/');
+    if($_SESSION['language'] !== 'us') {
+        header('Location: /' . $_SESSION['language'] . '/account/');
+    } else {
+        header('Location: /account/');
+    }
 }
 
 $controller->actionGenerateSessionAuth();

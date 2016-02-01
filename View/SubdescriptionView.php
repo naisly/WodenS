@@ -253,7 +253,7 @@ class SubdescriptionView extends DefaultView
                           <div class="shopping-cart">
                               <img src="/images/shopping-cart.png" />
                               <h class="buy-new">' . $this->model->Translate('Buy new') . ':</h>
-                              <h class="price-new">$' . sprintf("%0.2f", $this->model->getPrice()) . '</h>
+                              <h class="price-new">$' . sprintf("%0.2f", $this->model->getPrice(0)) . '</h>
                           </div>
                           <div class="checkbox" style="margin-top: 30px;">
                               <label>
@@ -267,7 +267,7 @@ class SubdescriptionView extends DefaultView
                               <h id="qty">' . $this->model->Translate('Quantity') . '</h>
                               <select name="item_quantity" id="item_quantity" required>';
         $i = 0;
-        while ( $i < $this->model->getQuantity()){
+        while ( $i < $this->model->getQuantity(0)){
             if($i == 0){
                 echo '<option value="">0</option>';
             } else {
@@ -284,13 +284,13 @@ class SubdescriptionView extends DefaultView
                                             ' . $this->model->Translate('Add to cart') . '
                                         </button>
                                     </div>
-                                    <input type="hidden" name="id" value="' . $this->model->getId() . '"/>
-                                    <input type="hidden" name="original_name" value="' . $this->model->getOriginalName() . '"/>
-                                    <input type="hidden" name="product_name" value="' . $this->model->getProductName() . '"/>
-                                    <input type="hidden" name="category" value="' . $this->model->getCategory() . '"/>
-                                    <input type="hidden" name="photo" value="' . $this->model->getPhoto() . '"/>
+                                    <input type="hidden" name="id" value="' . $this->model->getId(0) . '"/>
+                                    <input type="hidden" name="original_name" value="' . $this->model->getOriginalName(0) . '"/>
+                                    <input type="hidden" name="product_name" value="' . $this->model->getProductName(0) . '"/>
+                                    <input type="hidden" name="category" value="' . $this->model->getCategory(0) . '"/>
+                                    <input type="hidden" name="photo" value="' . $this->model->getPhoto(0) . '"/>
                                     <input type="hidden" name="table" value="' . $_GET['category'] . '"/>
-                                    <input type="hidden" name="price" value="' . $this->model->getPrice() . '"/>
+                                    <input type="hidden" name="price" value="' . $this->model->getPrice(0) . '"/>
                               </form>
                           </div>
 
@@ -303,13 +303,13 @@ class SubdescriptionView extends DefaultView
                                             ' . $this->model->Translate('Click here to complete fast order') . '
                                         </button>
                                     </div>
-                                    <input type="hidden" name="id" value="' . $this->model->getId() . '"/>
-                                    <input type="hidden" name="original_name" value="' . $this->model->getOriginalName() . '"/>
-                                    <input type="hidden" name="product_name" value="' . $this->model->getProductName() . '"/>
-                                    <input type="hidden" name="category" value="' . $this->model->getCategory() . '"/>
-                                    <input type="hidden" name="photo" value="' . $this->model->getPhoto() . '"/>
+                                    <input type="hidden" name="id" value="' . $this->model->getId(0) . '"/>
+                                    <input type="hidden" name="original_name" value="' . $this->model->getOriginalName(0) . '"/>
+                                    <input type="hidden" name="product_name" value="' . $this->model->getProductName(0) . '"/>
+                                    <input type="hidden" name="category" value="' . $this->model->getCategory(0) . '"/>
+                                    <input type="hidden" name="photo" value="' . $this->model->getPhoto(0) . '"/>
                                     <input type="hidden" name="table" value="' . $_GET['category'] . '"/>
-                                    <input type="hidden" name="price" value="' . $this->model->getPrice() . '"/>
+                                    <input type="hidden" name="price" value="' . $this->model->getPrice(0) . '"/>
                                     <input type="hidden" name="one-click-order" value="1" />
                               </form>
                           </div>
@@ -340,7 +340,7 @@ class SubdescriptionView extends DefaultView
                                                ' . $this->model->Translate('Add') . '
                                           </button>
                                           <input type="hidden" name="id" value="' . $this->model->getSortId($i) . '"/>
-                                          <input type="hidden" name="original_name" value="' . $this->model->getOriginalName() . '"/>
+                                          <input type="hidden" name="original_name" value="' . $this->model->getOriginalName(0) . '"/>
                                           <input type="hidden" name="product_name" value="' . $this->model->getSortProductNames($i) . '"/>
                                           <input type="hidden" name="category" value="' . $this->model->getSortCategory($i) . '"/>
                                           <input type="hidden" name="photo" value="' . $this->model->getSortPhoto($i) . '"/>
@@ -791,10 +791,10 @@ class SubdescriptionView extends DefaultView
             }
         }
 
-        //echo $this->model->getNoItems();
         if($this->model->getNoItems() == '1'){
 
             echo '<div class="row">
+                      <div class="col-md-1"></div>
                       <div class="col-md-5">
                           <h1 class="no-q-a">' . $this->model->Translate('No Questions & Answers Found') . '</h1>';
 

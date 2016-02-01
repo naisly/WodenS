@@ -75,7 +75,7 @@ class AccountInfoController extends AccountOrderController
      */
     public function actionCancelOrder() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -134,7 +134,7 @@ class AccountInfoController extends AccountOrderController
      */
     public function getBillingData() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -202,7 +202,7 @@ class AccountInfoController extends AccountOrderController
      */
     private function actionChangeEmail(){
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -281,7 +281,7 @@ class AccountInfoController extends AccountOrderController
      */
     private function actionChangeUsername() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -334,7 +334,7 @@ class AccountInfoController extends AccountOrderController
      */
     private function actionChangePassword(){
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 

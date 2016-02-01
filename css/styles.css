@@ -239,8 +239,29 @@ p, h1,a  {
 }
 #slider {
 	width: 100%;
+	height: auto;
 	position: relative;
 	top: 45px;
+	margin-top: -44px;
+}
+.non-visible-400 {
+	display: none;
+}
+@media (max-width: 400px){
+	.full-image-main-content {
+		height: 230px !important;
+	}
+	.non-visible-400 {
+		display: block;
+		padding-top: 50px;
+	}
+	#slider {
+		margin-top: 0;
+	}
+	.discover-sm {
+		font-size: 22px;
+		font-family: RobotoLight !important;
+	}
 }
 .no-division-for-category {
 	padding-right: 0px !important;

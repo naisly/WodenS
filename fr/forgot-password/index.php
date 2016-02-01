@@ -6,9 +6,9 @@
  * Time: 22:17
  */
 
-include_once('../../Model/ForgotModel.php');
-include_once('../../Controllers/ForgotController.php');
-include_once('../../View/ForgotView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/ForgotModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/ForgotController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/ForgotView.php';
 
 $model = new ForgotModel();
 

@@ -77,7 +77,7 @@ class DefaultController
         session_write_close();
 
         if($_SESSION['language'] !== 'us') {
-            include_once('C:/xampp/htdocs/shop/Languages/lang.' . $_SESSION['language'] . '.php');
+            include_once $_SERVER['DOCUMENT_ROOT'] . '/Languages/lang.' . $_SESSION['language'] . '.php';
             if(isset($lang)) {
                 $this->model->setLanguage($lang);
             }
@@ -131,6 +131,8 @@ class DefaultController
      */
     public function actionGetHeaderCart() {
 
+        header('Content-Type: text/html; charset=utf-8', true);
+
         $this->actionGetLanguage();
         $this->actionGetBreadcrumbs();
     }
@@ -146,7 +148,7 @@ class DefaultController
      */
     protected function actionGetSumOfItems() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -192,7 +194,7 @@ class DefaultController
      */
     protected function actionGetQuantityOfItems() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 

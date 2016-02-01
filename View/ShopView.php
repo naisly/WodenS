@@ -64,8 +64,12 @@ class ShopView extends DefaultView
 
         echo "'>" . $this->model->Translate('All') . "</a>";
 
-        foreach ($this->model->distinct_categories as $value => $key) {
-            echo "<a class='categories-list' href='{$this->model->distinct_categories[$value]}'>" . $this->model->distinct_categories[$value] . "</a>";
+        $i = 0;
+
+        while ($i < $this->model->countDistinctCategories()) {
+            echo "<a class='categories-list' href='{$this->model->getDistinctCategories($i)}'>" . $this->model->getDistinctCategories($i) . "</a>";
+
+            $i++;
         }
         echo '               </ul>
                         </div>
@@ -394,6 +398,10 @@ class ShopView extends DefaultView
                 if (isset($_GET['page']) && $_GET['page'] !== '1') {
                     echo '<a href="';
 
+                    if($_SESSION['language'] !== 'us'){
+                        echo '/' . $_SESSION['language'];
+                    }
+
                     if (isset($_GET['page']) && $_GET['page'] > 1) {
                         if($find_start > 0) {
                             echo $url . '&page=' . ($_GET['page'] - 1);
@@ -435,6 +443,10 @@ class ShopView extends DefaultView
 
 
                         echo '<a href="';
+
+                        if($_SESSION['language'] !== 'us'){
+                            echo '/' . $_SESSION['language'];
+                        }
 
                         if (isset($_GET['page']) && $_GET['page'] < $this->model->getPages()) {
                             if($find_start > 0) {

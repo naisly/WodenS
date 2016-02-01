@@ -77,7 +77,7 @@ class AccountOrderController extends ProfileController
      */
     protected function getAllOrders() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
         if (isset($_SESSION['login_user'])) {
@@ -125,7 +125,7 @@ class AccountOrderController extends ProfileController
     private function getCompleteOrders()
     {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
         if (isset($_SESSION['login_user'])) {
@@ -273,7 +273,7 @@ class AccountOrderController extends ProfileController
     private function getDoneOrders()
     {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
         if (isset($_SESSION['login_user'])) {

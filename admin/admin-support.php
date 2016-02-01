@@ -6,9 +6,9 @@
  * Time: 20:07
  */
 
-include_once('../Controllers/SupportController.php');
-include_once('../Model/SupportModel.php');
-include_once('../View/SupportView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/SupportController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/SupportModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/SupportView.php';
 
 $model = new SupportModel();
 

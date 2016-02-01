@@ -32,7 +32,11 @@ class IndexView extends DefaultView
     private function getSlider() {
 
         echo '<div class="overlay-main-page">
-                  <div id="slider" style="margin-top: -44px;">
+                  <div class="text-center non-visible-400">
+                      <h1>Woden Sims</h1>
+                      <h1 class="discover-sm">' . $this->model->Translate('Try to discover new possibilities. Change the way of thinking') . '</h1>
+                  </div>
+                  <div id="slider">
                       <ul class="bxslider">
                           <li><a href="/';
 

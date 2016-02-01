@@ -381,16 +381,46 @@ class DefaultView
         echo '</a></li>
               <li class="divider-li-small" style="background-color: white !important; margin-top: 7px !important;"></li>
 
-              <li id="popular" class="non-for-large"><a class="white-link requests" style="display: none;">Most popular requests</a></li>
-              <li class="non-for-large"><a href="/phones/buy-phone/apple" class="white-link element-divider" style="color: white; display: none;">Apple</a></li>
+              <li id="popular" class="non-for-large"><a class="white-link requests" style="display: none;">' . $this->model->Translate('Most popular requests') . '</a></li>
+              <li class="non-for-large"><a href="/';
 
-              <li class="non-for-large"><a href="/account/" class="white-link element-divider" style="display: none;">Account</a></li>
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
 
-              <li class="non-for-large"><a href="/store/" class="white-link element-divider" style="display: none;">Find a Store</a></li>
+        echo 'phones/buy-phone/apple" class="white-link element-divider" style="color: white; display: none;">' . $this->model->Translate('Apple') . '</a></li>
 
-              <li class="non-for-large"><a href="/financing/" class="white-link element-divider" style="display: none;">Financing</a></li>
+              <li class="non-for-large"><a href="/';
 
-              <li class="non-for-large"><a href="/business/" class="white-link element-divider" style="display: none;">Business</a></li>
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'account/" class="white-link element-divider" style="display: none;">' . $this->model->Translate('Account') . '</a></li>
+
+              <li class="non-for-large"><a href="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'store/" class="white-link element-divider" style="display: none;">' . $this->model->Translate('Find a Store') . '</a></li>
+
+              <li class="non-for-large"><a href="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'financing/" class="white-link element-divider" style="display: none;">' . $this->model->Translate('Financing') . '</a></li>
+
+              <li class="non-for-large"><a href="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'business/" class="white-link element-divider" style="display: none;">' . $this->model->Translate('Business') . '</a></li>
 
               <li class="non-for-large"><a class="white-link element-divider" style="display: none; height: 40px;"></a></li>
 
@@ -434,35 +464,65 @@ class DefaultView
         echo                     '</h>
 
                                   <ul class="nav-popular">
-                                      <a href="/phones/buy-phone/apple">
+                                      <a href="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'phones/buy-phone/apple">
                                           <li>';
 
         echo $this->model->Translate('Apple');
 
         echo                             '</li>
                                       </a>
-                                      <a href="/account/">
+                                      <a href="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'account/">
                                           <li>';
 
         echo $this->model->Translate('Account');
 
         echo                             '</li>
                                       </a>
-                                      <a href="/store/">
+                                      <a href="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'store/">
                                           <li>';
 
         echo $this->model->Translate('Find a Store');
 
         echo                             '</li>
                                       </a>
-                                      <a href="/financing/">
+                                      <a href="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'financing/">
                                           <li>';
 
         echo $this->model->Translate('Financing');
 
         echo                             '</li>
                                       </a>
-                                      <a href="/business/">
+                                      <a href="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'business/">
                                           <li>';
 
         echo $this->model->Translate('Business');

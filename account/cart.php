@@ -6,9 +6,9 @@
  * Time: 17:01
  */
 
-include_once('..\Controllers\ProfileController.php');
-include_once('..\Model\ProfileModel.php');
-include_once('..\View\ProfileView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/ProfileController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/ProfileModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/ProfileView.php';
 //initiate the triad
 
 $model = new ProfileModel();

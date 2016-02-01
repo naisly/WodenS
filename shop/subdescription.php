@@ -5,9 +5,9 @@
  * Date: 22.11.2015
  * Time: 15:02
  */
-include_once('..\Controllers\SubdescriptionController.php');
-include_once('..\Model\SubdescriptionModel.php');
-include_once('..\View\SubdescriptionView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/SubdescriptionController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/SubdescriptionModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/SubdescriptionView.php';
 //initiate the triad
 
 $model = new SubdescriptionModel();

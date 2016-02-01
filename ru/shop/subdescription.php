@@ -5,9 +5,9 @@
  * Date: 22.11.2015
  * Time: 15:02
  */
-include_once('..\..\Controllers\SubdescriptionController.php');
-include_once('..\..\Model\SubdescriptionModel.php');
-include_once('..\..\View\SubdescriptionView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/SubdescriptionController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/SubdescriptionModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/SubdescriptionView.php';
 //initiate the triad
 
 $model = new SubdescriptionModel();
@@ -18,6 +18,6 @@ $controller = new SubdescriptionController($model);
 
 $view = new SubdescriptionView($model);
 
-$controller->actionGetData( $_GET['name'], $_GET['category'], $_GET['product_price'], $_GET['id'], $_GET['product_name']);
+$controller->actionGetData( $_GET['name'], $_GET['category'], $_GET['product_price'], $_GET['id'], $_GET['product_name'] );
 
 $view->getSubdescriptionPage();

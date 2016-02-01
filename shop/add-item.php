@@ -6,8 +6,8 @@
  * Time: 0:30
  */
 
-include_once('..\Controllers\LoginController.php');
-include_once('..\Model\LoginModel.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/LoginController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/LoginModel.php';
 //initiate the triad
 
 $model = new LoginModel();

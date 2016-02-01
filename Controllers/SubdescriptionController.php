@@ -65,7 +65,8 @@ class SubdescriptionController extends DefaultController
      * @param $order_id
      */
     private function actionGetSubdescription( $product_name, $table, $id, $order_id ) {
-        include_once('/../Storage.php');
+
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
         $sql_query = "SELECT original_name, photo, category,
@@ -109,16 +110,16 @@ class SubdescriptionController extends DefaultController
                 /*
                  * Table
                  */
-                $original_name = $row['original_name'];
-                $photo = $row['photo'];
-                $category = $row['category'];
-                $price = $row['price'];
-                $previous_price = $row['previous_price'];
-                $time_of_adding = $row['time_of_adding'];
-                $features = $row['features'];
-                $quantity = $row['quantity'];
-                $shipping = $row['shipping'];
-                $average_price = $row['average_price'];
+                $original_name = array_merge($original_name, array_map('trim', explode(",", $row['original_name'])));
+                $photo = array_merge($photo, array_map('trim', explode(",", $row['photo'])));
+                $category = array_merge($category, array_map('trim', explode(",", $row['category'])));
+                $price = array_merge($price, array_map('trim', explode(",", $row['price'])));
+                $previous_price = array_merge($previous_price, array_map('trim', explode(",", $row['previous_price'])));
+                $time_of_adding = array_merge($time_of_adding, array_map('trim', explode(",", $row['time_of_adding'])));
+                $features = array_merge($features, array_map('trim', explode(",", $row['features'])));
+                $quantity = array_merge($quantity, array_map('trim', explode(",", $row['quantity'])));
+                $shipping = array_merge($shipping, array_map('trim', explode(",", $row['shipping'])));
+                $average_price = array_merge($product_name, array_map('trim', explode(",", $row['average_price'])));
                 /*
                  * Subdescription
                  */
@@ -136,7 +137,7 @@ class SubdescriptionController extends DefaultController
                 $assoc_photo = array_merge($assoc_photo, array_map('trim', explode(",", $row['assoc_photo'])));
             }
         }
-        $sql_min = "SELECT price FROM $table WHERE original_name='$original_name'";
+        $sql_min = "SELECT price FROM $table WHERE original_name='$original_name[0]'";
 
         $result_min = $mysqli->query( $sql_min );
         $min_array = array();
@@ -190,10 +191,11 @@ class SubdescriptionController extends DefaultController
      * @param $product_name
      */
     private function actionSetDistinctProductsPrice( $table, $product_name){
-        include_once('/../Storage.php');
+
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
-        $sql_query = "SELECT id, product_name, category, photo, price FROM $table WHERE (product_name='$product_name' AND price != {$this->model->getPrice()}) ORDER BY price ASC LIMIT 3";
+        $sql_query = "SELECT id, product_name, category, photo, price FROM $table WHERE (product_name='$product_name' AND price != {$this->model->getPrice(0)}) ORDER BY price ASC LIMIT 3";
         $result_query = $mysqli->query( $sql_query );
 
         $id_array = array();
@@ -234,7 +236,8 @@ class SubdescriptionController extends DefaultController
      * @var $table
      */
     private function actionSelectRandomProduct() {
-        include_once('/../Storage.php');
+
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
         $sql_query = "SELECT phones.original_name as phone, notebooks.original_name as notebook, gadgets.original_name as gadget, television.original_name as television FROM phones
@@ -329,7 +332,8 @@ class SubdescriptionController extends DefaultController
      * @param $table
      */
     private function actionMakeComparison( $table ) {
-        include_once('/../Storage.php');
+
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
         $sql_query = "SELECT DISTINCT product_name FROM $table ORDER BY RAND() LIMIT 4";
@@ -419,7 +423,8 @@ class SubdescriptionController extends DefaultController
      * Setting the model
      */
     private function actionGetAssocProducts( $table, $product_name ) {
-        include_once('/../Storage.php');
+
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
         $sql_query = "SELECT assoc_products FROM subdescription WHERE product_name='$product_name'";
@@ -489,7 +494,8 @@ class SubdescriptionController extends DefaultController
      *
      */
     public function actionGetQuestionsAndAnswers( $original_name ) {
-        include_once('/../Storage.php');
+
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 

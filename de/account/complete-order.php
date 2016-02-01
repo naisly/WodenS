@@ -6,9 +6,9 @@
  * Time: 16:47
  */
 
-include_once('../../Controllers/OrderController.php');
-include_once('../../Model/OrderModel.php');
-include_once('../../View/OrderView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/OrderController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/OrderModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/OrderView.php';
 
 $model = new OrderModel();
 

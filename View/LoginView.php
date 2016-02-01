@@ -408,15 +408,15 @@ class LoginView extends DefaultView
                               <span style="font-size: 22px; margin-left: 25px;">' . $this->model->Translate('You are accepting Woden Sims Privacy Policy') . '</span><br />
                               <div class="row">
                                   <div class="col-md-10" style="margin-left: 25px;">
-                                      <span style="font-size: 13px;">' . $this->model->Translate('This') . '<a href="/';
+                                      <span style="font-size: 13px;">' . $this->model->Translate('This') . ' <a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'privacy-policy/" id="main-link-check">' . $this->model->Translate('Privacy Policy') . '</a>' . $this->model->Translate('is meant to help you understand what data we collect, why we collect it, and what we do with it. This is important; we hope you will take time to read it carefully. And remember, you can find controls to manage your information and protect your privacy and security at');
+        echo 'privacy-policy/" id="main-link-check">' . $this->model->Translate('Privacy Policy') . '</a> ' . $this->model->Translate('is meant to help you understand what data we collect, why we collect it, and what we do with it. This is important; we hope you will take time to read it carefully. And remember, you can find controls to manage your information and protect your privacy and security at');
 
-        echo '<a href="/';
+        echo ' <a href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';

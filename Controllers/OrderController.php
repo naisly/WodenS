@@ -60,7 +60,7 @@ class OrderController extends DefaultController
      */
     private function actionInsertData() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -126,7 +126,7 @@ class OrderController extends DefaultController
      */
     private function actionInsertIntoOrders() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -167,7 +167,7 @@ class OrderController extends DefaultController
      */
     public function getDefaultBilling(){
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 

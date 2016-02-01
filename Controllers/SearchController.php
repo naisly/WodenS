@@ -51,7 +51,7 @@ class SearchController extends DefaultController
      */
     private function actionSearch() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 

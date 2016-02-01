@@ -39,6 +39,8 @@ class DefaultModel
     private $session_auth;
     private $count_results;
     private $no_data_found;
+
+
     public function setProductName ( $product_name ) {
         $this->product_name = $product_name;
     }
@@ -120,8 +122,11 @@ class DefaultModel
     public function setDistinctCategories( $distinct_categories ) {
         $this->distinct_categories = $distinct_categories;
     }
-    public function getDistinctCategories() {
-        return $this->distinct_categories;
+    public function getDistinctCategories($i) {
+        return $this->distinct_categories[$i];
+    }
+    public function countDistinctCategories() {
+        return count($this->distinct_categories);
     }
     public function setDistinctProductNames ( $distinct_product_names ){
         $this->distinct_product_names = $distinct_product_names;

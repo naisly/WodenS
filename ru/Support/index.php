@@ -6,9 +6,9 @@
  * Time: 16:33
  */
 
-include_once('..\..\Controllers\DefaultController.php');
-include_once('..\..\Model\DefaultModel.php');
-include_once('..\..\View\SupView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/DefaultController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/DefaultModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/SupView.php';
 //initiate the triad
 
 $model = new DefaultModel();

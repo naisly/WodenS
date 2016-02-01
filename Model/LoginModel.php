@@ -68,24 +68,4 @@ class LoginModel extends DefaultModel
 
         return $this->password_again;
     }
-
-    public function setQuantity ( $quantity ) {
-
-        $this->quantity = $quantity;
-    }
-
-    public function getQuantity() {
-
-        return $this->quantity;
-    }
-
-    public function setPrice ( $price ) {
-
-        $this->price = $price;
-    }
-
-    public function getPrice() {
-
-        return $this->price;
-    }
 }

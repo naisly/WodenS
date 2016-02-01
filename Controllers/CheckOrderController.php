@@ -58,7 +58,7 @@ class CheckOrderController extends DefaultController
             $order_email = $_GET['order_email'];
         }
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -117,7 +117,7 @@ class CheckOrderController extends DefaultController
      */
     private function actionGetOrderedItems() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 

@@ -6,9 +6,9 @@
  * Time: 0:08
  */
 
-include_once('../Model/AccountBillingModel.php');
-include_once('../Controllers/AccountBillingController.php');
-include_once('../View/AccountBillingView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/AccountBillingModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/AccountBillingController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/AccountBillingView.php';
 
 $model = new AccountBillingModel();
 

@@ -1,8 +1,8 @@
 <?php
 
-include_once('..\Controllers\DefaultController.php');
-include_once('..\Model\DefaultModel.php');
-include_once('..\View\IndexView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/DefaultController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/DefaultModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/IndexView.php';
 
 #include_once('Translate.php');
 //initiate the triad

@@ -6,9 +6,9 @@
  * Time: 18:14
  */
 
-include_once('../Model/AdminModel.php');
-include_once('../Controllers/AdminController.php');
-include_once('../View/AdminView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/AdminModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/AdminController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/AdminView.php';
 
 $model = new AdminModel();
 

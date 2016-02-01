@@ -80,7 +80,7 @@ class ProfileController extends DefaultController
      */
     private function actionGetOrderedItems(){
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -133,7 +133,7 @@ class ProfileController extends DefaultController
      */
     public function actionRemoveData() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -185,7 +185,7 @@ class ProfileController extends DefaultController
      */
     protected function actionGetUser() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -340,7 +340,7 @@ class ProfileController extends DefaultController
      */
     protected function actionGetMinPrice() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -381,7 +381,7 @@ class ProfileController extends DefaultController
      */
     protected function actionGetBilling() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 

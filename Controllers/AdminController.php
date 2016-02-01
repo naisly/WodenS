@@ -34,7 +34,7 @@ class AdminController
      */
     public function actionLogin() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -87,7 +87,7 @@ class AdminController
     public function actionGetAdminProducts()
     {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
         $sql_query = "SELECT * FROM phones";
@@ -232,7 +232,7 @@ class AdminController
      */
     public function actionUpdateData() {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -305,7 +305,8 @@ class AdminController
      * ! REDIRECTION
      */
     public function actionDeleteData() {
-        include_once('/../Storage.php');
+
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 

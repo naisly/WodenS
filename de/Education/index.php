@@ -6,9 +6,9 @@
  * Time: 0:30
  */
 
-include_once('../../Model/DefaultModel.php');
-include_once('../../Controllers/DefaultController.php');
-include_once('../../View/EducationView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/DefaultModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/DefaultController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/EducationView.php';
 
 $model = new DefaultModel();
 

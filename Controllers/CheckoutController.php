@@ -41,7 +41,7 @@ class CheckoutController
         /*
          * Connection to the Database
          */
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -122,7 +122,7 @@ class CheckoutController
         /**
          * Connection to the Database
          */
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 

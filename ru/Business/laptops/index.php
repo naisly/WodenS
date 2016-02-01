@@ -6,9 +6,9 @@
  * Time: 18:02
  */
 
-include_once('../../../Model/DefaultModel.php');
-include_once('../../../Controllers/DefaultController.php');
-include_once('../../../View/BusinessLaptopsView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/DefaultModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/DefaultController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/BusinessLaptopsView.php';
 
 $model = new DefaultModel();
 

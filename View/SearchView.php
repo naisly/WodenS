@@ -100,6 +100,10 @@ class SearchView extends DefaultView
                     if(isset($_GET['page']) && $_GET['page'] !== '1') {
                         echo '<a href="';
 
+                        if($_SESSION['language'] !== 'us'){
+                            echo '/' . $_SESSION['language'];
+                        }
+
                         if (isset($_GET['page']) && $_GET['page'] > 1) {
                             echo '/search/result?generalnav=' . $_GET['generalnav'] . '&page=' . ($_GET['page']-1);
                         }
@@ -137,6 +141,10 @@ class SearchView extends DefaultView
 
 
                         echo '<a href="';
+
+                        if($_SESSION['language'] !== 'us'){
+                            echo '/' . $_SESSION['language'];
+                        }
 
                         if(isset($_GET['page']) && $_GET['page'] < $this->model->getCountPages()){
                             echo '/search/result?generalnav=' . $_GET['generalnav'] . '&page=' . ($_GET['page']+1);

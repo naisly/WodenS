@@ -6,9 +6,9 @@
  * Time: 20:38
  */
 
-include_once('..\Controllers\SubdescriptionController.php');
-include_once('..\Model\SubdescriptionModel.php');
-include_once('..\View\SearchAnswersView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/SubdescriptionController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/SubdescriptionModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/SearchAnswersView.php';
 //initiate the triad
 
 $model = new SubdescriptionModel();
@@ -22,7 +22,7 @@ $view = new SearchAnswersView($model);
 $controller->actionGetHeaderCart();
 
 if(isset($_GET['q'])) {
-    $controller->actionGetQuestionsAndAnswers($_GET['q'], 1);
+    $controller->actionGetQuestionsAndAnswers($_GET['q']);
 }
 
 $view->getSearchAnswersPage();

@@ -6,9 +6,9 @@
  * Time: 19:04
  */
 
-include_once('../../Model/AccountOrderModel.php');
-include_once('../../Controllers/AccountOrderController.php');
-include_once('../../View/AccountOrderView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/AccountOrderModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/AccountOrderController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/AccountOrderView.php';
 
 $model = new AccountOrderModel();
 

@@ -6,9 +6,9 @@
  * Time: 13:50
  */
 
-include_once('..\..\Controllers\DefaultController.php');
-include_once('..\..\Model\DefaultModel.php');
-include_once('..\..\View\TvView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/DefaultController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/DefaultModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/TvView.php';
 //initiate the triad
 
 $model = new DefaultModel();

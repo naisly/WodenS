@@ -21,7 +21,6 @@ class SubdescriptionModel extends AssocModel
     private $date;
 
     private $no_items;
-    private $count_pages;
 
     public function setAskPerson( $ask_person ) {
 

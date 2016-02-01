@@ -55,20 +55,12 @@ function disableOverflow(){
         $("body")
             .css("flex", "2 2 2%");
 
-        $("body").disableScroll();
-
-        /*
-        123
-         */
-        /*
         $('navbar').addClass('scroll');
         $('body').addClass('scroll');
 
         $('html')
-            .css("overflow-y", "hidden");*/
-        /*
-        123
-         */
+            .css("overflow-y", "hidden");
+
 
 
 
@@ -90,13 +82,8 @@ function disableOverflow(){
         $("body")
             .css("flex", "1 1 0%");
 
-        $("body").enableScroll();
 
 
-        /*
-        123
-         */
-        /*
         $("html")
             .css("overflow-y", "visible");
         $("body")
@@ -104,18 +91,15 @@ function disableOverflow(){
         $("navbar")
             .css("height", "auto");
         $('navbar')
-            .css("height", "auto");*/
-        /*
-        123
-         */
+            .css("height", "auto");
 
 
 
         /*$('navbar').removeClass('noscroll');*/
 
-        var scrollTop = parseInt($('html').css('top'));
+        /*var scrollTop = parseInt($('html').css('top'));
         $('html').removeClass('noscroll');
-        $('html,body').scrollTop(-scrollTop);
+        $('html,body').scrollTop(-scrollTop);*/
     }
 
 }

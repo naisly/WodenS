@@ -6,9 +6,9 @@
  * Time: 1:04
  */
 
-include_once('..\..\..\Controllers\ShopController.php');
-include_once('..\..\..\Model\DefaultModel.php');
-include_once('..\..\..\View\ShopView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/ShopController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/DefaultModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/ShopView.php';
 //initiate the triad
 
 $model = new DefaultModel();

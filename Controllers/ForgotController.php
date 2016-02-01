@@ -49,7 +49,7 @@ class ForgotController extends DefaultController
 
         $this->actionGetHeaderCart();
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -98,7 +98,7 @@ class ForgotController extends DefaultController
 
         $this->actionGetHeaderCart();
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -153,7 +153,7 @@ class ForgotController extends DefaultController
 
         $this->actionGetHeaderCart();
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -193,7 +193,7 @@ class ForgotController extends DefaultController
 
         $this->actionGetHeaderCart();
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -264,7 +264,7 @@ class ForgotController extends DefaultController
 
         $this->actionGetHeaderCart();
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
@@ -330,7 +330,7 @@ class ForgotController extends DefaultController
 
         $this->actionGetHeaderCart();
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 

@@ -52,8 +52,10 @@ class ShopController extends DefaultController
      * @var $res
      */
     private function actionSetAveragePrice( $category ) {
+
         $i = 0;
-        include_once('/../Storage.php');
+
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
         if ( $category == 'Phones') {
@@ -89,7 +91,7 @@ class ShopController extends DefaultController
         }
 
         while ($i < count($list_products)){
-            $sql_avr = "SELECT price, average_price FROM $category WHERE product_name='$list_products[$i]'";
+            $sql_avr = "SELECT price, average_price FROM " . strtolower($category) . " WHERE product_name='$list_products[$i]'";
             $result_avr = $mysqli->query($sql_avr);
             $list_avr = array();
             if ($result_avr->num_rows > 0){
@@ -99,7 +101,7 @@ class ShopController extends DefaultController
                 $sum = array_sum($list_avr);
                 $quantity = count($list_avr);
                 $res = $sum / $quantity;
-                $sql_res = $mysqli->prepare("UPDATE $category SET average_price='$res' WHERE product_name='$list_products[$i]'");
+                $sql_res = $mysqli->prepare("UPDATE " . strtolower($category) . " SET average_price='$res' WHERE product_name='$list_products[$i]'");
                 $sql_res->execute();
             }
             $i++;
@@ -112,11 +114,11 @@ class ShopController extends DefaultController
      */
     private function actionGetDistinctCategories( $category ) {
 
-        include_once('/../Storage.php');
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
-        $sql_query = "SELECT DISTINCT category FROM $category";
+        $sql_query = "SELECT DISTINCT category FROM " . strtolower($category);
         $result = $mysqli->query($sql_query);
         $list_categories = array();
         if ($result->num_rows > 0) {
@@ -136,6 +138,8 @@ class ShopController extends DefaultController
      * @var $product_names_array
      */
     private function actionGetItemNames( $category , $data) {
+
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
         if ( $category == 'Phones') {
@@ -195,12 +199,13 @@ class ShopController extends DefaultController
      * ! REDIRECT
      */
     private function actionGetCategories( $category, $table, $sort ) {
-        include_once('/../Storage.php');
+
+        include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
         $_SESSION['status'] = 0;
-        $sql_query = "SELECT * FROM phones";
+
         if ($category == 'Phones') {
             $sql_query = "SELECT * FROM phones";
         } else if ($category == 'Notebooks'){
@@ -363,10 +368,11 @@ class ShopController extends DefaultController
             $all_product_names = array();
 
             if($sort === 'All') {
-                $sql_num = "SELECT DISTINCT product_name FROM $table";
+                $sql_num = "SELECT DISTINCT product_name FROM " . strtolower($table);
             } else {
-                $sql_num = "SELECT DISTINCT product_name FROM $table WHERE category='$sort'";
+                $sql_num = "SELECT DISTINCT product_name FROM " . strtolower($table) . " WHERE category='$sort'";
             }
+
             $result_num = $mysqli->query( $sql_num );
             $num = $result_num->num_rows;
             if ($result_num->num_rows > 0) {
@@ -374,6 +380,7 @@ class ShopController extends DefaultController
                     $all_product_names = array_merge($all_product_names, array_map('trim', explode(",", $row['product_name'])));
                 }
             }
+
             $amount_array = array( $num );
             $g = 0;
             while($g < $num){
@@ -384,13 +391,13 @@ class ShopController extends DefaultController
             $k = 0;
             while($k < count($product_name_array)) {
                 if(isset($min) && (!isset($max) || $max == '') && $min !== '') {
-                    $amount_sql = "SELECT COUNT(*) as amount FROM $table WHERE product_name='$product_name_array[$k]' AND price > $min";
+                    $amount_sql = "SELECT COUNT(*) as amount FROM " . strtolower($table) . " WHERE product_name='$product_name_array[$k]' AND price > $min";
                 } else if((!isset($min) || $min == '') && isset($max) && $max !== ''){
-                    $amount_sql = "SELECT COUNT(*) as amount FROM $table WHERE product_name='$product_name_array[$k]' AND price < $max";
+                    $amount_sql = "SELECT COUNT(*) as amount FROM " . strtolower($table) . " WHERE product_name='$product_name_array[$k]' AND price < $max";
                 } else if (isset($max) && isset($min) && $max !== '' && $min !== ''){
-                    $amount_sql = "SELECT COUNT(*) as amount FROM $table WHERE product_name='$product_name_array[$k]' AND price > $min AND price < $max";
+                    $amount_sql = "SELECT COUNT(*) as amount FROM " . strtolower($table) . " WHERE product_name='$product_name_array[$k]' AND price > $min AND price < $max";
                 } else {
-                    $amount_sql = "SELECT COUNT(*) as amount FROM $table WHERE product_name='$product_name_array[$k]'";
+                    $amount_sql = "SELECT COUNT(*) as amount FROM " . strtolower($table) . " WHERE product_name='$product_name_array[$k]'";
                 }
                 $result_sql = $mysqli->query($amount_sql);
                 if ($result_sql->num_rows > 0) {
@@ -403,6 +410,7 @@ class ShopController extends DefaultController
             }
 
             $result_products = array();
+
             foreach($amount_array as $num => $ass){
                 array_push($result_products, $ass);
             }

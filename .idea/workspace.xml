@@ -1,0 +1,2122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/View/SubdescriptionView.php" line="541" />
+    <bookmark url="file://$PROJECT_DIR$/mydata.sql" description="CREATE TABLE subdescription(&#10;  id INT(11) NOT NULL..." line="598" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="064b123e-be6f-4615-8776-8dbb2cdc9e09" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/Apple-TV-main-page.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/Avengers.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/Dropbox.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadPro-Light.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadPro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProBold/MyriadProBold.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProBold/MyriadProBold.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProBold/MyriadProBold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProBold/MyriadProBold.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProBoldItalic/MyriadProBoldItalic.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProBoldItalic/MyriadProBoldItalic.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProBoldItalic/MyriadProBoldItalic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProBoldItalic/MyriadProBoldItalic.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProItalic/MyriadProItalic.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProItalic/MyriadProItalic.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProItalic/MyriadProItalic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProItalic/MyriadProItalic.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProRegular/MyriadProRegular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProRegular/MyriadProRegular.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProRegular/MyriadProRegular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProRegular/MyriadProRegular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProSemiBold/MyriadProSemiBold.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProSemiBold/MyriadProSemiBold.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProSemiBold/MyriadProSemiBold.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProSemiBold/MyriadProSemiBold.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/MyriadProSemiBoldItalic/MyriadProSemiBoldItalic.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/Support-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/apple-tv-concept.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/apple-tv-games.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/apple-tv-in-hand.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/apple-tv-pult.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/apple-tv-pult1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/apple-tv-tim.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/apple-tv.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/apple-tv1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/apple-tv2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/appletv.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/appletv1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/appletv2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/appletv3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/arrow-blue-f1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/arrow-blue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/arrow-down-08b.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/arrow-down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/arrow-left-pages.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/arrow-right-f1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/arrow-right-pages.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/arrow-right-small-f1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/arrow-right-small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/arrow-right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/arrow-top.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/arrows.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/asussl1500.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/asustransformer.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/asusx551ma.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/asuszenbook.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/billing.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/breadcrumbs-next.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/breadcrumbs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bulb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-center1.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-center2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-center3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-center4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-center5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-center6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-devices1.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-devices1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-devices1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-devices2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-devices3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-devices4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-laptops-bg-large.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-laptops-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-laptops-large-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-laptops-large.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-laptops-mac.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-laptops1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-laptops10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-laptops11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-laptops12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-laptops2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-laptops3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-laptops4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-laptops5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-laptops6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-laptops7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-laptops8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-laptops9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-people.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-phones1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-phones2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-phones3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-phones4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-phones5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-phones5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-phones6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-team.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/business-team1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/bx_loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/cart-medium.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/cart_icon-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/cart_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/circle-arrow-right.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/close-icon-md.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/close-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/close-search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/close-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/close.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/communication.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/company-work.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/company.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/contact-us.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/contact.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/images/controls.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/czech-republic-small.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/de-flag.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/default-small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/devices-drop.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/devices-main-image.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/devices-main-img.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/devices-main-page.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/devices-main.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/devices-many.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/devices.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/devices1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/devices2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/devices2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/devices3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/devices4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/education-laptops.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/education-laptops1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/education-phones.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/education-phones1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/education-phones2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/education-phones3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/education-phones4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/education-xs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/education.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/education1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/facebook.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/favicon-default.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/favicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/fr-flag.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/france-flag-small.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/france-flag-small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/galaxys3desc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/galaxys4desc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/galaxys5desc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/galaxys6desc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/galaxyshop1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/galaxytab.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/galaxytab1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/galaxytab2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/galaxytab4desc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/galaxytab5desc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/galaxytabshop.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/galaxytabshop1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/games.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/games1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/gradient-bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon-devices.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon-laptop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon-phones.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icon-tv.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/imac-tv.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/imac-tv1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/imac-tv2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/imac.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/imacdesc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/imacnewdesc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/imacolddesc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/imacshop.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/inverstors.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ipad-category-w-text.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ipad-category.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ipad-category.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ipad-main-image.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ipad-usage1-w-text.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ipad-usage1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ipad-usage2-w-text.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ipad-usage2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ipadairdesc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ipadprodesc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ipadshop.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ipadshop1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ipadshop1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ipadshop2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ipadshop3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ipadshop4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/iphone4desc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/iphone5desc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/iphone6Sdes.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/iphone6Sdesc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/job-director.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/jobs-store-hq.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/jobs-store.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/jobs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/kharkiv-sun-mall.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/kiev-gulliver.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/laptop-gold.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/laptops-category-w-text.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/laptops-category.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/laptops-falling.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/laptops-falling.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/laptops-main-page.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/laptops-main.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/laptops-thin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/laptops.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/lithuania-small.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/login.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/logo-devices-small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/logo-laptops-small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/logo-phones-small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/logo-tv-small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/lviv-king-cross-leopolis.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/macbook-air.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/macbook-different-w-text-light.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/macbook-different-w-text.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/macbook-different.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/macbook-drop.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/macbook-drop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/macbook-falling.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/macbook-gold.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/macbook-pro.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/macbook-pro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/macbook-real.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/macbook.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/macbookair.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/macbookdesc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/macbookpro.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/macbookpro.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/macbookprodesc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/main-apple-tv.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/main-business-category.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/main-education-category.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/main-favicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/main-ipad.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/main-laptops.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/main-phones.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/moscow-business-center.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/not-found-back.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/not-found.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/office1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/office2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/office3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/office4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/order-support.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/order.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/phones-bg-main.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/phones-bg-main.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/phones-bg-next-w-text.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/phones-bg-next.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/phones-bg-next.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/phones-bg.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/phones-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/phones-category-w-text.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/phones-category-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/phones-category.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/phones-iphone-desc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/phones-iphone-desc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/phones-iphone.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/phones-iphones.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/phones-main-image.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/phones-main-image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/phones-samsung.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/phones-samsung.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/phones-three-pos-gl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/plus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/plus1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/poland-business-center.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/poland-small.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/rosmarin-business-center.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ru-flag.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/russia-flag-small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/russia-small.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sales-assistant.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/samsungnotedesc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/search-icon-md.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/search-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/search-new.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/secured.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/shopimac.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/shopping-cart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/show-top.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/show-top1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/showtopdesc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/stocks.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/store-apple.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/store-woden-s.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/store-woden-sims.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/store.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/store_support.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/store_support1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/store_support2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/support-2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/support.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/team.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/test-logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/test-logo1.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/test-logo1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/transformerdesc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/tv-category-w-text.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/tv-category.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/tv-main-image.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/tv-main-page.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/tv.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/tv1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/tv2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/tv3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/tv4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/tvdesc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/twitter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ukraine-small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/us-flag.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/usa-flag-small.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/vilnius-business-center.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/vk.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/watching-tv.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/watching-tv1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/watching-tv2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/woden-s-store.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/woden-sims-store.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/zenbookdesc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tv/buy-tv/AppleTV.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tv/buy-tv/IMac.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tv/buy-tv/ShowTop.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/account/account-cancel-order.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/account/account-cancel-order.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/account/account-cancel-order.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/account/account-edit-billing.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/account/account-edit-billing.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/account/account-edit-billing.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/account.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/devices/buy-device/apple.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/laptops/buy-laptop/apple.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/phones/buy-phone/apple.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/devices/buy-device/apple.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/laptops/buy-laptop/apple.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/phones/buy-phone/apple.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/devices/buy-device/apple.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/laptops/buy-laptop/apple.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/phones/buy-phone/apple.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/laptops/buy-laptop/asus.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/laptops/buy-laptop/asus.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/laptops/buy-laptop/asus.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/bag.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/cart.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/account/change-data.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/account/change-data.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/account/change-data.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/close.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/support/get-support.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/support/get-support.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/support/get-support.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/business/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/business/devices/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/business/laptops/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/business/phones/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/contact/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/devices/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/devices/buy-device/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/education/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/education/laptops/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/education/phones/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/laptops/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/laptops/buy-laptop/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/phones/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/phones/buy-phone/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/support/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/business/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/business/devices/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/business/laptops/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/business/phones/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/contact/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/devices/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/devices/buy-device/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/education/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/education/laptops/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/education/phones/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/laptops/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/laptops/buy-laptop/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/phones/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/phones/buy-phone/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/support/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/business/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/business/devices/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/business/laptops/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/business/phones/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/contact/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/devices/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/devices/buy-device/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/education/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/education/laptops/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/education/phones/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/laptops/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/laptops/buy-laptop/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/phones/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/phones/buy-phone/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/support/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tv/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tv/buy-tv/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/account/remove.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/account/remove.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/account/remove.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/devices/buy-device/samsung.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/phones/buy-phone/samsung.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/devices/buy-device/samsung.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/phones/buy-phone/samsung.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/devices/buy-device/samsung.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/phones/buy-phone/samsung.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/search_white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/de/support/thanks-support.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fr/support/thanks-support.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ru/support/thanks-support.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\business\devices\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\business\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\business\laptops\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\business\phones\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\contact\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\devices\buy-device\apple.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\devices\buy-device\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\devices\buy-device\samsung.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\devices\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\education\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\education\laptops\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\education\phones\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\laptops\buy-laptop\apple.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\laptops\buy-laptop\asus.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\laptops\buy-laptop\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\laptops\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\phones\buy-phone\apple.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\phones\buy-phone\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\phones\buy-phone\samsung.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\phones\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\support\get-support.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\support\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\de\support\thanks-support.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\business\devices\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\business\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\business\laptops\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\business\phones\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\contact\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\devices\buy-device\apple.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\devices\buy-device\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\devices\buy-device\samsung.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\devices\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\education\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\education\laptops\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\education\phones\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\laptops\buy-laptop\apple.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\laptops\buy-laptop\asus.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\laptops\buy-laptop\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\laptops\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\phones\buy-phone\apple.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\phones\buy-phone\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\phones\buy-phone\samsung.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\phones\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\support\get-support.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\support\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\fr\support\thanks-support.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\business\devices\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\business\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\business\laptops\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\business\phones\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\contact\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\devices\buy-device\apple.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\devices\buy-device\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\devices\buy-device\samsung.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\devices\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\education\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\education\laptops\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\education\phones\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\laptops\buy-laptop\apple.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\laptops\buy-laptop\asus.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\laptops\buy-laptop\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\laptops\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\phones\buy-phone\apple.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\phones\buy-phone\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\phones\buy-phone\samsung.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\phones\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\support\get-support.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\support\index.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\Shop\ru\support\thanks-support.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/AccountBillingController.php" afterPath="$PROJECT_DIR$/Controllers/AccountBillingController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/AccountInfoController.php" afterPath="$PROJECT_DIR$/Controllers/AccountInfoController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/AccountOrderController.php" afterPath="$PROJECT_DIR$/Controllers/AccountOrderController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/AdminController.php" afterPath="$PROJECT_DIR$/Controllers/AdminController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/tv/buy-tv/AppleTV.php" afterPath="$PROJECT_DIR$/de/tv/buy-tv/AppleTV.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/tv/buy-tv/AppleTV.php" afterPath="$PROJECT_DIR$/fr/tv/buy-tv/AppleTV.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/tv/buy-tv/AppleTV.php" afterPath="$PROJECT_DIR$/ru/tv/buy-tv/AppleTV.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/CheckOrderController.php" afterPath="$PROJECT_DIR$/Controllers/CheckOrderController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/CheckoutController.php" afterPath="$PROJECT_DIR$/Controllers/CheckoutController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/DefaultController.php" afterPath="$PROJECT_DIR$/Controllers/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/DefaultModel.php" afterPath="$PROJECT_DIR$/Model/DefaultModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/DefaultView.php" afterPath="$PROJECT_DIR$/View/DefaultView.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/DescriptionModel.php" afterPath="$PROJECT_DIR$/Model/DescriptionModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/ForgotController.php" afterPath="$PROJECT_DIR$/Controllers/ForgotController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/tv/buy-tv/IMac.php" afterPath="$PROJECT_DIR$/de/tv/buy-tv/IMac.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/tv/buy-tv/IMac.php" afterPath="$PROJECT_DIR$/fr/tv/buy-tv/IMac.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/tv/buy-tv/IMac.php" afterPath="$PROJECT_DIR$/ru/tv/buy-tv/IMac.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/IndexView.php" afterPath="$PROJECT_DIR$/View/IndexView.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/LoginController.php" afterPath="$PROJECT_DIR$/Controllers/LoginController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/LoginModel.php" afterPath="$PROJECT_DIR$/Model/LoginModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/LoginView.php" afterPath="$PROJECT_DIR$/View/LoginView.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/OrderController.php" afterPath="$PROJECT_DIR$/Controllers/OrderController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PageNotFound.php" afterPath="$PROJECT_DIR$/PageNotFound.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/ProfileController.php" afterPath="$PROJECT_DIR$/Controllers/ProfileController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/SearchController.php" afterPath="$PROJECT_DIR$/Controllers/SearchController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/SearchView.php" afterPath="$PROJECT_DIR$/View/SearchView.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/ShopController.php" afterPath="$PROJECT_DIR$/Controllers/ShopController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/ShopView.php" afterPath="$PROJECT_DIR$/View/ShopView.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/tv/buy-tv/ShowTop.php" afterPath="$PROJECT_DIR$/de/tv/buy-tv/ShowTop.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/tv/buy-tv/ShowTop.php" afterPath="$PROJECT_DIR$/fr/tv/buy-tv/ShowTop.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/tv/buy-tv/ShowTop.php" afterPath="$PROJECT_DIR$/ru/tv/buy-tv/ShowTop.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/SubdescriptionController.php" afterPath="$PROJECT_DIR$/Controllers/SubdescriptionController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/SubdescriptionModel.php" afterPath="$PROJECT_DIR$/Model/SubdescriptionModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/View/SubdescriptionView.php" afterPath="$PROJECT_DIR$/View/SubdescriptionView.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/SupportController.php" afterPath="$PROJECT_DIR$/Controllers/SupportController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account/account-cancel-order.php" afterPath="$PROJECT_DIR$/account/account-cancel-order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account/account-edit-billing.php" afterPath="$PROJECT_DIR$/account/account-edit-billing.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/shop/add-item.php" afterPath="$PROJECT_DIR$/de/shop/add-item.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/shop/add-item.php" afterPath="$PROJECT_DIR$/fr/shop/add-item.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/shop/add-item.php" afterPath="$PROJECT_DIR$/ru/shop/add-item.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shop/add-item.php" afterPath="$PROJECT_DIR$/shop/add-item.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/admin-delete.php" afterPath="$PROJECT_DIR$/admin/admin-delete.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/admin-login.php" afterPath="$PROJECT_DIR$/admin/admin-login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/admin-logout.php" afterPath="$PROJECT_DIR$/admin/admin-logout.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/admin-orders.php" afterPath="$PROJECT_DIR$/admin/admin-orders.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/admin-products.php" afterPath="$PROJECT_DIR$/admin/admin-products.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/admin-save.php" afterPath="$PROJECT_DIR$/admin/admin-save.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/admin-solved.php" afterPath="$PROJECT_DIR$/admin/admin-solved.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/admin-support.php" afterPath="$PROJECT_DIR$/admin/admin-support.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/admin-update.php" afterPath="$PROJECT_DIR$/admin/admin-update.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/admin_action_login.php" afterPath="$PROJECT_DIR$/admin/admin_action_login.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\devices\buy-device\apple.php" afterPath="$PROJECT_DIR$/devices/buy-device/apple.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\laptops\buy-laptop\apple.php" afterPath="$PROJECT_DIR$/laptops/buy-laptop/apple.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\phones\buy-phone\apple.php" afterPath="$PROJECT_DIR$/phones/buy-phone/apple.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\laptops\buy-laptop\asus.php" afterPath="$PROJECT_DIR$/laptops/buy-laptop/asus.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account/billing.php" afterPath="$PROJECT_DIR$/account/billing.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/account/billing.php" afterPath="$PROJECT_DIR$/de/account/billing.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/account/billing.php" afterPath="$PROJECT_DIR$/fr/account/billing.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/account/billing.php" afterPath="$PROJECT_DIR$/ru/account/billing.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account/cart.php" afterPath="$PROJECT_DIR$/account/cart.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/account/cart.php" afterPath="$PROJECT_DIR$/de/account/cart.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/account/cart.php" afterPath="$PROJECT_DIR$/fr/account/cart.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/account/cart.php" afterPath="$PROJECT_DIR$/ru/account/cart.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account/change-data.php" afterPath="$PROJECT_DIR$/account/change-data.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/forgot-password/check-data.php" afterPath="$PROJECT_DIR$/de/forgot-password/check-data.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forgot-password/check-data.php" afterPath="$PROJECT_DIR$/forgot-password/check-data.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/forgot-password/check-data.php" afterPath="$PROJECT_DIR$/fr/forgot-password/check-data.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/forgot-password/check-data.php" afterPath="$PROJECT_DIR$/ru/forgot-password/check-data.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/check.php" afterPath="$PROJECT_DIR$/check.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account/complete-order.php" afterPath="$PROJECT_DIR$/account/complete-order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/account/complete-order.php" afterPath="$PROJECT_DIR$/de/account/complete-order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/account/complete-order.php" afterPath="$PROJECT_DIR$/fr/account/complete-order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/account/complete-order.php" afterPath="$PROJECT_DIR$/ru/account/complete-order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/done-admin.php" afterPath="$PROJECT_DIR$/admin/done-admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\support\get-support.php" afterPath="$PROJECT_DIR$/support/get-support.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FAQ/index.php" afterPath="$PROJECT_DIR$/FAQ/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about/index.php" afterPath="$PROJECT_DIR$/about/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account/index.php" afterPath="$PROJECT_DIR$/account/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/index.php" afterPath="$PROJECT_DIR$/admin/index.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\business\index.php" afterPath="$PROJECT_DIR$/business/index.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\business\devices\index.php" afterPath="$PROJECT_DIR$/business/devices/index.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\business\laptops\index.php" afterPath="$PROJECT_DIR$/business/laptops/index.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\business\phones\index.php" afterPath="$PROJECT_DIR$/business/phones/index.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\contact\index.php" afterPath="$PROJECT_DIR$/contact/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/index.php" afterPath="$PROJECT_DIR$/de/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/FAQ/index.php" afterPath="$PROJECT_DIR$/de/FAQ/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/about/index.php" afterPath="$PROJECT_DIR$/de/about/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/account/index.php" afterPath="$PROJECT_DIR$/de/account/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/financing/index.php" afterPath="$PROJECT_DIR$/de/financing/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/forgot-password/index.php" afterPath="$PROJECT_DIR$/de/forgot-password/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/jobs/index.php" afterPath="$PROJECT_DIR$/de/jobs/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/order-status/index.php" afterPath="$PROJECT_DIR$/de/order-status/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/privacy-policy/index.php" afterPath="$PROJECT_DIR$/de/privacy-policy/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/store/index.php" afterPath="$PROJECT_DIR$/de/store/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/terms/index.php" afterPath="$PROJECT_DIR$/de/terms/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/tv/index.php" afterPath="$PROJECT_DIR$/de/tv/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/tv/buy-tv/index.php" afterPath="$PROJECT_DIR$/de/tv/buy-tv/index.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\devices\index.php" afterPath="$PROJECT_DIR$/devices/index.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\devices\buy-device\index.php" afterPath="$PROJECT_DIR$/devices/buy-device/index.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\education\index.php" afterPath="$PROJECT_DIR$/education/index.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\education\laptops\index.php" afterPath="$PROJECT_DIR$/education/laptops/index.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\education\phones\index.php" afterPath="$PROJECT_DIR$/education/phones/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/financing/index.php" afterPath="$PROJECT_DIR$/financing/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forgot-password/index.php" afterPath="$PROJECT_DIR$/forgot-password/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/index.php" afterPath="$PROJECT_DIR$/fr/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/FAQ/index.php" afterPath="$PROJECT_DIR$/fr/FAQ/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/about/index.php" afterPath="$PROJECT_DIR$/fr/about/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/account/index.php" afterPath="$PROJECT_DIR$/fr/account/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/financing/index.php" afterPath="$PROJECT_DIR$/fr/financing/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/forgot-password/index.php" afterPath="$PROJECT_DIR$/fr/forgot-password/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/jobs/index.php" afterPath="$PROJECT_DIR$/fr/jobs/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/order-status/index.php" afterPath="$PROJECT_DIR$/fr/order-status/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/privacy-policy/index.php" afterPath="$PROJECT_DIR$/fr/privacy-policy/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/store/index.php" afterPath="$PROJECT_DIR$/fr/store/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/terms/index.php" afterPath="$PROJECT_DIR$/fr/terms/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/tv/index.php" afterPath="$PROJECT_DIR$/fr/tv/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/tv/buy-tv/index.php" afterPath="$PROJECT_DIR$/fr/tv/buy-tv/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobs/index.php" afterPath="$PROJECT_DIR$/jobs/index.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\laptops\index.php" afterPath="$PROJECT_DIR$/laptops/index.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\laptops\buy-laptop\index.php" afterPath="$PROJECT_DIR$/laptops/buy-laptop/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/order-status/index.php" afterPath="$PROJECT_DIR$/order-status/index.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\phones\index.php" afterPath="$PROJECT_DIR$/phones/index.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\phones\buy-phone\index.php" afterPath="$PROJECT_DIR$/phones/buy-phone/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/privacy-policy/index.php" afterPath="$PROJECT_DIR$/privacy-policy/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/index.php" afterPath="$PROJECT_DIR$/ru/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/FAQ/index.php" afterPath="$PROJECT_DIR$/ru/FAQ/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/about/index.php" afterPath="$PROJECT_DIR$/ru/about/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/account/index.php" afterPath="$PROJECT_DIR$/ru/account/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/financing/index.php" afterPath="$PROJECT_DIR$/ru/financing/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/forgot-password/index.php" afterPath="$PROJECT_DIR$/ru/forgot-password/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/jobs/index.php" afterPath="$PROJECT_DIR$/ru/jobs/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/order-status/index.php" afterPath="$PROJECT_DIR$/ru/order-status/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/privacy-policy/index.php" afterPath="$PROJECT_DIR$/ru/privacy-policy/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/store/index.php" afterPath="$PROJECT_DIR$/ru/store/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/terms/index.php" afterPath="$PROJECT_DIR$/ru/terms/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/tv/index.php" afterPath="$PROJECT_DIR$/ru/tv/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/tv/buy-tv/index.php" afterPath="$PROJECT_DIR$/ru/tv/buy-tv/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/store/index.php" afterPath="$PROJECT_DIR$/store/index.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\support\index.php" afterPath="$PROJECT_DIR$/support/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/terms/index.php" afterPath="$PROJECT_DIR$/terms/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/login.php" afterPath="$PROJECT_DIR$/de/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/login.php" afterPath="$PROJECT_DIR$/fr/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/login.php" afterPath="$PROJECT_DIR$/ru/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logout.php" afterPath="$PROJECT_DIR$/logout.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/logout.php" afterPath="$PROJECT_DIR$/de/logout.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/logout.php" afterPath="$PROJECT_DIR$/fr/logout.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/logout.php" afterPath="$PROJECT_DIR$/ru/logout.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mydata.sql" afterPath="$PROJECT_DIR$/mydata.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account/orders.php" afterPath="$PROJECT_DIR$/account/orders.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/account/orders.php" afterPath="$PROJECT_DIR$/de/account/orders.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/account/orders.php" afterPath="$PROJECT_DIR$/fr/account/orders.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/account/orders.php" afterPath="$PROJECT_DIR$/ru/account/orders.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account/placeorder.php" afterPath="$PROJECT_DIR$/account/placeorder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/account/placeorder.php" afterPath="$PROJECT_DIR$/de/account/placeorder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/account/placeorder.php" afterPath="$PROJECT_DIR$/fr/account/placeorder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/account/placeorder.php" afterPath="$PROJECT_DIR$/ru/account/placeorder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/pull-back-admin.php" afterPath="$PROJECT_DIR$/admin/pull-back-admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/register.php" afterPath="$PROJECT_DIR$/register.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/register.php" afterPath="$PROJECT_DIR$/de/register.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/register.php" afterPath="$PROJECT_DIR$/fr/register.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/register.php" afterPath="$PROJECT_DIR$/ru/register.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account/remove.php" afterPath="$PROJECT_DIR$/account/remove.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/search/result.php" afterPath="$PROJECT_DIR$/de/search/result.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/search/result.php" afterPath="$PROJECT_DIR$/fr/search/result.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/search/result.php" afterPath="$PROJECT_DIR$/ru/search/result.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/result.php" afterPath="$PROJECT_DIR$/search/result.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\devices\buy-device\samsung.php" afterPath="$PROJECT_DIR$/devices/buy-device/samsung.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\phones\buy-phone\samsung.php" afterPath="$PROJECT_DIR$/phones/buy-phone/samsung.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/search.js" afterPath="$PROJECT_DIR$/js/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/order-status/single.php" afterPath="$PROJECT_DIR$/de/order-status/single.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/order-status/single.php" afterPath="$PROJECT_DIR$/fr/order-status/single.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/order-status/single.php" afterPath="$PROJECT_DIR$/order-status/single.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/order-status/single.php" afterPath="$PROJECT_DIR$/ru/order-status/single.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/shop/subdescription.php" afterPath="$PROJECT_DIR$/de/shop/subdescription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/shop/subdescription.php" afterPath="$PROJECT_DIR$/fr/shop/subdescription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/shop/subdescription.php" afterPath="$PROJECT_DIR$/ru/shop/subdescription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shop/subdescription.php" afterPath="$PROJECT_DIR$/shop/subdescription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/de/shop/thanks-order.php" afterPath="$PROJECT_DIR$/de/shop/thanks-order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fr/shop/thanks-order.php" afterPath="$PROJECT_DIR$/fr/shop/thanks-order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ru/shop/thanks-order.php" afterPath="$PROJECT_DIR$/ru/shop/thanks-order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shop/thanks-order.php" afterPath="$PROJECT_DIR$/shop/thanks-order.php" />
+      <change type="MODIFICATION" beforePath="C:\xampp\htdocs\Shop\support\thanks-support.php" afterPath="$PROJECT_DIR$/support/thanks-support.php" />
+    </list>
+    <list id="9780980e-caf2-428a-810d-43f14410fa19" name="Failed commit: Default" comment="Added DRY code" />
+    <list id="880fb540-3e6c-40d0-87bb-a4a85673e09e" name="Bugged" comment="Failed to commit due to renaming" />
+    <list id="48229179-07dd-496f-bdb2-f6d529b9a26a" name="Failed due to git" comment="" />
+    <ignored path="Shop.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Shop" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="SubdescriptionController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controllers/SubdescriptionController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-82.42308">
+              <caret line="694" column="0" selection-start-line="694" selection-start-column="0" selection-end-line="694" selection-end-column="0" />
+              <folding>
+                <marker date="1454325227222" expanded="true" signature="1960:2776" placeholder="SELECT origi..subdescription..." />
+                <marker date="1454325227222" expanded="true" signature="6530:6594" placeholder="SELECT price..." />
+                <marker date="1454325227222" expanded="true" signature="8905:9069" placeholder="SELECT id, p..." />
+                <marker date="1454325227222" expanded="true" signature="10819:11085" placeholder="SELECT phone..phones..." />
+                <marker date="1454325227222" expanded="true" signature="12075:12215" placeholder="SELECT id, o..." />
+                <marker date="1454325227222" expanded="true" signature="14865:14929" placeholder="SELECT DISTI..." />
+                <marker date="1454325227222" expanded="true" signature="15845:15914" placeholder="SELECT * FRO..." />
+                <marker date="1454325227222" expanded="true" signature="17887:17930" placeholder="SELECT UNIX_..." />
+                <marker date="1454325227222" expanded="true" signature="18913:18989" placeholder="SELECT assoc..subdescription..." />
+                <marker date="1454325227222" expanded="true" signature="19634:19759" placeholder="SELECT id, p..." />
+                <marker date="1454325227222" expanded="true" signature="21861:21981" placeholder="SELECT id FR..questions..." />
+                <marker date="1454325227222" expanded="true" signature="23169:23289" placeholder="SELECT produ..questions..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SubdescriptionView.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/View/SubdescriptionView.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="6.146538">
+              <caret line="817" column="38" selection-start-line="817" selection-start-column="30" selection-end-line="817" selection-end-column="38" />
+              <folding>
+                <marker date="1454355124798" expanded="true" signature="971:1431" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="1012:1431" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="1108:1236" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="1281:1431" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="2776:2787" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="3782:3799" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="4049:4391" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="4108:4129" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="4141:4178" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="4562:4580" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="4701:4715" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="4716:5747" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="4850:4882" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="4883:5718" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="5858:6298" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="5912:6267" placeholder="{...}" />
+                <marker date="1454355124798" expanded="true" signature="5967:6239" placeholder="{&quot;slideWidth&quot;: 200...}" />
+                <marker date="1454355124798" expanded="false" signature="6571:6607" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="7038:7074" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="7075:7237" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="7124:7142" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="7573:7609" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="7961:7997" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="8349:8385" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="8737:8773" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="9125:9161" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="9518:11693" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="9561:10126" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="9737:10097" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="10176:10192" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="10193:11693" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="10247:10555" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="10612:10629" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="10630:11410" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="10668:11377" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="11471:11693" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="11515:11693" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="12105:13388" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="12164:12499" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="12258:12314" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="12315:12456" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="13507:14892" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="13576:14859" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="13635:13910" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="13704:13867" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="15021:15038" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="15039:15239" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="15105:15239" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="15359:17134" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="15414:15888" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="15480:15491" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="15630:15641" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="15749:15761" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="15944:17101" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="16019:17063" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="16107:16245" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="17294:17311" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="17312:18315" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="17373:17566" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="17608:18315" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="17659:17803" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="17919:17957" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="17958:18315" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="19431:19467" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="19911:20130" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="19979:20130" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="20004:20130" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="20029:20130" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="20066:20124" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="20235:20246" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="20247:20565" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="20295:20539" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="20675:20794" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="20702:20794" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="20894:21101" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="20941:21077" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="21190:21280" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="21369:21674" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="21412:21654" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="21757:21850" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="21939:22248" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="21982:22228" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="22331:22423" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="22512:22713" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="22555:22693" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="22796:22898" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="22987:23183" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="23030:23163" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="23266:23363" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="23452:23769" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="23495:23749" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="23852:23965" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="24054:24234" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="24097:24214" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="24317:24418" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="24507:24700" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="24550:24680" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="24783:24892" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="24981:25178" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="25024:25158" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="25261:25400" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="25302:25394" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="25497:25589" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="25590:26493" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="25633:26473" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="25694:26448" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="26759:27257" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="26800:27257" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="26840:27257" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="26944:27257" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="27008:27257" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="27089:27103" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="27531:27548" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="27549:27905" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="27654:27905" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="29127:29144" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="29145:30390" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="29241:30366" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="29300:30337" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="29335:29674" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="29382:29413" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="29529:29546" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="29709:30302" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="29756:29787" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="29899:29916" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="29917:30266" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="30590:30607" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="30608:30778" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="30720:30778" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="31798:31815" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="31816:31971" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="31884:31971" placeholder="..." />
+                <marker date="1454355124798" expanded="false" signature="32298:32360" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="34504:34714" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="34600:34714" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="34870:34991" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="34906:34968" placeholder="{...}" />
+                <marker date="1454355124798" expanded="true" signature="35075:36048" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="35163:36027" placeholder="..." />
+                <marker date="1454355124798" expanded="true" signature="35319:36002" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Html5" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/tv/buy-tv/IMac.php" />
+        <option value="$PROJECT_DIR$/tv/buy-tv/index.php" />
+        <option value="$PROJECT_DIR$/tv/buy-tv/ShowTop.php" />
+        <option value="$PROJECT_DIR$/check.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/logout.php" />
+        <option value="$PROJECT_DIR$/PageNotFound.php" />
+        <option value="$PROJECT_DIR$/register.php" />
+        <option value="$PROJECT_DIR$/tv/index.php" />
+        <option value="$PROJECT_DIR$/de/tv/index.php" />
+        <option value="$PROJECT_DIR$/fr/tv/index.php" />
+        <option value="$PROJECT_DIR$/ru/tv/index.php" />
+        <option value="$PROJECT_DIR$/Controllers/AccountBillingController.php" />
+        <option value="$PROJECT_DIR$/Controllers/AccountInfoController.php" />
+        <option value="$PROJECT_DIR$/Controllers/AccountOrderController.php" />
+        <option value="$PROJECT_DIR$/Controllers/AdminController.php" />
+        <option value="$PROJECT_DIR$/Controllers/CheckOrderController.php" />
+        <option value="$PROJECT_DIR$/Controllers/CheckoutController.php" />
+        <option value="$PROJECT_DIR$/Controllers/ForgotController.php" />
+        <option value="$PROJECT_DIR$/Controllers/LoginController.php" />
+        <option value="$PROJECT_DIR$/Controllers/OrderController.php" />
+        <option value="$PROJECT_DIR$/Controllers/ProfileController.php" />
+        <option value="$PROJECT_DIR$/Controllers/SearchController.php" />
+        <option value="$PROJECT_DIR$/Controllers/SupportController.php" />
+        <option value="$PROJECT_DIR$/View/SearchView.php" />
+        <option value="$PROJECT_DIR$/ru/register.php" />
+        <option value="$PROJECT_DIR$/ru/logout.php" />
+        <option value="$PROJECT_DIR$/ru/login.php" />
+        <option value="$PROJECT_DIR$/fr/login.php" />
+        <option value="$PROJECT_DIR$/fr/logout.php" />
+        <option value="$PROJECT_DIR$/fr/register.php" />
+        <option value="$PROJECT_DIR$/de/login.php" />
+        <option value="$PROJECT_DIR$/de/logout.php" />
+        <option value="$PROJECT_DIR$/de/register.php" />
+        <option value="$PROJECT_DIR$/Model/LoginModel.php" />
+        <option value="$PROJECT_DIR$/View/DefaultView.php" />
+        <option value="$PROJECT_DIR$/Model/SubdescriptionModel.php" />
+        <option value="$PROJECT_DIR$/Storage.php" />
+        <option value="$PROJECT_DIR$/Controllers/SubdescriptionController.php" />
+        <option value="$PROJECT_DIR$/Model/DescriptionModel.php" />
+        <option value="$PROJECT_DIR$/Model/DefaultModel.php" />
+        <option value="$PROJECT_DIR$/View/ShopView.php" />
+        <option value="$PROJECT_DIR$/phones/index.php" />
+        <option value="$PROJECT_DIR$/phones/buy-phone/index.php" />
+        <option value="$PROJECT_DIR$/Controllers/ShopController.php" />
+        <option value="$PROJECT_DIR$/Controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
+        <option value="$PROJECT_DIR$/js/search.js" />
+        <option value="$PROJECT_DIR$/View/IndexView.php" />
+        <option value="$PROJECT_DIR$/js/test.js" />
+        <option value="$PROJECT_DIR$/View/SubdescriptionView.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="784" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Shop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../apache/conf/httpd.conf" />
+    <property name="FullScreen" value="false" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="recentsLimit" value="5" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Shop\ru" />
+      <recent name="C:\xampp\htdocs\Shop\fr" />
+      <recent name="C:\xampp\htdocs\Shop\de" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Shop\shop" />
+      <recent name="C:\xampp\htdocs\Shop\" />
+      <recent name="C:\xampp\htdocs\Shop\tv\" />
+      <recent name="C:\xampp\htdocs\Shop\laptops\" />
+      <recent name="C:\xampp\htdocs\Shop\devices\" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHP Script.index.php">
+    <configuration default="false" name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/laptops/index.php">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="999f2767-ea84-4252-88a2-2fa59e55c9f1" server_name="Woden Sims">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.index.php" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.index.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="064b123e-be6f-4615-8776-8dbb2cdc9e09" name="Default" comment="" />
+      <changelist id="880fb540-3e6c-40d0-87bb-a4a85673e09e" name="Bugged" comment="Failed to commit due to renaming" />
+      <changelist id="48229179-07dd-496f-bdb2-f6d529b9a26a" name="Failed due to git" comment="" />
+      <created>1447339728392</created>
+      <option name="number" value="Default" />
+      <updated>1447339728392</updated>
+    </task>
+    <task id="LOCAL-00148" summary="Added registration">
+      <created>1452300832570</created>
+      <option name="number" value="00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1452300832570</updated>
+    </task>
+    <task id="LOCAL-00149" summary="Fixed registration page">
+      <created>1452345661742</created>
+      <option name="number" value="00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1452345661742</updated>
+    </task>
+    <task id="LOCAL-00150" summary="Added login page">
+      <created>1452358374723</created>
+      <option name="number" value="00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1452358374738</updated>
+    </task>
+    <task id="LOCAL-00151" summary="Added first step of recovering password">
+      <created>1452464942584</created>
+      <option name="number" value="00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1452464942584</updated>
+    </task>
+    <task id="LOCAL-00152" summary="Added second step for recovering password">
+      <created>1452468546852</created>
+      <option name="number" value="00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1452468546852</updated>
+    </task>
+    <task id="LOCAL-00153" summary="Added last step for recovering password">
+      <created>1452472810697</created>
+      <option name="number" value="00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1452472810697</updated>
+    </task>
+    <task id="LOCAL-00154" summary="Saved data from injection , Forgot Login">
+      <created>1452525075699</created>
+      <option name="number" value="00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1452525075699</updated>
+    </task>
+    <task id="LOCAL-00155" summary="Fixed bug with recovering password">
+      <created>1452528628029</created>
+      <option name="number" value="00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1452528628030</updated>
+    </task>
+    <task id="LOCAL-00156" summary="Fixed recovering password breadcrumbs">
+      <created>1452529272285</created>
+      <option name="number" value="00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1452529272286</updated>
+    </task>
+    <task id="LOCAL-00157" summary="Fixed changing account data View">
+      <created>1452544014750</created>
+      <option name="number" value="00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1452544014750</updated>
+    </task>
+    <task id="LOCAL-00158" summary="Added change account email">
+      <created>1452547862261</created>
+      <option name="number" value="00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1452547862261</updated>
+    </task>
+    <task id="LOCAL-00159" summary="Added changing account first name and last name">
+      <created>1452551505514</created>
+      <option name="number" value="00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1452551505515</updated>
+    </task>
+    <task id="LOCAL-00160" summary="Added change password for account">
+      <created>1452552427271</created>
+      <option name="number" value="00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1452552427271</updated>
+    </task>
+    <task id="LOCAL-00161" summary="Fixed prefixes for GET param, Change account data">
+      <created>1452552935368</created>
+      <option name="number" value="00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1452552935368</updated>
+    </task>
+    <task id="LOCAL-00162" summary="Fixed account">
+      <created>1452631618314</created>
+      <option name="number" value="00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1452631618314</updated>
+    </task>
+    <task id="LOCAL-00163" summary="Fixed pages till education">
+      <created>1452642228280</created>
+      <option name="number" value="00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1452642228281</updated>
+    </task>
+    <task id="LOCAL-00164" summary="Added search button">
+      <created>1452652785908</created>
+      <option name="number" value="00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1452652785908</updated>
+    </task>
+    <task id="LOCAL-00165" summary="Added search button">
+      <created>1452734429079</created>
+      <option name="number" value="00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1452734429094</updated>
+    </task>
+    <task id="LOCAL-00166" summary="Fixed order status">
+      <created>1452966859442</created>
+      <option name="number" value="00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1452966859442</updated>
+    </task>
+    <task id="LOCAL-00167" summary="Fixed non-reliable data">
+      <created>1453086924105</created>
+      <option name="number" value="00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1453086924121</updated>
+    </task>
+    <task id="LOCAL-00168" summary="Fixed bug with -shop prefix">
+      <created>1453150764168</created>
+      <option name="number" value="00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1453150764168</updated>
+    </task>
+    <task id="LOCAL-00169" summary="Fixed breadcrumbs">
+      <created>1453158277700</created>
+      <option name="number" value="00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1453158277700</updated>
+    </task>
+    <task id="LOCAL-00170" summary="Fixed FAQ">
+      <created>1453162731310</created>
+      <option name="number" value="00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1453162731310</updated>
+    </task>
+    <task id="LOCAL-00171" summary="fixed admin login">
+      <created>1453165555713</created>
+      <option name="number" value="00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1453165555717</updated>
+    </task>
+    <task id="LOCAL-00172" summary="Fixed bug with i18n links">
+      <created>1453168153737</created>
+      <option name="number" value="00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1453168153737</updated>
+    </task>
+    <task id="LOCAL-00173" summary="Added i18n language triggers">
+      <created>1453239481677</created>
+      <option name="number" value="00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1453239481677</updated>
+    </task>
+    <task id="LOCAL-00174" summary="Fixed bugs &amp; i18n &amp; more common style">
+      <created>1453406130120</created>
+      <option name="number" value="00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1453406130120</updated>
+    </task>
+    <task id="LOCAL-00175" summary="Added russian i18n">
+      <created>1453415085714</created>
+      <option name="number" value="00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1453415085714</updated>
+    </task>
+    <task id="LOCAL-00176" summary="Added DE i18n">
+      <created>1453486660987</created>
+      <option name="number" value="00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1453486660987</updated>
+    </task>
+    <task id="LOCAL-00177" summary="Added FR language">
+      <created>1453573640148</created>
+      <option name="number" value="00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1453573640164</updated>
+    </task>
+    <task id="LOCAL-00178" summary="Fixed FR language">
+      <created>1453593029909</created>
+      <option name="number" value="00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1453593029909</updated>
+    </task>
+    <task id="LOCAL-00179" summary="Fixed DE language">
+      <created>1453595272760</created>
+      <option name="number" value="00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1453595272760</updated>
+    </task>
+    <task id="LOCAL-00180" summary="Added first-half of search database">
+      <created>1453676716169</created>
+      <option name="number" value="00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1453676716169</updated>
+    </task>
+    <task id="LOCAL-00181" summary="Fixed navbar with scrolling">
+      <created>1453760708032</created>
+      <option name="number" value="00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1453760708032</updated>
+    </task>
+    <task id="LOCAL-00182" summary="Added Search DB">
+      <created>1453774707865</created>
+      <option name="number" value="00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1453774707865</updated>
+    </task>
+    <task id="LOCAL-00183" summary="Added Search">
+      <created>1453838782772</created>
+      <option name="number" value="00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1453838782772</updated>
+    </task>
+    <task id="LOCAL-00184" summary="Fixed search, added i18n, fixed sql-injection, redirecting after smth went wrong">
+      <created>1453843054240</created>
+      <option name="number" value="00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1453843054240</updated>
+    </task>
+    <task id="LOCAL-00185" summary="Added laptops subdescription data">
+      <created>1453907553363</created>
+      <option name="number" value="00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1453907553363</updated>
+    </task>
+    <task id="LOCAL-00186" summary="Added sub description for each product">
+      <created>1453923657933</created>
+      <option name="number" value="00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1453923657934</updated>
+    </task>
+    <task id="LOCAL-00187" summary="Added shopping pagination, fixed search pagination">
+      <created>1453931558570</created>
+      <option name="number" value="00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1453931558570</updated>
+    </task>
+    <task id="LOCAL-00188" summary="Fixed bugs with breadcrumbs, shopping page">
+      <created>1453932867918</created>
+      <option name="number" value="00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1453932867918</updated>
+    </task>
+    <task id="LOCAL-00189" summary="Secured directories, added no data found for Shop">
+      <created>1453938316645</created>
+      <option name="number" value="00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1453938316645</updated>
+    </task>
+    <task id="LOCAL-00190" summary="Fixed layout, removed non reliable data from classes">
+      <created>1454023910119</created>
+      <option name="number" value="00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1454023910134</updated>
+    </task>
+    <task id="LOCAL-00191" summary="Fixed shop pagination, removed non-reliable data from classes">
+      <created>1454028809423</created>
+      <option name="number" value="00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1454028809423</updated>
+    </task>
+    <task id="LOCAL-00192" summary="Fixed bug with pagination, added data for FAQ">
+      <created>1454111444804</created>
+      <option name="number" value="00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1454111444805</updated>
+    </task>
+    <task id="LOCAL-00193" summary="Added data for FAQ">
+      <created>1454122482602</created>
+      <option name="number" value="00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1454122482602</updated>
+    </task>
+    <task id="LOCAL-00194" summary="Fixed bugs Admin, Login pages">
+      <created>1454187744898</created>
+      <option name="number" value="00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1454187744898</updated>
+    </task>
+    <task id="LOCAL-00195" summary="Added documentation for Controllers">
+      <created>1454197864744</created>
+      <option name="number" value="00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1454197864745</updated>
+    </task>
+    <task id="LOCAL-00196" summary="Fixed views">
+      <created>1454265316057</created>
+      <option name="number" value="00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1454265316058</updated>
+    </task>
+    <option name="localTasksCounter" value="197" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24158126" sideWeight="0.4948148" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24158126" sideWeight="0.5051852" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixed bugs &amp; i18n &amp; more common style" />
+    <MESSAGE value="Added russian i18n" />
+    <MESSAGE value="Added DE i18n" />
+    <MESSAGE value="Added FR language" />
+    <MESSAGE value="Fixed FR language" />
+    <MESSAGE value="Fixed DE language" />
+    <MESSAGE value="Added first-half of search database" />
+    <MESSAGE value="Fixed navbar with scrolling" />
+    <MESSAGE value="Added Search DB" />
+    <MESSAGE value="Added Search" />
+    <MESSAGE value="Fixed search, added i18n, fixed sql-injection, redirecting after smth went wrong" />
+    <MESSAGE value="Added laptops subdescription data" />
+    <MESSAGE value="Added sub description for each product" />
+    <MESSAGE value="Added shopping pagination, fixed search pagination" />
+    <MESSAGE value="Fixed bugs with breadcrumbs, shopping page" />
+    <MESSAGE value="Secured directories, added no data found for Shop" />
+    <MESSAGE value="Fixed layout, removed non reliable data from classes" />
+    <MESSAGE value="Fixed shop pagination, removed non-reliable data from classes" />
+    <MESSAGE value="Fixed bug with pagination, added data for FAQ" />
+    <MESSAGE value="Added data for FAQ" />
+    <MESSAGE value="Fixed bugs Admin, Login pages" />
+    <MESSAGE value="Added documentation for Controllers" />
+    <MESSAGE value="Fixed views" />
+    <MESSAGE value="Fixed Views" />
+    <MESSAGE value="Fixed data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed data" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="17" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Controllers/AccountInfoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.581818">
+          <caret line="77" column="58" selection-start-line="77" selection-start-column="51" selection-end-line="77" selection-end-column="58" />
+          <folding>
+            <element signature="e#7#348#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/AccountOrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.581818">
+          <caret line="276" column="21" selection-start-line="276" selection-start-column="14" selection-end-line="276" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.890909">
+          <caret line="307" column="0" selection-start-line="307" selection-start-column="0" selection-end-line="307" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/CheckOrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.581818">
+          <caret line="120" column="21" selection-start-line="120" selection-start-column="14" selection-end-line="120" selection-end-column="21" />
+          <folding>
+            <element signature="e#7#261#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/CheckoutController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.581818">
+          <caret line="43" column="58" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/ForgotController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.581818">
+          <caret line="333" column="21" selection-start-line="333" selection-start-column="14" selection-end-line="333" selection-end-column="21" />
+          <folding>
+            <element signature="e#7#377#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.581818">
+          <caret line="259" column="21" selection-start-line="259" selection-start-column="14" selection-end-line="259" selection-end-column="21" />
+          <folding>
+            <element signature="e#7#271#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/OrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.581818">
+          <caret line="170" column="21" selection-start-line="170" selection-start-column="14" selection-end-line="170" selection-end-column="21" />
+          <folding>
+            <element signature="e#7#270#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/ProfileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2727273">
+          <caret line="383" column="9" selection-start-line="383" selection-start-column="9" selection-end-line="383" selection-end-column="9" />
+          <folding>
+            <element signature="e#7#338#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/SupportController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39695945">
+          <caret line="132" column="21" selection-start-line="132" selection-start-column="14" selection-end-line="132" selection-end-column="21" />
+          <folding>
+            <element signature="e#7#244#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/SearchView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6554054">
+          <caret line="146" column="25" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/result.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/SearchController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.84863126">
+          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+          <folding>
+            <element signature="e#7#189#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ru/tv/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.082125604">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ru/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ru/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.136876">
+          <caret line="10" column="62" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ru/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1095008">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ru/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.136876">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fr/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.082125604">
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fr/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.136876">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fr/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.082125604">
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.136876">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/de/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.136876">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/LoginView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#214#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/LoginModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8083736">
+          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Languages/lang.fr.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33277026">
+          <caret line="34" column="10" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/DefaultView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7793881">
+          <caret line="524" column="14" selection-start-line="524" selection-start-column="14" selection-end-line="524" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/AssocModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/ComparisonModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/SequenceModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/SortModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/SubdescriptionModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46537843">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Storage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46537843">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/DescriptionModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5743243">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/DefaultModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.818182">
+          <caret line="125" column="46" selection-start-line="125" selection-start-column="46" selection-end-line="125" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/ShopView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30405405">
+          <caret line="331" column="0" selection-start-line="331" selection-start-column="0" selection-end-line="331" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phones/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4380032">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/ShopController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.581818">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="26" />
+          <folding>
+            <element signature="e#7#302#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phones/buy-phone/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.547504">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/IndexView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769">
+          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+          <folding>
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1454331385939" expanded="true" signature="-1:-1" placeholder="{&quot;auto&quot;: true...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.867742">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.bxslider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-34.445133">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mydata.sql">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28764805">
+          <caret line="1873" column="21" selection-start-line="1873" selection-start-column="21" selection-end-line="1873" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.153013">
+          <caret line="265" column="0" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.6409018">
+          <caret line="133" column="63" selection-start-line="133" selection-start-column="63" selection-end-line="133" selection-end-column="63" />
+          <folding>
+            <marker date="1454329686033" expanded="true" signature="-1:-1" placeholder="SELECT price..orderedItems..." />
+            <marker date="1454329686033" expanded="true" signature="-1:-1" placeholder="SELECT quant..orderedItems..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/SubdescriptionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-82.42308">
+          <caret line="694" column="0" selection-start-line="694" selection-start-column="0" selection-end-line="694" selection-end-column="0" />
+          <folding>
+            <marker date="1454325227222" expanded="true" signature="1960:2776" placeholder="SELECT origi..subdescription..." />
+            <marker date="1454325227222" expanded="true" signature="6530:6594" placeholder="SELECT price..." />
+            <marker date="1454325227222" expanded="true" signature="8905:9069" placeholder="SELECT id, p..." />
+            <marker date="1454325227222" expanded="true" signature="10819:11085" placeholder="SELECT phone..phones..." />
+            <marker date="1454325227222" expanded="true" signature="12075:12215" placeholder="SELECT id, o..." />
+            <marker date="1454325227222" expanded="true" signature="14865:14929" placeholder="SELECT DISTI..." />
+            <marker date="1454325227222" expanded="true" signature="15845:15914" placeholder="SELECT * FRO..." />
+            <marker date="1454325227222" expanded="true" signature="17887:17930" placeholder="SELECT UNIX_..." />
+            <marker date="1454325227222" expanded="true" signature="18913:18989" placeholder="SELECT assoc..subdescription..." />
+            <marker date="1454325227222" expanded="true" signature="19634:19759" placeholder="SELECT id, p..." />
+            <marker date="1454325227222" expanded="true" signature="21861:21981" placeholder="SELECT id FR..questions..." />
+            <marker date="1454325227222" expanded="true" signature="23169:23289" placeholder="SELECT produ..questions..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/SubdescriptionView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.146538">
+          <caret line="817" column="38" selection-start-line="817" selection-start-column="30" selection-end-line="817" selection-end-column="38" />
+          <folding>
+            <marker date="1454355124798" expanded="true" signature="971:1431" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="1012:1431" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="1108:1236" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="1281:1431" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="2776:2787" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="3782:3799" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="4049:4391" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="4108:4129" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="4141:4178" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="4562:4580" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="4701:4715" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="4716:5747" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="4850:4882" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="4883:5718" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="5858:6298" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="5912:6267" placeholder="{...}" />
+            <marker date="1454355124798" expanded="true" signature="5967:6239" placeholder="{&quot;slideWidth&quot;: 200...}" />
+            <marker date="1454355124798" expanded="false" signature="6571:6607" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="7038:7074" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="7075:7237" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="7124:7142" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="7573:7609" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="7961:7997" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="8349:8385" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="8737:8773" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="9125:9161" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="9518:11693" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="9561:10126" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="9737:10097" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="10176:10192" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="10193:11693" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="10247:10555" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="10612:10629" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="10630:11410" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="10668:11377" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="11471:11693" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="11515:11693" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="12105:13388" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="12164:12499" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="12258:12314" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="12315:12456" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="13507:14892" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="13576:14859" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="13635:13910" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="13704:13867" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="15021:15038" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="15039:15239" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="15105:15239" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="15359:17134" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="15414:15888" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="15480:15491" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="15630:15641" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="15749:15761" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="15944:17101" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="16019:17063" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="16107:16245" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="17294:17311" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="17312:18315" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="17373:17566" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="17608:18315" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="17659:17803" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="17919:17957" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="17958:18315" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="19431:19467" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="19911:20130" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="19979:20130" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="20004:20130" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="20029:20130" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="20066:20124" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="20235:20246" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="20247:20565" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="20295:20539" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="20675:20794" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="20702:20794" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="20894:21101" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="20941:21077" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="21190:21280" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="21369:21674" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="21412:21654" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="21757:21850" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="21939:22248" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="21982:22228" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="22331:22423" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="22512:22713" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="22555:22693" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="22796:22898" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="22987:23183" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="23030:23163" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="23266:23363" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="23452:23769" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="23495:23749" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="23852:23965" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="24054:24234" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="24097:24214" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="24317:24418" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="24507:24700" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="24550:24680" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="24783:24892" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="24981:25178" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="25024:25158" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="25261:25400" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="25302:25394" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="25497:25589" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="25590:26493" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="25633:26473" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="25694:26448" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="26759:27257" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="26800:27257" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="26840:27257" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="26944:27257" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="27008:27257" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="27089:27103" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="27531:27548" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="27549:27905" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="27654:27905" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="29127:29144" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="29145:30390" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="29241:30366" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="29300:30337" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="29335:29674" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="29382:29413" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="29529:29546" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="29709:30302" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="29756:29787" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="29899:29916" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="29917:30266" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="30590:30607" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="30608:30778" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="30720:30778" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="31798:31815" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="31816:31971" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="31884:31971" placeholder="..." />
+            <marker date="1454355124798" expanded="false" signature="32298:32360" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="34504:34714" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="34600:34714" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="34870:34991" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="34906:34968" placeholder="{...}" />
+            <marker date="1454355124798" expanded="true" signature="35075:36048" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="35163:36027" placeholder="..." />
+            <marker date="1454355124798" expanded="true" signature="35319:36002" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

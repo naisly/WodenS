@@ -25,131 +25,9 @@ class DescriptionModel extends DefaultModel
     private $differential_price;
     private $min;
 
-    public function setProductName ( $product_name ) {
-
-        $this->product_name = $product_name;
-
-    }
-
-    public function getProductName() {
-
-        return $this->product_name[0];
-
-    }
-
-    public function setPhoto( $photo ) {
-
-        $this->photo = $photo;
-    }
-
-    public function getPhoto() {
-
-        return $this->photo;
-    }
-
-    public function setOriginalName( $original_name ) {
-
-        $this->original_name = $original_name;
-    }
-
-    public function getOriginalName() {
-
-        return $this->original_name;
-    }
-
-    public function setDescription( $description ) {
-
-        $this->description = $description;
-    }
-
-    public function getDescription( $i ) {
-
-        return $this->description[$i];
-    }
-
     public function countDescription() {
 
         return count($this->description);
-    }
-
-    public function setCategory( $category ) {
-
-        $this->category = $category;
-    }
-
-    public function getCategory() {
-
-        return $this->category;
-    }
-
-    public function setPrice( $price ) {
-
-        $this->price = $price;
-    }
-
-    public function getPrice() {
-
-        return $this->price;
-    }
-
-    public function setPreviousPrice( $previous_price ){
-
-        $this->previous_price = $previous_price;
-    }
-
-    public function getPriviousPrice() {
-
-        return $this->previous_price;
-    }
-
-    public function setTimeOfAdding( $time_of_adding) {
-
-        $this->time_of_adding = $time_of_adding;
-    }
-
-    public function getTimeOfAdding() {
-
-        return $this->time_of_adding;
-    }
-
-    public function setFeatures( $features ) {
-
-        $this->features = $features;
-    }
-
-    public function getFeatures() {
-
-        return $this->features;
-    }
-
-    public function setId ( $id ) {
-
-        $this->id = $id;
-    }
-
-    public function getId() {
-
-        return $this->id[0];
-    }
-
-    public function setQuantity( $quantity ){
-
-        $this->quantity = $quantity;
-    }
-
-    public function getQuantity() {
-
-        return $this->quantity;
-    }
-
-    public function setShipping( $shipping ) {
-
-        $this->shipping = $shipping;
-    }
-
-    public function getShipping() {
-
-        return $this->shipping;
     }
 
     public function setAssocProducts( $assoc_products ){
@@ -299,7 +177,7 @@ class DescriptionModel extends DefaultModel
 
     private function setDifferentialBtwPrice() {
 
-        $this->differential_price = $this->getPriviousPrice() - $this->getPrice();
+        $this->differential_price = $this->getPriviousPrice(0) - $this->getPrice(0);
     }
 
     public function getDifferentialBtwPrice() {
@@ -310,7 +188,7 @@ class DescriptionModel extends DefaultModel
 
     public function getDifferentialPercent() {
 
-        return intval((($this->previous_price * 100) / $this->price) - 100);
+        return intval((($this->previous_price[0] * 100) / $this->price[0]) - 100);
     }
 
     public function setMinimum( $min ){

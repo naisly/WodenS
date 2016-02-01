@@ -6,9 +6,9 @@
  * Time: 18:36
  */
 
-include_once('../../Model/AccountInfoModel.php');
-include_once('../../Controllers/AccountInfoController.php');
-include_once('../../View/AccountInfoView.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/AccountInfoModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/AccountInfoController.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/View/AccountInfoView.php';
 
 $model = new AccountInfoModel();
 
