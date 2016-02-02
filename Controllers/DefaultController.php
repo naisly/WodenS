@@ -42,12 +42,12 @@ class DefaultController
     /**
      * Getting Language from the URL
      *
-     * @var $language <- Current
-     * @var $name_of_country <- Current
-     * @var $language_array <- Remain array
-     * @var $name_of_country_array <- Remain array
+     * @var (current) $language
+     * @var (current) $name_of_country
+     * @var (remain array) $language_array
+     * @var (remain array) $name_of_country_array
      */
-    private function actionGetLanguage() {
+    protected function actionGetLanguage() {
 
         if (session_status() == PHP_SESSION_NONE) {
                 session_start();

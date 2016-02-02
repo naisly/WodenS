@@ -60,7 +60,13 @@ class CheckOrderView extends DefaultView
                                            <div class="col-md-2"></div>
                                            <div class="col-md-7">
                                               <div class="account">
-                                                  <form action="/check" method="post">
+                                                  <form action="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'check" method="post">
                                                       <h class="h-account">';
 
         echo $this->model->Translate('Account');
@@ -100,7 +106,13 @@ class CheckOrderView extends DefaultView
                                            <div class="col-md-2"></div>
                                            <div class="col-md-7">
                                               <div class="account">
-                                                  <form action="/order-status/single" method="get">
+                                                  <form action="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'order-status/single" method="get">
                                                       <h class="h-account">';
 
         echo $this->model->Translate('Look up for order');

@@ -40,7 +40,14 @@ class AccountBillingView extends AccountOrderView
                  <div class="row main-form">
                      <div class="col-md-3"></div>
                      <div class="col-md-6 form-bordered">
-                         <form role="form" action="/account/account-edit-billing" method="post">
+                         <form role="form" action="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+
+        echo 'account/account-edit-billing" method="post">
 
                              <h class="main-page">';
 

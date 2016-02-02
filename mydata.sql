@@ -253,7 +253,7 @@ CREATE TABLE orderedItems (
   sort_id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY
 );
 
-CREATE TABLE completeOrders (
+CREATE TABLE completeorders (
   id INT(11) NOT NULL,
   product_name VARCHAR(150) NOT NULL,
   category VARCHAR(100) NOT NULL,
@@ -268,7 +268,7 @@ CREATE TABLE completeOrders (
 SELECT phones.original_name, phones.photo, phones.shipping, completeOrders.order_id, completeOrders.price, completeOrders.category FROM
        phones INNER JOIN completeOrders WHERE completeOrders.id = phones.id AND completeOrders.id = 7;
 
-CREATE TABLE doneOrders (
+CREATE TABLE doneorders (
   id INT(11) NOT NULL,
   product_name VARCHAR(150) NOT NULL,
   category VARCHAR(100) NOT NULL,
@@ -349,7 +349,7 @@ INSERT INTO notebooks(id, product_name, original_name, photo, description, categ
                      Display 1440 x 900 resolution', 'Apple', 994, 1022, '20th November', 'With selling gift cart
                      for up to $100.00', 13, 11);
 INSERT INTO notebooks(id, product_name, original_name, photo, description, category, price, previous_price, time_of_adding, features, quantity, shipping) VALUES
-                     ('', 'Macbook Air', 'Apple MacBook Air MJVE2LLA 13-inch Laptop ','images/macbookair.png', '1.6 GHz dual-core Intel Core i5 (Turbo Boost
+                     ('', 'Macbook Air', 'Apple MacBook Air MJVE2LLA 13.3-inch Laptop ','images/macbookair.png', '1.6 GHz dual-core Intel Core i5 (Turbo Boost
                      up to 2.7 GHz) with 3 MB shared L3 cache. 13.3-Inch (diagonal) LED-backlit Glossy Widescreen
                      Display 1440 x 900 resolution', 'Apple', 854, 999, '20th November', 'With selling gift cart
                      for up to $100.00', 15, 8);
@@ -624,6 +624,19 @@ INSERT INTO subdescription VALUES('', 'Iphone 6S White 32GB Neverlock', 'images/
             Improved face detection,3x zoom, Video geotagging', 'Cellular and Wireless, UMTS/HSPA+/DC-HSDPA (850; 900; 1700/2100; 1900; 2100 MHz), 802.11a/b/g/n/ac WiFi, Bluetooth 4.0 wireless technology NFC',
             'SIM card, Nano-SIM, iPhone 6 is not compatible with existing micro SIM cards', 'In the Box, iPhone with iOS 8, Apple EarPods with Remote and Mic, Lightning to USB Cable, USB Power Adapter, Documentation',
             'Product Details, Product Dimensions: 5.4 x 2.6 x 0.3 inches ; 4.5 ounces, Shipping Weight: 13.6 ounces, ASIN: B00NQGP3L6');
+
+INSERT INTO subdescription VALUES('', 'Apple Macbook Pro MD101LLA 13.3-Inch Laptop', 'images/macbookdesc.jpg','2.7 GHz dual-core Intel Core i5 processor (Turbo Boost up to 3.1 GHz) with 3MB shared L3 cache,
+          8 GB 1866 MHz LPDDR3 RAM; 256 GB PCIe-based flash storage, 13.3-inch IPS Retina Display, 2560-by-1600 resolution, Intel Iris Graphics 6100, OS X Yosemite, Up to 10 Hours of Battery Life', 'Apple MF839LLA MacBook Pro 13.3-Inch Laptop with Retina Display,
+          Apple MacBook Air MJVE2LLA 13.3-Inch Laptop (128 GB), Apple MacBook Air MJVE2LLA 13.3-inch Laptop, Apple MacBook Pro MJLQ2LLA 15.4-Inch Laptop with Retina Display, Apple MacBook Air MC503LLA 13.3-Inch Laptop (OLD VERSION)',
+          'Technical Details, Screen Size	13.3 inches, Screen Resolution	2560 x 1600, Processor	2.7 GHz Intel Core i5, RAM	8 GB LPDDR3, Graphics Coprocessor	Intel Iris Graphics 6100',
+          'Product Description, Other Technical Details, Brand Name	Apple, Series	MF840LL/A, Product Dimensions	8.6 x 12.3 x 0.7 inches, Item Dimensions L x W x H	8.62 x 12.35 x 0.71 inches, Computer Memory Type	DDR3 SDRAM, Flash Memory Size	256',
+          'From the Manufacturer, Quickly start up and launch apps, Superior reliability and up to 22 times faster than a traditional hard drive, Up to 2.5 times faster than previous generation flash storage, Intel Iris Graphics 6100 for advanced integrated graphics performance, Designed to reduce power consumption while maintaining high performance',
+          'Product specifications, 13.3-inch screen with Retina display, 3.48 pounds; 0.71 inches thin, 2.7GHz dual-core Intel Core i5 processor (Broadwell), Turbo Boost up to 3.1GHz, Intel Iris Graphics 6100, 256GB PCIe-based flash hard drive',
+          'Additional information, Up to 10 hours of wireless web; up to 12 hours of iTunes movie playback, 802.11ac Wi-Fi and Bluetooth 4.0, HDMI and USB 3 ports, FaceTime HD camera for video calls, Dual mics and stereo speakers',
+          'All-new Force Touch trackpad, Force sensors allow you to click anywhere with a uniform feel, Customizable click sensitivity, Taptic Engine delivers click sensations through haptic feedback, Use Force click for easier access to helpful tools and information, Fast-forward or zoom by gradually applying pressure to the trackpad',
+          'Thunderbolt 2 ports, Two ports deliver up to 20Gbps of bandwidth for each external device—so you can move data up to 4 times faster than with USB 3, Daisy-chain multiple displays and high-performance devices while maintaining maximum throughput',
+          'Stunning Retina display, With over 5 million pixels, everything is visible down to the finest detail in images and text, High contrast ratio results in deeper blacks and brighter whites, and colors are more vivid and images take on a new level of realism');
+
 
 INSERT INTO subdescription VALUES('', 'Apple MacBook Air MC965LLA ', 'images/macbookdesc.jpg','2.7 GHz dual-core Intel Core i5 processor (Turbo Boost up to 3.1 GHz) with 3MB shared L3 cache,
           8 GB 1866 MHz LPDDR3 RAM; 256 GB PCIe-based flash storage, 13.3-inch IPS Retina Display, 2560-by-1600 resolution, Intel Iris Graphics 6100, OS X Yosemite, Up to 10 Hours of Battery Life', 'Apple MF839LLA MacBook Pro 13.3-Inch Laptop with Retina Display,

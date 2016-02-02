@@ -34,7 +34,7 @@ class IndexView extends DefaultView
         echo '<div class="overlay-main-page">
                   <div class="text-center non-visible-400">
                       <h1>Woden Sims</h1>
-                      <h1 class="discover-sm">' . $this->model->Translate('Try to discover new possibilities. Change the way of thinking') . '</h1>
+                      <h1 class="discover-sm">' . $this->model->Translate('Discover new possibilities. Change the way of thinking.') . '</h1>
                   </div>
                   <div id="slider">
                       <ul class="bxslider">

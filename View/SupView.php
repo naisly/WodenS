@@ -124,7 +124,13 @@ class SupView extends IndexView
                           <div class="row">
                               <div class="col-md-3"></div>
                               <div class="col-md-8" id="main-form">
-                                  <form role="form" action="get-support" method="post">
+                                  <form role="form" action="';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'get-support" method="post">
                                       <div class="form-group">
                                           <label for="name">' . $this->model->Translate('Your Name') . '</label>
                                           <input type="text" class="form-control" name="name" required />

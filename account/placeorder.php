@@ -21,7 +21,7 @@ $view = new OrderView($model);
 $controller->actionGetHeaderCart();
 $controller->getDefaultBilling();
 
-$view->DoctypeView( 'order' );
+$view->DoctypeView( 'Place Order' );
 $view->headerView();
 
 $view->getPlaceOrder();

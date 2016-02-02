@@ -348,6 +348,7 @@ p, h1,a  {
 }
 #price {
 	text-align: right;
+	margin-top: 10px;
 }
 #on-stock, #average {
 	text-align: right;
@@ -400,9 +401,12 @@ ul {
 	letter-spacing: normal;
 	opacity: 1;
 	z-index: 1;
-	text-decoration: none;
 	margin-top: 0 !important;
 	font-family: Arial !important;
+}
+.items:hover {
+	color: #666;
+	text-decoration: underline;
 }
 .hor-items {
 	font-size: 12px;
@@ -469,12 +473,15 @@ a:hover {
 	padding-top: 10px;
 }
 .subdescription {
-	color: #08b;
-	font-size: 20px !important;
+	font-size: 19px;
+	line-height: 22px;
+	display: inline-block;
+	vertical-align: top;
+	color: #4686AD;
 }
 .subdescription:hover {
 	text-decoration: underline !important;
-	color: #08b;
+	color: #4686AD;
 }
 #prev-price {
 	color: #b12704 !important;

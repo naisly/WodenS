@@ -57,8 +57,6 @@ class ProfileController extends DefaultController
 
         session_write_close();
 
-        $this->actionGetHeaderCart();
-
         $this->actionGetQuantityOfItems();
         $this->actionGetSumOfItems();
 
@@ -132,6 +130,8 @@ class ProfileController extends DefaultController
      * @var $id
      */
     public function actionRemoveData() {
+
+        $this->actionGetLanguage();
 
         include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
@@ -308,19 +308,24 @@ class ProfileController extends DefaultController
 
             $result_item = $mysqli->query($sql_item);
 
+            $original_name_item = array();
+            $price_item = array();
+            $shipping_item = array();
+            $photo_item = array();
+
             if ($result_item->num_rows > 0) {
                 // output data of each row
                 while ($row = $result_item->fetch_assoc()) {
-                    $original_name_item = $row['original_name'];
-                    $price_item = $row['price'];
-                    $shipping_item = $row['shipping'];
-                    $photo_item = $row['photo'];
+                    $original_name_item = array_merge($original_name_item, array_map('trim', explode(",", $row['original_name'])));
+                    $price_item = array_merge($price_item, array_map('trim', explode(",", $row['price'])));
+                    $shipping_item = array_merge($shipping_item, array_map('trim', explode(",", $row['shipping'])));
+                    $photo_item = array_merge($photo_item, array_map('trim', explode(",", $row['photo'])));
                 }
             }
 
             $this->model->setOriginalName($original_name_item);
-            $this->model->setItemPrice($price_item);
-            $this->model->setItemShipping($shipping_item);
+            $this->model->setPrice($price_item);
+            $this->model->setShipping($shipping_item);
             $this->model->setPhoto($photo_item);
         } else {
             $this->model->setNoProduct( 'none' );

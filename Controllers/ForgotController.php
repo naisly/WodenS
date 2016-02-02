@@ -47,7 +47,7 @@ class ForgotController extends DefaultController
      */
     public function actionCheckEmail() {
 
-        $this->actionGetHeaderCart();
+        $this->actionGetLanguage();
 
         include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
@@ -96,7 +96,7 @@ class ForgotController extends DefaultController
      */
     public function actionCheckBirthday() {
 
-        $this->actionGetHeaderCart();
+        $this->actionGetLanguage();
 
         include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
@@ -151,7 +151,7 @@ class ForgotController extends DefaultController
      */
     public function actionGetQuestion() {
 
-        $this->actionGetHeaderCart();
+        $this->actionGetLanguage();
 
         include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
@@ -191,7 +191,7 @@ class ForgotController extends DefaultController
      */
     public function actionCheckSecurityQuestions() {
 
-        $this->actionGetHeaderCart();
+        $this->actionGetLanguage();
 
         include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
@@ -262,7 +262,7 @@ class ForgotController extends DefaultController
      */
     public function actionChangePassword() {
 
-        $this->actionGetHeaderCart();
+        $this->actionGetLanguage();
 
         include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
@@ -328,7 +328,7 @@ class ForgotController extends DefaultController
      */
     public function actionSaveDataFromInjection() {
 
-        $this->actionGetHeaderCart();
+        $this->actionGetLanguage();
 
         include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();

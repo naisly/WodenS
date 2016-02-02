@@ -326,6 +326,8 @@ class LoginController extends DefaultController
             }
         }
 
+        session_start();
+
         $_SESSION['photo'] = $photo;
 
         session_write_close();
@@ -340,7 +342,8 @@ class LoginController extends DefaultController
      */
     public function actionAddItem() {
 
-        session_start();
+        $this->actionGetLanguage();
+
         if(!$_SESSION['login_user']){
 
             if($_SESSION['language'] !== 'us') {

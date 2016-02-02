@@ -63,26 +63,6 @@ class ProfileModel extends CartModel
         return $this->price_array[$i];
     }
 
-    public function setQuantity( $quantity ) {
-
-        $this->quantity = $quantity;
-    }
-
-    public function getQuantity() {
-
-        return $this->quantity;
-    }
-
-    public function setPrice( $price ){
-
-        $this->price = $price;
-    }
-
-    public function getPrice() {
-
-        return $this->price;
-    }
-
     public function setQuantityOfItem ( $qItem ){
 
         $this->qItem = $qItem;

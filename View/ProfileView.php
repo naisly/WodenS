@@ -120,7 +120,7 @@ class ProfileView extends DefaultView
 
         if($this->model->getBillingNotFound() !== 0) {
 
-            echo     '<h class="cart"><a style="text-decoration: none" href="/';
+            echo     '<h class="cart"><a id="link" href="/';
 
             if ($_SESSION['language'] !== 'us') {
                 echo $_SESSION['language'] . '/';
@@ -149,10 +149,10 @@ class ProfileView extends DefaultView
         if($this->model->getNoProduct() == 'none'){
             echo '<h class="cart not-found">' . $this->model->Translate('No products found') . '</h>';
         } else {
-            echo     '<img class="last-added-img" src="/' . $this->model->getPhoto() . '" /><br />
-                      <h class="cart cart-header">' . $this->model->getOriginalName() . '</h><br />
-                      <h class="cart cart-price">$' . $this->model->getItemPrice() . '</h><br />
-                      <h class="cart"><span class="underline">' . $this->model->getItemShipping() . ' ' . $this->model->Translate('days') . '</span> ' . $this->model->Translate('shipping') . '</h>';
+            echo     '<img class="last-added-img" src="/' . $this->model->getPhoto(0) . '" /><br />
+                      <h class="cart cart-header">' . $this->model->getOriginalName(0) . '</h><br />
+                      <h class="cart cart-price">$' . $this->model->getPrice(0) . '</h><br />
+                      <h class="cart"><span class="underline">' . $this->model->getShipping(0) . ' ' . $this->model->Translate('days') . '</span> ' . $this->model->Translate('shipping') . '</h>';
         }
 
         echo         '<div class="cart-divider"></div>
@@ -194,7 +194,13 @@ class ProfileView extends DefaultView
                             <td class="text-right">' . $this->model->getCategoryArray($i) . '</td>
                             <td class="text-right">' . $this->model->getPriceArray($i) * $this->model->getQuantityOfItem($i) . ' $</td>
                             <td>
-                                <form action="/account/remove" method="post">
+                                <form action="/';
+
+                if($_SESSION['language'] !== 'us'){
+                    echo $_SESSION['language'] . '/';
+                }
+
+                echo 'account/remove" method="post">
                                     <input type="hidden" name="id" value="' . $this->model->getIdArray($i) . '"/>
                                     <input type="hidden" name="name" value="' . $this->model->getProductNameArray($i) . '"/>
                                     <button class="btn btn-sm btn-warning">' . $this->model->Translate('Remove') . '</button>

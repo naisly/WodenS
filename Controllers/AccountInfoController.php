@@ -75,6 +75,8 @@ class AccountInfoController extends AccountOrderController
      */
     public function actionCancelOrder() {
 
+        $this->actionGetLanguage();
+
         include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
@@ -89,17 +91,26 @@ class AccountInfoController extends AccountOrderController
             $user = $_SESSION['login_user'];
         }
 
-        $sql_stmt = "SELECT completeorders.order_id as comp, doneorders.order_id as done FROM completeorders, doneorders";
-        $result = $mysqli->query( $sql_stmt );
+        $sql_completed = "SELECT order_id FROM completeorders";
+        $result_completed = $mysqli->query( $sql_completed );
+
+        $sql_done = "SELECT order_id FROM doneorders";
+        $result_done = $mysqli->query( $sql_done );
 
         $complete_orders = array();
         $done_orders = array();
 
-        if ($result->num_rows > 0) {
+        if ($result_completed->num_rows > 0) {
             // output data of each row
-            while ($row = $result->fetch_assoc()) {
-                $complete_orders = array_merge($complete_orders, array_map('trim', explode(",", $row['comp'])));
-                $done_orders = array_merge($done_orders, array_map('trim', explode(",", $row['done'])));
+            while ($row = $result_completed->fetch_assoc()) {
+                $complete_orders = array_merge($complete_orders, array_map('trim', explode(",", $row['order_id'])));
+            }
+        }
+
+        if ($result_done->num_rows > 0) {
+            // output data of each row
+            while ($row = $result_done->fetch_assoc()) {
+                $done_orders = array_merge($done_orders, array_map('trim', explode(",", $row['order_id'])));
             }
         }
 
@@ -202,6 +213,8 @@ class AccountInfoController extends AccountOrderController
      */
     private function actionChangeEmail(){
 
+        $this->actionGetLanguage();
+
         include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
@@ -258,6 +271,23 @@ class AccountInfoController extends AccountOrderController
             $query = $mysqli->prepare("UPDATE users SET email='$email' WHERE email='" . $_SESSION['login_user'] . '\'');
             $query->execute();
 
+            /*
+             * Updating other tables
+             * Billing, complete & done orders, ordereditems, orders
+             */
+
+            $sql_billing = $mysqli->prepare("UPDATE billing SET user='$email' WHERE user='" . $_SESSION['login_user'] . '\'');
+            $sql_billing->execute();
+
+            $sql_complete = $mysqli->prepare("UPDATE completeorders SET user='$email' WHERE user='" . $_SESSION['login_user'] . '\'');
+            $sql_complete->execute();
+
+            $sql_done = $mysqli->prepare("UPDATE doneorders SET user='$email' WHERE user='" . $_SESSION['login_user'] . '\'');
+            $sql_done->execute();
+
+            $sql_ordered_items = $mysqli->prepare("UPDATE ordereditems SET user='$email' WHERE user='" . $_SESSION['login_user'] . '\'');
+            $sql_ordered_items->execute();
+
             $_SESSION['login_user'] = $email;
 
             if($_SESSION['language'] !== 'us') {
@@ -280,6 +310,8 @@ class AccountInfoController extends AccountOrderController
      * @var $password ( Checking from DataBase )
      */
     private function actionChangeUsername() {
+
+        $this->actionGetLanguage();
 
         include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
@@ -333,6 +365,8 @@ class AccountInfoController extends AccountOrderController
      * @var $password ( Checking from DataBase )
      */
     private function actionChangePassword(){
+
+        $this->actionGetLanguage();
 
         include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();

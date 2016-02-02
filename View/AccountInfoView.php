@@ -74,8 +74,14 @@ class AccountInfoView extends AccountOrderView
                       <td>#' . $this->model->getAccountComplete($i) . '</td>
                       <td>' . $this->model->Translate('Completed') . '</td>
                       <td>
-                          <form action="account-cancel-order" method="post">
-                              <button id="button-as-link">';
+                          <form action="/';
+
+                    if($_SESSION['language'] !== 'us'){
+                        echo $_SESSION['language'] . '/';
+                    }
+
+                    echo 'account/account-cancel-order" method="post">
+                              <button id="button-as-link" style="font-size: 14px; color: #609; font-weight: 600;">';
 
                     echo $this->model->Translate('Cancel order');
 
@@ -94,8 +100,14 @@ class AccountInfoView extends AccountOrderView
                       <td>#' . $this->model->getAccountDone($i) . '</td>
                       <td>' . $this->model->Translate('Done') . '</td>
                       <td>
-                          <form action="account-cancel-order" method="post">
-                              <button id="button-as-link">';
+                          <form action="/';
+
+                    if($_SESSION['language'] !== 'us'){
+                        echo $_SESSION['language'] . '/';
+                    }
+
+                    echo 'account/account-cancel-order" method="post">
+                              <button id="button-as-link" style="font-size: 14px; color: #609; font-weight: 600;">';
 
                     echo $this->model->Translate('Remove');
 
@@ -191,17 +203,23 @@ class AccountInfoView extends AccountOrderView
 
         echo       '<div class="row">
                         <div class="col-md-4" id="no-border">
-                            <h class="change">';
+                            <h1 class="change">';
 
         echo $this->model->Translate('Change Your Active Email');
 
-        echo               '</h>
+        echo               '</h1>
                             <h1 class="make-sure" style="padding-bottom: 19px;">';
 
         echo $this->model->Translate('Please, be sure that you have access to this email.');
 
         echo               '</h1>
-                            <form role="form" action="change-data" method="post">
+                            <form role="form" action="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'account/change-data" method="post" id="login_form">
                                 <div class="form-group change-spacer">
                                     <input type="email" style="background-color: white;" class="form-control" name="email" id="email" placeholder="';
 
@@ -216,28 +234,30 @@ class AccountInfoView extends AccountOrderView
 
         echo                        '" required />
                                 </div>
-                                <div class="input-group">
-                                  <input type="password" name="password" id="password" class="form-control" placeholder="';
-
-        echo $this->model->Translate('Password');
-
-        echo                       '" style="border-right: none !important;">
-                                  <span class="input-group-addon" id="basic-addon2"><button class="image-as-button"><span class="glyphicon glyphicon-arrow-right" style="color: #666;"></span></button></span>
+                                <div class="right-inner-addon">
+                                    <input type="password" class="form-control" name="password" id="password" placeholder="' . $this->model->Translate('Password') . '" />
+                                    <i id="submit-main" class="glyphicon glyphicon-arrow-right" style="z-index: 10000 !important;"></i>
                                 </div>
                             </form>
                         </div>
                         <div class="col-md-4" id="border">
-                            <h class="change">';
+                            <h1 class="change">';
 
         echo $this->model->Translate('Change Your Username');
 
-        echo               '</h>
+        echo               '</h1>
                             <h1 class="make-sure">';
 
         echo $this->model->Translate('Please, fill the real data in order to have no problems with shipping.');
 
         echo               '</h1>
-                            <form role="form" action="change-data" method="post">
+                            <form role="form" action="';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'change-data" method="post" id="login_form1">
                                 <div class="form-group change-spacer">
                                     <input type="text" class="form-control" name="first_name" id="first_name" placeholder="';
 
@@ -252,22 +272,18 @@ class AccountInfoView extends AccountOrderView
 
         echo                        '" required />
                                 </div>
-                                <div class="input-group">
-                                  <input type="password" name="password" id="password" class="form-control" placeholder="';
-
-        echo $this->model->Translate('Password');
-
-        echo                        '" style=" border-right: none !important;">
-                                  <span class="input-group-addon" id="basic-addon2"><button class="image-as-button"><span class="glyphicon glyphicon-arrow-right" style="color: #666;"></span></button></span>
+                                <div class="right-inner-addon">
+                                    <input type="password" class="form-control" name="password" id="password" placeholder="' . $this->model->Translate('Password') . '" />
+                                    <i id="submit-main1" class="glyphicon glyphicon-arrow-right" style="z-index: 10000 !important;"></i>
                                 </div>
                             </form>
                         </div>
                         <div class="col-md-4" id="no-border">
-                            <h class="change">';
+                            <h1 class="change">';
 
         echo $this->model->Translate('Change Your Password');
 
-        echo               '</h>
+        echo               '</h1>
                             <h1 class="make-sure">';
 
         echo $this->model->Translate('If you forgot your password, please follow those instructions for');
@@ -283,7 +299,13 @@ class AccountInfoView extends AccountOrderView
         echo $this->model->Translate('recovering your password.');
 
         echo               '</a></h1>
-                            <form role="form" action="change-data" method="post">
+                            <form role="form" action="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'account/change-data" method="post" id="login_form2">
                                 <div class="form-group change-spacer">
                                     <input type="password" class="form-control" name="new_password" id="new_password" placeholder="';
 
@@ -298,17 +320,15 @@ class AccountInfoView extends AccountOrderView
 
         echo                        '" required />
                                 </div>
-                                <div class="input-group">
-                                  <input type="password" name="password" id="password" class="form-control" placeholder="';
-
-        echo $this->model->Translate('Current Password');
-
-        echo                      '" style=" border-right: none !important;">
-                                  <span class="input-group-addon" id="basic-addon2"><button class="image-as-button"><span class="glyphicon glyphicon-arrow-right" style="color: #666;"></span></button></span>
+                                <div class="right-inner-addon">
+                                    <input type="password" class="form-control" name="password" id="password" placeholder="' . $this->model->Translate('Current Password') . '" />
+                                    <i id="submit-main2" class="glyphicon glyphicon-arrow-right" style="z-index: 10000 !important;"></i>
                                 </div>
                             </form>
                         </div>
                     </div>';
+
+        echo '<script src="/js/submit-form.js"></script>';
     }
 
     private function getBillingInfo() {
@@ -419,7 +439,7 @@ class AccountInfoView extends AccountOrderView
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'education/phones/" style="text-decoration: none">';
+        echo 'account/billing" style="text-decoration: none">';
 
         echo $this->model->Translate('Edit your Billing');
 
@@ -457,7 +477,7 @@ class AccountInfoView extends AccountOrderView
 
                 echo '<div class="row" style="padding-bottom: 20px;">
                          <div class="col-md-4"></div>
-                         <div class="col-md-7">
+                         <div class="col-md-7 show-orders">
                             <h class="order-num">#' . $this->model->getEachOrder($i) . ' </h><a class="show-link" id="displayText' . $i . '" href="javascript:toggle' . $i . '();">';
 
                 echo $this->model->Translate('show');

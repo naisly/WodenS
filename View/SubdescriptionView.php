@@ -262,7 +262,13 @@ class SubdescriptionView extends DefaultView
                                <b>' . $this->model->Translate('two weeks') . '</b> ' . $this->model->Translate('up to') . ' <b> ' . $this->model->Translate('one month') . ' </b> ' . $this->model->Translate('with') . ' <a class="link-default" href="https://novaposhta.ua/en">' . $this->model->Translate('Nova Poshta') . '</a></h>
                               </label>
                           </div>
-                      <form action="add-item" method="post">
+                      <form action="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'shop/add-item" method="post">
                           <div class="qty">
                               <h id="qty">' . $this->model->Translate('Quantity') . '</h>
                               <select name="item_quantity" id="item_quantity" required>';
@@ -297,7 +303,13 @@ class SubdescriptionView extends DefaultView
                           <div class="divider"></div>
 
                           <div class="form-group text-center">
-                              <form action="add-item" method="post">
+                              <form action="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'shop/add-item" method="post">
                                     <div class="paddings">
                                         <button class="button-link">
                                             ' . $this->model->Translate('Click here to complete fast order') . '
@@ -335,7 +347,13 @@ class SubdescriptionView extends DefaultView
                                     <h style="float: left;"><span class="sold-by">' . $this->model->Translate('Sold by') . ':</span> WodenS Inc.</h>
                                </div>
                                <div class="pull-right">
-                                    <form action="add-item" method="post">
+                                    <form action="/';
+
+            if($_SESSION['language'] !== 'us'){
+                echo $_SESSION['language'] . '/';
+            }
+
+            echo 'shop/add-item" method="post">
                                           <button class="btn btn-warning button-small">
                                                ' . $this->model->Translate('Add') . '
                                           </button>
@@ -361,12 +379,12 @@ class SubdescriptionView extends DefaultView
                              <h class="maybe">' . $this->model->Translate('Maybe you are also') . '<br />' . $this->model->Translate('interested in') . ' ...</h>
                         </div>
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-4 random-align">
                                 <img src="/'. $this->model->getSequencePhoto() . '" class="random-photo" />
 
                             </div>
                             <div class="col-md-1"></div>
-                            <div class="col-md-7" style="margin-top: 12px; padding-bottom: 6px;">
+                            <div class="col-md-7 random-sm" style="margin-top: 12px; padding-bottom: 6px;">
                                     <a href="/shop/subdescription?name=' . $this->model->getSequenceOriginalName() . '&category=' . $this->model->getSequenceTable() . '&product_price=' . $this->model->getSequencePrice() . '&id=' . $this->model->getSequenceId() . '&product_name=' . $this->model->getSequenceProductName() . '" class="random-name text-left">';
 
         if( strlen($this->model->getSequenceOriginalName()) > 30 ){
@@ -407,13 +425,13 @@ class SubdescriptionView extends DefaultView
 
         echo '<h1 class="compare">' . $this->model->Translate('Compare to similar items') . '</h1>
               <div class="paddings-table">
-              <table class="table table-bordered table-responsive">
+              <table class="table table-bordered table-responsive visible-for-md">
                  <thead>
                     <tr>
                         <th style="border-top: 1px solid white; border-left: 1px solid white;"></th>';
         $i = 0;
         while($i < $this->model->countComparisonId()) {
-            echo '<th style="width: 20%;">
+            echo '<th class="table-width">
                       <div class="text-center">
                           <img src="/' . $this->model->getComparisonPhoto( $i ) . '" width="60" height="80" />
                           <h class="name-margin">' . $this->model->getComparisonProductName($i) . '</h>
@@ -441,169 +459,257 @@ class SubdescriptionView extends DefaultView
             $u++;
         }
 
-    echo              '</tr>
-                       <tr>
-                            <th id="header">' . $this->model->Translate('Price') . '</th>';
+        echo              '</tr>
+                           <tr>
+                                <th id="header">' . $this->model->Translate('Price') . '</th>';
 
-    $k = 0;
-    while ( $k < $this->model->countComparisonId()) {
+        $k = 0;
+        while ( $k < $this->model->countComparisonId()) {
 
-        echo '<th>
-                  <div class="comparison">
-                       <h class="cprice">$' .  sprintf("%0.2f", $this->model->getComparisonPrice($k)) . '<span id="striked">' . ' ' . '<strike>$' . $this->model->getComparisonPriviousPrice($k) . '</strike></span></h>
-                  </div>
-              </th>';
+            echo '<th>
+                      <div class="comparison">
+                           <h class="cprice">$' .  sprintf("%0.2f", $this->model->getComparisonPrice($k)) . '<span id="striked">' . ' ' . '<strike>$' . $this->model->getComparisonPriviousPrice($k) . '</strike></span></h>
+                      </div>
+                  </th>';
 
-        $k++;
-    }
+            $k++;
+        }
 
-    echo               '</tr>
-                        <tr>
-                            <th id="header">' . $this->model->Translate('Shipping') . '</th>';
+        echo               '</tr>
+                            <tr>
+                                <th id="header">' . $this->model->Translate('Shipping') . '</th>';
 
-    $k = 0;
-    while ( $k < $this->model->countComparisonId()) {
+        $k = 0;
+        while ( $k < $this->model->countComparisonId()) {
 
-        echo '<th>
-                  <div class="comparison">
-                      <h class="shipping-comparison">' . $this->model->Translate('FREE SHIPPING') . ' ( <span id="emph">' . $this->model->getComparisonShipping($k) . ' ' . $this->model->Translate('days') . '</span> )</h>
-                  </div>
-              </th>';
+            echo '<th>
+                      <div class="comparison">
+                          <h class="shipping-comparison">' . $this->model->Translate('FREE SHIPPING') . ' ( <span id="emph">' . $this->model->getComparisonShipping($k) . ' ' . $this->model->Translate('days') . '</span> )</h>
+                      </div>
+                  </th>';
 
-        $k++;
-    }
+            $k++;
+        }
 
-    echo               '</tr>
-                        <tr>
-                            <th id="header">' . $this->model->Translate('Sold by') . '</th>';
+        echo               '</tr>
+                            <tr>
+                                <th id="header">' . $this->model->Translate('Sold by') . '</th>';
 
-    $k = 0;
-    while ( $k < $this->model->countComparisonId()) {
+        $k = 0;
+        while ( $k < $this->model->countComparisonId()) {
 
-        echo '<th>
-                  <div class="comparison">
-                      <h class="shipping-comparison"><a href="http://vk.com/naisly" class="link">Woden S</a></h>
-                  </div>
-              </th>';
+            echo '<th>
+                      <div class="comparison">
+                          <h class="shipping-comparison"><a href="http://vk.com/naisly" class="link">Woden S</a></h>
+                      </div>
+                  </th>';
 
-        $k++;
-    }
+            $k++;
+        }
 
-    echo               '</tr>
-                        <tr>
-                            <th id="header">' . $this->model->Translate('Short description') . '</th>';
+        echo               '</tr>
+                            <tr>
+                                <th id="header">' . $this->model->Translate('Short description') . '</th>';
 
-    $k = 0;
-    while ( $k < $this->model->countComparisonId()) {
+        $k = 0;
+        while ( $k < $this->model->countComparisonId()) {
 
-        echo '<th>
-                  <div class="comparison">
-                      <h class="shipping-comparison">' . $this->model->getComparisonDescription($k) . '</h>
-                  </div>
-              </th>';
+            echo '<th>
+                      <div class="comparison">
+                          <h class="shipping-comparison">' . $this->model->getComparisonDescription($k) . '</h>
+                      </div>
+                  </th>';
 
-        $k++;
-    }
+            $k++;
+        }
 
-    echo               '</tr>
-                        <tr>
-                            <th id="header">' . $this->model->Translate('Manufacturer') . '</th>';
+        echo               '</tr>
+                            <tr>
+                                <th id="header">' . $this->model->Translate('Manufacturer') . '</th>';
 
-    $k = 0;
-    while ( $k < $this->model->countComparisonId()) {
+        $k = 0;
+        while ( $k < $this->model->countComparisonId()) {
 
-        echo '<th>
-                  <div class="comparison">
-                      <h class="shipping-comparison">' . $this->model->Translate('by') . ' <a class="link" href="http://' . $this->model->getComparisonCategory($k) . '.com">' . $this->model->getComparisonCategory($k) . '</a></h>
-                  </div>
-              </th>';
+            echo '<th>
+                      <div class="comparison">
+                          <h class="shipping-comparison">' . $this->model->Translate('by') . ' <a class="link" href="http://' . $this->model->getComparisonCategory($k) . '.com">' . $this->model->getComparisonCategory($k) . '</a></h>
+                      </div>
+                  </th>';
 
-        $k++;
-    }
+            $k++;
+        }
 
-    echo               '</tr>
-                        <tr>
-                            <th id="header">' . $this->model->Translate('Average price for this item:') . '</th>';
+        echo               '</tr>
+                            <tr>
+                                <th id="header">' . $this->model->Translate('Average price for this item:') . '</th>';
 
-    $k = 0;
-    while ( $k < $this->model->countComparisonId()) {
+        $k = 0;
+        while ( $k < $this->model->countComparisonId()) {
 
-        echo '<th>
-                  <div class="comparison">
-                      <h class="cprice">$' . $this->model->getComparisonAverage($k) . '</h>
-                  </div>
-              </th>';
+            echo '<th>
+                      <div class="comparison">
+                          <h class="cprice">$' . $this->model->getComparisonAverage($k) . '</h>
+                      </div>
+                  </th>';
 
-        $k++;
-    }
+            $k++;
+        }
 
-    echo               '</tr>
-                        <tr>
-                            <th id="header">' . $this->model->Translate('Product features') . '</th>';
+        echo               '</tr>
+                            <tr>
+                                <th id="header">' . $this->model->Translate('Product features') . '</th>';
 
-    $k = 0;
-    while ( $k < $this->model->countComparisonId()) {
+        $k = 0;
+        while ( $k < $this->model->countComparisonId()) {
 
-        echo '<th>
-                  <div class="comparison">
-                      <h class="shipping-comparison">' . $this->model->getComparisonFeatures($k) . '</h>
-                  </div>
-              </th>';
+            echo '<th>
+                      <div class="comparison">
+                          <h class="shipping-comparison">' . $this->model->getComparisonFeatures($k) . '</h>
+                      </div>
+                  </th>';
 
-        $k++;
-    }
+            $k++;
+        }
 
-    echo               '</tr>
-                        <tr>
-                            <th id="header">' . $this->model->Translate('Product Site Launch Date') . '</th>';
+        echo               '</tr>
+                            <tr>
+                                <th id="header">' . $this->model->Translate('Product Site Launch Date') . '</th>';
 
-    $k = 0;
-    while ( $k < $this->model->countComparisonId()) {
+        $k = 0;
+        while ( $k < $this->model->countComparisonId()) {
 
-        echo '<th>
-                  <div class="comparison">
-                      <h class="shipping-comparison">' . $this->model->getComparisonTimeOfAdding($k) . '</h>
-                  </div>
-              </th>';
+            echo '<th>
+                      <div class="comparison">
+                          <h class="shipping-comparison">' . $this->model->getComparisonTimeOfAdding($k) . '</h>
+                      </div>
+                  </th>';
 
-        $k++;
-    }
+            $k++;
+        }
 
-    echo               '</tr>
-                        <tr>
-                            <th style="border-bottom: 1px solid white; border-left: 1px solid white; border-right: 1px solid white;"></th>';
+        echo               '</tr>
+                            <tr>
+                                <th style="border-bottom: 1px solid white; border-left: 1px solid white; border-right: 1px solid white;"></th>';
 
-    $k = 0;
-    while ( $k < $this->model->countComparisonId()) {
+        $k = 0;
+        while ( $k < $this->model->countComparisonId()) {
 
-        echo '<th style="border-bottom: 1px solid white; border-left: 1px solid white; border-right: 1px solid white;">
-                  <div class="comparison">
-                      <form action="add-item" method="post">
-                          <button class="btn btn-warning color-black">' . $this->model->Translate('Add to cart') . '</button>
-                          <input type="hidden" name="id" value="' . $this->model->getComparisonId( $k ) . '"/>
-                          <input type="hidden" name="product_name" value="' . $this->model->getComparisonProductName( $k ) . '"/>
-                          <input type="hidden" name="category" value="' . $this->model->getComparisonCategory( $k ) . '"/>
-                          <input type="hidden" name="photo" value="' . $this->model->getComparisonPhoto( $k ) . '"/>
-                          <input type="hidden" name="price" value="' . $this->model->getComparisonPrice( $k ) . '"/>
-                      </form>
-                  </div>
-              </th>';
+            echo '<th style="border-bottom: 1px solid white; border-left: 1px solid white; border-right: 1px solid white;">
+                      <div class="comparison">
+                          <form action="/';
 
-        $k++;
-    }
+            if($_SESSION['language'] !== 'us'){
+                echo $_SESSION['language'] . '/';
+            }
+
+            echo 'shop/add-item" method="post">
+                              <button class="btn btn-warning color-black">' . $this->model->Translate('Add to cart') . '</button>
+                              <input type="hidden" name="id" value="' . $this->model->getComparisonId( $k ) . '"/>
+                              <input type="hidden" name="product_name" value="' . $this->model->getComparisonProductName( $k ) . '"/>
+                              <input type="hidden" name="category" value="' . $this->model->getComparisonCategory( $k ) . '"/>
+                              <input type="hidden" name="photo" value="' . $this->model->getComparisonPhoto( $k ) . '"/>
+                              <input type="hidden" name="price" value="' . $this->model->getComparisonPrice( $k ) . '"/>
+                          </form>
+                      </div>
+                  </th>';
+
+            $k++;
+        }
 
 
-    echo               '</tr>
+        echo               '</tr>
                  </tbody>
               </table>
-              </div>
-              <div class="divider"></div>';
+              </div>';
+
+        echo '<div class="invisible-for-xs-md">';
+
+        $i = 0;
+        while($i < $this->model->countComparisonId()) {
+            echo '<div class="text-center" style="margin-left: 20px; margin-right: 20px;">
+                          <img src="/' . $this->model->getComparisonPhoto($i) . '" class="img-subdesc" />
+
+                      <table class="table table-bordered">
+                          <thead>
+                              <tr>
+                                  <th>' . $this->model->Translate('Full name') . ':</th>
+                                  <th>' . $this->model->getComparisonOriginalName($i) . '</th>
+                              </tr>
+                              <tr>
+                                  <th>' . $this->model->Translate('Price') . ':</th>
+                                  <th><h class="cprice">' . ' $' .  sprintf("%0.2f", $this->model->getComparisonPrice($i)) . '<span id="striked">' . ' ' . '<strike>$' . $this->model->getComparisonPriviousPrice($i) . '</strike></span></h></th>
+                              </tr>
+                              <tr>
+                                  <th>' . $this->model->Translate('Shipping') . ':</th>
+                                  <th><h class="shipping-comparison">' . $this->model->Translate('FREE SHIPPING') . ' ( <span id="emph">' . $this->model->getComparisonShipping($i) . ' ' . $this->model->Translate('days') . '</span> )</h></th>
+                              </tr>
+                              <tr>
+                                  <th>' . $this->model->Translate('Sold by') . ':</th>
+                                  <th><h class="shipping-comparison"><a href="http://vk.com/naisly" class="link">Woden S</a></h></th>
+                              </tr>
+                              <tr>
+                                  <th>' . $this->model->Translate('Short description') . ':</th>
+                                  <th><h class="shipping-comparison">' . $this->model->getComparisonDescription($i) . '</h></th>
+                              </tr>
+                              <tr>
+                                  <th>' . $this->model->Translate('Manufacturer') . ':</th>
+                                  <th><h class="shipping-comparison">' . $this->model->Translate('by') . ' <a class="link" href="http://' . $this->model->getComparisonCategory($i) . '.com">' . $this->model->getComparisonCategory($i) . '</a></h></th>
+                              </tr>
+                              <tr>
+                                  <th>' . $this->model->Translate('Average price for this item:') . '</th>
+                                  <th><h class="cprice">$' . $this->model->getComparisonAverage($i) . '</h></th>
+                              </tr>
+                              <tr>
+                                  <th>' . $this->model->Translate('Product features') . ':</th>
+                                  <th><h class="shipping-comparison">' . $this->model->getComparisonFeatures($i) . '</h></th>
+                              </tr>
+                              <tr>
+                                  <th>' . $this->model->Translate('Product Site Launch Date') . ':</th>
+                                  <th><h class="shipping-comparison">' . $this->model->getComparisonTimeOfAdding($i) . '</h></th>
+                              </tr>
+                              <tr>
+                                  <th class="no-border-table"></th>
+                                  <th>
+                                      <form action="/';
+
+                        if($_SESSION['language'] !== 'us'){
+                            echo $_SESSION['language'] . '/';
+                        }
+
+                        echo 'shop/add-item" method="post">
+                                          <div class="text-center">
+                                              <button class="btn btn-warning color-black">' . $this->model->Translate('Add to cart') . '</button>
+                                          </div>
+                                          <input type="hidden" name="id" value="' . $this->model->getComparisonId( $i ) . '"/>
+                                          <input type="hidden" name="product_name" value="' . $this->model->getComparisonProductName( $i ) . '"/>
+                                          <input type="hidden" name="category" value="' . $this->model->getComparisonCategory( $i ) . '"/>
+                                          <input type="hidden" name="photo" value="' . $this->model->getComparisonPhoto( $i ) . '"/>
+                                          <input type="hidden" name="price" value="' . $this->model->getComparisonPrice( $i ) . '"/>
+                                      </form>
+                                  </th>
+                              </tr>
+
+                      </table>
+                   </div>';
+
+            $i++;
+        }
+
+        echo '<div class="divider"></div>';
+
+
     }
 
     public function getAnswers()
     {
 
-        echo '<form action="/FAQ/?" method="get">
+        echo '<form action="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'FAQ/?" method="get">
                  <div class="container">
                       <div class="row">
                           <div class="col-md-1"></div>

@@ -14,11 +14,12 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
-#link {
-    text-decoration: none !important;
-}
 .cart-header {
     color: #1b6d85;
+}
+#link:hover {
+    text-decoration: underline;
+    color: #08b;
 }
 .cart-price {
     color: #ac5050;

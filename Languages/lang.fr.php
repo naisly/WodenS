@@ -975,12 +975,7 @@ $lang = array(
     'result found' => 'correspondance est trouvée',
     'FAQ' => 'Questions fréquemment posées',
 
-
-
-
-
-
-
-
-
+    'Place Order' => 'Passer la commande',
+    'Street Address' => 'Adresse de rue',
+    'Discover new possibilities. Change the way of thinking.' => 'Découvrez de nouvelles possibilités. Changer la façon de penser.',
 );

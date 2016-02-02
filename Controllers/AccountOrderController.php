@@ -170,6 +170,7 @@ class AccountOrderController extends ProfileController
              */
             $complete_photo = array();
             $complete_product_name = array();
+
             $k = 0;
             while ($k < count($complete_original_name)) {
 
@@ -194,7 +195,7 @@ class AccountOrderController extends ProfileController
 
             $k = 0;
             while ($k < count($this->model->getCompleteOrderIds())) {
-                $sql_stmt = "SELECT COUNT(*) as items FROM CompleteOrders WHERE order_id='{$this->model->getCompleteOrderIdsIteration($k)}'";
+                $sql_stmt = "SELECT COUNT(*) as items FROM completeorders WHERE order_id='{$this->model->getCompleteOrderIdsIteration($k)}'";
                 $sql_result = $mysqli->query($sql_stmt);
 
                 if ($sql_result->num_rows > 0) {
@@ -343,7 +344,7 @@ class AccountOrderController extends ProfileController
 
             $k = 0;
             while($k < count($this->model->getDoneOrderIds())) {
-                $sql_stmt = "SELECT COUNT(*) as items FROM DoneOrders WHERE order_id='{$this->model->getDoneOrderIdsIteration($k)}'";
+                $sql_stmt = "SELECT COUNT(*) as items FROM doneorders WHERE order_id='{$this->model->getDoneOrderIdsIteration($k)}'";
                 $sql_result = $mysqli->query($sql_stmt);
 
                 if ($sql_result->num_rows > 0) {

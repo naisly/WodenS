@@ -51,6 +51,8 @@ class SearchController extends DefaultController
      */
     private function actionSearch() {
 
+        $this->actionGetLanguage();
+
         include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
@@ -85,9 +87,17 @@ class SearchController extends DefaultController
             if(isset($_GET['page'])){
                 if($this->model->getCountPages() != 0) {
                     if ($_GET['page'] > $this->model->getCountPages()) {
-                        header("Location: /search/result?generalnav=" . $_GET['generalnav'] . "&page=" . $this->model->getCountPages());
+                        if($_SESSION['language'] !== 'us') {
+                            header("Location: /" . $_SESSION['language'] . "/search/result?generalnav=" . $_GET['generalnav'] . "&page=" . $this->model->getCountPages());
+                        } else {
+                            header("Location: /search/result?generalnav=" . $_GET['generalnav'] . "&page=" . $this->model->getCountPages());
+                        }
                     } elseif ($_GET['page'] < 1) {
-                        header("Location: /search/result?generalnav=" . $_GET['generalnav'] . "&page=1");
+                        if($_SESSION['language'] !== 'us'){
+                            header("Location: /" . $_SESSION['language'] . "/search/result?generalnav=" . $_GET['generalnav'] . "&page=1");
+                        } else {
+                            header("Location: /search/result?generalnav=" . $_GET['generalnav'] . "&page=1");
+                        }
                     }
                 }
             }

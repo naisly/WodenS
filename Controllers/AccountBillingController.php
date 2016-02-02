@@ -67,6 +67,8 @@ class AccountBillingController extends AccountOrderController
      */
     public function actionInsertBillingData() {
 
+        $this->actionGetLanguage();
+
         include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();

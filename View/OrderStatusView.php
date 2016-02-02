@@ -33,7 +33,13 @@ class OrderStatusView extends DefaultView
             echo '<div class="alert alert-danger" role="alert" style="margin-top: -20px;">
                       <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                       <span class="sr-only">Error:</span>
-                      <form action="/support/" method="post">
+                      <form action="/';
+
+            if($_SESSION['language'] !== 'us'){
+                echo $_SESSION['language'] . '/';
+            }
+
+            echo 'support/" method="post">
                           ' . $this->model->Translate('Order') . '<span class="order_id">#' . $this->model->getOrderId() . '</span>' . $this->model->Translate('not found or incorrect email you') . '<br />
                           ' . $this->model->Translate('have been entered') . ': <span class="order_email">' . $this->model->getOrderEmail() . '</span>' . $this->model->Translate('Please check the provided info.') . '<br />
                           ' . $this->model->Translate('If you think that it was our mistake, please') . '<button id="link_as_button" class="contact-us">' . $this->model->Translate('contact us') . '</button>
@@ -47,7 +53,13 @@ class OrderStatusView extends DefaultView
                                            <div class="col-md-2"></div>
                                            <div class="col-md-8">
                                               <div class="account">
-                                                  <form action="/order-status/single" method="get">
+                                                  <form action="/';
+
+            if($_SESSION['language'] !== 'us'){
+                echo $_SESSION['language'] . '/';
+            }
+
+            echo 'order-status/single" method="get">
                                                       <h class="h-account">' . $this->model->Translate('Look up for order') . '</h>
                                                       <input type="text" class="form-control margin-20" name="order_number" id="order_number" placeholder="' . $this->model->Translate('Order Number') . '" />
                                                       <input type="text" class="form-control margin-20" name="order_email" id="order_email" placeholder="' . $this->model->Translate('Your email') . '" />
@@ -80,7 +92,14 @@ class OrderStatusView extends DefaultView
 
         } else if( $this->model->getStatus() == 'done' || $this->model->getStatus() == 'wait'){
 
-            echo '<form action="/support/" method="post">';
+            echo '<form action="/';
+
+            if($_SESSION['language'] !== 'us'){
+                echo $_SESSION['language'] . '/';
+            }
+
+            echo 'support/" method="post">';
+
             if($this->model->getStatus() == 'done') {
                 echo '<div class="alert alert-success" role="alert" style="margin-top: -20px;">';
             } else {

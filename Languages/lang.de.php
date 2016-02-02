@@ -972,10 +972,7 @@ $lang = array(
     'result found' => 'Übereinstimmung gefunden wird',
     'FAQ' => 'Häufig gestellte Fragen',
 
-
-
-
-
-
-
+    'Place Order' => 'Bestellen',
+    'Street Address' => 'Adresse',
+    'Discover new possibilities. Change the way of thinking.' => 'Entdecken Sie neue Möglichkeiten. Ändern Sie die Art des Denkens.',
 );

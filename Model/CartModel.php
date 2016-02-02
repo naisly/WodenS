@@ -63,46 +63,6 @@ class CartModel extends ProfileMinPriceModel
         return $this->last_order_sum;
     }
 
-    public function setOriginalName( $original_name ){
-
-        $this->original_name = $original_name;
-    }
-
-    public function getOriginalName() {
-
-        return $this->original_name;
-    }
-
-    public function setItemPrice( $item_price ){
-
-        $this->item_price = $item_price;
-    }
-
-    public function getItemPrice() {
-
-        return $this->item_price;
-    }
-
-    public function setItemShipping( $item_shipping ){
-
-        $this->item_shipping = $item_shipping;
-    }
-
-    public function getItemShipping() {
-
-        return $this->item_shipping;
-    }
-
-    public function setPhoto( $photo ){
-
-        $this->photo = $photo;
-    }
-
-    public function getPhoto() {
-
-        return $this->photo;
-    }
-
     public function setNoProduct( $no_product ){
 
         $this->no_product = $no_product;

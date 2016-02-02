@@ -136,6 +136,8 @@ class SubdescriptionController extends DefaultController
                 $product_details = array_merge($product_details, array_map('trim', explode(",", $row['product_details'])));
                 $assoc_photo = array_merge($assoc_photo, array_map('trim', explode(",", $row['assoc_photo'])));
             }
+        } else {
+            header('Location: /');
         }
         $sql_min = "SELECT price FROM $table WHERE original_name='$original_name[0]'";
 
@@ -495,6 +497,8 @@ class SubdescriptionController extends DefaultController
      */
     public function actionGetQuestionsAndAnswers( $original_name ) {
 
+        $this->actionGetLanguage();
+
         include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
@@ -704,11 +708,19 @@ class SubdescriptionController extends DefaultController
                 if($this->model->countPages() != 0) {
                     if ($_GET['page'] > $this->model->countPages()) {
                         if (isset($_GET['q'])) {
-                            header('Location: /FAQ/?q=' . $_GET['q'] . '&page=' . $this->model->countPages());
+                            if($_SESSION['language'] !== 'us'){
+                                header('Location: /' . $_SESSION['language'] . '/FAQ/?q=' . $_GET['q'] . '&page=' . $this->model->countPages());
+                            } else {
+                                header('Location: /FAQ/?q=' . $_GET['q'] . '&page=' . $this->model->countPages());
+                            }
                         }
                     } else if ($_GET['page'] < 1) {
                         if (isset($_GET['q'])) {
-                            header('Location: /FAQ/?q=' . $_GET['q'] . '&page=1');
+                            if($_SESSION['language'] !== 'us'){
+                                header('Location: /' . $_SESSION['language'] . '/FAQ/?q=' . $_GET['q'] . '&page=1');
+                            } else {
+                                header('Location: /FAQ/?q=' . $_GET['q'] . '&page=1');
+                            }
                         }
                     }
                 }

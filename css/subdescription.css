@@ -464,3 +464,47 @@
         width: 100%;
     }
 }
+.table-width {
+    width: 20%;
+}
+.invisible-for-xs-md {
+    display: none;
+}
+@media (max-width: 766px){
+    .invisible-for-xs-md {
+        display: block;
+    }
+    .visible-for-md {
+        display: none;
+    }
+    .no-border-table {
+        border-left: 1px solid white !important;
+        border-bottom: 1px solid white !important;
+    }
+    .table > thead > tr > th {
+        vertical-align: top !important;
+    }
+    .img-subdesc {
+        width: 50%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    #product_name {
+        font-size: 20px;
+    }
+    .random-photo {
+        width: 50%;
+        text-align: center;
+        height: auto;
+    }
+    .random-align {
+        margin-left: 27%;
+    }
+    .random-name, .random-price, .random-quantity {
+        font-size: 16px;
+    }
+    .random-sm {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

@@ -8,7 +8,6 @@
     border:none;
     padding:0!important;
     font: inherit;
-    /*border is optional*/
     cursor: pointer;
     font-size: 20px;
 }
@@ -18,6 +17,7 @@
 .change {
     font-family: RobotoLight;
     font-size: 18px;
+    height: 40px;
 }
 
 #border, #no-border {
@@ -104,8 +104,34 @@
 .make-sure {
     font-size: 18px;
     color: rgb(236, 0, 140);
+    height: 110px;
 }
 .link-forgot, .link-forgot:hover {
     color: #08b;
     text-decoration: none !important;
+}
+
+.right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-right: 45px;
+}
+.right-inner-addon i {
+    position: absolute;
+    right: 0;
+    padding: 9px 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 766px){
+    #main-link {
+        white-space: normal !important;
+    }
+    .table-responsive {
+        margin-top: 50px;
+    }
+    .show-orders {
+        margin-top: 50px;
+    }
 }

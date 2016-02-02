@@ -50,7 +50,13 @@ class LoginView extends DefaultView
             }
         }
 
-        echo '<form action="/register" method="post" id="registation">
+        echo '<form action="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'register" method="post" id="registation">
               <div class="container">
                   <div class="row">
                       <div class="col-md-3"></div>
@@ -544,6 +550,8 @@ class LoginView extends DefaultView
      */
     public function addedItemMessage() {
 
+        session_start();
+
         echo '<div class="alert alert-success" role="alert" style="margin-top: -20px; border-radius: 0;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>
@@ -622,7 +630,13 @@ class LoginView extends DefaultView
 
         echo 'register" class="links" id="link" style="text-decoration: none;">' . $this->model->Translate('Create your Woden Sims ID') . '<img style="margin-top: -5px;" src="/images/arrow-blue.png" width="15" height="15"/></a></h2>
                   </div>
-                  <div class="margin-auto" style="margin-top: 5%;"><form action="/check" method="post" id="login_form">
+                  <div class="margin-auto" style="margin-top: 5%;"><form action="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'check" method="post" id="login_form">
                               <div class="input-group" style="width: 100%;">
                                   <input type="text" name="email" id="email" class="form-control woden-sims-email" placeholder="Woden Sims Email">
                               </div>

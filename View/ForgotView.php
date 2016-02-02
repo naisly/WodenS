@@ -42,13 +42,13 @@ class ForgotView extends DefaultView
 
         echo $this->model->Translate('We can help you reset your password and security info.') . '<br />' . $this->model->Translate('Follow the instructions below.') . '</h1>
                     </div>
-                    <form action="';
+                    <form action="/';
 
         if($_SESSION['language'] !== 'us'){
-            echo '/' . $_SESSION['language'] . '/forgot-password/';
+            echo $_SESSION['language'] . '/';
         }
 
-        echo 'check-data" method="get">
+        echo 'forgot-password/check-data" method="get">
 
                         <div class="container">
                             <div class="row">
@@ -100,13 +100,13 @@ class ForgotView extends DefaultView
 
         echo              '</h1>
                     </div>
-                    <form action="';
+                    <form action="/';
 
         if($_SESSION['language'] !== 'us'){
-            echo '/' . $_SESSION['language'] . '/forgot-password/';
+            echo $_SESSION['language'] . '/';
         }
 
-        echo 'check-data" method="get">
+        echo 'forgot-password/check-data" method="get">
                         <input type="hidden" value="' . $_GET["email"] . '" name="email" id="email" />
 
                         <div class="container">
@@ -147,13 +147,13 @@ class ForgotView extends DefaultView
 
         echo              '</h1>
                     </div>
-                    <form action="';
+                    <form action="/';
 
         if($_SESSION['language'] !== 'us'){
-            echo '/' . $_SESSION['language'] . '/forgot-password/';
+            echo $_SESSION['language'] . '/';
         }
 
-        echo 'check-data" method="get">
+        echo 'forgot-password/check-data" method="get">
                         <input type="hidden" value="' . $_GET["email"] . '" name="email" id="email" />
                         <input type="hidden" value="' . $_GET["day_of_birth"] . '" name="day_of_birth" id="day_of_birth" />
 
@@ -223,13 +223,13 @@ class ForgotView extends DefaultView
 
         echo             '</h1>
                     </div>
-                    <form action="';
+                    <form action="/';
 
         if($_SESSION['language'] !== 'us'){
-            echo '/' . $_SESSION['language'] . '/forgot-password/';
+            echo $_SESSION['language'] . '/';
         }
 
-        echo 'check-data" method="post">
+        echo 'forgot-password/check-data" method="post">
                         <input type="hidden" value="' . $_GET["email"] . '" name="email" id="email" />
                         <input type="hidden" value="' . $_GET["day_of_birth"] . '" name="day_of_birth" id="day_of_birth" />
                         <input type="hidden" value="' . $_GET["sc-a-1"] . '" name="sc-a-1" id="sc-a-1" />

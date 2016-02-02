@@ -1169,4 +1169,8 @@ $lang = array(
     'This Item is Certified Refurbished' => 'Этот элемент обновленнно сертифицирован',
     'result found' => 'совпадение найдено',
     'FAQ' => 'Часто задаваемые вопросы',
+
+    'Place Order' => 'Разместить заказ',
+    'Street Address' => 'Адрес улицы',
+    'Discover new possibilities. Change the way of thinking.' => 'Откройте новые возможности. Измените способ мышления.',
 );

@@ -33,10 +33,17 @@ class OrderView extends DefaultView
      */
     public function getPlaceOrder() {
 
-        echo '
-            <h2>' . $this->model->Translate('Check out now') . '</h2>
-            <p class="text-left">' . $this->model->Translate('Please enter your details, and we will ship your goods right away!') .'</p>
-            <form name="shippingForm" action="/account/complete-order" method="post">
+        echo '<div style="margin-left: 20px;">
+                <h2>' . $this->model->Translate('Check out now') . '</h2>
+                <p class="text-left">' . $this->model->Translate('Please enter your details, and we will ship your goods right away!') .'</p>
+            </div>
+            <form name="shippingForm" action="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'account/complete-order" method="post">
                 <div class="well">
                     <h3>' . $this->model->Translate('Ship to') . '</h3>
                     <div class="form-group">

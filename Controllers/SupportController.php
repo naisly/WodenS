@@ -40,6 +40,8 @@ class SupportController extends DefaultController
      */
     public function actionGetData() {
 
+        $this->actionGetLanguage();
+
         include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
