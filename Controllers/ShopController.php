@@ -151,7 +151,7 @@ class ShopController extends DefaultController
         } else if ( $category == 'Gadgets'){
             $sql_query = "SELECT DISTINCT product_name FROM gadgets";
         } else {
-            $sql_query = "SELECT DISTINCT product_name FROM $data WHERE category='$category'";
+            $sql_query = "SELECT DISTINCT product_name FROM " . strtolower($data) . " WHERE category='$category'";
         }
         $result = $mysqli->query($sql_query);
 
@@ -215,7 +215,7 @@ class ShopController extends DefaultController
         } else if ($category == 'Gadgets'){
             $sql_query = "SELECT * FROM gadgets";
         } else {
-            $sql_query = "SELECT * FROM $table WHERE category='$category'";
+            $sql_query = "SELECT * FROM " . strtolower($table) . " WHERE category='$category'";
             $_SESSION['status'] = 1;
         }
 

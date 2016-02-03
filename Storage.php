@@ -12,24 +12,37 @@
  *      $sql_query = "SELECT foo FROM .....";
  *      $result = $mysqli->query($sql_query);
  */
+
+include_once('Mutex.php');
+
 class Storage
 {
     private $_connection;
     private static $_instance; //The single instance
 
-    private $_host = "localhost";
-    private $_username = "root";
-    private $_password = "";
-    private $_database = "shop";
+    private $_host = "mysql.hostinger.com.ua";
+    private $_username = "u493323260_sims";
+    private $_password = "Elisdes07@lim51";
+    private $_database = "u493323260_sims";
 
     /*
 	Get an instance of the Database
 	@return Instance
 	*/
     public static function getInstance() {
-        if(!self::$_instance) { // If no instance then make one
-            self::$_instance = new self();
+        $mutex = new Mutex( 'Storage.php' );
+
+        if($mutex->isLocked() == false){
+
+            $mutex->getLock();
+
+            if (!self::$_instance) {
+                self::$_instance = new self();
+            }
+
+            $mutex->releaseLock();
         }
+
         return self::$_instance;
     }
 
