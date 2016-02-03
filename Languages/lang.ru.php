@@ -338,7 +338,7 @@ $lang = array(
     'With Macbook, you are not going to miss any note for your business and stay up-to-date everywhere' => 'С Macbook, вы не собираетесь пропустить любую ноту для вашего бизнеса и оставаться актуальными во всем мире',
     'Reimagine your life with Macbook and Apps' => 'Переопределите Вашу жизнь с Macbook и приложениями',
     'Be in touch with others by using laptop. For non-resident calls laptops have' => 'Будьте в контакте с другими, используя ноутбук. Для нерезидента ноутбуки имеют',
-    'Search laptop for business' => 'Искать ноутбук для бизнеса',
+    'Search laptop for <nobr> business' => 'Искать ноутбук для <nobr> бизнеса',
 
 
     /*
@@ -390,8 +390,9 @@ $lang = array(
     'Your Email' => 'Ваша Почта',
     'Where is order number?' => 'Где найти номер заказа?',
     'Continue' => 'Продолжить',
-    'Find your order number' => 'Найти ваш номер заказа',
+    'Find your order number' => 'Найти номер заказа',
     'Number is located with thanks message or in your account' => 'Номер располагаеться в Вашем аккаунте или в сообщении',
+    'Number is located with thanks <br /> message or in your account' => 'Номер располагаеться в Вашем <br /> аккаунте или в сообщении',
     'For any questions contact our lead customers' => 'По любым вопросам обращайтесь к нашим главным сотрудникам',
     'Order-status' => 'Статус заказа',
 

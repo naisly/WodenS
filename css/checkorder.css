@@ -111,6 +111,24 @@ html, body {
 .media-padding {
     padding-top: 10px;
 }
+.non-visible-for-md {
+    display: none;
+}
+
+@media (max-width: 766px){
+    .sub-find, .order-support {
+        display: none;
+    }
+    .something {
+        margin-top: 10px !important;
+    }
+    .non-visible-for-md {
+        display: block;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-bottom: 20px;
+    }
+}
 
 @media (min-width: 300px) and (max-width: 990px){
     .media-padding {

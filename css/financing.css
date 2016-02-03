@@ -34,6 +34,9 @@ html, body {
     .spacer-min {
         margin-top: 20px;
     }
+    #main {
+        font-size: 34px !important;
+    }
 }
 #main {
     font-size: 44px;

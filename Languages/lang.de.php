@@ -274,7 +274,7 @@ $lang = array(
     'With Macbook, you are not going to miss any note for your business and stay up-to-date everywhere' => 'Mit Macbook, ihr nicht anschicken sich, beliebiger Hinweis für euer Busineß und zu bleiben aktuell in Ost und West\' zu versäumen',
     'Reimagine your life with Macbook and Apps' => 'Override Euer Leben mit Macbook und Anbiegungen',
     'Be in touch with others by using laptop. For non-resident calls laptops have' => 'Sei in Berührung mit anderer, ausnutzt Notizbuch. Für gebietsfremde Notizbuch haben',
-    'Search laptop for business' => 'Notizbuch für \'Busineß zu suchen',
+    'Search laptop for <nobr> business' => 'Notizbuch für \'Busineß <nobr> zu suchen',
 
     'Phones - Business' => 'Fernsprecher - Busineß',
     'When you use IOS or Android technology as one of the main business skills, new possibilities are available. As many people that have phone, they love their work, productivity is increasing in a simple working day. Phones enable your mind with skills that never ever thought about before and operate with them in random tasks.' => 'Bei Ausnutzung IOS oder Android der Technologie, die eins aus kardinalen sachlichen Fertigkeiten, neue Möglichkeiten haben. Sowohl wie viele Leute, die Fernsprecher haben, sie lieben ihriges Arbeiten, Produktivität ansteigt in einfachen Arbeitstag. Fernsprecher erlauben euer Geist mit Fertigkeiten, die an bis und zu arbeiten mit ihnen in beiläufige Aufgaben keinmal nicht dachten.',
@@ -303,8 +303,9 @@ $lang = array(
     'Your Email' => 'Euere Post',
     'Where is order number?' => 'Wo zu Nummer des Auftrags?',
     'Continue' => 'Fortführen',
-    'Find your order number' => 'Euere Nummer des Auftrags\' zu \'finden',
+    'Find your order number' => 'Euere Nummer',
     'Number is located with thanks message or in your account' => 'Nummer anordnet in Euer Accounte oder in Ansage',
+    'Number is located with thanks <br /> message or in your account' => 'Nummer anordnet in Euer <br /> Accounte oder in Ansage',
     'For any questions contact our lead customers' => 'Beliebige Fragen anrede mit unseren kardinalen Mitarbeitern',
     'Order-status' => 'Status des Auftrags',
 

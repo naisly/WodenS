@@ -274,7 +274,7 @@ $lang = array(
     'With Macbook, you are not going to miss any note for your business and stay up-to-date everywhere' => 'Avec Macbook, vous non assemblent se manquer une ne importe quel note pour votre business et demeurer actuel dans tout le un monde',
     'Reimagine your life with Macbook and Apps' => 'Override votre vie avec Macbook et un annexes',
     'Be in touch with others by using laptop. For non-resident calls laptops have' => 'Sont dans un contact avec autre, utilise notebook. Pour non-résident notebooks ont',
-    'Search laptop for business' => 'Chercher notebook pour un business',
+    'Search laptop for <nobr> business' => 'Chercher notebook pour <nobr> un business',
 
     'Phones - Business' => 'Téléphones - sont un Business',
     'When you use IOS or Android technology as one of the main business skills, new possibilities are available. As many people that have phone, they love their work, productivity is increasing in a simple working day. Phones enable your mind with skills that never ever thought about before and operate with them in random tasks.' => 'Sous un recours IOS ou Android une technologie, seul de un un affaires habitudes capitales, un débouchés nouveaux se ont. Comme et un beaucoup de gens, dont ont un téléphone, eux aiment leur travail, une efficacité un croît un ouvrable jour frugal. Un téléphones permettent votre raison avec un habitudes, dont jamais non crurent de avant et exercer avec eux dans un problèmes accidentels.',
@@ -302,8 +302,9 @@ $lang = array(
     'Your Email' => 'Votre courrier',
     'Where is order number?' => 'Où retrouver une chambre une commande?',
     'Continue' => 'Continuer',
-    'Find your order number' => 'Retrouver votre chambre une commande',
+    'Find your order number' => 'Retrouver chambre',
     'Number is located with thanks message or in your account' => 'Chambre installe se dans votre account ou dans une communication',
+    'Number is located with thanks <br /> message or in your account' => 'Chambre installe se dans votre <br /> account ou dans une communication',
     'For any questions contact our lead customers' => 'Selon un ne importe quel questions adressent se contre nos collaborateurs capitaux',
     'Order-status' => 'Statut une commande',
 
