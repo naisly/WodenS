@@ -153,6 +153,8 @@ class LoginController extends DefaultController
      */
     public function actionCheckProvidedEmail() {
 
+        $this->actionGetLanguage();
+
         include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
@@ -191,6 +193,8 @@ class LoginController extends DefaultController
      * @var $_SESSION['error']
      */
     public function actionLogin() {
+
+        $this->actionGetLanguage();
 
         include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();

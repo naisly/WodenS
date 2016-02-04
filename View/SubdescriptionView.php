@@ -122,19 +122,19 @@ class SubdescriptionView extends DefaultView
     private function getSlider() {
 
         echo '<div class="slider1" style="margin-left: 35px;">';
-        $m = 0;
-        while($m < $this->model->countAssocProducts()){
+        $i = 0;
+        while($i < $this->model->countAssocProducts()){
             echo '<div class="slide" style="height: 250px;">
-                          <img src="/' . $this->model->getAssocPhoto($m) . '" height="120" />
+                          <img src="/' . $this->model->getAssocPhoto($i) . '" height="120" />
                           <div style="height: 90px;; margin-top: 10px;">
-                              <h><a href="/shop/subdescription?name=' . $this->model->getAssocProducts($m) . '&category=' . $this->model->getAssocTable() . '&product_price=' . $this->model->getAssocPrice($m) . '&id=' . $this->model->getAssocId($m) . '&product_name=' . $this->model->getAssocName($m) . '" class="assoc-original-name">' . $this->model->getAssocProducts($m) . '</a></h><br />
-                              <h id="you-save"">$' . $this->model->getAssocPrice($m) . '<span class="striked"><strike> $' . $this->model->getAssocPreviousPrice($m) . '</strike></span></h><br />
-                              <h><span class="shipping-assoc"><em>' . $this->model->getAssocShipping($m) . ' ' . $this->model->Translate('days') . '</em></span> ' . $this->model->Translate('of shipping') . '</h><br />
+                              <h><a href="/shop/subdescription?name=' . $this->model->getAssocProducts($i) . '&category=' . $this->model->getAssocTable() . '&product_price=' . $this->model->getAssocPrice($i) . '&id=' . $this->model->getAssocId($i) . '&product_name=' . $this->model->getAssocName($i) . '" class="assoc-original-name">' . $this->model->getAssocProducts($i) . '</a></h><br />
+                              <h id="you-save"">$' . $this->model->getAssocPrice($i) . '<span class="striked"><strike> $' . $this->model->getAssocPreviousPrice($i) . '</strike></span></h><br />
+                              <h><span class="shipping-assoc"><em>' . $this->model->getAssocShipping($i) . ' ' . $this->model->Translate('days') . '</em></span> ' . $this->model->Translate('of shipping') . '</h><br />
                           </div>
                       </div>
                      ';
 
-            $m++;
+            $i++;
         }
 
 
@@ -158,13 +158,13 @@ class SubdescriptionView extends DefaultView
         echo '<h class="tech-details">' . $this->model->Translate($this->model->getTechnicalDetails(0)) . '</h>
                       <ul class="list-style-items-gl" style="margin-top: 35px; margin-left: 30px;">';
 
-        $k = 1;
-        while ($k < $this->model->countTechnicalDetails()){
-            echo '<li>' . $this->model->getTechnicalDetails($k) . '</li>';
+        $i = 1;
+        while ($i < $this->model->countTechnicalDetails()){
+            echo '<li>' . $this->model->getTechnicalDetails($i) . '</li>';
 
-            $k++;
+            $i++;
         }
-        $y = 2;
+        $i = 2;
 
         echo '</ul>
               <div class="divider"></div>
@@ -175,10 +175,10 @@ class SubdescriptionView extends DefaultView
               <div class="spacer-35"></div>';
 
 
-        while ($y < $this->model->countTechnicalDetails1()){
-            echo '<li>' . $this->model->getTechnicalDetails1($y) . '</li>';
+        while ($i < $this->model->countTechnicalDetails1()){
+            echo '<li>' . $this->model->getTechnicalDetails1($i) . '</li>';
 
-            $y++;
+            $i++;
         }
 
         echo '</ul>
@@ -196,44 +196,44 @@ class SubdescriptionView extends DefaultView
               <h class="header-details">' . $this->model->getTechnicalDetails3(0) . '</h>
               <ul class="list-style-items-gl" style="margin-top: 35px; margin-left: 30px;">';
 
-        $u = 1;
-        while ($u < $this->model->countTechnicalDetails3()){
-            echo '<li>' . $this->model->getTechnicalDetails3($u) . '</li>';
+        $i = 1;
+        while ($i < $this->model->countTechnicalDetails3()){
+            echo '<li>' . $this->model->getTechnicalDetails3($i) . '</li>';
 
-            $u++;
+            $i++;
         }
 
         echo '</ul>
               <h class="header-details">' . $this->model->getTechnicalDetails4(0) . '</h>
               <ul class="list-style-items-gl" style="margin-top: 35px; margin-left: 30px;">';
 
-        $u = 1;
-        while ($u < $this->model->countTechnicalDetails4()){
-            echo '<li>' . $this->model->getTechnicalDetails4($u) . '</li>';
+        $i = 1;
+        while ($i < $this->model->countTechnicalDetails4()){
+            echo '<li>' . $this->model->getTechnicalDetails4($i) . '</li>';
 
-            $u++;
+            $i++;
         }
 
         echo '</ul>
               <h class="header-details">' . $this->model->getTechnicalDetails5(0) . '</h>
               <ul class="list-style-items-gl" style="margin-top: 35px; margin-left: 30px;">';
 
-        $u = 1;
-        while ($u < $this->model->countTechnicalDetails5()){
-            echo '<li>' . $this->model->getTechnicalDetails5($u) . '</li>';
+        $i = 1;
+        while ($i < $this->model->countTechnicalDetails5()){
+            echo '<li>' . $this->model->getTechnicalDetails5($i) . '</li>';
 
-            $u++;
+            $i++;
         }
 
         echo '</ul>
               <h class="header-details">' . $this->model->getTechnicalDetails6(0) . '</h>
               <ul class="list-style-items-gl" style="margin-top: 35px; margin-left: 30px;">';
 
-        $u = 1;
-        while ($u < $this->model->countTechnicalDetails6()){
-            echo '<li>' . $this->model->getTechnicalDetails6($u) . '</li>';
+        $i = 1;
+        while ($i < $this->model->countTechnicalDetails6()){
+            echo '<li>' . $this->model->getTechnicalDetails6($i) . '</li>';
 
-            $u++;
+            $i++;
         }
     }
 

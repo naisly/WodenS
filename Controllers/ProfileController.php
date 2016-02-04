@@ -271,7 +271,7 @@ class ProfileController extends DefaultController
         $result_table = $mysqli->query( $sql_table );
 
         if($result_table->num_rows == 0){
-            $sql_another = "SELECT product_table, id FROM completeOrders WHERE user='$user' ORDER BY sort_id DESC LIMIT 1";
+            $sql_another = "SELECT product_table, id FROM completeorders WHERE user='$user' ORDER BY sort_id DESC LIMIT 1";
             $result_another = $mysqli->query( $sql_another );
 
             if($result_another->num_rows > 0){
@@ -282,7 +282,7 @@ class ProfileController extends DefaultController
             }
 
             if($result_another->num_rows == 0){
-                $sql_final = "SELECT product_table, id FROM doneOrders WHERE user='$user' ORDER BY sort_id DESC LIMIT 1";
+                $sql_final = "SELECT product_table, id FROM doneorders WHERE user='$user' ORDER BY sort_id DESC LIMIT 1";
                 $result_final = $mysqli->query( $sql_final );
 
                 if($result_final->num_rows > 0){

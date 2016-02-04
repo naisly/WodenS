@@ -157,7 +157,13 @@ class ProfileView extends DefaultView
 
         echo         '<div class="cart-divider"></div>
 
-                      <h class="cart">' . $this->model->Translate('Not') . ' '  . $this->model->getName() . ' ? <a href="/logout" class="link">' . $this->model->Translate('Sign out') . '</a></h>
+                      <h class="cart">' . $this->model->Translate('Not') . ' '  . $this->model->getName() . ' ? <a href="/';
+
+        if($_SESSION['language'] !== 'us'){
+            echo $_SESSION['language'] . '/';
+        }
+
+        echo 'logout" class="link">' . $this->model->Translate('Sign out') . '</a></h>
                   </div>';
     }
 

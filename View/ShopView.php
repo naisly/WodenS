@@ -67,7 +67,7 @@ class ShopView extends DefaultView
         $i = 0;
 
         while ($i < $this->model->countDistinctCategories()) {
-            echo "<a class='categories-list' href='{$this->model->getDistinctCategories($i)}'>" . $this->model->getDistinctCategories($i) . "</a>";
+            echo "<a class='categories-list' href='" . strtolower($this->model->getDistinctCategories($i)) . "'>" . $this->model->getDistinctCategories($i) . "</a>";
 
             $i++;
         }

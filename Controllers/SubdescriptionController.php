@@ -79,6 +79,16 @@ class SubdescriptionController extends DefaultController
                       subdescription.product_name='$product_name' AND $table.price = $id";
         $result = $mysqli->query( $sql_query );
 
+        session_start();
+
+        if(!$result){
+            if($_SESSION['language'] !== 'us'){
+                header('Location: /' . $_SESSION['language'] . '/');
+            } else {
+                header('Location: /');
+            }
+        }
+
         $original_name = array();
         $photo = array();
         $category = array();
@@ -137,8 +147,15 @@ class SubdescriptionController extends DefaultController
                 $assoc_photo = array_merge($assoc_photo, array_map('trim', explode(",", $row['assoc_photo'])));
             }
         } else {
-            header('Location: /');
+            if($_SESSION['language'] !== 'us'){
+                header('Location: /' . $_SESSION['language'] . '/');
+            } else {
+                header('Location: /');
+            }
         }
+
+        session_write_close();
+
         $sql_min = "SELECT price FROM $table WHERE original_name='$original_name[0]'";
 
         $result_min = $mysqli->query( $sql_min );

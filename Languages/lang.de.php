@@ -24,7 +24,7 @@ $lang = array(
     'Devices' => 'Soup',
     'TV' => 'TV',
 
-    'Support' => 'Aufrechterhaltung',
+    'Support' => 'Stützen',
     'Cart' => 'Korb',
     'Logout' => 'Abfahrt',
     'Register' => 'Registrierung',

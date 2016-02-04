@@ -131,10 +131,10 @@ li.active {
 	display: none;
 	width: 100%;
 	height: 1px;
-	background-color: #e4e4e4;
+	background-color: rgba(255, 255, 255 ,0.6);
 	position: absolute;
 	top: 50px;
-	z-index: 4000;
+	z-index: 10001;
 }
 .marger {
 	margin-top: 10px;
@@ -744,6 +744,12 @@ a:hover {
 	background-size: 100% auto;
 	height: 170px;
 	z-index: 1000;
+}
+
+@media (max-width: 400px){
+	.bg-divider h1, .register-bg h1 {
+		font-size: 24px !important;
+	}
 }
 .search-nav {
 	display: none !important;

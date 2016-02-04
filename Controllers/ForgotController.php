@@ -151,8 +151,6 @@ class ForgotController extends DefaultController
      */
     public function actionGetQuestion() {
 
-        $this->actionGetLanguage();
-
         include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();

@@ -20,10 +20,10 @@ class Storage
     private $_connection;
     private static $_instance; //The single instance
 
-    private $_host = "mysql.hostinger.com.ua";
-    private $_username = "u493323260_sims";
-    private $_password = "Elisdes07@lim51";
-    private $_database = "u493323260_sims";
+    private $_host = "localhost";
+    private $_username = "root";
+    private $_password = "";
+    private $_database = "shop";
 
     /*
 	Get an instance of the Database
