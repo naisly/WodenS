@@ -20,11 +20,22 @@ $view = new AdminView($model);
 
 session_start();
 
-$_SESSION['language'] = 'us';
+if(!isset($_SESSION['admin'])){
+    header('Location: /admin/login');
+}
 
 session_write_close();
 
-$view->DoctypeView( 'admin' );
-
-$controller->actionGetAdminProducts();
-$view->ProductsPage();
+if(isset($_POST['delete_id'])){
+    $controller->actionDeleteData();
+} else if(isset($_POST['edit_category'])){
+    $view->DoctypeView( 'Admin' );
+    $controller->actionSaveData();
+    $view->getForm();
+} else if(isset($_POST['id'])){
+    $controller->actionUpdateData();
+} else {
+    $view->DoctypeView( 'Admin' );
+    $controller->actionGetAdminProducts();
+    $view->ProductsPage();
+}

@@ -69,7 +69,7 @@ class SupportView extends DefaultView
                       <td>' . $this->model->getSubject($i) . '</td>
                       <td>' . $this->model->getMessage($i) . '</td>
                       <td>
-                          <form action="admin-solved" method="post">
+                          <form action="" method="post">
                               <input type="hidden" name="id" id="id" value="' . $this->model->getId($i) . '" />
 
                               <button class="btn btn-warning">Solved</button>

@@ -70,7 +70,7 @@ class DefaultView
             } else {
                 echo '<title>' . $_GET['q'] . ' - Woden Sims</title>';
             }
-        } else if($page == 'Admin'){
+        } else if($page == 'Admin' ){
             echo '<title>Admin - Woden Sims</title>';
         }
         else {

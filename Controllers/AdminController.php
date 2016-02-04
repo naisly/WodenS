@@ -32,36 +32,43 @@ class AdminController
      * @var $username
      * @var $password
      */
-    public function actionLogin() {
+    public function actionLogin()
+    {
 
         include_once $_SERVER['DOCUMENT_ROOT'] . '/Storage.php';
         $db = Storage::getInstance();
         $mysqli = $db->getConnection();
 
-        if(isset($_POST['username'])){
+        if (isset($_POST['username'])) {
             $username = $_POST['username'];
             $username = stripslashes($username);
+
+            if ($username !== 'serdiuk.oleksandr@woden.sims') {
+                header('Location: /admin/login?error=1');
+            } else {
+
+                if (isset($_POST['password'])) {
+                    $password = $_POST['password'];
+                    $password = stripcslashes($password);
+                }
+
+                $sql_query = "SELECT * FROM users WHERE email='$username' AND password='$password'";
+
+                $result = $mysqli->query($sql_query);
+
+                session_start();
+
+                if ($result->num_rows == 1) {
+                    $_SESSION['admin'] = $username;
+                    header("Location: /admin/");
+                } else {
+                    header("Location: /admin/login?error=1");
+                }
+
+                session_write_close();
+            }
         }
-        if(isset($_POST['password'])) {
-            $password = $_POST['password'];
-            $password = stripcslashes($password);
-        }
 
-        $sql_query = "SELECT * FROM users WHERE email='$username' AND password='$password'";
-
-        $result = $mysqli->query($sql_query);
-
-        session_start();
-
-        if ($result->num_rows == 1) {
-            $_SESSION['admin'] = $username;
-            header("Location: admin.php");
-        } else {
-            header("Location: admin-login.php");
-            $_SESSION['error'] = '1';
-        }
-
-        session_write_close();
     }
 
     /**
@@ -276,7 +283,7 @@ class AdminController
 
         $sql_edit->execute();
 
-        header('Location: admin-products.php');
+        header('Location: admin-products');
     }
 
     /**
@@ -293,7 +300,7 @@ class AdminController
             unset($_SESSION['admin']);
         }
 
-        header('Location: admin-login.php');
+        header('Location: admin-login');
     }
 
     /**
@@ -317,6 +324,6 @@ class AdminController
         $sql_stmt = $mysqli->prepare("DELETE FROM phones WHERE id='$id'");
         $sql_stmt->execute();
 
-        header('Location: admin-products.php');
+        header('Location: admin-products');
     }
 }

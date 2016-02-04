@@ -48,19 +48,32 @@ class CheckoutController
         /*
          * Getting names, emails, orders
          */
-        $sql_query = "SELECT DISTINCT users.name, users.email, $table.order_id FROM users INNER JOIN
+        $sql_query = "SELECT DISTINCT users.first_name, users.last_name, users.email, $table.order_id FROM users INNER JOIN
                     $table WHERE $table.user = users.email";
         $result = $mysqli->query($sql_query);
 
-        $name_array = array();
+        $f_name = array();
+        $l_name = array();
         $email_array = array();
         $order_id_array = array();
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                $name_array = array_merge($name_array, array_map('trim', explode(",", $row['name'])));
+                $f_name = array_merge($f_name, array_map('trim', explode(",", $row['first_name'])));
+                $l_name = array_merge($l_name, array_map('trim', explode(",", $row['last_name'])));
                 $email_array = array_merge($email_array, array_map('trim', explode(",", $row['email'])));
                 $order_id_array = array_merge($order_id_array, array_map('trim', explode(",", $row['order_id'])));
             }
+        }
+
+        $name_array = array();
+
+        $i = 0;
+        $n = count($f_name);
+
+        while($i < $n){
+            array_push($name_array, $f_name[$i] . ' ' . $l_name[$i]);
+
+            $i++;
         }
 
         $this->model->setName($name_array);

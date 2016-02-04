@@ -7,22 +7,19 @@
  */
 
 include_once $_SERVER['DOCUMENT_ROOT'] . '/Model/AdminModel.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/AdminController.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/View/AdminView.php';
 
 $model = new AdminModel();
-
-//It is important that the controller and the view share the model
-
-$controller = new AdminController($model);
 
 $view = new AdminView($model);
 
 session_start();
 
 if(!isset($_SESSION['admin'])){
-    header('Location: admin-login.php');
+    header('Location: /admin/login');
 }
 
-$view->DoctypeView( 'admin' );
+session_write_close();
+
+$view->DoctypeView( 'Admin' );
 $view->adminBlocks();

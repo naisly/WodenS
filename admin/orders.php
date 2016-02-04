@@ -16,22 +16,22 @@ $controller = new CheckoutController($model);
 
 $view = new CheckoutView($model);
 
-/*if(!isset($_SESSION['admin'])){
-    header('Location: admin-login.php');
-}*/
 session_start();
 
-$_SESSION['language'] = 'us';
+if(!isset($_SESSION['admin'])){
+    header('Location: /admin/login');
+}
 
 session_write_close();
 
-
-$view->DoctypeView( 'admin-orders' );
-
-$controller->actionGetData( 'completeorders' );
-
-$view->getTable( 'latest' );
-
-$controller->actionGetData( 'doneorders' );
-
-$view->getTable( 'done' );
+if(isset($_POST['done'])){
+    $controller->actionDone( 'completeorders', 'doneorders');
+} else if(isset($_POST['pull-back'])){
+    $controller->actionDone( 'doneorders', 'completeorders');
+} else {
+    $view->DoctypeView('Admin');
+    $controller->actionGetData('completeorders');
+    $view->getTable('latest');
+    $controller->actionGetData('doneorders');
+    $view->getTable('done');
+}
