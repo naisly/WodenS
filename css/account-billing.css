@@ -1,30 +1,9 @@
-.main-page {
-    color: #555;
-    font-family: RobotoLight;
-    font-size: 24px;
-}
-.main-form {
-    margin-top: 50px;
-}
-.form-spacer {
-    margin-top: 20px;
-}
-.form-bordered {
-    border: 1px solid #e4e4e4;
-    padding: 30px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-.min-spacer {
-    margin-top: 50px;
-}
-#gift {
-    font-size: 17px;
-    color: #555;
-}
-
-@media (max-width: 992px){
-    .form-bordered {
-        border: none !important;
-        box-shadow: none !important;
-    }
+.main-page{color:#555;font-family:RobotoLight;font-size:24px}
+.main-form{margin-top:50px}
+.form-spacer{margin-top:20px}
+.form-bordered{border:1px solid #e4e4e4;padding:30px;box-shadow:0 0 10px rgba(0,0,0,0.5)}
+.min-spacer{margin-top:50px}
+#gift{font-size:17px;color:#555}
+@media (max-width: 992px) {
+    .form-bordered{border:none!important;box-shadow:none!important}
 }

@@ -1,138 +1,39 @@
-body, html {
-    width: 100%;
-    height: 100%;
+body,html{width:100%;height:100%}
+.main-header-gl{font-size:45px;font-family:RobotoBold!important;color:#000}
+.future-main{margin-top:100px;font-size:44px}
+.link-nav{font-size:19px}
+.link-nav:hover{color:#36B;text-decoration:none}
+.sub-future{font-size:20px}
+.header-future{font-size:30px;text-align:left}
+.main-tv{font-size:44px}
+.divider-main{margin-top:40px;margin-bottom:40px;width:100%;height:2px;background-color:#e4e4e4}
+.tv-tim{background:url(../images/apple-tv-tim.jpg) no-repeat center center;margin-top:60px;width:100%;padding-left:5%;padding-top:47%;padding-bottom:3%;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}
+.tv-tim h1{color:#fff}
+@media (max-width: 690px) {
+    .tv-tim h1{font-size:22px}
 }
-.main-header-gl {
-    font-size: 45px;
-    font-family: RobotoBold !important;
-    color: black;
-}
-.future-main {
-    margin-top: 100px;
-    font-size: 44px;
-}
-.link-nav {
-    font-size: 19px;
-}
-.link-nav:hover {
-    color: #3366BB;
-    text-decoration: none;
-}
-.sub-future {
-    font-size: 20px;
-}
-.header-future {
-    font-size: 30px;
-    text-align: left;
-}
-.main-tv {
-    font-size: 44px;
-}
-.divider-main {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    width: 100%;
-    height: 2px;
-    background-color: #e4e4e4;
-}
-
-.tv-tim {
-    background: url(../images/apple-tv-tim.jpg) no-repeat center center;
-    margin-top: 60px;
-    width: 100%;
-    padding-left: 5%;
-    padding-top: 47%;
-    padding-bottom: 3%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-.tv-tim h1 {
-    color: white;
-}
-
-@media (max-width: 690px){
-    .tv-tim h1 {
-        font-size: 22px;
-    }
-}
-
-.sub-h {
-    font-size: 30px;
-    color: #e4e4e4;
-}
-
-.order-nav {
-    font-size: 28px;
-}
-.order-margin {
-    margin-top: 40px;
-}
-.order-nav:hover {
-    text-decoration: none;
-    color: #3366BB;
-}
-.bg-full-image-gl-xs {
-    width: 100%;
-    height: 100%;
-    margin-top: -100px;
-}
-.full-image-cs {
-    width: 100%;
-    height: auto;
-}
-.abs-pos-for-xs {
-    position: absolute;
-    top: 90px;
-    left: 20px;
-}
-.main-header {
-    font-size: 44px;
-    font-family: RobotoLight;
-}
-.sub-main-header {
-    font-size: 33px;
-    font-family: RobotoLight;
-}
-.full-image-responsive {
-    width: 100%;
-    height: auto;
-}
-.border-box {
-    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
-    border: 1px solid #e4e4e4;
-}
-@media (max-width: 766px){
-    .abs-pos-for-xs {
-        position: static;
-    }
+.sub-h{font-size:30px;color:#e4e4e4}
+.order-nav{font-size:28px}
+.order-margin{margin-top:40px}
+.order-nav:hover{text-decoration:none;color:#36B}
+.bg-full-image-gl-xs{width:100%;height:100%;margin-top:-100px}
+.full-image-cs{width:100%;height:auto}
+.abs-pos-for-xs{position:absolute;top:90px;left:20px}
+.main-header{font-size:44px;font-family:RobotoLight}
+.sub-main-header{font-size:33px;font-family:RobotoLight}
+.full-image-responsive{width:100%;height:auto}
+.border-box{box-shadow:0 0 10px rgba(0,0,0,0.5);border:1px solid #e4e4e4}
+@media (max-width: 766px) {
+    .abs-pos-for-xs{position:static}
 }
 @media (min-width: 766px) and (max-width: 1000px) {
-    .full-image-cs {
-        margin-top: 2%;
-    }
-    .bg-full-image-gl-xs {
-        height: 65%;
-    }
-    .abs-pos-for-xs {
-        position: static;
-    }
+    .full-image-cs{margin-top:2%}
+    .bg-full-image-gl-xs{height:65%}
+    .abs-pos-for-xs{position:static}
 }
-
 @media (min-width: 300px) and (max-width: 765px) {
-    .full-image-cs {
-        margin-top: 2%;
-    }
-    .bg-full-image-gl-xs {
-        height: 45%;
-    }
-    .full-image-responsive {
-        width: 40%;
-        margin-left: 100px;
-    }
-    .border-box {
-        box-shadow: none;
-        border: none;
-    }
+    .full-image-cs{margin-top:2%}
+    .bg-full-image-gl-xs{height:45%}
+    .full-image-responsive{width:40%;margin-left:100px}
+    .border-box{box-shadow:none;border:none}
 }

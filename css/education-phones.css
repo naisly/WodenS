@@ -1,77 +1,21 @@
-#sub-every-phones {
-    font-size: 20px;
-    font-family: RobotoLight;
+#sub-every-phones{font-size:20px;font-family:RobotoLight}
+.content-phones{margin-top:20px}
+#education-phone{width:100%;height:auto}
+#dropbox{margin-top:25px}
+#photoshop{margin-top:35px;width:70%;height:auto}
+.delivering{margin-top:40px}
+#delivering{width:100%;height:auto}
+#chart{margin-top:40px;width:65%;height:auto}
+.main-fixed-container{position:fixed;top:0;z-index:2;width:100%;height:50px;opacity:.9;background-color:#fff;border-bottom:1px solid #666}
+.fixed-header{font-size:24px;font-family:RobotoLight;color:#555}
+.fixed-main{margin-top:10px;margin-left:-40px}
+.button-buy{height:30px;font-size:12px;margin-top:13px}
+.buy-main{margin-right:-20px}
+@media (max-width: 766px) {
+    .fixed-main{margin-left:0}
+    .buy-main{margin-right:0}
+    #bordered-middle{padding-left:0;padding-right:0}
 }
-.content-phones {
-    margin-top: 20px;
-}
-#education-phone {
-    width: 100%;
-    height: auto;
-}
-#dropbox {
-    margin-top: 25px;
-}
-#photoshop {
-    margin-top: 35px;
-    width: 70%;
-    height: auto;
-}
-.delivering {
-    margin-top: 40px;
-}
-#delivering {
-    width: 100%;
-    height: auto;
-}
-#chart {
-    margin-top: 40px;
-    width: 65%;
-    height: auto;
-}
-.main-fixed-container {
-    position: fixed;
-    top: 0;
-    z-index: 2;
-    width: 100%;
-    height: 50px;
-    opacity: 0.9;
-    background-color: white;
-    border-bottom: 1px solid #666;
-}
-.fixed-header {
-    font-size: 24px;
-    font-family: RobotoLight;
-    color: #555;
-}
-.fixed-main {
-    margin-top: 10px;
-    margin-left: -40px;
-}
-.button-buy {
-    height: 30px;
-    font-size: 12px;
-    margin-top: 13px;
-}
-.buy-main {
-    margin-right: -20px;
-}
-
-@media (max-width: 766px){
-    .fixed-main {
-        margin-left: 0;
-    }
-    .buy-main {
-        margin-right: 0;
-    }
-    #bordered-middle {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-@media (max-width: 450px){
-    #main {
-        font-size: 33px !important;
-    }
+@media (max-width: 450px) {
+    #main{font-size:33px!important}
 }

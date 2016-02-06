@@ -1,73 +1,18 @@
-body, html {
-    width: 100%;
-    height: 100%;
-}
-.overlay {
-    margin-top: -20px;
-    padding-bottom: 40%;
-    background: url('../images/education1.jpg') center no-repeat;
-    background-position: center top;
-    background-size: 100% auto;
-}
-.content-header {
-    padding-top: 5%;
-    font-size: 4vw;
-    font-family: RobotoLight;
-}
-.container-content {
-    margin-top: 5%;
-}
-.divider-content {
-    width: 100%;
-    height: 5px;
-    color: #e4e4e4;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.main-header {
-    font-family: RobotoLight;
-    font-size: 28px;
-}
-.category-main {
-    font-size: 30px;
-    font-family: RobotoLight;
-}
-.sub-category {
-    font-size: 18px;
-}
-.learn-more {
-    color: #08c !important;
-    font-size: 15px;
-    font-family: RobotoLight;
-    text-decoration: none !important;
-}
-.lots-of-ways {
-    font-size: 55px;
-    font-family: RobotoLight;
-    letter-spacing: -1px;
-}
-#content-divider {
-    width: 60%;
-    margin: 60px auto 10px auto;
-    height: 1px;
-    background-color: #e4e4e4;
-}
-
-@media (max-width: 766px){
-    .lots-of-ways {
-        font-size: 33px;
-    }
-    .main-header {
-        font-size: 24px;
-    }
-    .content-header {
-        padding-top: 3%;
-        padding-bottom: 10%;
-    }
-    .container-content {
-        margin-top: 50px;
-    }
-    #content-divider {
-        width: 80%;
-    }
+body,html{width:100%;height:100%}
+.overlay{margin-top:-20px;padding-bottom:40%;background:url(../images/education1.jpg) center no-repeat;background-position:center top;background-size:100% auto}
+.content-header{padding-top:5%;font-size:4vw;font-family:RobotoLight}
+.container-content{margin-top:5%}
+.divider-content{width:100%;height:5px;color:#e4e4e4;margin-top:20px;margin-bottom:20px}
+.main-header{font-family:RobotoLight;font-size:28px}
+.category-main{font-size:30px;font-family:RobotoLight}
+.sub-category{font-size:18px}
+.learn-more{color:#08c!important;font-size:15px;font-family:RobotoLight;text-decoration:none!important}
+.lots-of-ways{font-size:55px;font-family:RobotoLight;letter-spacing:-1px}
+#content-divider{width:60%;margin:60px auto 10px;height:1px;background-color:#e4e4e4}
+@media (max-width: 766px) {
+    .lots-of-ways{font-size:33px}
+    .main-header{font-size:24px}
+    .content-header{padding-top:3%;padding-bottom:10%}
+    .container-content{margin-top:50px}
+    #content-divider{width:80%}
 }

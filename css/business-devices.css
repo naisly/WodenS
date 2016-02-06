@@ -1,27 +1,4 @@
-#business-devices {
-    width: 100%;
-    height: auto;
-    margin-top: 40%;
-    padding-bottom: 40%;
-}
-.business-devices {
-    background: url(../images/business-devices3.jpg) no-repeat center center;
-    background-position: center;
-    min-height: 200px;
-    width: 100%;
-    background-size: cover;
-}
-.business-devices-container {
-    background: url(../images/business-devices4.jpg) no-repeat center center;
-    background-position: center;
-    min-height: 200px;
-    width: 100%;
-    background-size: cover;
-}
-.for-small-devices-text {
-    padding: 30px;
-    background-color: white;
-    opacity: 0.9;
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
+#business-devices{width:100%;height:auto;margin-top:40%;padding-bottom:40%}
+.business-devices{background:url(../images/business-devices3.jpg) no-repeat center center;background-position:center;min-height:200px;width:100%;background-size:cover}
+.business-devices-container{background:url(../images/business-devices4.jpg) no-repeat center center;background-position:center;min-height:200px;width:100%;background-size:cover}
+.for-small-devices-text{padding:30px;background-color:#fff;opacity:.9;border-radius:4px;box-shadow:0 0 10px rgba(0,0,0,0.5)}

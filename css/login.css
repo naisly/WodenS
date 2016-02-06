@@ -1,337 +1,68 @@
-body, html {
-    height: auto !important;
+bbody,html{height:auto!important}
+#main{margin-top:10px}
+.forgot{font-size:18px;color:#08b!important;text-decoration:none!important}
+.field_set{box-shadow:0 0 10px rgba(0,0,0,0.5);padding-left:15px;padding-right:15px;border-radius:4px;background-color:#fff}
+.sign{font-size:44px;font-family:RobotoLight}
+.only-one{font-size:30px;font-family:RobotoLight}
+.margin-auto{width:30%;margin-left:auto;margin-right:auto}
+.woden-sims-email{height:40px!important;border-bottom:none!important;border-radius:4px!important;background-color:#fff!important}
+@media (max-width: 766px) {
+    .margin-auto{width:80%}
 }
-#main {
-    margin-top: 10px;
+@media (min-width: 767px) and (max-width: 1022px) {
+    .margin-auto{width:60%}
 }
-.forgot {
-    font-size: 18px;
-    color: #08b !important;
-    text-decoration: none !important;
+.line{margin-top:30px;height:1px;background-color:#e4e4e4;-webkit-box-shadow:0 8px 6px -6px #000;-moz-box-shadow:0 8px 6px -6px #000;box-shadow:0 15px 12px -12px #000}
+.already-registered{margin-top:15px}
+.btn-default{background-color:#e4e4e4;color:#000!important}
+ul.hor_nav{margin:0;padding:0}
+ul.hor_nav li{display:inline;margin-right:20px;padding:2px}
+.min-spacer{margin-top:20px}
+#copyright{margin-top:14px}
+.bottom-spacer{position:absolute;bottom:0;margin:auto;width:100%}
+#redirect{margin-top:-5px;margin-bottom:20px}
+.cart{margin-right:20px}
+.hor_navigation li{display:inline;margin-right:15px;margin-left:30px}
+.content-divider{width:100%;height:1px;color:#000;margin-top:20px;margin-bottom:20px;z-index:1000}
+.footer-bottom{position:absolute;bottom:0;width:100%}
+.thank-you{margin-top:10%!important}
+.register-bg{margin-top:-70px;padding-top:40px;background:url(../images/gradient-bg.jpg) center no-repeat;background-position:center top;background-size:100% auto;height:150px;z-index:1000}
+.one-account{font-size:18px;margin-top:0!important;padding-top:0!important}
+.register{background-color:#fff;border:none;font-size:22px;color:#08b}
+#main-link-check,#main-link-check:hover{color:#08b}
+.one-account > a{color:#08b}
+.one-account > a:hover{color:#08b}
+.choice{font-size:33px;color:#ec008c}
+.divider-register{width:100%;height:1px;background-color:#e4e4e4;margin-top:30px;margin-bottom:30px;box-shadow:0 0 10px rgba(0,0,0,0.5)}
+.btn-dropdown{background-color:#fff!important;border:1px solid #ccc;height:34px;padding:6px 12px;font-size:14px;line-height:1.42857143;border-radius:4px;display:block;box-shadow:inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;text-align:left!important;color:#555}
+@media (max-width: 994px) and (min-width: 601px) {
+    .col-md-4{width:60%!important;margin-left:auto;margin-right:auto;margin-top:70px}
 }
-.field_set {
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 4px;
-    background-color: white;
+@media (max-width: 994px) {
+    .footer-bottom{position:relative}
+    .thank-you{margin-top:100px!important}
+    .field_set{background-color:rgba(255,255,255,0.8)!important}
 }
-.sign {
-    font-size: 44px;
-    font-family: RobotoLight;
+@media (max-width: 600px) {
+    .col-md-4{width:100%}
 }
-.only-one {
-    font-size: 30px;
-    font-family: RobotoLight;
-}
-.margin-auto {
-    width: 30%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.woden-sims-email {
-    height: 40px !important;
-    border-bottom: none !important;
-    border-radius: 4px !important;
-    background-color: white !important;
-}
-
-@media (max-width: 766px){
-    .margin-auto {
-        width: 80%;
-    }
-}
-
-@media (min-width: 767px) and (max-width: 1022px){
-    .margin-auto {
-        width: 60%;
-    }
-}
-.line {
-    margin-top: 30px;
-    height: 1px;
-    background-color: #e4e4e4;
-    -webkit-box-shadow: 0 8px 6px -6px black;
-    -moz-box-shadow: 0 8px 6px -6px black;
-    box-shadow: 0 15px 12px -12px black;
-}
-.already-registered {
-    margin-top: 15px;
-}
-.btn-default {
-    background-color: #e4e4e4;
-    color: black !important;
-}
-ul.hor_nav {
-    margin: 0;
-    padding: 0;
-}
-ul.hor_nav li {
-    display: inline;
-    margin-right: 20px;
-    padding: 2px;
-}
-.min-spacer {
-    margin-top: 20px;
-}
-#copyright {
-    margin-top: 14px;
-}
-.bottom-spacer {
-    position: absolute;
-    bottom: 0;
-    margin: auto;
-    width: 100%;
-}
-#redirect {
-    margin-top: -5px;
-    margin-bottom: 20px;
-}
-.cart {
-    margin-right: 20px;
-}
-.hor_navigation li {
-    display: inline;
-    margin-right: 15px;
-    margin-left: 30px;
-}
-.content-divider {
-    width: 100%;
-    height: 1px;
-    color: black;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    z-index: 1000;
-}
-.footer-bottom {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-.thank-you {
-    margin-top: 10% !important;
-}
-.register-bg {
-    margin-top: -70px;
-    padding-top: 40px;
-    /*background: linear-gradient(to top, #e4e4e4, #777);*/
-    /*background-color: #666;*/
-    background: url('../images/gradient-bg.jpg') center no-repeat;
-    background-position: center top;
-    background-size: 100% auto;
-    height: 150px;
-    z-index: 1000;
-}
-.one-account {
-    font-size: 18px;
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-}
-.register {
-    background-color: white;
-    border: none;
-    font-size: 22px;
-    color: #08b;
-}
-#main-link-check, #main-link-check:hover {
-    color: #08b;
-}
-.one-account > a {
-    color: #08b;
-}
-.one-account > a:hover {
-    color: #08b;
-}
-.choice {
-    font-size: 33px;
-    color: rgb(236, 0, 140);
-}
-.divider-register {
-    width: 100%;
-    height: 1px;
-    background-color: #e4e4e4;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
-}
-.btn-dropdown {
-    background-color: #fff !important;
-    border: 1px solid #ccc;
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    border-radius: 4px;
-    display: block;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    text-align: left !important;
-    color: #555;
-}
-
-@media (max-width: 994px) and (min-width: 601px){
-    .col-md-4 {
-        width: 60% !important;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 70px;
-    }
-}
-@media (max-width: 994px){
-    .footer-bottom {
-        position: relative;
-    }
-    .thank-you {
-        margin-top: 100px !important;
-    }
-    .field_set {
-        background-color: rgba(255, 255, 255, 0.8) !important;
-    }
-}
-
-@media (max-width: 600px){
-    .col-md-4 {
-        width: 100%;
-    }
-}
-
 @media (min-width: 1605px) {
-    .footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-    }
+    .footer{position:absolute;bottom:0;width:100%}
 }
-
-.image-full-register-xs {
-    background: url(../images/store-apple.jpeg) no-repeat center center;
-    background-position: center;
-    width: 100%;
-    background-size: cover;
-    margin-top: -70px !important;
+.image-full-register-xs{background:url(../images/store-apple.jpeg) no-repeat center center;background-position:center;width:100%;background-size:cover;margin-top:-70px!important}
+.login-bg-for-xs{background:url(../images/store-woden-s.jpg) no-repeat center center;background-position:center;width:100%;background-size:cover;margin-top:-70px!important;padding-top:17%;padding-bottom:33%!important}
+.btn{cursor:default;background-color:#FFF;border-radius:4px;text-align:left}
+.caret{position:absolute;right:16px;top:16px}
+.questions-identity{font-size:14px;position:inherit;margin-top:50px}
+.btn-default:hover,.btn-default:focus,.btn-default:active,.btn-default.active,.open .dropdown-toggle.btn-default{background-color:#FFF}
+.btn-group.open .dropdown-toggle{box-shadow:0 1px 1px rgba(0,0,0,0.075) inset,0 0 8px rgba(102,175,233,0.6)}
+.btn-group{width:100%}
+.dropdown-menu{width:100%}
+.checkbox label input[type="checkbox"],.radio label input[type="radio"]{width:18px;height:18px}
+.input-group-addon{padding-top:0!important;padding-bottom:0!important;background-color:#fff}
+.image-as-button{background-color:#fff;border:none}
+.white-bg{width:100%;height:50px;background-color:#fff;position:absolute;top:50px}
+.nav-login li{display:inline}
+@media (max-width: 400px) {
+    .pull-right{float:left!important;margin-left:-40px!important}
 }
-.login-bg-for-xs {
-    background: url(../images/store-woden-s.jpg) no-repeat center center;
-    background-position: center;
-    width: 100%;
-    background-size: cover;
-    margin-top: -70px !important;
-    padding-top: 17%;
-    padding-bottom: 33% !important;
-}
-
-.btn {
-    cursor: default;
-    background-color: #FFF;
-    border-radius: 4px;
-    text-align: left;
-}
-
-.caret {
-    position: absolute;
-    right: 16px;
-    top: 16px;
-}
-.questions-identity {
-    font-size: 14px;
-    position: inherit;
-    margin-top: 50px;
-}
-
-.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
-    background-color: #FFF;
-}
-
-.btn-group.open .dropdown-toggle {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6)
-}
-
-.btn-group {width: 100%}
-.dropdown-menu {width: 100%;}
-
-/*.checkbox label:after,
-.radio label:after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-.checkbox .cr,
-.radio .cr {
-    position: relative;
-    display: inline-block;
-    border: 1px solid #a9a9a9;
-    border-radius: .25em;
-    width: 1.3em;
-    height: 1.3em;
-    float: left;
-    margin-right: .5em;
-}
-
-.radio .cr {
-    border-radius: 50%;
-}
-
-.checkbox .cr .cr-icon,
-.radio .cr .cr-icon {
-    position: absolute;
-    font-size: .8em;
-    line-height: 0;
-    top: 50%;
-    left: 20%;
-}
-
-.radio .cr .cr-icon {
-    margin-left: 0.04em;
-}*/
-
-.checkbox label input[type="checkbox"],
-.radio label input[type="radio"] {
-    width: 18px;
-    height: 18px;
-}
-.input-group-addon {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    background-color: #fff;
-}
-.image-as-button {
-    background-color: #fff;
-    border: none;
-}
-.white-bg {
-    width: 100%;
-    height: 50px;
-    background-color: #fff;
-    position: absolute;
-    top: 50px;
-}
-.nav-login li {
-    display: inline;
-}
-@media (max-width: 400px){
-    .pull-right {
-        float: left !important;
-        margin-left: -40px !important;
-    }
-}
-
-/*.checkbox label input[type="checkbox"] + .cr > .cr-icon,
-.radio label input[type="radio"] + .cr > .cr-icon {
-    transform: scale(3) rotateZ(-20deg);
-    opacity: 0;
-    transition: all .3s ease-in;
-}
-
-.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
-.radio label input[type="radio"]:checked + .cr > .cr-icon {
-    transform: scale(1) rotateZ(0deg);
-    opacity: 1;
-}
-
-.checkbox label input[type="checkbox"]:disabled + .cr,
-.radio label input[type="radio"]:disabled + .cr {
-    opacity: .5;
-}*/

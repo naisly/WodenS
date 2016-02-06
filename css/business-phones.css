@@ -1,130 +1,29 @@
-body, html {
-    background-color: white !important;
-    width: 100%;
-    height: 100%;
+body,html{background-color:#fff!important;width:100%;height:100%}
+.main-container{margin-top:140px}
+.moving-forward{font-family:RobotoLight;font-size:50px}
+.sub-container{margin-top:30px}
+.sub-main-header{font-family:RobotoLight;font-size:20px}
+.business-content{margin-top:15%;background-color:#f1f1f1;width:100%}
+#business-phone{width:100%;height:auto;margin-top:10%;margin-bottom:10%}
+.better-phones{margin-top:60%}
+.sub-better{font-size:18px;font-family:RobotoLight;color:#000}
+.better-than-imagine{font-size:33px;font-family:RobotoLight}
+.business-photo{background:url(../images/business-phones4.jpg) no-repeat center center;background-position:center;min-height:200px;width:100%;background-size:cover}
+.business-photo-container{background:url(../images/business-phones6.jpg) no-repeat center center;background-position:center;min-height:200px;width:100%;background-size:cover}
+.business-in-action{margin-top:60%;padding-bottom:100%}
+#business-phone-full{width:100%;height:auto;margin-top:30%;padding-bottom:30%}
+#apps-link{color:#1b6d85;text-decoration:none}
+.search-for{margin-top:40px}
+#search{font-family:RobotoLight;font-size:25px;text-decoration:none}
+.education-container{margin-top:22px;margin-right:15px;float:left}
+.buy-container{float:left}
+#education{margin-top:10px;text-decoration:none;font-family:RobotoLight;color:#666}
+.buy-phones{margin-top:10px}
+.for-small-devices-text{padding:30px;background-color:#fff;opacity:.7;border-radius:4px;box-shadow:0 0 10px rgba(0,0,0,0.5)}
+@media (max-width: 500px) {
+    .business-in-action{margin-top:20%;padding-bottom:20%}
+    .sub-better{color:#000}
 }
-.main-container {
-    margin-top: 140px;
-}
-.moving-forward {
-    font-family: RobotoLight;
-    font-size: 50px;
-}
-.sub-container {
-    margin-top: 30px;
-}
-.sub-main-header {
-    font-family: RobotoLight;
-    font-size: 20px;
-}
-.business-content {
-    margin-top: 15%;
-    background-color: #f1f1f1;
-    width: 100%;
-}
-#business-phone {
-    width: 100%;
-    height: auto;
-    margin-top: 10%;
-    margin-bottom: 10%;
-}
-.better-phones {
-    margin-top: 60%;
-}
-.sub-better {
-    font-size: 18px;
-    font-family: RobotoLight;
-    color: black;
-}
-.better-than-imagine {
-    font-size: 33px;
-    font-family: RobotoLight;
-}
-.business-photo {
-    background: url(../images/business-phones4.jpg) no-repeat center center;
-    background-position: center;
-    min-height: 200px;
-    width: 100%;
-    background-size: cover;
-}
-.business-photo-container {
-    background: url(../images/business-phones6.jpg) no-repeat center center;
-    background-position: center;
-    min-height: 200px;
-    width: 100%;
-    background-size: cover;
-}
-.business-in-action {
-    margin-top: 60%;
-    padding-bottom: 100%;
-}
-#business-phone-full {
-    width: 100%;
-    height: auto;
-    margin-top: 30%;
-    padding-bottom: 30%;
-}
-#apps-link {
-    color: #1b6d85;
-    text-decoration: none;
-}
-.search-for {
-    margin-top: 40px;
-}
-#search {
-    font-family: RobotoLight;
-    font-size: 25px;
-    text-decoration: none;
-}
-.education-container {
-    margin-top: 22px;
-    margin-right: 15px;
-    float: left;
-}
-.buy-container {
-    float: left;
-}
-#education {
-    margin-top: 10px;
-    text-decoration: none;
-    font-family: RobotoLight;
-    color: #666;
-}
-.buy-phones {
-    margin-top: 10px;
-}
-.for-small-devices-text {
-    padding: 30px;
-    background-color: white;
-    opacity: 0.7;
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 500px){
-    .business-in-action {
-        margin-top: 20%;
-        padding-bottom: 20%;
-    }
-    .sub-better {
-        color: black;
-    }
-}
-@media (min-width: 500px) and (max-width: 1000px){
-    .business-in-action {
-        margin-top: 40%;
-        padding-bottom: 40%;
-    }
+@media (min-width: 500px) and (max-width: 1000px) {
+    .business-in-action{margin-top:40%;padding-bottom:40%}
 }

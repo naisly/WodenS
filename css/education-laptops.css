@@ -1,28 +1,8 @@
-#education-laptop, #macbook-pro, #macbook-air {
-    width: 100%;
-    height: auto;
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-#education-divider {
-    width: 90%;
-    height: 1px;
-    background-color: #e4e4e4;
-    margin: 20px auto 20px auto;
-}
-.main-sub-every {
-    font-size: 20px;
-    font-weight: bold;
-}
-.h-height-every {
-    height: 60px;
-}
-
-@media (max-width: 766px){
-    .margin-for-small-devices {
-        margin-top: 50px;
-    }
-    #education-divider {
-        width: 60%;
-    }
+#education-laptop,#macbook-pro,#macbook-air{width:100%;height:auto;margin-top:50px;margin-bottom:30px}
+#education-divider{width:90%;height:1px;background-color:#e4e4e4;margin:20px auto}
+.main-sub-every{font-size:20px;font-weight:700}
+.h-height-every{height:60px}
+@media (max-width: 766px) {
+    .margin-for-small-devices{margin-top:50px}
+    #education-divider{width:60%}
 }

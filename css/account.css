@@ -1,137 +1,33 @@
-.main-page {
-    color: #555;
-    font-family: RobotoLight;
-    font-size: 24px;
-}
-#button-as-link {
-    background:none!important;
-    border:none;
-    padding:0!important;
-    font: inherit;
-    cursor: pointer;
-    font-size: 20px;
-}
-.margin-top {
-    margin-top: 50px;
-}
-.change {
-    font-family: RobotoLight;
-    font-size: 18px;
-    height: 40px;
-}
-
-#border, #no-border {
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-#border {
-    border-left: 1px solid #e4e4e4;
-    border-right: 1px solid #e4e4e4;
-}
-.change-spacer {
-    margin-top: 20px;
-}
-.h-label {
-    font-size: 14px;
-    color: #555;
-    font-family: RobotoLight;
-}
-#order-status {
-    font-size: 22px;
-    font-family: RobotoLight;
-    color: #555;
-}
-.table-spacer {
-    margin-top: 20px;
-}
-.billing-h {
-    font-size: 20px;
-    color: #666;
-}
-.ship-to, .address, .default-options {
-    margin-top: 30px;
-}
-.billing-data {
-    font-size: 17px;
-    font-family: RobotoLight;
-}
-#edit {
-    font-family: RobotoLight;
-    font-size: 24px;
-    color: #555;
-}
-.order-num {
-    font-size: 24px;
-    font-family: RobotoLight;
-    color: #555;
-}
-.billing-desc {
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top: 1px solid #e4e4e4;
-    border-bottom: 1px solid #e4e4e4;
-}
-.desc {
-    font-size: 18px;
-    font-family: RobotoLight;
-    color: #555;
-}
-.show-link {
-    float:right;
-    margin-top: 5px;
-    font-size: 17px;
-    text-decoration: none !important;
-}
-.edit {
-    margin-top: 60px;
-}
-#edit {
-    text-decoration: none !important;
-}
-#order-warning {
-    font-size: 22px;
-    font-family: RobotoLight;
-    color: #ac5050;
-}
-.image-as-button {
-    background-color: #fff;
-    border: none;
-}
-.input-group-addon {
-    background-color: #fff;
-}
-.make-sure {
-    font-size: 18px;
-    color: rgb(236, 0, 140);
-    height: 110px;
-}
-.link-forgot, .link-forgot:hover {
-    color: #08b;
-    text-decoration: none !important;
-}
-
-.right-inner-addon {
-    position: relative;
-}
-.right-inner-addon input {
-    padding-right: 45px;
-}
-.right-inner-addon i {
-    position: absolute;
-    right: 0;
-    padding: 9px 20px;
-    cursor: pointer;
-}
-
-@media (max-width: 766px){
-    #main-link {
-        white-space: normal !important;
-    }
-    .table-responsive {
-        margin-top: 50px;
-    }
-    .show-orders {
-        margin-top: 50px;
-    }
+.main-page{color:#555;font-family:RobotoLight;font-size:24px}
+#button-as-link{background:none!important;border:none;padding:0!important;font:inherit;cursor:pointer;font-size:20px}
+.margin-top{margin-top:50px}
+.change{font-family:RobotoLight;font-size:18px;height:40px}
+#border,#no-border{margin-top:30px;margin-bottom:50px}
+#border{border-left:1px solid #e4e4e4;border-right:1px solid #e4e4e4}
+.change-spacer{margin-top:20px}
+.h-label{font-size:14px;color:#555;font-family:RobotoLight}
+#order-status{font-size:22px;font-family:RobotoLight;color:#555}
+.table-spacer{margin-top:20px}
+.billing-h{font-size:20px;color:#666}
+.ship-to,.address,.default-options{margin-top:30px}
+.billing-data{font-size:17px;font-family:RobotoLight}
+#edit{font-family:RobotoLight;font-size:24px;color:#555}
+.order-num{font-size:24px;font-family:RobotoLight;color:#555}
+.billing-desc{margin-top:20px;padding-top:20px;padding-bottom:20px;border-top:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4}
+.desc{font-size:18px;font-family:RobotoLight;color:#555}
+.show-link{float:right;margin-top:5px;font-size:17px;text-decoration:none!important}
+.edit{margin-top:60px}
+#edit{text-decoration:none!important}
+#order-warning{font-size:22px;font-family:RobotoLight;color:#ac5050}
+.image-as-button{background-color:#fff;border:none}
+.input-group-addon{background-color:#fff}
+.make-sure{font-size:18px;color:#ec008c;height:110px}
+.link-forgot,.link-forgot:hover{color:#08b;text-decoration:none!important}
+.right-inner-addon{position:relative}
+.right-inner-addon input{padding-right:45px}
+.right-inner-addon i{position:absolute;right:0;padding:9px 20px;cursor:pointer}
+@media (max-width: 766px) {
+    #main-link{white-space:normal!important}
+    .table-responsive{margin-top:50px}
+    .show-orders{margin-top:50px}
 }

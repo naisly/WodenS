@@ -19,12 +19,10 @@ class DefaultView
      * @private $model
      */
     private $model;
-
     public function __construct(DefaultModel $model)
     {
         $this->model = $model;
     }
-
     /*
      * Doctype View includes Doctype, html, head,
      * body TAGS, specified for each page
@@ -33,18 +31,14 @@ class DefaultView
     {
         echo '<!DOCTYPE html>
                 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US" prefix="og: http://ogp.me/ns#">
-
                 <head itemscope itemtype="http://schema.org/WebSite">
                     <meta name="Author" content="Woden Sims Inc." />
                     <meta name="Description" content="Woden Sims leads the world in innovation with sellings items and developing software. Visit the site to learn, buy, and get support." />
-
                     <meta property="og:url" content="http://www.woden-sims.hol.es/" />
                     <meta property="og:type" content="website" />
                     <meta property="og:site_name" content="Woden Sims" />
                     <link itemprop="url" href="http://www.woden-sims.hol.es/" />
-
                     <link rel="home" href="http://www.woden-sims.hol.es/" />
-
                 ';
         if ($page == 'subdescription') {
             if ($this->model->getCurrentLanguage() !== 'us') {
@@ -82,20 +76,14 @@ class DefaultView
         }
         echo '<meta charset="utf-8" />
               <meta http-equiv="X-UA-Compatible" content="IE=EDge">
-
               <meta name="viewport" content="width=device-width, initial-scale=1" />';
-
         echo '<link rel="stylesheet" href="/css/bootstrap.css">
               <link rel="shortcut icon" href="/images/favicon-default.png" />
-
               <script src="/js/jquery-min.js"></script>
               <script src="/js/bootstrap.min.js"></script>
-
               <link href="/css/styles.css" rel="stylesheet" type="text/css">
               <link rel="stylesheet" href="/css/bootstrap-theme.css">';
-
         echo '<script src="/js/SrcChanger.js"></script>';
-
         if ($page == 'Devices') {
             echo '<link href="/css/devices.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Index') {
@@ -144,7 +132,6 @@ class DefaultView
                   <link href="/css/login.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Single Order Lookup'){
             echo '<link href="/css/checkorder.css" rel="stylesheet" type="text/css">';
-
             echo '<link href="/css/status-order.css" rel="stylesheet" type="text/css">
                   <link href="/css/login.css" rel="stylesheet" type="text/css">';
         } else if ($page == 'Cart - Account') {
@@ -210,36 +197,27 @@ class DefaultView
             echo '<link rel="stylesheet" href="/css/default.css" type="text/css" />' .
                 '<link rel="stylesheet" href="/css/animate.css" type="text/css" />';
         }
-
         echo '</head>
             <body onload="preload_page()" style="overflow-y: visible;">';
         if ($page !== 'Index') {
             echo '<div style="margin-top: 70px;"></div>';
         }
-
-
     }
-
     protected function endHTML()
     {
-
         echo '</body>
            </html>';
     }
-
     /*
      * Main navbar Menu for all
      * pages
      */
     final public function headerView()
     {
-
         if (session_status() == PHP_SESSION_NONE) {
             session_start();
         }
-
         echo '<div id="divider"></div>';
-
         echo '<nav class="navbar navbar-inverse" id="navbar" style="border-radius: 0;">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -252,23 +230,18 @@ class DefaultView
                             <span class="icon-bar"></span>
                         </button>';
         echo '<a class="navbar-brand" href="/';
-
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
-
         echo '">
                             <img alt="Brand" src="/images/main-favicon.png" width="35" height="35" id="main-image">';
-
         /*
          * Mid
          */
         echo '<a class="nav-brand text-center" href="/';
-
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
-
         echo 'account/cart"><img style="margin-top: 3px;" src="/images/cart_icon.png" width="25" height="30"></a>';
         /*
          * End
@@ -279,96 +252,65 @@ class DefaultView
                     <div class="collapse navbar-collapse navbar-custom" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li class="non-visible-for-small"><a id="no-margin-for-md" class="navbar-brand" href="/';
-
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
-
         echo '">
                             <img alt="Brand" src="/images/main-favicon.png" width="35" height="35" id="main-image">';
         echo '</a></li>
                             <li><a href="/';
-
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
-
         echo 'phones/" class="white-link division-main">';
-
         echo $this->model->Translate('Phones');
-
         echo '</a></li>
                             <li><a href="/';
-
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
-
         echo 'laptops/" class="white-link division-main">';
-
         echo $this->model->Translate('Laptops');
-
         echo '</a></li>
                             <li><a href="/';
-
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
-
         echo 'devices/" class="white-link division-main">';
-
         echo $this->model->Translate('Devices');
-
         echo '</a></li>
                             <li><a href="/';
-
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
-
         echo 'tv/" class="white-link division-main">';
-
         echo $this->model->Translate('TV');
-
         echo '</a></li>
                             <li><a href="/';
-
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
-
         echo 'support/" class="white-link division-main">';
-
         echo $this->model->Translate('Support');
-
         echo '</a></li>
                             <li class="non-visible-for-small"><h class="paddings-for-nav"><a style="cursor: pointer;">';
-
         echo '<img style="margin-top: 9px;" src="/images/search-icon.png" width="30" height="30" alt="search" onclick="getSearchBox();">';
-
         echo              '</a></li>
                            <li class="non-visible-for-small"><h class="paddings-for-nav"><a href="/';
-
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
-
         echo 'account/cart">';
-
         echo '<img style="margin-top: 9px;" src="/images/cart_icon.png" width="25" height="30">';
-
         echo '              </a></li>
                             <li class="spacer-for-small-nav"></li>
                             <li class="search-nav"><a class="white-link" style="width: 80%; padding-right: 0 !important;">
                             <form action="/';
-
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
-
         echo 'search/result" method="get">
                                     <div class="input-group" style="margin-top: 7px;">
-
                                             <span class="input-group-btn">
                                                 <img src="/images/search-icon.png" width="30" height="30" style="float: left;" />
                                             </span>
@@ -377,79 +319,55 @@ class DefaultView
                                             <input type="submit" style="display: none;" />
                                         </form>
                                     </div>';
-
         echo '</a></li>
               <li class="divider-li-small" style="background-color: white !important; margin-top: 7px !important;"></li>
-
               <li id="popular" class="non-for-large"><a class="white-link requests" style="display: none;">' . $this->model->Translate('Most popular requests') . '</a></li>
               <li class="non-for-large"><a href="/';
-
         if($_SESSION['language'] !== 'us'){
             echo $_SESSION['language'] . '/';
         }
-
         echo 'phones/buy-phone/apple" class="white-link element-divider" style="color: white; display: none;">' . $this->model->Translate('Apple') . '</a></li>
-
               <li class="non-for-large"><a href="/';
-
         if($_SESSION['language'] !== 'us'){
             echo $_SESSION['language'] . '/';
         }
-
         echo 'account/" class="white-link element-divider" style="display: none;">' . $this->model->Translate('Account') . '</a></li>
-
               <li class="non-for-large"><a href="/';
-
         if($_SESSION['language'] !== 'us'){
             echo $_SESSION['language'] . '/';
         }
-
         echo 'store/" class="white-link element-divider" style="display: none;">' . $this->model->Translate('Find a Store') . '</a></li>
-
               <li class="non-for-large"><a href="/';
-
         if($_SESSION['language'] !== 'us'){
             echo $_SESSION['language'] . '/';
         }
-
         echo 'financing/" class="white-link element-divider" style="display: none;">' . $this->model->Translate('Financing') . '</a></li>
-
               <li class="non-for-large"><a href="/';
-
         if($_SESSION['language'] !== 'us'){
             echo $_SESSION['language'] . '/';
         }
-
         echo 'business/" class="white-link element-divider" style="display: none;">' . $this->model->Translate('Business') . '</a></li>
-
               <li class="non-for-large"><a class="white-link element-divider" style="display: none; height: 40px;"></a></li>
-
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>';
-
         echo '<script>
                   $("#search").focus(function(){
-
                       $(".element-divider, .requests").fadeIn("slow");
                   })
                   .blur(function() {
-
                       $(".element-divider, .requests").fadeOut("slow");
                   })
               </script>';
         echo '<script src="/js/search.js"></script>';
-
         echo '<div id="invisible">
                   <div class="search-form">
                       <div class="form-group">
                           <form action="/';
-
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
-
         echo 'search/result" method="get">
                               <input type="text" class="form-control" name="generalnav" id="search-xs" placeholder="' . $this->model->Translate('Search') . ' woden-sims@hol.es">
                               <input type="hidden" value="1" name="page" />
@@ -458,100 +376,71 @@ class DefaultView
                           <div class="most-popular">
                               <div class="marger">
                                   <h class="popular-matches">';
-
         echo $this->model->Translate('Most popular requests');
-
         echo                     '</h>
-
                                   <ul class="nav-popular">
                                       <a href="/';
-
         if($_SESSION['language'] !== 'us'){
             echo $_SESSION['language'] . '/';
         }
-
         echo 'phones/buy-phone/apple">
                                           <li>';
-
         echo $this->model->Translate('Apple');
-
         echo                             '</li>
                                       </a>
                                       <a href="/';
-
         if($_SESSION['language'] !== 'us'){
             echo $_SESSION['language'] . '/';
         }
-
         echo 'account/">
                                           <li>';
-
         echo $this->model->Translate('Account');
-
         echo                             '</li>
                                       </a>
                                       <a href="/';
-
         if($_SESSION['language'] !== 'us'){
             echo $_SESSION['language'] . '/';
         }
-
         echo 'store/">
                                           <li>';
-
         echo $this->model->Translate('Find a Store');
-
         echo                             '</li>
                                       </a>
                                       <a href="/';
-
         if($_SESSION['language'] !== 'us'){
             echo $_SESSION['language'] . '/';
         }
-
         echo 'financing/">
                                           <li>';
-
         echo $this->model->Translate('Financing');
-
         echo                             '</li>
                                       </a>
                                       <a href="/';
-
         if($_SESSION['language'] !== 'us'){
             echo $_SESSION['language'] . '/';
         }
-
         echo 'business/">
                                           <li>';
-
         echo $this->model->Translate('Business');
-
         echo                              '</li>
-
                                       </a>
                                   </ul>
                               </div>
-
                           </div>
                       </div>
                   </div>
               </div>
               <div class="tester-item"></div>';
-
     }
-
     /*
      * Footer, bottom part
      */
     public function actionGetFooter($page)
     {
-
         echo '</div>
                 <footer>';
         if ($page !== 'financing' && $page !== 'Index' && $page !== 'Phones' && $page !== 'Devices' && $page !== 'Page Not Found' && $page !== 'Our Company' && $page !== 'Login' && $page !== 'Registration' && $page !== 'Phones - Business') {
             echo '<div class="container">
-
                   </div>
                   <div class="footer-spacer"></div>';
         } else if ($page == 'Index') {
@@ -566,9 +455,7 @@ class DefaultView
                       </div>
                   </div>';
         }
-
         echo '<div class="footer">';
-
         echo '<div class="divider-white-for-classes"></div>
                      <div class="container full-container">
                           <div class="row">
@@ -686,7 +573,6 @@ class DefaultView
                                         <li class="footer-menu"><b>';
         echo $this->model->Translate('Shop');
         echo '</b></li>
-
                                         <li><a class="items" href="/';
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
@@ -1098,23 +984,20 @@ class DefaultView
                   });
               </script>';
     }
-
     public function getHeader( $text ) {
-
         echo '<div class="bg-divider">
                   <div class="text-center">
                        <h1 style="padding-top: 20px; color: white;">' . $this->model->Translate($text) . '</h1>
                   </div>
               </div>';
     }
-
     public function getFooter() {
         echo '<div class="bottom-spacer" style="position: absolute; bottom: 0; width: 100%;">
                    <div class="text-center">
                         <p id="copyright"> &copy; Woden Sims Inc . ' . $this->model->Translate("All rights reserved.") . '</p>
                   </div>
               </div>
-              <script src="js/jquery-min.js"></script>
-              <script src="js/bootstrap.min.js"></script>';
+              <script src="/js/jquery-min.js"></script>
+              <script src="/js/bootstrap.min.js"></script>';
     }
 }
