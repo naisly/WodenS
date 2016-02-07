@@ -152,6 +152,11 @@ class CheckOrderView extends DefaultView
         echo $this->model->Translate('Number is located with thanks message or in your account');
 
         echo                                                     '</h>
+                                                                  <div class="non-visible-for-md">
+                                                                      <h class="non-for-small">' .
+                                                                          $this->model->Translate('Number is located with thanks <br /> message or in your account')
+                                                                    . '</h>
+                                                                  </div>
                                                                   <img class="order-support" src="/images/order-support.png" width="500"/>
                                                               </div>
                                                           </div>

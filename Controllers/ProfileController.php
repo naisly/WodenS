@@ -57,6 +57,10 @@ class ProfileController extends DefaultController
 
         session_write_close();
 
+        if(isset($_POST['id']) && isset($_POST['name'])){
+            $this->actionRemoveData();
+        }
+
         $this->actionGetQuantityOfItems();
         $this->actionGetSumOfItems();
 

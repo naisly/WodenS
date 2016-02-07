@@ -80,7 +80,7 @@ class AccountInfoView extends AccountOrderView
                         echo $_SESSION['language'] . '/';
                     }
 
-                    echo 'account/account-cancel-order" method="post">
+                    echo 'account/" method="post">
                               <button id="button-as-link" style="font-size: 14px; color: #609; font-weight: 600;">';
 
                     echo $this->model->Translate('Cancel order');
@@ -106,7 +106,7 @@ class AccountInfoView extends AccountOrderView
                         echo $_SESSION['language'] . '/';
                     }
 
-                    echo 'account/account-cancel-order" method="post">
+                    echo 'account/" method="post">
                               <button id="button-as-link" style="font-size: 14px; color: #609; font-weight: 600;">';
 
                     echo $this->model->Translate('Remove');
@@ -219,7 +219,7 @@ class AccountInfoView extends AccountOrderView
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'account/change-data" method="post" id="login_form">
+        echo 'account/" method="post" id="login_form">
                                 <div class="form-group change-spacer">
                                     <input type="email" style="background-color: white;" class="form-control" name="email" id="email" placeholder="';
 
@@ -251,13 +251,13 @@ class AccountInfoView extends AccountOrderView
         echo $this->model->Translate('Please, fill the real data in order to have no problems with shipping.');
 
         echo               '</h1>
-                            <form role="form" action="';
+                            <form role="form" action="/';
 
         if($_SESSION['language'] !== 'us'){
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'change-data" method="post" id="login_form1">
+        echo 'account/" method="post" id="login_form1">
                                 <div class="form-group change-spacer">
                                     <input type="text" class="form-control" name="first_name" id="first_name" placeholder="';
 
@@ -305,7 +305,7 @@ class AccountInfoView extends AccountOrderView
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'account/change-data" method="post" id="login_form2">
+        echo 'account/" method="post" id="login_form2">
                                 <div class="form-group change-spacer">
                                     <input type="password" class="form-control" name="new_password" id="new_password" placeholder="';
 

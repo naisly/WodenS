@@ -43,9 +43,8 @@ class AccountBillingController extends AccountOrderController
     public function getBilling() {
 
         session_start();
+
         $this->actionGetHeaderCart();
-        $this->actionGetQuantityOfItems();
-        $this->actionGetSumOfItems();
 
         if(!isset($_SESSION['login_user'])){
             if($_SESSION['language'] !== 'us') {
@@ -57,15 +56,23 @@ class AccountBillingController extends AccountOrderController
 
         session_write_close();
 
+        if(isset($_POST['name']) && isset($_POST['street']) && isset($_POST['city'])){
+            $this->actionInsertBillingData();
+        }
+
+        $this->actionGetQuantityOfItems();
+        $this->actionGetSumOfItems();
+
         $this->actionGetUser();
         $this->actionGetBilling();
+
     }
 
     /**
      * Adding Billing Data to the DB
      * @var $table : billing
      */
-    public function actionInsertBillingData() {
+    private function actionInsertBillingData() {
 
         $this->actionGetLanguage();
 
@@ -99,6 +106,8 @@ class AccountBillingController extends AccountOrderController
         }
         if(isset($_POST['giftwrap'])){
             $giftwrap = $_POST['giftwrap'];
+        } else {
+            $giftwrap = 0;
         }
 
         if(isset($name) && isset($street) && isset($city) && isset($state) && isset($zip) && isset($country) && isset($giftwrap) && isset($user)){
@@ -107,11 +116,6 @@ class AccountBillingController extends AccountOrderController
                                           $giftwrap)");
             $sql_query->execute();
 
-            if($_SESSION['language'] !== 'us') {
-                header('Location: /' . $_SESSION['language'] . '/account/');
-            } else {
-                header('Location: /account/');
-            }
         } else {
             header('HTTP/1.0 403 Forbidden');
         }

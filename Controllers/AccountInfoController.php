@@ -46,8 +46,6 @@ class AccountInfoController extends AccountOrderController
 
         session_start();
         $this->actionGetHeaderCart();
-        $this->actionGetQuantityOfItems();
-        $this->actionGetSumOfItems();
 
         if(!isset($_SESSION['login_user'])){
             if($_SESSION['language'] !== 'us') {
@@ -58,6 +56,15 @@ class AccountInfoController extends AccountOrderController
         }
 
         session_write_close();
+
+        if(isset($_POST['order_id'])){
+            $this->actionCancelOrder();
+        } elseif (isset($_POST['password'])){
+            $this->actionChangeData();
+        }
+
+        $this->actionGetQuantityOfItems();
+        $this->actionGetSumOfItems();
 
         $this->actionGetUser();
         $this->getAllOrders();
@@ -73,7 +80,7 @@ class AccountInfoController extends AccountOrderController
      * Deleting and redirecting
      * @redirect '$lang/account'
      */
-    public function actionCancelOrder() {
+    private function actionCancelOrder() {
 
         $this->actionGetLanguage();
 
@@ -131,11 +138,6 @@ class AccountInfoController extends AccountOrderController
             $i++;
         }
 
-        if($_SESSION['language'] !== 'us') {
-            header('Location: /' . $_SESSION['language'] . '/account/');
-        } else {
-            header('Location: /account/');
-        }
     }
 
     /**
@@ -193,7 +195,7 @@ class AccountInfoController extends AccountOrderController
      * Solver for
      * Change data in Account
      */
-    public function actionChangeData() {
+    private function actionChangeData() {
 
         if(isset($_POST['email']) && isset($_POST['email_again']) && isset($_POST['password'])) {
             $this->actionChangeEmail();

@@ -136,9 +136,9 @@ class ProfileView extends DefaultView
                       <h class="cart"><b>' . $this->model->Translate('Country') . ':</b> ' . $this->model->getBillingCountry() . '</h><br />';
 
             if($this->model->getBillingWrap() == 1) {
-                echo '<h class="cart"><b>' . $this->model->Translate('Giftwrap All items') . '<span style="text-decoration: underline">' . $this->model->Translate('by default') . '</span></b></h>';
+                echo '<h class="cart"><b>' . $this->model->Translate('Giftwrap All items') . ' <span style="text-decoration: underline">' . $this->model->Translate('by default') . '</span></b></h>';
             } else {
-                echo '<h class="cart">' . $this->model->Translate('No use of') . '<b>' . $this->model->Translate('Giftwrap') . '</b>' . $this->model->Translate('for Items') . '</h>';
+                echo '<h class="cart">' . $this->model->Translate('No use of') . ' <b>' . $this->model->Translate('Giftwrap') . '</b> ' . $this->model->Translate('for Items') . '</h>';
             }
         }
 
@@ -206,7 +206,7 @@ class ProfileView extends DefaultView
                     echo $_SESSION['language'] . '/';
                 }
 
-                echo 'account/remove" method="post">
+                echo 'account/cart" method="post">
                                     <input type="hidden" name="id" value="' . $this->model->getIdArray($i) . '"/>
                                     <input type="hidden" name="name" value="' . $this->model->getProductNameArray($i) . '"/>
                                     <button class="btn btn-sm btn-warning">' . $this->model->Translate('Remove') . '</button>

@@ -11,7 +11,7 @@ include_once('AccountOrderView.php');
 
 class AccountBillingView extends AccountOrderView
 {
-    /*
+    /**
      * MVC constructor
      * with ProfileModel
      *
@@ -47,7 +47,7 @@ class AccountBillingView extends AccountOrderView
         }
 
 
-        echo 'account/account-edit-billing" method="post">
+        echo 'account/billing" method="post">
 
                              <h class="main-page">';
 
@@ -61,7 +61,7 @@ class AccountBillingView extends AccountOrderView
         echo $this->model->Translate('Primary Name');
 
         echo                    '</label>
-                                 <input type="text" class="form-control" name="name" id="name" />
+                                 <input type="text" class="form-control" name="name" id="name" required />
                              </div>
 
                              <h class="main-page">';
@@ -76,7 +76,7 @@ class AccountBillingView extends AccountOrderView
         echo $this->model->Translate('Default Street Address');
 
         echo                    '</label>
-                                 <input type="text" class="form-control" name="street" id="street" />
+                                 <input type="text" class="form-control" name="street" id="street" required />
                              </div>
                              <div class="form-group">
                                  <label for="name">';
@@ -84,7 +84,7 @@ class AccountBillingView extends AccountOrderView
         echo $this->model->Translate('Default City');
 
         echo                    '</label>
-                                 <input type="text" class="form-control" name="city" id="city" />
+                                 <input type="text" class="form-control" name="city" id="city" required />
                              </div>
                              <div class="form-group">
                                  <label for="name">';
@@ -92,7 +92,7 @@ class AccountBillingView extends AccountOrderView
         echo $this->model->Translate('Default State');
 
         echo                    '</label>
-                                 <input type="text" class="form-control" name="state" id="state" />
+                                 <input type="text" class="form-control" name="state" id="state" required />
                              </div>
                              <div class="form-group">
                                  <label for="name">';
@@ -100,7 +100,7 @@ class AccountBillingView extends AccountOrderView
         echo $this->model->Translate('Default Zip');
 
         echo                    '</label>
-                                 <input type="text" class="form-control" name="zip" id="zip" />
+                                 <input type="text" class="form-control" name="zip" id="zip" required />
                              </div>
                              <div class="form-group">
                                  <label for="name">';
@@ -108,7 +108,7 @@ class AccountBillingView extends AccountOrderView
         echo $this->model->Translate('Default Country');
 
         echo                    '</label>
-                                 <input type="text" class="form-control" name="country" id="country" />
+                                 <input type="text" class="form-control" name="country" id="country" required />
                              </div>
 
                              <h class="main-page">';

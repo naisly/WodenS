@@ -550,8 +550,6 @@ class LoginView extends DefaultView
      */
     public function addedItemMessage() {
 
-        session_start();
-
         echo '<div class="alert alert-success" role="alert" style="margin-top: -20px; border-radius: 0;">
                 <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                 <span class="sr-only">Error:</span>

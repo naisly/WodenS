@@ -211,17 +211,17 @@ class BusinessLaptopsView extends DefaultView
 
               <div class="text-center">
                   <div class="search-for">
-                      <a class="links" id="main-link" href="/';
+                      <a style="white-space: normal; text-decoration: none;" class="links" id="main-link" href="/';
 
         if ($_SESSION['language'] !== 'us') {
             echo $_SESSION['language'] . '/';
         }
 
-        echo 'laptops/buy-laptop/" style="text-decoration: none">';
+        echo 'laptops/buy-laptop/">';
 
-        echo $this->model->Translate('Search laptop for business');
+        echo $this->model->Translate('Search laptop for <nobr> business');
 
-        echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></a>
+        echo         ' ' . '<img src="/images/arrow-blue.png" width="20" height="20"/></nobr></a>
                   </div>
               </div>';
     }
